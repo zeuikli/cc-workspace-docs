@@ -313,6 +313,23 @@
     .docsify-pagination-container { border-top: 1px solid var(--divider); margin-top: 2.5rem; padding-top: 1rem; }
     .pagination-item--next a, .pagination-item--previous a { color: var(--brand) !important; }
 
+    /* ── Sidebar collapse ── */
+    /* 折疊箭頭 */
+    .sidebar-nav .collapse-title::after,
+    .sidebar ul li .sidebar-collapse-toggle::after {
+      content: '›';
+      font-size: 1.1rem;
+      color: var(--text-3);
+      float: right;
+      transition: transform .2s;
+    }
+    .sidebar ul li.open .sidebar-collapse-toggle::after,
+    .sidebar ul li.active .sidebar-collapse-toggle::after {
+      transform: rotate(90deg);
+    }
+    /* 折疊狀態下子項隱藏 */
+    .sidebar ul li:not(.open) > ul { display: none; }
+
     /* ── Transcript 逐字稿 ── */
     .ts-badge {
       display: inline-block;
@@ -378,6 +395,10 @@
         crossChapterText: true
       },
 
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      },
+
       plugins: [
         function(hook) {
           hook.doneEach(function() {
@@ -407,6 +428,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js"></script>
