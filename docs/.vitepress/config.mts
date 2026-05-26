@@ -30,18 +30,90 @@ const resourceItems = [
       { text: "Permission 細粒度設定", link: "/resources/best-practices/permissions" },
       { text: "MCP Server 與 Skills", link: "/resources/best-practices/mcp-skills" },
       { text: "Prompt Caching 工程", link: "/resources/best-practices/prompt-caching" },
+      { text: "Multi-Agent 架構模式", link: "/resources/best-practices/multi-agent" },
     ],
   },
   {
-    text: "研究資料庫",
+    text: "研究摘要（精選）",
     collapsed: false,
     items: [
       { text: "研究資料庫總覽", link: "/resources/research/" },
       { text: "Harness Engineering 研究全景", link: "/resources/research/harness-engineering" },
       { text: "跨源知識地圖", link: "/resources/research/knowledge-map" },
+      { text: "Model-Harness Fit", link: "/resources/research/model-harness-fit" },
+      { text: "Harness 驗證方法論", link: "/resources/research/verification-methods" },
     ],
   },
   { text: "延伸閱讀與參考資料", link: "/resources/reference/" },
+];
+
+const researchItems = [
+  { text: "研究資料庫總覽", link: "/research/" },
+  {
+    text: "Agent Harness 核心",
+    collapsed: false,
+    items: [
+      { text: "分類索引", link: "/research/agent-harness/" },
+      { text: "SURVEY — 論文總覽", link: "/research/agent-harness/SURVEY" },
+      { text: "KNOWLEDGE-MAP", link: "/research/agent-harness/KNOWLEDGE-MAP" },
+      { text: "RESEARCH — 架構研究", link: "/research/agent-harness/RESEARCH" },
+      { text: "References 索引（64 篇）", link: "/research/agent-harness/references/" },
+    ],
+  },
+  {
+    text: "社群文章",
+    collapsed: true,
+    items: [
+      { text: "文章索引", link: "/research/ai-articles/" },
+      { text: "Harness Articles Digest", link: "/research/ai-articles/HARNESS-ARTICLES-DIGEST" },
+      { text: "MHF Research Digest", link: "/research/ai-articles/MHF-RESEARCH-DIGEST" },
+      { text: "12 Harness Patterns", link: "/research/ai-articles/32-medium-12-agentic-harness-patterns" },
+      { text: "Thin Harness Fat Skills", link: "/research/ai-articles/41-yageai-thin-harness-fat-skills" },
+      { text: "Model-Harness Fit", link: "/research/ai-articles/2026-05-16-model-harness-fit" },
+      { text: "Boris Verification Loops", link: "/research/ai-articles/2026-05-12-boris-cherny-verification-loops" },
+      { text: "Stripe 1,300 PRs/Week", link: "/research/ai-articles/2026-05-12-ai-agent-harness-stripe-1300-prs" },
+    ],
+  },
+  {
+    text: "學術論文",
+    collapsed: true,
+    items: [
+      { text: "論文索引", link: "/research/papers/" },
+    ],
+  },
+  {
+    text: "研究報告",
+    collapsed: true,
+    items: [
+      { text: "報告索引", link: "/research/reports/" },
+      { text: "Harness Engineering 深度研究", link: "/research/reports/2026-05-17-harness-engineering" },
+      { text: "驗證方法論", link: "/research/reports/2026-05-19-harness-verification-methods" },
+      { text: "Model-Harness Fit 分析", link: "/research/reports/2026-05-16-harness-engineering-model-fit" },
+      { text: "Sub-Agent Delegation Gotchas", link: "/research/reports/2026-05-17-claude-code-subagent-delegation-gotchas" },
+      { text: "Auto-Load Token 優化", link: "/research/reports/2026-05-18-auto-load-token-best-practices" },
+      { text: "Auto-Load 50 輪評估", link: "/research/reports/2026-05-18-auto-load-50round-optimization" },
+      { text: "Karpathy×Mnilax 最佳解", link: "/research/reports/2026-05-18-karpathy-mnilax-best-solution" },
+    ],
+  },
+  {
+    text: "影片筆記",
+    collapsed: true,
+    items: [
+      { text: "影片索引", link: "/research/videos/" },
+      { text: "AI Engineer — Tejas Kumar (IBM)", link: "/research/videos/2026-05-17-AI-Engineer-C_GG5g38" },
+      { text: "Sequoia Capital — AI Agents", link: "/research/videos/2026-04-29-Sequoia_Capital-96jN2OCO" },
+      { text: "Nate Herk — 32 Claude Tricks", link: "/research/videos/2026-04-29-nateherk-32-claude-code-tricks" },
+      { text: "No Priors Podcast", link: "/research/videos/2026-03-20-No_Priors-kwSVtQ7d" },
+      { text: "Dwarkesh Patel Interview", link: "/research/videos/2025-10-17-Dwarkesh_Patel-lXUZvyaj" },
+    ],
+  },
+  {
+    text: "Claude Blog",
+    collapsed: true,
+    items: [
+      { text: "Blog 索引", link: "/research/claude-blog/" },
+    ],
+  },
 ];
 
 export default defineConfig({
@@ -50,6 +122,29 @@ export default defineConfig({
   base: "/cc-workspace-docs/",
   cleanUrls: true,
   ignoreDeadLinks: true,
+  srcExclude: [
+    "**/tweets/**",
+    "**/media/**",
+    "**/inbox/**",
+    "**/scored/**",
+    "**/research/agent-harness/references/2026-03-30-meta-harness-optimization-model-harnesses.md",
+    "**/research/agent-harness/references/2026-04-07-agentopt-client-side-optimization.md",
+    "**/research/agent-harness/references/2026-04-22-agentflow-synthesizing-multi-agent.md",
+    "**/research/agent-harness/references/2026-04-22-harbor-automated-harness-optimization-2604-20938.md",
+    "**/research/agent-harness/references/2026-04-29-last-harness-youll-ever-build-2604-21003.md",
+    "**/research/agent-harness/references/2026-05-04-heavyskill-heavy-thinking-inner-skill-2605-02396.md",
+    "**/research/papers/2025-05-30-memory-os-ai-agent.md",
+    "**/research/papers/2026-03-30-meta-harness-optimization-model-harnesses.md",
+    "**/research/papers/2026-04-07-agentopt-client-side-optimization.md",
+    "**/research/papers/2026-04-22-agentflow-synthesizing-multi-agent.md",
+    "**/research/papers/2026-04-22-harbor-automated-harness-optimization-2604-20938.md",
+    "**/research/papers/2026-04-29-last-harness-youll-ever-build-2604-21003.md",
+    "**/research/papers/2026-05-04-heavyskill-heavy-thinking-inner-skill-2605-02605.md",
+    "**/research/papers/2026-05-12-delta-mem-efficient-online-memory-llm-2605-12357.md",
+    "**/research/reports/2026-05-16-claude-code-best-practices.md",
+    "**/research/reports/2026-05-22-llm-memory-control-comprehensive-survey.md",
+    "**/research/videos/2026-05-17-Sequoia_Capital-SlGRN8jh.md",
+  ],
   themeConfig: {
     logo: "/logo.svg",
     nav: [
@@ -57,6 +152,7 @@ export default defineConfig({
       { text: "課程講義", link: "/lectures/lecture-01-foundations/", activeMatch: "^/lectures/" },
       { text: "實作專案", link: "/projects/", activeMatch: "^/projects/" },
       { text: "資源庫", link: "/resources/", activeMatch: "^/resources/" },
+      { text: "研究資料庫", link: "/research/", activeMatch: "^/research/" },
       {
         text: "GitHub ↗",
         link: githubRepoLink,
@@ -65,24 +161,10 @@ export default defineConfig({
       },
     ],
     sidebar: {
-      "/lectures/": [
-        {
-          text: "課程講義",
-          items: lectureItems,
-        },
-      ],
-      "/projects/": [
-        {
-          text: "實作專案",
-          items: projectItems,
-        },
-      ],
-      "/resources/": [
-        {
-          text: "資源庫",
-          items: resourceItems,
-        },
-      ],
+      "/lectures/": [{ text: "課程講義", items: lectureItems }],
+      "/projects/": [{ text: "實作專案", items: projectItems }],
+      "/resources/": [{ text: "資源庫", items: resourceItems }],
+      "/research/": [{ text: "研究資料庫", items: researchItems }],
     },
     outline: {
       level: [2, 3],
