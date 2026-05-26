@@ -78,7 +78,7 @@ Meta-Harness is closely related to ProTeGi, TextGrad, OPRO, GEPA, AlphaEvolve/Op
 
 A **harness** is a stateful program that wraps a language model and determines what context the model sees at each step. Formally, let M denote a fixed language model and X a task distribution. For a harness H and task instance x ~ X, a rollout trajectory τ ~ p_M(H, x) is executed. The objective is:
 
-> H* = argmax_H E_{x ~ X, τ ~ p_M(H,x)} r(τ, x)
+> H* = argmax_H E_&#123;x ~ X, τ ~ p_M(H,x)&#125; r(τ, x)
 
 When multiple objectives are relevant (e.g., accuracy and context cost), candidates are evaluated under Pareto dominance.
 

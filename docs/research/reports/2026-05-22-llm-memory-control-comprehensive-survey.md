@@ -482,7 +482,7 @@ HippoRAG 最顯著的優勢是多跳問答（Multi-hop QA）：
 - 需要：Obama → 夏威夷 → 太平洋（Pacific Ocean）
 
 HippoRAG 的 PPR 傳播：
-- Seed: {Obama, 出生地, 大洋}
+- Seed: &#123;Obama, 出生地, 大洋&#125;
 - PPR 沿 Obama → born_in → Hawaii → located_in → Pacific Ocean 傳播
 - 橋接節點「Hawaii」被高分命中
 

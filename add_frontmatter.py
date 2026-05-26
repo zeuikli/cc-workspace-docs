@@ -240,6 +240,45 @@ def process_blog(content, filename):
     return {'title': title, 'date': date, 'type': 'blog-index'}
 
 
+def process_ai_news(content, filename):
+    title = extract_h1(content)
+    # Strip emoji from title for cleaner frontmatter
+    if title:
+        title = re.sub(r'^[^\w\s一-鿿]+\s*', '', title).strip()
+    date = extract_date_from_filename(filename) or extract_pattern(
+        content,
+        r'(\d{4}-\d{2}-\d{2})',
+    )
+    source = extract_pattern(
+        content,
+        r'來源[：:]\s*\[([^\]]+)\]',
+        r'來源[：:]\s*([^\n\[]+)',
+    )
+    return {'title': title, 'date': date, 'source': source, 'type': 'ai-news'}
+
+
+def process_best_practices(content, filename):
+    title = extract_h1(content)
+    source = extract_pattern(
+        content,
+        r'來源[：:]\s*([^\n（(]+)',
+        r'\*\*來源\*\*[：:]\s*([^\n]+)',
+    )
+    if source:
+        source = source.strip().strip('*').strip()
+    return {'title': title, 'source': source, 'type': 'best-practices'}
+
+
+def process_prompt(content, filename):
+    title = extract_h1(content)
+    return {'title': title, 'type': 'prompt'}
+
+
+def process_template(content, filename):
+    title = extract_h1(content)
+    return {'title': title, 'type': 'template'}
+
+
 # ---------------------------------------------------------------------------
 # Routing
 # ---------------------------------------------------------------------------
@@ -250,7 +289,9 @@ DOC_FILES = {
     'scoring.md', 'knowledge-map.md', 'research-index.md',
     'survey.md', 'research.md', 'agents-md-research-index.md',
     'harness-articles-digest.md', 'mhf-research-digest.md',
-    'llm-routing-industrial-cases.md',
+    'llm-routing-industrial-cases.md', 'topic-index.md',
+    'archive-index.md', 'latest-combined.md', 'latest-deepsrt.md',
+    'latest-digest.md',
 }
 
 
@@ -284,6 +325,14 @@ def get_processor(filepath, rel_path):
         return process_article
     if top == 'claude-blog':
         return process_blog
+    if top == 'ai-news':
+        return process_ai_news
+    if top == 'best-practices':
+        return process_best_practices
+    if top == 'prompts':
+        return process_prompt
+    if top == 'templates':
+        return process_template
 
     return process_documentation
 

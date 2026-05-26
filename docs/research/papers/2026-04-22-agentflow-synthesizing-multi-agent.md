@@ -93,7 +93,7 @@ Using program analysis feedback to guide automated testing is well-established i
 
 A harness in AgentFlow is a program in the typed graph DSL. The program defines:
 
-- A set of **agent nodes** 𝒜 = {a₁, a₂, ..., aₙ}, each with a role description, system prompt, and assigned tool bindings Φᵢ.
+- A set of **agent nodes** 𝒜 = &#123;a₁, a₂, ..., aₙ&#125;, each with a role description, system prompt, and assigned tool bindings Φᵢ.
 - A **communication graph** 𝒢 = (𝒜, E), where edges E ⊆ 𝒜 × 𝒜 define which agents can send messages to which.
 - **Message schemas** Σ: E → Schema, defining the typed structure of messages on each edge.
 - A **coordination protocol** Ψ specifying: sequencing constraints (which agents must complete before others begin), retry logic (conditions under which an agent is re-invoked), and termination conditions.
