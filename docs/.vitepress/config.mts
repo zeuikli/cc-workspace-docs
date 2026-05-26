@@ -200,7 +200,7 @@ const researchItems = [
 ];
 
 export default defineConfig({
-  title: "CC Workspace Docs",
+  title: "Zeuik's Claude Code Docs",
   description: "Zeuik 的 Claude Code Workspace 課程文件站。涵蓋 CLAUDE.md 設計、Context Engineering、Harness 工程架構與最佳實踐。",
   base: "/cc-workspace-docs/",
   cleanUrls: true,

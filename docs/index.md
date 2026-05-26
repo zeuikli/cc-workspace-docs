@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  name: "CC Workspace Docs"
+  name: "Zeuik's Claude Code Docs"
   text: "Claude Code Harness 工程課程"
   tagline: 從 CLAUDE.md 設計到 Planner-Generator-Evaluator 架構，掌握讓 AI Agent 真正可靠的工程方法。
   actions:
