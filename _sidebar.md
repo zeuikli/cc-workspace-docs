@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED — do not edit manually -->
-<!-- Updated: 2026-05-26 -->
+<!-- Updated: 2026-05-26 16:35 -->
 
 - [Zeuik's Claude Code Docs](/)
 
@@ -125,6 +125,7 @@
     - [Claude Code What's New — 週版本要點彙整（2026-W18 至 W19）](/research/best-practices/27-whats-new-w18-w19.md)
     - [Prompt Caching 核心教訓 — Thariq Shihipar（Claude Code 團隊）](/research/best-practices/28-thariq-prompt-caching-lessons.md)
     - [Claude Code Onboarding 與大型 Codebase 最佳實踐](/research/best-practices/29-onboarding-large-codebase.md)
+  - [Claude Code 最佳實踐研究索引](/research/best-practices/INDEX.md)
 
 - [Claude Blog](/research/claude-blog/README.md)
   - [Claude Blog 文章收錄報告](/research/claude-blog/REPORT.md)
@@ -196,7 +197,6 @@
     - [Skill Issue: Harness Engineering for Coding Agents](/research/papers/2026-03-12-skill-issue-harness-engineering.md)
     - [Agentic Harness for Real-World Compilers](/research/papers/2026-03-20-agentic-harness-real-world-compilers-2603-20075.md)
     - [Natural-Language Agent Harnesses](/research/papers/2026-03-25-natural-language-agent-harnesses-2603-25723.md)
-    - [Natural-Language Agent Harnesses](/research/papers/2026-03-26-natural-language-agent-harnesses-nlah.md)
     - [Meta-Harness: End-to-End Optimization of Model Harnesse](/research/papers/2026-03-30-meta-harness-optimization-model-harnesses.md)
     - [AEC-Bench: A Multimodal Benchmark for Agentic Systems i](/research/papers/2026-03-31-aec-bench-multimodal-benchmark-agentic-systems.md)
   - **2026-04**
