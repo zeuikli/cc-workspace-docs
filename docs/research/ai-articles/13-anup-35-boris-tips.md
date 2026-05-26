@@ -1,0 +1,66 @@
+---
+url: "https://www.anup.io/35-claude-code-tips-from-the-guy-who-built-it/"
+title: Claude Code Tips From the Guy Who Built It
+type: article
+---
+
+# Claude Code Tips From the Guy Who Built It
+
+**原始 URL**: https://www.anup.io/35-claude-code-tips-from-the-guy-who-built-it/
+
+**作者**: Anup Jadhav（報告 Claude Code 創造者 Boris Cherny 之洞察）  
+**發佈日期**: 2026 年 2 月 15 日  
+**來源**: Anup.io
+
+---
+
+## 核心摘要
+
+本文精選了 Boris Cherny（Claude Code 創造者）的 35 項實踐技巧，經過整理成 10 大核心領域。核心理念是將 Claude Code 視為「平行執行引擎，而非聊天機器人」，強調前期規劃、持久知識建設與自動化重複工作流程。
+
+### 十大核心領域
+
+1. **並行會話** — 使用 git worktrees 同時運行多個 Claude Code 實例，被視為「單一最大生產力解鎖」
+2. **模型選擇** — 承諾單一模型（Opus 4.5 搭配思考）並在切換前衡量重新提示率
+3. **計畫模式優先** — 複雜任務先在計畫模式迭代至滿意，再轉為自動接受
+4. **活文件** — 維護共享 CLAUDE.md，記錄 Claude 錯誤防止重複
+5. **斜線命令** — 在 .claude/commands/ 中為每日執行多次的工作流程建立命令
+6. **Subagents** — 使用 subagents 處理常見 PR 工作流程與平行 codebase 探索
+7. **自動化 Hooks** — 實作 PostToolUse hooks 進行自動格式化與權限路由
+8. **驗證迴圈** — 最關鍵洞察：啟用 Claude 自我驗證工作，可 2-3 倍提升最終品質
+9. **工具整合** — 連接 Claude 至現有工具鏈（Slack MCP、BigQuery、Sentry 日誌）
+10. **終端設定** — 自定義狀態列、使用語音聽寫、按任務組織標籤
+
+---
+
+## 關鍵實踐詳解
+
+**驗證迴圈（最重要）**
+> 「給 Claude 一個驗證其工作的方法」是品質改善的關鍵，可 2-3 倍提升最終結果
+
+**文件化系統**
+- 將 CLAUDE.md 視為活檔案，記錄錯誤與教訓
+- 建立累積性知識庫，隨時間改善
+- 新手開發者從文件開始，重現錯誤從此避免
+
+**模型標準化**
+在切換前，承諾單一模型並衡量成效。Opus 4.5 搭配思考模式提供最佳工具使用表現。
+
+---
+
+## 關鍵引用與數據
+
+> 「驗證迴圈將品質提升 2-3 倍」— Boris Cherny
+
+> 「並行執行是單一最大生產力解鎖」
+
+**並行規模**: git worktrees 隔離的多個 Claude 實例  
+**模型標準**: Opus 4.5 搭配思考模式  
+**品質提升**: 驗證迴圈可 2-3 倍改善結果  
+**工作流程自動化**: 斜線命令、subagents、hooks 減少重複
+
+---
+
+## 哲學基礎
+
+核心理念是「平行執行引擎」而非聊天機器人，需要前期規劃、知識持久化與工作流程自動化。開發者應認識到 Claude 是強大的工具，但需要明確上下文、持續監督與結構化工作流程。

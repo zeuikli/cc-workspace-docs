@@ -1,0 +1,86 @@
+---
+title: Turing Post — 2026-04-29
+date: 2026-04-29
+source: Turing Post
+type: ai-news
+---
+
+# 🏛️ Turing Post — 2026-04-29
+
+> Ksenia Se 主持，95k+ 訂閱；AI/ML 政策、地緣政治與深度洞察
+> 來源：[Turing Post](https://turingpost.substack.com/feed)
+
+---
+
+## [#4:There are no AI-native enterprises](https://turingpost.substack.com/p/4there-are-no-ai-native-enterprises)
+*🏛️ Turing Post | 2026-04-29*
+
+This article is part of our The Org Age of AI series, It is written by Will Schenk ([TheFocus.AI](http://TheFocus.AI)) and edited by Ksenia Se. Here is what we have so far in the series:
+
+#1 [AI Feels Powerful. So Why Is the ROI Still Missing?](https://www.turingpost.com/p/orgage1)
+
+#2 [The Unsexy Truth of AI Adoption](https://www.turingpost.com/p/orgage2)
+
+#3 [How to Build an AI-Native Startup from Day One](https://www.turingpost.com/p/orgage3)
+
+You can schedule a 1-on-1 consultation with Will [here](https://www.turingpost.com/upgrade). 
+
+I’ve just signed a $300,000 contract to help change an enterprise. Below are the questions that people ask – or should ask – consultants trying to navigate the current changes. There’s no magic bullet. But small wins compound, and compounded small wins are what an AI transformation actually looks like. Use this as a consultant, hand it to your Chief AI Officer, or send it to whoever is on the hook for making your enterprise AI-native.
+
+Because… 
+
+Episode #4: There are no AI-native enterprises yet
+
+And there won’t be for a while.
+
+Part of it is age. A fifty-year-old company has the inertia of fifty years of decisions made and baked into how it operates: you can’t just rewrite it on a whim. But age is the easy explanation. The deeper reason is that enterprises are ecosystems with their own internal physics, and that physics does not bend to ambition.
+
+From the outside, a large company looks like a firm that responds to customers, competitors, and margins. That’s half the picture. The other half is an internal economy running on entirely different forces. Companies do not spend money — they spend budget, allocated quarterly, denominated in headcount and FTE units, distributed across cost centers whose interests do not align. Around that, everything else organizes. Information becomes currency, and hoarding it is rational. Tribes form around functions, and functions defend their territory. Managing upward becomes its own profession. Every organization reaches a steady state, and every steady state resists change — because the steady state is exactly what the people inside have optimized for.
+
+It is why the same PowerPoint gets different reactions in different rooms even when the numbers are identical. None of this is pathology. This is what an enterprise is. From the outside, a company looks like one coherent actor. Inside, it is many groups trying to move, protect, negotiate, and survive at the same time.
+
+Most writeups of “AI-native transformation” don’t acknowledge any of this. They describe destinations without acknowledging that the journey runs through the load-bearing walls of the building.
+
+That’s what we’re going to walk through.
+
+What’s in today’s episode?
+
+AI in the business vs. AI on the business
+
+Why the agent version of Cold Start is political
+
+Shadow IT and shadow AI makes a shadow organization
+
+What the official path has to carry if it wants to win
+
+Why the measuring currency is failing
+
+Retrofit, not subsidiary
+
+The real divide
+
+AI in the business vs AI on the business
+
+There is AI in the business – how the product gets built, how the service gets delivered, how the customer gets served. The thing you sell, and the work of producing it.
+
+And there is AI on the business – how the company runs itself. How decisions get made, how budgets move, how information flows upward, how the stated org chart relates to the real one.
+
+In a ten-person company these are the same thing. The founders write the code and also decide what to build and also do the accounting. Everyone sees everything.
+
+In a fifty-thousand-person company they come apart. A bank can ship AI-powered fraud detection and still run quarterly planning on slide decks emailed between executive assistants. A manufacturer can automate warehouse routing with computer vision and still budget in FTE units fixed at the start of the fiscal year. The product can be AI-native while the company stays entirely pre-AI in how it operates. One side moves; the other does not.
+
+Almost all enterprise AI work right now happens on the “in” side. It upgrades what the company makes and how it delivers it. But barely any of it reaches the archaeological layers of the enterprise – the systems, habits, and old decisions that still decide how the company actually runs. So this is the real question: how do you make an enterprise AI-native on both sides at once, when one side is a technology upgrade and the other is a rebuild of the organization’s machinery? That machinery has to become machine-readable. And the firm, as we wrote in the [this](https://www.turingpost.com/p/orgage2) episode, is an economy in which illegibility is often rational.
+
+That is where the real work lives.
+
+Why the agent version of Cold Start is political
+
+There is an old algorithm for this problem, on the human side.
+
+Andrew Bosworth calls it the Career Cold Start. When he joins a new team he takes thirty minutes with each person and asks three questions. Twenty-five minutes: tell me everything you think I should know. Three minutes: what are the biggest challenges the team has right now? Two minutes: who else should I talk to? He repeats the loop with every new name until no new names come up.
+
+The algorithm works because it produces, in about a week, a private model of the real organization. Question one gives the vocabulary and the priorities. Question two surfaces quick wins. Question three, the two-minute one, is the interesting one – the names it produces “tend to look very different from the one in the org chart.” It’s a shadow map of how work actually gets done. Every effective new executive runs some version of this. Most don’t call it an algorithm. They call it getting up to speed. Then they act on the map, routing around formal structure without anyone having to name the routing.
+
+Now ask the interesting question. When an agent joins the same organization, what is its version of Cold Start? →
+
+---
