@@ -1,3 +1,12 @@
+---
+title: "A-MEM: Agentic Memory for LLM Agents"
+authors: "Wujiang Xu, Zujie Liang, Kai Mei, et al."
+published: 2025-02-17
+source: "https://arxiv.org/abs/2502.12110"
+source_tier: P
+arxiv_id: 2502.12110
+---
+
 # A-MEM: Agentic Memory for LLM Agents
 
 **ArXiv**: 2502.12110 | **Date**: 2025-02-17 (修訂 2025-10-08) | **Venue**: NeurIPS 2025 | **Authors**: Wujiang Xu, Zujie Liang, Kai Mei, et al. | **Category**: cs.CL

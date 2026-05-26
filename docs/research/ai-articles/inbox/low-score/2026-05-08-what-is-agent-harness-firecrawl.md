@@ -1,3 +1,10 @@
+---
+url: "https://www.firecrawl.dev/blog/what-is-an-agent-harness"
+title: "What Is an Agent Harness? The Infrastructure That Makes AI Agents Actually Work"
+date: 2026-05-08
+type: article
+---
+
 > Source: https://www.firecrawl.dev/blog/what-is-an-agent-harness
 > Fetched: 2026-05-08
 

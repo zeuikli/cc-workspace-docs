@@ -1,3 +1,8 @@
+---
+title: Claude Blog 公告時間軸
+type: blog-index
+---
+
 # Claude Blog 公告時間軸
 
 > 涵蓋期間：2025-11-13 ~ 2026-04-22 | 資料來源：[claude.com/blog](https://claude.com/blog)  

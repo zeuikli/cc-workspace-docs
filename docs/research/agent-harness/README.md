@@ -1,3 +1,8 @@
+---
+title: Agent Harness 研究中心
+type: index
+---
+
 # Agent Harness 研究中心
 
 CAR 框架（14 components）與 H=(E,T,C,S,L,V) survey 的核心研究庫。涵蓋 benchmark、evaluation metrics、工業案例分析。

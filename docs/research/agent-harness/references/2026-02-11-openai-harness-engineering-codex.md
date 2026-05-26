@@ -1,3 +1,9 @@
+---
+title: "Harness engineering: leveraging Codex in an agent-first world"
+published: 2026-02-11
+source_tier: P
+---
+
 # Harness engineering: leveraging Codex in an agent-first world
 
 **Author:** Ryan Lopopolo, Member of the Technical Staff  

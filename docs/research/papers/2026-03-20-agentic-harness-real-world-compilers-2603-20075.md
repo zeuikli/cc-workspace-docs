@@ -1,3 +1,12 @@
+---
+title: Agentic Harness for Real-World Compilers
+authors: "Yingwei Zheng, Cong Li, Shaohua Li, Yuqun Zhang, Zhendong Su"
+published: 2026-03-20
+source: "https://arxiv.org/abs/2603.20075"
+source_tier: P
+arxiv_id: 2603.20075
+---
+
 # Agentic Harness for Real-World Compilers
 
 **ArXiv**: 2603.20075 | **Date**: 2026-03-20 | **Authors**: Yingwei Zheng, Cong Li, Shaohua Li, Yuqun Zhang, Zhendong Su | **Category**: cs.SE

@@ -1,3 +1,8 @@
+---
+title: 社群文章索引
+type: index
+---
+
 # 社群文章索引
 
 涵蓋 Karpathy 規則、Boris Cherny 技巧、Harness 工程實踐、薄 Harness 厚 Skills 等主題的社群文章集合。

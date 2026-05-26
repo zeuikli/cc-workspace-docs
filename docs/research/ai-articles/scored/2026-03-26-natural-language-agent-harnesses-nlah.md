@@ -1,3 +1,10 @@
+---
+url: "https://arxiv.org/html/2603.25723v1"
+title: Natural-Language Agent Harnesses (NLAH)
+date: 2026-03-26
+type: article
+---
+
 # Natural-Language Agent Harnesses (NLAH)
 
 **原始來源**：https://arxiv.org/html/2603.25723v1  

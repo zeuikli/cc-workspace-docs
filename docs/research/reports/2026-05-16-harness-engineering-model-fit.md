@@ -1,3 +1,9 @@
+---
+title: Harness Engineering / Harness Model Fit — 深度研究報告
+date: 2026-05-16
+type: report
+---
+
 # Harness Engineering / Harness Model Fit — 深度研究報告
 
 **日期**：2026-05-16 | **字元數目標**：≥ 12,000 | **來源**：48 篇 scored articles + 本地 tweets

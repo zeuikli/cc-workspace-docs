@@ -1,3 +1,10 @@
+---
+url: "https://www.preprints.org/manuscript/202604.0428/v1"
+title: "Agent Harness for Large Language Model Agents: A Survey"
+date: 2026-04-07
+type: article
+---
+
 # Agent Harness for Large Language Model Agents: A Survey
 
 **原始來源**：https://www.preprints.org/manuscript/202604.0428/v1  

@@ -1,3 +1,9 @@
+---
+url: "https://www.mindstudio.ai/blog/ai-agent-token-budget-management-claude-code"
+title: "AI Agent Token Budget Management: How Claude Code Prevents Runaway API Costs"
+type: article
+---
+
 # AI Agent Token Budget Management: How Claude Code Prevents Runaway API Costs
 
 **原始 URL**: https://www.mindstudio.ai/blog/ai-agent-token-budget-management-claude-code

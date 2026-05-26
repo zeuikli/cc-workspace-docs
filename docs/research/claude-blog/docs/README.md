@@ -1,3 +1,8 @@
+---
+title: Claude Blog Analysis Docs
+type: index
+---
+
 # Claude Blog Analysis Docs
 
 claude-blog 分析文件，從 ~75 篇 claude.com/blog 文章提煉。

@@ -1,3 +1,8 @@
+---
+title: Research Videos — 索引
+type: index
+---
+
 # Research Videos — 索引
 
 > **Type:** raw:indexed — 6 YouTube video transcripts; scored and tagged by topic

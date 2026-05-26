@@ -1,3 +1,9 @@
+---
+title: Claude Codeでハーネスエンジニアリングを実践する — 5層の設計パターン
+date: 2026-04-15
+type: article
+---
+
 > Source: https://zenn.dev/sasadango28/articles/claude-code-harness-engineering-20260415
 > Fetched: 2026-05-08
 

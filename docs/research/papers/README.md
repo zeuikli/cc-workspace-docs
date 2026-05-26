@@ -1,3 +1,8 @@
+---
+title: Academic Paper Archive
+type: index
+---
+
 # Academic Paper Archive
 
 > **Type:** raw:indexed — academic papers on LLM and AI agents (read-only source layer)

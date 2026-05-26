@@ -1,3 +1,9 @@
+---
+title: Auto-Load Token 削減研究報告
+date: 2026-05-25
+type: report
+---
+
 # Auto-Load Token 削減研究報告
 **日期**：2026-05-25 | **分支**：`claude/reduce-auto-load-token-PeKIi`
 **目標**：降至 ≤ 3,000 bytes/4 tokens（不影響功能）

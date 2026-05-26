@@ -1,3 +1,9 @@
+---
+title: GitHub Actions + Claude Code CLI 實作 Hermes-style 自主進化
+date: 2026-05-25
+type: report
+---
+
 # GitHub Actions + Claude Code CLI 實作 Hermes-style 自主進化
 
 **日期**：2026-05-25 | **字元數目標**：≥ 5000

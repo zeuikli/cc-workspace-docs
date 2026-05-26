@@ -1,3 +1,10 @@
+---
+url: "https://www.augmentcode.com/blog/how-to-write-good-agents-dot-md-files"
+title: A Good AGENTS.md is a Model Upgrade
+date: 2026-04-22
+type: article
+---
+
 # A Good AGENTS.md is a Model Upgrade
 
 **作者**: Slava Zhenylenko, Member of Technical Staff at Augment Code  

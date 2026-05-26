@@ -1,3 +1,8 @@
+---
+title: Agent Harness 參考文獻庫
+type: index
+---
+
 # Agent Harness 參考文獻庫
 
 63 篇學術論文，涵蓋 2023–2026 年 agent harness 研究領域。每篇含 .md 摘要，部分附 .pdf 原文。

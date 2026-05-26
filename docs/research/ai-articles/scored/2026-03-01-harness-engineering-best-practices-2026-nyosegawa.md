@@ -1,3 +1,9 @@
+---
+title: "Harness Engineering Best Practices for Claude Code / Codex Users, Explained Plainly"
+date: 2026-03-01
+type: article
+---
+
 > Source: https://nyosegawa.com/en/posts/harness-engineering-best-practices-2026/
 > Fetched: 2026-05-08
 

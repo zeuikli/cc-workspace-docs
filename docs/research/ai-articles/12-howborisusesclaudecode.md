@@ -1,3 +1,9 @@
+---
+url: "https://howborisusesclaudecode.com/"
+title: "How Boris Uses Claude Code: A Comprehensive Guide"
+type: article
+---
+
 # How Boris Uses Claude Code: A Comprehensive Guide
 
 **原始 URL**: https://howborisusesclaudecode.com/

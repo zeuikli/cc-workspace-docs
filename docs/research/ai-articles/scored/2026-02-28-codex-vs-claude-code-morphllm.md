@@ -1,3 +1,9 @@
+---
+title: "Codex vs Claude Code: The Tool That Uses 4x More Tokens Wins More Benchmarks (2026)"
+date: 2026-02-28
+type: article
+---
+
 > Source: https://www.morphllm.com/comparisons/codex-vs-claude-code
 > Fetched: 2026-05-08
 

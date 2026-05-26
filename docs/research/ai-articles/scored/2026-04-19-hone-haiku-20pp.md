@@ -1,3 +1,10 @@
+---
+url: "https://tim.waldin.net/blog/2026-04-19-hone-haiku-20pp"
+title: Using GEPA to Hone Claude Haiku on GitHub Bug Fixes (+20%)
+date: 2026-04-19
+type: article
+---
+
 # Using GEPA to Hone Claude Haiku on GitHub Bug Fixes (+20%)
 
 **來源**：https://tim.waldin.net/blog/2026-04-19-hone-haiku-20pp  

@@ -1,3 +1,9 @@
+---
+url: "https://vatchechamlian.com/orchestrating-agents-claude.html"
+title: "The Multi-Agent Approach: How Claude Code's Creator Actually Uses the Tool"
+type: article
+---
+
 # The Multi-Agent Approach: How Claude Code's Creator Actually Uses the Tool
 
 **原始 URL**: https://vatchechamlian.com/orchestrating-agents-claude.html

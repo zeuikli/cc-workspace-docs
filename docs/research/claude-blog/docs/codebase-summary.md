@@ -1,3 +1,8 @@
+---
+title: Claude Blog 知識庫速查
+type: blog-index
+---
+
 # Claude Blog 知識庫速查
 
 本文件為 `research/claude-blog/` 的快速導航與維護指南。

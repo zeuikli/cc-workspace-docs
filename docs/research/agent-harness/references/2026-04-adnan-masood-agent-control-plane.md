@@ -1,3 +1,10 @@
+---
+title: "Agent Harness Engineering: The Rise of the AI Control Plane"
+authors: Adnan Masood
+source: "https://medium.com/@adnanmasood/agent-harness-engineering-the-rise-of-the-ai-control-plane-938ead884b1d"
+source_tier: P
+---
+
 # Agent Harness Engineering: The Rise of the AI Control Plane
 
 - **作者**: Adnan Masood

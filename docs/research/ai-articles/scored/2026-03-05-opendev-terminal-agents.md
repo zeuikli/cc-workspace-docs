@@ -1,3 +1,10 @@
+---
+url: "https://arxiv.org/html/2603.05344v1"
+title: "Building AI Coding Agents for the Terminal: Scaffolding, Harness, Context Engineering"
+date: 2026-03-05
+type: article
+---
+
 # Building AI Coding Agents for the Terminal: Scaffolding, Harness, Context Engineering
 
 **原始來源**：https://arxiv.org/html/2603.05344v1  

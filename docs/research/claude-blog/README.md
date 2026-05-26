@@ -1,3 +1,8 @@
+---
+title: Claude Blog — 文章收錄索引
+type: index
+---
+
 # Claude Blog — 文章收錄索引
 
 > **Type:** wiki:compiled — official Anthropic blog archive; ~76 articles 2025-11 → 2026-05  

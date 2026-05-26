@@ -1,3 +1,9 @@
+---
+title: "Claude Code Harness: The Runtime Architecture That Turns an LLM into an Autonomous Agent (2026 Guide)"
+date: 2026-03-01
+type: article
+---
+
 > Source: https://pasqualepillitteri.it/en/news/1892/claude-code-harness-runtime-architecture-2026-guide
 > Fetched: 2026-05-08
 

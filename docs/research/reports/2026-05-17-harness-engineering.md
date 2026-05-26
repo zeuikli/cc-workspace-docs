@@ -1,3 +1,9 @@
+---
+title: Harness Engineering — AI 代理框架設計深度研究報告
+date: 2026-05-17
+type: report
+---
+
 # Harness Engineering — AI 代理框架設計深度研究報告
 
 **日期**：2026-05-17 | **字元數目標**：≥ 10,000  

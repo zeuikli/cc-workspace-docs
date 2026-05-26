@@ -1,3 +1,8 @@
+---
+title: Claude Blog — Anthropic 官方工程博客
+type: index
+---
+
 # Claude Blog — Anthropic 官方工程博客
 
 > 來源：[claude.com/blog](https://claude.com/blog) · 收錄 ~76 篇文章 · 2025-11-13 ~ 2026-05-19

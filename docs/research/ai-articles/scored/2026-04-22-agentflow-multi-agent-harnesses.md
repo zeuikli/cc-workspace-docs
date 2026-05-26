@@ -1,3 +1,10 @@
+---
+url: "https://arxiv.org/abs/2604.20801"
+title: "AgentFlow: Synthesizing Multi-Agent Harnesses for Vulnerability Discovery"
+date: 2026-04-22
+type: article
+---
+
 # AgentFlow: Synthesizing Multi-Agent Harnesses for Vulnerability Discovery
 
 **原始來源**：https://arxiv.org/abs/2604.20801  

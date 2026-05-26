@@ -1,3 +1,9 @@
+---
+url: "https://mindwiredai.com/2026/03/25/claude-code-creator-workflow-claudemd/"
+title: How the Creator of Claude Code Actually Uses It
+type: article
+---
+
 # How the Creator of Claude Code Actually Uses It
 
 **原始 URL**: https://mindwiredai.com/2026/03/25/claude-code-creator-workflow-claudemd/

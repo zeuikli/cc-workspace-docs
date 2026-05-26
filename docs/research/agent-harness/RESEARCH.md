@@ -1,3 +1,8 @@
+---
+title: Agent Harness 深度研究
+type: documentation
+---
+
 # Agent Harness 深度研究
 
 > 研究分支：`claude/agent-harness-research-eM6Vc`

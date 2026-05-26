@@ -1,3 +1,8 @@
+---
+title: Enterprise AI — claude.com/blog
+type: index
+---
+
 # Enterprise AI — claude.com/blog
 
 > 收錄自 [claude.com/blog/category/enterprise-ai](https://claude.com/blog/category/enterprise-ai) · 18 篇文章 · 2025-11-17 ~ 2026-05-15

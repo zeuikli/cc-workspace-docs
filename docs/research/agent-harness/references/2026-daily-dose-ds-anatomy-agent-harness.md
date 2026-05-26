@@ -1,3 +1,10 @@
+---
+title: The Anatomy of an Agent Harness
+authors: Daily Dose of DS（Avi Chawla）
+source: "https://blog.dailydoseofds.com/p/the-anatomy-of-an-agent-harness"
+source_tier: P
+---
+
 # The Anatomy of an Agent Harness
 
 - **作者**: Daily Dose of DS（Avi Chawla）

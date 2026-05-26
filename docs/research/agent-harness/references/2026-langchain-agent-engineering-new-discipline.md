@@ -1,3 +1,10 @@
+---
+title: "Agent Engineering: A New Discipline"
+authors: LangChain Team
+source: "https://blog.langchain.com/agent-engineering-a-new-discipline/"
+source_tier: P
+---
+
 # Agent Engineering: A New Discipline
 
 - **作者**: LangChain Team

@@ -1,3 +1,10 @@
+---
+url: "https://arxiv.org/abs/2604.06296"
+title: "AgentOpt v0.1: Client-Side Optimization for LLM-Based Agents"
+date: 2026-04-07
+type: article
+---
+
 # AgentOpt v0.1: Client-Side Optimization for LLM-Based Agents
 
 **原始來源**：https://arxiv.org/abs/2604.06296  

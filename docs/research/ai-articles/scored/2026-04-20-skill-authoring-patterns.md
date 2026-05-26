@@ -1,3 +1,10 @@
+---
+url: "https://generativeprogrammer.com/p/skill-authoring-patterns-from-anthropics"
+title: "Skill Authoring Patterns from Anthropic's Best Practices"
+date: 2026-04-20
+type: article
+---
+
 # Skill Authoring Patterns from Anthropic's Best Practices
 
 **來源**：https://generativeprogrammer.com/p/skill-authoring-patterns-from-anthropics  

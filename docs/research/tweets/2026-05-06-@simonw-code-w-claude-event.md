@@ -1,3 +1,11 @@
+---
+title: "Anthropic Code w/ Claude 2026 Live Blog — @simonw"
+source: "https://simonwillison.net/2026/May/6/code-w-claude-2026/"
+author: "Simon Willison（@simonw）"
+date: 2026-05-06
+type: tweet
+---
+
 # Anthropic Code w/ Claude 2026 Live Blog — @simonw
 
 **來源**：https://simonwillison.net/2026/May/6/code-w-claude-2026/

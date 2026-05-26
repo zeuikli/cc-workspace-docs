@@ -1,3 +1,9 @@
+---
+title: "Agentic Harness Engineering: LLMs as the New OS"
+date: 2026-04-01
+type: article
+---
+
 > Source: https://www.decodingai.com/p/agentic-harness-engineering
 > Fetched: 2026-05-08
 

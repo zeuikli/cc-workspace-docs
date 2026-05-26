@@ -1,3 +1,12 @@
+---
+title: "Agentic Memory: Learning Unified Long-Term and Short-Term Memory Management for LLM Agents"
+authors: "Yi Yu, Liuyi Yao, Yuexiang Xie, et al."
+published: 2026-01-05
+source: "https://arxiv.org/abs/2601.01885"
+source_tier: P
+arxiv_id: 2601.01885
+---
+
 # Agentic Memory: Learning Unified Long-Term and Short-Term Memory Management for LLM Agents
 
 **ArXiv**: 2601.01885 | **Date**: 2026-01-05 (修訂 2026-04-30) | **Authors**: Yi Yu, Liuyi Yao, Yuexiang Xie, et al. | **Category**: cs.CL

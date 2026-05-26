@@ -1,3 +1,9 @@
+---
+title: ハーネスエンジニアリングは枠組みから始めよう
+date: 2026-04-01
+type: article
+---
+
 > Source: https://caddi.tech/start-harness-engineering-with-framework
 > Fetched: 2026-05-08
 

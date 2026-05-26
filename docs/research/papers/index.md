@@ -1,3 +1,8 @@
+---
+title: 學術論文索引
+type: index
+---
+
 # 學術論文索引
 
 涵蓋記憶機制、Agent 架構、Harness Engineering、安全與評測等主題的學術論文筆記。

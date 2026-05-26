@@ -1,3 +1,8 @@
+---
+title: AGENTS.md 研究文章整合索引
+type: documentation
+---
+
 # AGENTS.md 研究文章整合索引
 
 > **主題**: AI Agent 工作說明書設計最佳實踐  

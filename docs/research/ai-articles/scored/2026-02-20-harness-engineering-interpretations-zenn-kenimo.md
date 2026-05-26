@@ -1,3 +1,9 @@
+---
+title: ハーネスエンジニアリング、全員が違うことを言っている — 5社の解釈を並べてみた
+date: 2026-02-20
+type: article
+---
+
 > Source: https://zenn.dev/kenimo49/articles/harness-engineering-interpretations-2026
 > Fetched: 2026-05-08
 

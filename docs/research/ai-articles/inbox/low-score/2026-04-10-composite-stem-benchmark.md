@@ -1,3 +1,10 @@
+---
+url: "https://arxiv.org/abs/2604.09836"
+title: "COMPOSITE-STEM: Expert-Curated STEM Benchmark"
+date: 2026-04-10
+type: article
+---
+
 # COMPOSITE-STEM: Expert-Curated STEM Benchmark
 
 **原始來源**：https://arxiv.org/abs/2604.09836  

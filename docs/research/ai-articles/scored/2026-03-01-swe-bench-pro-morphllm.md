@@ -1,3 +1,9 @@
+---
+title: "SWE-Bench Pro Leaderboard (2026): Why 46% Beats 81%"
+date: 2026-03-01
+type: article
+---
+
 > Source: https://www.morphllm.com/swe-bench-pro
 > Fetched: 2026-05-08
 

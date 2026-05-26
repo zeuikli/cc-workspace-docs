@@ -1,3 +1,9 @@
+---
+url: "https://www.anup.io/35-claude-code-tips-from-the-guy-who-built-it/"
+title: Claude Code Tips From the Guy Who Built It
+type: article
+---
+
 # Claude Code Tips From the Guy Who Built It
 
 **原始 URL**: https://www.anup.io/35-claude-code-tips-from-the-guy-who-built-it/

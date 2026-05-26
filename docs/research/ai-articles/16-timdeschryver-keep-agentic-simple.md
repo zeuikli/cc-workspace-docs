@@ -1,3 +1,9 @@
+---
+url: "https://timdeschryver.dev/blog/keep-agentic-ai-simple-a-practical-workflow-for-software-development"
+title: "Keep Agentic AI Simple: A Practical Workflow for Software Development"
+type: article
+---
+
 # Keep Agentic AI Simple: A Practical Workflow for Software Development
 
 **原始 URL**: https://timdeschryver.dev/blog/keep-agentic-ai-simple-a-practical-workflow-for-software-development

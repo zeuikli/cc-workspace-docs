@@ -1,3 +1,9 @@
+---
+title: Claude Code Auto Load Token 最佳實踐研究報告
+date: 2026-05-18
+type: report
+---
+
 # Claude Code Auto Load Token 最佳實踐研究報告
 **日期**：2026-05-18 | **字元數目標**：≥ 8,000 | **來源數量**：50+
 

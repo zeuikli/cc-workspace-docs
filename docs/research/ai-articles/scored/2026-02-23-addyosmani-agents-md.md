@@ -1,3 +1,10 @@
+---
+url: "https://addyosmani.com/blog/agents-md/"
+title: Stop Using /init for AGENTS.md
+date: 2026-02-23
+type: article
+---
+
 # Stop Using /init for AGENTS.md
 
 **原始來源**：https://addyosmani.com/blog/agents-md/  

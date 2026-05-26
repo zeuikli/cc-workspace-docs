@@ -1,3 +1,9 @@
+---
+url: "https://vld-bc.com/blog/cli-agents-part2-claude-code-best-practices"
+title: "CLI Agents Part 2: Claude Code Best Practices"
+type: article
+---
+
 # CLI Agents Part 2: Claude Code Best Practices
 
 **原始 URL**: https://vld-bc.com/blog/cli-agents-part2-claude-code-best-practices

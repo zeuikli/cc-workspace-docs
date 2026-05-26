@@ -1,3 +1,9 @@
+---
+title: Claude Code vs Codex vs Aider vs OpenCode vs Pi 2026
+date: 2026-04-01
+type: article
+---
+
 > Source: https://thoughts.jock.pl/p/ai-coding-harness-agents-2026
 > Fetched: 2026-05-08
 

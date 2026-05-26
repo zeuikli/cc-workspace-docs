@@ -1,3 +1,9 @@
+---
+title: Auto-Load Token Optimization — 50-Round Karpathy×Mnilax Evaluation
+date: 2026-05-18
+type: report
+---
+
 # Auto-Load Token Optimization — 50-Round Karpathy×Mnilax Evaluation
 **日期**：2026-05-18  
 **分支**：`claude/research-report-overhaul-AAsLy`  

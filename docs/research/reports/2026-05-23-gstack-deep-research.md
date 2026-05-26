@@ -1,3 +1,9 @@
+---
+title: "GStack: Deep-Dive Research Report"
+date: 2026-05-23
+type: report
+---
+
 # GStack: Deep-Dive Research Report
 ## Garry Tan's Open-Source Claude Code Configuration Framework
 

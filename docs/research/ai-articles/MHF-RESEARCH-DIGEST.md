@@ -1,3 +1,8 @@
+---
+title: Model-Harness-Fit (MHF) Research Digest
+type: documentation
+---
+
 # Model-Harness-Fit (MHF) Research Digest
 
 **編製日期**：2026-05-09  

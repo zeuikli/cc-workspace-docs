@@ -1,3 +1,8 @@
+---
+title: Research Index — 知識地圖
+type: documentation
+---
+
 # Research Index — 知識地圖
 
 > 導覽層：快速找到相關研究，了解整合狀態

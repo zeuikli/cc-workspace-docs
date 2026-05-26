@@ -1,3 +1,10 @@
+---
+url: "https://openai.com/index/harness-engineering/"
+title: "Harness Engineering: Leveraging Codex in an Agent-First World"
+date: 2026-02-11
+type: article
+---
+
 # Harness Engineering: Leveraging Codex in an Agent-First World
 
 **原始來源**：https://openai.com/index/harness-engineering/  

@@ -1,3 +1,11 @@
+---
+title: LLM Powered Autonomous Agents
+authors: Lilian Weng（OpenAI Research）
+published: 2023-06-23
+source: "https://lilianweng.github.io/posts/2023-06-23-agent/"
+source_tier: P
+---
+
 # LLM Powered Autonomous Agents
 
 - **作者**: Lilian Weng（OpenAI Research）

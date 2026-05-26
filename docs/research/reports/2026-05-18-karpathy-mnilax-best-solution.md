@@ -1,3 +1,9 @@
+---
+title: AI Coding Agent 最佳準則（Karpathy × Mnilax 精煉版）
+date: 2026-05-18
+type: report
+---
+
 # AI Coding Agent 最佳準則（Karpathy × Mnilax 精煉版）
 
 > 版本：AB4.0（最終）· 2026-05-18  

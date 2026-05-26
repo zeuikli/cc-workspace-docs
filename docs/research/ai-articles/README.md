@@ -1,3 +1,8 @@
+---
+title: AI/LLM Article Archive
+type: index
+---
+
 # AI/LLM Article Archive
 
 > **Type:** raw:indexed — 59 articles scored with Karpathy×Mnilax framework; 48 in `scored/`

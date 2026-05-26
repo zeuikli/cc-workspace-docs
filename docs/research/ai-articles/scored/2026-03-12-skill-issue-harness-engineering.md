@@ -1,3 +1,10 @@
+---
+url: "https://www.humanlayer.dev/blog/skill-issue-harness-engineering-for-coding-agents"
+title: "Skill Issue: Harness Engineering for Coding Agents"
+date: 2026-03-12
+type: article
+---
+
 # Skill Issue: Harness Engineering for Coding Agents
 
 **原始來源**：https://www.humanlayer.dev/blog/skill-issue-harness-engineering-for-coding-agents  

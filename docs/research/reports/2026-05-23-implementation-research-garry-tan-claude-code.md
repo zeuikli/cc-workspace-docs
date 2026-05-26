@@ -1,3 +1,9 @@
+---
+title: 實作研究報告：Thin Harness / Fat Skills × Claude Code 洩漏架構
+date: 2026-05-23
+type: report
+---
+
 # 實作研究報告：Thin Harness / Fat Skills × Claude Code 洩漏架構
 
 **日期**：2026-05-23  

@@ -1,3 +1,9 @@
+---
+title: Stop Using /init for AGENTS.md
+published: 2026-02-23
+source_tier: P
+---
+
 # Stop Using /init for AGENTS.md
 
 **Author:** Addy Osmani  

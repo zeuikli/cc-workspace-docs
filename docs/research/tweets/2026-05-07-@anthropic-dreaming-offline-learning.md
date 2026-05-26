@@ -1,3 +1,11 @@
+---
+title: "Anthropic \"Dreaming\": Offline Agent Self-Improvement — @Anthropic"
+source: "https://venturebeat.com/technology/anthropic-introduces-dreaming-a-system-that-lets-ai-agents-learn-from-their-own-mistakes/"
+author: Anthropic（via VentureBeat coverage）
+date: 2026-05-07
+type: tweet
+---
+
 # Anthropic "Dreaming": Offline Agent Self-Improvement — @Anthropic
 
 **來源**：https://venturebeat.com/technology/anthropic-introduces-dreaming-a-system-that-lets-ai-agents-learn-from-their-own-mistakes/

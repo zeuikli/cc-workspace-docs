@@ -1,3 +1,8 @@
+---
+title: Claude Blog 文章收錄報告
+type: blog-index
+---
+
 # Claude Blog 文章收錄報告
 
 > 收錄來源：[claude.com/blog](https://claude.com/blog)  

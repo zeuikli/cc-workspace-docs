@@ -1,3 +1,8 @@
+---
+title: Research Reports
+type: index
+---
+
 # Research Reports
 
 > **Type:** wiki:generated — autoresearch / overnight-research deep reports; 23 reports (2026-05-12 → 2026-05-25)
@@ -18,7 +23,7 @@
 - [research/ai-news 深度研究報告](2026-05-16-ai-news-synthesis-report.md)
 - [Claude Code 各面向最佳實踐完整研究報告](2026-05-16-claude-code-best-practices.md)
 - [Harness Engineering / Harness Model Fit — 深度研究報告](2026-05-16-harness-engineering-model-fit.md)
-- [Claude Code Sub-Agent Delegation GOTCHAS and Failure Patterns — 深度研究�](2026-05-17-claude-code-subagent-delegation-gotchas.md)
+- [Claude Code Sub-Agent Delegation GOTCHAS and Failure Patterns — 深度研究�](2026-05-17-claude-code-subagent-delegation-gotchas.md)
 - [Harness Engineering — AI 代理框架設計深度研究報告](2026-05-17-harness-engineering.md)
 - [Auto-Load Token Optimization — 50-Round Karpathy×Mnilax Evaluation](2026-05-18-auto-load-50round-optimization.md)
 - [Claude Code Auto Load Token 最佳實踐研究報告](2026-05-18-auto-load-token-best-practices.md)

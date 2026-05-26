@@ -1,3 +1,8 @@
+---
+title: Claude Blog 跨主題合成分析
+type: blog-index
+---
+
 # Claude Blog 跨主題合成分析
 
 > 基於 52 篇文章（2025-11-13 ~ 2026-04-22）的深度合成  

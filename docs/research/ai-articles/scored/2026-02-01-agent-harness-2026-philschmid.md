@@ -1,3 +1,9 @@
+---
+title: The importance of Agent Harness in 2026
+date: 2026-02-01
+type: article
+---
+
 > Source: https://www.philschmid.de/agent-harness-2026
 > Fetched: 2026-05-08
 

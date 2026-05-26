@@ -1,3 +1,10 @@
+---
+url: "https://arxiv.org/abs/2512.10398"
+title: "Confucius Code Agent: Scalable Agent Scaffolding for Real-World Codebases"
+date: 2025-12-11
+type: article
+---
+
 # Confucius Code Agent: Scalable Agent Scaffolding for Real-World Codebases
 
 **原始來源**：https://arxiv.org/abs/2512.10398  

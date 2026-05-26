@@ -1,3 +1,9 @@
+---
+title: "Agent Engineering: How the Harness Became the Product"
+date: 2026-03-01
+type: article
+---
+
 > Source: https://www.morphllm.com/agent-engineering
 > Fetched: 2026-05-08
 

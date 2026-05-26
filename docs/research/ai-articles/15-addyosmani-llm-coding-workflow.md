@@ -1,3 +1,9 @@
+---
+url: "https://addyosmani.com/blog/ai-coding-workflow/"
+title: LLM Coding Workflow Best Practices for 2026
+type: article
+---
+
 # LLM Coding Workflow Best Practices for 2026
 
 **原始 URL**: https://addyosmani.com/blog/ai-coding-workflow/

@@ -1,3 +1,9 @@
+---
+url: "https://www.mindstudio.ai/blog/claude-code-5-workflow-patterns-explained"
+title: "5 Claude Code Workflow Patterns Explained: From Sequential to Fully Autonomous"
+type: article
+---
+
 # 5 Claude Code Workflow Patterns Explained: From Sequential to Fully Autonomous
 
 **原始 URL**: https://www.mindstudio.ai/blog/claude-code-5-workflow-patterns-explained

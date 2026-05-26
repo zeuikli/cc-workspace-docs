@@ -1,3 +1,9 @@
+---
+title: "autoDream & KAIROS: Deep Research Report"
+date: 2026-05-23
+type: report
+---
+
 # autoDream & KAIROS: Deep Research Report
 ## Unreleased Features from the Claude Code Source Leak (March 31, 2026)
 

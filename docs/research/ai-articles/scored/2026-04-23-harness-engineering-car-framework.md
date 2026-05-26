@@ -1,3 +1,10 @@
+---
+url: "https://www.preprints.org/manuscript/202603.1756.v2"
+title: "Harness Engineering for Language Agents: The CAR Framework"
+date: 2026-04-23
+type: article
+---
+
 # Harness Engineering for Language Agents: The CAR Framework
 
 **原始來源**：https://www.preprints.org/manuscript/202603.1756.v2  

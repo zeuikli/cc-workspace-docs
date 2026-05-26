@@ -1,3 +1,9 @@
+---
+title: "What Is Harness Engineering: A New Concept Defining the 'Outside' of Context Engineering"
+date: 2026-02-20
+type: article
+---
+
 > Source: https://smartscope.blog/en/blog/harness-engineering-overview/
 > Fetched: 2026-05-08
 

@@ -1,3 +1,9 @@
+---
+title: Cat Wu 面試了幾百個 PM 候選人，幾乎沒人答對一個問題：AI 產品經理到底應該干什麼？
+date: 2026-04-24
+type: article
+---
+
 # Cat Wu 面試了幾百個 PM 候選人，幾乎沒人答對一個問題：AI 產品經理到底應該干什麼？
 
 **來源（X Article）**：https://x.com/dotey/status/2047537778959778209  

@@ -1,3 +1,12 @@
+---
+title: "MultiAgentBench: Evaluating the Collaboration and Competition of LLM Agents"
+authors: "Kunlun Zhu, Hongyi Du, Zhaochen Hong, et al."
+published: 2025-03-03
+source: "https://arxiv.org/abs/2503.01935"
+source_tier: P
+arxiv_id: 2503.01935
+---
+
 # MultiAgentBench: Evaluating the Collaboration and Competition of LLM Agents
 
 **ArXiv**: 2503.01935 | **Date**: 2025-03-03 | **Authors**: Kunlun Zhu, Hongyi Du, Zhaochen Hong, et al. | **Category**: cs.MA, cs.AI, cs.CL

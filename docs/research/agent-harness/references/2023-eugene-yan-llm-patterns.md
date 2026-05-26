@@ -1,3 +1,10 @@
+---
+title: "Patterns for Building LLM-based Systems & Products"
+authors: Eugene Yan
+source: "https://eugeneyan.com/writing/llm-patterns/"
+source_tier: P
+---
+
 # Patterns for Building LLM-based Systems & Products
 
 - **作者**: Eugene Yan

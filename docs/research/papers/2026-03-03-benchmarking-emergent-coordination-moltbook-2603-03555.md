@@ -1,3 +1,12 @@
+---
+title: Benchmarking Emergent Coordination in Large-Scale LLM Populations
+authors: "Brandon Yee, Pairie Koh"
+published: 2026-03-03
+source: "https://arxiv.org/abs/2603.03555"
+source_tier: P
+arxiv_id: 2603.03555
+---
+
 # Benchmarking Emergent Coordination in Large-Scale LLM Populations
 
 **ArXiv**: 2603.03555 | **Date**: 2026-03-03 (修訂 2026-04-26) | **Authors**: Brandon Yee, Pairie Koh | **Category**: cs.MA

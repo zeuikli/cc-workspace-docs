@@ -1,3 +1,8 @@
+---
+title: Claude Code — claude.com/blog
+type: index
+---
+
 # Claude Code — claude.com/blog
 
 > 收錄自 [claude.com/blog/category/claude-code](https://claude.com/blog/category/claude-code) · 20 篇文章 · 2026-01-29 ~ 2026-05-14

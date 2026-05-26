@@ -1,3 +1,9 @@
+---
+title: research/ai-news 深度研究報告
+date: 2026-05-16
+type: report
+---
+
 # research/ai-news 深度研究報告
 **涵蓋期間**：2026 Q1（1–3 月）~ 2026-05-16 | **來源數**：17 個 newsletter | **主題數**：8
 
