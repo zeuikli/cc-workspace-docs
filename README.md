@@ -1,8 +1,9 @@
-<div class="hero-banner">
-  <span class="hero-badge">Private Workspace Docs</span>
-  <h1>Zeuik's Claude Code Docs</h1>
-  <p>SRE / Cloud Architect 的研究筆記、論文分析與 AI 最佳實踐彙整。<br>同步自私有 cc-workspace，每次 session 自動更新。</p>
-</div>
+<span class="hero-badge">Private Workspace Docs</span>
+
+# Zeuik's Claude Code Docs
+
+SRE / Cloud Architect 的研究筆記、論文分析與 AI 最佳實踐彙整。  
+同步自私有 cc-workspace，每次 session 自動更新。
 
 <div class="stats-bar">
   <div class="stat"><div class="stat-num">1,200+</div><div class="stat-label">文章總數</div></div>
@@ -75,7 +76,7 @@
 
 ## 關於此站
 
-> 內容同步自 [私有 cc-workspace](https://github.com/zeuikli/cc-workspace)，已排除個人職涯記錄（career-wiki）與敏感設定。
+> 內容同步自 [私有 cc-workspace](https://github.com/zeuikli/cc-workspace)，已排除個人職涯記錄（career-wiki）與敏感設定。  
 > 最後同步：2026-05-26
 
 **技術棧**：docsify · GitHub Pages · rsync 自動同步
