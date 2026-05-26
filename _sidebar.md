@@ -1,7 +1,7 @@
 <!-- AUTO-GENERATED — do not edit manually -->
 <!-- Updated: 2026-05-26 -->
 
-- [首頁](/)
+- [Zeuik's Claude Code Docs](/)
 
 **Research**
 
