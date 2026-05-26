@@ -59,7 +59,11 @@
     .sidebar {
       background: var(--sidebar-bg) !important;
       border-right: 1px solid var(--divider) !important;
-      width: var(--sidebar-w) !important;
+      overflow-y: auto !important;
+      -webkit-overflow-scrolling: touch !important;
+    }
+    @media (min-width: 769px) {
+      .sidebar { width: var(--sidebar-w) !important; }
     }
     .sidebar .app-name-link {
       font-family: 'Newsreader', ui-serif, Georgia, serif;
@@ -338,8 +342,6 @@
     .sidebar ul li.active .sidebar-collapse-toggle::after {
       transform: rotate(90deg);
     }
-    /* 折疊狀態下子項隱藏 */
-    .sidebar ul li:not(.open) > ul { display: none; }
 
     /* ── Transcript 逐字稿 ── */
 
