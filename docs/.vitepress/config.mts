@@ -20,6 +20,27 @@ const projectItems = [
 
 const resourceItems = [
   { text: "資源總覽", link: "/resources/" },
+  {
+    text: "最佳實踐指南",
+    collapsed: false,
+    items: [
+      { text: "最佳實踐總覽", link: "/resources/best-practices/" },
+      { text: "工作流程與核心技巧", link: "/resources/best-practices/workflows" },
+      { text: "Hooks 設計模式", link: "/resources/best-practices/hooks" },
+      { text: "Permission 細粒度設定", link: "/resources/best-practices/permissions" },
+      { text: "MCP Server 與 Skills", link: "/resources/best-practices/mcp-skills" },
+      { text: "Prompt Caching 工程", link: "/resources/best-practices/prompt-caching" },
+    ],
+  },
+  {
+    text: "研究資料庫",
+    collapsed: false,
+    items: [
+      { text: "研究資料庫總覽", link: "/resources/research/" },
+      { text: "Harness Engineering 研究全景", link: "/resources/research/harness-engineering" },
+      { text: "跨源知識地圖", link: "/resources/research/knowledge-map" },
+    ],
+  },
   { text: "延伸閱讀與參考資料", link: "/resources/reference/" },
 ];
 
