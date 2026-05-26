@@ -2,41 +2,253 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <title>cc-workspace — Research Archive</title>
+  <title>Zeuik's Claude Code Docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
   <style>
+    /* ── Design tokens ── */
     :root {
-      --theme-color: #3d7eff;
+      --theme-color: #c0392b;
+      --accent:      #e74c3c;
+      --accent-soft: #fdf2f1;
+      --accent-mid:  #f8d7d4;
+      --sidebar-bg:  #1c1f26;
+      --sidebar-fg:  #cdd1db;
+      --sidebar-link:#e0e4ed;
+      --sidebar-active: #e74c3c;
       --base-font-size: 15px;
+      --base-line-height: 1.7;
+      --heading-color: #1a1d23;
+      --text-color:   #2d3142;
+      --code-bg:      #f5f6f8;
+      --border-color: #e8eaed;
+      --card-shadow:  0 2px 12px rgba(0,0,0,.08);
+      --radius:       10px;
     }
-    .sidebar { background: #f8f9fa; }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      background: var(--sidebar-bg) !important;
+      color: var(--sidebar-fg);
+      border-right: none !important;
+    }
+    .sidebar .app-name-link {
+      color: #fff !important;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: -.01em;
+    }
+    .sidebar ul li a {
+      color: var(--sidebar-link) !important;
+      font-size: .875rem;
+      transition: color .15s;
+    }
+    .sidebar ul li a:hover,
+    .sidebar ul li.active > a {
+      color: var(--sidebar-active) !important;
+    }
+    .sidebar ul li.active > a {
+      font-weight: 600;
+    }
+    /* sidebar toggle button */
+    .sidebar-toggle { background: var(--sidebar-bg) !important; }
+    .sidebar-toggle span { background: var(--sidebar-fg) !important; }
+
+    /* ── Search ── */
+    .search input {
+      background: #2a2d36 !important;
+      color: #e0e4ed !important;
+      border: 1px solid #3a3d46 !important;
+      border-radius: 6px !important;
+    }
+    .search input::placeholder { color: #7a7f8e !important; }
+    .search .results-panel { background: #23262f !important; border: 1px solid #3a3d46 !important; }
+    .search .results-panel .matching-post a { color: #e0e4ed !important; }
+    .search .results-panel .matching-post p { color: #9da3b0 !important; }
+
+    /* ── Main content ── */
+    .content { padding: 2rem 3rem !important; max-width: 900px; }
+    body { color: var(--text-color); }
+
+    h1, h2, h3, h4 { color: var(--heading-color); font-weight: 700; }
+    h1 { font-size: 2rem; border-bottom: 2px solid var(--border-color); padding-bottom: .5rem; }
+    h2 { font-size: 1.4rem; margin-top: 2rem; }
+
+    /* ── Links ── */
+    a { color: var(--theme-color); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Code ── */
+    code {
+      background: var(--code-bg);
+      border-radius: 4px;
+      padding: .1em .35em;
+      font-size: .9em;
+      color: #c0392b;
+    }
+    pre code { color: inherit; }
+    pre {
+      background: var(--sidebar-bg) !important;
+      border-radius: var(--radius) !important;
+    }
+    pre code { color: #cdd1db !important; }
+
+    /* ── Tables ── */
+    table { border-collapse: collapse; width: 100%; margin: 1.2rem 0; }
+    th { background: var(--accent-soft); color: var(--heading-color); font-weight: 600; text-align: left; padding: .6rem .9rem; border: 1px solid var(--accent-mid); }
+    td { padding: .55rem .9rem; border: 1px solid var(--border-color); }
+    tr:nth-child(even) td { background: #fafbfc; }
+
+    /* ── Blockquotes ── */
+    blockquote {
+      border-left: 4px solid var(--accent);
+      background: var(--accent-soft);
+      padding: .8rem 1.2rem;
+      margin: 1.2rem 0;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      color: #555;
+    }
+    blockquote p { margin: 0; }
+
+    /* ── Hero section (README 首頁) ── */
+    .hero-banner {
+      background: linear-gradient(135deg, #1c1f26 0%, #2d1810 100%);
+      border-radius: var(--radius);
+      padding: 2.5rem 2rem;
+      margin-bottom: 2rem;
+      color: #fff;
+    }
+    .hero-banner h1 {
+      color: #fff !important;
+      border: none !important;
+      font-size: 1.8rem;
+      margin: 0 0 .5rem;
+    }
+    .hero-banner p { color: #bbb; margin: 0; font-size: .95rem; }
+    .hero-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 600;
+      padding: .15rem .55rem;
+      border-radius: 20px;
+      margin-bottom: .8rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    /* ── Category cards ── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .card {
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 1.2rem 1.4rem;
+      background: #fff;
+      box-shadow: var(--card-shadow);
+      transition: transform .15s, box-shadow .15s;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,.12);
+    }
+    .card-icon { font-size: 1.6rem; margin-bottom: .5rem; }
+    .card-title { font-weight: 700; color: var(--heading-color); font-size: .95rem; margin-bottom: .3rem; }
+    .card-title a { color: inherit !important; }
+    .card-desc { color: #6b7280; font-size: .82rem; line-height: 1.5; }
+    .card-count { display: inline-block; margin-top: .6rem; font-size: .75rem; color: var(--accent); font-weight: 600; }
+
+    /* ── Stats bar ── */
+    .stats-bar {
+      display: flex; gap: 1.5rem; flex-wrap: wrap;
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-mid);
+      border-radius: var(--radius);
+      padding: 1rem 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+    .stat { text-align: center; }
+    .stat-num { font-size: 1.5rem; font-weight: 800; color: var(--accent); line-height: 1; }
+    .stat-label { font-size: .72rem; color: #888; margin-top: .2rem; text-transform: uppercase; letter-spacing: .05em; }
+
+    /* ── Pagination ── */
+    .docsify-pagination-container { border-top: 1px solid var(--border-color); margin-top: 2rem; }
+    .pagination-item--label { color: #888; font-size: .8rem; }
+    .pagination-item--next .pagination-item--label,
+    .pagination-item--previous .pagination-item--label { color: #888; }
+    .pagination-item--next a, .pagination-item--previous a { color: var(--theme-color) !important; }
+
+    /* ── Mobile ── */
+    @media (max-width: 768px) {
+      .content { padding: 1.2rem !important; }
+      .cards-grid { grid-template-columns: 1fr 1fr; }
+      .stats-bar { gap: 1rem; }
+    }
+    @media (max-width: 480px) {
+      .cards-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
-  <div id="app">Loading...</div>
+  <div id="app">載入中...</div>
   <script>
     window.$docsify = {
-      name: 'cc-workspace',
-      repo: '',
+      name: "Zeuik's Claude Code Docs",
+      nameLink: '/',
+      repo: 'https://github.com/zeuikli/cc-workspace-docs',
       loadSidebar: true,
       subMaxLevel: 3,
       auto2top: true,
+      relativePath: false,
+
       search: {
         maxAge: 86400000,
         paths: 'auto',
-        placeholder: '搜尋...',
+        placeholder: '搜尋文章...',
         noData: '找不到結果',
-        depth: 3
+        depth: 4,
+        hideOtherSidebarContent: false
       },
-      pagination: { previousText: '上一篇', nextText: '下一篇' }
+
+      pagination: {
+        previousText: '← 上一篇',
+        nextText: '下一篇 →',
+        crossChapter: true,
+        crossChapterText: true
+      },
+
+      plugins: [
+        function(hook) {
+          hook.afterEach(function(html) {
+            var updated = '最後同步：' + new Date().toLocaleDateString('zh-TW');
+            return html;
+          });
+        }
+      ]
     }
   </script>
+
+  <!-- docsify core -->
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <!-- search -->
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <!-- pagination -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- zoom image -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+  <!-- copy code button -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js"></script>
+  <!-- syntax highlighting -->
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-yaml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
 </body>
 </html>
