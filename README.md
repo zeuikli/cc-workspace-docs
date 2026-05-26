@@ -79,5 +79,3 @@
 > 最後同步：2026-05-26
 
 **技術棧**：docsify · GitHub Pages · rsync 自動同步
-
-**Zeuik Li** — SRE / Cloud Architect（GCP 主力）· 10+ 年經驗 · CathaySec
