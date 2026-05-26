@@ -12,8 +12,8 @@
 
 ### 2026-05
 
-- [研究主題：大道至簡 — Claude Cost & Efficiency 最佳實踐](2026-05-12-best-practices-simplicity.md)
-- [Phase 1+2+3+4 HIGH 交互驗證報告](2026-05-15-cross-validation-report.md)
+- [best-practices-simplicity](2026-05-12-best-practices-simplicity.md)
+- [cross-validation-report](2026-05-15-cross-validation-report.md)
 - [research/tweets 深度研究報告](2026-05-15-tweets-synthesis-report.md)
 - [research/ai-news 深度研究報告](2026-05-16-ai-news-synthesis-report.md)
 - [Claude Code 各面向最佳實踐完整研究報告](2026-05-16-claude-code-best-practices.md)
