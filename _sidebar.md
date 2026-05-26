@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED — do not edit manually -->
-<!-- Updated: 2026-05-26 13:11 -->
+<!-- Updated: 2026-05-26 13:19 -->
 
 - [首頁](README.md)
 
@@ -14,10 +14,6 @@
   - [Harness Ratchet Log](research/agent-harness/RATCHET.md)
   - [Agent Harness 深度研究](research/agent-harness/RESEARCH.md)
   - [Agent Harness Engineering — 論文與資源總覽](research/agent-harness/SURVEY.md)
-  - [Harness Eval — 2026-05-19](research/agent-harness/eval-2026-05-19.md)
-  - [Harness Eval — 2026-05-20](research/agent-harness/eval-2026-05-20.md)
-  - [Harness Eval — 2026-05-25](research/agent-harness/eval-2026-05-25.md)
-  - [Harness 評估指標化：基準與測量框架（2025-2026�](research/agent-harness/harness-evaluation-metrics-2026.md)
   - [LLM 路由演算法：工業案例與量化數據](research/agent-harness/llm-routing-industrial-cases.md)
 
 - **Ai Articles**
