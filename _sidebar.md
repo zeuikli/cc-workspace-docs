@@ -6,11 +6,8 @@
 **Research**
 
 - [Agent Harness](/research/agent-harness/README.md)
-  - [Agent Harness Workspace Audit — 2026-05-01](/research/agent-harness/AUDIT-2026-05-01.md)
   - [Harness Benchmark — 量化基線設計](/research/agent-harness/BENCHMARK.md)
-  - [HarnessCard — cc-workspace](/research/agent-harness/HARNESS-CARD.md)
   - [Agent Harness Engineering — 跨源知識地圖](/research/agent-harness/KNOWLEDGE-MAP.md)
-  - [Harness Ratchet Log](/research/agent-harness/RATCHET.md)
   - [Agent Harness 深度研究](/research/agent-harness/RESEARCH.md)
   - [Agent Harness Engineering — 論文與資源總覽](/research/agent-harness/SURVEY.md)
   - [LLM 路由演算法：工業案例與量化數據](/research/agent-harness/llm-routing-industrial-cases.md)
