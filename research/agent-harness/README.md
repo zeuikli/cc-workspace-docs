@@ -7,7 +7,6 @@ CAR 框架（14 components）與 H=(E,T,C,S,L,V) survey 的核心研究庫。涵
 | 主題 | 文件 |
 |------|------|
 | CAR 14-component 知識地圖 | [KNOWLEDGE-MAP.md](KNOWLEDGE-MAP.md) |
-| Benchmark 設計與指標定義 | [BENCHMARK.md](BENCHMARK.md) |
 | H=(E,T,C,S,L,V) 全面 survey | [SURVEY.md](SURVEY.md) |
 | 研究主線與方法論 | [RESEARCH.md](RESEARCH.md) |
 | LLM routing 工業案例分析 | [llm-routing-industrial-cases.md](llm-routing-industrial-cases.md) |

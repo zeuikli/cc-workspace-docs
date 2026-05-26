@@ -6,7 +6,6 @@
 **Research**
 
 - [Agent Harness](/research/agent-harness/README.md)
-  - [Harness Benchmark — 量化基線設計](/research/agent-harness/BENCHMARK.md)
   - [Agent Harness Engineering — 跨源知識地圖](/research/agent-harness/KNOWLEDGE-MAP.md)
   - [Agent Harness 深度研究](/research/agent-harness/RESEARCH.md)
   - [Agent Harness Engineering — 論文與資源總覽](/research/agent-harness/SURVEY.md)
