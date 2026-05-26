@@ -342,13 +342,45 @@
     .sidebar ul li:not(.open) > ul { display: none; }
 
     /* ── Transcript 逐字稿 ── */
+
+    /* Container wrapping everything after ## 完整逐字稿 */
+    .transcript-body {
+      background: var(--bg-elv);
+      border: 1px solid var(--divider);
+      border-radius: var(--radius);
+      padding: 1.75rem 2rem;
+      margin-top: 1.2rem;
+      max-width: 700px;          /* comfortable reading column */
+    }
+
+    /* Body text inside transcript */
+    .transcript-body p {
+      font-size: var(--fs-base);
+      line-height: 2;
+      color: var(--text-2);
+      margin: 0 0 1em;
+      word-break: break-word;
+    }
+
+    /* Speaker labels: lines ending in "?" or starting with caps word + colon */
+    .transcript-speaker {
+      font-weight: 600;
+      color: var(--text-1);
+      font-size: var(--fs-sm);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin: 1.4em 0 .2em;
+      display: block;
+    }
+
+    /* Legacy timestamp badges (kept for files that do have them) */
     .ts-badge {
       display: inline-block;
       background: var(--bg-alt);
       color: var(--text-3) !important;
       font-size: var(--fs-2xs);
       font-family: 'JetBrains Mono', monospace;
-      padding: .1rem .4rem;
+      padding: .1rem .45rem;
       border-radius: 4px;
       margin-right: .5rem;
       font-weight: 500;
@@ -356,9 +388,17 @@
       white-space: nowrap;
       border: 1px solid var(--divider);
     }
-    .is-transcript p { font-size: var(--fs-sm); line-height: 1.85; }
-    .transcript-block { border-bottom: 1px solid var(--divider); padding: .45rem 0 .55rem; margin: 0; }
-    .transcript-block:last-of-type { border-bottom: none; }
+
+    /* Notice banner inside transcript */
+    .transcript-notice {
+      background: var(--brand-soft);
+      border-left: 3px solid var(--brand);
+      border-radius: 0 6px 6px 0;
+      padding: .5rem .9rem;
+      margin-bottom: 1.4rem;
+      font-size: var(--fs-sm);
+      color: var(--text-2);
+    }
 
     /* ── Mobile ── */
     @media (max-width: 768px) {
@@ -369,6 +409,9 @@
       h2 { font-size: var(--fs-lg) !important; }
       h3 { font-size: var(--fs-base) !important; }
       .markdown-section table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      /* Transcript on mobile */
+      .transcript-body { padding: 1.1rem 1rem; border-radius: 8px; max-width: 100%; }
+      .transcript-body p { font-size: var(--fs-base); line-height: 1.9; }
     }
     @media (max-width: 480px) {
       .cards-grid { grid-template-columns: 1fr; }
@@ -413,24 +456,48 @@
       plugins: [
         function(hook) {
           hook.doneEach(function() {
-            var content = document.querySelector('.markdown-section');
-            if (!content) return;
-            var timestamps = content.querySelectorAll('strong');
-            var tsCount = 0;
-            timestamps.forEach(function(el) {
-              if (/^\[[\d:]+\s*[→→]\s*[\d:]+\]$/.test(el.textContent.trim())) tsCount++;
+            var section = document.querySelector('.markdown-section');
+            if (!section) return;
+
+            // Find the "完整逐字稿" heading (h2 or h3)
+            var headings = section.querySelectorAll('h2, h3');
+            var transcriptHeading = null;
+            headings.forEach(function(h) {
+              if (/完整逐字稿/.test(h.textContent)) transcriptHeading = h;
             });
-            if (tsCount < 5) return;
-            content.classList.add('is-transcript');
-            timestamps.forEach(function(el) {
-              var text = el.textContent.trim();
-              if (/^\[[\d:]+\s*[→→]\s*[\d:]+\]$/.test(text)) {
-                el.classList.add('ts-badge');
-                if (el.parentElement && el.parentElement.tagName === 'P') {
-                  el.parentElement.classList.add('transcript-block');
-                }
+            if (!transcriptHeading) return;
+
+            // Collect all sibling nodes after the heading
+            var nodes = [];
+            var node = transcriptHeading.nextElementSibling;
+            while (node) {
+              nodes.push(node);
+              node = node.nextElementSibling;
+            }
+            if (!nodes.length) return;
+
+            // Wrap them in .transcript-body
+            var wrapper = document.createElement('div');
+            wrapper.className = 'transcript-body';
+
+            // Move notice blockquote first (⚠ warning), then rest
+            nodes.forEach(function(n) {
+              // Style blockquote notices
+              if (n.tagName === 'BLOCKQUOTE') {
+                n.className = 'transcript-notice';
               }
+              // Timestamp badges (legacy)
+              if (n.tagName === 'P') {
+                n.querySelectorAll('strong').forEach(function(el) {
+                  if (/^\[[\d:]+\s*[→→]\s*[\d:]+\]$/.test(el.textContent.trim())) {
+                    el.classList.add('ts-badge');
+                  }
+                });
+              }
+              wrapper.appendChild(n);
             });
+
+            transcriptHeading.insertAdjacentElement('afterend', wrapper);
           });
         }
       ]
