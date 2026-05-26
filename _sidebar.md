@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED — do not edit manually -->
-<!-- Updated: 2026-05-26 13:19 -->
+<!-- Updated: 2026-05-26 13:20 -->
 
 - [首頁](README.md)
 
@@ -118,9 +118,6 @@
 
 - **Claude Blog**
   - [Claude Blog 文章收錄報告](research/claude-blog/REPORT.md)
-
-- **Evals**
-  - [Eval Suite Index](research/evals/INDEX.md)
 
 - **Papers**
   - [Reflexion: Language Agents with Verbal Reinforcement Learnin](research/papers/2023-03-20-reflexion-verbal-reinforcement-learning-2303-11366.md)
