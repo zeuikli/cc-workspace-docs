@@ -185,14 +185,97 @@
     .pagination-item--previous .pagination-item--label { color: #888; }
     .pagination-item--next a, .pagination-item--previous a { color: var(--theme-color) !important; }
 
+    /* ── Transcript / 逐字稿 排版優化 ── */
+    /* 時間戳段落：[HH:MM → HH:MM] 開頭的 strong 元素 */
+    p strong:first-child {
+      /* 讓時間戳視覺上與正文區分 */
+    }
+
+    /* 逐字稿：連續段落間距 */
+    .markdown-section p + p { margin-top: .6rem; }
+
+    /* 長逐字稿文件：限制行寬提升可讀性 */
+    .markdown-section p {
+      line-height: 1.8;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+
+    /* 時間戳 badge 樣式：針對 [00:00 → 00:00] 格式的 strong */
+    .markdown-section p > strong:only-child,
+    .markdown-section li > strong:first-child {
+      color: var(--accent);
+    }
+
+    /* 逐字稿段落卡片化（每個帶時間戳的段落加底線分隔） */
+    .transcript-block {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: .8rem;
+      margin-bottom: .8rem;
+    }
+
+    /* 影片 metadata 資訊塊（title 下方的粗體標籤清單） */
+    .markdown-section p strong {
+      color: #444;
+    }
+
+    /* 逐字稿時間戳 badge */
+    .ts-badge {
+      display: inline-block;
+      background: #1c1f26;
+      color: #9da3b0 !important;
+      font-size: .72rem;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      padding: .1rem .4rem;
+      border-radius: 4px;
+      margin-right: .5rem;
+      font-weight: 500;
+      vertical-align: middle;
+      white-space: nowrap;
+      letter-spacing: .02em;
+    }
+
+    /* 逐字稿模式：整頁字體 / 間距調整 */
+    .is-transcript p {
+      font-size: .88rem;
+      line-height: 1.85;
+      color: #2d3142;
+    }
+    .is-transcript .transcript-block {
+      border-bottom: 1px solid #eef0f3;
+      padding: .5rem 0 .6rem;
+      margin: 0;
+    }
+    .is-transcript .transcript-block:last-of-type { border-bottom: none; }
+
+    /* 大型內容頁（逐字稿）的正文字體稍小、行距大 */
+    .markdown-section blockquote + p,
+    .markdown-section hr + p {
+      font-size: .9rem;
+      line-height: 1.9;
+      color: #3a3a3a;
+    }
+
     /* ── Mobile ── */
     @media (max-width: 768px) {
       .content { padding: 1.2rem !important; }
       .cards-grid { grid-template-columns: 1fr 1fr; }
       .stats-bar { gap: 1rem; }
+      /* 逐字稿行動裝置：字體稍小、段落更緊湊 */
+      .markdown-section p { font-size: .88rem; line-height: 1.75; }
+      h1 { font-size: 1.4rem !important; }
+      h2 { font-size: 1.15rem !important; }
+      h3 { font-size: 1rem !important; }
+      /* 時間戳段落在手機上不換行截斷 */
+      .markdown-section p strong { white-space: nowrap; }
+      /* table 在手機上可橫向滑動 */
+      .markdown-section table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
     }
     @media (max-width: 480px) {
       .cards-grid { grid-template-columns: 1fr; }
+      .stats-bar { flex-direction: column; gap: .8rem; align-items: flex-start; }
+      .stat { display: flex; align-items: baseline; gap: .5rem; }
+      .stat-label { margin-top: 0; }
     }
   </style>
 </head>
@@ -225,10 +308,31 @@
       },
 
       plugins: [
+        // 逐字稿時間戳美化：**[00:00 → 00:06]** → badge
         function(hook) {
-          hook.afterEach(function(html) {
-            var updated = '最後同步：' + new Date().toLocaleDateString('zh-TW');
-            return html;
+          hook.doneEach(function() {
+            var content = document.querySelector('.markdown-section');
+            if (!content) return;
+            // 偵測是否為逐字稿頁面（含大量時間戳段落）
+            var timestamps = content.querySelectorAll('strong');
+            var tsCount = 0;
+            timestamps.forEach(function(el) {
+              if (/^\[[\d:]+\s*[→→]\s*[\d:]+\]$/.test(el.textContent.trim())) tsCount++;
+            });
+            if (tsCount < 5) return; // 非逐字稿頁面，不處理
+            // 標記頁面為逐字稿模式
+            content.classList.add('is-transcript');
+            // 美化時間戳
+            timestamps.forEach(function(el) {
+              var text = el.textContent.trim();
+              if (/^\[[\d:]+\s*[→→]\s*[\d:]+\]$/.test(text)) {
+                el.classList.add('ts-badge');
+                // 讓父段落加上分隔線
+                if (el.parentElement && el.parentElement.tagName === 'P') {
+                  el.parentElement.classList.add('transcript-block');
+                }
+              }
+            });
           });
         }
       ]
