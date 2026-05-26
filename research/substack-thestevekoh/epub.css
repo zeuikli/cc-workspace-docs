@@ -1,0 +1,79 @@
+body {
+  font-family: "Noto Serif CJK TC", "Noto Serif CJK SC", "Source Han Serif TC", "Source Han Serif SC",
+               "Noto Serif TC", "PingFang TC", "PingFang SC", "Microsoft JhengHei", "SimSun", "PMingLiU", serif;
+  line-height: 1.8;
+  font-size: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Noto Sans CJK TC", "Noto Sans CJK SC", "Source Han Sans TC", "Source Han Sans SC",
+               "PingFang TC", "PingFang SC", "Microsoft JhengHei", "SimHei", sans-serif;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 1.6em;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  break-before: page;
+  page-break-before: always;
+}
+
+h2 {
+  font-size: 1.3em;
+  margin-top: 1.5em;
+  margin-bottom: 0.4em;
+}
+
+h3 {
+  font-size: 1.1em;
+  margin-top: 1em;
+}
+
+blockquote {
+  border-left: 3px solid #ccc;
+  margin-left: 1em;
+  padding-left: 1em;
+  color: #555;
+}
+
+p {
+  text-align: justify;
+  text-justify: inter-ideograph;
+  margin-bottom: 0.8em;
+}
+
+ul, ol {
+  padding-left: 1.5em;
+  margin: 0.5em 0 0.8em 0;
+}
+
+li {
+  line-height: 1.8;
+  margin-bottom: 0.3em;
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+li p {
+  margin-bottom: 0.3em;
+}
+
+a {
+  color: #2c5f8a;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 1.5em 0;
+}
