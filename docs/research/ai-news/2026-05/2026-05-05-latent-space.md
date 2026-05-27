@@ -67,7 +67,7 @@ With a concrete success in the bag, the team asked if they could generate new ph
 
 What came next was truly “vibe physics”, with ChatGPT pushing out 110 pages of novel physics, new calculations, and novel techniques. This was over the course of a day, with most interactions the familiar following the now familiar pattern for anyone who uses a coding agent:
 
-GPT: Here's your <long, detailed, awesome result>. 
+GPT: Here's your `<long, detailed, awesome result>`. 
 Would you like me to do `<another really cool thing>`?
 Alex: Yes, please do!
 GPT: `<does the really cool thing>`
