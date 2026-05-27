@@ -8,11 +8,11 @@
 ## [The Pope just weighed in on AI](https://www.therundown.ai/p/the-pope-just-weighed-in-on-ai)
 *🗞️ The Rundown AI | 2026-05-26*
 
-**[Read Online](https://rss.beehiiv.com/feeds/{{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=the-pope-just-weighed-in-on-ai)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=the-pope-just-weighed-in-on-ai)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=the-pope-just-weighed-in-on-ai)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=the-pope-just-weighed-in-on-ai)**
 
 [](https://you.com/resources/what-is-ai-grounding-downloadable?utm_campaign=32665437-Rundown_Q1&utm_source=external-newsletter&utm_medium=email&utm_term=rundown_primary_5.26.26&utm_content=rundown_primary_5.26.26)
 
-**Good morning, {{ first_name | AI enthusiasts }}.** Religious institutions don’t usually weigh in on AI. But the world’s largest just did — in nearly 42,000 words.
+**Good morning, AI enthusiasts.** Religious institutions don’t usually weigh in on AI. But the world’s largest just did — in nearly 42,000 words.
 
 Pope Leo XIV just published his first encyclical, one of the highest forms of papal teaching, drawing a direct line between today’s AI revolution and the Industrial Revolution, and making clear the Catholic Church intends to be a moral voice in how the tech develops.
 
@@ -240,11 +240,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [Google tops OpenAI's math breakthrough — 9 to 1](https://www.therundown.ai/p/google-tops-openai-math-breakthrough-9-to-1)
 *🗞️ The Rundown AI | 2026-05-25*
 
-**[Read Online](https://rss.beehiiv.com/feeds/{{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=google-tops-openai-s-math-breakthrough-9-to-1)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=google-tops-openai-s-math-breakthrough-9-to-1)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=google-tops-openai-s-math-breakthrough-9-to-1)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=google-tops-openai-s-math-breakthrough-9-to-1)**
 
 [](https://cloudonair.withgoogle.com/events/startup-school-ai-q2-2026?utm_source=gfs&utm_medium=newsletter&utm_campaign=FY26-Q2-GLOBAL-GCP40434-onlineevent-er-Q2StartupSchool-180015&utm_content=rundown1)
 
-**Good morning, {{ first_name | AI enthusiasts }}.** Last week, OpenAI made headlines after announcing its AI [cracked](https://www.therundown.ai/p/openai-cracks-an-80-year-math-belief?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=google-tops-openai-s-math-breakthrough-9-to-1) an 80-year-old mathematics problem. Turns out, it wasn’t the only one. Google DeepMind quietly did them eight (not one) better.
+**Good morning, AI enthusiasts.** Last week, OpenAI made headlines after announcing its AI [cracked](https://www.therundown.ai/p/openai-cracks-an-80-year-math-belief?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=google-tops-openai-s-math-breakthrough-9-to-1) an 80-year-old mathematics problem. Turns out, it wasn’t the only one. Google DeepMind quietly did them eight (not one) better.
 
 The company’s AlphaProof Nexus autonomously solved nine open Erdős problems — considered some of the hardest unsolved questions in math — at a cost of a few hundred dollars per problem.
 
@@ -465,11 +465,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [Exclusive interview: Sundar Pichai on AI's flip phone moment](https://www.therundown.ai/p/exclusive-interview-sundar-pichai-on-ai-flip-phone-moment)
 *🗞️ The Rundown AI | 2026-05-22*
 
-**[Read Online](https://rss.beehiiv.com/feeds/{{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=exclusive-interview-sundar-pichai-on-ai-s-flip-phone-moment)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=exclusive-interview-sundar-pichai-on-ai-s-flip-phone-moment)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=exclusive-interview-sundar-pichai-on-ai-s-flip-phone-moment)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=exclusive-interview-sundar-pichai-on-ai-s-flip-phone-moment)**
 
 [](https://www.algolia.com/resources/asset/white-paper-architecture-data-foundations-for-ai-powered-search?utm_campaign=rundown_global_b2x_ecomm_ecomm_tof_reach&utm_medium=display&utm_source=rundown&utm_content=rundown_global_b2x_ecomm&utm_term=ebo_architecture-data-foundations-for-ai-powered-search&utm_camp_parent=b2x_ecomm&utm_2nd_camp=ecomm_tof&utm_region=global&utm_goal=reach&utm_creative_format=prmrynwsl&utm_model=cpm&utm_marketing_tactic=reach)
 
-**Good morning, {{ first_name | AI enthusiasts }}.** Google’s announcements at I/O gave us a clear picture of the company’s direction: a top-to-bottom approach to making lives easier with AI.
+**Good morning, AI enthusiasts.** Google’s announcements at I/O gave us a clear picture of the company’s direction: a top-to-bottom approach to making lives easier with AI.
 
 We sat down with Sundar Pichai, CEO of Google, to understand what this shift means for creators, engineers, and everyday users — touching upon everything from YouTube to agentic coding, and why today’s AI will look like a flip phone in three years.
 
@@ -697,11 +697,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [OpenAI cracks an 80-year math belief](https://www.therundown.ai/p/openai-cracks-an-80-year-math-belief)
 *🗞️ The Rundown AI | 2026-05-21*
 
-**[Read Online](https://rss.beehiiv.com/feeds/{{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-cracks-an-80-year-math-belief)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-cracks-an-80-year-math-belief)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-cracks-an-80-year-math-belief)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-cracks-an-80-year-math-belief)**
 
 [](https://offers.hubspot.com/using-chatgpt-at-work?utm_medium=email-media-newsletter&utm_source=the-rundown-ai&utm_campaign=creator&utm_content=paid&utm_term=5-21-2026)
 
-**Good morning, {{ first_name | AI enthusiasts }}.** Sam Altman called it a "kinda big milestone." That may be the rare case of a tech CEO underselling a headline.
+**Good morning, AI enthusiasts.** Sam Altman called it a "kinda big milestone." That may be the rare case of a tech CEO underselling a headline.
 
 A reasoning model just autonomously disproved an 80-year-old famous math theory, in what the company is calling a first for AI in the field. A capability, OpenAI says, that could soon result in original discoveries across biology, physics, engineering, and more. 
 
@@ -929,11 +929,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [Gemini's busy agentic day at Google I/O](https://www.therundown.ai/p/gemini-busy-agentic-day-at-google-i-o)
 *🗞️ The Rundown AI | 2026-05-20*
 
-**[Read Online](https://rss.beehiiv.com/feeds/{{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=gemini-s-busy-agentic-day-at-google-i-o)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=gemini-s-busy-agentic-day-at-google-i-o)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=gemini-s-busy-agentic-day-at-google-i-o)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=gemini-s-busy-agentic-day-at-google-i-o)**
 
 [](https://www.datadoghq.com/resources/llm-observability-best-practices/?utm_source=freemanforrest&utm_medium=influencer&utm_campaign=int-infra-ww-llm-llm-observability-therundown-052026)
 
-**Good morning, {{ first_name | AI enthusiasts }}.** Google had a lot to show at I/O, but the theme was even cleaner than the release list: Gemini being turned into the agentic engine behind every one of Google’s products.
+**Good morning, AI enthusiasts.** Google had a lot to show at I/O, but the theme was even cleaner than the release list: Gemini being turned into the agentic engine behind every one of Google’s products.
 
 New launches, including Omni, Gemini 3.5 Flash, Spark, Antigravity 2.0, and a Search overhaul, point to the same strategy — making Gemini capable, fast, and cheap enough to live wherever users already are, with an agent doing the work.
 

@@ -319,7 +319,7 @@ Do NOT load when: [排除場景，≤30 字]
 {
   "event": "PostToolUse",
   "tools": ["Edit", "Write"],
-  "command": "python3 scripts/lint-check.sh {{file_path}}",
+  "command": "python3 scripts/lint-check.sh ",
   "on_failure": "block"
 }
 ```

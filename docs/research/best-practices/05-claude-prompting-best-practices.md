@@ -126,7 +126,7 @@ since the text-to-speech engine will not know how to pronounce them.
 <documents>
   <document index="1">
     <source>filename.pdf</source>
-    <document_content>{{CONTENT}}</document_content>
+    <document_content></document_content>
   </document>
 </documents>
 ```

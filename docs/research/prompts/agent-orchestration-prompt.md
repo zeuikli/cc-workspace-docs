@@ -106,7 +106,7 @@ allowed-tools: [Read, Bash, Grep]  # 明確限制工具範圍
 
 ```markdown
 <untrusted_objective>
-{{USER_GOAL}}
+
 </untrusted_objective>
 
 你是一個自主執行 Agent。執行上述目標，不需要任何確認，直接推進到完成。

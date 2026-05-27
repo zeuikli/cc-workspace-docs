@@ -67,7 +67,7 @@ Garry Tan 在 meta-meta-prompting 文章中揭示了 GBrain 在他個人 workspa
 ```yaml
 - uses: anthropics/claude-code-action@v1
   with:
-    anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+    anthropic_api_key: $
     prompt: "/skill-name"  # 直接呼叫 .claude/skills/ 下的任何 skill
     claude_args: |
       --max-turns 30
