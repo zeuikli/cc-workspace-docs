@@ -18,12 +18,13 @@ type: index
 
 | 分類 | 說明 | 篇數 |
 |------|------|------|
-| [SKILL](#skill) | Claude Code Skills 功能設計與使用 | 11 |
+| [SKILL](#skill) | Claude Code Skills 功能設計與使用 | 12 |
 | [Hook](#hook) | Claude Code Hooks 設定與實戰腳本 | 1 |
-| [Rule](#rule) | CLAUDE.md 規則、Harness 框架、工作原則 | 45 |
-| [Agent](#agent) | AI Agent 設計、agentic 工作流、記憶架構 | 7 |
+| [Rule](#rule) | CLAUDE.md 規則、Harness 框架、工作原則 | 60 |
+| [Agent](#agent) | AI Agent 設計、agentic 工作流、記憶架構 | 13 |
 | [Prompt](#prompt) | Prompt Engineering、提示技巧 | 6 |
-| [Others](#others) | 職涯/AI思維、工具介紹、非直接相關 | 28 |
+| [Others](#others) | 職涯/AI思維、工具介紹、非直接相關 | 32 |
+| [Transcript](#transcript) | 影片 Whisper 逐字稿 | 7 |
 
 ---
 
@@ -43,6 +44,7 @@ type: index
 | [2026-05-08-@trq212-747935.md](2026-05-08-@trq212-747935.md) | @trq212 | 2026-05-08 | 7.55 | HTML 取代 markdown 作為 Claude Code 輸出格式：資訊密度更高（CSS/SVG/JS/互動）、易讀易分享、保持 in the loop；2-4x 生成時間換取更優質 plan/spec |
 | [2026-05-18-@trq212-796184.md](2026-05-18-@trq212-796184.md) | @trq212 | 2026-05-18 | 8.25 | 實作時讓 AI 同步維護 implementation-notes.html：記錄 spec 空白決策、被迫變更、取捨點；9,927 bookmark（1.71% bookmark/view 率）；來自 Anthropic Claude Code 工程師 |
 | [2026-05-19-@Mnilax-554008.md](2026-05-19-@Mnilax-554008.md) | @Mnilax | 2026-05-19 | 7.60 | 9 個 Claude Cowork slash command templates（30天實測）；3 原則：TERMINATION條件、具名輸出形狀、首行角色定義；sub-agent並行=4h→28min；週節省34h |
+| [2026-04-25-@nyk_builderz-829238.md](2026-04-25-@nyk_builderz-829238.md) | @nyk_builderz | 2026-04-25 | 6.50 | SKILL.md 15分鐘完全入門：7段結構指南（What is/Structure/5分鐘建第一個/Auto-invocation/Templates/5種新手類型）；auto-invocation自動觸發機制詳解；源自官方docs + Superpowers(96K⭐) + gstack(20K⭐) |
 | 2026-05-19 | [@shao__meng](https://x.com/shao__meng/status/2056535561540948056) | Claude Code 核心开发者 Thariq 的「开发日志」提示词 | 8.55 | SKILL | [檔案](2026-05-19-@shao__meng-948056.md) |
 
 ---
@@ -115,7 +117,23 @@ type: index
 | 2026-05-18 | [@Phoenixyin13](https://x.com/Phoenixyin13/status/2056269488140509649) | AI Agent 長期記憶系統的工程反思：記憶整合越多反而越蠢 | 7.9 | Rule | [檔案](2026-05-18-@Phoenixyin13-509649.md) |
 | 2026-05-19 | [@kfk_ai](https://x.com/kfk_ai/status/2056660897381425590) | OpenAI、Anthropic 都开始押注 FDE，FDE 才是 Agent 时代的 PMF 范式？ | 7.1 | Rule | [檔案](2026-05-19-@kfk_ai-425590.md) |
 | [2026-05-21-@nateherk-013627.md](2026-05-21-@nateherk-013627.md) | @nateherk | 2026-05-21 | 7.45 | Prompt caching 80/20：cached token 10% 費用、Claude Code 1h TTL vs API 5m vs sub-agent 5m 區分、三層 cache 架構（system/project/conversation）、模型切換清 cache、idle >1h 開新 session |
-| [2026-05-24-@Mnilax-736907.md](2026-05-24-@Mnilax-736907.md) | @Mnilax | 2026-05-24 | 7.70 | 18個Claude設定全掃描：Claude.ai 8項（Memory scope/Extended Thinking Light/Custom Styles）+ Claude Code 7項（enabledPlugins/permissions.deny bug #11544/hooks.SessionStart/disableAllHooks/model override/mcpServers enabled/cleanupPeriodDays 180天）+ API 3項（cache_control位置/inference_geo 10%稅/workspace rate limit）；修正cache_control breakpoint月費 $340→$87 |
+| [2026-05-23-@Mnilax-736907.md](2026-05-23-@Mnilax-736907.md) | @Mnilax | 2026-05-23 | 7.70 | 18個Claude設定全掃描：Claude.ai 8項（Memory scope/Extended Thinking Light/Custom Styles）+ Claude Code 7項（enabledPlugins/permissions.deny bug #11544/hooks.SessionStart/disableAllHooks/model override/mcpServers enabled/cleanupPeriodDays 180天）+ API 3項（cache_control位置/inference_geo 10%稅/workspace rate limit）；修正cache_control breakpoint月費 $340→$87 |
+| [2026-04-11-@garrytan-908103.md](2026-04-11-@garrytan-908103.md) | @garrytan | 2026-04-11 | 8.80 | Thin Harness, Fat Skills：Anthropic Claude Code 512K行源碼分析；10-100x生產力差距來自架構非模型；S-tier skills特徵（10行以內觸發、自動喚起、確定性輸出）；1.49M views / 11,347 bookmarks |
+| [2026-04-22-@eng_khairallah1-2046968076101673250.md](2026-04-22-@eng_khairallah1-2046968076101673250.md) | @eng_khairallah1 | 2026-04-22 | 7.00 | Anthropic工程師Barry的Agent建構三原則：Don't build agents for everything / Agent = LLM+工具迴圈+記憶 / 工具設計7要素；AI Engineer Summit 14分鐘演講摘要 |
+| [2026-04-25-@PawelHuryn-926577.md](2026-04-25-@PawelHuryn-926577.md) | @PawelHuryn | 2026-04-25 | 8.10 | 同一工作流$750→12%用量：Anthropic v2.1.116+修復3個harness bug後限額重置；4個仍需自行解決的根因（cache miss/context bloat/wrong model/wrong input format）；含copy-paste修復模板 |
+| [2026-04-26-@NainsiDwiv50980-276085.md](2026-04-26-@NainsiDwiv50980-276085.md) | @NainsiDwiv50980 | 2026-04-26 | 6.00 | 不是改prompt，是改repo結構：CLAUDE.md五區塊架構圖示（Commands/Architecture/Rules/Workflow/Out-of-Scope）；附Claude Code資料夾結構截圖 |
+| [2026-04-26-@Suryanshti777-652758.md](2026-04-26-@Suryanshti777-652758.md) | @Suryanshti777 | 2026-04-26 | 5.50 | Claude Code不是關於Prompt，而是架構與系統設計；附工作流架構圖 |
+| [2026-04-26-@dani_avila7-662189.md](2026-04-26-@dani_avila7-662189.md) | @dani_avila7 | 2026-04-26 | 7.90 | Subagents保持主context乾淨：隔離window + return only result；建立方式、內建subagent清單、CLAUDE_CODE_FORK_SUBAGENT=1環境變數詳解；13K views |
+| [2026-05-01-@karpathy-context-engineering-shift.md](2026-05-01-@karpathy-context-engineering-shift.md) | @karpathy | 2026-05-01 | 8.00 | Context Engineering範式定義：從Prompt Engineering到Context Engineering的核心轉移；精準填充context window的科學與藝術；工業級LLM App核心技術（Karpathy原推 + 後續討論） |
+| [2026-05-04-@kkawsb-151468.md](2026-05-04-@kkawsb-151468.md) | @kkawsb | 2026-05-04 | 7.00 | 七個Token消耗陷阱（425K views）：CLAUDE.md膨脹/會話歷史重讀/Hook注入/Skill-MCP膨脹/快取未命中/全局Extended Thinking/未及時中斷回答；精簡後可達2-3倍有效產出 |
+| [2026-05-05-@mindstudio-harness-beats-model.md](2026-05-05-@mindstudio-harness-beats-model.md) | @mindstudio | 2026-05-05 | 7.50 | Harness改進 > 模型升級：5個基準測試量化分析；harness優化提升23% vs 模型升級8-12%；context assembly/tool selection/error recovery三大影響維度 |
+| [2026-05-11-@karpathy-285137.md](2026-05-11-@karpathy-285137.md) | @karpathy | 2026-05-11 | 6.90 | AI輸入偏好音訊、輸出偏好視覺；HTML是當前最佳輸出升級路徑；16K likes / 18K bookmarks；與@trq212-747935（HTML取代markdown）互為佐證 |
+| [2026-05-12-@AlphaSignalAI-036432.md](2026-05-12-@AlphaSignalAI-036432.md) | @AlphaSignalAI | 2026-05-12 | 6.50 | /agentmemory工作原理與實用指南：episodic/semantic/procedural記憶類型、手動觸發vs自動記憶、9個code block範例 |
+| [2026-05-13-@Xx15573208-616460.md](2026-05-13-@Xx15573208-616460.md) | @Xx15573208 | 2026-05-13 | 7.00 | 4套Agent Harness完整對比：Minimal/Standard/Advanced/Enterprise四層架構選擇指南；「別讓Claude Code裸奔」；10K views |
+| [2026-05-13-@zodchiii-135095.md](2026-05-13-@zodchiii-135095.md) | @zodchiii | 2026-05-13 | 7.80 | 7個Claude Code Token浪費錯誤（46K views）：過大CLAUDE.md/不清理Context/錯用模型/Hook過多/全局Extended Thinking/沒用Sub-agent隔離/未設token預算；含11個code block修復範本 |
+| [2026-05-13-@yaohui12138-931297.md](2026-05-13-@yaohui12138-931297.md) | @yaohui12138 | 2026-05-13 | 6.80 | 一個命令開5個Agent、24小時自動執行：Claude Code新版Agent View + /goal指令實戰；worktree隔離 + Stop hook機制；5K views中文教學 |
+| [2026-05-26-@yan5xu-746979.md](2026-05-26-@yan5xu-746979.md) | @yan5xu | 2026-05-26 | 8.45 | 從Prompt到Harness範式轉移全解析：LLM Engineering三層演化（Prompt/Context/Harness Engineering）；Harness=環境感知+行動決策+反饋整合；ex ManusAI工程師視角；43K views |
+| [2026-05-27-@arvin17x-849698.md](2026-05-27-@arvin17x-849698.md) | @arvin17x | 2026-05-27 | 8.50 | 需要自進化的是Harness：Self-Evolving Harness L1-L4框架；Harness作為Agent運行時（環境感知/工具調用/錯誤恢復/信號密度護城河）；LobeHub多模型適配視角；21K views |
 
 ---
 
@@ -123,8 +141,8 @@ type: index
 
 | 檔案 | 作者 | 日期 | 分數 | 主題摘要 |
 |------|------|------|------|----------|
-| 2026-05-14 | [@Mnilax](https://x.com/Mnilax/status/2054955621829443903) | 73% of my CLAUDE.md was lying to Claude. I found out in 11 minutes. | Skill | 8.95 |
-| 2026-05-14 | [@petradonka](https://x.com/petradonka/status/2054897826149101588) | Agents Need Feedback Loops, Not Perfect Prompts | Agent | 8.1 |
+| [2026-05-14-@Mnilax-443903.md](2026-05-14-@Mnilax-443903.md) | @Mnilax | 2026-05-14 | 8.95 | 73% CLAUDE.md 過時：80行Python複製Anthropic Dreaming本地分析；dream pass定期維護週期；「宣告行為 vs 實際行為」對齊機制；6M tokens / 100 sessions驗證 |
+| [2026-05-14-@petradonka-101588.md](2026-05-14-@petradonka-101588.md) | @petradonka | 2026-05-14 | 8.1 | Agent需要反饋迴路而非完美Prompt：讓agent從團隊工作習慣持續學習、品味複利累積；78K views / 1,783 bookmarks |
 | [2026-04-15-@BTCqzy1-450414.md](2026-04-15-@BTCqzy1-450414.md) | @BTCqzy1 | 2026-04-15 | 7.00 | Hermes Agent記憶系統Frozen Snapshot與KV Cache設計原理 |
 | [2026-04-09-@Ni_luvya-807043.md](2026-04-09-@Ni_luvya-807043.md) | @Ni_luvya | 2026-04-09 | 6.75 | Hermes跨session持久記憶實作方案 |
 | [2026-04-23-@lxfater-993624.md](2026-04-23-@lxfater-993624.md) | @lxfater | 2026-04-23 | 5.00 | Hermes+ClawEmail自動化Newsletter訂閱消化工作流 |
@@ -134,6 +152,8 @@ type: index
 | [2026-05-10-@heynavtoor-502046.md](2026-05-10-@heynavtoor-502046.md) | @heynavtoor | 2026-05-10 | 6.25 | 7 個 Claude sub-agent 完整 prompt 文件（researcher/editor/pm/analyst/recruiter/ops-lead/cfo），含 YAML front-matter，直接 paste 到 `.claude/agents/` 即用 |
 | [2026-05-13-@lxfater-505745.md](2026-05-13-@lxfater-505745.md) | @lxfater | 2026-05-13 | 6.80 | AI Agent 記憶系統完整拆解：三類記憶（情景/語義/程序性）× 抽取/更新/檢索三機制框架；Claude Code 原生記憶局限；EverOS 六分類精細化（Foresight 未來記 + Agent Skill 蒸餾）；LoCoMo 93.05% vs Zep 85.22% |
 | [2026-03-27-@techwith_ram-110770.md](2026-03-27-@techwith_ram-110770.md) | @techwith_ram | 2026-03-27 | 7.10 | Agentic Memory 四類型拆解（In-context/External/Episodic/Parametric）+ 三種遺忘策略；Python MemoryStore+EpisodicLogger 範例；retrieval 80%法則 |
+| [2026-05-07-@anthropic-dreaming-offline-learning.md](2026-05-07-@anthropic-dreaming-offline-learning.md) | @anthropic | 2026-05-07 | 7.50 | Anthropic Dreaming：離線Agent自我改進系統；非production環境執行任務→從錯誤中學習→更新規則；VentureBeat報導；harness self-improvement架構原理 |
+| [2026-05-23-@Mnilax-2058283663805047224.md](2026-05-23-@Mnilax-2058283663805047224.md) | @Mnilax | 2026-05-23 | 6.50 | Boris Cherny（Claude Code creator）倫敦Code with Claude舞台演講逐字稿（10分55秒）：「default is now Claude prompting itself」；settings.json 125+鍵/40已文件化/4完全未記錄 |
 
 ---
 
@@ -193,20 +213,39 @@ type: index
 | [2026-01-02-@bcherny-581177.md](2026-01-02-@bcherny-581177.md) | @bcherny | 2026-01-02 | 5.75 | Claude Code 創建者示範 vanilla 設定哲學：預設值已夠好，不需過度客製化 |
 | [2026-05-11-@freeman1266-517808.md](2026-05-11-@freeman1266-517808.md) | @freeman1266 | 2026-05-11 | 3.55 | Harness 入門科普：上下文管理+動作攔截+失敗兜底三大職責 |
 | [2026-05-12-@DeRonin_-778034.md](2026-05-12-@DeRonin_-778034.md) | @DeRonin_ | 2026-05-12 | 6.45 | AI coding 帳單削減 80% 完整指南：5大 Token 陷阱（repo 重傳/tool loop 螺旋/模型濫用/streaming誤用/上下文膨脹）、multi-model router 架構（Kimi 2.6 日常主力）、7項技術（prompt caching/grep-first/SKILL.md）、30天 rollout；$4,200→$312 前後對比 |
+| [2026-04-26-@Pluvio9yte-056961.md](2026-04-26-@Pluvio9yte-056961.md) | @Pluvio9yte | 2026-04-26 | 4.50 | Claude Opus 4.7 vs GPT-5.5三天實測：大型代碼重構/生產級Agent/UI生成/文檔工作對比；Reddit百帖分析；25K views |
+| [2026-04-29-@elliotchen100-2393.md](2026-04-29-@elliotchen100-2393.md) | @elliotchen100 | 2026-04-29 | 3.50 | @nateherk 32個Claude Code技巧YouTube影片中文解讀（與032393同源），提煉6個關鍵原理；25K views |
+| [2026-05-06-@simonw-code-w-claude-event.md](2026-05-06-@simonw-code-w-claude-event.md) | @simonw | 2026-05-06 | 6.00 | Simon Willison Code w/ Claude 2026活動實況直播筆記：官方最新功能揭示、現場demo重點整理 |
+| [2026-05-12-@eng_khairallah1-185485.md](2026-05-12-@eng_khairallah1-185485.md) | @eng_khairallah1 | 2026-05-12 | 5.00 | Boris Cherny Claude Code技巧演講Whisper逐字稿（注意：「Quad Code」=「Claude Code」辨識誤差已修正）；含SDK/hooks/skills實戰示範 |
 
 ---
 
-*最後更新：2026-05-24*
+*最後更新：2026-05-27*
 
 
 
 
-
-| 2026-05-14 | [@Mnilax](https://x.com/Mnilax/status/2054955621829443903) | 73% of my CLAUDE.md was lying to Claude. I found out in 11 minutes. | Skill | 8.95 |
 
 ## Skip
 
 | 日期 | 來源 | 標題 | 類型 | 評分 |
 |------|------|------|------|------|
+| 2026-05-23 | @Mnilax | [2026-05-24-@Mnilax-736907.md](2026-05-24-@Mnilax-736907.md) | 初次收錄版（code block 不完整），已由 2026-05-23-@Mnilax-736907.md 取代 | — | Skip |
 | 2026-05-15 | @sairahul1 | [How to Build a Team of AI Agents That Run Your Business While You Sleep](2026-05-15-@sairahul1-391151.md) | Twitter Article | 5.70 | Skip |
-| 2026-05-15 | [@Zephyr_hg](https://x.com/Zephyr_hg/status/2055229007931601239) | You Don't Need 100 Hours To Be Fluent In Claude. You Need 7 Setups And One Weekend. | Skip | 3.85 |
+| 2026-05-15 | [@Zephyr_hg](https://x.com/Zephyr_hg/status/2055229007931601239) | You Don't Need 100 Hours To Be Fluent In Claude. You Need 7 Setups And One Weekend. | Skip | 3.85 | [檔案](2026-05-15-@Zephyr_hg-601239.md) |
+
+---
+
+## Transcript
+
+> 影片 Whisper 自動辨識逐字稿，供原文查閱用；評分不適用。
+
+| 檔案 | 作者 | 日期 | 說明 |
+|------|------|------|------|
+| [2026-05-05-@berryxia-826389.md](2026-05-05-@berryxia-826389.md) | @berryxia | 2026-05-05 | Whisper base · EN · 1448段 |
+| [2026-05-09-@berryxia-245033.md](2026-05-09-@berryxia-245033.md) | @berryxia | 2026-05-09 | Whisper base · EN · 267段 |
+| [2026-05-10-@VincentLogic-168594.md](2026-05-10-@VincentLogic-168594.md) | @VincentLogic | 2026-05-10 | Whisper base · ZH · 370段 |
+| [2026-05-10-@rixhabh__-918042.md](2026-05-10-@rixhabh__-918042.md) | @rixhabh__ | 2026-05-10 | Whisper base · EN · 314段 |
+| [2026-05-10-@zodchiii-084777.md](2026-05-10-@zodchiii-084777.md) | @zodchiii | 2026-05-10 | Whisper base · EN · 452段 |
+| [2026-05-13-@av1dlive-197493.md](2026-05-13-@av1dlive-197493.md) | @av1dlive | 2026-05-13 | Whisper base · EN · 119段 |
+| [2026-05-13-@zodchiii-796939.md](2026-05-13-@zodchiii-796939.md) | @zodchiii | 2026-05-13 | Whisper base · EN · 130段 |
