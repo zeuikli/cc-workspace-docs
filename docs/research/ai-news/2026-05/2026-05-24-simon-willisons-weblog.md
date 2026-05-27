@@ -15,7 +15,7 @@ type: ai-news
 ## [On the](https://simonwillison.net/2026/May/23/on-the-dl/#atom-everything)
 *🔧 Simon Willison's Weblog | 2026-05-23*
 
-**[On the`<dl>`](https://benmyers.dev/blog/on-the-dl/)**
+**[On `the<dl>`](https://benmyers.dev/blog/on-the-dl/)**
 
 I learned a few new-to-me things about the `<dl>` element from this article by Ben Meyer:
 
