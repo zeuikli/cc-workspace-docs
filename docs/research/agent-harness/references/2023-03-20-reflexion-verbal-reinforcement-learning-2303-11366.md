@@ -1,6 +1,6 @@
 ---
 title: "Reflexion: Language Agents with Verbal Reinforcement Learning"
-authors: Noah Shinn, Federico Cassano, Edward Berman, Ashwin Gopinath, Karthik Narasimhan, Shunyu Yao
+authors: "Noah Shinn, Federico Cassano, Edward Berman, Ashwin Gopinath, Karthik Narasimhan, Shunyu Yao"
 published: 2023-03-20
 source: "https://arxiv.org/abs/2303.11366"
 venue: NeurIPS 2023

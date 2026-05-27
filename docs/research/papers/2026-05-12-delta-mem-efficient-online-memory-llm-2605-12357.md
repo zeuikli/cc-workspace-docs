@@ -1,6 +1,6 @@
 ---
 title: "δ-mem: Efficient Online Memory for Large Language Models"
-authors: Jingdi Lei, Di Zhang, Junxian Li, Weida Wang, Kaixuan Fan, Xiang Liu, Qihan Liu, Xiaoteng Ma, Baian Chen, Soujanya Poria
+authors: "Jingdi Lei, Di Zhang, Junxian Li, Weida Wang, Kaixuan Fan, Xiang Liu, Qihan Liu, Xiaoteng Ma, Baian Chen, Soujanya Poria"
 published: 2026-05-12
 source: "https://arxiv.org/abs/2605.12357"
 ---

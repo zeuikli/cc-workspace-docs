@@ -1,6 +1,6 @@
 ---
 title: "Beyond the Context Window: Memory vs. Long-Context for LLM Agents"
-authors: Tian Luo, Yijun Yang, Jiarui Liu, Yuhui Zhang, Hang Li
+authors: "Tian Luo, Yijun Yang, Jiarui Liu, Yuhui Zhang, Hang Li"
 published: 2026-03-05
 source: "https://arxiv.org/abs/2603.04814"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "AEC-Bench: A Multimodal Benchmark for Agentic Systems in Architecture, Engineering, and Construction"
-authors: Harsh Mankodiya, Chase Gallik, Theodoros Galanos, Andriy Mulyar
+authors: "Harsh Mankodiya, Chase Gallik, Theodoros Galanos, Andriy Mulyar"
 published: 2026-03-31
 source: "https://arxiv.org/abs/2603.29199"
 ---

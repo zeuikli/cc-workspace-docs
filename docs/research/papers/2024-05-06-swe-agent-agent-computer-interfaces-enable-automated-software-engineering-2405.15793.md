@@ -1,7 +1,7 @@
 ---
 title: "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
 arxiv_id: 2405.15793
-authors: John Yang, Carlos E. Jimenez, Alexander Wettig, Kilian Lieret, Shunyu Yao, Karthik Narasimhan, Ofir Press
+authors: "John Yang, Carlos E. Jimenez, Alexander Wettig, Kilian Lieret, Shunyu Yao, Karthik Narasimhan, Ofir Press"
 fetched: 2026-05-26
 published: 2024-05-06
 source: "https://arxiv.org/abs/2405.15793"

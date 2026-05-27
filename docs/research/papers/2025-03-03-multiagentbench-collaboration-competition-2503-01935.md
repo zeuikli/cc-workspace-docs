@@ -1,7 +1,7 @@
 ---
 title: "MultiAgentBench: Evaluating the Collaboration and Competition of LLM Agents"
 arxiv_id: 2503.01935
-authors: Kunlun Zhu, Hongyi Du, Zhaochen Hong, et al.
+authors: "Kunlun Zhu, Hongyi Du, Zhaochen Hong, et al."
 published: 2025-03-03
 source: "https://arxiv.org/abs/2503.01935"
 source_tier: P

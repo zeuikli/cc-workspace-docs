@@ -1,6 +1,6 @@
 ---
 title: "Code as Agent Harness"
-authors: Xuying Ning, Katherine Tieu, Dongqi Fu, Tianxin Wei, Zihao Li, Yuanchen Bei, et al.
+authors: "Xuying Ning, Katherine Tieu, Dongqi Fu, Tianxin Wei, Zihao Li, Yuanchen Bei, et al."
 published: 2026-05-18
 source: "https://arxiv.org/abs/2605.18747"
 ---

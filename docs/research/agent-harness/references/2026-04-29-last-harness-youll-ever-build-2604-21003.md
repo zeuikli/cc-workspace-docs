@@ -1,6 +1,6 @@
 ---
 title: "The Last Harness You'll Ever Build: Meta-Harness Evolution via Two-Level Automation"
-authors: Haebin Seong, Li Yin, Haoran Zhang, Zhan Shi
+authors: "Haebin Seong, Li Yin, Haoran Zhang, Zhan Shi"
 published: 2026-04-29
 source: "https://arxiv.org/abs/2604.21003"
 ---

@@ -6,7 +6,7 @@ archived: 2026-05-27
 domain: anthropic.com
 published: 2025-09-29
 tags: [anthropic, context-engineering, prompt-engineering, llm-agents, long-horizon-tasks]
-word_count: 約 1,400 字
+word_count: "約 1,400 字"
 ---
 
 # Effective context engineering for AI agents

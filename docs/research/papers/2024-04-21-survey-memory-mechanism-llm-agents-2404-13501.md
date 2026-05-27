@@ -1,6 +1,6 @@
 ---
 title: "A Survey on the Memory Mechanism of Large Language Model based Agents"
-authors: Zeyu Zhang, Xiaohe Bo, Chen Ma, Rui Li, Xu Chen, Quanyu Dai, Jieming Zhu, Zhenhua Dong, Ji-Rong Wen
+authors: "Zeyu Zhang, Xiaohe Bo, Chen Ma, Rui Li, Xu Chen, Quanyu Dai, Jieming Zhu, Zhenhua Dong, Ji-Rong Wen"
 published: 2024-04-21
 source: "https://arxiv.org/abs/2404.13501"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Memory OS of AI Agent"
-authors: Jiazheng Kang, Mingming Ji, Zhe Zhao, Ting Bai
+authors: "Jiazheng Kang, Mingming Ji, Zhe Zhao, Ting Bai"
 published: 2025-05-30
 source: "https://arxiv.org/abs/2506.06326"
 ---

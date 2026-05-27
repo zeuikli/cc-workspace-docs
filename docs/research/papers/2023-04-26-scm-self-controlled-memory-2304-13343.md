@@ -1,6 +1,6 @@
 ---
 title: "SCM: Enhancing Large Language Model with Self-Controlled Memory Framework"
-authors: Bing Wang, Xinnian Liang, Jian Yang, Hui Huang, Shuangzhi Wu, Peihao Wu, Lu Lu, Zejun Ma, Zhoujun Li
+authors: "Bing Wang, Xinnian Liang, Jian Yang, Hui Huang, Shuangzhi Wu, Peihao Wu, Lu Lu, Zejun Ma, Zhoujun Li"
 published: 2023-04-26
 source: "https://arxiv.org/abs/2304.13343"
 venue: DASFAA 2025
