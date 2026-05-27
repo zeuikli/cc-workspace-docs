@@ -114,7 +114,7 @@ Use plan mode for changes under `src/billing/`.
 ```markdown
 # My API Project
 
-> 最後更新：2026-05-01（因為 Claude 連續兩次用了錯誤的 SQLAlchemy 語法）
+> 最後更新：2026-05-27
 
 ## 技術棧
 - Python 3.12
