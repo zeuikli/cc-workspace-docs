@@ -5,14 +5,17 @@ type: documentation
 
 # 研究歸檔索引
 
-> 更新時間：2026-05-27 20:14 UTC+8
-> 保留期限：最近 **30 天**（2026-04-27 之後）
+> 更新時間：2026-05-28 05:47 UTC+8
+> 保留期限：最近 **30 天**（2026-04-28 之後）
 > 清理舊檔：每次 Actions 執行後自動移除過期資料
 
 ## 📡 每日 DevOps/DeepSRT/Combined 摘要
 
 ### 2026-05
 
+- [2026-05-28 — 2026-05-28-devops.md](ai-news/digests/2026-05-28-devops.md)
+- [2026-05-28 — 2026-05-28-deepsrt.md](ai-news/digests/2026-05-28-deepsrt.md)
+- [2026-05-28 — 2026-05-28-combined.md](ai-news/digests/2026-05-28-combined.md)
 - [2026-05-27 — 2026-05-27-devops.md](ai-news/digests/2026-05-27-devops.md)
 - [2026-05-27 — 2026-05-27-deepsrt.md](ai-news/digests/2026-05-27-deepsrt.md)
 - [2026-05-27 — 2026-05-27-combined.md](ai-news/digests/2026-05-27-combined.md)
@@ -73,12 +76,6 @@ type: documentation
 - [2026-05-08 — 2026-05-08-devops.md](ai-news/digests/2026-05-08-devops.md)
 - [2026-05-08 — 2026-05-08-deepsrt.md](ai-news/digests/2026-05-08-deepsrt.md)
 - [2026-05-08 — 2026-05-08-combined.md](ai-news/digests/2026-05-08-combined.md)
-
-### 2026-04
-
-- [2026-04-27 — 2026-04-27-devops.md](ai-news/digests/2026-04-27-devops.md)
-- [2026-04-27 — 2026-04-27-deepsrt.md](ai-news/digests/2026-04-27-deepsrt.md)
-- [2026-04-27 — 2026-04-27-combined.md](ai-news/digests/2026-04-27-combined.md)
 
 ---
 *由 `scripts/archive.py` 自動維護*
