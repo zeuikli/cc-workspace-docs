@@ -47,7 +47,7 @@ CLAUDE.md 是 Claude Code 的靈魂文件，每次 session 自動載入。但大
 - 與語言預設不同的 code style（如「強制使用 ES modules，禁止 CommonJS」）
 - 測試執行方式與偏好的 test runner
 - Branch 命名與 PR 慣例
-- 專案特定的架構邊界（如「業務邏輯只放 `src/services/`，不放 routes/`」）
+- 專案特定的架構邊界（如「業務邏輯只放 `src/services/`，不放 `routes/`」）
 - 開發環境特殊性（必要的環境變數、工具依賴）
 - 常見陷阱與非直覺行為
 
@@ -570,7 +570,7 @@ allowed-tools: Read, Grep, Glob
 
 SKILL.md 超過 150 行就應該拆分：
 
-```markdown
+````markdown
 # SKILL.md（主體，≤ 150 行）
 
 ## 快速開始
@@ -591,7 +591,7 @@ For OCR, scanned PDFs, and form filling, see:
 ## Known Gotchas
 - 加密 PDF 需傳入 password 參數
 - 表格提取可能丟失格式，需後處理驗證
-```
+````
 
 ### 5.4 自由度分層原則
 
@@ -607,7 +607,7 @@ For OCR, scanned PDFs, and form filling, see:
 
 **評估套件（Enterprise 必備）：**
 
-```markdown
+````markdown
 ## 評估案例集
 
 ### 應觸發
@@ -620,7 +620,7 @@ For OCR, scanned PDFs, and form filling, see:
 
 ### 邊界案例
 - "幫我看看這段有沒有安全問題"（⚠️ 需判斷是 review 還是 security-audit）
-```
+````
 
 **保留門檻（30 天評估）：**
 
