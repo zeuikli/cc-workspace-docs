@@ -20,7 +20,7 @@ type: index
 |------|------|------|
 | [SKILL](#skill) | Claude Code Skills 功能設計與使用 | 12 |
 | [Hook](#hook) | Claude Code Hooks 設定與實戰腳本 | 1 |
-| [Rule](#rule) | CLAUDE.md 規則、Harness 框架、工作原則 | 60 |
+| [Rule](#rule) | CLAUDE.md 規則、Harness 框架、工作原則 | 58 |
 | [Agent](#agent) | AI Agent 設計、agentic 工作流、記憶架構 | 13 |
 | [Prompt](#prompt) | Prompt Engineering、提示技巧 | 6 |
 | [Others](#others) | 職涯/AI思維、工具介紹、非直接相關 | 32 |
@@ -121,8 +121,6 @@ type: index
 | [2026-04-11-@garrytan-908103.md](2026-04-11-@garrytan-908103.md) | @garrytan | 2026-04-11 | 8.80 | Thin Harness, Fat Skills：Anthropic Claude Code 512K行源碼分析；10-100x生產力差距來自架構非模型；S-tier skills特徵（10行以內觸發、自動喚起、確定性輸出）；1.49M views / 11,347 bookmarks |
 | [2026-04-22-@eng_khairallah1-2046968076101673250.md](2026-04-22-@eng_khairallah1-2046968076101673250.md) | @eng_khairallah1 | 2026-04-22 | 7.00 | Anthropic工程師Barry的Agent建構三原則：Don't build agents for everything / Agent = LLM+工具迴圈+記憶 / 工具設計7要素；AI Engineer Summit 14分鐘演講摘要 |
 | [2026-04-25-@PawelHuryn-926577.md](2026-04-25-@PawelHuryn-926577.md) | @PawelHuryn | 2026-04-25 | 8.10 | 同一工作流$750→12%用量：Anthropic v2.1.116+修復3個harness bug後限額重置；4個仍需自行解決的根因（cache miss/context bloat/wrong model/wrong input format）；含copy-paste修復模板 |
-| [2026-04-26-@NainsiDwiv50980-276085.md](2026-04-26-@NainsiDwiv50980-276085.md) | @NainsiDwiv50980 | 2026-04-26 | 6.00 | 不是改prompt，是改repo結構：CLAUDE.md五區塊架構圖示（Commands/Architecture/Rules/Workflow/Out-of-Scope）；附Claude Code資料夾結構截圖 |
-| [2026-04-26-@Suryanshti777-652758.md](2026-04-26-@Suryanshti777-652758.md) | @Suryanshti777 | 2026-04-26 | 5.50 | Claude Code不是關於Prompt，而是架構與系統設計；附工作流架構圖 |
 | [2026-04-26-@dani_avila7-662189.md](2026-04-26-@dani_avila7-662189.md) | @dani_avila7 | 2026-04-26 | 7.90 | Subagents保持主context乾淨：隔離window + return only result；建立方式、內建subagent清單、CLAUDE_CODE_FORK_SUBAGENT=1環境變數詳解；13K views |
 | [2026-05-01-@karpathy-context-engineering-shift.md](2026-05-01-@karpathy-context-engineering-shift.md) | @karpathy | 2026-05-01 | 8.00 | Context Engineering範式定義：從Prompt Engineering到Context Engineering的核心轉移；精準填充context window的科學與藝術；工業級LLM App核心技術（Karpathy原推 + 後續討論） |
 | [2026-05-04-@kkawsb-151468.md](2026-05-04-@kkawsb-151468.md) | @kkawsb | 2026-05-04 | 7.00 | 七個Token消耗陷阱（425K views）：CLAUDE.md膨脹/會話歷史重讀/Hook注入/Skill-MCP膨脹/快取未命中/全局Extended Thinking/未及時中斷回答；精簡後可達2-3倍有效產出 |
