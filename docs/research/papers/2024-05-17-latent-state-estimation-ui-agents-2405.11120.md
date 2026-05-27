@@ -1,6 +1,6 @@
 ---
 title: "Latent State Estimation Helps UI Agents to Reason"
-arxiv_id: 2405.1112
+arxiv_id: 2405.11120
 authors: "William E Bishop, Alice Li, Christopher Rawles, Oriana Riva"
 published: 2024-05-17
 source: "https://arxiv.org/abs/2405.11120"
