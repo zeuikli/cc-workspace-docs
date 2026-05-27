@@ -15,11 +15,11 @@ type: ai-news
 ## [The White House rethinks its Anthropic fight](https://www.therundown.ai/p/the-white-house-rethinks-its-anthropic-fight)
 *🗞️ The Rundown AI | 2026-05-01*
 
-[Read Online](&#123;{live_url}}) | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=the-white-house-rethinks-its-anthropic-fight) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=the-white-house-rethinks-its-anthropic-fight)
+[Read Online]() | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=the-white-house-rethinks-its-anthropic-fight) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=the-white-house-rethinks-its-anthropic-fight)
 
 [](https://cloud.google.com/resources/content/future-of-ai-genmedia?utm_source=gfs&utm_medium=email&utm_campaign=FY26-Q2-GLOBAL-GCP40293-website-dl-StartupGenMedia-168368&utm_content=rundown1&utm_term=-)
 
-Good morning, &#123;{ first_name | AI enthusiasts }}. The government spent months escalating its fight with Anthropic. Then Mythos showed up with cyber capabilities powerful enough to make the feud look a lot less simple.
+Good morning, AI enthusiasts. The government spent months escalating its fight with Anthropic. Then Mythos showed up with cyber capabilities powerful enough to make the feud look a lot less simple.
 
 The White House is now trying to thread an awkward needle: keep the model close for national security, limit who else can use it, and avoid looking like it is fully backing down from the Pentagon's hard line all at the same time.
 

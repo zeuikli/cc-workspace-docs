@@ -136,19 +136,19 @@ FROM OUR PARTNERS
 
 ### Stop forgetting what you agreed to
 
-[](http://granola.ai/?utm_campaign=&#123;{publication_alphanumeric_id}}&utm_source=beehiiv&_bhiiv=opp_2062d7bc-ba77-409a-b0ed-1bb366cb8d7a_03f8bfd5&bhcl_id=a62d064b-0dd5-457d-b449-1a52b2b8d6df_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[](http://granola.ai/?utm_campaign=&utm_source=beehiiv&_bhiiv=opp_2062d7bc-ba77-409a-b0ed-1bb366cb8d7a_03f8bfd5&bhcl_id=a62d064b-0dd5-457d-b449-1a52b2b8d6df__)
 
 You know that feeling when you leave a meeting and immediately forget half of what you promised?
 
 That’s not a memory problem. It’s a meetings problem.
 
-[Granola](http://granola.ai/?utm_campaign=&#123;{publication_alphanumeric_id}}&utm_source=beehiiv&_bhiiv=opp_2062d7bc-ba77-409a-b0ed-1bb366cb8d7a_03f8bfd5&bhcl_id=a62d064b-0dd5-457d-b449-1a52b2b8d6df_&#123;{subscriber_id}}_&#123;{email_address_id}}) helps you become the person who actually follows through. Take quick notes during the call; nothing formal. Granola transcribes in the background and turns those notes into clear summaries with real next steps.
+[Granola](http://granola.ai/?utm_campaign=&utm_source=beehiiv&_bhiiv=opp_2062d7bc-ba77-409a-b0ed-1bb366cb8d7a_03f8bfd5&bhcl_id=a62d064b-0dd5-457d-b449-1a52b2b8d6df__) helps you become the person who actually follows through. Take quick notes during the call; nothing formal. Granola transcribes in the background and turns those notes into clear summaries with real next steps.
 
 After the call, share notes with the team so everyone’s aligned. Or chat with them to pull out exactly what needs to happen next.
 
 No more dropped balls. Just clarity and follow-through.
 
-[Download Granola free](http://granola.ai/?utm_campaign=&#123;{publication_alphanumeric_id}}&utm_source=beehiiv&_bhiiv=opp_2062d7bc-ba77-409a-b0ed-1bb366cb8d7a_03f8bfd5&bhcl_id=a62d064b-0dd5-457d-b449-1a52b2b8d6df_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[Download Granola free](http://granola.ai/?utm_campaign=&utm_source=beehiiv&_bhiiv=opp_2062d7bc-ba77-409a-b0ed-1bb366cb8d7a_03f8bfd5&bhcl_id=a62d064b-0dd5-457d-b449-1a52b2b8d6df__)
 
 # 🎓 AI Skill of the Day: Design Goals and Hooks for Normal Work
 
@@ -235,11 +235,11 @@ These robots from Figure are kinda mesmerizing to watch… its also funny when i
 
 ### The IT strategy every team needs for 2026
 
-[](https://www.deel.com/resources/it-strategy-toolkit-2026-guide-hr-leaders/?utm_medium=sponsored-newsletter&utm_source=beehiiv&utm_term=&#123;{publication_alphanumeric_id}}&utm_campaign=ww_engage_download_beehiiv_sponnewsletter_it-ttrends2026-feb26_it_all&utm_content=engage_it_sponnewsletter_ittrends2026-sponnews400-it_en&_bhiiv=opp_63157cd6-3c5f-4108-846d-581d06dad4f7_28664f41&bhcl_id=07e4a394-b6a7-4007-a8e6-ae9dc6ea4c43_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[](https://www.deel.com/resources/it-strategy-toolkit-2026-guide-hr-leaders/?utm_medium=sponsored-newsletter&utm_source=beehiiv&utm_term=&utm_campaign=ww_engage_download_beehiiv_sponnewsletter_it-ttrends2026-feb26_it_all&utm_content=engage_it_sponnewsletter_ittrends2026-sponnews400-it_en&_bhiiv=opp_63157cd6-3c5f-4108-846d-581d06dad4f7_28664f41&bhcl_id=07e4a394-b6a7-4007-a8e6-ae9dc6ea4c43__)
 
-2026 will redefine IT as a strategic driver of global growth. Automation, AI-driven support, unified platforms, and zero-trust security are becoming standard, especially for distributed teams. This [toolkit](https://www.deel.com/resources/it-strategy-toolkit-2026-guide-hr-leaders/?utm_medium=sponsored-newsletter&utm_source=beehiiv&utm_term=&#123;{publication_alphanumeric_id}}&utm_campaign=ww_engage_download_beehiiv_sponnewsletter_it-ttrends2026-feb26_it_all&utm_content=engage_it_sponnewsletter_ittrends2026-sponnews400-it_en&_bhiiv=opp_63157cd6-3c5f-4108-846d-581d06dad4f7_28664f41&bhcl_id=07e4a394-b6a7-4007-a8e6-ae9dc6ea4c43_&#123;{subscriber_id}}_&#123;{email_address_id}}) helps IT and HR leaders assess readiness, define goals, and build a scalable, audit-ready IT strategy for the year ahead. Learn what’s changing and how to prepare.
+2026 will redefine IT as a strategic driver of global growth. Automation, AI-driven support, unified platforms, and zero-trust security are becoming standard, especially for distributed teams. This [toolkit](https://www.deel.com/resources/it-strategy-toolkit-2026-guide-hr-leaders/?utm_medium=sponsored-newsletter&utm_source=beehiiv&utm_term=&utm_campaign=ww_engage_download_beehiiv_sponnewsletter_it-ttrends2026-feb26_it_all&utm_content=engage_it_sponnewsletter_ittrends2026-sponnews400-it_en&_bhiiv=opp_63157cd6-3c5f-4108-846d-581d06dad4f7_28664f41&bhcl_id=07e4a394-b6a7-4007-a8e6-ae9dc6ea4c43__) helps IT and HR leaders assess readiness, define goals, and build a scalable, audit-ready IT strategy for the year ahead. Learn what’s changing and how to prepare.
 
-[Download the Toolkit](https://www.deel.com/resources/it-strategy-toolkit-2026-guide-hr-leaders/?utm_medium=sponsored-newsletter&utm_source=beehiiv&utm_term=&#123;{publication_alphanumeric_id}}&utm_campaign=ww_engage_download_beehiiv_sponnewsletter_it-ttrends2026-feb26_it_all&utm_content=engage_it_sponnewsletter_ittrends2026-sponnews400-it_en&_bhiiv=opp_63157cd6-3c5f-4108-846d-581d06dad4f7_28664f41&bhcl_id=07e4a394-b6a7-4007-a8e6-ae9dc6ea4c43_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[Download the Toolkit](https://www.deel.com/resources/it-strategy-toolkit-2026-guide-hr-leaders/?utm_medium=sponsored-newsletter&utm_source=beehiiv&utm_term=&utm_campaign=ww_engage_download_beehiiv_sponnewsletter_it-ttrends2026-feb26_it_all&utm_content=engage_it_sponnewsletter_ittrends2026-sponnews400-it_en&_bhiiv=opp_63157cd6-3c5f-4108-846d-581d06dad4f7_28664f41&bhcl_id=07e4a394-b6a7-4007-a8e6-ae9dc6ea4c43__)
 
 # 💡 Intelligent Insights:
 
@@ -999,15 +999,15 @@ Want absolutely EVERYTHING that happened in AI this week? [[Click here](https://
 
 ### Want to get the most out of ChatGPT?
 
-[](https://offers.hubspot.com/using-chatgpt-at-work?utm_medium=email-media-newsletter&utm_source=&#123;{publication_alphanumeric_id}}&utm_campaign=creator&utm_content=beehiiv&utm_term=version-r&_bhiiv=opp_8aeb88c0-0b23-4506-8b20-b6944a4232f4_b942af4d&bhcl_id=daf217c9-5bb6-4e02-a573-9245dc808252_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[](https://offers.hubspot.com/using-chatgpt-at-work?utm_medium=email-media-newsletter&utm_source=&utm_campaign=creator&utm_content=beehiiv&utm_term=version-r&_bhiiv=opp_8aeb88c0-0b23-4506-8b20-b6944a4232f4_b942af4d&bhcl_id=daf217c9-5bb6-4e02-a573-9245dc808252__)
 
 ChatGPT is a superpower if you know how to use it correctly.
 
-Discover how [HubSpot's guide to AI](https://offers.hubspot.com/using-chatgpt-at-work?utm_medium=email-media-newsletter&utm_source=&#123;{publication_alphanumeric_id}}&utm_campaign=creator&utm_content=beehiiv&utm_term=version-r&_bhiiv=opp_8aeb88c0-0b23-4506-8b20-b6944a4232f4_b942af4d&bhcl_id=daf217c9-5bb6-4e02-a573-9245dc808252_&#123;{subscriber_id}}_&#123;{email_address_id}}) can elevate both your productivity and creativity to get more things done.
+Discover how [HubSpot's guide to AI](https://offers.hubspot.com/using-chatgpt-at-work?utm_medium=email-media-newsletter&utm_source=&utm_campaign=creator&utm_content=beehiiv&utm_term=version-r&_bhiiv=opp_8aeb88c0-0b23-4506-8b20-b6944a4232f4_b942af4d&bhcl_id=daf217c9-5bb6-4e02-a573-9245dc808252__) can elevate both your productivity and creativity to get more things done.
 
 Learn to automate tasks, enhance decision-making, and foster innovation with the power of AI.
 
-[Download the free guide](https://offers.hubspot.com/using-chatgpt-at-work?utm_medium=email-media-newsletter&utm_source=&#123;{publication_alphanumeric_id}}&utm_campaign=creator&utm_content=beehiiv&utm_term=version-r&_bhiiv=opp_8aeb88c0-0b23-4506-8b20-b6944a4232f4_b942af4d&bhcl_id=daf217c9-5bb6-4e02-a573-9245dc808252_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[Download the free guide](https://offers.hubspot.com/using-chatgpt-at-work?utm_medium=email-media-newsletter&utm_source=&utm_campaign=creator&utm_content=beehiiv&utm_term=version-r&_bhiiv=opp_8aeb88c0-0b23-4506-8b20-b6944a4232f4_b942af4d&bhcl_id=daf217c9-5bb6-4e02-a573-9245dc808252__)
 
 # 🔧******Tuesday Tool Tip: Try OpenCode, the open-source Claude Code alternative**
 

@@ -15,11 +15,11 @@ type: ai-news
 ## [Google DeepMind’s powerful AI co-mathematician](https://www.therundown.ai/p/google-deepmind-powerful-ai-co-mathematician)
 *🗞️ The Rundown AI | 2026-05-11*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=google-deepmind-s-powerful-ai-co-mathematician)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=google-deepmind-s-powerful-ai-co-mathematician)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=google-deepmind-s-powerful-ai-co-mathematician)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=google-deepmind-s-powerful-ai-co-mathematician)**
 
 [](https://cloud.google.com/resources/content/future-of-ai-genmedia?utm_source=gfs&utm_medium=media&utm_campaign=FY26-Q2-GLOBAL-GCP40293-website-dl-StartupGenMedia-168368&utm_content=rundown2&utm_term=-)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** Google DeepMind just took AI’s coding strategy and applied it to math: don't ask a model for the answer, give a team of agents the workspace.
+**Good morning, AI enthusiasts.** Google DeepMind just took AI’s coding strategy and applied it to math: don't ask a model for the answer, give a team of agents the workspace.
 
 The company’s AI co-mathematician just scored a new high on a benchmark built to stump AI for decades, with one professor even cracking an unsolved problem using a strategy buried inside a proof the system's own reviewers had rejected.
 
@@ -234,11 +234,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [OpenAI closes reasoning gap in voice agents](https://www.therundown.ai/p/openai-closes-reasoning-gap-in-voice-agents)
 *🗞️ The Rundown AI | 2026-05-08*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-closes-reasoning-gap-in-voice-agents)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-closes-reasoning-gap-in-voice-agents)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-closes-reasoning-gap-in-voice-agents)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-closes-reasoning-gap-in-voice-agents)**
 
 [](https://pages.awscloud.com/awsmp-gim-jqup-adhoc-aim-ent-ai-data-leader-book-1-ent.html?trk=1c32ad2e-b511-4f96-bbcb-e6ae04147f9d&sc_channel=el&utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-closes-reasoning-gap-in-voice-agents)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** Typing made AI useful, but speech is where agents have to prove they can keep up with real life.
+**Good morning, AI enthusiasts.** Typing made AI useful, but speech is where agents have to prove they can keep up with real life.
 
 OpenAI's new real-time voice model trio is built for that messier interface, adding a major reasoning upgrade, the ability to talk while thinking, and capable tool use that moves AI voice agents closer to running tasks at the speed of natural conversation.
 
@@ -464,11 +464,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [Anthropic, SpaceX(AI) become unlikely compute partners](https://www.therundown.ai/p/anthropic-spacex-ai-become-unlikely-compute-partners)
 *🗞️ The Rundown AI | 2026-05-07*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=anthropic-spacex-ai-become-unlikely-compute-partners)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=anthropic-spacex-ai-become-unlikely-compute-partners)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=anthropic-spacex-ai-become-unlikely-compute-partners)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=anthropic-spacex-ai-become-unlikely-compute-partners)**
 
 [](https://stripe.com/lp/pricing-ai-products?utm_campaign=TGoD9zd88w5CaCK7EMH3pT4TG)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** Just months ago, Elon Musk was posting that Anthropic “hates Western Civilization” and should be renamed “Misanthropic”. Now, he’s renting them his entire Colossus 1 compute cluster.  
+**Good morning, AI enthusiasts.** Just months ago, Elon Musk was posting that Anthropic “hates Western Civilization” and should be renamed “Misanthropic”. Now, he’s renting them his entire Colossus 1 compute cluster.  
   
 The new deal pulls off three things at once: patching Claude's compute problems, hurting Musk's nemesis OAI by feeding its biggest rival, and signaling a new compute-landlord business for SpaceXAI even as Grok keeps chasing the frontier.
 
@@ -690,11 +690,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [OpenAI's AI phone just jumped the line](https://www.therundown.ai/p/openai-ai-phone-just-jumped-the-line)
 *🗞️ The Rundown AI | 2026-05-06*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-ai-phone-just-jumped-the-line)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-ai-phone-just-jumped-the-line)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-ai-phone-just-jumped-the-line)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-ai-phone-just-jumped-the-line)**
 
 [](https://lambda.ai/llama-3-1-blackwell-mfu-benchmarks?utm_source=rundown-ai&utm_medium=newsletter&utm_campaign=2026-03-mfu-whitepaper&utm_content=main-ad-may-6)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** Amid intensifying competition with Anthropic, improved models, and efforts to kill “side hustles,” OpenAI is apparently looking at something closer to home — an AI agent phone.
+**Good morning, AI enthusiasts.** Amid intensifying competition with Anthropic, improved models, and efforts to kill “side hustles,” OpenAI is apparently looking at something closer to home — an AI agent phone.
 
 Analyst Ming-Chi Kuo says the company is fast-tracking this device for 2027, with some notable capabilities. Good news for those wanting a stronger AI experience in their pockets. The question is: where does this leave the ongoing work with Jony Ive? Or is this the same device?
 
@@ -920,11 +920,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [AI data centers head for the ocean](https://www.therundown.ai/p/ai-data-centers-head-for-the-ocean)
 *🗞️ The Rundown AI | 2026-05-05*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-data-centers-head-for-the-ocean)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-data-centers-head-for-the-ocean)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-data-centers-head-for-the-ocean)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-data-centers-head-for-the-ocean)**
 
 [](https://you.com/resources/why-api-latency-alone-is-a-misleading-metric-download?utm_campaign=28104480-The%20Rundown%20Q4&utm_source=external-newsletter&utm_medium=email&utm_term=rundown_primary_5.5.26&utm_content=rundown_primary_5.5.26)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** AI's land grab is running into walls — literal ones, in the form of an angry public fed up with data center constructions in their cities. 
+**Good morning, AI enthusiasts.** AI's land grab is running into walls — literal ones, in the form of an angry public fed up with data center constructions in their cities. 
 
 Oregon-based startup Panthalassa is taking things offshore instead, with Peter Thiel leading a new $140M round for floating structures that turn ocean energy into the compute AI companies are all scrambling for more of.
 

@@ -15,11 +15,11 @@ type: ai-news
 ## [OpenAI's 'Spud' dethrones Claude on the frontier](https://www.therundown.ai/p/openai-spud-dethrones-claude-on-the-frontier)
 *🗞️ The Rundown AI | 2026-04-24*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-spud-dethrones-claude-on-the-frontier)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-spud-dethrones-claude-on-the-frontier)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-spud-dethrones-claude-on-the-frontier)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-spud-dethrones-claude-on-the-frontier)**
 
 [](https://orkes.io/webinars/the-4-layer-production-stack-every-ai-agent-needs?utm_campaign=Rundown ai&utm_source=Newsletter&utm_medium=email)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** The AI frontier doesn't stay settled for long — and this week, the pendulum is swinging back toward OpenAI.
+**Good morning, AI enthusiasts.** The AI frontier doesn't stay settled for long — and this week, the pendulum is swinging back toward OpenAI.
 
 The company’s new GPT 5.5 'Spud' model just capped a big week of releases with a jump up the leaderboards and a strong vibe shift… Landing at the exact moment Anthropic absorbs its roughest week of rate-limit and quality complaints in months.
 
@@ -249,11 +249,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer—the humans behind The Rundown_
 ## [Anthropic's locked-down Mythos leaks](https://www.therundown.ai/p/anthropic-locked-down-mythos-leaks)
 *🗞️ The Rundown AI | 2026-04-23*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=anthropic-s-locked-down-mythos-leaks)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=anthropic-s-locked-down-mythos-leaks)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=anthropic-s-locked-down-mythos-leaks)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=anthropic-s-locked-down-mythos-leaks)**
 
 [](https://app.bland.ai/login?utm_source=AI_Rundown&utm_medium=email&utm_campaign=norm&utm_content=apr23_2026)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** Anthropic said Mythos was too dangerous to release to the public. Weeks later, a Discord group is reportedly using it daily.  
+**Good morning, AI enthusiasts.** Anthropic said Mythos was too dangerous to release to the public. Weeks later, a Discord group is reportedly using it daily.  
   
 Working off naming conventions leaked in a data breach and a borrowed contractor login, the group slipped into Anthropic's most restricted AI to date — a bad start for keeping increasingly powerful systems under wraps.
 
@@ -475,11 +475,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [OpenAI reclaims the image crown](https://www.therundown.ai/p/openai-reclaims-the-image-crown)
 *🗞️ The Rundown AI | 2026-04-22*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-reclaims-the-image-crown)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-reclaims-the-image-crown)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-reclaims-the-image-crown)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-reclaims-the-image-crown)**
 
 [](https://www.algolia.com/resources/asset/building-agentic-ai?utm_campaign=rundown_global_b2x_ecomm_ecomm_tof_reach&utm_medium=display&utm_source=rundown&utm_content=rundown_global_b2x_ecomm&utm_term=ebo_building-agentic-ai&utm_camp_parent=b2x_ecomm&utm_2nd_camp=ecomm_tof&utm_region=global&utm_goal=reach&utm_creative_format=prmrynwsl&utm_model=cpm&utm_marketing_tactic=reach)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** After OpenAI’s DALL-E and GPT Image 1 paved early ground in image generation, Google's Nano Banana has topped the leaderboards for the better part of a year. That run just ended.
+**Good morning, AI enthusiasts.** After OpenAI’s DALL-E and GPT Image 1 paved early ground in image generation, Google's Nano Banana has topped the leaderboards for the better part of a year. That run just ended.
 
 OpenAI's new ChatGPT Images 2.0 is the first image model that plans, searches the web, and self-checks its outputs before generating, and the results show — with an upgrade that Sam Altman says is like "going from GPT-3 to GPT-5 all at once."
 
@@ -705,11 +705,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer—the humans behind The Rundown_
 ## [Sergey Brin commits DeepMind to a Claude catch-up](https://www.therundown.ai/p/sergey-brin-commits-deepmind-to-a-claude-catch-up)
 *🗞️ The Rundown AI | 2026-04-21*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=sergey-brin-commits-deepmind-to-a-claude-catch-up)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=sergey-brin-commits-deepmind-to-a-claude-catch-up)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=sergey-brin-commits-deepmind-to-a-claude-catch-up)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=sergey-brin-commits-deepmind-to-a-claude-catch-up)**
 
 [](https://you.com/resources/why-api-latency-alone-is-a-misleading-metric-download?utm_campaign=28104480-The%20Rundown%20Q4&utm_source=external-newsletter&utm_medium=email&utm_term=rundown_primary_421&utm_content=rundown_primary_421)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** Catching Anthropic's lead in coding just became Sergey Brin's personal project.  
+**Good morning, AI enthusiasts.** Catching Anthropic's lead in coding just became Sergey Brin's personal project.  
   
 The once-retired Google co-founder is now reportedly running a DeepMind “strike team” focused on closing Gemini's internal coding gap with Claude — with Brin framing the push as the shortest route to the holy grail of self-improving AI. 
 
@@ -935,11 +935,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [Claude comes for the design stack](https://www.therundown.ai/p/claude-comes-for-the-design-stack)
 *🗞️ The Rundown AI | 2026-04-20*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=claude-comes-for-the-design-stack)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=claude-comes-for-the-design-stack)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=claude-comes-for-the-design-stack)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=claude-comes-for-the-design-stack)**
 
 [](https://www.sonarsource.com/blog/the-future-of-software-development-is-acdc?utm_source=fnf&utm_medium=paid&utm_campaign=ss-agent-centric-dev-cycle-acdc26&utm_term=newsletter-trd&utm_content=v1&s_category=Paid&s_source=Paid%20Other&s_origin=influencer)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** Every few weeks, an Anthropic launch seems to rattle a new industry. This time it's design.  
+**Good morning, AI enthusiasts.** Every few weeks, an Anthropic launch seems to rattle a new industry. This time it's design.  
   
 Claude Design turns prompts, screenshots, and codebases into shippable prototypes — the latest layer of the software stack Anthropic is quietly pulling under one roof.
 

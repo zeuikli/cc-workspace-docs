@@ -15,11 +15,11 @@ type: ai-news
 ## [Anthropic, SpaceX(AI) become unlikely compute partners](https://www.therundown.ai/p/anthropic-spacex-ai-become-unlikely-compute-partners)
 *🗞️ The Rundown AI | 2026-05-07*
 
-[Read Online](&#123;{live_url}}) | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=anthropic-spacex-ai-become-unlikely-compute-partners) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=anthropic-spacex-ai-become-unlikely-compute-partners)
+[Read Online]() | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=anthropic-spacex-ai-become-unlikely-compute-partners) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=anthropic-spacex-ai-become-unlikely-compute-partners)
 
 [](https://stripe.com/lp/pricing-ai-products?utm_campaign=TGoD9zd88w5CaCK7EMH3pT4TG)
 
-Good morning, &#123;{ first_name | AI enthusiasts }}. Just months ago, Elon Musk was posting that Anthropic “hates Western Civilization” and should be renamed “Misanthropic”. Now, he’s renting them his entire Colossus 1 compute cluster.
+Good morning, AI enthusiasts. Just months ago, Elon Musk was posting that Anthropic “hates Western Civilization” and should be renamed “Misanthropic”. Now, he’s renting them his entire Colossus 1 compute cluster.
 
 The new deal pulls off three things at once: patching Claude's compute problems, hurting Musk's nemesis OAI by feeding its biggest rival, and signaling a new compute-landlord business for SpaceXAI even as Grok keeps chasing the frontier.
 

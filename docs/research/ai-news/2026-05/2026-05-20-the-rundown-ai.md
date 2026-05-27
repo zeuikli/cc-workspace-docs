@@ -15,11 +15,11 @@ type: ai-news
 ## [Musk's OpenAI case runs out of time](https://www.therundown.ai/p/musk-openai-case-runs-out-of-time)
 *🗞️ The Rundown AI | 2026-05-19*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=musk-s-openai-case-runs-out-of-time)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=musk-s-openai-case-runs-out-of-time)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=musk-s-openai-case-runs-out-of-time)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=musk-s-openai-case-runs-out-of-time)**
 
 [](https://you.com/resources/why-api-latency-alone-is-a-misleading-metric-download?utm_campaign=28104480-The Rundown Q4&utm_source=external-newsletter&utm_medium=email&utm_term=rundown_primary_5.19.26&utm_content=rundown_primary_5.19.26)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** Three weeks of high-profile testimonies, spicy leaked messages, and $100B in claims made for a blockbuster trial — but Elon Musk vs. OpenAI’s conclusion didn’t live up to the hype.
+**Good morning, AI enthusiasts.** Three weeks of high-profile testimonies, spicy leaked messages, and $100B in claims made for a blockbuster trial — but Elon Musk vs. OpenAI’s conclusion didn’t live up to the hype.
 
 With jurors dismissing the suit in OpenAI’s favor and Musk calling the ruling a “calendar technicality” and vowing to appeal, a more dramatic conclusion to the massive tech trial may have to wait for another day in court. 
 
@@ -247,11 +247,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [AI anger comes for Claude (Monet)](https://www.therundown.ai/p/ai-anger-comes-for-claude-monet)
 *🗞️ The Rundown AI | 2026-05-18*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-anger-comes-for-claude-monet)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-anger-comes-for-claude-monet)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-anger-comes-for-claude-monet)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-anger-comes-for-claude-monet)**
 
 [](https://cal.com/unwrap/quick-connect?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-anger-comes-for-claude-monet)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** Thousands of people on X just confidently explained why an AI-generated image was inferior to a real Monet. Just one problem: It WAS a real Monet.
+**Good morning, AI enthusiasts.** Thousands of people on X just confidently explained why an AI-generated image was inferior to a real Monet. Just one problem: It WAS a real Monet.
 
 Conceptual artist SHL0MS’ latest experiment says less about AI art and more about the reflexive hostility baked into the tech, with critics lining up to trash an artwork the moment they thought a machine made it.
 
@@ -474,11 +474,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [OpenAI takes Codex mobile](https://www.therundown.ai/p/openai-takes-codex-mobile)
 *🗞️ The Rundown AI | 2026-05-15*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-takes-codex-mobile)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-takes-codex-mobile)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-takes-codex-mobile)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-takes-codex-mobile)**
 
 [](https://www.braintrust.dev/signup?utm_source=newsletter&utm_medium=rundown&utm_campaign=signup&utm_content=primary_2026-05-15)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** AI coding agents can now run for hours at a time. Sitting at your desk the entire time shouldn't be a requirement… Or carrying around a computer to keep things moving.
+**Good morning, AI enthusiasts.** AI coding agents can now run for hours at a time. Sitting at your desk the entire time shouldn't be a requirement… Or carrying around a computer to keep things moving.
 
 Codex going mobile inside the ChatGPT app is OpenAI's long-awaited answer to that problem, letting users approve decisions, start new tasks, and make changes from their phone while agents grind away back at the desk.
 
@@ -702,11 +702,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [The enterprise shift OpenAI saw coming](https://www.therundown.ai/p/the-enterprise-shift-openai-saw-coming)
 *🗞️ The Rundown AI | 2026-05-14*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=the-enterprise-shift-openai-saw-coming)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=the-enterprise-shift-openai-saw-coming)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=the-enterprise-shift-openai-saw-coming)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=the-enterprise-shift-openai-saw-coming)**
 
 [](https://cloud.google.com/products/gemini-enterprise-agent-platform?utm_source=fnf&utm_medium=newsletter&utm_campaign=google-cloud-may&utm_term=rundown&utm_content=multi-agent-code-lab)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** Two months ago, OpenAI's Fidji Simo told staff the company was in a "code red" over Anthropic's enterprise rise. New spend data says the leaderboard has actually flipped. 
+**Good morning, AI enthusiasts.** Two months ago, OpenAI's Fidji Simo told staff the company was in a "code red" over Anthropic's enterprise rise. New spend data says the leaderboard has actually flipped. 
 
 Ramp’s latest AI Index just showed Anthropic leading adoption among its paid business users for the first time, a 4x adoption surge since 2025 that may tell the story of why OpenAI has been drastically shifting its priorities throughout 2026. 
 
@@ -932,11 +932,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [Android enters its Gemini Intelligence era](https://www.therundown.ai/p/android-enters-its-gemini-intelligence-era)
 *🗞️ The Rundown AI | 2026-05-13*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=android-enters-its-gemini-intelligence-era)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=android-enters-its-gemini-intelligence-era)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=android-enters-its-gemini-intelligence-era)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=android-enters-its-gemini-intelligence-era)**
 
 [](https://www.optimizely.com/insights/test-and-learn/?utm_source=rundownai&utm_medium=cpc&utm_campaign=global_exp_testandlearn-rundownai-newsletter-8_q226_tofu_pt_traffic&utm_content=exp-testandlearn)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** Google’s headlining I/O event isn’t until next week, but Android just gave a pretty big performance for an opening act. 
+**Good morning, AI enthusiasts.** Google’s headlining I/O event isn’t until next week, but Android just gave a pretty big performance for an opening act. 
 
 The company just introduced a new line of AI-native Googlebooks, a new Gemini Intelligence system across devices, a Gemini-infused mouse cursor, and more — bringing AI into its device ecosystem in a more unified way than ever before.
 

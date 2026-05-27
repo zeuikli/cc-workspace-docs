@@ -15,11 +15,11 @@ type: ai-news
 ## [Exclusive: Inside Canva AI 2.0 with CPO Cameron Adams](https://www.therundown.ai/p/exclusive-inside-canva-ai-2-0-with-cpo-cameron-adams)
 *🗞️ The Rundown AI | 2026-04-19*
 
-[Read Online](&#123;{live_url}}) | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=exclusive-inside-canva-ai-2-0-with-cpo-cameron-adams) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=exclusive-inside-canva-ai-2-0-with-cpo-cameron-adams)
+[Read Online]() | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=exclusive-inside-canva-ai-2-0-with-cpo-cameron-adams) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=exclusive-inside-canva-ai-2-0-with-cpo-cameron-adams)
 
 [](https://www.canva.com/newsroom/news/canva-create-2026-ai/?utm_medium=referral&utm_source=affiliate&utm_campaign=therundown&utm_content=product)
 
-Good morning, &#123;{ first_name | AI enthusiasts }}. Most AI design tools give you a result and stop there. You get a finished image, and then you're on your own, prompting in circles to get it closer to what you actually meant.
+Good morning, AI enthusiasts. Most AI design tools give you a result and stop there. You get a finished image, and then you're on your own, prompting in circles to get it closer to what you actually meant.
 
 Canva is betting the real value isn't in generation — it's in what comes after. The company just [launched](https://www.canva.com/newsroom/news/canva-create-2026-ai/?utm_medium=referral&utm_source=affiliate&utm_campaign=therundown&utm_content=product) Canva AI 2.0, turning its platform into an AI-native environment where generated designs are fully editable, and the AI refines alongside you rather than handing off a flat image and stepping back.
 

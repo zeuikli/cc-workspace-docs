@@ -15,11 +15,11 @@ type: ai-news
 ## [OpenAI and Microsoft's new open relationship](https://www.therundown.ai/p/openai-and-microsoft-new-open-relationship)
 *🗞️ The Rundown AI | 2026-04-28*
 
-[Read Online](&#123;{live_url}}) | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-and-microsoft-s-new-open-relationship) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-and-microsoft-s-new-open-relationship)
+[Read Online]() | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-and-microsoft-s-new-open-relationship) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-and-microsoft-s-new-open-relationship)
 
 [](https://you.com/resources/how-we-evaluate-ai-search?utm_campaign=28104480-The Rundown Q4&utm_source=external-newsletter&utm_medium=email&utm_term=rundown_primary_428&utm_content=rundown_primary_428)
 
-Good morning, &#123;{ first_name | AI enthusiasts }}. The Microsoft-OpenAI relationship is no longer an exclusive marriage… But it’s also not exactly a breakup either.
+Good morning, AI enthusiasts. The Microsoft-OpenAI relationship is no longer an exclusive marriage… But it’s also not exactly a breakup either.
 
 The new deal terms allow OpenAI to date around in the cloud (hello, Amazon), while Microsoft keeps the awkward-but-lucrative role of ex with benefits: less control, but still very much getting paid.
 

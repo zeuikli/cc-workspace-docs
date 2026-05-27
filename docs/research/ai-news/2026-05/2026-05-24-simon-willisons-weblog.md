@@ -15,7 +15,7 @@ type: ai-news
 ## [On the](https://simonwillison.net/2026/May/23/on-the-dl/#atom-everything)
 *🔧 Simon Willison's Weblog | 2026-05-23*
 
-**[On the&lt;dl>](https://benmyers.dev/blog/on-the-dl/)**
+**[On the`<dl>`](https://benmyers.dev/blog/on-the-dl/)**
 
 I learned a few new-to-me things about the `<dl>` element from this article by Ben Meyer:
 
@@ -29,14 +29,14 @@ I learned a few new-to-me things about the `<dl>` element from this article by B
 So this is valid:
     
     
-    <h2 id="credits">Credits&lt;/h2>
-    <dl aria-labelledby="credits">
-      <div>
-        <dt>Author&lt;/dt>
-        <dd>Jeffrey Zeldman&lt;/dd>
-        <dd>Ethan Marcotte&lt;/dd>
-      </div>
-    </dl>
+    `<h2 id="credits">`Credits`</h2>`
+    `<dl aria-labelledby="credits">`
+      `<div>`
+        `<dt>`Author`</dt>`
+        `<dd>`Jeffrey Zeldman`</dd>`
+        `<dd>`Ethan Marcotte`</dd>`
+      `</div>`
+    `</dl>`
 
 Here's a useful note from Adrian Roselli on [screen reader support for description lists](https://adrianroselli.com/2025/01/updated-brief-note-on-description-list-support.html). 
 

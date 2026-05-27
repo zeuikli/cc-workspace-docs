@@ -79,17 +79,17 @@ The clever part is how OpenAI hid the thinking time. The model now generates **p
 
 ### Attio is the AI CRM for high-growth teams.
 
-[](https://attio.com/?utm_source=beehiiv&utm_medium=newsletter&utm_campaign=beehiiv-Y26&utm_content=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_b00e1ef8-5b02-4b95-81f0-f66cdcb665d9_7395cee5&bhcl_id=7ce32ed2-f4ce-4f2e-b558-c624fd6bd570_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[](https://attio.com/?utm_source=beehiiv&utm_medium=newsletter&utm_campaign=beehiiv-Y26&utm_content=&_bhiiv=opp_b00e1ef8-5b02-4b95-81f0-f66cdcb665d9_7395cee5&bhcl_id=7ce32ed2-f4ce-4f2e-b558-c624fd6bd570__)
 
-Connect your email, calls, product data and more, and [Attio](https://attio.com/?utm_source=beehiiv&utm_medium=newsletter&utm_campaign=beehiiv-Y26&utm_content=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_b00e1ef8-5b02-4b95-81f0-f66cdcb665d9_7395cee5&bhcl_id=7ce32ed2-f4ce-4f2e-b558-c624fd6bd570_&#123;{subscriber_id}}_&#123;{email_address_id}}) instantly builds your CRM with enriched data and complete context. Whether you’re running product-led growth or enterprise sales, Attio adapts to your unique GTM motion.
+Connect your email, calls, product data and more, and [Attio](https://attio.com/?utm_source=beehiiv&utm_medium=newsletter&utm_campaign=beehiiv-Y26&utm_content=&_bhiiv=opp_b00e1ef8-5b02-4b95-81f0-f66cdcb665d9_7395cee5&bhcl_id=7ce32ed2-f4ce-4f2e-b558-c624fd6bd570__) instantly builds your CRM with enriched data and complete context. Whether you’re running product-led growth or enterprise sales, Attio adapts to your unique GTM motion.
 
-Then [Ask Attio](https://attio.com/?utm_source=beehiiv&utm_medium=newsletter&utm_campaign=beehiiv-Y26&utm_content=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_b00e1ef8-5b02-4b95-81f0-f66cdcb665d9_7395cee5&bhcl_id=7ce32ed2-f4ce-4f2e-b558-c624fd6bd570_&#123;{subscriber_id}}_&#123;{email_address_id}}) to plan your next move.
+Then [Ask Attio](https://attio.com/?utm_source=beehiiv&utm_medium=newsletter&utm_campaign=beehiiv-Y26&utm_content=&_bhiiv=opp_b00e1ef8-5b02-4b95-81f0-f66cdcb665d9_7395cee5&bhcl_id=7ce32ed2-f4ce-4f2e-b558-c624fd6bd570__) to plan your next move.
 
 Run deep web research on prospects. Update your pipeline as you work. Find customers and draft outreach emails. Powered by Universal Context, Attio's intelligence layer, Attio searches, updates, and creates across your data to accelerate your workflow.
 
 Ask more from your CRM.
 
-[Ask Attio](https://attio.com/?utm_source=beehiiv&utm_medium=newsletter&utm_campaign=beehiiv-Y26&utm_content=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_b00e1ef8-5b02-4b95-81f0-f66cdcb665d9_7395cee5&bhcl_id=7ce32ed2-f4ce-4f2e-b558-c624fd6bd570_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[Ask Attio](https://attio.com/?utm_source=beehiiv&utm_medium=newsletter&utm_campaign=beehiiv-Y26&utm_content=&_bhiiv=opp_b00e1ef8-5b02-4b95-81f0-f66cdcb665d9_7395cee5&bhcl_id=7ce32ed2-f4ce-4f2e-b558-c624fd6bd570__)
 
 # 🎓 AI Skill of the Day: Force any AI to audit its own work with one question
 
@@ -380,11 +380,11 @@ Want to watch it yourself? The[ keynote](https://www.youtube.com/live/GMIWm5y90x
 
 ### GTM Atlas, by Attio
 
-[](https://atlas.attio.com/?utm_source=beehiiv&utm_medium=newsletter&utm_campaign=beehiiv-Y26-atlas&utm_content=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_311ed0df-17e5-4990-ac54-7e163c91b23c_8ebadeed&bhcl_id=ec4782dc-abe5-43f5-9d81-922fbe0f88a2_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[](https://atlas.attio.com/?utm_source=beehiiv&utm_medium=newsletter&utm_campaign=beehiiv-Y26-atlas&utm_content=&_bhiiv=opp_311ed0df-17e5-4990-ac54-7e163c91b23c_8ebadeed&bhcl_id=ec4782dc-abe5-43f5-9d81-922fbe0f88a2__)
 
 Your GTM motion is creative. The thinking behind it should be too.
 
-[GTM Atlas](https://atlas.attio.com/?utm_source=beehiiv&utm_medium=newsletter&utm_campaign=beehiiv-Y26-atlas&utm_content=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_311ed0df-17e5-4990-ac54-7e163c91b23c_8ebadeed&bhcl_id=ec4782dc-abe5-43f5-9d81-922fbe0f88a2_&#123;{subscriber_id}}_&#123;{email_address_id}}) is the ultimate resource on AI GTM for early-stage builders, providing foundational knowledge for teams navigating growth from scratch. Curated by Attio, the AI CRM, Atlas gives you:
+[GTM Atlas](https://atlas.attio.com/?utm_source=beehiiv&utm_medium=newsletter&utm_campaign=beehiiv-Y26-atlas&utm_content=&_bhiiv=opp_311ed0df-17e5-4990-ac54-7e163c91b23c_8ebadeed&bhcl_id=ec4782dc-abe5-43f5-9d81-922fbe0f88a2__) is the ultimate resource on AI GTM for early-stage builders, providing foundational knowledge for teams navigating growth from scratch. Curated by Attio, the AI CRM, Atlas gives you:
 
   * Systems thinking for every stage of the customer journey
 
@@ -397,7 +397,7 @@ Your GTM motion is creative. The thinking behind it should be too.
 
 Mapped by operators. Curated by Attio.
 
-[Explore now](https://atlas.attio.com/?utm_source=beehiiv&utm_medium=newsletter&utm_campaign=beehiiv-Y26-atlas&utm_content=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_311ed0df-17e5-4990-ac54-7e163c91b23c_8ebadeed&bhcl_id=ec4782dc-abe5-43f5-9d81-922fbe0f88a2_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[Explore now](https://atlas.attio.com/?utm_source=beehiiv&utm_medium=newsletter&utm_campaign=beehiiv-Y26-atlas&utm_content=&_bhiiv=opp_311ed0df-17e5-4990-ac54-7e163c91b23c_8ebadeed&bhcl_id=ec4782dc-abe5-43f5-9d81-922fbe0f88a2__)
 
 # 🎓 AI Skill of the Day: **Turn Codex (or Claude Code) into your daily-driver knowledge work cockpit.**
 
@@ -467,15 +467,15 @@ Put this to use in the trivia below!
 
 ### One brand built 30+ landing pages through Viktor without a single developer.
 
-[](https://ref.getviktor.com/vik-bh-mediabuy-secondary1?utm_campaign=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_01be1fa1-75a7-4998-a4cf-31cb355c6866_dc23507e&bhcl_id=1e0933d0-f489-47f8-aebe-bc870c4e9fb3_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[](https://ref.getviktor.com/vik-bh-mediabuy-secondary1?utm_campaign=&_bhiiv=opp_01be1fa1-75a7-4998-a4cf-31cb355c6866_dc23507e&bhcl_id=1e0933d0-f489-47f8-aebe-bc870c4e9fb3__)
 
-Each page mapped to a specific ad group. All deployed within hours. [Viktor](https://ref.getviktor.com/vik-bh-mediabuy-secondary1?utm_campaign=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_01be1fa1-75a7-4998-a4cf-31cb355c6866_dc23507e&bhcl_id=1e0933d0-f489-47f8-aebe-bc870c4e9fb3_&#123;{subscriber_id}}_&#123;{email_address_id}}) wrote the code and shipped every one from a Slack message.
+Each page mapped to a specific ad group. All deployed within hours. [Viktor](https://ref.getviktor.com/vik-bh-mediabuy-secondary1?utm_campaign=&_bhiiv=opp_01be1fa1-75a7-4998-a4cf-31cb355c6866_dc23507e&bhcl_id=1e0933d0-f489-47f8-aebe-bc870c4e9fb3__) wrote the code and shipped every one from a Slack message.
 
 That same team has Viktor monitoring ad accounts across the portfolio and posting performance briefs before the day starts. One colleague. Always on. Across every account.
 
 5,700+ teams. 3,000+ integrations.
 
-[Start free. $100 in credits →](https://ref.getviktor.com/vik-bh-mediabuy-secondary1?utm_campaign=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_01be1fa1-75a7-4998-a4cf-31cb355c6866_dc23507e&bhcl_id=1e0933d0-f489-47f8-aebe-bc870c4e9fb3_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[Start free. $100 in credits →](https://ref.getviktor.com/vik-bh-mediabuy-secondary1?utm_campaign=&_bhiiv=opp_01be1fa1-75a7-4998-a4cf-31cb355c6866_dc23507e&bhcl_id=1e0933d0-f489-47f8-aebe-bc870c4e9fb3__)
 
 # 🧩 Thursday Trivia:
 

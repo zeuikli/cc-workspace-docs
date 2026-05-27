@@ -8,7 +8,7 @@
 ## [The Pope just weighed in on AI](https://www.therundown.ai/p/the-pope-just-weighed-in-on-ai)
 *🗞️ The Rundown AI | 2026-05-26*
 
-**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=the-pope-just-weighed-in-on-ai)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=the-pope-just-weighed-in-on-ai)**
+**[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=the-pope-just-weighed-in-on-ai)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=the-pope-just-weighed-in-on-ai)**
 
 [](https://you.com/resources/what-is-ai-grounding-downloadable?utm_campaign=32665437-Rundown_Q1&utm_source=external-newsletter&utm_medium=email&utm_term=rundown_primary_5.26.26&utm_content=rundown_primary_5.26.26)
 
@@ -240,7 +240,7 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [Google tops OpenAI's math breakthrough — 9 to 1](https://www.therundown.ai/p/google-tops-openai-math-breakthrough-9-to-1)
 *🗞️ The Rundown AI | 2026-05-25*
 
-**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=google-tops-openai-s-math-breakthrough-9-to-1)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=google-tops-openai-s-math-breakthrough-9-to-1)**
+**[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=google-tops-openai-s-math-breakthrough-9-to-1)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=google-tops-openai-s-math-breakthrough-9-to-1)**
 
 [](https://cloudonair.withgoogle.com/events/startup-school-ai-q2-2026?utm_source=gfs&utm_medium=newsletter&utm_campaign=FY26-Q2-GLOBAL-GCP40434-onlineevent-er-Q2StartupSchool-180015&utm_content=rundown1)
 
@@ -465,7 +465,7 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [Exclusive interview: Sundar Pichai on AI's flip phone moment](https://www.therundown.ai/p/exclusive-interview-sundar-pichai-on-ai-flip-phone-moment)
 *🗞️ The Rundown AI | 2026-05-22*
 
-**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=exclusive-interview-sundar-pichai-on-ai-s-flip-phone-moment)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=exclusive-interview-sundar-pichai-on-ai-s-flip-phone-moment)**
+**[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=exclusive-interview-sundar-pichai-on-ai-s-flip-phone-moment)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=exclusive-interview-sundar-pichai-on-ai-s-flip-phone-moment)**
 
 [](https://www.algolia.com/resources/asset/white-paper-architecture-data-foundations-for-ai-powered-search?utm_campaign=rundown_global_b2x_ecomm_ecomm_tof_reach&utm_medium=display&utm_source=rundown&utm_content=rundown_global_b2x_ecomm&utm_term=ebo_architecture-data-foundations-for-ai-powered-search&utm_camp_parent=b2x_ecomm&utm_2nd_camp=ecomm_tof&utm_region=global&utm_goal=reach&utm_creative_format=prmrynwsl&utm_model=cpm&utm_marketing_tactic=reach)
 
@@ -697,7 +697,7 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [OpenAI cracks an 80-year math belief](https://www.therundown.ai/p/openai-cracks-an-80-year-math-belief)
 *🗞️ The Rundown AI | 2026-05-21*
 
-**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-cracks-an-80-year-math-belief)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-cracks-an-80-year-math-belief)**
+**[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-cracks-an-80-year-math-belief)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-cracks-an-80-year-math-belief)**
 
 [](https://offers.hubspot.com/using-chatgpt-at-work?utm_medium=email-media-newsletter&utm_source=the-rundown-ai&utm_campaign=creator&utm_content=paid&utm_term=5-21-2026)
 
@@ -929,7 +929,7 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [Gemini's busy agentic day at Google I/O](https://www.therundown.ai/p/gemini-busy-agentic-day-at-google-i-o)
 *🗞️ The Rundown AI | 2026-05-20*
 
-**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=gemini-s-busy-agentic-day-at-google-i-o)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=gemini-s-busy-agentic-day-at-google-i-o)**
+**[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=gemini-s-busy-agentic-day-at-google-i-o)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=gemini-s-busy-agentic-day-at-google-i-o)**
 
 [](https://www.datadoghq.com/resources/llm-observability-best-practices/?utm_source=freemanforrest&utm_medium=influencer&utm_campaign=int-infra-ww-llm-llm-observability-therundown-052026)
 

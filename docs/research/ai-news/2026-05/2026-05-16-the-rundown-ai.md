@@ -15,11 +15,11 @@ type: ai-news
 ## [OpenAI takes Codex mobile](https://www.therundown.ai/p/openai-takes-codex-mobile)
 *🗞️ The Rundown AI | 2026-05-15*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-takes-codex-mobile)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-takes-codex-mobile)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-takes-codex-mobile)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-takes-codex-mobile)**
 
 [](https://www.braintrust.dev/signup?utm_source=newsletter&utm_medium=rundown&utm_campaign=signup&utm_content=primary_2026-05-15)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** AI coding agents can now run for hours at a time. Sitting at your desk the entire time shouldn't be a requirement… Or carrying around a computer to keep things moving.
+**Good morning, AI enthusiasts.** AI coding agents can now run for hours at a time. Sitting at your desk the entire time shouldn't be a requirement… Or carrying around a computer to keep things moving.
 
 Codex going mobile inside the ChatGPT app is OpenAI's long-awaited answer to that problem, letting users approve decisions, start new tasks, and make changes from their phone while agents grind away back at the desk.
 
@@ -243,11 +243,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [The enterprise shift OpenAI saw coming](https://www.therundown.ai/p/the-enterprise-shift-openai-saw-coming)
 *🗞️ The Rundown AI | 2026-05-14*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=the-enterprise-shift-openai-saw-coming)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=the-enterprise-shift-openai-saw-coming)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=the-enterprise-shift-openai-saw-coming)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=the-enterprise-shift-openai-saw-coming)**
 
 [](https://cloud.google.com/products/gemini-enterprise-agent-platform?utm_source=fnf&utm_medium=newsletter&utm_campaign=google-cloud-may&utm_term=rundown&utm_content=multi-agent-code-lab)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** Two months ago, OpenAI's Fidji Simo told staff the company was in a "code red" over Anthropic's enterprise rise. New spend data says the leaderboard has actually flipped. 
+**Good morning, AI enthusiasts.** Two months ago, OpenAI's Fidji Simo told staff the company was in a "code red" over Anthropic's enterprise rise. New spend data says the leaderboard has actually flipped. 
 
 Ramp’s latest AI Index just showed Anthropic leading adoption among its paid business users for the first time, a 4x adoption surge since 2025 that may tell the story of why OpenAI has been drastically shifting its priorities throughout 2026. 
 
@@ -473,11 +473,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [Android enters its Gemini Intelligence era](https://www.therundown.ai/p/android-enters-its-gemini-intelligence-era)
 *🗞️ The Rundown AI | 2026-05-13*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=android-enters-its-gemini-intelligence-era)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=android-enters-its-gemini-intelligence-era)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=android-enters-its-gemini-intelligence-era)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=android-enters-its-gemini-intelligence-era)**
 
 [](https://www.optimizely.com/insights/test-and-learn/?utm_source=rundownai&utm_medium=cpc&utm_campaign=global_exp_testandlearn-rundownai-newsletter-8_q226_tofu_pt_traffic&utm_content=exp-testandlearn)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** Google’s headlining I/O event isn’t until next week, but Android just gave a pretty big performance for an opening act. 
+**Good morning, AI enthusiasts.** Google’s headlining I/O event isn’t until next week, but Android just gave a pretty big performance for an opening act. 
 
 The company just introduced a new line of AI-native Googlebooks, a new Gemini Intelligence system across devices, a Gemini-infused mouse cursor, and more — bringing AI into its device ecosystem in a more unified way than ever before.
 
@@ -705,11 +705,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [Mira Murati's TML upends how humans work with AI](https://www.therundown.ai/p/mira-murati-tml-upends-how-humans-work-with-ai)
 *🗞️ The Rundown AI | 2026-05-12*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=mira-murati-s-tml-upends-how-humans-work-with-ai)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=mira-murati-s-tml-upends-how-humans-work-with-ai)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=mira-murati-s-tml-upends-how-humans-work-with-ai)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=mira-murati-s-tml-upends-how-humans-work-with-ai)**
 
 [](https://you.com/resources/what-is-ai-grounding-downloadable?utm_campaign=32665437-Rundown_Q1&utm_source=external-newsletter&utm_medium=email&utm_term=rundown_primary_5.12.26&utm_content=rundown_primary_5.12.26)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** Both Mira Murati's Thinking Machines and Ilya Sutskever's SSI have spent the post-OpenAI era mostly out of view, making every public reveal feel that much bigger.
+**Good morning, AI enthusiasts.** Both Mira Murati's Thinking Machines and Ilya Sutskever's SSI have spent the post-OpenAI era mostly out of view, making every public reveal feel that much bigger.
 
 Murati's lab just broke the silence with 'interaction models,' a new type of AI built for real-time collaboration across voice, video, and text — in a direct counter to the agentic-first direction the rest of the field is racing toward.
 
@@ -935,11 +935,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [Google DeepMind’s powerful AI co-mathematician](https://www.therundown.ai/p/google-deepmind-powerful-ai-co-mathematician)
 *🗞️ The Rundown AI | 2026-05-11*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=google-deepmind-s-powerful-ai-co-mathematician)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=google-deepmind-s-powerful-ai-co-mathematician)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=google-deepmind-s-powerful-ai-co-mathematician)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=google-deepmind-s-powerful-ai-co-mathematician)**
 
 [](https://cloud.google.com/resources/content/future-of-ai-genmedia?utm_source=gfs&utm_medium=media&utm_campaign=FY26-Q2-GLOBAL-GCP40293-website-dl-StartupGenMedia-168368&utm_content=rundown2&utm_term=-)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** Google DeepMind just took AI’s coding strategy and applied it to math: don't ask a model for the answer, give a team of agents the workspace.
+**Good morning, AI enthusiasts.** Google DeepMind just took AI’s coding strategy and applied it to math: don't ask a model for the answer, give a team of agents the workspace.
 
 The company’s AI co-mathematician just scored a new high on a benchmark built to stump AI for decades, with one professor even cracking an unsolved problem using a strategy buried inside a proof the system's own reviewers had rejected.
 

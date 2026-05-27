@@ -664,11 +664,11 @@ As for more on how to do THAT, check [out this post from OpenAI engineer ](https
 
 ### The IT strategy every team needs for 2026
 
-[](https://www.deel.com/resources/it-strategy-toolkit-2026-guide-hr-leaders/?utm_medium=sponsored-newsletter&utm_source=beehiiv&utm_term=&#123;{publication_alphanumeric_id}}&utm_campaign=ww_engage_download_beehiiv_sponnewsletter_it-ttrends2026-feb26_it_all&utm_content=engage_it_sponnewsletter_ittrends2026-sponnews400-it_en&_bhiiv=opp_95399c4a-b95e-434a-81f8-3d142aa2f53a_28664f41&bhcl_id=50411be0-68ad-4fcd-a7cd-f588c26ca824_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[](https://www.deel.com/resources/it-strategy-toolkit-2026-guide-hr-leaders/?utm_medium=sponsored-newsletter&utm_source=beehiiv&utm_term=&utm_campaign=ww_engage_download_beehiiv_sponnewsletter_it-ttrends2026-feb26_it_all&utm_content=engage_it_sponnewsletter_ittrends2026-sponnews400-it_en&_bhiiv=opp_95399c4a-b95e-434a-81f8-3d142aa2f53a_28664f41&bhcl_id=50411be0-68ad-4fcd-a7cd-f588c26ca824__)
 
-2026 will redefine IT as a strategic driver of global growth. Automation, AI-driven support, unified platforms, and zero-trust security are becoming standard, especially for distributed teams. This [toolkit](https://www.deel.com/resources/it-strategy-toolkit-2026-guide-hr-leaders/?utm_medium=sponsored-newsletter&utm_source=beehiiv&utm_term=&#123;{publication_alphanumeric_id}}&utm_campaign=ww_engage_download_beehiiv_sponnewsletter_it-ttrends2026-feb26_it_all&utm_content=engage_it_sponnewsletter_ittrends2026-sponnews400-it_en&_bhiiv=opp_95399c4a-b95e-434a-81f8-3d142aa2f53a_28664f41&bhcl_id=50411be0-68ad-4fcd-a7cd-f588c26ca824_&#123;{subscriber_id}}_&#123;{email_address_id}}) helps IT and HR leaders assess readiness, define goals, and build a scalable, audit-ready IT strategy for the year ahead. Learn what’s changing and how to prepare.
+2026 will redefine IT as a strategic driver of global growth. Automation, AI-driven support, unified platforms, and zero-trust security are becoming standard, especially for distributed teams. This [toolkit](https://www.deel.com/resources/it-strategy-toolkit-2026-guide-hr-leaders/?utm_medium=sponsored-newsletter&utm_source=beehiiv&utm_term=&utm_campaign=ww_engage_download_beehiiv_sponnewsletter_it-ttrends2026-feb26_it_all&utm_content=engage_it_sponnewsletter_ittrends2026-sponnews400-it_en&_bhiiv=opp_95399c4a-b95e-434a-81f8-3d142aa2f53a_28664f41&bhcl_id=50411be0-68ad-4fcd-a7cd-f588c26ca824__) helps IT and HR leaders assess readiness, define goals, and build a scalable, audit-ready IT strategy for the year ahead. Learn what’s changing and how to prepare.
 
-[Download the Toolkit](https://www.deel.com/resources/it-strategy-toolkit-2026-guide-hr-leaders/?utm_medium=sponsored-newsletter&utm_source=beehiiv&utm_term=&#123;{publication_alphanumeric_id}}&utm_campaign=ww_engage_download_beehiiv_sponnewsletter_it-ttrends2026-feb26_it_all&utm_content=engage_it_sponnewsletter_ittrends2026-sponnews400-it_en&_bhiiv=opp_95399c4a-b95e-434a-81f8-3d142aa2f53a_28664f41&bhcl_id=50411be0-68ad-4fcd-a7cd-f588c26ca824_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[Download the Toolkit](https://www.deel.com/resources/it-strategy-toolkit-2026-guide-hr-leaders/?utm_medium=sponsored-newsletter&utm_source=beehiiv&utm_term=&utm_campaign=ww_engage_download_beehiiv_sponnewsletter_it-ttrends2026-feb26_it_all&utm_content=engage_it_sponnewsletter_ittrends2026-sponnews400-it_en&_bhiiv=opp_95399c4a-b95e-434a-81f8-3d142aa2f53a_28664f41&bhcl_id=50411be0-68ad-4fcd-a7cd-f588c26ca824__)
 
 # **🎓****AI Skill of the Day: Run a Platform Risk Audit**
 
@@ -892,9 +892,9 @@ Translation: attackers will use AI to find where a system says yes too easily. D
 
 ### The ops hire that onboards in 30 seconds.
 
-[](https://ref.getviktor.com/vik-bh-founders-general1?utm_campaign=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_0d871a48-2564-4f86-93f2-72daf980eb4e_58600c56&bhcl_id=02fde40a-cfd3-4781-83c7-7da00aa8fd10_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[](https://ref.getviktor.com/vik-bh-founders-general1?utm_campaign=&_bhiiv=opp_0d871a48-2564-4f86-93f2-72daf980eb4e_58600c56&bhcl_id=02fde40a-cfd3-4781-83c7-7da00aa8fd10__)
 
-[Viktor](https://ref.getviktor.com/vik-bh-founders-general1?utm_campaign=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_0d871a48-2564-4f86-93f2-72daf980eb4e_58600c56&bhcl_id=02fde40a-cfd3-4781-83c7-7da00aa8fd10_&#123;{subscriber_id}}_&#123;{email_address_id}}) is an AI coworker that lives in Slack, right where your team already works.
+[Viktor](https://ref.getviktor.com/vik-bh-founders-general1?utm_campaign=&_bhiiv=opp_0d871a48-2564-4f86-93f2-72daf980eb4e_58600c56&bhcl_id=02fde40a-cfd3-4781-83c7-7da00aa8fd10__) is an AI coworker that lives in Slack, right where your team already works.
 
 Message Viktor like a teammate: "pull last quarter's revenue by channel," or "build a dashboard for our board meeting."
 
@@ -904,7 +904,7 @@ There’s no new software to adopt and no one to train.
 
 Most teams start with one task. Within a week, Viktor is handling half of their ops.
 
-[Add Viktor to Slack for free.](https://ref.getviktor.com/vik-bh-founders-general1?utm_campaign=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_0d871a48-2564-4f86-93f2-72daf980eb4e_58600c56&bhcl_id=02fde40a-cfd3-4781-83c7-7da00aa8fd10_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[Add Viktor to Slack for free.](https://ref.getviktor.com/vik-bh-founders-general1?utm_campaign=&_bhiiv=opp_0d871a48-2564-4f86-93f2-72daf980eb4e_58600c56&bhcl_id=02fde40a-cfd3-4781-83c7-7da00aa8fd10__)
 
 # 🎓 **AI Skill of the Day: Run an AI Security Gut Check**
 

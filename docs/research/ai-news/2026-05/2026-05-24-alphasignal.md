@@ -459,11 +459,11 @@ Data is canonicalized to Markdown, split into ≤ 3,000-token chunks with determ
 
 Storage layout:
 
-&lt;workspace>/memory_tree/chunks.db: SQLite, holds chunks, scores, summaries, entity index, jobs, hotness.
+`<workspace>`/memory_tree/chunks.db: SQLite, holds chunks, scores, summaries, entity index, jobs, hotness.
 
-&lt;workspace>/wiki/: the Obsidian-compatible Markdown vault.
+`<workspace>`/wiki/: the Obsidian-compatible Markdown vault.
 
-&lt;workspace> defaults to ~/.openhuman, overridable with OPENHUMAN_WORKSPACE. The vault is the point: you can open it in Obsidian, edit a wrong line, and the next retrieval is correct.
+`<workspace>` defaults to ~/.openhuman, overridable with OPENHUMAN_WORKSPACE. The vault is the point: you can open it in Obsidian, edit a wrong line, and the next retrieval is correct.
 
 4.2 Auto-fetch on a 20-minute tick
 
@@ -731,15 +731,15 @@ Build-from-source toolchain. Node.js 24+, pnpm 10.10.0, Rust 1.93.0 + rustfmt + 
 
 13.2 Workspace structure
 
-&lt;workspace>/memory_tree/chunks.db: SQLite, holds chunks, scores, summaries, entity index, jobs, hotness.
+`<workspace>`/memory_tree/chunks.db: SQLite, holds chunks, scores, summaries, entity index, jobs, hotness.
 
-&lt;workspace>/wiki/: Obsidian-compatible Markdown vault.
+`<workspace>`/wiki/: Obsidian-compatible Markdown vault.
 
 ~/.config/tokenjuice/rules/: User-level TokenJuice rule overrides.
 
 .tokenjuice/rules/: Project-level TokenJuice rule overrides.
 
-Defaults: &lt;workspace> is ~/.openhuman. Override with OPENHUMAN_WORKSPACE.
+Defaults: `<workspace>` is ~/.openhuman. Override with OPENHUMAN_WORKSPACE.
 
 13.3 Memory Tree internals
 
@@ -973,7 +973,7 @@ Important: δ-mem is not a standard PEFT adapter. Do not load it with PeftModel.
 
 Run the chat demo:
 
-Inside the demo, /reset clears the state, /stats prints state statistics, and /save_session &lt;dir> plus /load_session &lt;dir> checkpoint the state to disk.
+Inside the demo, /reset clears the state, /stats prints state statistics, and /save_session `<dir>` plus /load_session `<dir>` checkpoint the state to disk.
 
 Once the chat demo loads, the How to use it appendix covers the engineering patterns most teams need next.
 
@@ -1063,7 +1063,7 @@ Third, run one short benchmark and confirm the result lands near the paper’s h
 
 A.4 Session save and resume
 
-Use /save_session &lt;dir> and /load_session &lt;dir> inside the chat demo, or the equivalent Python helpers, to checkpoint and restore the state across processes. The save captures the exact state matrix at that point in the conversation.
+Use /save_session `<dir>` and /load_session `<dir>` inside the chat demo, or the equivalent Python helpers, to checkpoint and restore the state across processes. The save captures the exact state matrix at that point in the conversation.
 
 A saved session is tied to the base model it came from. Loading a Qwen3-4B session into a different base will fail.
 

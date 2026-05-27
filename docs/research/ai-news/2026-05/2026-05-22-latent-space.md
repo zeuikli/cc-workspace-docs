@@ -84,18 +84,18 @@ We go deep on the **new agent compute market** : Daytona's hard pivot from human
 
 **Ivan Burazin**
 
-  * **LinkedIn:** &lt;https://www.linkedin.com/in/ivanburazin>
+  * **LinkedIn:** <https://www.linkedin.com/in/ivanburazin>
 
-  * **X:** &lt;https://x.com/ivanburazin>
+  * **X:** <https://x.com/ivanburazin>
 
 
 
 
 **Daytona**
 
-  * **Website:** &lt;https://www.daytona.io>
+  * **Website:** <https://www.daytona.io>
 
-  * **X:** &lt;https://x.com/daytonaio>
+  * **X:** <https://x.com/daytonaio>
 
 
 
@@ -1191,18 +1191,18 @@ We go deep on **Railway 's infrastructure stack**: own-metal data centers, three
 
 **Railway:**
 
-  * **Website:** &lt;https://railway.com/>
+  * **Website:** <https://railway.com/>
 
-  * **X:**&lt;https://x.com/Railway>
+  * **X:**<https://x.com/Railway>
 
 
 
 
 **Jake Cooper:**
 
-  * **LinkedIn:** &lt;https://www.linkedin.com/in/thejakecooper/>
+  * **LinkedIn:** <https://www.linkedin.com/in/thejakecooper/>
 
-  * **X:** &lt;https://x.com/JustJake>
+  * **X:** <https://x.com/JustJake>
 
 
 

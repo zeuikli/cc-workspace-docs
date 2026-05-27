@@ -15,11 +15,11 @@ type: ai-news
 ## [DeepSeek resurfaces with cheap, capable V4](https://www.therundown.ai/p/deepseek-resurfaces-with-cheap-capable-v4)
 *🗞️ The Rundown AI | 2026-04-27*
 
-[Read Online](&#123;{live_url}}) | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=deepseek-resurfaces-with-cheap-capable-v4) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=deepseek-resurfaces-with-cheap-capable-v4)
+[Read Online]() | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=deepseek-resurfaces-with-cheap-capable-v4) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=deepseek-resurfaces-with-cheap-capable-v4)
 
 [](https://slack.com/resources/why-use-slack/a-comparison-guide-of-slack-and-microsoft-teams?d=701ed00001424HxAAI&nc=701ed0000143gMlAAI&utm_source=therundownai&utm_medium=tp_email&utm_campaign=amer_us_slack-invoice_&utm_content=cross-segment_all-strategic-therundownai-comparisonteams-apr27_701ed00001424HxAAI_english_a-comparison-guide-of-slack-and-microsoft-teams)
 
-Good morning, &#123;{ first_name | AI enthusiasts }}. Last year's R1 release turned DeepSeek into the face of cheap Chinese AI overnight. 
+Good morning, AI enthusiasts. Last year's R1 release turned DeepSeek into the face of cheap Chinese AI overnight. 
 
 V4 is less shocking, but maybe more practical — pairing strong open-model performance with pricing and Huawei chip support that makes the U.S. lead look thinner on the margins than it does on pure intelligence.
 

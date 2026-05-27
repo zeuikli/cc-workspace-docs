@@ -744,15 +744,15 @@ Want absolutely EVERYTHING that happened in AI this week? [[Click here](https://
 
 ### Want to get the most out of ChatGPT?
 
-[](https://offers.hubspot.com/using-chatgpt-at-work?utm_medium=email-media-newsletter&utm_source=&#123;{publication_alphanumeric_id}}&utm_campaign=creator&utm_content=beehiiv&utm_term=version-r&_bhiiv=opp_8aeb88c0-0b23-4506-8b20-b6944a4232f4_b942af4d&bhcl_id=daf217c9-5bb6-4e02-a573-9245dc808252_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[](https://offers.hubspot.com/using-chatgpt-at-work?utm_medium=email-media-newsletter&utm_source=&utm_campaign=creator&utm_content=beehiiv&utm_term=version-r&_bhiiv=opp_8aeb88c0-0b23-4506-8b20-b6944a4232f4_b942af4d&bhcl_id=daf217c9-5bb6-4e02-a573-9245dc808252__)
 
 ChatGPT is a superpower if you know how to use it correctly.
 
-Discover how [HubSpot's guide to AI](https://offers.hubspot.com/using-chatgpt-at-work?utm_medium=email-media-newsletter&utm_source=&#123;{publication_alphanumeric_id}}&utm_campaign=creator&utm_content=beehiiv&utm_term=version-r&_bhiiv=opp_8aeb88c0-0b23-4506-8b20-b6944a4232f4_b942af4d&bhcl_id=daf217c9-5bb6-4e02-a573-9245dc808252_&#123;{subscriber_id}}_&#123;{email_address_id}}) can elevate both your productivity and creativity to get more things done.
+Discover how [HubSpot's guide to AI](https://offers.hubspot.com/using-chatgpt-at-work?utm_medium=email-media-newsletter&utm_source=&utm_campaign=creator&utm_content=beehiiv&utm_term=version-r&_bhiiv=opp_8aeb88c0-0b23-4506-8b20-b6944a4232f4_b942af4d&bhcl_id=daf217c9-5bb6-4e02-a573-9245dc808252__) can elevate both your productivity and creativity to get more things done.
 
 Learn to automate tasks, enhance decision-making, and foster innovation with the power of AI.
 
-[Download the free guide](https://offers.hubspot.com/using-chatgpt-at-work?utm_medium=email-media-newsletter&utm_source=&#123;{publication_alphanumeric_id}}&utm_campaign=creator&utm_content=beehiiv&utm_term=version-r&_bhiiv=opp_8aeb88c0-0b23-4506-8b20-b6944a4232f4_b942af4d&bhcl_id=daf217c9-5bb6-4e02-a573-9245dc808252_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[Download the free guide](https://offers.hubspot.com/using-chatgpt-at-work?utm_medium=email-media-newsletter&utm_source=&utm_campaign=creator&utm_content=beehiiv&utm_term=version-r&_bhiiv=opp_8aeb88c0-0b23-4506-8b20-b6944a4232f4_b942af4d&bhcl_id=daf217c9-5bb6-4e02-a573-9245dc808252__)
 
 # 🔧******Tuesday Tool Tip: Try OpenCode, the open-source Claude Code alternative**
 

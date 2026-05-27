@@ -15,11 +15,11 @@ type: ai-news
 ## [OpenAI reclaims the image crown](https://www.therundown.ai/p/openai-reclaims-the-image-crown)
 *🗞️ The Rundown AI | 2026-04-22*
 
-[Read Online](&#123;{live_url}}) | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-reclaims-the-image-crown) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-reclaims-the-image-crown)
+[Read Online]() | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-reclaims-the-image-crown) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-reclaims-the-image-crown)
 
 [](https://www.algolia.com/resources/asset/building-agentic-ai?utm_campaign=rundown_global_b2x_ecomm_ecomm_tof_reach&utm_medium=display&utm_source=rundown&utm_content=rundown_global_b2x_ecomm&utm_term=ebo_building-agentic-ai&utm_camp_parent=b2x_ecomm&utm_2nd_camp=ecomm_tof&utm_region=global&utm_goal=reach&utm_creative_format=prmrynwsl&utm_model=cpm&utm_marketing_tactic=reach)
 
-Good morning, &#123;{ first_name | AI enthusiasts }}. After OpenAI’s DALL-E and GPT Image 1 paved early ground in image generation, Google's Nano Banana has topped the leaderboards for the better part of a year. That run just ended.
+Good morning, AI enthusiasts. After OpenAI’s DALL-E and GPT Image 1 paved early ground in image generation, Google's Nano Banana has topped the leaderboards for the better part of a year. That run just ended.
 
 OpenAI's new ChatGPT Images 2.0 is the first image model that plans, searches the web, and self-checks its outputs before generating, and the results show — with an upgrade that Sam Altman says is like "going from GPT-3 to GPT-5 all at once."
 

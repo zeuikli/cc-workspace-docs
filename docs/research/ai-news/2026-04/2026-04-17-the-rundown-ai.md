@@ -15,11 +15,11 @@ type: ai-news
 ## [OpenAI's superapp hiding inside Codex](https://www.therundown.ai/p/openai-superapp-hiding-inside-codex)
 *🗞️ The Rundown AI | 2026-04-17*
 
-[Read Online](&#123;{live_url}}) | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-superapp-hiding-inside-codex) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-superapp-hiding-inside-codex)
+[Read Online]() | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-superapp-hiding-inside-codex) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-superapp-hiding-inside-codex)
 
 [](https://lovable.link/VLdkdap?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-superapp-hiding-inside-codex)
 
-Good morning, &#123;{ first_name | AI enthusiasts }}. OpenAI has been teasing a superapp for months. Today, it shipped a major first piece.
+Good morning, AI enthusiasts. OpenAI has been teasing a superapp for months. Today, it shipped a major first piece.
 
 With a major Codex update bringing new features like background computer use, an in-app browser, parallel agents, and more, the rollout is OpenAI's clearest step yet toward the all-in-one platform it's been building out in the open.
 

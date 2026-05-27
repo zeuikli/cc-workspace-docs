@@ -15,11 +15,11 @@ type: ai-news
 ## [Allbirds ditches sneakers for AI compute](https://www.therundown.ai/p/allbirds-ditches-sneakers-for-ai-compute)
 *🗞️ The Rundown AI | 2026-04-16*
 
-[Read Online](&#123;{live_url}}) | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=allbirds-ditches-sneakers-for-ai-compute) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=allbirds-ditches-sneakers-for-ai-compute)
+[Read Online]() | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=allbirds-ditches-sneakers-for-ai-compute) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=allbirds-ditches-sneakers-for-ai-compute)
 
 [](https://cal.com/unwrap/quick-connect?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=allbirds-ditches-sneakers-for-ai-compute)
 
-Good morning, &#123;{ first_name | AI enthusiasts }}. CEOs love to predict that all companies will eventually become AI companies. It’s doubtful any of them had “sustainable-sneaker-brand pivots to AI compute” in mind.
+Good morning, AI enthusiasts. CEOs love to predict that all companies will eventually become AI companies. It’s doubtful any of them had “sustainable-sneaker-brand pivots to AI compute” in mind.
 
 Allbirds, a $4B wool sneaker darling at its IPO peak, just closed a $50M financing deal to become a GPU-rental shop — sending the stock up 600%+ in a single day and taking the crown for the wildest AI pivot of the year.
 

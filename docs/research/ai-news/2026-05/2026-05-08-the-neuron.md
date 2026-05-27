@@ -73,17 +73,17 @@ FROM OUR PARTNERS
 
 Attio is the AI CRM for high-growth teams.
 
-[](https://attio.com/?utm_source=beehiiv&utm_medium=newsletter&utm_campaign=beehiiv-Y26&utm_content=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_b00e1ef8-5b02-4b95-81f0-f66cdcb665d9_7395cee5&bhcl_id=7ce32ed2-f4ce-4f2e-b558-c624fd6bd570_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[](https://attio.com/?utm_source=beehiiv&utm_medium=newsletter&utm_campaign=beehiiv-Y26&utm_content=&_bhiiv=opp_b00e1ef8-5b02-4b95-81f0-f66cdcb665d9_7395cee5&bhcl_id=7ce32ed2-f4ce-4f2e-b558-c624fd6bd570__)
 
-Connect your email, calls, product data and more, and [Attio](https://attio.com/?utm_source=beehiiv&utm_medium=newsletter&utm_campaign=beehiiv-Y26&utm_content=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_b00e1ef8-5b02-4b95-81f0-f66cdcb665d9_7395cee5&bhcl_id=7ce32ed2-f4ce-4f2e-b558-c624fd6bd570_&#123;{subscriber_id}}_&#123;{email_address_id}}) instantly builds your CRM with enriched data and complete context. Whether you’re running product-led growth or enterprise sales, Attio adapts to your unique GTM motion.
+Connect your email, calls, product data and more, and [Attio](https://attio.com/?utm_source=beehiiv&utm_medium=newsletter&utm_campaign=beehiiv-Y26&utm_content=&_bhiiv=opp_b00e1ef8-5b02-4b95-81f0-f66cdcb665d9_7395cee5&bhcl_id=7ce32ed2-f4ce-4f2e-b558-c624fd6bd570__) instantly builds your CRM with enriched data and complete context. Whether you’re running product-led growth or enterprise sales, Attio adapts to your unique GTM motion.
 
-Then [Ask Attio](https://attio.com/?utm_source=beehiiv&utm_medium=newsletter&utm_campaign=beehiiv-Y26&utm_content=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_b00e1ef8-5b02-4b95-81f0-f66cdcb665d9_7395cee5&bhcl_id=7ce32ed2-f4ce-4f2e-b558-c624fd6bd570_&#123;{subscriber_id}}_&#123;{email_address_id}}) to plan your next move.
+Then [Ask Attio](https://attio.com/?utm_source=beehiiv&utm_medium=newsletter&utm_campaign=beehiiv-Y26&utm_content=&_bhiiv=opp_b00e1ef8-5b02-4b95-81f0-f66cdcb665d9_7395cee5&bhcl_id=7ce32ed2-f4ce-4f2e-b558-c624fd6bd570__) to plan your next move.
 
 Run deep web research on prospects. Update your pipeline as you work. Find customers and draft outreach emails. Powered by Universal Context, Attio's intelligence layer, Attio searches, updates, and creates across your data to accelerate your workflow.
 
 Ask more from your CRM.
 
-[Ask Attio](https://attio.com/?utm_source=beehiiv&utm_medium=newsletter&utm_campaign=beehiiv-Y26&utm_content=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_b00e1ef8-5b02-4b95-81f0-f66cdcb665d9_7395cee5&bhcl_id=7ce32ed2-f4ce-4f2e-b558-c624fd6bd570_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[Ask Attio](https://attio.com/?utm_source=beehiiv&utm_medium=newsletter&utm_campaign=beehiiv-Y26&utm_content=&_bhiiv=opp_b00e1ef8-5b02-4b95-81f0-f66cdcb665d9_7395cee5&bhcl_id=7ce32ed2-f4ce-4f2e-b558-c624fd6bd570__)
 
 🎓 AI Skill of the Day: Force any AI to audit its own work with one question
 

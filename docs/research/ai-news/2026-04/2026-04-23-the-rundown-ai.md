@@ -15,11 +15,11 @@ type: ai-news
 ## [Anthropic's locked-down Mythos leaks](https://www.therundown.ai/p/anthropic-locked-down-mythos-leaks)
 *🗞️ The Rundown AI | 2026-04-23*
 
-[Read Online](&#123;{live_url}}) | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=anthropic-s-locked-down-mythos-leaks) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=anthropic-s-locked-down-mythos-leaks)
+[Read Online]() | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=anthropic-s-locked-down-mythos-leaks) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=anthropic-s-locked-down-mythos-leaks)
 
 [](https://app.bland.ai/login?utm_source=AI_Rundown&utm_medium=email&utm_campaign=norm&utm_content=apr23_2026)
 
-Good morning, &#123;{ first_name | AI enthusiasts }}. Anthropic said Mythos was too dangerous to release to the public. Weeks later, a Discord group is reportedly using it daily.
+Good morning, AI enthusiasts. Anthropic said Mythos was too dangerous to release to the public. Weeks later, a Discord group is reportedly using it daily.
 
 Working off naming conventions leaked in a data breach and a borrowed contractor login, the group slipped into Anthropic's most restricted AI to date — a bad start for keeping increasingly powerful systems under wraps.
 

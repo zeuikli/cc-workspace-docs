@@ -20,7 +20,7 @@ type: index
 |------|------|------|
 | [SKILL](#skill) | Claude Code Skills 功能設計與使用 | 11 |
 | [Hook](#hook) | Claude Code Hooks 設定與實戰腳本 | 1 |
-| [Rule](#rule) | CLAUDE.md 規則、Harness 框架、工作原則 | 45 |
+| [Rule](#rule) | CLAUDE.md 規則、Harness 框架、工作原則 | 46 |
 | [Agent](#agent) | AI Agent 設計、agentic 工作流、記憶架構 | 7 |
 | [Prompt](#prompt) | Prompt Engineering、提示技巧 | 6 |
 | [Others](#others) | 職涯/AI思維、工具介紹、非直接相關 | 28 |
@@ -51,7 +51,7 @@ type: index
 
 | 檔案 | 作者 | 日期 | 分數 | 主題摘要 |
 |------|------|------|------|----------|
-| [2026-04-04-@MinLiBuilds-091011.md](2026-04-04-@MinLiBuilds-091011.md) | @MinLiBuilds | 2026-04-04 | 7.90 | 8個Hooks實戰腳本（危險命令阻斷、.env保護、PR前強制測試、自動格式化），附完整代碼 |
+| [2026-04-04-@MinLiBuilds-091011.md](2026-04-04-@MinLiBuilds-091011.md) | @MinLiBuilds | 2026-04-04 | 8.75 | 8個Claude Code Hooks實戰：block-dangerous.sh/protect-files.sh/auto-lint/auto-commit(Stop)；完整settings.json+bash腳本；mcp__github__create_pull_request matcher；15個code block |
 
 ---
 
@@ -59,6 +59,8 @@ type: index
 
 | 檔案 | 作者 | 日期 | 分數 | 主題摘要 |
 |------|------|------|------|----------|
+| [2026-05-27-@arvin17x-849698.md](2026-05-27-@arvin17x-849698.md) | @arvin17x | 2026-05-27 | 8.5 | Harness 是 AI 產品護城河，Tracing-first 設計驅動 Error Pattern 自進化，成功率 75%→95%+ |
+| [2026-05-26-@yan5xu-746979.md](2026-05-26-@yan5xu-746979.md) | @yan5xu | 2026-05-26 | 8.45 | Prompt→Context→Harness Engineering 螺旋三圈框架；Harness = 放手（agent 自主獲取反馈）+ 上保險（能力邊界）；Stripe/Anthropic/OpenAI 三案例；Epsilla 42%→78%、LangChain >60% diff |
 | [2026-05-01-@Mnilax-556522.md](2026-05-01-@Mnilax-556522.md) | @Mnilax | 2026-05-01 | 8.8 | 430h/6M tokens/90天實測：27% productive tokens；9個 overhead pattern（CLAUDE.md 14%/對話重讀 13%/hook injection 11%/cache miss 10%/skill loading 7%）；「productive tokens are the residual」框架；27%→65% |
 | [2026-05-11-@Mnilax-256983.md](2026-05-11-@Mnilax-256983.md) | @Mnilax | 2026-05-11 | 7.9 | Hook 衝突三類型（PostToolUse cascade/matcher overlap/注入戰）量化實測 34% token 浪費；lock-file mutex 3 行修復；hooks/skills/subagents/Agent Teams 四層心智模型 |
 | [2026-03-20-@_avichawla-187503.md](2026-03-20-@_avichawla-187503.md) | @_avichawla | 2026-03-20 | 7.05 | KV caching 透過儲存 K/V 向量消除 O(n²) 重複計算，換取 GPU 記憶體達成 5x 推論加速 |
@@ -73,7 +75,7 @@ type: index
 | [2026-05-09-@garrytan-614419.md](2026-05-09-@garrytan-614419.md) | @garrytan | 2026-05-09 | 8.0 | Meta-Meta-Prompting：Fat Skills + Thin Harness + Compounding Brain 三層架構；Skillify meta-loop（技能創造技能）、cross-modal eval 多模型互評、97.6% LongMemEval recall；GBrain 100K頁知識庫實戰 |
 | [2026-05-09-@berryxia-836455.md](2026-05-09-@berryxia-836455.md) | @berryxia | 2026-05-09 | 6.75 | GBrain 個人 AI 操作系統中文解析：Thin Harness + Fat Skills + Fat Data 三層架構、Book Mirror 書讀我、Meeting Prep 2分鐘會議預習、Skillify 元技能自動化 |
 | [2026-05-09-@Mnilax-155938.md](2026-05-09-@Mnilax-155938.md) | @Mnilax | 2026-05-09 | 7.55 | Karpathy 4條規則的 May 2026 盲點，新增8條規則（Rule 5 LLM只做判斷/Rule 6 硬性token budget/Rule 10 checkpoint）；錯誤率從41%降至3%；12條規則完整模板 |
-| [2026-05-04-@nicbstme-212298.md](2026-05-04-@nicbstme-212298.md) | @nicbstme | 2026-05-04 | 8.05 | Model-Harness-Fit：模型 post-training 對 harness byte-level 過擬合，跨 harness 換模型 = 隱性效能崩塌；Terminal-Bench 2.0 同 Opus 4.6 跨 harness 4.5pp 差距、Cursor「只改 harness Top 30→Top 5」、Codex/Claude Code/Copilot CLI 三種協議比較 |
+| [2026-05-04-@nicbstme-212298.md](2026-05-04-@nicbstme-212298.md) | @nicbstme | 2026-05-04 | 8.55 | Model-Harness-Fit框架：同模型換harness≡換模型；比較Claude Code/Codex/GitHub Copilot工具表面/記憶層/引用協議/系統提示骨架；matched pair設計原則；12個code block |
 | [2026-05-18-@NainsiDwiv50980-909056.md](2026-05-18-@NainsiDwiv50980-909056.md) | @NainsiDwiv50980 | 2026-05-18 | 6.65 | CLAUDE.md 是「錯誤防範系統」非指令清單；5大必要區塊（Commands/Architecture Map/Hard Rules/Workflow Behavior/Out-of-Scope）；過長=失效；negative rules 同樣重要 |
 | [2026-04-27-@zodchiii-185640.md](2026-04-27-@zodchiii-185640.md) | @zodchiii | 2026-04-27 | 6.65 | CLAUDE.md 五段落框架（Commands/Architecture/Rules/Workflow/Not-to-include）、三層架構（Global/Project/Local）、80行上限 |
 | [2026-04-03-@wsl8297-425481.md](2026-04-03-@wsl8297-425481.md) | @wsl8297 | 2026-04-03 | 7.40 | Harness Engineering 5組件本質（Tools/Context/Permission/Memory/Hooks）、92%壓縮閾值 |
@@ -115,7 +117,7 @@ type: index
 | 2026-05-18 | [@Phoenixyin13](https://x.com/Phoenixyin13/status/2056269488140509649) | AI Agent 長期記憶系統的工程反思：記憶整合越多反而越蠢 | 7.9 | Rule | [檔案](2026-05-18-@Phoenixyin13-509649.md) |
 | 2026-05-19 | [@kfk_ai](https://x.com/kfk_ai/status/2056660897381425590) | OpenAI、Anthropic 都开始押注 FDE，FDE 才是 Agent 时代的 PMF 范式？ | 7.1 | Rule | [檔案](2026-05-19-@kfk_ai-425590.md) |
 | [2026-05-21-@nateherk-013627.md](2026-05-21-@nateherk-013627.md) | @nateherk | 2026-05-21 | 7.45 | Prompt caching 80/20：cached token 10% 費用、Claude Code 1h TTL vs API 5m vs sub-agent 5m 區分、三層 cache 架構（system/project/conversation）、模型切換清 cache、idle >1h 開新 session |
-| [2026-05-24-@Mnilax-736907.md](2026-05-24-@Mnilax-736907.md) | @Mnilax | 2026-05-24 | 7.70 | 18個Claude設定全掃描：Claude.ai 8項（Memory scope/Extended Thinking Light/Custom Styles）+ Claude Code 7項（enabledPlugins/permissions.deny bug #11544/hooks.SessionStart/disableAllHooks/model override/mcpServers enabled/cleanupPeriodDays 180天）+ API 3項（cache_control位置/inference_geo 10%稅/workspace rate limit）；修正cache_control breakpoint月費 $340→$87 |
+| [2026-05-23-@Mnilax-736907.md](2026-05-23-@Mnilax-736907.md) | @Mnilax | 2026-05-23 | 8.55 | 18個Claude設定（125+ keys，官方文件40）；JSON範例13個（enabledPlugins/permissions.deny/hooks.SessionStart/per-project model/mcpServers/cleanupPeriodDays）；Python cache_control RIGHT/WRONG示例；claude-audit.sh腳本；$340→$87月費案例 |
 
 ---
 
@@ -125,7 +127,7 @@ type: index
 |------|------|------|------|----------|
 | 2026-05-14 | [@Mnilax](https://x.com/Mnilax/status/2054955621829443903) | 73% of my CLAUDE.md was lying to Claude. I found out in 11 minutes. | Skill | 8.95 |
 | 2026-05-14 | [@petradonka](https://x.com/petradonka/status/2054897826149101588) | Agents Need Feedback Loops, Not Perfect Prompts | Agent | 8.1 |
-| [2026-04-15-@BTCqzy1-450414.md](2026-04-15-@BTCqzy1-450414.md) | @BTCqzy1 | 2026-04-15 | 7.00 | Hermes Agent記憶系統Frozen Snapshot與KV Cache設計原理 |
+| [2026-04-15-@BTCqzy1-450414.md](2026-04-15-@BTCqzy1-450414.md) | @BTCqzy1 | 2026-04-15 | 7.05 | Hermes Agent 進階指南：記憶系統（MEMORY.md 2200字限制/Frozen Snapshot/nudge_interval）+ 多Agent協作 + 生產部署 config.yaml/.env；26個code block |
 | [2026-04-09-@Ni_luvya-807043.md](2026-04-09-@Ni_luvya-807043.md) | @Ni_luvya | 2026-04-09 | 6.75 | Hermes跨session持久記憶實作方案 |
 | [2026-04-23-@lxfater-993624.md](2026-04-23-@lxfater-993624.md) | @lxfater | 2026-04-23 | 5.00 | Hermes+ClawEmail自動化Newsletter訂閱消化工作流 |
 | [2026-04-24-@GitTrend0x-854397.md](2026-04-24-@GitTrend0x-854397.md) | @GitTrend0x | 2026-04-24 | 5.00 | GitHub 5個星標暴增Agent項目盤點（GenericAgent、agency-agents等） |
@@ -196,7 +198,7 @@ type: index
 
 ---
 
-*最後更新：2026-05-24*
+*最後更新：2026-05-27*
 
 
 

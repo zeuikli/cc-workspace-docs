@@ -818,10 +818,10 @@ With a concrete success in the bag, the team asked if they could generate new ph
 What came next was truly "vibe physics", with ChatGPT pushing out 110 pages of novel physics, new calculations, and novel techniques. This was over the course of a day, with most interactions the familiar following the now familiar pattern for anyone who uses a coding agent:
     
     
-    GPT: Here's your &lt;long, detailed, awesome result>. 
-         Would you like me to do &lt;another really cool thing>?
+    GPT: Here's your <long, detailed, awesome result>. 
+         Would you like me to do `<another really cool thing>`?
     Alex: Yes, please do!
-    GPT: &lt;does the really cool thing>
+    GPT: `<does the really cool thing>`
 
 And for those who look deeply, this really was not just a direct 1-1 mapping between gluons and gravitons. **ChatGPT imported new techniques that were necessary due to the nature of gravitons** , and used them flawlessly.
 

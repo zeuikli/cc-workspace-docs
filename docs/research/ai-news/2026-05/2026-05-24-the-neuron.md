@@ -168,11 +168,11 @@ It’s a super fun episode; Ben shows how to launch an agent via LiveKite (and w
 
 ### Your next great hire lives in Slack.
 
-[](https://ref.getviktor.com/vik-bh-founders-general1?utm_campaign=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_64ab39e2-fe9b-4395-99d5-93e4efe08ce0_58600c56&bhcl_id=414689ae-64c2-4e05-8a05-668de2ad75c0_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[](https://ref.getviktor.com/vik-bh-founders-general1?utm_campaign=&_bhiiv=opp_64ab39e2-fe9b-4395-99d5-93e4efe08ce0_58600c56&bhcl_id=414689ae-64c2-4e05-8a05-668de2ad75c0__)
 
-Viktor is an AI coworker that connects to your tools and [ships real work](https://ref.getviktor.com/vik-bh-founders-general1?utm_campaign=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_64ab39e2-fe9b-4395-99d5-93e4efe08ce0_58600c56&bhcl_id=414689ae-64c2-4e05-8a05-668de2ad75c0_&#123;{subscriber_id}}_&#123;{email_address_id}}). Ask Viktor to pull a report, build a client dashboard, or source 200 leads matching your ICP. Most teams hand over half their ops within a week.
+Viktor is an AI coworker that connects to your tools and [ships real work](https://ref.getviktor.com/vik-bh-founders-general1?utm_campaign=&_bhiiv=opp_64ab39e2-fe9b-4395-99d5-93e4efe08ce0_58600c56&bhcl_id=414689ae-64c2-4e05-8a05-668de2ad75c0__). Ask Viktor to pull a report, build a client dashboard, or source 200 leads matching your ICP. Most teams hand over half their ops within a week.
 
-[Add Viktor to Slack for free.](https://ref.getviktor.com/vik-bh-founders-general1?utm_campaign=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_64ab39e2-fe9b-4395-99d5-93e4efe08ce0_58600c56&bhcl_id=414689ae-64c2-4e05-8a05-668de2ad75c0_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[Add Viktor to Slack for free.](https://ref.getviktor.com/vik-bh-founders-general1?utm_campaign=&_bhiiv=opp_64ab39e2-fe9b-4395-99d5-93e4efe08ce0_58600c56&bhcl_id=414689ae-64c2-4e05-8a05-668de2ad75c0__)
 
 # 💡 Intelligent Insights
 

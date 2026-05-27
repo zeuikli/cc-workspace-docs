@@ -42,7 +42,7 @@ type: best-practices
 
 | 範圍 | 路徑 | 用途 | 共用對象 |
 |------|------|------|---------|
-| **Managed policy** | macOS: `/Library/Application Support/ClaudeCode/CLAUDE.md`<br>Linux/WSL: `/etc/claude-code/CLAUDE.md`<br>Windows: `C:\Program Files\ClaudeCode\CLAUDE.md` | IT/DevOps 管理的組織全員指令 | 組織所有用戶 |
+| **Managed policy** | macOS: `/Library/Application Support/ClaudeCode/CLAUDE.md``<br>`Linux/WSL: `/etc/claude-code/CLAUDE.md``<br>`Windows: `C:\Program Files\ClaudeCode\CLAUDE.md` | IT/DevOps 管理的組織全員指令 | 組織所有用戶 |
 | **Project instructions** | `./CLAUDE.md` 或 `./.claude/CLAUDE.md` | 團隊共用的專案指令 | 透過 source control 共用 |
 | **User instructions** | `~/.claude/CLAUDE.md` | 所有專案的個人偏好 | 只有你（所有專案） |
 | **Local instructions** | `./CLAUDE.local.md` | 個人專案特定偏好（加入 .gitignore） | 只有你（當前專案） |

@@ -187,7 +187,7 @@ CCA appears to be a Zyphra-introduced attention mechanism that predates the [ZAY
 
 But the question is, "is it better than MLA"? According to the CCA paper's own experiments, yes, they report CCA outperforming MLA under comparable compression settings.
 
-[](https://substackcdn.com/image/fetch/$s_!xOdf!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe32dc053-e3c0-4f74-b616-76a5740d25d4_2048x875.png)Figure 15: Annotated figures from the CCA paper, &lt;https://arxiv.org/abs/2510.04476>.
+[](https://substackcdn.com/image/fetch/$s_!xOdf!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe32dc053-e3c0-4f74-b616-76a5740d25d4_2048x875.png)Figure 15: Annotated figures from the CCA paper, <https://arxiv.org/abs/2510.04476>.
 
 Overall, the interesting part here is really the new attention mechanism. The model also uses a pretty extreme (= very sparse) MoE setup, with only one routed expert active per token, but that part is more familiar. CCA is more unusual because it performs the attention operation directly in a compressed latent space, and then uses convolutional mixing on the compressed Q and K representations to make this compressed attention less limiting. So, in short, ZAYA1-8B is not only trying to save compute in the feed-forward layers, but also in the attention mechanism itself.
 
@@ -195,7 +195,7 @@ Overall, the interesting part here is really the new attention mechanism. The mo
 
 DeepSeek V4 was the biggest release of the year so far, both in terms of hype and model size. Interestingly, DeepSeek V4-Pro is also the most parameter-sparse MoE among the models in the table below, measured by active-parameter share, as summarized in the table below.
 
-[](https://substackcdn.com/image/fetch/$s_!Obw7!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F517336aa-d63f-4402-a71b-945a6e4b3725_1228x2048.png)Figure 16: Percent active parameter plot for MoE models. You can also find an HTML version at &lt;https://sebastianraschka.com/llm-architecture-gallery/active-parameter-ratio/>.
+[](https://substackcdn.com/image/fetch/$s_!Obw7!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F517336aa-d63f-4402-a71b-945a6e4b3725_1228x2048.png)Figure 16: Percent active parameter plot for MoE models. You can also find an HTML version at <https://sebastianraschka.com/llm-architecture-gallery/active-parameter-ratio/>.
 
 Caveat: active parameter share is only one lens. It does not capture KV cache size, attention pattern, context length, routing overhead, hardware efficiency, or training quality. But it is a helpful, quick check when comparing sparse models.
 
@@ -224,7 +224,7 @@ Now, mHC is based on previous work on hyper-connections (see [Hyper-connections]
 
 The idea behind hyper-connections is to widen the residual stream. We can think of this as keeping several parallel residual streams, with an additional Res Mapping linear transformation that mixes them across layers. Since the Attention or MoE layer itself still operates on the normal hidden size, hyper-connections also add a Pre Mapping that combines the parallel residual streams into one normal hidden vector for the layer, and a Post Mapping that distributes the layer output back across the parallel residual streams. This is visually summarized in the figure below.
 
-[](https://substackcdn.com/image/fetch/$s_!O-TC!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4f2bea55-cf52-4e65-bc83-b2c14b281549_1665x2048.png)Figure 18: Regular transformer block (top) vs transformer block with hyper-connections (bottom) using annotated figures from the mHC paper, &lt;https://arxiv.org/abs/2512.24880>.
+[](https://substackcdn.com/image/fetch/$s_!O-TC!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4f2bea55-cf52-4e65-bc83-b2c14b281549_1665x2048.png)Figure 18: Regular transformer block (top) vs transformer block with hyper-connections (bottom) using annotated figures from the mHC paper, <https://arxiv.org/abs/2512.24880>.
 
 The figure below focuses on the attention-layer portion of the transformer block, but the same concept applies to the second residual branch around the MoE layer.
 
@@ -234,7 +234,7 @@ In the original hyper-connections paper, the 7B OLMo MoE experiment goes from 13
 
 (However, only looking at FLOPs is a bit simplistic. The widened residual state still has to be stored, moved through memory, mixed, etc. So the practical overhead can come more from memory traffic and implementation complexity than from arithmetic, which is not explicitly measured. However, given that DeepSeek V4 is all about efficiency, it seems to be a worthwhile addition.)
 
-[](https://substackcdn.com/image/fetch/$s_!ORcC!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6deb5f4b-5ca7-4e23-9a81-045fa93d1807_2048x665.png)Figure 19: Hyper-connections performance versus baseline, using an annotated figure from the hyper-connections paper, &lt;https://arxiv.org/abs/2409.19606>.
+[](https://substackcdn.com/image/fetch/$s_!ORcC!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6deb5f4b-5ca7-4e23-9a81-045fa93d1807_2048x665.png)Figure 19: Hyper-connections performance versus baseline, using an annotated figure from the hyper-connections paper, <https://arxiv.org/abs/2409.19606>.
 
 Also, as shown in the figure above, metrics reached the baseline's performance using roughly half the training tokens.
 
@@ -244,7 +244,7 @@ In mHC, this residual mapping is projected onto the manifold of doubly stochasti
 
 Otherwise, the main idea of using parallel residual streams remains, as shown in the figure below.
 
-[](https://substackcdn.com/image/fetch/$s_!1CCD!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0f2de79c-c7ab-4b97-8070-f642fd7b4336_2048x939.png)Figure 20: Transformer block with hyper-connections (HC) and manifold-constrained hyper-connections (mHC) using annotated figures from the mHC paper, &lt;https://arxiv.org/abs/2512.24880>.
+[](https://substackcdn.com/image/fetch/$s_!1CCD!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0f2de79c-c7ab-4b97-8070-f642fd7b4336_2048x939.png)Figure 20: Transformer block with hyper-connections (HC) and manifold-constrained hyper-connections (mHC) using annotated figures from the mHC paper, <https://arxiv.org/abs/2512.24880>.
 
 In the mHC paper, using a 27B parameter model for the experiments, the DeepSeek team's optimized implementation (with fusion, recomputation, and pipeline scheduling) adds only 6.7% additional training time overhead for 4 residual streams (n = 4) throughout all transformer blocks compared to the single-stream baseline.
 

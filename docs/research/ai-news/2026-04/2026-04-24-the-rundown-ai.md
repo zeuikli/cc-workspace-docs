@@ -15,11 +15,11 @@ type: ai-news
 ## [OpenAI's 'Spud' dethrones Claude on the frontier](https://www.therundown.ai/p/openai-spud-dethrones-claude-on-the-frontier)
 *🗞️ The Rundown AI | 2026-04-24*
 
-[Read Online](&#123;{live_url}}) | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-spud-dethrones-claude-on-the-frontier) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-spud-dethrones-claude-on-the-frontier)
+[Read Online]() | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-spud-dethrones-claude-on-the-frontier) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-spud-dethrones-claude-on-the-frontier)
 
 [](https://orkes.io/webinars/the-4-layer-production-stack-every-ai-agent-needs?utm_campaign=Rundown ai&utm_source=Newsletter&utm_medium=email)
 
-Good morning, &#123;{ first_name | AI enthusiasts }}. The AI frontier doesn't stay settled for long — and this week, the pendulum is swinging back toward OpenAI.
+Good morning, AI enthusiasts. The AI frontier doesn't stay settled for long — and this week, the pendulum is swinging back toward OpenAI.
 
 The company’s new GPT 5.5 'Spud' model just capped a big week of releases with a jump up the leaderboards and a strong vibe shift… Landing at the exact moment Anthropic absorbs its roughest week of rate-limit and quality complaints in months.
 

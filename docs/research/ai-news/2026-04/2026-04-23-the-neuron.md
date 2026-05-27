@@ -207,11 +207,11 @@ FROM OUR PARTNERS
 
 Are you tracking agent views on your docs?
 
-[](https://www.mintlify.com/use-cases/developer-documentation/?utm_campaign=&#123;{publication_alphanumeric_id}}&utm_source=beehiiv&utm_medium=newsletter&utm_content=AI%20traffic%2C%20Mar%20-%20Secondary&_bhiiv=opp_0bf3c063-fda2-42ca-a69b-dd2513f9051c_71696469&bhcl_id=b2f34542-e430-46c4-afb0-bbeb3e97262d_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[](https://www.mintlify.com/use-cases/developer-documentation/?utm_campaign=&utm_source=beehiiv&utm_medium=newsletter&utm_content=AI%20traffic%2C%20Mar%20-%20Secondary&_bhiiv=opp_0bf3c063-fda2-42ca-a69b-dd2513f9051c_71696469&bhcl_id=b2f34542-e430-46c4-afb0-bbeb3e97262d__)
 
 AI agents already outnumber human visitors to your docs — now you can track them.
 
-[See your AI traffic!](https://www.mintlify.com/use-cases/developer-documentation/?utm_campaign=&#123;{publication_alphanumeric_id}}&utm_source=beehiiv&utm_medium=newsletter&utm_content=AI%20traffic%2C%20Mar%20-%20Secondary&_bhiiv=opp_0bf3c063-fda2-42ca-a69b-dd2513f9051c_71696469&bhcl_id=b2f34542-e430-46c4-afb0-bbeb3e97262d_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[See your AI traffic!](https://www.mintlify.com/use-cases/developer-documentation/?utm_campaign=&utm_source=beehiiv&utm_medium=newsletter&utm_content=AI%20traffic%2C%20Mar%20-%20Secondary&_bhiiv=opp_0bf3c063-fda2-42ca-a69b-dd2513f9051c_71696469&bhcl_id=b2f34542-e430-46c4-afb0-bbeb3e97262d__)
 
 Thursday Trivia
 

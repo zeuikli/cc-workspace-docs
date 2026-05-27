@@ -15,11 +15,11 @@ type: ai-news
 ## [OpenAI closes reasoning gap in voice agents](https://www.therundown.ai/p/openai-closes-reasoning-gap-in-voice-agents)
 *🗞️ The Rundown AI | 2026-05-08*
 
-[Read Online](&#123;{live_url}}) | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-closes-reasoning-gap-in-voice-agents) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-closes-reasoning-gap-in-voice-agents)
+[Read Online]() | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-closes-reasoning-gap-in-voice-agents) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-closes-reasoning-gap-in-voice-agents)
 
 [](https://pages.awscloud.com/awsmp-gim-jqup-adhoc-aim-ent-ai-data-leader-book-1-ent.html?trk=1c32ad2e-b511-4f96-bbcb-e6ae04147f9d&sc_channel=el&utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-closes-reasoning-gap-in-voice-agents)
 
-Good morning, &#123;{ first_name | AI enthusiasts }}. Typing made AI useful, but speech is where agents have to prove they can keep up with real life.
+Good morning, AI enthusiasts. Typing made AI useful, but speech is where agents have to prove they can keep up with real life.
 
 OpenAI's new real-time voice model trio is built for that messier interface, adding a major reasoning upgrade, the ability to talk while thinking, and capable tool use that moves AI voice agents closer to running tasks at the speed of natural conversation.
 

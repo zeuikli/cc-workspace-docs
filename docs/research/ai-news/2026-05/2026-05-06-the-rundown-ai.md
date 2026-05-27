@@ -15,11 +15,11 @@ type: ai-news
 ## [OpenAI's AI phone just jumped the line](https://www.therundown.ai/p/openai-ai-phone-just-jumped-the-line)
 *🗞️ The Rundown AI | 2026-05-06*
 
-[Read Online](&#123;{live_url}}) | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-ai-phone-just-jumped-the-line) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-ai-phone-just-jumped-the-line)
+[Read Online]() | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-ai-phone-just-jumped-the-line) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-ai-phone-just-jumped-the-line)
 
 [](https://lambda.ai/llama-3-1-blackwell-mfu-benchmarks?utm_source=rundown-ai&utm_medium=newsletter&utm_campaign=2026-03-mfu-whitepaper&utm_content=main-ad-may-6)
 
-Good morning, &#123;{ first_name | AI enthusiasts }}. Amid intensifying competition with Anthropic, improved models, and efforts to kill “side hustles,” OpenAI is apparently looking at something closer to home — an AI agent phone.
+Good morning, AI enthusiasts. Amid intensifying competition with Anthropic, improved models, and efforts to kill “side hustles,” OpenAI is apparently looking at something closer to home — an AI agent phone.
 
 Analyst Ming-Chi Kuo says the company is fast-tracking this device for 2027, with some notable capabilities. Good news for those wanting a stronger AI experience in their pockets. The question is: where does this leave the ongoing work with Jony Ive? Or is this the same device?
 

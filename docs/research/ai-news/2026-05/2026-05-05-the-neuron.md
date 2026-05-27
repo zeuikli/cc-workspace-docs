@@ -159,15 +159,15 @@ FROM OUR PARTNERS
 
 One brand built 30+ landing pages through Viktor without a single developer.
 
-[](https://ref.getviktor.com/vik-bh-mediabuy-secondary1?utm_campaign=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_a10e5164-ca13-4bf7-b0eb-89c3e02a0f8b_dc23507e&bhcl_id=1ed44dfc-d904-4f49-8168-f75ea022eda7_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[](https://ref.getviktor.com/vik-bh-mediabuy-secondary1?utm_campaign=&_bhiiv=opp_a10e5164-ca13-4bf7-b0eb-89c3e02a0f8b_dc23507e&bhcl_id=1ed44dfc-d904-4f49-8168-f75ea022eda7__)
 
-Each page mapped to a specific ad group. All deployed within hours. [Viktor](https://ref.getviktor.com/vik-bh-mediabuy-secondary1?utm_campaign=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_a10e5164-ca13-4bf7-b0eb-89c3e02a0f8b_dc23507e&bhcl_id=1ed44dfc-d904-4f49-8168-f75ea022eda7_&#123;{subscriber_id}}_&#123;{email_address_id}}) wrote the code and shipped every one from a Slack message.
+Each page mapped to a specific ad group. All deployed within hours. [Viktor](https://ref.getviktor.com/vik-bh-mediabuy-secondary1?utm_campaign=&_bhiiv=opp_a10e5164-ca13-4bf7-b0eb-89c3e02a0f8b_dc23507e&bhcl_id=1ed44dfc-d904-4f49-8168-f75ea022eda7__) wrote the code and shipped every one from a Slack message.
 
 That same team has Viktor monitoring ad accounts across the portfolio and posting performance briefs before the day starts. One colleague. Always on. Across every account.
 
 5,700+ teams. 3,000+ integrations.
 
-[Start free. $100 in credits →](https://ref.getviktor.com/vik-bh-mediabuy-secondary1?utm_campaign=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_a10e5164-ca13-4bf7-b0eb-89c3e02a0f8b_dc23507e&bhcl_id=1ed44dfc-d904-4f49-8168-f75ea022eda7_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[Start free. $100 in credits →](https://ref.getviktor.com/vik-bh-mediabuy-secondary1?utm_campaign=&_bhiiv=opp_a10e5164-ca13-4bf7-b0eb-89c3e02a0f8b_dc23507e&bhcl_id=1ed44dfc-d904-4f49-8168-f75ea022eda7__)
 
 🐦 Tuesday Tweets:
 

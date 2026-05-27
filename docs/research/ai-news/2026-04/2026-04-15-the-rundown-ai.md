@@ -15,11 +15,11 @@ type: ai-news
 ## [OpenAI's GPT-5.4-Cyber rejects Mythos playbook](https://www.therundown.ai/p/openai-gpt-5-4-cyber-rejects-mythos-playbook)
 *🗞️ The Rundown AI | 2026-04-15*
 
-[Read Online](&#123;{live_url}}) | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-gpt-5-4-cyber-rejects-mythos-playbook) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-gpt-5-4-cyber-rejects-mythos-playbook)
+[Read Online]() | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-gpt-5-4-cyber-rejects-mythos-playbook) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-gpt-5-4-cyber-rejects-mythos-playbook)
 
 [](https://cal.com/unwrap/quick-connect?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-gpt-5-4-cyber-rejects-mythos-playbook)
 
-Good morning, &#123;{ first_name | AI enthusiasts }}. OpenAI cyber researcher Fouad Matin kept the pitch blunt: "no one should be in the business of picking winners and losers" on who gets to defend their systems.
+Good morning, AI enthusiasts. OpenAI cyber researcher Fouad Matin kept the pitch blunt: "no one should be in the business of picking winners and losers" on who gets to defend their systems.
 
 That's a direct shot at Anthropic's Mythos rollout, capped at a 40-org whitelist of tech giants. With GPT-5.4-Cyber, OpenAI is going the opposite way — betting that arming more defenders beats restricting access to a handful of giants.
 

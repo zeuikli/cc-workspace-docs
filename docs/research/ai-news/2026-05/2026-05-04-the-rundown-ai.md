@@ -15,11 +15,11 @@ type: ai-news
 ## [AI shows its skills in the emergency room](https://www.therundown.ai/p/ai-shows-its-skills-in-the-emergency-room)
 *🗞️ The Rundown AI | 2026-05-04*
 
-[Read Online](&#123;{live_url}}) | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-shows-its-skills-in-the-emergency-room) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-shows-its-skills-in-the-emergency-room)
+[Read Online]() | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-shows-its-skills-in-the-emergency-room) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-shows-its-skills-in-the-emergency-room)
 
 [](https://cal.com/unwrap/quick-connect?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-shows-its-skills-in-the-emergency-room)
 
-Good morning, &#123;{ first_name | AI enthusiasts }}. AI just beat two attending emergency room physicians across real patient cases in a new Harvard study. The model? OpenAI’s o1-preview, released in… 2024.
+Good morning, AI enthusiasts. AI just beat two attending emergency room physicians across real patient cases in a new Harvard study. The model? OpenAI’s o1-preview, released in… 2024.
 
 Millions of users are already turning to ChatGPT for health advice every day, but the data shows that AI models (preferably not several generations behind) may be ready for a more formal seat in the exam room alongside the doctor as well.
 

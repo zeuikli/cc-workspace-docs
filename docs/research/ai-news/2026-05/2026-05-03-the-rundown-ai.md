@@ -15,11 +15,11 @@ type: ai-news
 ## [Exclusive: UiPath CMO Michael Atalla on AI at work](https://www.therundown.ai/p/exclusive-uipath-cmo-michael-atalla-on-ai-at-work)
 *🗞️ The Rundown AI | 2026-05-03*
 
-[Read Online](&#123;{live_url}}) | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=exclusive-uipath-cmo-michael-atalla-on-ai-at-work) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=exclusive-uipath-cmo-michael-atalla-on-ai-at-work)
+[Read Online]() | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=exclusive-uipath-cmo-michael-atalla-on-ai-at-work) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=exclusive-uipath-cmo-michael-atalla-on-ai-at-work)
 
 [](https://www.uipath.com/?utm_source=rundownai&utm_medium=paid_web_referral&utm_campaign=advocacy&utm_content=nl&utm_term=rundownai&utm_team=spr&utm_team_geo=global)
 
-Good morning, &#123;{ first_name | AI enthusiasts }}. AI has changed the world that we live in. Every CEO is talking about AI, and most of their employees are wondering what it means for their paycheck.
+Good morning, AI enthusiasts. AI has changed the world that we live in. Every CEO is talking about AI, and most of their employees are wondering what it means for their paycheck.
 
 At the center of that shift sits [UiPath](https://www.uipath.com/?utm_source=rundownai&utm_medium=paid_web_referral&utm_campaign=advocacy&utm_content=nl&utm_term=rundownai&utm_team=spr&utm_team_geo=global), which just marked its five-year IPO anniversary — evolving from a company that once automated tasks to one that now orchestrates how AI agents, automation, and people work together. 
 

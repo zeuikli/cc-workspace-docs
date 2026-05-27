@@ -15,11 +15,11 @@ type: ai-news
 ## [The biggest AI trial ever kicks off](https://www.therundown.ai/p/the-biggest-ai-trial-ever-kicks-off)
 *🗞️ The Rundown AI | 2026-04-29*
 
-[Read Online](&#123;{live_url}}) | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=the-biggest-ai-trial-ever-kicks-off) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=the-biggest-ai-trial-ever-kicks-off)
+[Read Online]() | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=the-biggest-ai-trial-ever-kicks-off) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=the-biggest-ai-trial-ever-kicks-off)
 
 [](https://www.beams.run/?utm_source=TheRundownAI&utm_medium=Newsletter&utm_campaign=AI&utm_content=Insertion)
 
-Good morning, &#123;{ first_name | AI enthusiasts }}. The two faces behind AI’s biggest rivalry are finally in the same room — but this time it's a federal courtroom, with Elon Musk on the witness stand and Sam Altman watching from the gallery.
+Good morning, AI enthusiasts. The two faces behind AI’s biggest rivalry are finally in the same room — but this time it's a federal courtroom, with Elon Musk on the witness stand and Sam Altman watching from the gallery.
 
 Musk's $130B trial against OpenAI kicked off on Tuesday, with four weeks of testimony, hundreds of pages of private emails set to spill into the public record, major AI names on the stand, and a lot more drama still to come. 
 

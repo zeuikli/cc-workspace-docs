@@ -15,11 +15,11 @@ type: ai-news
 ## [Claude comes for the design stack](https://www.therundown.ai/p/claude-comes-for-the-design-stack)
 *🗞️ The Rundown AI | 2026-04-20*
 
-[Read Online](&#123;{live_url}}) | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=claude-comes-for-the-design-stack) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=claude-comes-for-the-design-stack)
+[Read Online]() | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=claude-comes-for-the-design-stack) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=claude-comes-for-the-design-stack)
 
 [](https://www.sonarsource.com/blog/the-future-of-software-development-is-acdc?utm_source=fnf&utm_medium=paid&utm_campaign=ss-agent-centric-dev-cycle-acdc26&utm_term=newsletter-trd&utm_content=v1&s_category=Paid&s_source=Paid%20Other&s_origin=influencer)
 
-Good morning, &#123;{ first_name | AI enthusiasts }}. Every few weeks, an Anthropic launch seems to rattle a new industry. This time it's design.
+Good morning, AI enthusiasts. Every few weeks, an Anthropic launch seems to rattle a new industry. This time it's design.
 
 Claude Design turns prompts, screenshots, and codebases into shippable prototypes — the latest layer of the software stack Anthropic is quietly pulling under one roof.
 

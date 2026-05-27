@@ -15,11 +15,11 @@ type: ai-news
 ## [AI data centers head for the ocean](https://www.therundown.ai/p/ai-data-centers-head-for-the-ocean)
 *🗞️ The Rundown AI | 2026-05-05*
 
-[Read Online](&#123;{live_url}}) | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-data-centers-head-for-the-ocean) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-data-centers-head-for-the-ocean)
+[Read Online]() | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-data-centers-head-for-the-ocean) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-data-centers-head-for-the-ocean)
 
 [](https://you.com/resources/why-api-latency-alone-is-a-misleading-metric-download?utm_campaign=28104480-The%20Rundown%20Q4&utm_source=external-newsletter&utm_medium=email&utm_term=rundown_primary_5.5.26&utm_content=rundown_primary_5.5.26)
 
-Good morning, &#123;{ first_name | AI enthusiasts }}. AI's land grab is running into walls — literal ones, in the form of an angry public fed up with data center constructions in their cities. 
+Good morning, AI enthusiasts. AI's land grab is running into walls — literal ones, in the form of an angry public fed up with data center constructions in their cities. 
 
 Oregon-based startup Panthalassa is taking things offshore instead, with Peter Thiel leading a new $140M round for floating structures that turn ocean energy into the compute AI companies are all scrambling for more of.
 

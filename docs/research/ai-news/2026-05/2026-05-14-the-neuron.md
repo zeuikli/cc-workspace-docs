@@ -401,15 +401,15 @@ Want absolutely EVERYTHING that happened in AI this week? [[Click here](https://
 
 ### Want to get the most out of ChatGPT?
 
-[](https://offers.hubspot.com/using-chatgpt-at-work?utm_medium=email-media-newsletter&utm_source=&#123;{publication_alphanumeric_id}}&utm_campaign=creator&utm_content=beehiiv&utm_term=version-r&_bhiiv=opp_8aeb88c0-0b23-4506-8b20-b6944a4232f4_b942af4d&bhcl_id=daf217c9-5bb6-4e02-a573-9245dc808252_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[](https://offers.hubspot.com/using-chatgpt-at-work?utm_medium=email-media-newsletter&utm_source=&utm_campaign=creator&utm_content=beehiiv&utm_term=version-r&_bhiiv=opp_8aeb88c0-0b23-4506-8b20-b6944a4232f4_b942af4d&bhcl_id=daf217c9-5bb6-4e02-a573-9245dc808252__)
 
 ChatGPT is a superpower if you know how to use it correctly.
 
-Discover how [HubSpot's guide to AI](https://offers.hubspot.com/using-chatgpt-at-work?utm_medium=email-media-newsletter&utm_source=&#123;{publication_alphanumeric_id}}&utm_campaign=creator&utm_content=beehiiv&utm_term=version-r&_bhiiv=opp_8aeb88c0-0b23-4506-8b20-b6944a4232f4_b942af4d&bhcl_id=daf217c9-5bb6-4e02-a573-9245dc808252_&#123;{subscriber_id}}_&#123;{email_address_id}}) can elevate both your productivity and creativity to get more things done.
+Discover how [HubSpot's guide to AI](https://offers.hubspot.com/using-chatgpt-at-work?utm_medium=email-media-newsletter&utm_source=&utm_campaign=creator&utm_content=beehiiv&utm_term=version-r&_bhiiv=opp_8aeb88c0-0b23-4506-8b20-b6944a4232f4_b942af4d&bhcl_id=daf217c9-5bb6-4e02-a573-9245dc808252__) can elevate both your productivity and creativity to get more things done.
 
 Learn to automate tasks, enhance decision-making, and foster innovation with the power of AI.
 
-[Download the free guide](https://offers.hubspot.com/using-chatgpt-at-work?utm_medium=email-media-newsletter&utm_source=&#123;{publication_alphanumeric_id}}&utm_campaign=creator&utm_content=beehiiv&utm_term=version-r&_bhiiv=opp_8aeb88c0-0b23-4506-8b20-b6944a4232f4_b942af4d&bhcl_id=daf217c9-5bb6-4e02-a573-9245dc808252_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[Download the free guide](https://offers.hubspot.com/using-chatgpt-at-work?utm_medium=email-media-newsletter&utm_source=&utm_campaign=creator&utm_content=beehiiv&utm_term=version-r&_bhiiv=opp_8aeb88c0-0b23-4506-8b20-b6944a4232f4_b942af4d&bhcl_id=daf217c9-5bb6-4e02-a573-9245dc808252__)
 
 # 🔧******Tuesday Tool Tip: Try OpenCode, the open-source Claude Code alternative**
 
@@ -678,11 +678,11 @@ That stat comes from[ Clement Delangue's thread](https://x.com/ClementDelangue/s
 
 ### Turn AI into Your Income Engine
 
-[](https://offers.hubspot.com/make-money-with-ai?utm_medium=email-media-newsletter&utm_source=&#123;{publication_alphanumeric_id}}&utm_campaign=creator&utm_content=beehiiv&utm_term=version-m&_bhiiv=opp_22eeb7bb-aa26-4f75-9f8d-32332adda562_64797c8f&bhcl_id=7b71d6b1-9675-47dd-bf48-71201492d11c_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[](https://offers.hubspot.com/make-money-with-ai?utm_medium=email-media-newsletter&utm_source=&utm_campaign=creator&utm_content=beehiiv&utm_term=version-m&_bhiiv=opp_22eeb7bb-aa26-4f75-9f8d-32332adda562_64797c8f&bhcl_id=7b71d6b1-9675-47dd-bf48-71201492d11c__)
 
 Ready to transform artificial intelligence from a buzzword into your personal revenue generator?
 
-[HubSpot’s groundbreaking guide](https://offers.hubspot.com/make-money-with-ai?utm_medium=email-media-newsletter&utm_source=&#123;{publication_alphanumeric_id}}&utm_campaign=creator&utm_content=beehiiv&utm_term=version-m&_bhiiv=opp_22eeb7bb-aa26-4f75-9f8d-32332adda562_64797c8f&bhcl_id=7b71d6b1-9675-47dd-bf48-71201492d11c_&#123;{subscriber_id}}_&#123;{email_address_id}}) "200+ AI-Powered Income Ideas" is your gateway to financial innovation in the digital age.
+[HubSpot’s groundbreaking guide](https://offers.hubspot.com/make-money-with-ai?utm_medium=email-media-newsletter&utm_source=&utm_campaign=creator&utm_content=beehiiv&utm_term=version-m&_bhiiv=opp_22eeb7bb-aa26-4f75-9f8d-32332adda562_64797c8f&bhcl_id=7b71d6b1-9675-47dd-bf48-71201492d11c__) "200+ AI-Powered Income Ideas" is your gateway to financial innovation in the digital age.
 
 Inside you'll discover:
 
@@ -695,9 +695,9 @@ Inside you'll discover:
 
 
 
-[Download your guide today](https://offers.hubspot.com/make-money-with-ai?utm_medium=email-media-newsletter&utm_source=&#123;{publication_alphanumeric_id}}&utm_campaign=creator&utm_content=beehiiv&utm_term=version-m&_bhiiv=opp_22eeb7bb-aa26-4f75-9f8d-32332adda562_64797c8f&bhcl_id=7b71d6b1-9675-47dd-bf48-71201492d11c_&#123;{subscriber_id}}_&#123;{email_address_id}}) and unlock a future where artificial intelligence powers your success. Your next income stream is waiting.
+[Download your guide today](https://offers.hubspot.com/make-money-with-ai?utm_medium=email-media-newsletter&utm_source=&utm_campaign=creator&utm_content=beehiiv&utm_term=version-m&_bhiiv=opp_22eeb7bb-aa26-4f75-9f8d-32332adda562_64797c8f&bhcl_id=7b71d6b1-9675-47dd-bf48-71201492d11c__) and unlock a future where artificial intelligence powers your success. Your next income stream is waiting.
 
-[Get Your Guide](https://offers.hubspot.com/make-money-with-ai?utm_medium=email-media-newsletter&utm_source=&#123;{publication_alphanumeric_id}}&utm_campaign=creator&utm_content=beehiiv&utm_term=version-m&_bhiiv=opp_22eeb7bb-aa26-4f75-9f8d-32332adda562_64797c8f&bhcl_id=7b71d6b1-9675-47dd-bf48-71201492d11c_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[Get Your Guide](https://offers.hubspot.com/make-money-with-ai?utm_medium=email-media-newsletter&utm_source=&utm_campaign=creator&utm_content=beehiiv&utm_term=version-m&_bhiiv=opp_22eeb7bb-aa26-4f75-9f8d-32332adda562_64797c8f&bhcl_id=7b71d6b1-9675-47dd-bf48-71201492d11c__)
 
 # **🎓****AI Skill of the Day: Stop losing context when your AI session hits the wall.**
 
@@ -875,17 +875,17 @@ The clever part is how OpenAI hid the thinking time. The model now generates **p
 
 ### Attio is the AI CRM for high-growth teams.
 
-[](https://attio.com/?utm_source=beehiiv&utm_medium=newsletter_sponsorship&utm_campaign=beehiiv-Y26-atlas&utm_content=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_b00e1ef8-5b02-4b95-81f0-f66cdcb665d9_7395cee5&bhcl_id=7ce32ed2-f4ce-4f2e-b558-c624fd6bd570_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[](https://attio.com/?utm_source=beehiiv&utm_medium=newsletter_sponsorship&utm_campaign=beehiiv-Y26-atlas&utm_content=&_bhiiv=opp_b00e1ef8-5b02-4b95-81f0-f66cdcb665d9_7395cee5&bhcl_id=7ce32ed2-f4ce-4f2e-b558-c624fd6bd570__)
 
-Connect your email, calls, product data and more, and [Attio](https://attio.com/?utm_source=beehiiv&utm_medium=newsletter_sponsorship&utm_campaign=beehiiv-Y26-atlas&utm_content=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_b00e1ef8-5b02-4b95-81f0-f66cdcb665d9_7395cee5&bhcl_id=7ce32ed2-f4ce-4f2e-b558-c624fd6bd570_&#123;{subscriber_id}}_&#123;{email_address_id}}) instantly builds your CRM with enriched data and complete context. Whether you’re running product-led growth or enterprise sales, Attio adapts to your unique GTM motion.
+Connect your email, calls, product data and more, and [Attio](https://attio.com/?utm_source=beehiiv&utm_medium=newsletter_sponsorship&utm_campaign=beehiiv-Y26-atlas&utm_content=&_bhiiv=opp_b00e1ef8-5b02-4b95-81f0-f66cdcb665d9_7395cee5&bhcl_id=7ce32ed2-f4ce-4f2e-b558-c624fd6bd570__) instantly builds your CRM with enriched data and complete context. Whether you’re running product-led growth or enterprise sales, Attio adapts to your unique GTM motion.
 
-Then [Ask Attio](https://attio.com/?utm_source=beehiiv&utm_medium=newsletter_sponsorship&utm_campaign=beehiiv-Y26-atlas&utm_content=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_b00e1ef8-5b02-4b95-81f0-f66cdcb665d9_7395cee5&bhcl_id=7ce32ed2-f4ce-4f2e-b558-c624fd6bd570_&#123;{subscriber_id}}_&#123;{email_address_id}}) to plan your next move.
+Then [Ask Attio](https://attio.com/?utm_source=beehiiv&utm_medium=newsletter_sponsorship&utm_campaign=beehiiv-Y26-atlas&utm_content=&_bhiiv=opp_b00e1ef8-5b02-4b95-81f0-f66cdcb665d9_7395cee5&bhcl_id=7ce32ed2-f4ce-4f2e-b558-c624fd6bd570__) to plan your next move.
 
 Run deep web research on prospects. Update your pipeline as you work. Find customers and draft outreach emails. Powered by Universal Context, Attio's intelligence layer, Attio searches, updates, and creates across your data to accelerate your workflow.
 
 Ask more from your CRM.
 
-[Ask Attio](https://attio.com/?utm_source=beehiiv&utm_medium=newsletter_sponsorship&utm_campaign=beehiiv-Y26-atlas&utm_content=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_b00e1ef8-5b02-4b95-81f0-f66cdcb665d9_7395cee5&bhcl_id=7ce32ed2-f4ce-4f2e-b558-c624fd6bd570_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[Ask Attio](https://attio.com/?utm_source=beehiiv&utm_medium=newsletter_sponsorship&utm_campaign=beehiiv-Y26-atlas&utm_content=&_bhiiv=opp_b00e1ef8-5b02-4b95-81f0-f66cdcb665d9_7395cee5&bhcl_id=7ce32ed2-f4ce-4f2e-b558-c624fd6bd570__)
 
 # 🎓 AI Skill of the Day: Force any AI to audit its own work with one question
 

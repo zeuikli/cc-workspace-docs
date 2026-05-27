@@ -15,11 +15,11 @@ type: ai-news
 ## [Zuckerberg's $500M AI biology swing](https://www.therundown.ai/p/zuckerberg-500m-ai-biology-swing)
 *🗞️ The Rundown AI | 2026-04-30*
 
-[Read Online](&#123;{live_url}}) | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=zuckerberg-s-500m-ai-biology-swing) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=zuckerberg-s-500m-ai-biology-swing)
+[Read Online]() | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=zuckerberg-s-500m-ai-biology-swing) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=zuckerberg-s-500m-ai-biology-swing)
 
 [](https://www.glean.com/glean-live/?utm_source=3rd-party&utm_medium=email&utm_campaign=glean-live-may-12&utm_partner=rundown)
 
-Good morning, &#123;{ first_name | AI enthusiasts }}. Google Deepmind’s Demis Hassabis has predicted that AI could eventually end disease, and Mark Zuckerberg and Priscilla Chan's Biohub just put $500M on the same bet.
+Good morning, AI enthusiasts. Google Deepmind’s Demis Hassabis has predicted that AI could eventually end disease, and Mark Zuckerberg and Priscilla Chan's Biohub just put $500M on the same bet.
 
 Their new five-year Virtual Biology Initiative pairs major funding and a powerhouse of partners, all coordinated around the same goal: producing enough data to push AI to model how disease starts at the cell level.
 

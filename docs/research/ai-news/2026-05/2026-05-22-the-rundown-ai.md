@@ -15,11 +15,11 @@ type: ai-news
 ## [OpenAI cracks an 80-year math belief](https://www.therundown.ai/p/openai-cracks-an-80-year-math-belief)
 *🗞️ The Rundown AI | 2026-05-21*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-cracks-an-80-year-math-belief)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-cracks-an-80-year-math-belief)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-cracks-an-80-year-math-belief)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-cracks-an-80-year-math-belief)**
 
 [](https://offers.hubspot.com/using-chatgpt-at-work?utm_medium=email-media-newsletter&utm_source=the-rundown-ai&utm_campaign=creator&utm_content=paid&utm_term=5-21-2026)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** Sam Altman called it a "kinda big milestone." That may be the rare case of a tech CEO underselling a headline.
+**Good morning, AI enthusiasts.** Sam Altman called it a "kinda big milestone." That may be the rare case of a tech CEO underselling a headline.
 
 A reasoning model just autonomously disproved an 80-year-old famous math theory, in what the company is calling a first for AI in the field. A capability, OpenAI says, that could soon result in original discoveries across biology, physics, engineering, and more. 
 
@@ -247,11 +247,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [Gemini's busy agentic day at Google I/O](https://www.therundown.ai/p/gemini-busy-agentic-day-at-google-i-o)
 *🗞️ The Rundown AI | 2026-05-20*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=gemini-s-busy-agentic-day-at-google-i-o)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=gemini-s-busy-agentic-day-at-google-i-o)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=gemini-s-busy-agentic-day-at-google-i-o)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=gemini-s-busy-agentic-day-at-google-i-o)**
 
 [](https://www.datadoghq.com/resources/llm-observability-best-practices/?utm_source=freemanforrest&utm_medium=influencer&utm_campaign=int-infra-ww-llm-llm-observability-therundown-052026)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** Google had a lot to show at I/O, but the theme was even cleaner than the release list: Gemini being turned into the agentic engine behind every one of Google’s products.
+**Good morning, AI enthusiasts.** Google had a lot to show at I/O, but the theme was even cleaner than the release list: Gemini being turned into the agentic engine behind every one of Google’s products.
 
 New launches, including Omni, Gemini 3.5 Flash, Spark, Antigravity 2.0, and a Search overhaul, point to the same strategy — making Gemini capable, fast, and cheap enough to live wherever users already are, with an agent doing the work.
 
@@ -475,11 +475,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [Musk's OpenAI case runs out of time](https://www.therundown.ai/p/musk-openai-case-runs-out-of-time)
 *🗞️ The Rundown AI | 2026-05-19*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=musk-s-openai-case-runs-out-of-time)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=musk-s-openai-case-runs-out-of-time)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=musk-s-openai-case-runs-out-of-time)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=musk-s-openai-case-runs-out-of-time)**
 
 [](https://you.com/resources/why-api-latency-alone-is-a-misleading-metric-download?utm_campaign=28104480-The Rundown Q4&utm_source=external-newsletter&utm_medium=email&utm_term=rundown_primary_5.19.26&utm_content=rundown_primary_5.19.26)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** Three weeks of high-profile testimonies, spicy leaked messages, and $100B in claims made for a blockbuster trial — but Elon Musk vs. OpenAI’s conclusion didn’t live up to the hype.
+**Good morning, AI enthusiasts.** Three weeks of high-profile testimonies, spicy leaked messages, and $100B in claims made for a blockbuster trial — but Elon Musk vs. OpenAI’s conclusion didn’t live up to the hype.
 
 With jurors dismissing the suit in OpenAI’s favor and Musk calling the ruling a “calendar technicality” and vowing to appeal, a more dramatic conclusion to the massive tech trial may have to wait for another day in court. 
 
@@ -707,11 +707,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [AI anger comes for Claude (Monet)](https://www.therundown.ai/p/ai-anger-comes-for-claude-monet)
 *🗞️ The Rundown AI | 2026-05-18*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-anger-comes-for-claude-monet)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-anger-comes-for-claude-monet)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-anger-comes-for-claude-monet)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-anger-comes-for-claude-monet)**
 
 [](https://cal.com/unwrap/quick-connect?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-anger-comes-for-claude-monet)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** Thousands of people on X just confidently explained why an AI-generated image was inferior to a real Monet. Just one problem: It WAS a real Monet.
+**Good morning, AI enthusiasts.** Thousands of people on X just confidently explained why an AI-generated image was inferior to a real Monet. Just one problem: It WAS a real Monet.
 
 Conceptual artist SHL0MS’ latest experiment says less about AI art and more about the reflexive hostility baked into the tech, with critics lining up to trash an artwork the moment they thought a machine made it.
 
@@ -934,11 +934,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [OpenAI takes Codex mobile](https://www.therundown.ai/p/openai-takes-codex-mobile)
 *🗞️ The Rundown AI | 2026-05-15*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-takes-codex-mobile)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-takes-codex-mobile)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-takes-codex-mobile)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-takes-codex-mobile)**
 
 [](https://www.braintrust.dev/signup?utm_source=newsletter&utm_medium=rundown&utm_campaign=signup&utm_content=primary_2026-05-15)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** AI coding agents can now run for hours at a time. Sitting at your desk the entire time shouldn't be a requirement… Or carrying around a computer to keep things moving.
+**Good morning, AI enthusiasts.** AI coding agents can now run for hours at a time. Sitting at your desk the entire time shouldn't be a requirement… Or carrying around a computer to keep things moving.
 
 Codex going mobile inside the ChatGPT app is OpenAI's long-awaited answer to that problem, letting users approve decisions, start new tasks, and make changes from their phone while agents grind away back at the desk.
 

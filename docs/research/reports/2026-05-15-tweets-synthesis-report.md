@@ -101,7 +101,7 @@ Frozen Snapshot 設計原則（@BTCqzy1，7.00）：記憶在 session 開始注�
 | 8.60 | Prompt Caching 五原則 | @trq212 | static-first；cache-safe compaction |
 | 8.60 | Anthropic 工具設計哲學 | @trq212 | Progressive Disclosure；~20 工具上限 |
 | 8.50 | Sequoia 2026 演講 | @karpathy | agent-native economy；.md skills 哲學 |
-| 8.10 | /goal 工業級 prompt | @MinLiBuilds | 停≠完成；&lt;untrusted_objective> |
+| 8.10 | /goal 工業級 prompt | @MinLiBuilds | 停≠完成；`<untrusted_objective>` |
 | 8.05 | Model-Harness-Fit | @nicbstme | byte-level 耦合；跨 harness 換模型崩塌 |
 | 8.05 | Agent Harness 12 元件 | @akshay_pachaar | 同模型換 harness 排名 30→5 |
 | 8.00 | Meta-Meta-Prompting | @garrytan | Thin Harness + Fat Skills 三層架構 |

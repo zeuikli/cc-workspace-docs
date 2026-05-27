@@ -15,11 +15,11 @@ type: ai-news
 ## [Sergey Brin commits DeepMind to a Claude catch-up](https://www.therundown.ai/p/sergey-brin-commits-deepmind-to-a-claude-catch-up)
 *🗞️ The Rundown AI | 2026-04-21*
 
-[Read Online](&#123;{live_url}}) | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=sergey-brin-commits-deepmind-to-a-claude-catch-up) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=sergey-brin-commits-deepmind-to-a-claude-catch-up)
+[Read Online]() | [Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=sergey-brin-commits-deepmind-to-a-claude-catch-up) | [Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=sergey-brin-commits-deepmind-to-a-claude-catch-up)
 
 [](https://you.com/resources/why-api-latency-alone-is-a-misleading-metric-download?utm_campaign=28104480-The%20Rundown%20Q4&utm_source=external-newsletter&utm_medium=email&utm_term=rundown_primary_421&utm_content=rundown_primary_421)
 
-Good morning, &#123;{ first_name | AI enthusiasts }}. Catching Anthropic's lead in coding just became Sergey Brin's personal project.
+Good morning, AI enthusiasts. Catching Anthropic's lead in coding just became Sergey Brin's personal project.
 
 The once-retired Google co-founder is now reportedly running a DeepMind “strike team” focused on closing Gemini's internal coding gap with Claude — with Brin framing the push as the shortest route to the holy grail of self-improving AI. 
 

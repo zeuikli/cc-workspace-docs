@@ -15,11 +15,11 @@ type: ai-news
 ## [Exclusive interview: Sundar Pichai on AI's flip phone moment](https://www.therundown.ai/p/exclusive-interview-sundar-pichai-on-ai-flip-phone-moment)
 *🗞️ The Rundown AI | 2026-05-22*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=exclusive-interview-sundar-pichai-on-ai-s-flip-phone-moment)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=exclusive-interview-sundar-pichai-on-ai-s-flip-phone-moment)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=exclusive-interview-sundar-pichai-on-ai-s-flip-phone-moment)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=exclusive-interview-sundar-pichai-on-ai-s-flip-phone-moment)**
 
 [](https://www.algolia.com/resources/asset/white-paper-architecture-data-foundations-for-ai-powered-search?utm_campaign=rundown_global_b2x_ecomm_ecomm_tof_reach&utm_medium=display&utm_source=rundown&utm_content=rundown_global_b2x_ecomm&utm_term=ebo_architecture-data-foundations-for-ai-powered-search&utm_camp_parent=b2x_ecomm&utm_2nd_camp=ecomm_tof&utm_region=global&utm_goal=reach&utm_creative_format=prmrynwsl&utm_model=cpm&utm_marketing_tactic=reach)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** Google’s announcements at I/O gave us a clear picture of the company’s direction: a top-to-bottom approach to making lives easier with AI.
+**Good morning, AI enthusiasts.** Google’s announcements at I/O gave us a clear picture of the company’s direction: a top-to-bottom approach to making lives easier with AI.
 
 We sat down with Sundar Pichai, CEO of Google, to understand what this shift means for creators, engineers, and everyday users — touching upon everything from YouTube to agentic coding, and why today’s AI will look like a flip phone in three years.
 
@@ -247,11 +247,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [OpenAI cracks an 80-year math belief](https://www.therundown.ai/p/openai-cracks-an-80-year-math-belief)
 *🗞️ The Rundown AI | 2026-05-21*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-cracks-an-80-year-math-belief)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-cracks-an-80-year-math-belief)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-cracks-an-80-year-math-belief)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-cracks-an-80-year-math-belief)**
 
 [](https://offers.hubspot.com/using-chatgpt-at-work?utm_medium=email-media-newsletter&utm_source=the-rundown-ai&utm_campaign=creator&utm_content=paid&utm_term=5-21-2026)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** Sam Altman called it a "kinda big milestone." That may be the rare case of a tech CEO underselling a headline.
+**Good morning, AI enthusiasts.** Sam Altman called it a "kinda big milestone." That may be the rare case of a tech CEO underselling a headline.
 
 A reasoning model just autonomously disproved an 80-year-old famous math theory, in what the company is calling a first for AI in the field. A capability, OpenAI says, that could soon result in original discoveries across biology, physics, engineering, and more. 
 
@@ -479,11 +479,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [Gemini's busy agentic day at Google I/O](https://www.therundown.ai/p/gemini-busy-agentic-day-at-google-i-o)
 *🗞️ The Rundown AI | 2026-05-20*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=gemini-s-busy-agentic-day-at-google-i-o)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=gemini-s-busy-agentic-day-at-google-i-o)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=gemini-s-busy-agentic-day-at-google-i-o)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=gemini-s-busy-agentic-day-at-google-i-o)**
 
 [](https://www.datadoghq.com/resources/llm-observability-best-practices/?utm_source=freemanforrest&utm_medium=influencer&utm_campaign=int-infra-ww-llm-llm-observability-therundown-052026)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** Google had a lot to show at I/O, but the theme was even cleaner than the release list: Gemini being turned into the agentic engine behind every one of Google’s products.
+**Good morning, AI enthusiasts.** Google had a lot to show at I/O, but the theme was even cleaner than the release list: Gemini being turned into the agentic engine behind every one of Google’s products.
 
 New launches, including Omni, Gemini 3.5 Flash, Spark, Antigravity 2.0, and a Search overhaul, point to the same strategy — making Gemini capable, fast, and cheap enough to live wherever users already are, with an agent doing the work.
 
@@ -707,11 +707,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [Musk's OpenAI case runs out of time](https://www.therundown.ai/p/musk-openai-case-runs-out-of-time)
 *🗞️ The Rundown AI | 2026-05-19*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=musk-s-openai-case-runs-out-of-time)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=musk-s-openai-case-runs-out-of-time)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=musk-s-openai-case-runs-out-of-time)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=musk-s-openai-case-runs-out-of-time)**
 
 [](https://you.com/resources/why-api-latency-alone-is-a-misleading-metric-download?utm_campaign=28104480-The Rundown Q4&utm_source=external-newsletter&utm_medium=email&utm_term=rundown_primary_5.19.26&utm_content=rundown_primary_5.19.26)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** Three weeks of high-profile testimonies, spicy leaked messages, and $100B in claims made for a blockbuster trial — but Elon Musk vs. OpenAI’s conclusion didn’t live up to the hype.
+**Good morning, AI enthusiasts.** Three weeks of high-profile testimonies, spicy leaked messages, and $100B in claims made for a blockbuster trial — but Elon Musk vs. OpenAI’s conclusion didn’t live up to the hype.
 
 With jurors dismissing the suit in OpenAI’s favor and Musk calling the ruling a “calendar technicality” and vowing to appeal, a more dramatic conclusion to the massive tech trial may have to wait for another day in court. 
 
@@ -939,11 +939,11 @@ _Rowan, Joey, Zach, Shubham, and Jennifer — the humans behind The Rundown_
 ## [AI anger comes for Claude (Monet)](https://www.therundown.ai/p/ai-anger-comes-for-claude-monet)
 *🗞️ The Rundown AI | 2026-05-18*
 
-**[Read Online](https://rss.beehiiv.com/feeds/&#123;{live_url}})** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-anger-comes-for-claude-monet)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-anger-comes-for-claude-monet)**
+**[Read Online](https://rss.beehiiv.com/feeds/)** | **[Sign Up](https://www.therundown.ai/subscribe?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-anger-comes-for-claude-monet)** | **[Advertise](https://therundownai.typeform.com/to/kraZ1TSO?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-anger-comes-for-claude-monet)**
 
 [](https://cal.com/unwrap/quick-connect?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-anger-comes-for-claude-monet)
 
-**Good morning, &#123;{ first_name | AI enthusiasts }}.** Thousands of people on X just confidently explained why an AI-generated image was inferior to a real Monet. Just one problem: It WAS a real Monet.
+**Good morning, AI enthusiasts.** Thousands of people on X just confidently explained why an AI-generated image was inferior to a real Monet. Just one problem: It WAS a real Monet.
 
 Conceptual artist SHL0MS’ latest experiment says less about AI art and more about the reflexive hostility baked into the tech, with critics lining up to trash an artwork the moment they thought a machine made it.
 

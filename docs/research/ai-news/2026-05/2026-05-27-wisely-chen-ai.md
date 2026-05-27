@@ -2566,7 +2566,7 @@ PR review 平均耗時 | 35 分鐘 | 18 分鐘
       name: string,
       input: any,
       registry: ToolRegistry
-    ): Promise<any> {
+    ): Promise`<any>` {
       const tool = registry.find(name);
       if (!tool) throw new Error(`Unknown tool: ${name}`);
     

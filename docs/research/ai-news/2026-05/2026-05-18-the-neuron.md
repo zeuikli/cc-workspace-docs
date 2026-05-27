@@ -100,9 +100,9 @@ So instead of handing humans another pile of maybe-bugs, systems like this can a
 
 ### The ops hire that onboards in 30 seconds.
 
-[](https://ref.getviktor.com/vik-bh-founders-general1?utm_campaign=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_0d871a48-2564-4f86-93f2-72daf980eb4e_58600c56&bhcl_id=02fde40a-cfd3-4781-83c7-7da00aa8fd10_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[](https://ref.getviktor.com/vik-bh-founders-general1?utm_campaign=&_bhiiv=opp_0d871a48-2564-4f86-93f2-72daf980eb4e_58600c56&bhcl_id=02fde40a-cfd3-4781-83c7-7da00aa8fd10__)
 
-[Viktor](https://ref.getviktor.com/vik-bh-founders-general1?utm_campaign=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_0d871a48-2564-4f86-93f2-72daf980eb4e_58600c56&bhcl_id=02fde40a-cfd3-4781-83c7-7da00aa8fd10_&#123;{subscriber_id}}_&#123;{email_address_id}}) is an AI coworker that lives in Slack, right where your team already works.
+[Viktor](https://ref.getviktor.com/vik-bh-founders-general1?utm_campaign=&_bhiiv=opp_0d871a48-2564-4f86-93f2-72daf980eb4e_58600c56&bhcl_id=02fde40a-cfd3-4781-83c7-7da00aa8fd10__) is an AI coworker that lives in Slack, right where your team already works.
 
 Message Viktor like a teammate: "pull last quarter's revenue by channel," or "build a dashboard for our board meeting."
 
@@ -112,7 +112,7 @@ There’s no new software to adopt and no one to train.
 
 Most teams start with one task. Within a week, Viktor is handling half of their ops.
 
-[Add Viktor to Slack for free.](https://ref.getviktor.com/vik-bh-founders-general1?utm_campaign=&#123;{publication_alphanumeric_id}}&_bhiiv=opp_0d871a48-2564-4f86-93f2-72daf980eb4e_58600c56&bhcl_id=02fde40a-cfd3-4781-83c7-7da00aa8fd10_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[Add Viktor to Slack for free.](https://ref.getviktor.com/vik-bh-founders-general1?utm_campaign=&_bhiiv=opp_0d871a48-2564-4f86-93f2-72daf980eb4e_58600c56&bhcl_id=02fde40a-cfd3-4781-83c7-7da00aa8fd10__)
 
 # 🎓 **AI Skill of the Day: Run an AI Security Gut Check**
 
@@ -383,19 +383,19 @@ FROM OUR PARTNERS
 
 ### Stop forgetting what you agreed to
 
-[](http://granola.ai/?utm_campaign=&#123;{publication_alphanumeric_id}}&utm_source=beehiiv&_bhiiv=opp_2062d7bc-ba77-409a-b0ed-1bb366cb8d7a_03f8bfd5&bhcl_id=a62d064b-0dd5-457d-b449-1a52b2b8d6df_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[](http://granola.ai/?utm_campaign=&utm_source=beehiiv&_bhiiv=opp_2062d7bc-ba77-409a-b0ed-1bb366cb8d7a_03f8bfd5&bhcl_id=a62d064b-0dd5-457d-b449-1a52b2b8d6df__)
 
 You know that feeling when you leave a meeting and immediately forget half of what you promised?
 
 That’s not a memory problem. It’s a meetings problem.
 
-[Granola](http://granola.ai/?utm_campaign=&#123;{publication_alphanumeric_id}}&utm_source=beehiiv&_bhiiv=opp_2062d7bc-ba77-409a-b0ed-1bb366cb8d7a_03f8bfd5&bhcl_id=a62d064b-0dd5-457d-b449-1a52b2b8d6df_&#123;{subscriber_id}}_&#123;{email_address_id}}) helps you become the person who actually follows through. Take quick notes during the call; nothing formal. Granola transcribes in the background and turns those notes into clear summaries with real next steps.
+[Granola](http://granola.ai/?utm_campaign=&utm_source=beehiiv&_bhiiv=opp_2062d7bc-ba77-409a-b0ed-1bb366cb8d7a_03f8bfd5&bhcl_id=a62d064b-0dd5-457d-b449-1a52b2b8d6df__) helps you become the person who actually follows through. Take quick notes during the call; nothing formal. Granola transcribes in the background and turns those notes into clear summaries with real next steps.
 
 After the call, share notes with the team so everyone’s aligned. Or chat with them to pull out exactly what needs to happen next.
 
 No more dropped balls. Just clarity and follow-through.
 
-[Download Granola free](http://granola.ai/?utm_campaign=&#123;{publication_alphanumeric_id}}&utm_source=beehiiv&_bhiiv=opp_2062d7bc-ba77-409a-b0ed-1bb366cb8d7a_03f8bfd5&bhcl_id=a62d064b-0dd5-457d-b449-1a52b2b8d6df_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[Download Granola free](http://granola.ai/?utm_campaign=&utm_source=beehiiv&_bhiiv=opp_2062d7bc-ba77-409a-b0ed-1bb366cb8d7a_03f8bfd5&bhcl_id=a62d064b-0dd5-457d-b449-1a52b2b8d6df__)
 
 # 🎓 AI Skill of the Day: Design Goals and Hooks for Normal Work
 
@@ -482,11 +482,11 @@ These robots from Figure are kinda mesmerizing to watch… its also funny when i
 
 ### The IT strategy every team needs for 2026
 
-[](https://www.deel.com/resources/it-strategy-toolkit-2026-guide-hr-leaders/?utm_medium=sponsored-newsletter&utm_source=beehiiv&utm_term=&#123;{publication_alphanumeric_id}}&utm_campaign=ww_engage_download_beehiiv_sponnewsletter_it-ttrends2026-feb26_it_all&utm_content=engage_it_sponnewsletter_ittrends2026-sponnews400-it_en&_bhiiv=opp_63157cd6-3c5f-4108-846d-581d06dad4f7_28664f41&bhcl_id=07e4a394-b6a7-4007-a8e6-ae9dc6ea4c43_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[](https://www.deel.com/resources/it-strategy-toolkit-2026-guide-hr-leaders/?utm_medium=sponsored-newsletter&utm_source=beehiiv&utm_term=&utm_campaign=ww_engage_download_beehiiv_sponnewsletter_it-ttrends2026-feb26_it_all&utm_content=engage_it_sponnewsletter_ittrends2026-sponnews400-it_en&_bhiiv=opp_63157cd6-3c5f-4108-846d-581d06dad4f7_28664f41&bhcl_id=07e4a394-b6a7-4007-a8e6-ae9dc6ea4c43__)
 
-2026 will redefine IT as a strategic driver of global growth. Automation, AI-driven support, unified platforms, and zero-trust security are becoming standard, especially for distributed teams. This [toolkit](https://www.deel.com/resources/it-strategy-toolkit-2026-guide-hr-leaders/?utm_medium=sponsored-newsletter&utm_source=beehiiv&utm_term=&#123;{publication_alphanumeric_id}}&utm_campaign=ww_engage_download_beehiiv_sponnewsletter_it-ttrends2026-feb26_it_all&utm_content=engage_it_sponnewsletter_ittrends2026-sponnews400-it_en&_bhiiv=opp_63157cd6-3c5f-4108-846d-581d06dad4f7_28664f41&bhcl_id=07e4a394-b6a7-4007-a8e6-ae9dc6ea4c43_&#123;{subscriber_id}}_&#123;{email_address_id}}) helps IT and HR leaders assess readiness, define goals, and build a scalable, audit-ready IT strategy for the year ahead. Learn what’s changing and how to prepare.
+2026 will redefine IT as a strategic driver of global growth. Automation, AI-driven support, unified platforms, and zero-trust security are becoming standard, especially for distributed teams. This [toolkit](https://www.deel.com/resources/it-strategy-toolkit-2026-guide-hr-leaders/?utm_medium=sponsored-newsletter&utm_source=beehiiv&utm_term=&utm_campaign=ww_engage_download_beehiiv_sponnewsletter_it-ttrends2026-feb26_it_all&utm_content=engage_it_sponnewsletter_ittrends2026-sponnews400-it_en&_bhiiv=opp_63157cd6-3c5f-4108-846d-581d06dad4f7_28664f41&bhcl_id=07e4a394-b6a7-4007-a8e6-ae9dc6ea4c43__) helps IT and HR leaders assess readiness, define goals, and build a scalable, audit-ready IT strategy for the year ahead. Learn what’s changing and how to prepare.
 
-[Download the Toolkit](https://www.deel.com/resources/it-strategy-toolkit-2026-guide-hr-leaders/?utm_medium=sponsored-newsletter&utm_source=beehiiv&utm_term=&#123;{publication_alphanumeric_id}}&utm_campaign=ww_engage_download_beehiiv_sponnewsletter_it-ttrends2026-feb26_it_all&utm_content=engage_it_sponnewsletter_ittrends2026-sponnews400-it_en&_bhiiv=opp_63157cd6-3c5f-4108-846d-581d06dad4f7_28664f41&bhcl_id=07e4a394-b6a7-4007-a8e6-ae9dc6ea4c43_&#123;{subscriber_id}}_&#123;{email_address_id}})
+[Download the Toolkit](https://www.deel.com/resources/it-strategy-toolkit-2026-guide-hr-leaders/?utm_medium=sponsored-newsletter&utm_source=beehiiv&utm_term=&utm_campaign=ww_engage_download_beehiiv_sponnewsletter_it-ttrends2026-feb26_it_all&utm_content=engage_it_sponnewsletter_ittrends2026-sponnews400-it_en&_bhiiv=opp_63157cd6-3c5f-4108-846d-581d06dad4f7_28664f41&bhcl_id=07e4a394-b6a7-4007-a8e6-ae9dc6ea4c43__)
 
 # 💡 Intelligent Insights:
 

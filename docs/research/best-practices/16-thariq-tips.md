@@ -231,7 +231,7 @@ Claude 完成一個 turn 後，有幾個選擇：
 |------|------|------|
 | 同一任務、context 仍相關 | **Continue** | 所有內容仍 load-bearing，不要白花錢重建 |
 | 走錯路徑 | **Rewind**（Esc Esc）| 保留讀取，丟掉失敗，用所學重新 prompt |
-| 中途 session 膨脹 | **/compact \&lt;hint\>** | 低 effort；Claude 決定相關性 |
+| 中途 session 膨脹 | **/compact \<hint\>** | 低 effort；Claude 決定相關性 |
 | 開始新任務 | **/clear** | 零 rot；完全控制帶入的 context |
 | 下一步會產生大量中間輸出 | **Subagent** | 中間雜訊留在 child context |
 
