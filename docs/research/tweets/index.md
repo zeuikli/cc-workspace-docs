@@ -228,9 +228,9 @@ type: index
 
 | 日期 | 來源 | 標題 | 類型 | 評分 |
 |------|------|------|------|------|
-| 2026-05-23 | @Mnilax | [2026-05-24-@Mnilax-736907.md](2026-05-24-@Mnilax-736907.md) | 初次收錄版（code block 不完整），已由 2026-05-23-@Mnilax-736907.md 取代 | — | Skip |
-| 2026-05-15 | @sairahul1 | [How to Build a Team of AI Agents That Run Your Business While You Sleep](2026-05-15-@sairahul1-391151.md) | Twitter Article | 5.70 | Skip |
-| 2026-05-15 | [@Zephyr_hg](https://x.com/Zephyr_hg/status/2055229007931601239) | You Don't Need 100 Hours To Be Fluent In Claude. You Need 7 Setups And One Weekend. | Skip | 3.85 | [檔案](2026-05-15-@Zephyr_hg-601239.md) |
+| 2026-05-23 | [@Mnilax](https://x.com/Mnilax/status/2058269663788736907) | [2026-05-24-@Mnilax-736907.md](2026-05-24-@Mnilax-736907.md) | 初次收錄版（code block 不完整），已由 [2026-05-23-@Mnilax-736907.md](2026-05-23-@Mnilax-736907.md) 取代 | — |
+| 2026-05-15 | [@sairahul1](https://x.com/sairahul1/status/2055199726589391151) | [How to Build a Team of AI Agents That Run Your Business While You Sleep](2026-05-15-@sairahul1-391151.md) | Twitter Article | 5.70 |
+| 2026-05-15 | [@Zephyr_hg](https://x.com/Zephyr_hg/status/2055229007931601239) | [You Don't Need 100 Hours To Be Fluent In Claude. You Need 7 Setups And One Weekend.](2026-05-15-@Zephyr_hg-601239.md) | Twitter Article | 3.85 |
 
 ---
 
