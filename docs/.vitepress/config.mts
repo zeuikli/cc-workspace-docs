@@ -254,15 +254,4 @@ export default defineConfig({
       dark: "github-dark",
     },
   },
-  vue: {
-    template: {
-      compilerOptions: {
-        // Treat all unknown lowercase tags as custom HTML elements.
-        // Prevents Vue compiler from choking on XML-style tags in markdown
-        // content (e.g. <system-reminder>, <project>, <path>) that appear
-        // inside inline code spans or code fences.
-        isCustomElement: () => true,
-      },
-    },
-  },
 });
