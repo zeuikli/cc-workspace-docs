@@ -1,5 +1,5 @@
 ---
-title: AlphaSignal — 2026-04-23
+title: "AlphaSignal — 2026-04-23"
 date: 2026-04-23
 source: AlphaSignal
 type: ai-news

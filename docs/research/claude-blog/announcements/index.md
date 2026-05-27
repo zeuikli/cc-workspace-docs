@@ -1,5 +1,5 @@
 ---
-title: Announcements — claude.com/blog
+title: "Announcements — claude.com/blog"
 type: index
 ---
 

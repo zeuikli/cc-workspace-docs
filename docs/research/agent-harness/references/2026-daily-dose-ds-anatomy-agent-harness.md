@@ -1,5 +1,5 @@
 ---
-title: The Anatomy of an Agent Harness
+title: "The Anatomy of an Agent Harness"
 authors: Daily Dose of DS（Avi Chawla）
 source: "https://blog.dailydoseofds.com/p/the-anatomy-of-an-agent-harness"
 source_tier: P

@@ -1,7 +1,7 @@
 ---
 title: "Externalization in LLM Agents: A Unified Review of Memory, Skills, Protocols and Harness Engineering"
-authors: "Chenyu Zhou, Huacan Chai, Wenteng Chen, et al. (20 authors)"
-published: "2026-04-09"
+authors: Chenyu Zhou, Huacan Chai, Wenteng Chen, et al. (20 authors)
+published: 2026-04-09
 source: "https://arxiv.org/abs/2604.08224"
 ---
 

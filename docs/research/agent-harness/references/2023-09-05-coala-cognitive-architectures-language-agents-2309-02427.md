@@ -1,9 +1,9 @@
 ---
 title: "Cognitive Architectures for Language Agents"
-authors: "Theodore R. Sumers, Shunyu Yao, Karthik Narasimhan, Thomas L. Griffiths"
-published: "2023-09-05"
+authors: Theodore R. Sumers, Shunyu Yao, Karthik Narasimhan, Thomas L. Griffiths
+published: 2023-09-05
 source: "https://arxiv.org/abs/2309.02427"
-venue: "TMLR 2024"
+venue: TMLR 2024
 ---
 
 # Cognitive Architectures for Language Agents (CoALA)

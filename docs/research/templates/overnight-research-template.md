@@ -1,5 +1,5 @@
 ---
-title: Overnight Research Template
+title: "Overnight Research Template"
 type: template
 ---
 

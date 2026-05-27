@@ -1,9 +1,9 @@
 ---
 url: "https://stripe.com/blog/can-ai-agents-build-real-stripe-integrations"
-source_file: ../../2026-05-12-stripe-ai-agents-integrations.md
 date: 2026-05-12
 scored: 2026-05-16
 source: Stripe Engineering Blog
+source_file: ../../2026-05-12-stripe-ai-agents-integrations.md
 source_tier: C
 ---
 

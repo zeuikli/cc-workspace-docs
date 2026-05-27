@@ -1,7 +1,7 @@
 ---
 url: "https://miraflow.ai/blog/karpathy-claude-md-100k-github-stars-ai-coding-2026"
-title: Andrej Karpathy's CLAUDE.md - The 65-Line File With 100K GitHub Stars
-author: Jay Kim
+title: "Andrej Karpathy's CLAUDE.md - The 65-Line File With 100K GitHub Stars"
+author: "Jay Kim"
 date: 2026-05-03
 status: SUCCESS
 ---

@@ -1,10 +1,10 @@
 ---
 title: "Useful Memories Become Faulty When Continuously Updated by LLMs"
-authors: "Dylan Zhang, Yanshan Lin, Zhengkun Wu, Yihang Sun, Bingxuan Li, Dianqi Li, Hao Peng"
-published: "2026-05-13"
-source: "https://arxiv.org/abs/2605.12978"
+authors: Dylan Zhang, Yanshan Lin, Zhengkun Wu, Yihang Sun, Bingxuan Li, Dianqi Li, Hao Peng
+pdf: 2026-05-13-useful-memories-faulty-llm-continuous-update-2605-12978.pdf
 project_page: "https://dylanzsz.github.io/faulty-memory/"
-pdf: "2026-05-13-useful-memories-faulty-llm-continuous-update-2605-12978.pdf"
+published: 2026-05-13
+source: "https://arxiv.org/abs/2605.12978"
 ---
 
 # Useful Memories Become Faulty When Continuously Updated by LLMs

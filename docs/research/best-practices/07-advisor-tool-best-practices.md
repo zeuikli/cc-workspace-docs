@@ -1,5 +1,5 @@
 ---
-title: Advisor Tool — 完整技術指南與最佳實踐
+title: "Advisor Tool — 完整技術指南與最佳實踐"
 source: "https://platform.claude.com/docs/en/agents-and-tools/tool-use/advisor-tool"
 type: best-practices
 ---

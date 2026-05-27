@@ -1,5 +1,5 @@
 ---
-title: Claude Code Onboarding 與大型 Codebase 最佳實踐
+title: "Claude Code Onboarding 與大型 Codebase 最佳實踐"
 source: Anthropic 官方
 type: best-practices
 ---

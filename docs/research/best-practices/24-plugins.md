@@ -1,5 +1,5 @@
 ---
-title: Claude Code Plugin 系統完整指南
+title: "Claude Code Plugin 系統完整指南"
 source: "https://code.claude.com/docs/en/plugins"
 type: best-practices
 ---

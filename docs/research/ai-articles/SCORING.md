@@ -1,5 +1,5 @@
 ---
-title: AI 內容評分系統
+title: "AI 內容評分系統"
 type: documentation
 ---
 

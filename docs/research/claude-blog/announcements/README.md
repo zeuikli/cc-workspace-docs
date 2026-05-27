@@ -1,5 +1,5 @@
 ---
-title: Announcements Articles
+title: "Announcements Articles"
 type: index
 ---
 

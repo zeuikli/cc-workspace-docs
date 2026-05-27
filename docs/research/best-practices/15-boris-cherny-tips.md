@@ -1,5 +1,5 @@
 ---
-title: Boris Cherny Claude Code Tips — 主題分類整合
+title: "Boris Cherny Claude Code Tips — 主題分類整合"
 source: shanraisshan/claude-code-best-practice · Boris Cherny
 type: best-practices
 ---

@@ -1,9 +1,9 @@
 ---
 url: "https://x.com/bcherny/status/2007179861115511237"
-source_file: ../2026-05-12-boris-cherny-verification-loops.md
 date: 2026-05-12
 scored: 2026-05-16
-source: Twitter/X — Boris Cherny (@bcherny)
+source: "Twitter/X — Boris Cherny (@bcherny)"
+source_file: ../2026-05-12-boris-cherny-verification-loops.md
 source_tier: C
 tags: [verification-loops, quality-multiplier, stop-hooks, bcherny, claude-code-creator]
 ---

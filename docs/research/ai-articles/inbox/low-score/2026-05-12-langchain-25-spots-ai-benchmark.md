@@ -1,9 +1,9 @@
 ---
 url: "https://longbridge.com/en/news/276152238"
-source_file: ../../2026-05-12-langchain-25-spots-ai-benchmark.md
 date: 2026-05-12
 scored: 2026-05-16
 source: Longbridge News (secondary rewrite)
+source_file: ../../2026-05-12-langchain-25-spots-ai-benchmark.md
 source_tier: C
 ---
 

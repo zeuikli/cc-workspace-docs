@@ -1,5 +1,5 @@
 ---
-title: Research Prompt Templates
+title: "Research Prompt Templates"
 type: index
 ---
 

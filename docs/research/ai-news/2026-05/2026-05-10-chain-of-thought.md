@@ -1,5 +1,5 @@
 ---
-title: Chain of Thought — 2026-05-10
+title: "Chain of Thought — 2026-05-10"
 date: 2026-05-10
 source: Chain of Thought
 type: ai-news

@@ -1,5 +1,5 @@
 ---
-title: 2026 Q1 AI 月報 Executive Brief
+title: "2026 Q1 AI 月報 Executive Brief"
 source: 18 份 newsletter、155 篇文章
 type: ai-news
 ---

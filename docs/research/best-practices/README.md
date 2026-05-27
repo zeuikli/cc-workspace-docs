@@ -1,5 +1,5 @@
 ---
-title: best-practices
+title: "best-practices"
 type: index
 ---
 

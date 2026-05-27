@@ -1,6 +1,6 @@
 ---
-title: LangChain's AI coding agent moves up 25 spots on benchmark, reaching Top 5 without model changes
 url: "https://longbridge.com/en/news/276152238"
+title: "LangChain's AI coding agent moves up 25 spots on benchmark, reaching Top 5 without model changes"
 domain: longbridge.com
 fetched: 2026-05-12
 source_tier: C

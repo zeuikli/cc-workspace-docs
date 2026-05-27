@@ -1,9 +1,9 @@
 ---
 url: "https://www.mindstudio.ai/blog/what-is-ai-agent-harness-stripe-minions"
-source_file: ../../2026-05-12-ai-agent-harness-stripe-1300-prs.md
 date: 2026-05-12
 scored: 2026-05-16
 source: MindStudio Blog
+source_file: ../../2026-05-12-ai-agent-harness-stripe-1300-prs.md
 source_tier: C
 ---
 

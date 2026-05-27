@@ -1,5 +1,5 @@
 ---
-title: Tweets 目錄深度研究 Prompt
+title: "Tweets 目錄深度研究 Prompt"
 type: template
 ---
 

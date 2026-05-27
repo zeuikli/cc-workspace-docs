@@ -1,5 +1,5 @@
 ---
-title: Claude Code Sub-Agent Delegation GOTCHAS and Failure Patterns — 深度研究報告
+title: "Claude Code Sub-Agent Delegation GOTCHAS and Failure Patterns — 深度研究報告"
 date: 2026-05-17
 type: report
 ---

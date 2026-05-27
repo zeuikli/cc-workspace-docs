@@ -1,6 +1,6 @@
 ---
 url: "https://www.anup.io/35-claude-code-tips-from-the-guy-who-built-it/"
-title: Claude Code Tips From the Guy Who Built It
+title: "Claude Code Tips From the Guy Who Built It"
 type: article
 ---
 

@@ -1,8 +1,8 @@
 ---
-status: SUCCESS
 url: "https://github.com/FlorianBruniaux/claude-code-ultimate-guide"
-repository: FlorianBruniaux/claude-code-ultimate-guide
+status: SUCCESS
 date_fetched: 2026-05-18
+repository: FlorianBruniaux/claude-code-ultimate-guide
 ---
 
 # 38. GitHub: Claude Code Ultimate Guide

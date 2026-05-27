@@ -1,5 +1,5 @@
 ---
-title: 策略洞察：Karpathy × Mnilax × bcherny 的實踐轉化
+title: "策略洞察：Karpathy × Mnilax × bcherny 的實踐轉化"
 type: prompt
 ---
 

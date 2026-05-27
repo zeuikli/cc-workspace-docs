@@ -1,7 +1,7 @@
 ---
 url: "https://www.testventures.net/blog/fat-skills-thin-harness"
 title: "Fat Skills, Thin Harness: The Framework I'm Using to Ship a Tech Grant in Ten Working Days"
-author: Geordie (TestVentures/Powered by Finn)
+author: "Geordie (TestVentures/Powered by Finn)"
 date: 2026-04-14
 status: SUCCESS
 ---

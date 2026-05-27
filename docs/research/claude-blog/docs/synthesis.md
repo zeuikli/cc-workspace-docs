@@ -1,5 +1,5 @@
 ---
-title: Claude Blog 跨主題合成分析
+title: "Claude Blog 跨主題合成分析"
 type: blog-index
 ---
 

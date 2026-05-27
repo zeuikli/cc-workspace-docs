@@ -1,8 +1,8 @@
 ---
 title: "Continual Learning for AI Agents"
-source: "https://www.langchain.com/blog/continual-learning-for-ai-agents"
 author: "Harrison Chase"
-date: "2026-04-05"
+date: 2026-04-05
+source: "https://www.langchain.com/blog/continual-learning-for-ai-agents"
 tags: [agent-harness, research]
 ---
 

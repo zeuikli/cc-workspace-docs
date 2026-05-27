@@ -1,7 +1,7 @@
 ---
 title: "Architectural Design Decisions in AI Agent Harnesses"
-authors: "Hu Wei"
-published: "2026-04-20"
+authors: Hu Wei
+published: 2026-04-20
 source: "https://arxiv.org/abs/2604.18071"
 ---
 

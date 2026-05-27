@@ -1,8 +1,8 @@
 ---
 date: 2026-05-12
-topic: 大道至簡 — Claude Best Practices / Cost & Efficiency Optimization
-sources: research/papers/ + research/tweets/ + research/best-practices/
 depth: D2
+sources: research/papers/ + research/tweets/ + research/best-practices/
+topic: "大道至簡 — Claude Best Practices / Cost & Efficiency Optimization"
 verify: V1+V2
 ---
 

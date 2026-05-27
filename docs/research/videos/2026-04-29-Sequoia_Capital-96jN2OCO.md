@@ -1,11 +1,11 @@
 ---
 title: "Andrej Karpathy: From Vibe Coding to Agentic Engineering — Sequoia Capital"
-source: "https://www.youtube.com/watch?v=96jN2OCOfLs"
-creator: Sequoia Capital
 date: 2026-04-29
-type: video
+creator: Sequoia Capital
 duration: "29:49"
 platform: youtube
+source: "https://www.youtube.com/watch?v=96jN2OCOfLs"
+type: video
 ---
 
 # Andrej Karpathy: From Vibe Coding to Agentic Engineering — Sequoia Capital

@@ -1,9 +1,9 @@
 ---
 title: "Memory for Autonomous LLM Agents: Mechanisms, Evaluation, and Emerging Frontiers"
+arxiv_id: 2603.0767
 published: 2026-03-08
 source: "https://arxiv.org/abs/2603.07670"
 source_tier: P
-arxiv_id: 2603.07670
 ---
 
 # Memory for Autonomous LLM Agents: Mechanisms, Evaluation, and Emerging Frontiers

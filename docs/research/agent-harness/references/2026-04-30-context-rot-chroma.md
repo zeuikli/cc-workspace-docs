@@ -1,8 +1,8 @@
 ---
 title: "Context Rot: How Increasing Input Tokens Impacts LLM Performance"
-source: "https://www.trychroma.com/research/context-rot"
 author: "Chroma Research"
-date: "2026-04-30"
+date: 2026-04-30
+source: "https://www.trychroma.com/research/context-rot"
 tags: [agent-harness, research]
 ---
 

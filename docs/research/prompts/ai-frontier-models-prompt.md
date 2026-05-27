@@ -1,5 +1,5 @@
 ---
-title: 前沿模型競逐 + 開源生態 — 分析 Prompt
+title: "前沿模型競逐 + 開源生態 — 分析 Prompt"
 type: prompt
 ---
 

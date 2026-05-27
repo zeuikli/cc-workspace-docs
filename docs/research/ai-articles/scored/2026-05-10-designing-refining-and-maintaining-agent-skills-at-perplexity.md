@@ -1,9 +1,9 @@
 ---
 url: "https://research.perplexity.ai/articles/designing-refining-and-maintaining-agent-skills-at-perplexity"
-source_file: ../2026-05-10-designing-refining-and-maintaining-agent-skills-at-perplexity.md
 date: 2026-05-10
 scored: 2026-05-16
 source: Perplexity Research Blog
+source_file: ../2026-05-10-designing-refining-and-maintaining-agent-skills-at-perplexity.md
 source_tier: C
 tags: [skill-design, progressive-loading, skill-index, gotchas-flywheel, eval-first]
 ---

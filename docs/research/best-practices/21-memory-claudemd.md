@@ -1,5 +1,5 @@
 ---
-title: How Claude Remembers Your Project — CLAUDE.md 與 Auto Memory 完整指南
+title: "How Claude Remembers Your Project — CLAUDE.md 與 Auto Memory 完整指南"
 source: "https://code.claude.com/docs/en/memory"
 type: best-practices
 ---

@@ -1,6 +1,6 @@
 ---
-title: Feature Request - Lazy Loading for MCP Servers and Tools (95% context reduction possible)
 url: "https://github.com/anthropics/claude-code/issues/7336"
+title: "Feature Request - Lazy Loading for MCP Servers and Tools (95% context reduction possible)"
 domain: github.com
 fetched: 2026-05-12
 source_tier: C

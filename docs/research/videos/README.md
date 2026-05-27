@@ -1,5 +1,5 @@
 ---
-title: Research Videos — 索引
+title: "Research Videos — 索引"
 type: index
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: AI Newsletter Dashboard
+title: "AI Newsletter Dashboard"
 type: index
 ---
 

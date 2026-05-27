@@ -1,6 +1,6 @@
 ---
 url: "https://www.kdnuggets.com/7-practical-ways-to-reduce-claude-code-token-usage"
-title: 7 Practical Ways to Reduce Claude Code Token Usage
+title: "7 Practical Ways to Reduce Claude Code Token Usage"
 type: article
 ---
 

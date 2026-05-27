@@ -1,7 +1,7 @@
 ---
 title: "Agent Harness for Large Language Model Agents: A Survey"
-authors: "Qianyu Meng, Yanan Wang, Liyi Chen, Qimeng Wang, Chengqiang Lu, Wei Wu, Yan Gao, Yi Wu, Yao Hu"
-published: "2026-04-07"
+authors: Qianyu Meng, Yanan Wang, Liyi Chen, Qimeng Wang, Chengqiang Lu, Wei Wu, Yan Gao, Yi Wu, Yao Hu
+published: 2026-04-07
 source: "https://www.preprints.org/manuscript/202604.0428/v1"
 ---
 

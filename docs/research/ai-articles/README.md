@@ -1,5 +1,5 @@
 ---
-title: AI/LLM Article Archive
+title: "AI/LLM Article Archive"
 type: index
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Claude Code SKILL 設計最佳實踐
+title: "Claude Code SKILL 設計最佳實踐"
 type: prompt
 ---
 

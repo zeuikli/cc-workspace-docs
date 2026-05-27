@@ -1,8 +1,8 @@
 ---
 title: "Terminal Bench 2.0 Leaderboard"
-source: "https://www.tbench.ai/leaderboard/terminal-bench/2.0"
 author: "Terminal Bench Research Team"
-date: "2026-04-30"
+date: 2026-04-30
+source: "https://www.tbench.ai/leaderboard/terminal-bench/2.0"
 tags: [agent-harness, research]
 ---
 

@@ -1,7 +1,7 @@
 ---
 url: "https://agentpedia.codes/blog/karpathy-claude-code-skills-guide"
 title: "Karpathy's CLAUDE.md Skills File: The Complete Guide"
-author: Agentpedia Codes (Forrest Chang)
+author: "Agentpedia Codes (Forrest Chang)"
 date: 2026-04-13
 status: SUCCESS
 ---

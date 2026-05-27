@@ -1,5 +1,5 @@
 ---
-title: Last Week in AI — 2026-04-01
+title: "Last Week in AI — 2026-04-01"
 date: 2026-04-01
 source: Last Week in AI
 type: ai-news

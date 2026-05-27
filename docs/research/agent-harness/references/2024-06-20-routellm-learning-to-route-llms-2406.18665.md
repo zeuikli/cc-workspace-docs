@@ -1,10 +1,10 @@
 ---
 title: "RouteLLM: Learning to Route LLMs with Preference Data"
-authors: "Isaac Sim, Shuwen Sun, and others"
-published: "2024-06-20"
+arxiv_id: 2406.18665
+authors: Isaac Sim, Shuwen Sun, and others
+published: 2024-06-20
 source: "https://arxiv.org/abs/2406.18665"
-venue: "arXiv"
-arxiv_id: "2406.18665"
+venue: arXiv
 ---
 
 # RouteLLM: Learning to Route LLMs with Preference Data

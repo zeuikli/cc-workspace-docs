@@ -1,8 +1,8 @@
 ---
 title: "Twitter 影片逐字稿 — @codewithimanshu"
-source: "https://x.com/codewithimanshu/status/2047875091174981780?s=53"
 author: "@codewithimanshu"
 date: 2026-04-25
+source: "https://x.com/codewithimanshu/status/2047875091174981780?s=53"
 type: tweet
 ---
 

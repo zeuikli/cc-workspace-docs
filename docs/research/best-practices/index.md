@@ -1,5 +1,5 @@
 ---
-title: Claude Code 最佳實踐研究索引
+title: "Claude Code 最佳實踐研究索引"
 type: index
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: cc-workspace 改動建議：基於 84 篇論文的可執行計畫
+title: "cc-workspace 改動建議：基於 84 篇論文的可執行計畫"
 date: 2026-05-25
 type: report
 ---

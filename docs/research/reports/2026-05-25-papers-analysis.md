@@ -1,5 +1,5 @@
 ---
-title: research/papers 深度研究報告：分類、分析與可執行計畫
+title: "research/papers 深度研究報告：分類、分析與可執行計畫"
 date: 2026-05-25
 type: report
 ---

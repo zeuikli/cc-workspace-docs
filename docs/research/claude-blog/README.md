@@ -1,5 +1,5 @@
 ---
-title: Claude Blog — 文章收錄索引
+title: "Claude Blog — 文章收錄索引"
 type: index
 ---
 

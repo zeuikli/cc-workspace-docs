@@ -1,5 +1,5 @@
 ---
-title: 細粒度 Permission 設定完整指南
+title: "細粒度 Permission 設定完整指南"
 source: "https://code.claude.com/docs/en/permissions"
 type: best-practices
 ---

@@ -1,5 +1,5 @@
 ---
-title: Claude Code 最佳實踐官方總綱
+title: "Claude Code 最佳實踐官方總綱"
 source: "https://code.claude.com/docs/en/best-practices"
 type: best-practices
 ---

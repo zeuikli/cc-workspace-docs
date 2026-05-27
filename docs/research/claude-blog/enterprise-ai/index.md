@@ -1,5 +1,5 @@
 ---
-title: Enterprise AI — claude.com/blog
+title: "Enterprise AI — claude.com/blog"
 type: index
 ---
 

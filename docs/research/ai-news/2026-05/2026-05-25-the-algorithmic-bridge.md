@@ -1,5 +1,5 @@
 ---
-title: The Algorithmic Bridge — 2026-05-25
+title: "The Algorithmic Bridge — 2026-05-25"
 date: 2026-05-25
 source: The Algorithmic Bridge
 type: ai-news

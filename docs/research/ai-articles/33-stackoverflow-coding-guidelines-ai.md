@@ -1,9 +1,9 @@
 ---
-status: SUCCESS
 url: "https://stackoverflow.blog/2026/03/26/coding-guidelines-for-ai-agents-and-people-too/"
-title: Building Shared Coding Guidelines for AI (and People Too)
-author: Ryan Donovan
+title: "Building Shared Coding Guidelines for AI (and People Too)"
+author: "Ryan Donovan"
 date: 2026-03-26
+status: SUCCESS
 date_fetched: 2026-05-18
 ---
 

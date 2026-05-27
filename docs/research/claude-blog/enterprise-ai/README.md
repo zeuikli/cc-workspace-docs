@@ -1,5 +1,5 @@
 ---
-title: Enterprise AI Articles
+title: "Enterprise AI Articles"
 type: index
 ---
 

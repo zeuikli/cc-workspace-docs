@@ -1,8 +1,8 @@
 ---
 url: "https://rmax.ai/notes/harness-new-model-agent-systems-2026/"
-title: Harness Engineering Is the Primary Lever for Agent Reliability in 2025–2026
-author: Max
-date: "2026-02-18"
+title: "Harness Engineering Is the Primary Lever for Agent Reliability in 2025–2026"
+author: "Max"
+date: 2026-02-18
 status: success
 ---
 

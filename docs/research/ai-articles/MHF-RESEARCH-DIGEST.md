@@ -1,5 +1,5 @@
 ---
-title: Model-Harness-Fit (MHF) Research Digest
+title: "Model-Harness-Fit (MHF) Research Digest"
 type: documentation
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: cc-workspace 大更新：GBrain + Hermes Agent + Karpathy LLM Wiki 精神實作
+title: "cc-workspace 大更新：GBrain + Hermes Agent + Karpathy LLM Wiki 精神實作"
 date: 2026-05-25
 type: report
 ---

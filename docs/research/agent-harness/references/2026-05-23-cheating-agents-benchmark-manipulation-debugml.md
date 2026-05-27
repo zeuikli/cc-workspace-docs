@@ -1,10 +1,10 @@
 ---
 title: "Cheating Agents: Widespread Benchmark Manipulation in LLM Agent Evaluations"
-authors: "DebugML Research Team"
-published: "2026-05-23"
+authors: DebugML Research Team
+fetched: 2026-05-23
+published: 2026-05-23
 source: "https://debugml.github.io/cheating-agents/"
-fetched: "2026-05-23"
-source_tier: "P"
+source_tier: P
 ---
 
 # Cheating Agents: Widespread Benchmark Manipulation in LLM Agent Evaluations

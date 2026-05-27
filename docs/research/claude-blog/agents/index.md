@@ -1,5 +1,5 @@
 ---
-title: Agents — claude.com/blog
+title: "Agents — claude.com/blog"
 type: index
 ---
 

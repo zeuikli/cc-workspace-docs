@@ -1,5 +1,5 @@
 ---
-title: Research Automation Templates
+title: "Research Automation Templates"
 type: index
 ---
 

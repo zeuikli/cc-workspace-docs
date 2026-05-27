@@ -1,5 +1,5 @@
 ---
-title: Extend Claude Code — 功能總覽與選擇指南
+title: "Extend Claude Code — 功能總覽與選擇指南"
 source: "https://code.claude.com/docs/en/features-overview"
 type: best-practices
 ---

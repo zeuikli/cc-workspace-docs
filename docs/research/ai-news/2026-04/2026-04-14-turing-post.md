@@ -1,5 +1,5 @@
 ---
-title: Turing Post — 2026-04-14
+title: "Turing Post — 2026-04-14"
 date: 2026-04-14
 source: Turing Post
 type: ai-news

@@ -1,5 +1,5 @@
 ---
-title: Hugging Face Blog — 2026-05-26
+title: "Hugging Face Blog — 2026-05-26"
 date: 2026-05-26
 source: Hugging Face Blog
 type: ai-news

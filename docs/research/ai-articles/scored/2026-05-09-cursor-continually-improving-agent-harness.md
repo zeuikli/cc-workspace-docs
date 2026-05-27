@@ -1,8 +1,8 @@
 ---
 url: "https://cursor.com/blog/continually-improving-agent-harness"
 date: 2026-05-09
-source: Cursor Official Blog
 authors: Cursor Research Team
+source: Cursor Official Blog
 tags: [harness-engineering, Terminal-Bench, model-specific-tools, optimization-loop, Model-Harness-Fit]
 ---
 

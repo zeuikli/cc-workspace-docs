@@ -1,5 +1,5 @@
 ---
-title: One Useful Thing — 2026-04-23
+title: "One Useful Thing — 2026-04-23"
 date: 2026-04-23
 source: One Useful Thing
 type: ai-news

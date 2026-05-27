@@ -1,5 +1,5 @@
 ---
-title: Claude Code Hooks 實戰設計模式
+title: "Claude Code Hooks 實戰設計模式"
 source: 官方文件 + 社群實戰
 type: best-practices
 ---

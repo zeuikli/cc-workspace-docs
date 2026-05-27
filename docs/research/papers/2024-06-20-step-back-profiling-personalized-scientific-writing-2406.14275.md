@@ -1,10 +1,10 @@
 ---
 title: "Step-Back Profiling: Distilling User History for Personalized Scientific Writing"
-authors: "Xiangru Tang, Xingyao Zhang, Yanjun Shao, Jie Wu, Yilun Zhao, Arman Cohan, Ming Gong, Dongmei Zhang, Mark Gerstein"
-published: "2024-06-20"
+arxiv_id: 2406.14275
+authors: Xiangru Tang, Xingyao Zhang, Yanjun Shao, Jie Wu, Yilun Zhao, Arman Cohan, Ming Gong, Dongmei Zhang, Mark Gerstein
+published: 2024-06-20
 source: "https://arxiv.org/abs/2406.14275"
-venue: "arXiv"
-arxiv_id: "2406.14275"
+venue: arXiv
 ---
 
 # Step-Back Profiling: Distilling User History for Personalized Scientific Writing

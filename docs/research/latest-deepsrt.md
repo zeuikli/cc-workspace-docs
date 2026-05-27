@@ -1,5 +1,5 @@
 ---
-title: DeepSRT 每日精選 — 2026-05-26
+title: "DeepSRT 每日精選 — 2026-05-26"
 type: documentation
 ---
 

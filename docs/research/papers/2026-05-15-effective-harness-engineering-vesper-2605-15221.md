@@ -1,11 +1,11 @@
 ---
 title: "Effective Harness Engineering for Algorithm Discovery with Coding Agents"
-authors: "Yuto Ishibashi, Yoshinori Yano, Makoto Oyamada"
-published: "2026-05-15"
+arxiv_id: 2605.15221
+authors: Yuto Ishibashi, Yoshinori Yano, Makoto Oyamada
+fetched: 2026-05-23
+published: 2026-05-15
 source: "https://arxiv.org/abs/2605.15221"
-arxiv_id: "2605.15221"
-fetched: "2026-05-23"
-source_tier: "P"
+source_tier: P
 ---
 
 # Effective Harness Engineering for Algorithm Discovery with Coding Agents

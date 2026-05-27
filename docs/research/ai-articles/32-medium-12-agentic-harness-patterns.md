@@ -1,12 +1,10 @@
 ---
 url: "https://medium.com/@simranjeetsingh1497/agent-harness-12-agentic-harness-patterns-from-claude-code-5505b7c239c4"
-alternative_urls:
-  - https://generativeprogrammer.com/p/12-agentic-harness-patterns-from
-  - https://www.epsilla.com/blogs/2026-04-18-deep-dive-12-reusable-agentic-harness-design-patte
-title: 12 Agentic Harness Patterns from Claude Code
+title: "12 Agentic Harness Patterns from Claude Code"
 status: RETRIEVED_FROM_ALTERNATIVE
-original_status: URL_REDIRECT_FAIL
+alternative_urls: ["https://generativeprogrammer.com/p/12-agentic-harness-patterns-from", "https://www.epsilla.com/blogs/2026-04-18-deep-dive-12-reusable-agentic-harness-design-patte"]
 date_retrieved: 2026-05-18
+original_status: URL_REDIRECT_FAIL
 ---
 
 # 12 Agentic Harness Patterns from Claude Code

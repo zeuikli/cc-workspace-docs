@@ -1,8 +1,8 @@
 ---
 title: "Designing Agentic Loops"
-source: "https://simonwillison.net/2025/Sep/30/designing-agentic-loops/"
 author: "Simon Willison"
-date: "2025-09-30"
+date: 2025-09-30
+source: "https://simonwillison.net/2025/Sep/30/designing-agentic-loops/"
 tags: [agent-harness, research]
 ---
 

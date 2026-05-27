@@ -1,5 +1,5 @@
 ---
-title: The Rundown AI — 2026-05-19
+title: "The Rundown AI — 2026-05-19"
 date: 2026-05-19
 source: The Rundown AI
 type: ai-news

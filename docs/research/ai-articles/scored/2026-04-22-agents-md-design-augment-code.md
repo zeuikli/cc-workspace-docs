@@ -1,6 +1,6 @@
 ---
 url: "https://www.augmentcode.com/blog/how-to-write-good-agents-dot-md-files"
-title: A Good AGENTS.md is a Model Upgrade
+title: "A Good AGENTS.md is a Model Upgrade"
 date: 2026-04-22
 type: article
 ---

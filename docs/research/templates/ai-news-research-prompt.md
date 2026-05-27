@@ -1,5 +1,5 @@
 ---
-title: AI News 目錄深度研究 Prompt
+title: "AI News 目錄深度研究 Prompt"
 type: template
 ---
 

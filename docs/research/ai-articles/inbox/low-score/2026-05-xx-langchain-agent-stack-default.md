@@ -1,11 +1,11 @@
 ---
 url: "https://medium.com/@sehaj23chawla/langsmith-and-langgraph-in-2026-how-langchains-agent-stack-quietly-became-the-default-f1609af5d658"
 date: 2026-05
-source: Medium
 authors: SC (Sehaj Chawla)
-tags: [langchain, langgraph, langsmith, agent-orchestration, competitive-analysis]
-score: 5.85
 reason: Low score — competitive analysis; LangGraph/Claude different harness philosophies
+score: 5.85
+source: Medium
+tags: [langchain, langgraph, langsmith, agent-orchestration, competitive-analysis]
 ---
 
 # LangSmith and LangGraph in 2026: How LangChain's Agent Stack Quietly Became the Default

@@ -1,10 +1,10 @@
 ---
 title: "A Survey on the Security of Long-Term Memory in LLM Agents: Toward Mnemonic Sovereignty"
-authors: "Zehao Lin, Chunyu Li, Kai Chen"
+arxiv_id: 2604.16548
+authors: Zehao Lin, Chunyu Li, Kai Chen
 published: 2026-04-17
 source: "https://arxiv.org/abs/2604.16548"
 source_tier: P
-arxiv_id: 2604.16548
 ---
 
 # A Survey on the Security of Long-Term Memory in LLM Agents: Toward Mnemonic Sovereignty

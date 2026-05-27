@@ -1,5 +1,5 @@
 ---
-title: Claude Code 新功能彙整 2026 Q1 — /simplify · /batch · /insights
+title: "Claude Code 新功能彙整 2026 Q1 — /simplify · /batch · /insights"
 source: "> - https://x.com/bcherny/status/2027534984534544489"
 type: best-practices
 ---

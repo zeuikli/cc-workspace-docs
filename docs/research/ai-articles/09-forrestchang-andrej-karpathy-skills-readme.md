@@ -1,7 +1,7 @@
 ---
 url: "https://github.com/forrestchang/andrej-karpathy-skills"
-title: Andrej Karpathy Skills - Claude Code Guidelines (GitHub Repository)
-author: Forrest Chang
+title: "Andrej Karpathy Skills - Claude Code Guidelines (GitHub Repository)"
+author: "Forrest Chang"
 date: 2026
 status: SUCCESS
 ---

@@ -1,5 +1,5 @@
 ---
-title: Boris Cherny 實際 GitHub 設定完整解析
+title: "Boris Cherny 實際 GitHub 設定完整解析"
 source: "https://github.com/0xquinto/bcherny-claude"
 type: best-practices
 ---

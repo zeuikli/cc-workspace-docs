@@ -1,5 +1,5 @@
 ---
-title: 一份好的文件，能讓 Haiku 執行得像 Opus 一樣好？
+title: "一份好的文件，能讓 Haiku 執行得像 Opus 一樣好？"
 date: 2026-04-29
 type: article
 ---

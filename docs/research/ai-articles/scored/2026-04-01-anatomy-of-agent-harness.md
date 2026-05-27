@@ -1,5 +1,5 @@
 ---
-title: The Anatomy of an Agent Harness
+title: "The Anatomy of an Agent Harness"
 date: 2026-04-01
 type: article
 ---

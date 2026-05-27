@@ -1,5 +1,5 @@
 ---
-title: Stop Using /init for AGENTS.md
+title: "Stop Using /init for AGENTS.md"
 published: 2026-02-23
 source_tier: P
 ---

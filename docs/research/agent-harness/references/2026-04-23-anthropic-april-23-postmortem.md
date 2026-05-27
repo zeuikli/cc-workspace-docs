@@ -1,8 +1,8 @@
 ---
 title: "An update on recent Claude Code quality reports"
-source: "https://www.anthropic.com/engineering/april-23-postmortem"
 author: "Anthropic"
-date: "2026-04-23"
+date: 2026-04-23
+source: "https://www.anthropic.com/engineering/april-23-postmortem"
 tags: [agent-harness, anthropic, research, claude-code, quality]
 ---
 

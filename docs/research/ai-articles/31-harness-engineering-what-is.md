@@ -1,12 +1,10 @@
 ---
 url: "https://harness-engineering.ai/blog/what-is-harness-engineering/"
-alternative_urls:
-  - https://atlan.com/know/what-is-harness-engineering/
-  - https://medium.com/@adnanmasood/agent-harness-engineering-the-rise-of-the-ai-control-plane-938ead884b1d
-title: What Is Harness Engineering? (Alternative Sources)
+title: "What Is Harness Engineering? (Alternative Sources)"
 status: ALTERNATIVE_SOURCE_RETRIEVED
-original_status: URL_NOT_FOUND
+alternative_urls: ["https://atlan.com/know/what-is-harness-engineering/", "https://medium.com/@adnanmasood/agent-harness-engineering-the-rise-of-the-ai-control-plane-938ead884b1d"]
 date_updated: 2026-05-18
+original_status: URL_NOT_FOUND
 ---
 
 # Harness Engineering：什麼是 Harness Engineering？

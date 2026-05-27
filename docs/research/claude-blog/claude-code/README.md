@@ -1,5 +1,5 @@
 ---
-title: Claude Code Articles
+title: "Claude Code Articles"
 type: index
 ---
 

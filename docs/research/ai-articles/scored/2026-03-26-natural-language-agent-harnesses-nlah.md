@@ -1,6 +1,6 @@
 ---
 url: "https://arxiv.org/html/2603.25723v1"
-title: Natural-Language Agent Harnesses (NLAH)
+title: "Natural-Language Agent Harnesses (NLAH)"
 date: 2026-03-26
 type: article
 ---

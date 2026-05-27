@@ -1,9 +1,9 @@
 ---
 title: "Generative Agents: Interactive Simulacra of Human Behavior"
 authors: "Joon Sung Park, Joseph C. O'Brien, Carrie J. Cai, Meredith Ringel Morris, Percy Liang, Michael S. Bernstein"
-published: "2023-04-07"
+published: 2023-04-07
 source: "https://arxiv.org/abs/2304.03442"
-venue: "UIST 2023"
+venue: UIST 2023
 ---
 
 # Generative Agents: Interactive Simulacra of Human Behavior

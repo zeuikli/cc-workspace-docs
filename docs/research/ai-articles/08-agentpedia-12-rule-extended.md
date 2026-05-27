@@ -1,7 +1,7 @@
 ---
 url: "https://agentpedia.codes/blog/karpathy-claude-md-rules-extended"
-title: Karpathy CLAUDE.md Rules + 8 More - The 12-Rule Template (2026)
-author: Agentpedia Codes
+title: "Karpathy CLAUDE.md Rules + 8 More - The 12-Rule Template (2026)"
+author: "Agentpedia Codes"
 date: 2026-05-11
 status: SUCCESS
 ---

@@ -1,9 +1,9 @@
 ---
 url: "https://github.com/anthropics/claude-code/issues/7336"
-source_file: ../2026-05-12-github-7336-mcp-lazy-loading.md
 date: 2026-05-12
 scored: 2026-05-16
 source: GitHub Issues — anthropics/claude-code
+source_file: ../2026-05-12-github-7336-mcp-lazy-loading.md
 source_tier: C
 tags: [mcp, lazy-loading, token-overhead, context-management, feature-request]
 ---

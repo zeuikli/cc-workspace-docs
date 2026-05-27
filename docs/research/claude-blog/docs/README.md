@@ -1,5 +1,5 @@
 ---
-title: Claude Blog Analysis Docs
+title: "Claude Blog Analysis Docs"
 type: index
 ---
 

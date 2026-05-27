@@ -1,5 +1,5 @@
 ---
-title: research/tweets 深度研究報告
+title: "research/tweets 深度研究報告"
 date: 2026-05-15
 type: report
 ---

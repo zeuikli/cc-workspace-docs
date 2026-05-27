@@ -1,7 +1,7 @@
 ---
 title: "Dive into Claude Code: The Design Space of Today's and Future AI Agent Systems"
-authors: "Jiacheng Liu, Xiaohan Zhao, Xinyi Shang, Zhiqiang Shen"
-published: "2026-04-14"
+authors: Jiacheng Liu, Xiaohan Zhao, Xinyi Shang, Zhiqiang Shen
+published: 2026-04-14
 source: "https://arxiv.org/abs/2604.14228"
 ---
 

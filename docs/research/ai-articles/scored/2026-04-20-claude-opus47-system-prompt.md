@@ -1,6 +1,6 @@
 ---
 url: "https://github.com/elder-plinius/CL4R1T4S/blob/main/ANTHROPIC/Claude-Opus-4.7.txt"
-title: Claude Opus 4.7 官方洩漏 System Prompt
+title: "Claude Opus 4.7 官方洩漏 System Prompt"
 date: 2026-04-20
 type: article
 ---

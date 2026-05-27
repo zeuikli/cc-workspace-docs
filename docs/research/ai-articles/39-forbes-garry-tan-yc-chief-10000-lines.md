@@ -1,7 +1,7 @@
 ---
 url: "https://www.forbes.com/sites/josipamajic/2026/04/12/the-yc-chief-who-codes-10000-lines-a-day-has-a-simple-secret/"
-title: The YC Chief Who Codes 10,000 Lines A Day Has A Simple Secret
-author: Josipa Majic Predin (Forbes Contributor)
+title: "The YC Chief Who Codes 10,000 Lines A Day Has A Simple Secret"
+author: "Josipa Majic Predin (Forbes Contributor)"
 date: 2026-04-12
 status: SUCCESS
 ---

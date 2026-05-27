@@ -1,6 +1,6 @@
 ---
-title: Terminal-Bench 2.0 Leaderboard
 url: "https://www.tbench.ai/leaderboard/terminal-bench/2.0"
+title: "Terminal-Bench 2.0 Leaderboard"
 domain: tbench.ai
 fetched: 2026-05-12
 source_tier: C

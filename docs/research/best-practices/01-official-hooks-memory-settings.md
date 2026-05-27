@@ -1,5 +1,5 @@
 ---
-title: Claude Code 官方 Hooks / Memory / Settings 最佳實踐
+title: "Claude Code 官方 Hooks / Memory / Settings 最佳實踐"
 source: code.claude.com 官方文件
 type: best-practices
 ---

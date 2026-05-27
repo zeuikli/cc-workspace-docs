@@ -1,5 +1,5 @@
 ---
-title: Academic Paper Archive
+title: "Academic Paper Archive"
 type: index
 ---
 

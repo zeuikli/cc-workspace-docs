@@ -1,5 +1,5 @@
 ---
-title: Not Boring — 2026-05-26
+title: "Not Boring — 2026-05-26"
 date: 2026-05-26
 source: Not Boring
 type: ai-news

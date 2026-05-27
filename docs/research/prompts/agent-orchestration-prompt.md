@@ -1,5 +1,5 @@
 ---
-title: Sub-Agent 協作與記憶架構
+title: "Sub-Agent 協作與記憶架構"
 type: prompt
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Claude Codeでハーネスエンジニアリングを実践する — 5層の設計パターン
+title: "Claude Codeでハーネスエンジニアリングを実践する — 5層の設計パターン"
 date: 2026-04-15
 type: article
 ---

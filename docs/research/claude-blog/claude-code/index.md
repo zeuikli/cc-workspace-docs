@@ -1,5 +1,5 @@
 ---
-title: Claude Code — claude.com/blog
+title: "Claude Code — claude.com/blog"
 type: index
 ---
 

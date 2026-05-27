@@ -1,5 +1,5 @@
 ---
-title: Latent Space — 2026-04-21
+title: "Latent Space — 2026-04-21"
 date: 2026-04-21
 source: Latent Space
 type: ai-news

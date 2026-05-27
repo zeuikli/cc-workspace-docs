@@ -1,7 +1,7 @@
 ---
 title: "SkillLearnBench: Benchmarking Continual Skill Learning for Language Model Agents"
-authors: "Yiwei Qin, Weiran Xu, Yifei Li, Zhiqiang Hu, Xuefeng Li, Pengfei Liu"
-published: "2026-04-22"
+authors: Yiwei Qin, Weiran Xu, Yifei Li, Zhiqiang Hu, Xuefeng Li, Pengfei Liu
+published: 2026-04-22
 source: "https://arxiv.org/abs/2604.20087"
 ---
 

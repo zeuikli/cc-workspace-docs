@@ -1,5 +1,5 @@
 ---
-title: AI Coding Agent 最佳準則（Karpathy × Mnilax 精煉版）
+title: "AI Coding Agent 最佳準則（Karpathy × Mnilax 精煉版）"
 date: 2026-05-18
 type: report
 ---

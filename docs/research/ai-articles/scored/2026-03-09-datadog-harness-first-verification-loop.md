@@ -1,8 +1,8 @@
 ---
 url: "https://www.datadoghq.com/blog/ai/harness-first-agents/"
 date: 2026-03-09
-source: Datadog AI Blog
 authors: Datadog Engineering
+source: Datadog AI Blog
 tags: [harness-first, verification, formal-methods, observability, DST]
 ---
 

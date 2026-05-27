@@ -1,8 +1,8 @@
 ---
 url: "https://towardsdatascience.com/the-reality-of-vibe-coding-ai-agents-and-the-security-debt-crisis"
 title: "The Reality of Vibe Coding: AI Agents and the Security Debt Crisis"
-author: Reya Vir
-date: "2026-02-22"
+author: "Reya Vir"
+date: 2026-02-22
 status: success
 ---
 

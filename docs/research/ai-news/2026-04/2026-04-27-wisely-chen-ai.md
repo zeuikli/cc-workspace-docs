@@ -1,5 +1,5 @@
 ---
-title: Wisely Chen AI — 2026-04-27
+title: "Wisely Chen AI — 2026-04-27"
 date: 2026-04-27
 source: Wisely Chen AI
 type: ai-news

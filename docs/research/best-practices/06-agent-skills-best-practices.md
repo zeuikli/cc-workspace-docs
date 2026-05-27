@@ -1,5 +1,5 @@
 ---
-title: Agent Skills Authoring Best Practices
+title: "Agent Skills Authoring Best Practices"
 source: "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices"
 type: best-practices
 ---

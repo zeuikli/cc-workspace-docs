@@ -1,5 +1,5 @@
 ---
-title: research/ai-news 深度研究報告
+title: "research/ai-news 深度研究報告"
 date: 2026-05-16
 type: report
 ---

@@ -1,5 +1,5 @@
 ---
-title: AGENTS.md 研究文章整合索引
+title: "AGENTS.md 研究文章整合索引"
 type: documentation
 ---
 

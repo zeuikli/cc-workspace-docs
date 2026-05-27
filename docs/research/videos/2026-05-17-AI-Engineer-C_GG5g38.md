@@ -1,11 +1,11 @@
 ---
 title: "Harnesses in AI: A Deep Dive — Tejas Kumar, IBM"
-source: "https://www.youtube.com/watch?v=C_GG5g38vLU"
-creator: Tejas Kumar
 date: 2026-05-17
-type: video
+creator: Tejas Kumar
 duration: "20:26"
 platform: youtube
+source: "https://www.youtube.com/watch?v=C_GG5g38vLU"
+type: video
 ---
 
 # Harnesses in AI: A Deep Dive — Tejas Kumar, IBM

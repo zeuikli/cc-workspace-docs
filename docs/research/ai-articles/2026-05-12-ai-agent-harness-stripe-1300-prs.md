@@ -1,6 +1,6 @@
 ---
-title: What Is an AI Agent Harness? The Architecture Behind Stripe's 1,300 Weekly AI Pull Requests
 url: "https://www.mindstudio.ai/blog/what-is-ai-agent-harness-stripe-minions"
+title: "What Is an AI Agent Harness? The Architecture Behind Stripe's 1,300 Weekly AI Pull Requests"
 domain: mindstudio.ai
 fetched: 2026-05-12
 source_tier: C

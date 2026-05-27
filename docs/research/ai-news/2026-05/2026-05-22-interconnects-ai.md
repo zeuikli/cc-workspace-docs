@@ -1,5 +1,5 @@
 ---
-title: Interconnects AI — 2026-05-22
+title: "Interconnects AI — 2026-05-22"
 date: 2026-05-22
 source: Interconnects AI
 type: ai-news

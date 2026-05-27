@@ -1,5 +1,5 @@
 ---
-title: Ahead of AI — 2026-05-18
+title: "Ahead of AI — 2026-05-18"
 date: 2026-05-18
 source: Ahead of AI
 type: ai-news

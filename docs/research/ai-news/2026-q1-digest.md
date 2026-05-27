@@ -1,5 +1,5 @@
 ---
-title: 2026 Q1 AI 新聞完整摘要
+title: "2026 Q1 AI 新聞完整摘要"
 date: 2026-01-01
 source: "18 份 newsletter（155 篇文章）— Interconnects、Ben's Bites、Import AI、Wisely Chen AI、Chain of Thought、Turing Post、AlphaSignal、Last Week in AI、Ahead of AI、One Useful Thing、Smol AI News、TheSequence、The Rundown AI、Latent Space、The Decoder、The Neuron、TLDR AI、Turing Post"
 type: ai-news

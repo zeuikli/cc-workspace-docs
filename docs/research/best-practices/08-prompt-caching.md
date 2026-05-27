@@ -1,5 +1,5 @@
 ---
-title: Prompt Caching — 完整技術指南
+title: "Prompt Caching — 完整技術指南"
 source: "https://platform.claude.com/docs/en/build-with-claude/prompt-caching"
 type: best-practices
 ---

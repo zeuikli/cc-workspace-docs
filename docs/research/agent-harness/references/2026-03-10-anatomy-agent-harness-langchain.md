@@ -1,8 +1,8 @@
 ---
 title: "The Anatomy of an Agent Harness"
-source: "https://www.langchain.com/blog/the-anatomy-of-an-agent-harness"
 author: "Vivek Trivedy"
-date: "2026-03-10"
+date: 2026-03-10
+source: "https://www.langchain.com/blog/the-anatomy-of-an-agent-harness"
 tags: [agent-harness, research]
 ---
 

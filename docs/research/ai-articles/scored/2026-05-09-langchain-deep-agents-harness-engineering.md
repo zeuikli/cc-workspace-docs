@@ -1,8 +1,8 @@
 ---
 url: "https://www.langchain.com/blog/improving-deep-agents-with-harness-engineering"
 date: 2026-05-09
-source: LangChain Official Blog
 authors: LangChain Team
+source: LangChain Official Blog
 tags: [harness-engineering, reasoning-sandwich, middleware-hooks, Terminal-Bench, +13.7-points]
 ---
 

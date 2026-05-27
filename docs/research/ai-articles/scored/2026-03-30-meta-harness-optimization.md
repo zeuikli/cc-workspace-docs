@@ -1,10 +1,10 @@
 ---
-title: "Meta-Harness: End-to-End Optimization of Model Harnesses"
 url: "https://arxiv.org/html/2603.28052v1"
-domain: arxiv.org
+title: "Meta-Harness: End-to-End Optimization of Model Harnesses"
 author: "Yoonho Lee, Roshen Nair, Qizheng Zhang, Kangwook Lee, Omar Khattab, Chelsea Finn (Stanford / KRAFTON / MIT)"
-published: 2026-03-30
 archived: 2026-05-16
+domain: arxiv.org
+published: 2026-03-30
 tags: [meta-learning, harness-engineering, agent, llm-optimization, terminal-bench, coding-agent]
 word_count: 約 11938 字
 ---

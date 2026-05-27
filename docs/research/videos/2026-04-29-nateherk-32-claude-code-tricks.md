@@ -1,7 +1,7 @@
 ---
 title: "32 Tricks to Level Up Claude Code in 16 Mins — @nateherk"
-creator: Nate Herk
 date: 2026-04-27
+creator: Nate Herk
 type: video
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Agentic 架構 + 開發工具 — 分析 Prompt
+title: "Agentic 架構 + 開發工具 — 分析 Prompt"
 type: prompt
 ---
 

@@ -1,10 +1,10 @@
 ---
-title: "Model-Harness Fit"
 url: "https://nicolasbustamante.com/blog/model-harness-fit"
-domain: nicolasbustamante.com
-author: Nicolas Bustamante
-published: 未知
+title: "Model-Harness Fit"
+author: "Nicolas Bustamante"
 archived: 2026-05-16
+domain: nicolasbustamante.com
+published: 未知
 tags: [model-harness, agent, claude-code, codex, copilot, post-training]
 word_count: 約 620 字
 ---

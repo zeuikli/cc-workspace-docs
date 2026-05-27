@@ -1,5 +1,5 @@
 ---
-title: Skills for Enterprise — 治理、安全審查與組織部署指南
+title: "Skills for Enterprise — 治理、安全審查與組織部署指南"
 source: "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/enterprise"
 type: best-practices
 ---

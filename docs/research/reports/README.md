@@ -1,5 +1,5 @@
 ---
-title: Research Reports
+title: "Research Reports"
 type: index
 ---
 

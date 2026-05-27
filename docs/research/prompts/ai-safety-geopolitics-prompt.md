@@ -1,5 +1,5 @@
 ---
-title: AI 地緣政治 + 對齊安全 — 分析 Prompt
+title: "AI 地緣政治 + 對齊安全 — 分析 Prompt"
 type: prompt
 ---
 

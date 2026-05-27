@@ -1,6 +1,6 @@
 ---
-title: Can AI agents build real Stripe integrations? We built a benchmark to find out
 url: "https://stripe.com/blog/can-ai-agents-build-real-stripe-integrations"
+title: "Can AI agents build real Stripe integrations? We built a benchmark to find out"
 domain: stripe.com
 fetched: 2026-05-12
 source_tier: C

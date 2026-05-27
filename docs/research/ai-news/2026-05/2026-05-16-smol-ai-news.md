@@ -1,5 +1,5 @@
 ---
-title: Smol AI News — 2026-05-16
+title: "Smol AI News — 2026-05-16"
 date: 2026-05-16
 source: Smol AI News
 type: ai-news

@@ -1,5 +1,5 @@
 ---
-title: Thariq Claude Code Tips — Skill 設計、Session 管理與 Prompt Caching
+title: "Thariq Claude Code Tips — Skill 設計、Session 管理與 Prompt Caching"
 source: shanraisshan/claude-code-best-practice · Thariq
 type: best-practices
 ---

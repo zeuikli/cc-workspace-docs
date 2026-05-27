@@ -1,7 +1,7 @@
 ---
 url: "https://pyshine.com/Andrej-Karpathy-Skills-LLM-Coding-Guidelines/"
-title: Andrej Karpathy Skills - LLM Coding Guidelines That Prevent Common Mistakes
-author: PyShine
+title: "Andrej Karpathy Skills - LLM Coding Guidelines That Prevent Common Mistakes"
+author: "PyShine"
 date: 2026-04-09
 status: SUCCESS
 ---

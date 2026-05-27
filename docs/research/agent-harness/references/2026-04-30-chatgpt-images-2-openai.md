@@ -1,8 +1,8 @@
 ---
 title: "Introducing ChatGPT Images 2.0"
-source: "https://openai.com/index/introducing-chatgpt-images-2-0/"
 author: "OpenAI"
-date: "2026-04-30"
+date: 2026-04-30
+source: "https://openai.com/index/introducing-chatgpt-images-2-0/"
 tags: [agent-harness, research]
 ---
 

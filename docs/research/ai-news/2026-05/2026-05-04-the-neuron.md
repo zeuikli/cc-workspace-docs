@@ -1,5 +1,5 @@
 ---
-title: The Neuron — 2026-05-04
+title: "The Neuron — 2026-05-04"
 date: 2026-05-04
 source: The Neuron
 type: ai-news

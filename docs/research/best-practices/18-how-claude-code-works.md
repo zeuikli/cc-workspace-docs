@@ -1,5 +1,5 @@
 ---
-title: How Claude Code Works — Agentic Loop、Tools、Context 管理
+title: "How Claude Code Works — Agentic Loop、Tools、Context 管理"
 source: "https://code.claude.com/docs/en/how-claude-code-works"
 type: best-practices
 ---

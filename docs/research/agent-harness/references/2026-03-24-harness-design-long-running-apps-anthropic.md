@@ -1,8 +1,8 @@
 ---
 title: "Harness Design for Long-Running Application Development"
-source: "https://www.anthropic.com/engineering/harness-design-long-running-apps"
 author: "Prithvi Rajasekaran"
-date: "2026-03-24"
+date: 2026-03-24
+source: "https://www.anthropic.com/engineering/harness-design-long-running-apps"
 tags: [agent-harness, anthropic, research, harness-design, multi-agent]
 ---
 

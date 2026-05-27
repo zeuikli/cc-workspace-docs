@@ -1,5 +1,5 @@
 ---
-title: MCP (Model Context Protocol) 整合完整指南
+title: "MCP (Model Context Protocol) 整合完整指南"
 source: "https://code.claude.com/docs/en/mcp"
 type: best-practices
 ---

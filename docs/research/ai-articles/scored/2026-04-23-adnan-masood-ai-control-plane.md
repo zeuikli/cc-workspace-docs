@@ -1,10 +1,10 @@
 ---
 url: "https://medium.com/@adnanmasood/agent-harness-engineering-the-rise-of-the-ai-control-plane-938ead884b1d"
 date: 2026-04-23
-source: Medium (Adnan Masood, PhD)
 authors: Adnan Masood
-tags: [control-plane, harness-architecture, PEV-loop, cost-optimization, MCP]
 related: research/agent-harness/references/2026-04-adnan-masood-agent-control-plane.md
+source: Medium (Adnan Masood, PhD)
+tags: [control-plane, harness-architecture, PEV-loop, cost-optimization, MCP]
 ---
 
 # Agent Harness Engineering — The Rise of the AI Control Plane

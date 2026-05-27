@@ -1,11 +1,11 @@
 ---
 title: "Adapting the Interface, Not the Model: Runtime Harness Adaptation for Deterministic LLM Agents"
-authors: "Tianshi Xu, Huifeng Wen, Meng Li"
-published: "2026-05-21"
+arxiv_id: 2605.22166
+authors: Tianshi Xu, Huifeng Wen, Meng Li
+fetched: 2026-05-23
+published: 2026-05-21
 source: "https://arxiv.org/abs/2605.22166"
-arxiv_id: "2605.22166"
-fetched: "2026-05-23"
-source_tier: "P"
+source_tier: P
 ---
 
 # Adapting the Interface, Not the Model: Runtime Harness Adaptation for Deterministic LLM Agents

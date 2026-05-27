@@ -1,8 +1,8 @@
 ---
-status: SUCCESS
 url: "https://github.com/ciembor/agent-rules-books"
-repository: ciembor/agent-rules-books
+status: SUCCESS
 date_fetched: 2026-05-18
+repository: ciembor/agent-rules-books
 ---
 
 # 37. GitHub: Agent Rules Books

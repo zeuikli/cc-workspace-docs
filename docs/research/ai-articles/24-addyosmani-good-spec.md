@@ -1,8 +1,8 @@
 ---
 url: "https://addyosmani.com/blog/good-spec/"
-title: How to Write a Good Spec for AI Agents
-author: Addy Osmani
-date: "2026-01-13"
+title: "How to Write a Good Spec for AI Agents"
+author: "Addy Osmani"
+date: 2026-01-13
 status: success
 ---
 

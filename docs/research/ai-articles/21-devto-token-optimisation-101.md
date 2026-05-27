@@ -1,8 +1,8 @@
 ---
 url: "https://dev.to/stevengonsalvez/token-optimisation-101-stop-burning-money-on-ai-coding-agents-4mce"
 title: "Token Optimisation 101: Stop Burning Money on AI Coding Agents"
-author: Steven Gonsalvez
-date: "2026-04-26"
+author: "Steven Gonsalvez"
+date: 2026-04-26
 status: success
 ---
 

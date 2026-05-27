@@ -1,5 +1,5 @@
 ---
-title: The Decoder — 2026-05-20
+title: "The Decoder — 2026-05-20"
 date: 2026-05-20
 source: The Decoder
 type: ai-news

@@ -1,7 +1,7 @@
 ---
 title: "Meta-Harness: End-to-End Optimization of Model Harnesses"
-authors: "Yoonho Lee, Roshen Nair, Qizheng Zhang, Kangwook Lee, Omar Khattab, Chelsea Finn"
-published: "2026-03-30"
+authors: Yoonho Lee, Roshen Nair, Qizheng Zhang, Kangwook Lee, Omar Khattab, Chelsea Finn
+published: 2026-03-30
 source: "https://arxiv.org/html/2603.28052v1"
 ---
 

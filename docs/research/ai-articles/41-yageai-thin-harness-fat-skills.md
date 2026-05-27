@@ -1,7 +1,7 @@
 ---
 url: "https://yage.ai/share/thin-harness-fat-skills-en-20260414.html"
 title: "Garry Tan's Thin Harness, Fat Skills: Five Concepts Unpacked"
-author: Garry Tan (Yage AI)
+author: "Garry Tan (Yage AI)"
 date: 2026-04-14
 status: SUCCESS
 ---

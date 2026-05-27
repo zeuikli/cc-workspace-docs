@@ -1,5 +1,5 @@
 ---
-title: Sandboxing — OS 層隔離技術詳解
+title: "Sandboxing — OS 層隔離技術詳解"
 source: "https://code.claude.com/docs/en/sandboxing"
 type: best-practices
 ---

@@ -1,8 +1,8 @@
 ---
 url: "https://shiftmag.dev/a-non-engineer-look-at-vibe-coding-mistakes-and-how-to-avoid-them-9255/"
-title: A Non-Engineer Look at Vibe Coding Mistakes (And How to Avoid Them)
-author: Ivan Simic
-date: "2026-04-29"
+title: "A Non-Engineer Look at Vibe Coding Mistakes (And How to Avoid Them)"
+author: "Ivan Simic"
+date: 2026-04-29
 status: success
 ---
 

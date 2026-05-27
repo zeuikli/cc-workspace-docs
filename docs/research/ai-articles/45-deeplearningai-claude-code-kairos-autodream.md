@@ -1,7 +1,7 @@
 ---
 url: "https://www.deeplearning.ai/the-batch/claude-codes-source-code-leaked-exposing-potential-future-features-kairos-and-autodream/"
 title: "Claude Code's Source Code Leaked - Exposing Potential Future Features: KAIROS and autoDream"
-author: DeepLearning.AI
+author: "DeepLearning.AI"
 date: 2026-03-31
 status: SUCCESS
 ---

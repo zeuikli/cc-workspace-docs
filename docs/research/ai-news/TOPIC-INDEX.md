@@ -1,5 +1,5 @@
 ---
-title: AI News 主題索引
+title: "AI News 主題索引"
 type: documentation
 ---
 

@@ -1,8 +1,8 @@
 ---
 url: "https://cobusgreyling.medium.com/auto-agentic-harness-engineering-b27a962fad9a"
 date: 2026-05-02
-source: Medium (Cobus Greyling)
 authors: Cobus Greyling
+source: Medium (Cobus Greyling)
 tags: [auto-harness, falsifiable-prediction, harness-portability, control-plane]
 ---
 

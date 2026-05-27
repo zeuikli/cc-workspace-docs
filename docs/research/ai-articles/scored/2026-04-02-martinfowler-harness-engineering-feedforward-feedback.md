@@ -1,8 +1,8 @@
 ---
 url: "https://martinfowler.com/articles/harness-engineering.html"
 date: 2026-04-02
-source: Martin Fowler Blog (by Birgitta Böckeler, Thoughtworks)
 authors: Birgitta Böckeler
+source: Martin Fowler Blog (by Birgitta Böckeler, Thoughtworks)
 tags: [harness-design, feedforward, feedback, control-theory, coding-agents]
 ---
 

@@ -1,7 +1,7 @@
 ---
 url: "https://moonsat.medium.com/thin-harness-fat-skills-a3dd6d2fe2af"
-title: Thin Harness, Fat Skills — Steve Yegge's Framework
-author: Moonsat
+title: "Thin Harness, Fat Skills — Steve Yegge's Framework"
+author: "Moonsat"
 date: 2026-04-13
 status: SUCCESS
 ---

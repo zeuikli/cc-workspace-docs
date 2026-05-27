@@ -1,5 +1,5 @@
 ---
-title: TheSequence — 2026-04-29
+title: "TheSequence — 2026-04-29"
 date: 2026-04-29
 source: TheSequence
 type: ai-news

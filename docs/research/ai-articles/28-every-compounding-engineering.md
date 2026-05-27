@@ -1,10 +1,10 @@
 ---
 url: "https://every.to/c/compounding-engineering"
-alternative_url: "https://every.to/chain-of-thought/compound-engineering-how-every-codes-with-agents"
-title: Compound Engineering — How Every Codes with Agents
-authors: Dan Shipper, Kieran Klaassen
+title: "Compound Engineering — How Every Codes with Agents"
 date: 2025-12-11 (Updated 2026-04-06)
 status: RETRIEVED_FROM_ALTERNATIVE
+alternative_url: "https://every.to/chain-of-thought/compound-engineering-how-every-codes-with-agents"
+authors: Dan Shipper, Kieran Klaassen
 original_status: URL_NOT_FULLY_ACCESSIBLE
 ---
 

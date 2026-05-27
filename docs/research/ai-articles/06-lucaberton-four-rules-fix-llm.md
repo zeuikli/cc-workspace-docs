@@ -1,7 +1,7 @@
 ---
 url: "https://lucaberton.com/blog/karpathy-claude-md-llm-coding-principles-2026/"
-title: Karpathy's CLAUDE.md - 4 Principles for Better LLM Coding
-author: Luca Berton
+title: "Karpathy's CLAUDE.md - 4 Principles for Better LLM Coding"
+author: "Luca Berton"
 date: 2026
 status: SUCCESS
 ---

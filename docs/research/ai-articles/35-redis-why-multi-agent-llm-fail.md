@@ -1,9 +1,9 @@
 ---
-status: SUCCESS
 url: "https://redis.io/blog/why-multi-agent-llm-systems-fail/"
-title: Why Multi-Agent LLM Systems Fail & How to Fix Them
-author: Jim Allen Wallace
+title: "Why Multi-Agent LLM Systems Fail & How to Fix Them"
+author: "Jim Allen Wallace"
 date: 2026-04-22
+status: SUCCESS
 date_fetched: 2026-05-18
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: "Agent Harness Engineering"
-source: "https://addyosmani.com/blog/agent-harness-engineering/"
 author: "Addy Osmani"
-date: "2026-04-30"
+date: 2026-04-30
+source: "https://addyosmani.com/blog/agent-harness-engineering/"
 tags: [agent-harness, research]
 ---
 

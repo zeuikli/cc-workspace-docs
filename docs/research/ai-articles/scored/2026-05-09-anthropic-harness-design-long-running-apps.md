@@ -1,8 +1,8 @@
 ---
 url: "https://www.anthropic.com/engineering/harness-design-long-running-apps"
 date: 2026-05-09
-source: Anthropic Official Engineering Blog
 authors: Anthropic Team
+source: Anthropic Official Engineering Blog
 tags: [harness-design, agent-architecture, evaluator-agent, Model-Harness-Fit]
 ---
 

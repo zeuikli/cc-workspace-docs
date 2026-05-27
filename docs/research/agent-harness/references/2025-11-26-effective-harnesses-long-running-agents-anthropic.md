@@ -1,8 +1,8 @@
 ---
 title: "Effective harnesses for long-running agents"
-source: "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents"
 author: "Justin Young"
-date: "2025-11-26"
+date: 2025-11-26
+source: "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents"
 tags: [agent-harness, anthropic, research, long-running-agents]
 ---
 

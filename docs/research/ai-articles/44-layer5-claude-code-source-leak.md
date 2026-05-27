@@ -1,7 +1,7 @@
 ---
 url: "https://layer5.io/blog/engineering/the-claude-code-source-leak-512000-lines-a-missing-npmignore-and-the-fastest-growing-repo-in-github-history/"
 title: "The Claude Code Source Leak: 512,000 Lines, A Missing .npmignore, and the Fastest Growing Repo in GitHub History"
-author: Layer5
+author: "Layer5"
 date: 2026-03-31
 status: SUCCESS
 ---

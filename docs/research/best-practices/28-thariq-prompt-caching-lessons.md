@@ -1,5 +1,5 @@
 ---
-title: Prompt Caching 核心教訓 — Thariq Shihipar（Claude Code 團隊）
+title: "Prompt Caching 核心教訓 — Thariq Shihipar（Claude Code 團隊）"
 source: "https://claude.com/blog/lessons-from-building-claude-code-prompt-caching-is-everything"
 type: best-practices
 ---

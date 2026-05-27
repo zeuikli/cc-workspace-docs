@@ -1,8 +1,8 @@
 ---
 url: "https://simonwillison.net/2026/May/6/vibe-coding-and-agentic-engineering/"
 date: 2026-05-06
-source: Simon Willison's Weblog
 authors: Simon Willison
+source: "Simon Willison's Weblog"
 tags: [vibe-coding, code-review, agentic-engineering, productivity, review-culture]
 ---
 

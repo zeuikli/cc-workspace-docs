@@ -1,7 +1,7 @@
 ---
 url: "https://www.blog.brightcoding.dev/2026/04/29/karpathy-skills-the-revolutionary-llm-coding-manifesto"
-title: Karpathy Skills - The Revolutionary LLM Coding Manifesto
-author: Bright Coding
+title: "Karpathy Skills - The Revolutionary LLM Coding Manifesto"
+author: "Bright Coding"
 date: 2026-04-29
 status: SUCCESS
 ---

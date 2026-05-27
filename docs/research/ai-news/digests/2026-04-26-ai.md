@@ -1,5 +1,5 @@
 ---
-title: Weekly AI/LLM Digest — 2026-W17
+title: "Weekly AI/LLM Digest — 2026-W17"
 date: 2026-04-26
 source: HuggingFace Model Hub API + GitHub Releases
 type: ai-news

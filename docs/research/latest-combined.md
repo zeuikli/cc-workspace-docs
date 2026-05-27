@@ -1,5 +1,5 @@
 ---
-title: 每日科技情報 — 2026-05-26
+title: "每日科技情報 — 2026-05-26"
 type: documentation
 ---
 

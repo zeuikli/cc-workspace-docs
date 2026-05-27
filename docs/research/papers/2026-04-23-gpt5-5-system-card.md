@@ -1,7 +1,7 @@
 ---
 title: "GPT-5.5 System Card"
-authors: "OpenAI"
-published: "2026-04-23"
+authors: OpenAI
+published: 2026-04-23
 source: "https://deploymentsafety.openai.com/gpt-5-5"
 ---
 

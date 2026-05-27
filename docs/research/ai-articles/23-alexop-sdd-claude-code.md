@@ -1,8 +1,8 @@
 ---
 url: "https://alexop.dev/posts/spec-driven-development-claude-code-in-action/"
-title: Spec-Driven Development with Claude Code in Action
-author: Alexander Opalic
-date: "2026-02-01"
+title: "Spec-Driven Development with Claude Code in Action"
+author: "Alexander Opalic"
+date: 2026-02-01
 status: success
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: AI 產品經濟學 + 物理 AI — 分析 Prompt
+title: "AI 產品經濟學 + 物理 AI — 分析 Prompt"
 type: prompt
 ---
 

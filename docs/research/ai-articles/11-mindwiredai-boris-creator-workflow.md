@@ -1,6 +1,6 @@
 ---
 url: "https://mindwiredai.com/2026/03/25/claude-code-creator-workflow-claudemd/"
-title: How the Creator of Claude Code Actually Uses It
+title: "How the Creator of Claude Code Actually Uses It"
 type: article
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Scored Articles
+title: "Scored Articles"
 type: index
 ---
 

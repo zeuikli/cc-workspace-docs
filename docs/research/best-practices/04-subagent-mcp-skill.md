@@ -1,5 +1,5 @@
 ---
-title: Claude Code Sub-Agent、MCP Server 與 Skill 最佳實踐
+title: "Claude Code Sub-Agent、MCP Server 與 Skill 最佳實踐"
 source: 官方 Sub-Agents 文件、MCP 文件、社群實踐
 type: best-practices
 ---

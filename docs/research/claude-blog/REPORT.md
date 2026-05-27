@@ -1,5 +1,5 @@
 ---
-title: Claude Blog 文章收錄報告
+title: "Claude Blog 文章收錄報告"
 type: blog-index
 ---
 

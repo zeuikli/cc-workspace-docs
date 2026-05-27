@@ -1,9 +1,9 @@
 ---
 title: "HippoRAG: Neurobiologically Inspired Long-Term Memory for Large Language Models"
-authors: "Bernal Jiménez Gutiérrez, Yiheng Shu, Yu Gu, Michihiro Yasunaga, Yu Su"
-published: "2024-05-23"
+authors: Bernal Jiménez Gutiérrez, Yiheng Shu, Yu Gu, Michihiro Yasunaga, Yu Su
+published: 2024-05-23
 source: "https://arxiv.org/abs/2405.14831"
-venue: "NeurIPS 2024"
+venue: NeurIPS 2024
 ---
 
 # HippoRAG: Neurobiologically Inspired Long-Term Memory for Large Language Models

@@ -1,6 +1,6 @@
 ---
 url: "https://www.augmentcode.com/blog/how-to-write-good-agents-dot-md-files"
-title: A Good AGENTS.md Is a Model Upgrade. A Bad One Is Worse Than No Docs at All
+title: "A Good AGENTS.md Is a Model Upgrade. A Bad One Is Worse Than No Docs at All"
 date: 2026-05-02
 type: article
 ---

@@ -1,5 +1,5 @@
 ---
-title: Claude Blog 知識庫速查
+title: "Claude Blog 知識庫速查"
 type: blog-index
 ---
 

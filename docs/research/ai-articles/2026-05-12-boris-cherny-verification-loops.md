@@ -1,6 +1,6 @@
 ---
-title: Boris Cherny on verification loops
 url: "https://x.com/bcherny/status/2007179861115511237"
+title: "Boris Cherny on verification loops"
 domain: x.com
 fetched: 2026-05-12
 source_tier: C

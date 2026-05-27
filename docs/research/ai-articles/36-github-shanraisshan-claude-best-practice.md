@@ -1,8 +1,8 @@
 ---
-status: SUCCESS
 url: "https://github.com/shanraisshan/claude-code-best-practice"
-repository: shanraisshan/claude-code-best-practice
+status: SUCCESS
 date_fetched: 2026-05-18
+repository: shanraisshan/claude-code-best-practice
 ---
 
 # 36. GitHub: Claude Code Best Practice

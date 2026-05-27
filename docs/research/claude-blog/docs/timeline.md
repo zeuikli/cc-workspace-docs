@@ -1,5 +1,5 @@
 ---
-title: Claude Blog 公告時間軸
+title: "Claude Blog 公告時間軸"
 type: blog-index
 ---
 

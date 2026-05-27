@@ -1,9 +1,9 @@
 ---
 url: "https://www.tbench.ai/leaderboard/terminal-bench/2.0"
-source_file: ../../2026-05-12-terminalbench-2-leaderboard.md
 date: 2026-05-12
 scored: 2026-05-16
 source: tbench.ai
+source_file: ../../2026-05-12-terminalbench-2-leaderboard.md
 source_tier: C
 ---
 

@@ -1,8 +1,8 @@
 ---
 url: "https://towardsdatascience.com/from-vibe-coding-to-spec-driven-development"
-title: From Vibe Coding to Spec-Driven Development
-author: Mariya Mansurova
-date: "2026-05-12"
+title: "From Vibe Coding to Spec-Driven Development"
+author: "Mariya Mansurova"
+date: 2026-05-12
 status: success
 ---
 

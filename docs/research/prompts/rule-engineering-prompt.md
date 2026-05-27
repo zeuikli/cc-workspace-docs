@@ -1,5 +1,5 @@
 ---
-title: CLAUDE.md 規則工程與 Hook 設計
+title: "CLAUDE.md 規則工程與 Hook 設計"
 type: prompt
 ---
 

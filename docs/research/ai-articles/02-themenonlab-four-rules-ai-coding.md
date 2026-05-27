@@ -1,7 +1,7 @@
 ---
 url: "https://themenonlab.blog/blog/karpathy-claude-md-four-rules-ai-coding-agents"
-title: The Karpathy CLAUDE.md - Four Rules That Fix AI Coding Agents
-author: Dr. Prahlad G. Menon
+title: "The Karpathy CLAUDE.md - Four Rules That Fix AI Coding Agents"
+author: "Dr. Prahlad G. Menon"
 date: 2026-04-19
 status: SUCCESS
 ---

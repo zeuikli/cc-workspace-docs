@@ -1,9 +1,9 @@
 ---
 url: "https://code.claude.com/docs/en/best-practices"
-source_file: ../2026-05-12-claude-code-best-practices.md
 date: 2026-05-12
 scored: 2026-05-16
 source: code.claude.com (Anthropic Official)
+source_file: ../2026-05-12-claude-code-best-practices.md
 source_tier: O
 tags: [claude-code, best-practices, session-management, scaling-patterns, failure-patterns, official]
 ---

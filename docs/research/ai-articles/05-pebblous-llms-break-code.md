@@ -1,7 +1,7 @@
 ---
 url: "https://blog.pebblous.ai/report/karpathy-coding-skills-2026-04/en/"
-title: When LLMs Break Code, Data Dies First — Karpathy's Coding Pitfalls and CLAUDE.md Behavior Correction
-author: Pebblous
+title: "When LLMs Break Code, Data Dies First — Karpathy's Coding Pitfalls and CLAUDE.md Behavior Correction"
+author: "Pebblous"
 date: 2026-04
 status: SUCCESS
 ---

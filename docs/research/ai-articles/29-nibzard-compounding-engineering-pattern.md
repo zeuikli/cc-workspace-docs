@@ -1,8 +1,8 @@
 ---
 url: "https://github.com/nibzard/awesome-agentic-patterns/blob/main/patterns/compounding-engineering-pattern.md"
-title: Compounding Engineering Pattern
-author: Nikola Balic (@nibzard), based on Dan Shipper (Every) and Every engineering team
-date: "2026-01-05"
+title: "Compounding Engineering Pattern"
+author: "Nikola Balic (@nibzard), based on Dan Shipper (Every) and Every engineering team"
+date: 2026-01-05
 status: success
 ---
 

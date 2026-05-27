@@ -1,5 +1,5 @@
 ---
-title: GitHub Actions + Claude Code CLI 實作 Hermes-style 自主進化
+title: "GitHub Actions + Claude Code CLI 實作 Hermes-style 自主進化"
 date: 2026-05-25
 type: report
 ---

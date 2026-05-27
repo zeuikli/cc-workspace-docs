@@ -1,5 +1,5 @@
 ---
-title: AI as Normal Technology — 2026-05-26
+title: "AI as Normal Technology — 2026-05-26"
 date: 2026-05-26
 source: AI as Normal Technology
 type: ai-news

@@ -1,6 +1,6 @@
 ---
-title: Claude Code Best Practices
 url: "https://code.claude.com/docs/en/best-practices"
+title: "Claude Code Best Practices"
 domain: code.claude.com
 fetched: 2026-05-12
 source_tier: O

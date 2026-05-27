@@ -1,5 +1,5 @@
 ---
-title: Daily AI/DevOps/Security Digests
+title: "Daily AI/DevOps/Security Digests"
 type: index
 ---
 

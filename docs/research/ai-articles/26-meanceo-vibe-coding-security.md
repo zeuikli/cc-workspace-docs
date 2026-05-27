@@ -1,8 +1,8 @@
 ---
 url: "https://blog.mean.ceo/vibe-coding-security/"
-title: Vibe coding is great for validation and terrible for unreviewed production code
-author: Violetta Bonenkamp
-date: "2026-04-30"
+title: "Vibe coding is great for validation and terrible for unreviewed production code"
+author: "Violetta Bonenkamp"
+date: 2026-04-30
 status: success
 ---
 

@@ -1,10 +1,10 @@
 ---
-title: Designing, Refining, and Maintaining Agent Skills at Perplexity
 url: "https://research.perplexity.ai/articles/designing-refining-and-maintaining-agent-skills-at-perplexity"
-domain: research.perplexity.ai
-author: 未知
-published: 2026-05-08
+title: "Designing, Refining, and Maintaining Agent Skills at Perplexity"
+author: "未知"
 archived: 2026-05-10
+domain: research.perplexity.ai
+published: 2026-05-08
 tags: []
 word_count: 3948
 ---

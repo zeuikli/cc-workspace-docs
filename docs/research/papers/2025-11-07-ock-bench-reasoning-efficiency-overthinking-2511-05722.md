@@ -1,7 +1,7 @@
 ---
 title: "OckBench: Measuring the Efficiency of LLM Reasoning"
-authors: "Minyang Liu, Weijia Shi, Qiantong Xu, Luke Zettlemoyer, Wen-tau Yih, Sewon Min"
-published: "2025-11-07"
+authors: Minyang Liu, Weijia Shi, Qiantong Xu, Luke Zettlemoyer, Wen-tau Yih, Sewon Min
+published: 2025-11-07
 source: "https://arxiv.org/abs/2511.05722"
 ---
 

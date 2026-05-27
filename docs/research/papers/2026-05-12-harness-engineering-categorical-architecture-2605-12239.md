@@ -1,7 +1,7 @@
 ---
 title: "Harness Engineering as Categorical Architecture"
-authors: "Bogdan Banu"
-published: "2026-05-12"
+authors: Bogdan Banu
+published: 2026-05-12
 source: "https://arxiv.org/abs/2605.12239"
 ---
 

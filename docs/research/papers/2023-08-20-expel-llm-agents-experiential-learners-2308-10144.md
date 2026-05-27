@@ -1,9 +1,9 @@
 ---
 title: "ExpeL: LLM Agents Are Experiential Learners"
-authors: "Andrew Zhao, Daniel Huang, Quentin Xu, Matthieu Lin, Yong-Jin Liu, Gao Huang"
-published: "2023-08-20"
+authors: Andrew Zhao, Daniel Huang, Quentin Xu, Matthieu Lin, Yong-Jin Liu, Gao Huang
+published: 2023-08-20
 source: "https://arxiv.org/abs/2308.10144"
-venue: "AAAI 2024"
+venue: AAAI 2024
 ---
 
 # ExpeL: LLM Agents Are Experiential Learners

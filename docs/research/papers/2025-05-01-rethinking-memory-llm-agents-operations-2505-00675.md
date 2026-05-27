@@ -1,7 +1,7 @@
 ---
 title: "Rethinking Memory in LLM based Agents: Representations, Operations, and Emerging Topics"
-authors: "Yiming Du, Wenyu Huang, Danna Zheng, Zhaowei Wang, Sebastien Montella, Mirella Lapata, Kam-Fai Wong, Jeff Z. Pan"
-published: "2025-05-01"
+authors: Yiming Du, Wenyu Huang, Danna Zheng, Zhaowei Wang, Sebastien Montella, Mirella Lapata, Kam-Fai Wong, Jeff Z. Pan
+published: 2025-05-01
 source: "https://arxiv.org/abs/2505.00675"
 ---
 

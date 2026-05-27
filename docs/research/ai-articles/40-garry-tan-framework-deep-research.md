@@ -1,14 +1,10 @@
 ---
 url: "https://github.com/garrytan/gbrain"
-title: Garry Tan「Thin Harness, Fat Skills」五核心概念深度研究
-author: Research Compilation (2026-05-23)
+title: "Garry Tan「Thin Harness, Fat Skills」五核心概念深度研究"
+author: "Research Compilation (2026-05-23)"
 date: 2026-05-23
 status: SUCCESS
-sources:
-  - https://www.forbes.com/sites/josipamajic/2026/04/12/the-yc-chief-who-codes-10000-lines-a-day-has-a-simple-secret/
-  - https://github.com/garrytan/gbrain
-  - https://yage.ai/share/thin-harness-fat-skills-en-20260414.html
-  - https://github.com/garrytan/gbrain/blob/master/docs/ethos/THIN_HARNESS_FAT_SKILLS.md
+sources: ["https://www.forbes.com/sites/josipamajic/2026/04/12/the-yc-chief-who-codes-10000-lines-a-day-has-a-simple-secret/", "https://github.com/garrytan/gbrain", "https://yage.ai/share/thin-harness-fat-skills-en-20260414.html", "https://github.com/garrytan/gbrain/blob/master/docs/ethos/THIN_HARNESS_FAT_SKILLS.md"]
 ---
 
 # Garry Tan「Thin Harness, Fat Skills」五核心概念深度研究

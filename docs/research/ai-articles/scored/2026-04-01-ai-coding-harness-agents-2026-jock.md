@@ -1,5 +1,5 @@
 ---
-title: Claude Code vs Codex vs Aider vs OpenCode vs Pi 2026
+title: "Claude Code vs Codex vs Aider vs OpenCode vs Pi 2026"
 date: 2026-04-01
 type: article
 ---

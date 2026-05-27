@@ -1,5 +1,5 @@
 ---
-title: LLM 路由演算法：工業案例與量化數據
+title: "LLM 路由演算法：工業案例與量化數據"
 type: documentation
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Claude Prompting Best Practices
+title: "Claude Prompting Best Practices"
 source: "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices"
 type: best-practices
 ---

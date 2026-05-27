@@ -1,12 +1,11 @@
 ---
 url: "https://dev.to/yigit-konur/how-to-set-rules-for-ai-coding-agents-prompt-engineering-tips-tricks-from-a-prompt-engineer-1h8l"
-alternative_urls:
-  - https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
-original_url_variant: "https://dev.to/yigit-konur/how-to-set-rules-for-ai-coding-agents-prompt-engineering-tips-tricks-from-a-prompt-engineer-1h8f"
-title: Rules for AI Coding Agents (Alternative Sources)
+title: "Rules for AI Coding Agents (Alternative Sources)"
 status: ALTERNATIVE_SOURCES_COMPILED
-original_status: URL_VARIANT_FOUND
+alternative_urls: ["https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"]
 date_updated: 2026-05-18
+original_status: URL_VARIANT_FOUND
+original_url_variant: "https://dev.to/yigit-konur/how-to-set-rules-for-ai-coding-agents-prompt-engineering-tips-tricks-from-a-prompt-engineer-1h8f"
 ---
 
 # AI Coding Agent 規則設定

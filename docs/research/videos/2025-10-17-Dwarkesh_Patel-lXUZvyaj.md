@@ -1,11 +1,11 @@
 ---
 title: "Andrej Karpathy — \"We're summoning ghosts, not building animals\" — Dwarkesh Patel"
-source: "https://www.youtube.com/watch?v=lXUZvyajciY"
-creator: Dwarkesh Patel
 date: 2025-10-17
-type: video
+creator: Dwarkesh Patel
 duration: "2:26:08"
 platform: youtube
+source: "https://www.youtube.com/watch?v=lXUZvyajciY"
+type: video
 ---
 
 # Andrej Karpathy — "We're summoning ghosts, not building animals" — Dwarkesh Patel
