@@ -439,7 +439,7 @@ Thariq Shihipar 提供最精確的判斷框架：
 | 讀取 ≥ 10 個檔案 | 研究型任務，context rot 風險高 |
 | 預期工具呼叫 > 20 次 | 大量 tool noise 污染主對話 |
 | 可拆 ≥ 3 個獨立子任務 | 平行 fan-out，單一訊息同時啟動 |
-| 任務類型 ∈ {研究、安全審查、架構決策} | 類型觸發，不計數量 |
+| 任務類型 ∈ `{研究、安全審查、架構決策}` | 類型觸發，不計數量 |
 | 側邊任務會淹沒主線 | 保持主對話聚焦 |
 
 ### 4.2 拓撲規則
@@ -570,7 +570,7 @@ allowed-tools: Read, Grep, Glob
 
 SKILL.md 超過 150 行就應該拆分：
 
-```markdown
+````markdown
 # SKILL.md（主體，≤ 150 行）
 
 ## 快速開始
@@ -591,7 +591,7 @@ For OCR, scanned PDFs, and form filling, see:
 ## Known Gotchas
 - 加密 PDF 需傳入 password 參數
 - 表格提取可能丟失格式，需後處理驗證
-```
+````
 
 ### 5.4 自由度分層原則
 
