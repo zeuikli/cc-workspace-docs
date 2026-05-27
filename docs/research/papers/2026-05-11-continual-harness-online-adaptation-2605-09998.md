@@ -1,6 +1,6 @@
 ---
 title: "Continual Harness: Online Adaptation for Self-Improving Foundation Agents"
-authors: Seth Karten, Joel Zhang, Tersoo Upaa Jr, Ruirong Feng, Wenzhe Li, Chengshuai Shi, Chi Jin, Kiran Vodrahalli
+authors: "Seth Karten, Joel Zhang, Tersoo Upaa Jr, Ruirong Feng, Wenzhe Li, Chengshuai Shi, Chi Jin, Kiran Vodrahalli"
 published: 2026-05-11
 source: "https://arxiv.org/abs/2605.09998"
 ---

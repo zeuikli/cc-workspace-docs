@@ -1,7 +1,7 @@
 ---
 title: "Chronos: Temporal-Aware Conversational Agents with Structured Event Retrieval for Long-Term Memory"
 arxiv_id: 2603.16862
-authors: Sahil Sen, Elias Lumer, Anmol Gulati, Vamse Kumar Subbiah
+authors: "Sahil Sen, Elias Lumer, Anmol Gulati, Vamse Kumar Subbiah"
 fetched: 2026-05-26
 published: 2026-03-17
 source: "https://arxiv.org/abs/2603.16862"

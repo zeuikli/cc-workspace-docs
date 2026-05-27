@@ -1,6 +1,6 @@
 ---
 title: "AgentFlow: Synthesizing Multi-Agent Harnesses for Vulnerability Discovery"
-authors: Hanzhi Liu, Chaofan Shou, Xiaonan Liu, Hongbo Wen, Yanju Chen, Ryan Jingyang Fang, Yu Feng
+authors: "Hanzhi Liu, Chaofan Shou, Xiaonan Liu, Hongbo Wen, Yanju Chen, Ryan Jingyang Fang, Yu Feng"
 published: 2026-04-22
 source: "https://arxiv.org/abs/2604.20801"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Who's in Charge? Disempowerment Patterns in Real-World LLM Usage"
-authors: Mrinank Sharma, Miles McCain, Raymond Douglas, David Duvenaud
+authors: "Mrinank Sharma, Miles McCain, Raymond Douglas, David Duvenaud"
 published: 2026-01-27
 source: "https://arxiv.org/abs/2601.19062"
 ---

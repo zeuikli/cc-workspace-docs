@@ -1,7 +1,7 @@
 ---
 title: "A-MEM: Agentic Memory for LLM Agents"
 arxiv_id: 2502.1211
-authors: Wujiang Xu, Zujie Liang, Kai Mei, et al.
+authors: "Wujiang Xu, Zujie Liang, Kai Mei, et al."
 published: 2025-02-17
 source: "https://arxiv.org/abs/2502.12110"
 source_tier: P

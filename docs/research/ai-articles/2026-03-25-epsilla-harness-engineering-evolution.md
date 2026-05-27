@@ -6,7 +6,7 @@ archived: 2026-05-27
 domain: epsilla.com
 published: 2026-03-25
 tags: [harness-engineering, prompt-engineering, context-engineering, autonomous-agents, llm-agents, enterprise-ai]
-word_count: 約 1,200 字
+word_count: "約 1,200 字"
 ---
 
 # The Third Evolution: Why Harness Engineering Replaced Prompting in 2026

@@ -1,6 +1,6 @@
 ---
 title: "Natural-Language Agent Harnesses"
-authors: Linyue Pan, Lexiao Zou, Shuo Guo, Jingchen Ni, Hai-Tao Zheng
+authors: "Linyue Pan, Lexiao Zou, Shuo Guo, Jingchen Ni, Hai-Tao Zheng"
 published: 2026-03-26
 source: "https://arxiv.org/html/2603.25723v1"
 ---

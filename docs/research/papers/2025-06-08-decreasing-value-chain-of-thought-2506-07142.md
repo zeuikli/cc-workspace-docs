@@ -1,7 +1,7 @@
 ---
 title: "Prompting Science Report 2: The Decreasing Value of Chain of Thought in Prompting"
 arxiv_id: 2506.07142
-authors: Lennart Meincke, Ethan Mollick, Lilach Mollick, Dan Shapiro
+authors: "Lennart Meincke, Ethan Mollick, Lilach Mollick, Dan Shapiro"
 fetched: 2026-05-27
 published: 2025-06-08
 source: "https://arxiv.org/abs/2506.07142"

@@ -6,7 +6,7 @@ archived: 2026-05-27
 domain: zenn.dev
 published: 2026-05-24
 tags: [llm, prompt-engineering, context-engineering, agent-engineering, harness-engineering, bottleneck, eval, governance]
-word_count: 約 2,500 字
+word_count: "約 2,500 字"
 ---
 
 # prompt / context / agent / harness: ボトルネック移動で読むLLM engineeringの系譜とその先

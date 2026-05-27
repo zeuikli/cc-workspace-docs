@@ -1,6 +1,6 @@
 ---
 title: "Voyager: An Open-Ended Embodied Agent with Large Language Models"
-authors: Guanzhi Wang, Yuqi Xie, Yunfan Jiang, Ajay Mandlekar, Chaowei Xiao, Yuke Zhu, Linxi Fan, Anima Anandkumar
+authors: "Guanzhi Wang, Yuqi Xie, Yunfan Jiang, Ajay Mandlekar, Chaowei Xiao, Yuke Zhu, Linxi Fan, Anima Anandkumar"
 published: 2023-05-25
 source: "https://arxiv.org/abs/2305.16291"
 venue: NeurIPS 2023

@@ -6,7 +6,7 @@ archived: 2026-05-27
 domain: anthropic.com
 published: 2025-11-26
 tags: [anthropic, harness-engineering, long-running-agents, context-windows, llm-agents]
-word_count: 約 1,200 字
+word_count: "約 1,200 字"
 ---
 
 # Effective harnesses for long-running agents

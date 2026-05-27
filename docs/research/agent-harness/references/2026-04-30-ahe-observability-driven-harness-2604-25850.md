@@ -1,6 +1,6 @@
 ---
 title: "Agentic Harness Engineering: Observability-Driven Automatic Evolution of Coding-Agent Harnesses"
-authors: Jiahang Lin, Shichun Liu, Chengjun Pan, Lizhi Lin, Shihan Dou, Xuanjing Huang, Hang Yan, Zhenhua Han, Tao Gui
+authors: "Jiahang Lin, Shichun Liu, Chengjun Pan, Lizhi Lin, Shihan Dou, Xuanjing Huang, Hang Yan, Zhenhua Han, Tao Gui"
 published: 2026-04-30
 related: research/agent-harness/references/2604.25850-ahe-observability-arxiv.md
 source: "https://arxiv.org/abs/2604.25850"

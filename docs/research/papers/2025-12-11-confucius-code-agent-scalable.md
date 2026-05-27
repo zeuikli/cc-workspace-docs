@@ -1,6 +1,6 @@
 ---
 title: "Confucius Code Agent: Scalable Agent Scaffolding for Real-World Codebases"
-authors: Sherman Wong, Zhenting Qi, Zhaodong Wang, Nathan Hu, Samuel Lin, Jun Ge, Erwin Gao, Wenlin Chen, Yilun Du, Minlan Yu, Ying Zhang
+authors: "Sherman Wong, Zhenting Qi, Zhaodong Wang, Nathan Hu, Samuel Lin, Jun Ge, Erwin Gao, Wenlin Chen, Yilun Du, Minlan Yu, Ying Zhang"
 published: 2025-12-11
 source: "https://arxiv.org/abs/2512.10398"
 ---

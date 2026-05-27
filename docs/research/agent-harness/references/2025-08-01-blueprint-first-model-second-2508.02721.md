@@ -1,7 +1,7 @@
 ---
 title: "Blueprint First, Model Second: A Framework for Deterministic LLM Workflow"
 arxiv_id: 2508.02721
-authors: Libin Qiu, Yuhang Ye, Zhirong Gao, Xide Zou, Junfu Chen, Ziming Gui, Weizhi Huang, Xiaobo Xue, Wenkai Qiu, Kun Zhao
+authors: "Libin Qiu, Yuhang Ye, Zhirong Gao, Xide Zou, Junfu Chen, Ziming Gui, Weizhi Huang, Xiaobo Xue, Wenkai Qiu, Kun Zhao"
 published: 2025-08-01
 source: "https://arxiv.org/abs/2508.02721"
 venue: arXiv

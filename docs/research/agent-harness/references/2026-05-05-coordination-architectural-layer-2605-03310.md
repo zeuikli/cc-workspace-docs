@@ -1,6 +1,6 @@
 ---
 title: "Coordination as an Architectural Layer for LLM-Based Multi-Agent Systems: An Information-Controlled Empirical Study"
-authors: Maksym Nechepurenko, Pavel Shuvalov
+authors: "Maksym Nechepurenko, Pavel Shuvalov"
 published: 2026-05-05
 source: "https://arxiv.org/abs/2605.03310"
 ---
