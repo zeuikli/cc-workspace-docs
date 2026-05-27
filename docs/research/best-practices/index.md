@@ -6,7 +6,7 @@ type: index
 # Claude Code 最佳實踐研究索引
 
 > **Type:** wiki:compiled — 29 docs covering hooks, agents, skills, permissions, MCP, sandbox  
-> 收集日期：2026-04-25（最後更新：2026-05-10）
+> 收集日期：2026-04-25（最後更新：2026-05-27）
 
 本目錄收錄從官方文件與社群來源抓取的 Claude/Claude Code 最佳實踐，涵蓋 Agent、Skill、Rules、Hooks 四個面向。
 
