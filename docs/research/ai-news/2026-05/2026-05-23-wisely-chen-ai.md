@@ -2088,8 +2088,8 @@ PR review 平均耗時 | 35 分鐘 | 18 分鐘
     // tools/tool-runner.ts
     import { Mutex } from "async-mutex";
     
-    const locks = new Map&lt;string, Mutex>();
-    const failureCounts = new Map&lt;string, number>();
+    const locks = new Map<string, Mutex>();
+    const failureCounts = new Map<string, number>();
     
     export async function runTool(
       name: string,

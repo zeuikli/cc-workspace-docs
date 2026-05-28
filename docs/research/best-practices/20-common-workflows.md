@@ -128,6 +128,16 @@ How should we handle database migration?
 }
 ```
 
+### Ultraplan（W15，雲端 Plan Mode）
+
+從 terminal 在雲端啟動 plan mode，在瀏覽器中 review 計畫，支援對個別段落留 inline comment / 修改，再選擇遠端執行或送回 CLI：
+
+```text
+> /ultraplan <task>
+```
+
+v2.1.101 起首次執行自動建立預設雲端環境，不需要先在 Web 設定。
+
 ---
 
 ## 撰寫測試
@@ -155,7 +165,15 @@ create a pr
 enhance the PR description with more context about the security improvements
 ```
 
-用 `gh pr create` 建立 PR 時，session 自動與該 PR 連結。之後用 `claude --from-pr <number>` 或在 `/resume` 選單貼上 PR URL 來返回。
+用 `gh pr create` 建立 PR 時，session 自動與該 PR 連結。之後用 `claude --from-pr <number>` 或在 `/resume` 選單貼上 PR URL 來返回（支援 GitHub / GitHub Enterprise / GitLab / Bitbucket）。
+
+### /autofix-pr（W15）
+
+不用開瀏覽器，從 terminal 一鍵對當前分支的 PR 啟動 Auto-Fix：
+
+```text
+> /autofix-pr
+```
 
 ---
 
@@ -217,7 +235,7 @@ Show me the data from @github:repos/owner/repo/issues  # MCP 資源
 
 ## Extended Thinking（思考模式）
 
-Extended thinking 預設啟用，讓 Claude 在回應前逐步推理複雜問題。按 `Ctrl+O` 開啟 verbose mode 查看灰色斜體的內部推理。
+Extended thinking 預設啟用，讓 Claude 在回應前逐步推理複雜問題。按 `Ctrl+O` 開啟 verbose mode 查看灰色斜體的內部推理（flicker-free 模式中，`Ctrl+O` 另有 **Focus view** 功能：折疊視圖為最後 prompt + 工具摘要 + 最終回應）。
 
 **特別適合**：複雜架構決策、棘手 bugs、多步驟實作規劃、評估方法間的 tradeoffs。
 
@@ -247,7 +265,18 @@ claude --from-pr 123       # Resume 連結到特定 PR 的 sessions
 
 Session 內：`/resume` 切換到其他對話
 
-Session 太大時，`--resume`、`--continue`、`/resume` 會提供「從摘要 resume」的選項。
+Session 太大時，`--resume`、`--continue`、`/resume` 會提供「從摘要 resume」的選項。Rewind 選單也新增了「**Summarize up to here**」選項（W20），可壓縮較早的 context 同時保留最近的 turns。
+
+### `claude project purge`（W18，v2.1.126）
+
+清除專案所有本地狀態（transcript / task / file history / config entry）：
+
+```bash
+claude project purge --dry-run   # 預覽將被刪除的內容
+claude project purge             # 清除當前專案（會確認提示）
+claude project purge -y          # 跳過確認
+claude project purge --all       # 清除所有專案
+```
 
 ### 命名 Sessions
 
@@ -270,14 +299,15 @@ claude --resume auth-refactor
 | `→` / `←` | 展開/收合分組 sessions |
 | `Enter` | 選擇並 resume 高亮的 session |
 | `Space` | 預覽 session 內容 |
-| `Ctrl+R` | 重命名高亮的 session |
+| `Ctrl+R` | 搜尋所有專案歷史（W19，v2.1.129）；在 picker 中為重命名高亮 session |
+| `Ctrl+S` | 搜尋中切換縮小到當前專案（W19） |
 | `/` 或任意字元 | 進入搜尋模式 |
 | `Ctrl+A` | 顯示此機器上所有專案的 sessions |
 | `Ctrl+W` | 顯示當前 repo 所有 worktrees 的 sessions |
 | `Ctrl+B` | 過濾到當前 git branch 的 sessions |
 | `Esc` | 離開 picker 或搜尋模式 |
 
-**貼 PR URL 進搜尋欄**可找到建立那個 PR 的 session。Forked sessions 群組在根 session 下方。
+**貼 PR URL 進搜尋欄**（W18，v2.1.122）可找到建立那個 PR 的 session；支援 GitHub / GitHub Enterprise / GitLab / Bitbucket。Forked sessions 群組在根 session 下方。
 
 ---
 
@@ -333,6 +363,24 @@ config/secrets.json
 只有符合 pattern 且已被 gitignored 的檔案才會複製。
 
 > **建議**：把 `.claude/worktrees/` 加入 `.gitignore`，避免出現在主 repo 的 untracked files 中。
+
+### `worktree.baseRef`（W19）
+
+設定新 worktree 分支的基準點：
+
+```json
+// .claude/settings.json
+{
+  "worktree": {
+    "baseRef": "fresh"
+  }
+}
+```
+
+| 值 | 行為 |
+|----|------|
+| `fresh`（預設）| 從遠端預設分支建立，確保新 worktree 不含未推送的 local commit |
+| `head` | 從本地 HEAD 建立（含未推送 commit） |
 
 ---
 
@@ -406,15 +454,50 @@ cat build-error.txt | claude -p 'concisely explain the root cause of this build 
 | [Routines](/en/routines) | Anthropic 管理的基礎設施 | 電腦關機仍能執行的任務；支援 API 呼叫和 GitHub events |
 | [Desktop scheduled tasks](/en/desktop-scheduled-tasks) | 你的機器（desktop app） | 需要存取 local 檔案、工具或未 committed 變更 |
 | [GitHub Actions](/en/github-actions) | CI pipeline | 連結到 repo events 或 cron 排程的任務 |
-| [`/loop`](/en/scheduled-tasks) | 當前 CLI session | Session 開著時的快速輪詢 |
+| [`/loop`](/en/scheduled-tasks) | 當前 CLI session | Session 開著時的快速輪詢（不提供 interval 時 Claude 自行決定下次觸發時機）；別名 `/proactive` |
 
 **排程任務 prompt 要明確**：說明成功條件和如何處理結果（任務自動執行，無法問澄清問題）。
+
+### Monitor Tool（W15，v2.1.98）
+
+新 built-in tool：在背景啟動監控進程，每個 stdout 事件**即時**注入 conversation，Claude 立即回應，不需要 Bash sleep loop：
+
+```text
+> Tail server.log in the background and tell me the moment a 5xx shows up
+```
+
+### /batch（2026-02-28）
+
+對可平行分解的遷移任務 fan-out 多個 subagent，各自獨立處理一個遷移目標：
+
+```text
+> /batch migrate all Python 2 modules to Python 3
+> /batch replace all usages of deprecated API X with Y
+```
+
+**限制**：只適合目標之間無依賴關係的任務。
+
+| | `/batch` | `/loop` |
+|--|----------|---------|
+| 執行模式 | 一次性 fan-out | 定時重複執行 |
+| 適用任務 | 一次性遷移 | 持續性工作流 |
+| 結束條件 | 完成即結束 | 手動停止或時限 |
+
+### /goal（v2.1.139，W20）
+
+設定完成條件，Claude 持續執行跨多個 turn 直到條件成立；每個 turn 後由 fast model 檢查條件：
+
+```text
+> /goal all tests in test/auth pass and the lint step is clean
+```
+
+在 interactive、`-p`、Remote Control 均可用。適合有可驗證結束狀態的大型工作。
 
 ---
 
 ## Related Resources
 
-- [Best practices](/research/best-practices/17-best-practices-overview) — 高層次 patterns 和技巧
-- [How Claude Code works](/research/best-practices/18-how-claude-code-works) — Agentic loop 和 context 管理
-- [Extend Claude Code](/research/best-practices/19-features-overview) — 加入 skills、hooks、MCP、subagents、plugins
+- [Best practices](/en/best-practices) — 高層次 patterns 和技巧
+- [How Claude Code works](/en/how-claude-code-works) — Agentic loop 和 context 管理
+- [Extend Claude Code](/en/features-overview) — 加入 skills、hooks、MCP、subagents、plugins
 - [Reference implementation](https://github.com/anthropics/claude-code/tree/main/.devcontainer) — Development container 參考實作

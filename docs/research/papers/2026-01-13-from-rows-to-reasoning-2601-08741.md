@@ -102,7 +102,7 @@ where k = 60 stabilizes low-ranked items. FRTR uses K_v = K_s = 20, returning th
 
 **Algorithm 1 — FRTR: From Rows to Reasoning**
 
-- **Stage 1 (Indexing, Offline)**: For each sheet, compute adaptive window size s = ⌈√(N/K_target)⌉. For each unit u ∈ &#123;rows, columns, s×s windows, images&#125;: compute multimodal embedding v_u = E(u) and add (text(u), v_u, metadata(u)) to index D.
+- **Stage 1 (Indexing, Offline)**: For each sheet, compute adaptive window size s = ⌈√(N/K_target)⌉. For each unit u ∈ {rows, columns, s×s windows, images}: compute multimodal embedding v_u = E(u) and add (text(u), v_u, metadata(u)) to index D.
 - **Stage 2 (Hybrid Retrieval, Online)**: Embed query q; retrieve top-K_v by cosine similarity (dense) and top-K_s by BM25 (lexical); compute RRF scores; return top-K chunks C with provenance labels.
 - **Stage 3 (Answer Composition)**: Construct prompt P = {q, C, instruction}; invoke LLM M; parse JSON response {reasoning, answer}.
 

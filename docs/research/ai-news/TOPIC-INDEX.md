@@ -526,4 +526,4 @@ type: documentation
 
 *索引更新：2026-05-25 | 原始建立：2026-05-09 | 下次更新建議：2026-06-01（2026-05 月報完成後）*
 
-*sync-check：2026-05-27（sync-workspace.sh §15）*
+*sync-check：2026-05-28（sync-workspace.sh §15）*

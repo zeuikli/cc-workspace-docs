@@ -152,6 +152,18 @@ Claude Code 使用 **Agentic Search**（非 RAG/embedding）：
 
 ---
 
+## 五、隊友 Onboarding：/team-onboarding（W15，v2.1.101）
+
+根據本地 Claude Code 使用紀錄自動生成新成員 onboarding 指南，讓隊友可以沿用你已調好的工作流設定，而非從預設值重新摸索。
+
+```text
+> /team-onboarding
+```
+
+生成內容涵蓋：你的 CLAUDE.md 設定慣例、常用 Skills、Hooks 配置、以及 session 中記錄的工作流偏好。輸出可直接分享或提交進 context repository。
+
+---
+
 ## 快速 Checklist
 
 ### 初次設定
@@ -166,5 +178,6 @@ Claude Code 使用 **Agentic Search**（非 RAG/embedding）：
 - [ ] 新知識加入 Skills（不只是即時對話）
 - [ ] MCP 接入高頻查詢的內部資料
 - [ ] Cache hit rate 監控（ref: 28-thariq-prompt-caching-lessons.md）
+- [ ] 有新成員加入時執行 `/team-onboarding` 生成 onboarding 指南
 
 > 一手來源（O 層）：Anthropic 官方 blog + Claude Developer Ambassador 案例

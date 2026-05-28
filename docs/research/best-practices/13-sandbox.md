@@ -372,4 +372,4 @@ npx @anthropic-ai/sandbox-runtime <command-to-sandbox>
 - [Settings](https://code.claude.com/docs/en/settings) — 完整設定 reference（sandbox 設定在 `#sandbox-settings`）
 - [CLI reference](https://code.claude.com/docs/en/cli-reference) — 命令列選項
 - [Sandbox runtime（GitHub）](https://github.com/anthropic-experimental/sandbox-runtime) — 開源 sandbox runtime
-- [09-secure-deployment](/research/best-practices/09-secure-deployment) — 安全部署完整指南（含 Docker/gVisor/VM 比較）
+- [09-secure-deployment.md](/home/user/cc-workspace/research/best-practices/09-secure-deployment.md) — 安全部署完整指南（含 Docker/gVisor/VM 比較）

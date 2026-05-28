@@ -16,7 +16,8 @@ type: best-practices
 
 Routine 是一個儲存的 Claude Code 設定：prompt、一或多個 repository、及一組 connector，一次設定後自動反覆執行。Routine 跑在 **Anthropic 管理的雲端基礎設施**，筆電關掉仍可持續運作。
 
-> 狀態：Research Preview，行為、限額和 API 介面可能異動。
+> 狀態：Research Preview，行為、限額和 API 介面可能異動。  
+> **W16（v2.1.105–113）**：Routines Web UI 完整推出，三種觸發模式（定時時間、GitHub event、API endpoint）全部可用；每個 routine 有獨立的 tokenized `/fire` endpoint。範例：`/schedule daily PR review at 9am`。
 
 每個 Routine 可以附加一或多個觸發器：
 

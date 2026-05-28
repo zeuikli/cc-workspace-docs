@@ -69,6 +69,21 @@ claude mcp add --transport stdio --env AIRTABLE_API_KEY=YOUR_KEY airtable \
 
 > **重要**：所有 option（`--transport`, `--env`, `--scope`, `--header`）必須在 server name **之前**；`--` 之後才是傳給 MCP server 的 command。
 
+#### `CLAUDE_PROJECT_DIR`（W20）
+
+stdio MCP server 現在會接收 `CLAUDE_PROJECT_DIR` 環境變數（與 hooks 一致），代表目前的 project 根目錄。plugin configs 中的指令可以引用 `${CLAUDE_PROJECT_DIR}`：
+
+```json
+{
+  "mcpServers": {
+    "project-tools": {
+      "command": "${CLAUDE_PROJECT_DIR}/.claude/bin/my-mcp-server",
+      "args": ["--root", "${CLAUDE_PROJECT_DIR}"]
+    }
+  }
+}
+```
+
 ### 管理 Server
 
 ```bash
@@ -333,6 +348,19 @@ Claude Code 注入的環境變數：`CLAUDE_CODE_MCP_SERVER_NAME`、`CLAUDE_CODE
 
 ---
 
+## Bedrock / Vertex AI 設定精靈（W15）
+
+使用 AWS Bedrock 或 Google Vertex AI 作為 API 後端時，login 畫面提供「3rd-party platform」選項，引導完整設定流程：
+
+1. 啟動 `claude`，進入 login 畫面
+2. 選擇 **3rd-party platform**
+3. 依精靈步驟輸入 Bedrock region + model ARN，或 Vertex project + endpoint
+4. 設定儲存到 `~/.claude/settings.json`，後續 session 自動套用
+
+適合不使用 Anthropic 直連 API 的企業環境。
+
+---
+
 ## 從 JSON 設定加入 Server
 
 ```bash
@@ -585,6 +613,18 @@ http://localhost:*/*              # localhost 的任何 port
 ```
 
 **Option 1 + Option 2 可並用**：`managed-mcp.json` 存在時取得獨占控制，allowlists/denylists 仍適用於 managed server 的篩選。
+
+### `parentSettingsBehavior`（W19）
+
+在 managed settings 中設定此 admin key，讓管理員將 SDK `managedSettings` 納入 policy merge，使 SDK 端注入的設定也受組織 policy 約束：
+
+```json
+{
+  "parentSettingsBehavior": "merge"
+}
+```
+
+適用情境：企業透過 SDK 部署 Claude Code 時，確保 SDK 層的 `managedSettings` 與組織 policy 一致合併，而非被覆蓋。
 
 ---
 

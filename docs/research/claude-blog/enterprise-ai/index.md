@@ -6,7 +6,7 @@ type: index
 # Enterprise AI — claude.com/blog
 
 > 收錄自 [claude.com/blog/category/enterprise-ai](https://claude.com/blog/category/enterprise-ai) · 18 篇文章 · 2025-11-17 ~ 2026-05-15
-> 最後更新：2026-05-27
+> 最後更新：2026-05-16
 
 > 注：2026-04-09 起的產品公告（Managed Agents、Advisor Strategy、Cowork Enterprise）收錄於 [announcements/index.md](../announcements/index.md)，本分類專注於企業採用案例與功能深度報導。
 

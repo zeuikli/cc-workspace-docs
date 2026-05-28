@@ -47,6 +47,97 @@ Claude Code 使用分層 permission 系統平衡能力與安全：
 
 ---
 
+## Auto Mode 詳細設定
+
+Auto mode 讓 permissions classifier 自動核准安全的 edit/command，並阻斷破壞性/可疑操作（顯示給用戶）。
+
+### 三種 defaultMode
+
+| 模式 | 說明 |
+|------|------|
+| `every-prompt`（預設）| 每個工具呼叫都提示 |
+| `auto` | permissions classifier 自動核准安全操作，阻斷可疑操作 |
+| `dangerously-skip` | 跳過所有 permission prompt（等同 `bypassPermissions`，僅限隔離環境）|
+
+### 啟用 Auto Mode
+
+```json
+{
+  "permissions": {
+    "defaultMode": "auto"
+  }
+}
+```
+
+`Shift+Tab` 可在 session 中循環切換模式。
+
+**W16 起**：Max 訂閱者可在 Opus 4.7 上使用 auto mode，不再需要 `--enable-auto-mode` flag。
+
+### `autoMode` 細粒度設定
+
+`"$defaults"` 可在 `autoMode.allow`、`autoMode.soft_deny`、`autoMode.environment` 中引用內建規則，不需要完整替換：
+
+```json
+{
+  "permissions": {
+    "defaultMode": "auto",
+    "autoMode": {
+      "allow": ["$defaults", "Bash(npm run *)"],
+      "soft_deny": ["$defaults"],
+      "environment": ["$defaults"],
+      "hard_deny": ["Bash(git push --force *)"]
+    }
+  }
+}
+```
+
+### `autoMode.hard_deny`（W19）
+
+在 auto mode 中**無條件封鎖**指定操作，不受 `allow` 例外影響：
+
+```json
+{
+  "permissions": {
+    "autoMode": {
+      "hard_deny": ["Bash(rm -rf *)", "Bash(git push --force *)"]
+    }
+  }
+}
+```
+
+### `/fewer-permission-prompts`（W16）
+
+掃描當前 transcript，找出常見的 read-only Bash/MCP 呼叫，自動生成 allowlist 建議（輸出可直接貼入 `settings.json`）。
+
+```text
+> /fewer-permission-prompts
+```
+
+### `PermissionDenied` Hook（W14）
+
+Auto mode classifier 拒絕工具呼叫時觸發此 hook。回傳 `retry: true` 讓 Claude 嘗試其他方法：
+
+```json
+{
+  "hooks": {
+    "PermissionDenied": [{
+      "hooks": [{
+        "type": "command",
+        "command": ".claude/hooks/handle-denied.sh"
+      }]
+    }]
+  }
+}
+```
+
+hook script 可回傳：
+
+```json
+{ "retry": true }
+```
+
+---
+
 ## Permission 規則語法
 
 格式：`Tool` 或 `Tool(specifier)`
@@ -255,6 +346,32 @@ Claude 預設存取啟動所在目錄的檔案，可擴充：
 
 管理員可部署無法被 user/project settings 覆蓋的 managed settings。透過 MDM/OS-level policies、managed settings 檔案、或 server-managed settings 配發。
 
+### `managed-settings.d/` 目錄（W13）
+
+支援 **layered policy fragments**：將多個 JSON 片段放入 `managed-settings.d/` 目錄，Claude Code 啟動時自動合併，無需維護單一大型 managed settings 檔案：
+
+| 平台 | 目錄路徑 |
+|------|---------|
+| macOS | `/Library/Application Support/ClaudeCode/managed-settings.d/` |
+| Linux / WSL | `/etc/claude-code/managed-settings.d/` |
+| Windows | `C:\Program Files\ClaudeCode\managed-settings.d\` |
+
+### `defer` value for `permissionDecision`（W14）
+
+在使用 `-p`（headless）模式的 SDK session 中，工具呼叫可設定 `permissionDecision: "defer"`：session 在該工具呼叫點暫停，以 `deferred_tool_use` payload 退出，讓 SDK 接手處理 permission 邏輯（適合在外部系統實作自訂核准流程）。
+
+### `disableSkillShellExecution`（W14）
+
+阻止 skills（slash commands）/ plugin commands 中的 inline shell 執行，防止 skill 腳本繞過 permission 限制：
+
+```json
+{
+  "permissions": {
+    "disableSkillShellExecution": true
+  }
+}
+```
+
 ### 只能在 Managed Settings 使用的設定
 
 | 設定 | 說明 |
@@ -288,6 +405,27 @@ Claude 預設存取啟動所在目錄的檔案，可擴充：
 ## 範例設定
 
 官方提供多種部署情境的 starter settings：[github.com/anthropics/claude-code/tree/main/examples/settings](https://github.com/anthropics/claude-code/tree/main/examples/settings)
+
+---
+
+## API Key 與 Claude.ai 功能互斥（W20）
+
+當環境設定了以下任一項目時，即使同時有 Claude.ai 帳號登入，下列功能也會**自動停用**：
+
+- `ANTHROPIC_API_KEY` 環境變數
+- `apiKeyHelper`（settings 中的自訂 key 取得器）
+- `ANTHROPIC_AUTH_TOKEN` 環境變數
+
+**受影響的功能**：
+
+| 功能 | 說明 |
+|------|------|
+| Remote Control | 無法從 claude.ai 遠端控制 CLI session |
+| `/schedule`（Routines） | 無法建立或觸發排程代理 |
+| Claude.ai MCP connectors | claude.ai 上設定的 MCP server 不會自動在 CLI 可用 |
+| Notification preferences | 推播通知設定停用 |
+
+**解決方式**：取消設定 API key（`unset ANTHROPIC_API_KEY`）並改用 `claude auth login` 進行 OAuth 登入，即可恢復這些功能。
 
 ---
 

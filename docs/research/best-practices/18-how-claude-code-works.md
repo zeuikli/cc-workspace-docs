@@ -53,6 +53,36 @@ Claude 還有 spawn subagents、向你提問等 orchestration 工具。完整清
 
 **擴展基礎能力**：Skills 擴展知識、MCP 連接外部服務、Hooks 自動化工作流、Subagents 卸載任務。
 
+### Native Binaries（W16+W17, v2.1.113）
+
+`claude` CLI 改為 per-platform native binary，透過 npm optional dependency 安裝（如 `@anthropic-ai/claude-code-darwin-arm64`）。升級方式不變：`claude update`。
+
+W17 補充：macOS / Linux builds 中 Glob / Grep tool 替換為 embedded `bfs` / `ugrep`，搜尋速度更快，不需獨立 tool round-trip。
+
+### PowerShell Tool（W13, v2.1.84，preview）
+
+Windows 專屬，Claude 可執行 cmdlet、pipe 物件、使用 Windows 路徑。啟用：
+
+```json
+{
+  "env": {
+    "CLAUDE_CODE_USE_POWERSHELL_TOOL": "1"
+  }
+}
+```
+
+### Windows 無需 Git Bash（W18, v2.1.120）
+
+Git for Windows 不再必要。當 Bash 不存在時，Claude Code 自動改用 PowerShell 作為 shell 工具。PowerShell 7 無論透過 Microsoft Store、MSI 或 `.NET` global tool 安裝，均能自動偵測。
+
+### `CLAUDE_CODE_PERFORCE_MODE`（W15）
+
+Edit / Write 在唯讀檔案失敗時提示執行 `p4 edit` 而非靜默覆蓋，適合 Perforce 托管的 codebase：
+
+```bash
+export CLAUDE_CODE_PERFORCE_MODE=1
+```
+
 ---
 
 ## Claude Code 存取範圍
@@ -80,6 +110,69 @@ Claude 還有 spawn subagents、向你提問等 orchestration 工具。完整清
 
 **Interface 選項**：terminal、desktop app、IDE extensions（VS Code、JetBrains）、claude.ai/code、Remote Control、Slack、CI/CD pipelines。
 
+### OS CA Certificate Trust（W15）
+
+預設信任系統 CA store，enterprise TLS proxy 不需額外設定憑證。
+
+### Push Notification（W16）
+
+Remote Control 連接後，在 Remote Control 設定開啟「Push when Claude decides」→ Claude 可推播手機通知（適合長任務背景執行時通知完成）。
+
+### `claude auth login` 無瀏覽器回調（W18, v2.1.126）
+
+WSL2、SSH session、container 等無法 localhost 回調的環境，可直接在 terminal 貼入 OAuth code 完成登入：
+
+```bash
+claude auth login
+# 瀏覽器開啟後，將頁面上的 code 貼入 terminal
+```
+
+---
+
+## TUI / 終端體驗
+
+### Flicker-free Rendering（W14, v2.1.89）
+
+Alt-screen renderer + virtualized scrollback。prompt input 釘在底部，支援跨長對話的滑鼠選取，消除重繪 flicker。
+
+```bash
+export CLAUDE_CODE_NO_FLICKER=1
+claude
+```
+
+### `/tui` command（W16）
+
+Session 中切換 classic / flicker-free renderer，不需重啟：
+
+```text
+> /tui
+```
+
+### Custom Themes（W17, v2.1.118）
+
+`/theme` 開啟 picker，選擇命名 color scheme；也可手動編輯 `~/.claude/themes/` 中的 JSON（每個 theme 選 base preset 並覆蓋特定 token）。Plugin 也可打包 theme。
+
+```text
+> /theme    # 開啟 theme picker
+```
+
+### Vim Visual Mode（W17）
+
+在 prompt input 按 `v`（字元選取）或 `V`（行選取），支援 operator：
+
+```text
+v    # 字元選取模式
+V    # 行選取模式
+```
+
+### `CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN=1`（W19）
+
+關閉全螢幕 alternate-screen 渲染，回到 terminal 原生 scrollback（與 `CLAUDE_CODE_NO_FLICKER=1` 效果不同，此環境變數完全關閉 alternate screen）：
+
+```bash
+export CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN=1
+```
+
 ---
 
 ## Session 管理
@@ -93,6 +186,36 @@ Claude 還有 spawn subagents、向你提問等 orchestration 工具。完整清
 Session 綁定到當前目錄。切換 branch 後 Claude 看到新 branch 的檔案，但對話歷史保持不變（Claude 還記得你說了什麼）。
 
 平行 session：用 git worktrees 建立獨立目錄，各跑一個 Claude session。
+
+### Transcript Search（W13, v2.1.83）
+
+在 transcript mode 按 `/` 搜尋，`n` / `N` 前後跳轉：
+
+```text
+Ctrl+O    # 開啟 transcript
+/migrate  # 搜尋關鍵字
+n         # 下一個結果
+N         # 上一個結果
+```
+
+### Session Recap（W17 正式功能）
+
+切換 focus 後回來看到一行摘要，適合同時跑多個 Claude session：
+
+```text
+> /recap    # 手動觸發
+# 顯示：* recap: Fixing the post-submit transcript shift bug. PR #29869. Next: ...
+```
+
+在 `/config` 關閉自動 recap。
+
+### `CLAUDE_CODE_SESSION_ID`（W19）
+
+此環境變數現在傳遞到 Bash tool 子程序環境，與 hooks 接收的 `session_id` 一致。Hook scripts 可透過 `$CLAUDE_CODE_SESSION_ID` 取得當前 session ID，方便跨工具關聯追蹤：
+
+```bash
+echo "Current session: $CLAUDE_CODE_SESSION_ID"
+```
 
 ### Resume 或 Fork Sessions
 
@@ -188,5 +311,5 @@ The relevant code is in src/payments/. Can you investigate and fix it?
 
 ## Related Resources
 
-- [Common workflows](/research/best-practices/20-common-workflows) — 逐步指南（debug、測試、PR 等）
-- [Extend Claude Code](/research/best-practices/19-features-overview) — Skills、MCP、自訂指令
+- [Common workflows](/en/common-workflows) — 逐步指南（debug、測試、PR 等）
+- [Extend Claude Code](/en/features-overview) — Skills、MCP、自訂指令

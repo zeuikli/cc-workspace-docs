@@ -36,10 +36,38 @@ Provide concise, focused responses. Skip non-essential context, and keep example
 
 Opus 4.7 嚴格遵守低 effort 設定（不自作主張），複雜任務若觀察到淺薄推理應提升 effort 而非 prompt workaround。
 
+### Default Effort 升級時間表
+
+| 時間 | 受影響對象 | 變動 |
+|------|----------|------|
+| W15（Apr 2026） | API key、Bedrock、Vertex、Foundry、Team、Enterprise | default effort `medium` → `high` |
+| W16（Apr 2026） | Max 用戶 | Opus 4.7 成為新預設模型 |
+| W17（Apr 2026） | Pro / Max 用戶 | Opus 4.6 / Sonnet 4.6 default effort `medium` → `high` |
+
+從 Sonnet 4.5 或舊版遷移若觀察到延遲升高，確認是否因 default effort 提升所致（可顯式設定 `--effort medium` 降回）。
+
 設定 xhigh/max 時，建議 max_tokens 從 64k 起跳：
 
 ```text
 This task involves multi-step reasoning. Think carefully through the problem before responding.
+```
+
+### Fast Mode on Opus 4.7（W20，Research Preview）
+
+`/fast` 現在預設使用 Opus 4.7（原 Opus 4.6）：
+
+- 約 **2.5× 速度**，較高 per-token 成本
+- 適合快速迭代和 live debugging
+- 定價：$30 / $150 per MTok input/output（與 Opus 4.6 fast mode 相同）
+
+```text
+> /fast    # 切換到 fast mode（使用 Opus 4.7）
+```
+
+若需要 pin 回 Opus 4.6：
+
+```bash
+export CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE=1
 ```
 
 ### 工具使用觸發

@@ -29,6 +29,7 @@ type: index
 | `2026-05-17-harness-engineering.md` | Harness 工程完整研究 |
 | `2026-05-16-harness-engineering-model-fit.md` | Harness 工程 + 模型適配深研 |
 | `2026-05-19-harness-verification-methods.md` | Harness 驗證品質方法論 |
+| `2026-05-18-auto-load-50round-optimization.md` | Auto-load 50 輪評估（K×M=98） |
 | `2026-05-18-auto-load-token-best-practices.md` | Auto-load token 最佳實踐 |
 
 ## Claude Code 最佳實踐

@@ -5,7 +5,7 @@ type: index
 
 # AI Newsletter Dashboard
 
-> 🕖 更新時間：2026-05-27 08:03 UTC+8 &nbsp;|&nbsp; 📰 本次收錄 54 篇（過去 7 天）
+> 🕖 更新時間：2026-05-28 07:59 UTC+8 &nbsp;|&nbsp; 📰 本次收錄 58 篇（過去 7 天）
 
 ---
 
@@ -46,50 +46,55 @@ type: index
 
 | 日期 | 來源 | 文章 |
 |------|------|------|
+| 2026-05-27 | ⚡ TLDR AI | [xAI Cursor limits 🚫, DeepSWE 👨‍💻, China AI travel restrictions 🤖](https://tldr.tech/ai/2026-05-27) |
+| 2026-05-27 | 🗞️ The Rundown AI | [Exclusive: Demis Hassabis on AGI, curing diseases with AI](https://www.therundown.ai/p/exclusive-demis-hassabis-on-agi-curing-diseases-with-ai) |
+| 2026-05-27 | 🧠 The Neuron | [😺 🎙️ Watch: Is Brain-like Computing What's Next?](https://www.theneurondaily.com/p/watch-is-brain-like-computing-what-s-next) |
+| 2026-05-27 | 🧠 The Neuron | [😺 The Pope’s Warning on AI's Babel](https://www.theneurondaily.com/p/the-pope-s-warning-on-ai-s-babel) |
+| 2026-05-27 | 📅 Last Week in AI | [Last Week in AI #341 - Musk loses to OpenAI, Google's IO updates, OpenAI solves Erdős](https://lastweekin.ai/p/last-week-in-ai-341-musk-loses-to) |
+| 2026-05-27 | 🔓 The Decoder | [Microsoft's MAI-Image-2.5 pulls even with Google's Nano Banana 2 on benchmarks](https://the-decoder.com/microsofts-mai-image-2-5-pulls-even-with-googles-nano-banana-2-on-benchmarks/) |
+| 2026-05-27 | 🔓 The Decoder | [AI coding agent Devin maker Cognition more than doubles its valuation to $26 billion in under nine months](https://the-decoder.com/ai-coding-agent-devin-maker-cognition-more-than-doubles-its-valuation-to-26-billion-in-under-nine-months/) |
+| 2026-05-27 | 🔓 The Decoder | [Robinhood lets AI agents trade shares and make credit card purchases for customers](https://the-decoder.com/robinhood-lets-ai-agents-trade-shares-and-make-credit-card-purchases-for-customers/) |
+| 2026-05-27 | 🔓 The Decoder | [YouTube will try to automatically flag AI videos starting this month](https://the-decoder.com/youtube-will-try-to-automatically-flag-ai-videos-starting-this-month/) |
+| 2026-05-27 | 🔓 The Decoder | [The AI boom drove Nvidia's yearly Taiwan spending from $15 billion to $150 billion](https://the-decoder.com/the-ai-boom-drove-nvidias-yearly-taiwan-spending-from-15-billion-to-150-billion/) |
 | 2026-05-26 | ⚡ TLDR AI | [Grok Build CLI 💻, AI hardware market ⚡, Pope Leo’s AI warning ⛪](https://tldr.tech/ai/2026-05-26) |
 | 2026-05-26 | 🗞️ The Rundown AI | [The Pope just weighed in on AI](https://www.therundown.ai/p/the-pope-just-weighed-in-on-ai) |
 | 2026-05-26 | 🧠 The Neuron | [😺 A free tool just broke Meta's guardrails](https://www.theneurondaily.com/p/a-free-tool-just-broke-meta-s-guardrails) |
 | 2026-05-26 | 🍔 Ben's Bites | [Is SaaS dead?](https://www.bensbites.com/p/is-saas-dead) |
 | 2026-05-26 | 📅 Last Week in AI | [LWiAI Podcast #246 - Gemini 3.5 + Omni, Musk Loses, OpenAI vs Erdős](https://lastweekin.ai/p/lwiai-podcast-246-gemini-35-omni) |
-| 2026-05-26 | 🔓 The Decoder | [Claude Mythos reportedly solves OpenAI's landmark Erdős problem with a "cute, simple proof"](https://the-decoder.com/claude-mythos-reportedly-solves-openais-landmark-erdos-problem-with-a-cute-simple-proof/) |
-| 2026-05-26 | 🔓 The Decoder | [China reportedly now requires top AI researchers to get permission before leaving the country](https://the-decoder.com/china-reportedly-now-requires-top-ai-researchers-to-get-permission-before-leaving-the-country/) |
-| 2026-05-26 | 🔓 The Decoder | [Google Cloud COO says AI security belongs in the boardroom, not just the server room](https://the-decoder.com/google-cloud-coo-says-ai-security-belongs-in-the-boardroom-not-just-the-server-room/) |
-| 2026-05-26 | 🔓 The Decoder | [AI-hallucinated citations are creeping into papers that shape clinical guidelines, researchers warn](https://the-decoder.com/ai-hallucinated-citations-are-creeping-into-papers-that-shape-clinical-guidelines-researchers-warn/) |
-| 2026-05-26 | 🔓 The Decoder | [Y Combinator founder Paul Graham says AI-written founder emails feel like being lied to](https://the-decoder.com/y-combinator-founder-paul-graham-says-ai-written-founder-emails-feel-like-being-lied-to/) |
 | 2026-05-25 | ⚡ TLDR AI | [Mythos 1 🤖, neocloud boom 📈, MCP goes stateless 💻](https://tldr.tech/ai/2026-05-25) |
 | 2026-05-25 | 🗞️ The Rundown AI | [Google tops OpenAI's math breakthrough — 9 to 1](https://www.therundown.ai/p/google-tops-openai-math-breakthrough-9-to-1) |
 | 2026-05-25 | 🧠 The Neuron | [😸 Spotify wants to be your whole audio life](https://www.theneurondaily.com/p/spotify-wants-to-be-your-whole-audio-life) |
 | 2026-05-24 | 🧠 The Neuron | [😸 Cursor just hit $3B. Elon wants it.](https://www.theneurondaily.com/p/cursor-just-hit-3b-elon-wants-it) |
 | 2026-05-22 | ⚡ TLDR AI | [Anthropic Microsoft deal 🤝, Cursor $3B ARR 📈, cloud agent lessons 🤖](https://tldr.tech/ai/2026-05-22) |
 | 2026-05-22 | 🗞️ The Rundown AI | [Exclusive interview: Sundar Pichai on AI's flip phone moment](https://www.therundown.ai/p/exclusive-interview-sundar-pichai-on-ai-flip-phone-moment) |
-| 2026-05-22 | 🧠 The Neuron | [😸 OpenAI solved an 80-year math problem by... disproving it](https://www.theneurondaily.com/p/openai-solved-an-80-year-math-problem-by-disproving-it) |
 | 2026-05-21 | ⚡ TLDR AI | [Anthropic SpaceX $45B deal 💰, Google Agent Executor ⚙️, OpenAI races to IPO 🏦](https://tldr.tech/ai/2026-05-21) |
 | 2026-05-21 | 🗞️ The Rundown AI | [OpenAI cracks an 80-year math belief](https://www.therundown.ai/p/openai-cracks-an-80-year-math-belief) |
-| 2026-05-21 | 🧠 The Neuron | [😺 Watch LIVE NOW: Building AI Voice Agents w/ LiveKit's Ben Cherry](https://www.theneurondaily.com/p/watch-live-now-building-ai-voice-agents-w-livekit-s-ben-cherry) |
 | 2026-05-21 | 🍔 Ben's Bites | [Google's take on openclaw](https://www.bensbites.com/p/googles-take-on-openclaw) |
-| 2026-05-20 | 🗞️ The Rundown AI | [Gemini's busy agentic day at Google I/O](https://www.therundown.ai/p/gemini-busy-agentic-day-at-google-i-o) |
-| 2026-05-20 | 📅 Last Week in AI | [LWiAI Podcast #245 - TML-Interaction, Claude For Legal, Sam Altman on Stand](https://lastweekin.ai/p/lwiai-podcast-245-tml-interaction) |
 
 ## 🔬 Research & Deep Dives
 
 | 日期 | 來源 | 文章 |
 |------|------|------|
+| 2026-05-27 | 🔬 Latent Space | [🔬ESMFold2: The Bitter Lesson is Coming for Proteins - Alex Rives, BioHub](https://www.latent.space/p/esmfold2) |
+| 2026-05-27 | 🔬 Latent Space | [[AINews] New AI Infra decacorns: Fireworks, Baseten (with OpenRouter on the way)](https://www.latent.space/p/ainews-new-ai-infra-decacorns-fireworks) |
+| 2026-05-27 | 🔧 Simon Willison's Weblog | [sqlite AGENTS.md](https://simonwillison.net/2026/May/27/sqlite-agents/#atom-everything) |
+| 2026-05-27 | 🔧 Simon Willison's Weblog | [I think Anthropic and OpenAI have found product-market fit](https://simonwillison.net/2026/May/27/product-market-fit/#atom-everything) |
+| 2026-05-27 | 🔧 Simon Willison's Weblog | [Quoting Kyle Ferrana](https://simonwillison.net/2026/May/27/kyle-ferrana/#atom-everything) |
 | 2026-05-26 | 🔗 Interconnects AI | [Some ideas for what comes next, May 2026](https://www.interconnects.ai/p/some-ideas-for-what-comes-next-may) |
 | 2026-05-26 | 🔧 Simon Willison's Weblog | [The pressure](https://simonwillison.net/2026/May/26/the-pressure/#atom-everything) |
 | 2026-05-26 | 🔧 Simon Willison's Weblog | [Microsoft Copilot Cowork Exfiltrates Files](https://simonwillison.net/2026/May/26/copilot-cowork-exfiltrates-files/#atom-everything) |
-| 2026-05-26 | 🔧 Simon Willison's Weblog | [Quoting Paul Graham](https://simonwillison.net/2026/May/26/paul-graham/#atom-everything) |
-| 2026-05-26 | 🔧 Simon Willison's Weblog | [Quoting Corey Quinn](https://simonwillison.net/2026/May/26/corey-quinn/#atom-everything) |
-| 2026-05-25 | 🔧 Simon Willison's Weblog | [Notes on Pope Leo XIV's encyclical on AI](https://simonwillison.net/2026/May/25/encyclical-on-ai/#atom-everything) |
 | 2026-05-23 | 🔬 Latent Space | [[AINews] All Model Labs are now Agent Labs](https://www.latent.space/p/ainews-all-model-labs-are-now-agent) |
 | 2026-05-22 | 🔬 Latent Space | [[AINews] New AI Infra unicorns: Exa, Modal, TurboPuffer](https://www.latent.space/p/ainews-new-ai-infra-unicorns-exa) |
 | 2026-05-21 | 🔬 Latent Space | [Giving Agents Computers — Ivan Burazin, Daytona](https://www.latent.space/p/daytona) |
-| 2026-05-21 | 🔬 Latent Space | [[AINews] OpenAI GPT-next disproves 80 year old Erdős planar unit distance problem for under $1000](https://www.latent.space/p/ainews-openai-gpt-next-disproves) |
-| 2026-05-20 | 🔬 Latent Space | [Railway: The Agent-Native Cloud — Jake Cooper](https://www.latent.space/p/railway) |
 
 ## 💡 Insights & Strategy
 
 | 日期 | 來源 | 文章 |
 |------|------|------|
+| 2026-05-28 | 🏢 Wisely Chen AI | [Agent 專案該用 TypeScript 還是 Python？答案早就寫在 GitHub 數據裡](https://ai-coding.wiselychen.com/agent-typescript-vs-python-product-engineering/) |
+| 2026-05-27 | 🏢 Wisely Chen AI | [OpenAI 認 bug 重置全站額度、公開鼓勵用第三方 harness：Agent 訂閱戰正式攻守易勢](https://ai-coding.wiselychen.com/agent-subscription-attack-defense-swap-openai-anthropic/) |
+| 2026-05-27 | 📱 Lenny's Newsletter | [The Codex feature that works while you sleep](https://www.lennysnewsletter.com/p/the-codex-feature-that-works-while) |
+| 2026-05-27 | 🚀 Not Boring | [Thank God For Data Centers](https://www.notboring.co/p/thank-god-for-data-centers) |
 | 2026-05-26 | 💡 One Useful Thing | [Choosing to Stay Human](https://www.oneusefulthing.org/p/choosing-to-stay-human) |
 | 2026-05-26 | 📱 Lenny's Newsletter | [Essential books for product builders—part 1](https://www.lennysnewsletter.com/p/essential-books-for-product-builderspart) |
 | 2026-05-25 | 🏢 Wisely Chen AI | [Harness Engineering 才是勝負手：PwC 論文拆解 Grep 打贏 Vector RAG，換個 Harness 準確率差 17 個百分點](https://ai-coding.wiselychen.com/is-grep-all-you-need-pwc-agent-harness-reshapes-retrieval/) |
@@ -99,21 +104,20 @@ type: index
 | 2026-05-25 | 🌉 The Algorithmic Bridge | [How AI Is Taking Away Your Ability to Do Your Own Work](https://www.thealgorithmicbridge.com/p/how-ai-is-taking-away-your-ability) |
 | 2026-05-24 | 🏢 Wisely Chen AI | [T 型人結束了，現在是山型人的時代](https://ai-coding.wiselychen.com/t-shape-ends-mountain-person-strategy/) |
 | 2026-05-24 | 📱 Lenny's Newsletter | [The AI paradox: More automation, more humans, more work | Dan Shipper](https://www.lennysnewsletter.com/p/the-ai-paradox-dan-shipper) |
-| 2026-05-23 | 🏢 Wisely Chen AI | [Inference Engine 選型指南 (2026)：先選硬體策略，引擎自然會浮現](https://ai-coding.wiselychen.com/inference-engine-selection-hardware-strategy/) |
-| 2026-05-23 | 🏢 Wisely Chen AI | [Harness Engineering 的 7 條資安實踐：給 AI Agent 立規矩的工程方法](https://ai-coding.wiselychen.com/harness-engineering-security-best-practices/) |
-| 2026-05-23 | 📱 Lenny's Newsletter | [🧠 Community Wisdom: Best AI cold outreach app, advice for college students interested in PM, the state of AI in design, …](https://www.lennysnewsletter.com/p/community-wisdom-best-ai-cold-outreach) |
 | 2026-05-22 | 🚀 Not Boring | [Weekly Dose of Optimism #194](https://www.notboring.co/p/weekly-dose-of-optimism-194) |
 | 2026-05-22 | ⚖️ AI as Normal Technology | [Did Google’s AI agents really build an operating system for $916?](https://www.normaltech.ai/p/did-googles-ai-agents-really-build) |
 | 2026-05-21 | ⚖️ AI as Normal Technology | [Do AI Risks Require Extraordinary Government Intervention?](https://www.normaltech.ai/p/do-ai-risks-require-extraordinary) |
-| 2026-05-20 | 🌉 The Algorithmic Bridge | [How America Turned Against AI According to the Poll Data: A (Very Big) Compilation](https://www.thealgorithmicbridge.com/p/how-america-turned-against-ai-according) |
 
 ## 🌐 Community
 
 | 日期 | 來源 | 文章 |
 |------|------|------|
+| 2026-05-27 | 🤗 Hugging Face Blog | [ITBench-AA: Frontier Models Score Below 50% on the First Benchmark for Agentic Enterprise IT Tasks — by Artificial Analy…](https://huggingface.co/blog/ibm-research/itbench-aa) |
+| 2026-05-27 | 🤗 Hugging Face Blog | [Reachy Mini goes fully local](https://huggingface.co/blog/local-reachy-mini-conversation) |
+| 2026-05-27 | 🤗 Hugging Face Blog | [Shipping a Trillion Parameters With a Hub Bucket: Delta Weight Sync in TRL](https://huggingface.co/blog/delta-weight-sync) |
+| 2026-05-26 | 🌐 Smol AI News | [not much happened today](https://news.smol.ai/issues/26-05-26-not-much/) |
 | 2026-05-25 | 🤗 Hugging Face Blog | [Harness, Scaffold, and the AI Agent Terms Worth Getting Right](https://huggingface.co/blog/agent-glossary) |
 | 2026-05-23 | 🤗 Hugging Face Blog | [Towards Speed-of-Light Text Generation with Nemotron-Labs Diffusion Language Models](https://huggingface.co/blog/nvidia/nemotron-labs-diffusion) |
-| 2026-05-22 | 🤗 Hugging Face Blog | [Specialization Beats Scale: A Strategic Variable Most AI Procurement Decisions Overlook](https://huggingface.co/blog/Dharma-AI/specialization-beats-scale) |
 | 2026-05-21 | 🌐 Smol AI News | [not much happened today](https://news.smol.ai/issues/26-05-21-not-much/) |
 
 ---

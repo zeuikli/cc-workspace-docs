@@ -129,6 +129,12 @@ response = client.messages.create(
 - 延遲敏感且後續 prompt 可能超過 5 分鐘
 - 需要改善 rate limit 利用率
 
+**`ENABLE_PROMPT_CACHING_1H=1`（W16）**：API key / Bedrock / Vertex / Foundry 用戶可透過環境變數全域啟用 1 小時 TTL，無需在每個 request 手動加 `"ttl": "1h"`：
+
+```bash
+export ENABLE_PROMPT_CACHING_1H=1
+```
+
 ---
 
 ## Breakpoint 位置最佳實踐
@@ -196,6 +202,18 @@ prewarm = client.messages.create(
 | **詳細指令集** | 快取 20+ 個高品質 few-shot examples |
 | **Agentic Tool Use** | 優化多工具呼叫和迭代程式碼修改 |
 | **知識庫應用** | 嵌入完整文件/轉錄文字供互動查詢 |
+
+---
+
+## Sub-agent Progress Summaries 自動快取（W19）
+
+Sub-agent 的 progress summaries 現在自動命中 prompt cache，無需任何設定。預期效果：
+
+- `cache_creation` token 成本降低約 **3×**
+- 長任務 / 多 subagent 工作流可見 cache_creation 明顯下降
+- 驗證方式：觀察 `cache_read_input_tokens` vs `cache_creation_input_tokens` 比率
+
+無需額外 API 參數或環境變數設定，升級到 v2.1.128+ 後自動生效。
 
 ---
 

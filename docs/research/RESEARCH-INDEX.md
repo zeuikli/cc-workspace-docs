@@ -6,7 +6,7 @@ type: documentation
 # Research Index — 知識地圖
 
 > 導覽層：快速找到相關研究，了解整合狀態
-> 更新日期：2026-05-27
+> 更新日期：2026-05-28
 > 檔案總數：162 tweets + 49 ai-articles (scored) + 25 reports + 7 videos + 65 digests
 >
 > **子目錄 → Skill 對應：**

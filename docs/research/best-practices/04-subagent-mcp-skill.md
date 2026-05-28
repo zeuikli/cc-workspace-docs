@@ -43,6 +43,46 @@ reviewer:      allowed-tools: Read, Grep, Glob         # 只讀（不給 Write/B
 test-writer:   allowed-tools: Read, Grep, Glob, Write  # 可寫測試，不執行
 ```
 
+### Skill / Agent frontmatter 進階設定
+
+**`initialPrompt`（W13）**：在 agent frontmatter 宣告，session 啟動時自動送出第一個 turn，不需要用戶手動輸入。
+
+```yaml
+---
+name: my-agent
+initialPrompt: "請先執行 /status，確認目前系統狀態後等待指示。"
+---
+```
+
+**`subagent_type` 大小寫不敏感（v2.1.139+）**：`"Code Reviewer"` 可自動解析為 `code-reviewer`，frontmatter 大小寫不再需要精確比對。
+
+---
+
+## Agent View（`claude agents`，Research Preview）
+
+W20 新功能：一個畫面管理所有 Claude Code session。
+
+```bash
+claude agents    # 開啟 Agent View
+```
+
+| 欄位 | 說明 |
+|------|------|
+| 執行中 | 正在處理任務的 session |
+| 等待輸入 | 暫停等待用戶回覆的 session |
+| 已完成 | 結束的 session |
+
+- 選取 row → attach 進入完整對話；`←` 返回列表
+- Background session 在無 terminal 附加時持續執行
+
+**dispatch flags（啟動新 session 時附加）：**
+
+```bash
+claude agents --add-dir <path> --model opus --effort xhigh --permission-mode auto
+```
+
+常用 flags：`--add-dir`, `--settings`, `--mcp-config`, `--plugin-dir`, `--permission-mode`, `--model`, `--effort`, `--dangerously-skip-permissions`；`--cwd <path>` 限縮列表到指定目錄。
+
 ---
 
 ## Agent Model 分層
@@ -228,6 +268,24 @@ Tasks 是磁碟持久化的任務追蹤，不同於內存 Todos：
 
 ## 平行化最佳實踐
 
+### /agents Running Tab（W15）
+
+`/agents` 指令新增 Running 分頁，即時顯示目前執行中 subagent 的數量，可快速確認平行化是否如預期發生。
+
+```text
+> /agents    # 開啟，切換到 Running tab 查看即時 subagent 數量
+```
+
+### 進階 Subagent 機制
+
+**Forked subagents（W17）**：設定環境變數後，fork 時繼承完整 parent context（含工具呼叫歷史）：
+
+```bash
+CLAUDE_CODE_FORK_SUBAGENT=1 claude
+```
+
+**Sub-agent cache 優化（W19）**：progress summaries 自動命中 prompt cache，`cache_creation` token 成本降低約 3×，無需任何設定即生效。
+
 ### 單一訊息啟動多個 Subagent
 
 ```
@@ -266,10 +324,10 @@ or reading multiple files.
 
 ## 參考來源
 
-- [官方 Sub-Agents 文件](https://code.claude.com/docs/en/sub-agents)
-- [官方 Skill 文件](https://code.claude.com/docs/en/skills)
-- [官方 MCP 文件](https://code.claude.com/docs/en/mcp)
-- [Claude Code Best Practices — Anthropic Engineering](https://www.anthropic.com/engineering/claude-code-best-practices)
-- [Understanding Claude Code Full Stack — alexop.dev](https://alexop.dev/posts/understanding-claude-code-full-stack/)
-- [Best Practices for Claude Code Sub-Agents — PubNub](https://www.pubnub.com/blog/best-practices-for-claude-code-sub-agents/)
+- https://code.claude.com/docs/en/sub-agents（官方 Sub-Agents 文件）
+- https://code.claude.com/docs/en/skills（官方 Skill 文件）
+- https://code.claude.com/docs/en/mcp（官方 MCP 文件）
+- https://www.anthropic.com/engineering/claude-code-best-practices
+- https://alexop.dev/posts/understanding-claude-code-full-stack/
+- https://www.pubnub.com/blog/best-practices-for-claude-code-sub-agents/
 - https://platform.claude.com/docs/en/agent-sdk/subagents

@@ -395,10 +395,158 @@ exit 0
 
 ## 參考來源
 
-- [官方完整文件](https://code.claude.com/docs/en/hooks-guide)
-- [Hooks reference — Anthropic Docs](https://docs.anthropic.com/en/docs/claude-code/hooks)
-- [disler/claude-code-hooks-mastery（完整生產級實作）](https://github.com/disler/claude-code-hooks-mastery)
-- [karanb192/claude-code-hooks（範例集）](https://github.com/karanb192/claude-code-hooks)
-- [letanure.dev — Claude Code Part 8: Hooks & Automated Quality Checks](https://www.letanure.dev/blog/2025-08-06--claude-code-part-8-hooks-automated-quality-checks)
-- [eesel.ai — Hooks in Claude Code](https://www.eesel.ai/blog/hooks-in-claude-code)
-- [blakecrosley.com — Claude Code Hooks Tutorial](https://blakecrosley.com/blog/claude-code-hooks-tutorial)
+- https://code.claude.com/docs/en/hooks-guide（官方完整文件）
+- https://docs.anthropic.com/en/docs/claude-code/hooks（Hooks reference）
+- https://github.com/disler/claude-code-hooks-mastery（完整生產級實作）
+- https://github.com/karanb192/claude-code-hooks（範例集）
+- https://www.letanure.dev/blog/2025-08-06--claude-code-part-8-hooks-automated-quality-checks
+- https://www.eesel.ai/blog/hooks-in-claude-code
+- https://blakecrosley.com/blog/claude-code-hooks-tutorial
+
+---
+
+## 新功能更新（2026 W13-W19）
+
+### Conditional Hooks — `if` 欄位條件式觸發（W13, v2.1.85）
+
+Hook 新增 `if` 欄位（permission rule 語法），只在特定條件下觸發，避免過度執行：
+
+```json
+{
+  "hooks": {
+    "PreToolUse": [{
+      "hooks": [{
+        "if": "Bash(git commit *)",
+        "type": "command",
+        "command": ".claude/hooks/lint-staged.sh"
+      }]
+    }]
+  }
+}
+```
+
+### CwdChanged / FileChanged Hook 事件（W13）
+
+`CwdChanged`、`FileChanged` 事件支援 direnv 風格的環境設定，工作目錄切換時自動觸發環境初始化。
+
+### UserPromptSubmit — 設定 Session Title（W15）
+
+`UserPromptSubmit` hook 可在回傳中設定 session 標題：
+
+```json
+{
+  "hookSpecificOutput": {
+    "sessionTitle": "My feature implementation session"
+  }
+}
+```
+
+### PreCompact Hook — 阻斷 Compaction（W16）
+
+`PreCompact` hook 可 exit 2 或回傳 JSON 阻斷 compaction（保護重要未提交決策）：
+
+```bash
+# exit 2 阻斷
+exit 2
+```
+
+```json
+{"decision": "block"}
+```
+
+### Hooks 直接呼叫 MCP Tools（W17）
+
+Hook 可用 `"type": "mcp_tool"` 直接呼叫 MCP 工具，不需 spawn process：
+
+```json
+{
+  "hooks": {
+    "PostToolUse": [{
+      "matcher": "Edit",
+      "hooks": [{
+        "type": "mcp_tool",
+        "server": "my-mcp-server",
+        "tool": "notify_change"
+      }]
+    }]
+  }
+}
+```
+
+### PostToolUse 任意工具輸出替換（W18）
+
+透過 `hookSpecificOutput.updatedToolOutput`，可替換**任何**工具的輸出（不限 MCP），Claude 看到的是 hook 替換後的內容：
+
+```json
+{
+  "hookSpecificOutput": {
+    "updatedToolOutput": "替換後的工具輸出文字"
+  }
+}
+```
+
+### Hooks 讀取 Effort Level（W19）
+
+Hook 輸入 JSON 新增 `effort.level` 欄位；Bash hook 可直接讀 `$CLAUDE_EFFORT` 環境變數：
+
+```bash
+#!/bin/bash
+# 根據 effort level 調整行為
+if [ "$CLAUDE_EFFORT" = "xhigh" ]; then
+  # xhigh 時做額外驗證
+  run_full_lint
+fi
+exit 0
+```
+
+或從 JSON stdin 讀取：
+
+```bash
+EFFORT=$(cat | jq -r '.effort.level // "medium"')
+```
+
+### Exec Form — 無 Shell 直接執行（W20）
+
+Hook 的 `args: string[]` exec form 直接 spawn 命令，不經過 shell，路徑 placeholder 不需加引號：
+
+```json
+{
+  "hooks": {
+    "PreToolUse": [{
+      "hooks": [{
+        "type": "command",
+        "args": ["/usr/local/bin/my-validator", "--strict"]
+      }]
+    }]
+  }
+}
+```
+
+### `continueOnBlock` — PostToolUse 阻斷後繼續（W20）
+
+`PostToolUse` hook 新增 `continueOnBlock` 設定選項：hook 拒絕工具輸出時，將拒絕原因回傳給 Claude 並繼續 turn，而非直接終止：
+
+```json
+{
+  "hooks": {
+    "PostToolUse": [{
+      "matcher": "Bash",
+      "continueOnBlock": true,
+      "hooks": [{
+        "type": "command",
+        "command": "~/.claude/hooks/validate-output.sh"
+      }]
+    }]
+  }
+}
+```
+
+### `terminalSequence` — 桌面通知與 Terminal 控制（W20）
+
+Hook JSON 輸出新增 `terminalSequence` 欄位，讓 hook 無需控制 terminal 即可發出桌面通知、設定視窗標題、響鈴：
+
+```json
+{
+  "terminalSequence": "]2;Claude: task complete"
+}
+```

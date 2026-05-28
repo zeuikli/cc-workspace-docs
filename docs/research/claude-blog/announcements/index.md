@@ -6,7 +6,7 @@ type: index
 # Announcements — claude.com/blog
 
 > 收錄自 [claude.com/blog/category/announcements](https://claude.com/blog/category/announcements) · 19 篇文章 · 2026-02-17 ~ 2026-05-19
-> 最後更新：2026-05-27
+> 最後更新：2026-05-19
 
 ---
 

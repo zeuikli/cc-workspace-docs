@@ -209,6 +209,71 @@ Keep interviewing until we've covered everything, then write a complete spec to 
 
 完成 spec 後，開新 session 執行（乾淨 context 專注實作）。
 
+詳細的兩階段工作流與 Thariq 的原話引述，見下方「Spec-Based Development」章節。
+
+---
+
+## Spec-Based Development
+
+來源：Thariq（@trq212，Anthropic Claude Code 核心成員），持續推薦的工作流
+
+### 模式：minimal spec → 訪問 → 整理 → 新 session 執行
+
+```
+1. 寫一個 minimal spec（一段話或幾個要點）
+2. 讓 Claude 用 AskUserQuestionTool 詳細訪問你（澄清邊界）
+3. 整理訪問結果成完整 spec（存為 SPEC.md）
+4. 開新 session 執行 spec
+```
+
+**Thariq 的說法**：
+> "my favorite way to use Claude Code to build large features is spec based — start with a minimal spec or prompt and ask Claude to interview you using the AskUserQuestionTool, then make a new session to execute the spec"
+
+### 為什麼有效
+
+- AskUserQuestionTool 以結構化 modal UI 詢問，強迫釐清邊界條件
+- Session 1（規劃）與 Session 2（執行）分離：規劃過程的探索不污染執行 context
+- 對應「Think Before Coding」原則：假設顯露比直接衝更有效
+
+### 兩階段使用流程
+
+```bash
+# Session 1 — 規劃
+claude
+"我想要建立一個 X 功能，請用 AskUserQuestionTool 詳細訪問我，
+包含技術實作、UI/UX、潛在問題、trade-offs，
+直到覆蓋所有細節，再整理為 SPEC.md"
+
+# 整理訪問結果，確認 SPEC.md 內容正確
+
+# Session 2 — 執行
+claude   # 新 session，乾淨 context
+"Read SPEC.md and implement the feature"
+```
+
+---
+
+## Claude Code = 通用 Agent
+
+來源：Thariq（@trq212），Anthropic 內部人士第一手確認（2025-07-14）
+
+**核心訊息**：
+> "When I first joined Anthropic I was surprised to learn that lots of the team used Claude Code as a general agent, not just for code."
+
+### Anthropic 內部非程式碼使用案例
+
+| 使用場景 | 說明 |
+|---------|------|
+| **研究彙整** | 代替手動搜尋 + 整理，掃描多份文件輸出摘要 |
+| **寫作輔助** | 長文草稿 + 迭代修改，跨 session 維持脈絡 |
+| **數據分析** | 讀 CSV、分析、可視化，輸出報告 |
+| **會議準備** | 讀相關文件 + 整理要點 + 生成議程 |
+| **系統設計文件** | 訪問（AskUserQuestionTool）→ spec → 文件草稿 |
+
+### 啟示：CLAUDE.md 不應限制只處理程式碼任務
+
+CLAUDE.md 中加入「只處理程式碼任務」等限制，會把 Claude Code 降為比實際能力窄的工具。讓 CLAUDE.md 描述你的工作環境與慣例，而非限制任務類型——任何需要 context + 工具的工作都是潛在的 Claude Code 使用場景。
+
 ---
 
 ## 6. 管理 Session
@@ -345,7 +410,7 @@ claude --permission-mode auto -p "fix all lint errors"
 
 ## Related Resources
 
-- [How Claude Code works](/research/best-practices/18-how-claude-code-works) — agentic loop、tools、context 管理
-- [Extend Claude Code](/research/best-practices/19-features-overview) — skills、hooks、MCP、subagents、plugins
-- [Common workflows](/research/best-practices/20-common-workflows) — debug、testing、PR、session 管理等逐步指南
-- [CLAUDE.md](/research/best-practices/21-memory-claudemd) — 儲存專案慣例與持久 context
+- [How Claude Code works](/en/how-claude-code-works) — agentic loop、tools、context 管理
+- [Extend Claude Code](/en/features-overview) — skills、hooks、MCP、subagents、plugins
+- [Common workflows](/en/common-workflows) — debug、testing、PR、session 管理等逐步指南
+- [CLAUDE.md](/en/memory) — 儲存專案慣例與持久 context

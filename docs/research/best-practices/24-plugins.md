@@ -159,6 +159,8 @@ When reviewing code, check for:
 
 安裝 plugin 後 `/reload-plugins` 載入新 Skill。詳見 `skill-authoring.md`（本 workspace 已收錄）。
 
+**Root-level `SKILL.md`（W20）**：若 plugin 在根目錄放 `SKILL.md`（無 `skills/` 子目錄），現在會被正確識別為 skill 並在 `/skills` 清單中顯示。適合「整個 plugin 就是一個 skill」的簡單情境。
+
 ### 5.2 Agents（`agents/`）
 
 自訂 agent 定義（system prompt、model、工具限制）。
@@ -249,6 +251,18 @@ claude --plugin-dir ./my-plugin
 > /reload-plugins
 ```
 
+### Plugin `.zip` / URL 載入（W19）
+
+`--plugin-dir` 現在接受 `.zip` 壓縮檔；`--plugin-url` 從 URL 下載 plugin 壓縮包用於當前 session：
+
+```bash
+# 從 URL 直接載入（適合試用或內部 artifact store）
+claude --plugin-url https://example.com/my-plugin.zip
+
+# 從本地 zip 載入
+claude --plugin-dir ./my-plugin.zip
+```
+
 ### Debug checklist
 
 1. 確認 `skills/`、`agents/`、`hooks/` 在 **plugin root**（不是 `.claude-plugin/` 內）
@@ -276,6 +290,23 @@ claude --plugin-dir ./my-plugin
 
 ```bash
 claude plugin tag    # 建立 release git tag，含 version validation
+```
+
+### `claude plugin prune`（W18）
+
+移除孤立的自動安裝 plugin 依賴：
+
+```bash
+claude plugin prune                   # 移除孤立依賴（有確認提示）
+claude plugin uninstall --prune       # 解除安裝 plugin 並一次清除依賴
+```
+
+### `claude plugin details <name>`（W20）
+
+顯示 plugin 的 component inventory 和預估 per-session token cost，也列出 plugin 提供的 LSP servers：
+
+```bash
+claude plugin details my-plugin
 ```
 
 ### 私有團隊 Marketplace
