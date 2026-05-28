@@ -51,7 +51,7 @@ const researchItems = [
   { text: "研究資料庫總覽", link: "/research/" },
   {
     text: "Agent Harness 核心",
-    collapsed: false,
+    collapsed: true,
     items: [
       { text: "分類索引", link: "/research/agent-harness/" },
       { text: "SURVEY — 論文總覽", link: "/research/agent-harness/SURVEY" },
