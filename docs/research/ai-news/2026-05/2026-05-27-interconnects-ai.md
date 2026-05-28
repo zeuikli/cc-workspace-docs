@@ -1,3 +1,10 @@
+---
+title: Interconnects AI — 2026-05-27
+date: 2026-05-27
+source: Interconnects AI
+type: ai-news
+---
+
 # 🔗 Interconnects AI — 2026-05-27
 
 > Nathan Lambert 的 RLHF、模型訓練深度專欄

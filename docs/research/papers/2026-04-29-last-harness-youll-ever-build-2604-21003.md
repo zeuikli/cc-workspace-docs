@@ -136,7 +136,7 @@ Currently Λ is human-designed and fixed. The framework generalizes by having a 
 
 ### 3.2 A Meta-Learning Formulation
 
-Let **𝒯_train = {t_1, t_2, …, t_n}** be meta-train tasks from potentially different domains.
+Let **𝒯_train = &#123;t_1, t_2, …, t_n&#125;** be meta-train tasks from potentially different domains.
 Let **𝒯_test** be held-out meta-test tasks for evaluating generalization.
 
 **Two-loop operation:**

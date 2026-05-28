@@ -864,9 +864,9 @@ Today, we check in a year after the [first ](https://www.latent.space/p/unsuperv
 
 **Jacob Effron**
 
-  * **LinkedIn:** <https://www.linkedin.com/in/jacobeffron/>
+  * **LinkedIn:** &lt;https://www.linkedin.com/in/jacobeffron/>
 
-  * **X:** <https://x.com/jacobeffron>
+  * **X:** &lt;https://x.com/jacobeffron>
 
 
 
@@ -1862,9 +1862,9 @@ We also go inside **[Tangle](https://shopify.engineering/tangle), [Tangent](http
 
 **Mikhail Parakhin**
 
-  * **LinkedIn** : <https://www.linkedin.com/in/mikhail-parakhin/>
+  * **LinkedIn** : &lt;https://www.linkedin.com/in/mikhail-parakhin/>
 
-  * **X** : <https://x.com/MParakhin>
+  * **X** : &lt;https://x.com/MParakhin>
 
 
 

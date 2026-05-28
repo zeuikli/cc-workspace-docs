@@ -1,3 +1,10 @@
+---
+title: The Neuron — 2026-05-27
+date: 2026-05-27
+source: The Neuron
+type: ai-news
+---
+
 # 🧠 The Neuron — 2026-05-27
 
 > 面向非技術讀者的 AI 日報，3 分鐘讀完

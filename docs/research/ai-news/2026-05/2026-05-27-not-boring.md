@@ -1,3 +1,10 @@
+---
+title: Not Boring — 2026-05-27
+date: 2026-05-27
+source: Not Boring
+type: ai-news
+---
+
 # 🚀 Not Boring — 2026-05-27
 
 > Packy McCormick 的科技商業策略深度文；以敘事帶動的長篇市場分析

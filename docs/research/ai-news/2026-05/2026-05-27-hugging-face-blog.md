@@ -1,3 +1,10 @@
+---
+title: Hugging Face Blog — 2026-05-27
+date: 2026-05-27
+source: Hugging Face Blog
+type: ai-news
+---
+
 # 🤗 Hugging Face Blog — 2026-05-27
 
 > HuggingFace 官方 blog；新模型發布、開源工具、Dataset 與研究亮點第一手

@@ -74,18 +74,18 @@ We go deep on **Railway 's infrastructure stack**: own-metal data centers, three
 
 **Railway:**
 
-  * **Website:** <https://railway.com/>
+  * **Website:** &lt;https://railway.com/>
 
-  * **X:**<https://x.com/Railway>
+  * **X:**&lt;https://x.com/Railway>
 
 
 
 
 **Jake Cooper:**
 
-  * **LinkedIn:** <https://www.linkedin.com/in/thejakecooper/>
+  * **LinkedIn:** &lt;https://www.linkedin.com/in/thejakecooper/>
 
-  * **X:** <https://x.com/JustJake>
+  * **X:** &lt;https://x.com/JustJake>
 
 
 
@@ -1433,11 +1433,11 @@ For those looking for 's commentary, it really gets going around the 00:51:31 ma
 
 **Yaroslav Azhnyuk / The Fourth Law:**
 
-  * X: <https://x.com/YaroslavAzhnyuk>
+  * X: &lt;https://x.com/YaroslavAzhnyuk>
 
-  * LinkedIn: <https://www.linkedin.com/in/yaroslavazhnyuk/>
+  * LinkedIn: &lt;https://www.linkedin.com/in/yaroslavazhnyuk/>
 
-  * The Fourth Law: <https://thefourthlaw.ai>
+  * The Fourth Law: &lt;https://thefourthlaw.ai>
 
 
 
@@ -1448,7 +1448,7 @@ For those looking for 's commentary, it really gets going around the 00:51:31 ma
 
 
 
-  * X: <https://x.com/noahpinion>
+  * X: &lt;https://x.com/noahpinion>
 
 
 

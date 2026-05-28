@@ -1,3 +1,10 @@
+---
+title: The Decoder — 2026-05-27
+date: 2026-05-27
+source: The Decoder
+type: ai-news
+---
+
 # 🔓 The Decoder — 2026-05-27
 
 > 企業 AI 開發與模型應用日報，涵蓋 AI 社會影響（英語媒體）

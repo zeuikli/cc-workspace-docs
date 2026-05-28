@@ -1,3 +1,10 @@
+---
+title: "Lenny's Newsletter — 2026-05-27"
+date: 2026-05-27
+source: "Lenny's Newsletter"
+type: ai-news
+---
+
 # 📱 Lenny's Newsletter — 2026-05-27
 
 > Lenny Rachitsky 的產品 / 成長策略週報；AI 在 PM 工作流的第一手實踐
@@ -230,13 +237,13 @@ Listen now on **[YouTube](https://youtu.be/-tdNsYi8AXs) • [Spotify](https://op
 
 #### Blog & detailed workflow walkthroughs from this episode:
 
-How I AI: Felix Rieseberg's Claude Workflows for 3D House Design and a $20 Hardware Buddy: <https://www.chatprd.ai/how-i-ai/felix-rieseberg-claude-code-cowork-workflows-for-3d-house-design-and-hardware-buddy>
+How I AI: Felix Rieseberg's Claude Workflows for 3D House Design and a $20 Hardware Buddy: &lt;https://www.chatprd.ai/how-i-ai/felix-rieseberg-claude-code-cowork-workflows-for-3d-house-design-and-hardware-buddy>
 
-**↳ **How to Build a $20 Physical AI 'Buddy' with Claude Code: <https://www.chatprd.ai/how-i-ai/workflows/how-to-build-a-20-physical-ai-buddy-with-claude-code>
+**↳ **How to Build a $20 Physical AI 'Buddy' with Claude Code: &lt;https://www.chatprd.ai/how-i-ai/workflows/how-to-build-a-20-physical-ai-buddy-with-claude-code>
 
-**↳ **How to Create an Interactive 3D House Model from a Floor Plan Using AI: <https://www.chatprd.ai/how-i-ai/workflows/how-to-create-an-interactive-3d-house-model-from-a-floor-plan-using-ai>
+**↳ **How to Create an Interactive 3D House Model from a Floor Plan Using AI: &lt;https://www.chatprd.ai/how-i-ai/workflows/how-to-create-an-interactive-3d-house-model-from-a-floor-plan-using-ai>
 
-**↳ **How to Build a Live, Auto-Updating Personal Dashboard with Claude: <https://www.chatprd.ai/how-i-ai/workflows/how-to-build-a-live-auto-updating-personal-dashboard-with-claude>
+**↳ **How to Build a Live, Auto-Updating Personal Dashboard with Claude: &lt;https://www.chatprd.ai/how-i-ai/workflows/how-to-build-a-live-auto-updating-personal-dashboard-with-claude>
 
 * * *
 
@@ -282,7 +289,7 @@ Claire breaks down the biggest launches from Google I/O 2026--from Gemini 3.5 Fl
 
 #### Blog:
 
-How I AI: My Live Test of Google I/O's New AI Tools--From Gemini 3.5 Flash to Omni Video: <https://www.chatprd.ai/how-i-ai/google-io-new-ai-tools-gemini-35-flash-to-omni-video>
+How I AI: My Live Test of Google I/O's New AI Tools--From Gemini 3.5 Flash to Omni Video: &lt;https://www.chatprd.ai/how-i-ai/google-io-new-ai-tools-gemini-35-flash-to-omni-video>
 
 * * *
 
@@ -383,41 +390,41 @@ Lenny
 
 ### Tools referenced:
 
-• Claude Cowork: <https://www.anthropic.com/product/claude-cowork>
+• Claude Cowork: &lt;https://www.anthropic.com/product/claude-cowork>
 
-• Claude Code: <https://claude.ai/code>
+• Claude Code: &lt;https://claude.ai/code>
 
-• Claude for Chrome: <https://code.claude.com/docs/en/chrome>
+• Claude for Chrome: &lt;https://code.claude.com/docs/en/chrome>
 
-• Claude Desktop: <https://claude.ai/download>
+• Claude Desktop: &lt;https://claude.ai/download>
 
-• Live Artifacts: <https://support.claude.com/en/articles/14729249-use-live-artifacts-in-claude-cowork>
+• Live Artifacts: &lt;https://support.claude.com/en/articles/14729249-use-live-artifacts-in-claude-cowork>
 
-• Connectors (Spotify, Gmail, Calendar, Notion): <https://claude.ai/settings/connectors>
+• Connectors (Spotify, Gmail, Calendar, Notion): &lt;https://claude.ai/settings/connectors>
 
-• Slack: <https://slack.com/>
+• Slack: &lt;https://slack.com/>
 
 ### Where to find Felix Rieseberg:
 
-Website: <https://felixrieseberg.com/>
+Website: &lt;https://felixrieseberg.com/>
 
-LinkedIn: <https://www.linkedin.com/in/felixrieseberg/>
+LinkedIn: &lt;https://www.linkedin.com/in/felixrieseberg/>
 
-X: <https://x.com/felixrieseberg>
+X: &lt;https://x.com/felixrieseberg>
 
-GitHub: <https://github.com/felixrieseberg>
+GitHub: &lt;https://github.com/felixrieseberg>
 
 ### Where to find Claire Vo:
 
-ChatPRD: <https://www.chatprd.ai/>
+ChatPRD: &lt;https://www.chatprd.ai/>
 
-Website: <https://clairevo.com/>
+Website: &lt;https://clairevo.com/>
 
-LinkedIn: <https://www.linkedin.com/in/clairevo/>
+LinkedIn: &lt;https://www.linkedin.com/in/clairevo/>
 
-X: <https://x.com/clairevo>
+X: &lt;https://x.com/clairevo>
 
-Production and marketing by <https://penname.co/>. For inquiries about sponsoring the podcast, email jordan@penname.co.
+Production and marketing by &lt;https://penname.co/>. For inquiries about sponsoring the podcast, email jordan@penname.co.
 
 ---
 
@@ -471,93 +478,93 @@ Production and marketing by <https://penname.co/>. For inquiries about sponsorin
 
 ### Where to find Dan Shipper:
 
-• X: <https://x.com/danshipper>
+• X: &lt;https://x.com/danshipper>
 
-• LinkedIn: <https://www.linkedin.com/in/danshipper/>
+• LinkedIn: &lt;https://www.linkedin.com/in/danshipper/>
 
-• Podcast: <https://every.to/podcast>
+• Podcast: &lt;https://every.to/podcast>
 
-• Website: <https://danshipper.com>
+• Website: &lt;https://danshipper.com>
 
 ### Referenced:
 
-• The AI-native startup: 5 products, 7-figure revenue, 100% AI-written code | Dan Shipper (co-founder/CEO of Every): <https://www.lennysnewsletter.com/p/inside-every-dan-shipper>
+• The AI-native startup: 5 products, 7-figure revenue, 100% AI-written code | Dan Shipper (co-founder/CEO of Every): &lt;https://www.lennysnewsletter.com/p/inside-every-dan-shipper>
 
-• Claude Cowork: <https://claude.com/product/cowork>
+• Claude Cowork: &lt;https://claude.com/product/cowork>
 
-• Codex: <https://chatgpt.com/codex>
+• Codex: &lt;https://chatgpt.com/codex>
 
-• Everyone should be using Claude Code more: <https://www.lennysnewsletter.com/p/everyone-should-be-using-claude-code>
+• Everyone should be using Claude Code more: &lt;https://www.lennysnewsletter.com/p/everyone-should-be-using-claude-code>
 
-• Every: <https://every.to>
+• Every: &lt;https://every.to>
 
-• Kieran Klaassen on X: <https://x.com/kieranklaassen>
+• Kieran Klaassen on X: &lt;https://x.com/kieranklaassen>
 
-• Cora: <https://cora.computer>
+• Cora: &lt;https://cora.computer>
 
-• Kate Lee: <https://every.to/@kate_1767>
+• Kate Lee: &lt;https://every.to/@kate_1767>
 
-• METR (Model Evaluation and Threat Research): <https://metr.org>
+• METR (Model Evaluation and Threat Research): &lt;https://metr.org>
 
-• OpenClaw: <https://openclaw.ai>
+• OpenClaw: &lt;https://openclaw.ai>
 
-• Shopify: <https://www.shopify.com>
+• Shopify: &lt;https://www.shopify.com>
 
-• Ramp: <https://ramp.com>
+• Ramp: &lt;https://ramp.com>
 
 • Brandon Gell on LinkedIn: [linkedin.com/in/brandongell](http://linkedin.com/in/brandongell)
 
-• Proof: <https://every.to/on-every/introducing-proof>
+• Proof: &lt;https://every.to/on-every/introducing-proof>
 
-• Devin: <https://devin.ai>
+• Devin: &lt;https://devin.ai>
 
-• Cursor: <https://cursor.com>
+• Cursor: &lt;https://cursor.com>
 
-• The rise of Cursor: The $300M ARR AI tool that engineers can't stop using | Michael Truell (co-founder and CEO): <https://www.lennysnewsletter.com/p/the-rise-of-cursor-michael-truell>
+• The rise of Cursor: The $300M ARR AI tool that engineers can't stop using | Michael Truell (co-founder and CEO): &lt;https://www.lennysnewsletter.com/p/the-rise-of-cursor-michael-truell>
 
-• SpaceX: <https://www.spacex.com>
+• SpaceX: &lt;https://www.spacex.com>
 
-• GitHub: <https://github.com>
+• GitHub: &lt;https://github.com>
 
-• Lenny's post on X on AI changing job responsibilities: <https://x.com/lennysan/status/2054664138039992600>
+• Lenny's post on X on AI changing job responsibilities: &lt;https://x.com/lennysan/status/2054664138039992600>
 
-• General Assembly: <https://generalassemb.ly>
+• General Assembly: &lt;https://generalassemb.ly>
 
-• Marcus Moretti: <https://every.to/@marcus_fd8302_1>
+• Marcus Moretti: &lt;https://every.to/@marcus_fd8302_1>
 
-• Spiral: <https://every.to/on-every/introducing-spiral>
+• Spiral: &lt;https://every.to/on-every/introducing-spiral>
 
-• Axios: <https://www.axios.com>
+• Axios: &lt;https://www.axios.com>
 
-• Hermes: <https://hermes-agent.nousresearch.com>
+• Hermes: &lt;https://hermes-agent.nousresearch.com>
 
-• Viktor: <https://www.viktor.ai>
+• Viktor: &lt;https://www.viktor.ai>
 
-• _The Dark Wizard_ on HBO: <https://www.hbomax.com/shows/dark-wizard/76e78c26-21c9-45b4-b84b-4c3e1f8ff763>
+• _The Dark Wizard_ on HBO: &lt;https://www.hbomax.com/shows/dark-wizard/76e78c26-21c9-45b4-b84b-4c3e1f8ff763>
 
-• Alex Honnold: <https://en.wikipedia.org/wiki/Alex_Honnold>
+• Alex Honnold: &lt;https://en.wikipedia.org/wiki/Alex_Honnold>
 
-• _100 Foot Wave_ on HBO Max: <https://www.hbomax.com/shows/100-foot-wave/34e489ad-2eca-4078-adb6-6d2b521b407e>
+• _100 Foot Wave_ on HBO Max: &lt;https://www.hbomax.com/shows/100-foot-wave/34e489ad-2eca-4078-adb6-6d2b521b407e>
 
-• Rob Burbea talks: <https://www.youtube.com/@boubabuddha/playlists>
+• Rob Burbea talks: &lt;https://www.youtube.com/@boubabuddha/playlists>
 
-• David Goggins: <https://en.wikipedia.org/wiki/David_Goggins>
+• David Goggins: &lt;https://en.wikipedia.org/wiki/David_Goggins>
 
 ### Recommended books:
 
-• _The Golden Compass_ : <https://www.amazon.com/Golden-Compass-His-Dark-Materials/dp/0807204714>
+• _The Golden Compass_ : &lt;https://www.amazon.com/Golden-Compass-His-Dark-Materials/dp/0807204714>
 
-• _The Writing Life_ : <https://www.amazon.com/Writing-Life-Annie-Dillard/dp/0060919884>
+• _The Writing Life_ : &lt;https://www.amazon.com/Writing-Life-Annie-Dillard/dp/0060919884>
 
-• _The Second World War_ : <https://www.amazon.com/Second-World-War-Volumes/dp/B005NS30ZG>
+• _The Second World War_ : &lt;https://www.amazon.com/Second-World-War-Volumes/dp/B005NS30ZG>
 
-• _The Rigor of Angels: Borges, Heisenberg, Kant, and the Ultimate Nature of Reality_ : <https://www.amazon.com/Rigor-Angels-Heisenberg-Ultimate-Reality/dp/0593315073>
+• _The Rigor of Angels: Borges, Heisenberg, Kant, and the Ultimate Nature of Reality_ : &lt;https://www.amazon.com/Rigor-Angels-Heisenberg-Ultimate-Reality/dp/0593315073>
 
-• _The Power Broker: Robert Moses and the Fall of New York_ : <https://www.amazon.com/Power-Broker-Robert-Moses-Fall/dp/0394720245>
+• _The Power Broker: Robert Moses and the Fall of New York_ : &lt;https://www.amazon.com/Power-Broker-Robert-Moses-Fall/dp/0394720245>
 
 * * *
 
-Production and marketing by <https://penname.co/>. For inquiries about sponsoring the podcast, email [podcast@lennyrachitsky.com](mailto:podcast@lennyrachitsky.com).
+Production and marketing by &lt;https://penname.co/>. For inquiries about sponsoring the podcast, email [podcast@lennyrachitsky.com](mailto:podcast@lennyrachitsky.com).
 
 _Lenny may be an investor in the companies discussed._
 

@@ -1,3 +1,10 @@
+---
+title: Latent Space — 2026-05-27
+date: 2026-05-27
+source: Latent Space
+type: ai-news
+---
+
 # 🔬 Latent Space — 2026-05-27
 
 > swyx 開發者簡報，未公開專案 + 工程視角
@@ -298,18 +305,18 @@ We go deep on the **new agent compute market** : Daytona's hard pivot from human
 
 **Ivan Burazin**
 
-  * **LinkedIn:** <https://www.linkedin.com/in/ivanburazin>
+  * **LinkedIn:** &lt;https://www.linkedin.com/in/ivanburazin>
 
-  * **X:** <https://x.com/ivanburazin>
+  * **X:** &lt;https://x.com/ivanburazin>
 
 
 
 
 **Daytona**
 
-  * **Website:** <https://www.daytona.io>
+  * **Website:** &lt;https://www.daytona.io>
 
-  * **X:** <https://x.com/daytonaio>
+  * **X:** &lt;https://x.com/daytonaio>
 
 
 
@@ -1405,18 +1412,18 @@ We go deep on **Railway 's infrastructure stack**: own-metal data centers, three
 
 **Railway:**
 
-  * **Website:** <https://railway.com/>
+  * **Website:** &lt;https://railway.com/>
 
-  * **X:**<https://x.com/Railway>
+  * **X:**&lt;https://x.com/Railway>
 
 
 
 
 **Jake Cooper:**
 
-  * **LinkedIn:** <https://www.linkedin.com/in/thejakecooper/>
+  * **LinkedIn:** &lt;https://www.linkedin.com/in/thejakecooper/>
 
-  * **X:** <https://x.com/JustJake>
+  * **X:** &lt;https://x.com/JustJake>
 
 
 
