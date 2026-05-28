@@ -1443,15 +1443,15 @@ Harness Engineering 不是要你「寫更多規則」。是要你**用對的結�
 
 ## 參考資料
 
-  * Anthropic Engineering, _April 23 Postmortem_ : &lt;https://www.anthropic.com/engineering/april-23-postmortem>
-  * Anthropic, _Best Practices for Claude Code_ : &lt;https://code.claude.com/docs/en/best-practices>
-  * DEV Community, _I Wrote 200 Lines of Rules for Claude Code. It Ignored Them All._ : &lt;https://dev.to/minatoplanb/i-wrote-200-lines-of-rules-for-claude-code-it-ignored-them-all-4639>
-  * DEV Community, _I Wrote 500 Lines of Rules. Here’s How I Made It Actually Follow Them._ : &lt;https://dev.to/mikeadolan/i-wrote-500-lines-of-rules-for-claude-code-heres-how-i-made-it-actually-follow-them-3c8>
-  * GitHub Issue, _MEMORY.md silently drops entries past 200-line limit_ : &lt;https://github.com/anthropics/claude-code/issues/39811>
-  * GitHub Issue, _MEMORY.md has undocumented 200-line hard limit_ : &lt;https://github.com/anthropics/claude-code/issues/25006>
-  * Cursor Docs, _Rules_ : &lt;https://docs.cursor.com/context/rules>
-  * Augment Code, _How to Build Your AGENTS.md (2026)_ : &lt;https://www.augmentcode.com/guides/how-to-build-agents-md>
-  * alexop.dev, _Stop Bloating Your CLAUDE.md_ : &lt;https://alexop.dev/posts/stop-bloating-your-claude-md-progressive-disclosure-ai-coding-tools/>
-  * Walking Labs, _Learn Harness Engineering 課程_ : &lt;https://walkinglabs.github.io/learn-harness-engineering/zh-TW/>
+  * Anthropic Engineering, _April 23 Postmortem_ : <https://www.anthropic.com/engineering/april-23-postmortem>
+  * Anthropic, _Best Practices for Claude Code_ : <https://code.claude.com/docs/en/best-practices>
+  * DEV Community, _I Wrote 200 Lines of Rules for Claude Code. It Ignored Them All._ : <https://dev.to/minatoplanb/i-wrote-200-lines-of-rules-for-claude-code-it-ignored-them-all-4639>
+  * DEV Community, _I Wrote 500 Lines of Rules. Here’s How I Made It Actually Follow Them._ : <https://dev.to/mikeadolan/i-wrote-500-lines-of-rules-for-claude-code-heres-how-i-made-it-actually-follow-them-3c8>
+  * GitHub Issue, _MEMORY.md silently drops entries past 200-line limit_ : <https://github.com/anthropics/claude-code/issues/39811>
+  * GitHub Issue, _MEMORY.md has undocumented 200-line hard limit_ : <https://github.com/anthropics/claude-code/issues/25006>
+  * Cursor Docs, _Rules_ : <https://docs.cursor.com/context/rules>
+  * Augment Code, _How to Build Your AGENTS.md (2026)_ : <https://www.augmentcode.com/guides/how-to-build-agents-md>
+  * alexop.dev, _Stop Bloating Your CLAUDE.md_ : <https://alexop.dev/posts/stop-bloating-your-claude-md-progressive-disclosure-ai-coding-tools/>
+  * Walking Labs, _Learn Harness Engineering 課程_ : <https://walkinglabs.github.io/learn-harness-engineering/zh-TW/>
 
 ---

@@ -223,23 +223,23 @@ We discuss:
 
 **Abridge:**
 
-  * **Website:** &lt;https://www.abridge.com/>
+  * **Website:** <https://www.abridge.com/>
 
-  * **X:** &lt;https://x.com/AbridgeHQ>
+  * **X:** <https://x.com/AbridgeHQ>
 
 
 
 
 **Janie Lee:**
 
-  * **LinkedIn:** &lt;https://www.linkedin.com/in/janiejlee>
+  * **LinkedIn:** <https://www.linkedin.com/in/janiejlee>
 
 
 
 
 **Chaitanya "Chai" Asawa:**
 
-  * **LinkedIn:** &lt;https://www.linkedin.com/in/casawa>
+  * **LinkedIn:** <https://www.linkedin.com/in/casawa>
 
 
 

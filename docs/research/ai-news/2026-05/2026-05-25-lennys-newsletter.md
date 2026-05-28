@@ -62,93 +62,93 @@ type: ai-news
 
 ### Where to find Dan Shipper:
 
-• X: &lt;https://x.com/danshipper>
+• X: <https://x.com/danshipper>
 
-• LinkedIn: &lt;https://www.linkedin.com/in/danshipper/>
+• LinkedIn: <https://www.linkedin.com/in/danshipper/>
 
-• Podcast: &lt;https://every.to/podcast>
+• Podcast: <https://every.to/podcast>
 
-• Website: &lt;https://danshipper.com>
+• Website: <https://danshipper.com>
 
 ### Referenced:
 
-• The AI-native startup: 5 products, 7-figure revenue, 100% AI-written code | Dan Shipper (co-founder/CEO of Every): &lt;https://www.lennysnewsletter.com/p/inside-every-dan-shipper>
+• The AI-native startup: 5 products, 7-figure revenue, 100% AI-written code | Dan Shipper (co-founder/CEO of Every): <https://www.lennysnewsletter.com/p/inside-every-dan-shipper>
 
-• Claude Cowork: &lt;https://claude.com/product/cowork>
+• Claude Cowork: <https://claude.com/product/cowork>
 
-• Codex: &lt;https://chatgpt.com/codex>
+• Codex: <https://chatgpt.com/codex>
 
-• Everyone should be using Claude Code more: &lt;https://www.lennysnewsletter.com/p/everyone-should-be-using-claude-code>
+• Everyone should be using Claude Code more: <https://www.lennysnewsletter.com/p/everyone-should-be-using-claude-code>
 
-• Every: &lt;https://every.to>
+• Every: <https://every.to>
 
-• Kieran Klaassen on X: &lt;https://x.com/kieranklaassen>
+• Kieran Klaassen on X: <https://x.com/kieranklaassen>
 
-• Cora: &lt;https://cora.computer>
+• Cora: <https://cora.computer>
 
-• Kate Lee: &lt;https://every.to/@kate_1767>
+• Kate Lee: <https://every.to/@kate_1767>
 
-• METR (Model Evaluation and Threat Research): &lt;https://metr.org>
+• METR (Model Evaluation and Threat Research): <https://metr.org>
 
-• OpenClaw: &lt;https://openclaw.ai>
+• OpenClaw: <https://openclaw.ai>
 
-• Shopify: &lt;https://www.shopify.com>
+• Shopify: <https://www.shopify.com>
 
-• Ramp: &lt;https://ramp.com>
+• Ramp: <https://ramp.com>
 
 • Brandon Gell on LinkedIn: [linkedin.com/in/brandongell](http://linkedin.com/in/brandongell)
 
-• Proof: &lt;https://every.to/on-every/introducing-proof>
+• Proof: <https://every.to/on-every/introducing-proof>
 
-• Devin: &lt;https://devin.ai>
+• Devin: <https://devin.ai>
 
-• Cursor: &lt;https://cursor.com>
+• Cursor: <https://cursor.com>
 
-• The rise of Cursor: The $300M ARR AI tool that engineers can't stop using | Michael Truell (co-founder and CEO): &lt;https://www.lennysnewsletter.com/p/the-rise-of-cursor-michael-truell>
+• The rise of Cursor: The $300M ARR AI tool that engineers can't stop using | Michael Truell (co-founder and CEO): <https://www.lennysnewsletter.com/p/the-rise-of-cursor-michael-truell>
 
-• SpaceX: &lt;https://www.spacex.com>
+• SpaceX: <https://www.spacex.com>
 
-• GitHub: &lt;https://github.com>
+• GitHub: <https://github.com>
 
-• Lenny's post on X on AI changing job responsibilities: &lt;https://x.com/lennysan/status/2054664138039992600>
+• Lenny's post on X on AI changing job responsibilities: <https://x.com/lennysan/status/2054664138039992600>
 
-• General Assembly: &lt;https://generalassemb.ly>
+• General Assembly: <https://generalassemb.ly>
 
-• Marcus Moretti: &lt;https://every.to/@marcus_fd8302_1>
+• Marcus Moretti: <https://every.to/@marcus_fd8302_1>
 
-• Spiral: &lt;https://every.to/on-every/introducing-spiral>
+• Spiral: <https://every.to/on-every/introducing-spiral>
 
-• Axios: &lt;https://www.axios.com>
+• Axios: <https://www.axios.com>
 
-• Hermes: &lt;https://hermes-agent.nousresearch.com>
+• Hermes: <https://hermes-agent.nousresearch.com>
 
-• Viktor: &lt;https://www.viktor.ai>
+• Viktor: <https://www.viktor.ai>
 
-• _The Dark Wizard_ on HBO: &lt;https://www.hbomax.com/shows/dark-wizard/76e78c26-21c9-45b4-b84b-4c3e1f8ff763>
+• _The Dark Wizard_ on HBO: <https://www.hbomax.com/shows/dark-wizard/76e78c26-21c9-45b4-b84b-4c3e1f8ff763>
 
-• Alex Honnold: &lt;https://en.wikipedia.org/wiki/Alex_Honnold>
+• Alex Honnold: <https://en.wikipedia.org/wiki/Alex_Honnold>
 
-• _100 Foot Wave_ on HBO Max: &lt;https://www.hbomax.com/shows/100-foot-wave/34e489ad-2eca-4078-adb6-6d2b521b407e>
+• _100 Foot Wave_ on HBO Max: <https://www.hbomax.com/shows/100-foot-wave/34e489ad-2eca-4078-adb6-6d2b521b407e>
 
-• Rob Burbea talks: &lt;https://www.youtube.com/@boubabuddha/playlists>
+• Rob Burbea talks: <https://www.youtube.com/@boubabuddha/playlists>
 
-• David Goggins: &lt;https://en.wikipedia.org/wiki/David_Goggins>
+• David Goggins: <https://en.wikipedia.org/wiki/David_Goggins>
 
 ### Recommended books:
 
-• _The Golden Compass_ : &lt;https://www.amazon.com/Golden-Compass-His-Dark-Materials/dp/0807204714>
+• _The Golden Compass_ : <https://www.amazon.com/Golden-Compass-His-Dark-Materials/dp/0807204714>
 
-• _The Writing Life_ : &lt;https://www.amazon.com/Writing-Life-Annie-Dillard/dp/0060919884>
+• _The Writing Life_ : <https://www.amazon.com/Writing-Life-Annie-Dillard/dp/0060919884>
 
-• _The Second World War_ : &lt;https://www.amazon.com/Second-World-War-Volumes/dp/B005NS30ZG>
+• _The Second World War_ : <https://www.amazon.com/Second-World-War-Volumes/dp/B005NS30ZG>
 
-• _The Rigor of Angels: Borges, Heisenberg, Kant, and the Ultimate Nature of Reality_ : &lt;https://www.amazon.com/Rigor-Angels-Heisenberg-Ultimate-Reality/dp/0593315073>
+• _The Rigor of Angels: Borges, Heisenberg, Kant, and the Ultimate Nature of Reality_ : <https://www.amazon.com/Rigor-Angels-Heisenberg-Ultimate-Reality/dp/0593315073>
 
-• _The Power Broker: Robert Moses and the Fall of New York_ : &lt;https://www.amazon.com/Power-Broker-Robert-Moses-Fall/dp/0394720245>
+• _The Power Broker: Robert Moses and the Fall of New York_ : <https://www.amazon.com/Power-Broker-Robert-Moses-Fall/dp/0394720245>
 
 * * *
 
-Production and marketing by &lt;https://penname.co/>. For inquiries about sponsoring the podcast, email [podcast@lennyrachitsky.com](mailto:podcast@lennyrachitsky.com).
+Production and marketing by <https://penname.co/>. For inquiries about sponsoring the podcast, email [podcast@lennyrachitsky.com](mailto:podcast@lennyrachitsky.com).
 
 _Lenny may be an investor in the companies discussed._
 
@@ -269,37 +269,37 @@ Today is day one of Google I/O 2026, and I walk through every major announcement
 
 ### Tools referenced:
 
-• Gemini 3.5 Flash: &lt;https://deepmind.google/technologies/gemini/>
+• Gemini 3.5 Flash: <https://deepmind.google/technologies/gemini/>
 
-• Antigravity: &lt;https://antigravity.google/>
+• Antigravity: <https://antigravity.google/>
 
-• Google AI Studio: &lt;https://aistudio.google.com/>
+• Google AI Studio: <https://aistudio.google.com/>
 
-• Google Gemini: &lt;https://gemini.google.com/>
+• Google Gemini: <https://gemini.google.com/>
 
-• Omni (video generation): &lt;https://gemini.google/overview/video-generation/>
+• Omni (video generation): <https://gemini.google/overview/video-generation/>
 
-• Google Flow: &lt;https://flow.google/>
+• Google Flow: <https://flow.google/>
 
-• Stitch: &lt;https://stitch.withgoogle.com/>
+• Stitch: <https://stitch.withgoogle.com/>
 
-• Pomelli (Google brand tool): &lt;https://labs.google.com/pomelli/about/>
+• Pomelli (Google brand tool): <https://labs.google.com/pomelli/about/>
 
 ### Other references:
 
-• Google I/O 2026 announcements: &lt;https://blog.google/innovation-and-ai/sundar-pichai-io-2026/>
+• Google I/O 2026 announcements: <https://blog.google/innovation-and-ai/sundar-pichai-io-2026/>
 
 ### Where to find Claire Vo:
 
-ChatPRD: &lt;https://www.chatprd.ai/>
+ChatPRD: <https://www.chatprd.ai/>
 
-Website: &lt;https://clairevo.com/>
+Website: <https://clairevo.com/>
 
-LinkedIn: &lt;https://www.linkedin.com/in/clairevo/>
+LinkedIn: <https://www.linkedin.com/in/clairevo/>
 
-X: &lt;https://x.com/clairevo>
+X: <https://x.com/clairevo>
 
-Production and marketing by &lt;https://penname.co/>. For inquiries about sponsoring the podcast, email jordan@penname.co.
+Production and marketing by <https://penname.co/>. For inquiries about sponsoring the podcast, email jordan@penname.co.
 
 ---
 
