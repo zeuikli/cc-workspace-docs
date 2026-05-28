@@ -55,3 +55,7 @@ title: "最佳實踐索引"
 - [Boris Cherny Tips](./15-boris-cherny-tips)
 - [Boris Config & GitHub 設定](./25-bcherny-config-github)
 - [Thariq Tips — Skill 與 Session](./16-thariq-tips)
+
+## 新功能追蹤
+
+- [新工具與 Slash Commands（W13–W20）](./30-new-tools-commands)

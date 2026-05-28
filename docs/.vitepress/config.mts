@@ -217,9 +217,7 @@ const researchItems = [
         text: "新功能追蹤",
         collapsed: true,
         items: [
-          { text: "新功能 W13-W17", link: "/research/best-practices/23-whats-new-w13-w17" },
-          { text: "2026-Q1 新功能", link: "/research/best-practices/26-new-features-2026-q1" },
-          { text: "新功能 W18-W19", link: "/research/best-practices/27-whats-new-w18-w19" },
+          { text: "新工具與 Slash Commands（W13–W20）", link: "/research/best-practices/30-new-tools-commands" },
         ],
       },
     ],
