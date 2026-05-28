@@ -78,8 +78,17 @@ type: index
 - [44-layer5-claude-code-source-leak](./44-layer5-claude-code-source-leak)
 - [45-deeplearningai-claude-code-kairos-autodream](./45-deeplearningai-claude-code-kairos-autodream)
 
-## 2026 新增文章
+## 新收錄文章（2025 年後期 — 2026）
 
+- [2025-09-29-effective-context-engineering-for-ai-agents](./2025-09-29-effective-context-engineering-for-ai-agents)
+- [2025-11-26-effective-harnesses-for-long-running-agents](./2025-11-26-effective-harnesses-for-long-running-agents)
+- [2026-01-05-philschmid-importance-of-agent-harness](./2026-01-05-philschmid-importance-of-agent-harness)
+- [2026-02-04-gravitee-state-of-ai-agent-security-2026](./2026-02-04-gravitee-state-of-ai-agent-security-2026)
+- [2026-02-09-stripe-minions-one-shot-coding-agents](./2026-02-09-stripe-minions-one-shot-coding-agents)
+- [2026-02-17-nist-caisi-ai-agent-standards-initiative](./2026-02-17-nist-caisi-ai-agent-standards-initiative)
+- [2026-03-10-the-anatomy-of-an-agent-harness](./2026-03-10-the-anatomy-of-an-agent-harness)
+- [2026-03-25-epsilla-harness-engineering-evolution](./2026-03-25-epsilla-harness-engineering-evolution)
+- [2026-04-02-harness-engineering-for-coding-agent-users](./2026-04-02-harness-engineering-for-coding-agent-users)
 - [2026-05-10-designing-refining-and-maintaining-agent-skills-at-perplexity](./2026-05-10-designing-refining-and-maintaining-agent-skills-at-perplexity)
 - [2026-05-12-ai-agent-harness-stripe-1300-prs](./2026-05-12-ai-agent-harness-stripe-1300-prs)
 - [2026-05-12-boris-cherny-verification-loops](./2026-05-12-boris-cherny-verification-loops)
@@ -89,3 +98,4 @@ type: index
 - [2026-05-12-stripe-ai-agents-integrations](./2026-05-12-stripe-ai-agents-integrations)
 - [2026-05-12-terminalbench-2-leaderboard](./2026-05-12-terminalbench-2-leaderboard)
 - [2026-05-16-model-harness-fit](./2026-05-16-model-harness-fit)
+- [2026-05-24-biscuit-llm-engineering-bottleneck-shift](./2026-05-24-biscuit-llm-engineering-bottleneck-shift)
