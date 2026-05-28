@@ -7,10 +7,10 @@ type: documentation
 
 > 導覽層：快速找到相關研究，了解整合狀態
 > 更新日期：2026-05-28
-> 檔案總數：162 tweets + 49 ai-articles (scored) + 25 reports + 7 videos + 65 digests
+> 檔案總數：158 tweets + 49 ai-articles (scored) + 18 reports + 6 videos
 >
 > **子目錄 → Skill 對應：**
-> `agent-harness/` → `/harness-meta` · `ai-articles/` → `/research-hub` · `career-wiki/` → `/autoresearch:wiki`
+> `agent-harness/` → `/harness-meta` · `ai-articles/` → `/research-hub`
 
 ---
 
@@ -103,27 +103,14 @@ mindmap
 | 資源 | 類型 | 說明 |
 |------|------|------|
 | [agent-harness/RESEARCH.md](agent-harness/RESEARCH.md) | 深度研究 | 22 資源合成，PGE 架構 |
-| [agent-harness/FRAMEWORK.md](agent-harness/FRAMEWORK.md) | 框架文件 | Body vs Harness 分類 |
-| [agent-harness/RATCHET.md](agent-harness/RATCHET.md) | 操作手冊 | Rule→Hook 升格決策 |
-| [agent-harness/AUDIT-2026-05-01.md](agent-harness/AUDIT-2026-05-01.md) | 稽核報告 | 9.0/11 maturity，P0/P1/P2 清單 |
+| [agent-harness/KNOWLEDGE-MAP.md](agent-harness/KNOWLEDGE-MAP.md) | 知識地圖 | 跨源知識整合 |
+| [agent-harness/SURVEY.md](agent-harness/SURVEY.md) | 論文總覽 | 學術資源索引 |
 
 ### 🆕 Autoresearch 深度報告（2026-05-08）
 
 | 資源 | 類型 | 核心數據 |
 |------|------|---------|
 | [llm-routing-industrial-cases.md](agent-harness/llm-routing-industrial-cases.md) | 工業案例研究 | RouteLLM 75% cheaper；Martian 300+ 企業；17.2x error amplification |
-| [multi-agent-coordination-2026.md](agent-harness/multi-agent-coordination-2026.md) | 多代理協調模式 | 45% 規則；4-agent 飽和；Centralized 4.4x vs 無拓撲 17.2x |
-| [harness-evaluation-metrics-2026.md](agent-harness/harness-evaluation-metrics-2026.md) | Harness 評估框架 | GPT-5.5 harness 差異 +25.7pp；Meta-Harness LawBench +16pp |
-| [agent-memory-architecture-2026.md](agent-harness/agent-memory-architecture-2026.md) | Agent 記憶架構 | NLAH OS-Symphony 30.4%→47.2%；MemTier 72h 穩定性 |
-
-### 🆕 Harness 優化審查（2026-05-12–14）
-
-| 資源 | 日期 | 類型 |
-|------|------|------|
-| [CLAUDE-OPTIMIZATION-AUDIT-2026-05-13.md](agent-harness/CLAUDE-OPTIMIZATION-AUDIT-2026-05-13.md) | 05-13 | 全量 harness 優化稽核 |
-| [eval-2026-05-14.md](agent-harness/eval-2026-05-14.md) | 05-14 | 最新每日評估 |
-| [eval-2026-05-13.md](agent-harness/eval-2026-05-13.md) | 05-13 | 每日評估 |
-| [eval-2026-05-12.md](agent-harness/eval-2026-05-12.md) | 05-12 | 每日評估 |
 
 ### 🆕 AI Articles（2026-05-09）
 
@@ -159,9 +146,6 @@ mindmap
 | 文件 | 日期 | 涵蓋範圍 |
 |------|------|---------|
 | [LLM 路由工業案例](agent-harness/llm-routing-industrial-cases.md) | 2026-05-08 | RouteLLM + Martian + RouterBench；AgentOpt 限制；任務類型限制 |
-| [多代理協調模式 2026](agent-harness/multi-agent-coordination-2026.md) | 2026-05-08 | 17x 陷阱、45%規則、三種拓撲、MCP+A2A 協議 |
-| [Harness 評估指標 2026](agent-harness/harness-evaluation-metrics-2026.md) | 2026-05-08 | TerminalBench-2、Meta-Harness、SkillsBench、HAL、HarnessCard |
-| [Agent 記憶架構 2026](agent-harness/agent-memory-architecture-2026.md) | 2026-05-08 | NLAH +55%、MemGPT 三層、MemTier 72h、Mem0 多範圍 |
 
 ---
 
@@ -200,8 +184,7 @@ _最後更新：2026-05-25_
 | `.claude/rules/core.md` | `inspired_by` | bcherny-claude (Latent vs Deterministic) | Rule 5 LLM-只做判斷原則 |
 | `.claude/rules/output-discipline.md` | `inspired_by` | bcherny-claude (Demand Elegance) | 精簡輸出、禁填充語 |
 | `.claude/skills/autoresearch/` | `implements` | Karpathy LLM Wiki (Ingest/Query/Lint ops) | wiki-workflow.md 對應三操作 |
-| `research/career-wiki/` | `implements` | Karpathy LLM Wiki (3-layer architecture) | Raw → Wiki → Schema 完整三層 |
-| `.claude/agents/zeuik-senior-architect.md` | `references` | `research/career-wiki/INDEX.md` | 架構決策時直讀 career-wiki |
+| `research/agent-harness/` | `implements` | Karpathy LLM Wiki (3-layer architecture) | Raw → Wiki → Schema 完整三層 |
 | `.claude/refs/advisor-tool-api.md` | `implements` | AgentOpt 論文 (arXiv:2604.06296) | Advisor Strategy 學理依據 |
 | `.claude/hooks/pre-compact.sh` | `implements` | arXiv:2605.12978 Batch Gate | Batch 維持 100%，Stream 衰退至 46% |
 | `memory/MEMORY.md` | `implements` | arXiv:2605.12978 Episodic-First | Batch Gate 5-10 session 觸發 |
