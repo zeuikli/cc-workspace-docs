@@ -345,7 +345,7 @@ claude --permission-mode auto -p "fix all lint errors"
 
 ## Related Resources
 
-- [How Claude Code works](/en/how-claude-code-works) — agentic loop、tools、context 管理
-- [Extend Claude Code](/en/features-overview) — skills、hooks、MCP、subagents、plugins
-- [Common workflows](/en/common-workflows) — debug、testing、PR、session 管理等逐步指南
-- [CLAUDE.md](/en/memory) — 儲存專案慣例與持久 context
+- [How Claude Code works](/research/best-practices/18-how-claude-code-works) — agentic loop、tools、context 管理
+- [Extend Claude Code](/research/best-practices/19-features-overview) — skills、hooks、MCP、subagents、plugins
+- [Common workflows](/research/best-practices/20-common-workflows) — debug、testing、PR、session 管理等逐步指南
+- [CLAUDE.md](/research/best-practices/21-memory-claudemd) — 儲存專案慣例與持久 context
