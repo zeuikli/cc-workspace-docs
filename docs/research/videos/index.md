@@ -28,6 +28,14 @@ type: index
 
 ---
 
+## AI Engineer（技術深度）
+
+| 日期 | 標題 | 頻道 | 評分 | 檔案 |
+|------|------|------|------|------|
+| 2026-05-17 | Harnesses in AI: A Deep Dive — Tejas Kumar, IBM | AI Engineer | — | [連結](2026-05-17-AI-Engineer-C_GG5g38.md) |
+
+---
+
 ## SKILL（可複用技術）
 
 | 日期 | 標題 | 頻道 | 評分 | 檔案 |

@@ -43,7 +43,7 @@ type: index
 | [2026-05-08-@trq212-747935.md](2026-05-08-@trq212-747935.md) | @trq212 | 2026-05-08 | 7.55 | HTML 取代 markdown 作為 Claude Code 輸出格式：資訊密度更高（CSS/SVG/JS/互動）、易讀易分享、保持 in the loop；2-4x 生成時間換取更優質 plan/spec |
 | [2026-05-18-@trq212-796184.md](2026-05-18-@trq212-796184.md) | @trq212 | 2026-05-18 | 8.25 | 實作時讓 AI 同步維護 implementation-notes.html：記錄 spec 空白決策、被迫變更、取捨點；9,927 bookmark（1.71% bookmark/view 率）；來自 Anthropic Claude Code 工程師 |
 | [2026-05-19-@Mnilax-554008.md](2026-05-19-@Mnilax-554008.md) | @Mnilax | 2026-05-19 | 7.60 | 9 個 Claude Cowork slash command templates（30天實測）；3 原則：TERMINATION條件、具名輸出形狀、首行角色定義；sub-agent並行=4h→28min；週節省34h |
-| 2026-05-19 | [@shao__meng](https://x.com/shao__meng/status/2056535561540948056) | Claude Code 核心开发者 Thariq 的「开发日志」提示词 | 8.55 | SKILL | [檔案](2026-05-19-@shao__meng-948056.md) |
+| [2026-05-19-@shao__meng-948056.md](2026-05-19-@shao__meng-948056.md) | @shao__meng | 2026-05-19 | 8.55 | Claude Code 核心開發者 Thariq 的「開發日誌」提示詞 |
 
 ---
 
@@ -118,6 +118,9 @@ type: index
 | 2026-05-19 | [@kfk_ai](https://x.com/kfk_ai/status/2056660897381425590) | OpenAI、Anthropic 都开始押注 FDE，FDE 才是 Agent 时代的 PMF 范式？ | 7.1 | Rule | [檔案](2026-05-19-@kfk_ai-425590.md) |
 | [2026-05-21-@nateherk-013627.md](2026-05-21-@nateherk-013627.md) | @nateherk | 2026-05-21 | 7.45 | Prompt caching 80/20：cached token 10% 費用、Claude Code 1h TTL vs API 5m vs sub-agent 5m 區分、三層 cache 架構（system/project/conversation）、模型切換清 cache、idle >1h 開新 session |
 | [2026-05-23-@Mnilax-736907.md](2026-05-23-@Mnilax-736907.md) | @Mnilax | 2026-05-23 | 8.55 | 18個Claude設定（125+ keys，官方文件40）；JSON範例13個（enabledPlugins/permissions.deny/hooks.SessionStart/per-project model/mcpServers/cleanupPeriodDays）；Python cache_control RIGHT/WRONG示例；claude-audit.sh腳本；$340→$87月費案例 |
+| [2026-05-16-@haopeng_uiuc-410764.md](2026-05-16-@haopeng_uiuc-410764.md) | @haopeng_uiuc | 2026-05-16 | 7.3 | Useful Memories Become Faulty When Continuously Updated by LLMs |
+| [2026-05-18-@Phoenixyin13-509649.md](2026-05-18-@Phoenixyin13-509649.md) | @Phoenixyin13 | 2026-05-18 | 7.9 | AI Agent 長期記憶系統的工程反思：記憶整合越多反而越蠢 |
+| [2026-05-19-@kfk_ai-425590.md](2026-05-19-@kfk_ai-425590.md) | @kfk_ai | 2026-05-19 | 7.1 | OpenAI、Anthropic 都開始押注 FDE，FDE 才是 Agent 時代的 PMF 範式？ |
 
 ---
 
@@ -125,8 +128,8 @@ type: index
 
 | 檔案 | 作者 | 日期 | 分數 | 主題摘要 |
 |------|------|------|------|----------|
-| 2026-05-14 | [@Mnilax](https://x.com/Mnilax/status/2054955621829443903) | 73% of my CLAUDE.md was lying to Claude. I found out in 11 minutes. | Skill | 8.95 |
-| 2026-05-14 | [@petradonka](https://x.com/petradonka/status/2054897826149101588) | Agents Need Feedback Loops, Not Perfect Prompts | Agent | 8.1 |
+| [2026-05-14-@Mnilax-443903.md](2026-05-14-@Mnilax-443903.md) | @Mnilax | 2026-05-14 | 8.95 | 73% of my CLAUDE.md was lying to Claude. I found out in 11 minutes. |
+| [2026-05-14-@petradonka-101588.md](2026-05-14-@petradonka-101588.md) | @petradonka | 2026-05-14 | 8.1 | Agents Need Feedback Loops, Not Perfect Prompts |
 | [2026-04-15-@BTCqzy1-450414.md](2026-04-15-@BTCqzy1-450414.md) | @BTCqzy1 | 2026-04-15 | 7.05 | Hermes Agent 進階指南：記憶系統（MEMORY.md 2200字限制/Frozen Snapshot/nudge_interval）+ 多Agent協作 + 生產部署 config.yaml/.env；26個code block |
 | [2026-04-09-@Ni_luvya-807043.md](2026-04-09-@Ni_luvya-807043.md) | @Ni_luvya | 2026-04-09 | 6.75 | Hermes跨session持久記憶實作方案 |
 | [2026-04-23-@lxfater-993624.md](2026-04-23-@lxfater-993624.md) | @lxfater | 2026-04-23 | 5.00 | Hermes+ClawEmail自動化Newsletter訂閱消化工作流 |
@@ -198,17 +201,46 @@ type: index
 
 ---
 
-*最後更新：2026-05-27*
-
-
-
-
-
-| 2026-05-14 | [@Mnilax](https://x.com/Mnilax/status/2054955621829443903) | 73% of my CLAUDE.md was lying to Claude. I found out in 11 minutes. | Skill | 8.95 |
-
 ## Skip
 
-| 日期 | 來源 | 標題 | 類型 | 評分 |
-|------|------|------|------|------|
-| 2026-05-15 | @sairahul1 | [How to Build a Team of AI Agents That Run Your Business While You Sleep](2026-05-15-@sairahul1-391151.md) | Twitter Article | 5.70 | Skip |
-| 2026-05-15 | [@Zephyr_hg](https://x.com/Zephyr_hg/status/2055229007931601239) | You Don't Need 100 Hours To Be Fluent In Claude. You Need 7 Setups And One Weekend. | Skip | 3.85 |
+| 檔案 | 作者 | 日期 | 評分 | 主題摘要 |
+|------|------|------|------|----------|
+| [2026-05-15-@sairahul1-391151.md](2026-05-15-@sairahul1-391151.md) | @sairahul1 | 2026-05-15 | 5.70 | How to Build a Team of AI Agents That Run Your Business While You Sleep |
+| [2026-05-15-@Zephyr_hg-601239.md](2026-05-15-@Zephyr_hg-601239.md) | @Zephyr_hg | 2026-05-15 | 3.85 | You Don't Need 100 Hours To Be Fluent In Claude. You Need 7 Setups And One Weekend. |
+
+---
+
+## 待分類推文
+
+以下推文存在於目錄中但尚未完成分類標記，可直接開啟查閱。
+
+| 檔案 |
+|------|
+| [2026-04-11-@garrytan-908103.md](2026-04-11-@garrytan-908103.md) |
+| [2026-04-22-@eng_khairallah1-2046968076101673250.md](2026-04-22-@eng_khairallah1-2046968076101673250.md) |
+| [2026-04-25-@PawelHuryn-926577.md](2026-04-25-@PawelHuryn-926577.md) |
+| [2026-04-25-@nyk_builderz-829238.md](2026-04-25-@nyk_builderz-829238.md) |
+| [2026-04-26-@Pluvio9yte-056961.md](2026-04-26-@Pluvio9yte-056961.md) |
+| [2026-04-26-@dani_avila7-662189.md](2026-04-26-@dani_avila7-662189.md) |
+| [2026-04-29-@elliotchen100-2393.md](2026-04-29-@elliotchen100-2393.md) |
+| [2026-05-01-@karpathy-context-engineering-shift.md](2026-05-01-@karpathy-context-engineering-shift.md) |
+| [2026-05-04-@kkawsb-151468.md](2026-05-04-@kkawsb-151468.md) |
+| [2026-05-05-@berryxia-826389.md](2026-05-05-@berryxia-826389.md) |
+| [2026-05-05-@mindstudio-harness-beats-model.md](2026-05-05-@mindstudio-harness-beats-model.md) |
+| [2026-05-06-@simonw-code-w-claude-event.md](2026-05-06-@simonw-code-w-claude-event.md) |
+| [2026-05-07-@anthropic-dreaming-offline-learning.md](2026-05-07-@anthropic-dreaming-offline-learning.md) |
+| [2026-05-09-@berryxia-245033.md](2026-05-09-@berryxia-245033.md) |
+| [2026-05-10-@VincentLogic-168594.md](2026-05-10-@VincentLogic-168594.md) |
+| [2026-05-10-@rixhabh__-918042.md](2026-05-10-@rixhabh__-918042.md) |
+| [2026-05-10-@zodchiii-084777.md](2026-05-10-@zodchiii-084777.md) |
+| [2026-05-11-@karpathy-285137.md](2026-05-11-@karpathy-285137.md) |
+| [2026-05-12-@AlphaSignalAI-036432.md](2026-05-12-@AlphaSignalAI-036432.md) |
+| [2026-05-12-@eng_khairallah1-185485.md](2026-05-12-@eng_khairallah1-185485.md) |
+| [2026-05-13-@Xx15573208-616460.md](2026-05-13-@Xx15573208-616460.md) |
+| [2026-05-13-@av1dlive-197493.md](2026-05-13-@av1dlive-197493.md) |
+| [2026-05-13-@yaohui12138-931297.md](2026-05-13-@yaohui12138-931297.md) |
+| [2026-05-13-@zodchiii-135095.md](2026-05-13-@zodchiii-135095.md) |
+| [2026-05-13-@zodchiii-796939.md](2026-05-13-@zodchiii-796939.md) |
+| [2026-05-23-@Mnilax-2058283663805047224.md](2026-05-23-@Mnilax-2058283663805047224.md) |
+
+*最後更新：2026-05-28*
