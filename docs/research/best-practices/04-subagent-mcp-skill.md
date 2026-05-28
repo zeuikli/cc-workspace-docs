@@ -266,10 +266,10 @@ or reading multiple files.
 
 ## 參考來源
 
-- https://code.claude.com/docs/en/sub-agents（官方 Sub-Agents 文件）
-- https://code.claude.com/docs/en/skills（官方 Skill 文件）
-- https://code.claude.com/docs/en/mcp（官方 MCP 文件）
-- https://www.anthropic.com/engineering/claude-code-best-practices
-- https://alexop.dev/posts/understanding-claude-code-full-stack/
-- https://www.pubnub.com/blog/best-practices-for-claude-code-sub-agents/
+- [官方 Sub-Agents 文件](https://code.claude.com/docs/en/sub-agents)
+- [官方 Skill 文件](https://code.claude.com/docs/en/skills)
+- [官方 MCP 文件](https://code.claude.com/docs/en/mcp)
+- [Claude Code Best Practices — Anthropic Engineering](https://www.anthropic.com/engineering/claude-code-best-practices)
+- [Understanding Claude Code Full Stack — alexop.dev](https://alexop.dev/posts/understanding-claude-code-full-stack/)
+- [Best Practices for Claude Code Sub-Agents — PubNub](https://www.pubnub.com/blog/best-practices-for-claude-code-sub-agents/)
 - https://platform.claude.com/docs/en/agent-sdk/subagents
