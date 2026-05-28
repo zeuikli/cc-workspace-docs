@@ -1,3 +1,10 @@
+---
+title: Smol AI News — 2026-05-27
+date: 2026-05-27
+source: Smol AI News
+type: ai-news
+---
+
 # 🌐 Smol AI News — 2026-05-27
 
 > Discord、Reddit 等 AI 社群圈內直擊（已從 buttondown 遷移至 news.smol.ai）

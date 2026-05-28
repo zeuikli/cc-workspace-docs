@@ -1,3 +1,10 @@
+---
+title: "Ben's Bites — 2026-05-27"
+date: 2026-05-27
+source: "Ben's Bites"
+type: ai-news
+---
+
 # 🍔 Ben's Bites — 2026-05-27
 
 > Ben Tossell 的 AI 日報，工具圈消息源

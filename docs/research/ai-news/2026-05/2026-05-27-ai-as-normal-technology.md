@@ -1,3 +1,10 @@
+---
+title: AI as Normal Technology — 2026-05-27
+date: 2026-05-27
+source: AI as Normal Technology
+type: ai-news
+---
+
 # ⚖️ AI as Normal Technology — 2026-05-27
 
 > Arvind Narayanan & Sayash Kapoor（普林斯頓）；前身 AI Snake Oil，學術批判視角

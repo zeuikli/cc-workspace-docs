@@ -30,11 +30,11 @@ For those looking for 's commentary, it really gets going around the 00:51:31 ma
 
 **Yaroslav Azhnyuk / The Fourth Law:**
 
-  * X: <https://x.com/YaroslavAzhnyuk>
+  * X: &lt;https://x.com/YaroslavAzhnyuk>
 
-  * LinkedIn: <https://www.linkedin.com/in/yaroslavazhnyuk/>
+  * LinkedIn: &lt;https://www.linkedin.com/in/yaroslavazhnyuk/>
 
-  * The Fourth Law: <https://thefourthlaw.ai>
+  * The Fourth Law: &lt;https://thefourthlaw.ai>
 
 
 
@@ -45,7 +45,7 @@ For those looking for 's commentary, it really gets going around the 00:51:31 ma
 
 
 
-  * X: <https://x.com/noahpinion>
+  * X: &lt;https://x.com/noahpinion>
 
 
 
@@ -1717,23 +1717,23 @@ We discuss:
 
 **Abridge:**
 
-  * **Website:** <https://www.abridge.com/>
+  * **Website:** &lt;https://www.abridge.com/>
 
-  * **X:** <https://x.com/AbridgeHQ>
+  * **X:** &lt;https://x.com/AbridgeHQ>
 
 
 
 
 **Janie Lee:**
 
-  * **LinkedIn:** <https://www.linkedin.com/in/janiejlee>
+  * **LinkedIn:** &lt;https://www.linkedin.com/in/janiejlee>
 
 
 
 
 **Chaitanya "Chai" Asawa:**
 
-  * **LinkedIn:** <https://www.linkedin.com/in/casawa>
+  * **LinkedIn:** &lt;https://www.linkedin.com/in/casawa>
 
 
 

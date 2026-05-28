@@ -1,3 +1,10 @@
+---
+title: The Rundown AI — 2026-05-27
+date: 2026-05-27
+source: The Rundown AI
+type: ai-news
+---
+
 # 🗞️ The Rundown AI — 2026-05-27
 
 > 每日 AI 產業動態，通俗易懂、密度高

@@ -1,3 +1,10 @@
+---
+title: "Simon Willison's Weblog — 2026-05-27"
+date: 2026-05-27
+source: "Simon Willison's Weblog"
+type: ai-news
+---
+
 # 🔧 Simon Willison's Weblog — 2026-05-27
 
 > datasette / llm-cli 作者；AI 工具工程實踐與安全分析密度最高的個人部落格

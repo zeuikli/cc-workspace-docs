@@ -1,3 +1,10 @@
+---
+title: Last Week in AI — 2026-05-27
+date: 2026-05-27
+source: Last Week in AI
+type: ai-news
+---
+
 # 📅 Last Week in AI — 2026-05-27
 
 > 每週 AI 新聞摘要 + 編輯評論，含 Podcast

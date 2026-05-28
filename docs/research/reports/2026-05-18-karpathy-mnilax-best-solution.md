@@ -122,7 +122,7 @@ grep -rn "os\.urandom\|random_bytes\|generate_nonce\|gen_iv\|crypto\.getRandomVa
 6. 原 WIP 分支等待用戶指示後繼續
 7. 修復合併後還原 WIP：
    ```bash
-   git checkout <original-branch>
+   git checkout &lt;original-branch>
    git stash pop stash@{0}  # 或：git stash list 確認後 pop
    ```
 

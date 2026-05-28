@@ -1,3 +1,10 @@
+---
+title: Wisely Chen AI — 2026-05-27
+date: 2026-05-27
+source: Wisely Chen AI
+type: ai-news
+---
+
 # 🏢 Wisely Chen AI — 2026-05-27
 
 > 繁體中文企業 AI 架構實戰筆記：AI Agent / 地端 LLM / 合規治理（台灣視角）
@@ -2559,8 +2566,8 @@ PR review 平均耗時 | 35 分鐘 | 18 分鐘
     // tools/tool-runner.ts
     import { Mutex } from "async-mutex";
     
-    const locks = new Map<string, Mutex>();
-    const failureCounts = new Map<string, number>();
+    const locks = new Map&lt;string, Mutex>();
+    const failureCounts = new Map&lt;string, number>();
     
     export async function runTool(
       name: string,

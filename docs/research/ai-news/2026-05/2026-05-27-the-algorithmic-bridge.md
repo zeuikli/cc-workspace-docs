@@ -1,3 +1,10 @@
+---
+title: The Algorithmic Bridge — 2026-05-27
+date: 2026-05-27
+source: The Algorithmic Bridge
+type: ai-news
+---
+
 # 🌉 The Algorithmic Bridge — 2026-05-27
 
 > Alberto Romero 的 AI 技術與文化交點深度週報；批判性但不反技術

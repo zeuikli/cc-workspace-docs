@@ -1,3 +1,10 @@
+---
+title: One Useful Thing — 2026-05-27
+date: 2026-05-27
+source: One Useful Thing
+type: ai-news
+---
+
 # 💡 One Useful Thing — 2026-05-27
 
 > Ethan Mollick 的 AI 實用洞察（學術 + 工作場景）
