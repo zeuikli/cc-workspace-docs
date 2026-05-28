@@ -395,10 +395,10 @@ exit 0
 
 ## 參考來源
 
-- https://code.claude.com/docs/en/hooks-guide（官方完整文件）
-- https://docs.anthropic.com/en/docs/claude-code/hooks（Hooks reference）
-- https://github.com/disler/claude-code-hooks-mastery（完整生產級實作）
-- https://github.com/karanb192/claude-code-hooks（範例集）
-- https://www.letanure.dev/blog/2025-08-06--claude-code-part-8-hooks-automated-quality-checks
-- https://www.eesel.ai/blog/hooks-in-claude-code
-- https://blakecrosley.com/blog/claude-code-hooks-tutorial
+- [官方完整文件](https://code.claude.com/docs/en/hooks-guide)
+- [Hooks reference — Anthropic Docs](https://docs.anthropic.com/en/docs/claude-code/hooks)
+- [disler/claude-code-hooks-mastery（完整生產級實作）](https://github.com/disler/claude-code-hooks-mastery)
+- [karanb192/claude-code-hooks（範例集）](https://github.com/karanb192/claude-code-hooks)
+- [letanure.dev — Claude Code Part 8: Hooks & Automated Quality Checks](https://www.letanure.dev/blog/2025-08-06--claude-code-part-8-hooks-automated-quality-checks)
+- [eesel.ai — Hooks in Claude Code](https://www.eesel.ai/blog/hooks-in-claude-code)
+- [blakecrosley.com — Claude Code Hooks Tutorial](https://blakecrosley.com/blog/claude-code-hooks-tutorial)

@@ -414,7 +414,7 @@ cat build-error.txt | claude -p 'concisely explain the root cause of this build 
 
 ## Related Resources
 
-- [Best practices](/en/best-practices) — 高層次 patterns 和技巧
-- [How Claude Code works](/en/how-claude-code-works) — Agentic loop 和 context 管理
-- [Extend Claude Code](/en/features-overview) — 加入 skills、hooks、MCP、subagents、plugins
+- [Best practices](/research/best-practices/17-best-practices-overview) — 高層次 patterns 和技巧
+- [How Claude Code works](/research/best-practices/18-how-claude-code-works) — Agentic loop 和 context 管理
+- [Extend Claude Code](/research/best-practices/19-features-overview) — 加入 skills、hooks、MCP、subagents、plugins
 - [Reference implementation](https://github.com/anthropics/claude-code/tree/main/.devcontainer) — Development container 參考實作

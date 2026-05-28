@@ -188,5 +188,5 @@ The relevant code is in src/payments/. Can you investigate and fix it?
 
 ## Related Resources
 
-- [Common workflows](/en/common-workflows) — 逐步指南（debug、測試、PR 等）
-- [Extend Claude Code](/en/features-overview) — Skills、MCP、自訂指令
+- [Common workflows](/research/best-practices/20-common-workflows) — 逐步指南（debug、測試、PR 等）
+- [Extend Claude Code](/research/best-practices/19-features-overview) — Skills、MCP、自訂指令
