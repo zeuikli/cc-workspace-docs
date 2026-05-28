@@ -384,6 +384,9 @@ def fix_line(line):
                 slash = m.group(1)
                 tag = m.group(2).lower()
                 rest = m.group(3)
+                # Markdown auto-links: <https://...> or <http://...> — let markdown-it handle them
+                if rest.startswith('://'):
+                    return m.group(0)
                 if tag not in STANDARD_TAGS:
                     return '&lt;' + (slash or '') + m.group(2) + rest + '>'
                 before_match = part[:m.start()]

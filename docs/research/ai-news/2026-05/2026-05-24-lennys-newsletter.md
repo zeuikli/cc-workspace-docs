@@ -121,37 +121,37 @@ Today is day one of Google I/O 2026, and I walk through every major announcement
 
 ### Tools referenced:
 
-• Gemini 3.5 Flash: &lt;https://deepmind.google/technologies/gemini/>
+• Gemini 3.5 Flash: <https://deepmind.google/technologies/gemini/>
 
-• Antigravity: &lt;https://antigravity.google/>
+• Antigravity: <https://antigravity.google/>
 
-• Google AI Studio: &lt;https://aistudio.google.com/>
+• Google AI Studio: <https://aistudio.google.com/>
 
-• Google Gemini: &lt;https://gemini.google.com/>
+• Google Gemini: <https://gemini.google.com/>
 
-• Omni (video generation): &lt;https://gemini.google/overview/video-generation/>
+• Omni (video generation): <https://gemini.google/overview/video-generation/>
 
-• Google Flow: &lt;https://flow.google/>
+• Google Flow: <https://flow.google/>
 
-• Stitch: &lt;https://stitch.withgoogle.com/>
+• Stitch: <https://stitch.withgoogle.com/>
 
-• Pomelli (Google brand tool): &lt;https://labs.google.com/pomelli/about/>
+• Pomelli (Google brand tool): <https://labs.google.com/pomelli/about/>
 
 ### Other references:
 
-• Google I/O 2026 announcements: &lt;https://blog.google/innovation-and-ai/sundar-pichai-io-2026/>
+• Google I/O 2026 announcements: <https://blog.google/innovation-and-ai/sundar-pichai-io-2026/>
 
 ### Where to find Claire Vo:
 
-ChatPRD: &lt;https://www.chatprd.ai/>
+ChatPRD: <https://www.chatprd.ai/>
 
-Website: &lt;https://clairevo.com/>
+Website: <https://clairevo.com/>
 
-LinkedIn: &lt;https://www.linkedin.com/in/clairevo/>
+LinkedIn: <https://www.linkedin.com/in/clairevo/>
 
-X: &lt;https://x.com/clairevo>
+X: <https://x.com/clairevo>
 
-Production and marketing by &lt;https://penname.co/>. For inquiries about sponsoring the podcast, email jordan@penname.co.
+Production and marketing by <https://penname.co/>. For inquiries about sponsoring the podcast, email jordan@penname.co.
 
 ---
 
@@ -294,15 +294,15 @@ Listen now on **[YouTube](https://youtu.be/Qrpm7E80wQ0) • [Spotify](https://op
 
 #### Blog:
 
-How I AI: Thariq Shihipar on Replacing Markdown with HTML for AI-Powered Development: &lt;https://www.chatprd.ai/how-i-ai/claude-code-anthropic-thariq-shihipar-on-replacing-markdown-with-html>
+How I AI: Thariq Shihipar on Replacing Markdown with HTML for AI-Powered Development: <https://www.chatprd.ai/how-i-ai/claude-code-anthropic-thariq-shihipar-on-replacing-markdown-with-html>
 
 #### Detailed workflow walkthroughs**:**
 
-**↳ **Generate a Living HTML Design System with AI for UI Consistency: &lt;https://www.chatprd.ai/how-i-ai/workflows/generate-a-living-html-design-system-with-ai-for-ui-consistency>
+**↳ **Generate a Living HTML Design System with AI for UI Consistency: <https://www.chatprd.ai/how-i-ai/workflows/generate-a-living-html-design-system-with-ai-for-ui-consistency>
 
-**↳ **Build Disposable Micro-Apps with AI to Edit Complex Plans: &lt;https://www.chatprd.ai/how-i-ai/workflows/build-disposable-micro-apps-with-ai-to-edit-complex-plans>
+**↳ **Build Disposable Micro-Apps with AI to Edit Complex Plans: <https://www.chatprd.ai/how-i-ai/workflows/build-disposable-micro-apps-with-ai-to-edit-complex-plans>
 
-**↳ **Create Interactive HTML Project Plans with AI for Better Visualization: &lt;https://www.chatprd.ai/how-i-ai/workflows/create-interactive-html-project-plans-with-ai-for-better-visualization>
+**↳ **Create Interactive HTML Project Plans with AI for Better Visualization: <https://www.chatprd.ai/how-i-ai/workflows/create-interactive-html-project-plans-with-ai-for-better-visualization>
 
 * * *
 
