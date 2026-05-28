@@ -19,4 +19,4 @@ type: index
 | Speculative Decoding | 推理優化、inference 加速 |
 | Multi-agent Coordination | 多 agent 協作、Fan-out 策略 |
 
-Parent: [../README.md](../README.md)
+Parent: [Agent Harness 研究中心](../index.md)
