@@ -87,7 +87,7 @@ Skills 是最靈活的 extension。可用 `/deploy` 呼叫，也可讓 Claude �
 | **最適合** | 只需要結果的聚焦任務 | 需要討論和協作的複雜工作 |
 | **Token 成本** | 較低（結果摘要回主 context） | 較高（每個成員都是獨立 Claude instance） |
 
-**轉換時機**：如果你在跑平行 subagents 但遭遇 context limits，或 subagents 需要互相通訊 -> Agent teams 是自然的下一步。
+**轉換時機**：如果你在跑平行 subagents 但遭遇 context limits，或 subagents 需要互相通訊 → Agent teams 是自然的下一步。
 
 > Agent teams 為實驗性功能，預設關閉。
 
@@ -113,7 +113,7 @@ Skills 是最靈活的 extension。可用 `/deploy` 呼叫，也可讓 Claude �
 
 **重要**：CLAUDE.md 或 Skill 中的「絕不編輯 `.env`」是請求，不是保證。`PreToolUse` hook 封鎖編輯才是強制執行。**如果規則必須每次都成立，做成 hook 而非 prompt 指令。**
 
-**Hook 輸出進入 context**：`PostToolUse` hook 跑 linter -> 結果以文字回傳給 Claude 讀取；`/fix-lint` skill 告訴 Claude 如何解決。
+**Hook 輸出進入 context**：`PostToolUse` hook 跑 linter → 結果以文字回傳給 Claude 讀取；`/fix-lint` skill 告訴 Claude 如何解決。
 
 ---
 
@@ -149,7 +149,7 @@ Skills 是最靈活的 extension。可用 `/deploy` 呼叫，也可讓 Claude �
 | **Subagents** | 被 spawn 時 | 獨立的新 context + 指定的 skills | 與主 session 隔離 |
 | **Hooks** | 觸發時 | 不載入任何東西（外部執行） | 零（除非 hook 回傳輸出） |
 
-*設定 `disable-model-invocation: true` 可讓 skill 完全對 Claude 隱藏，直到你手動呼叫 -> context 成本歸零。
+*設定 `disable-model-invocation: true` 可讓 skill 完全對 Claude 隱藏，直到你手動呼叫 → context 成本歸零。
 
 ### 各功能載入時序
 

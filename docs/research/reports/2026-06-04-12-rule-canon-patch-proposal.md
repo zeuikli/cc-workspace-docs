@@ -32,7 +32,7 @@ Research surfaced 3 candidate gaps. Each was checked against existing auto-load 
 
 **Byte cost:** ~150 B (CJK). Margin after: 545 − 150 ≈ **395 B** (within budget).
 
-**Why auto-load and not ref-only:** R6 is auto-load; the trap is *at the point the numbers are read*. A ->See pointer wouldn't fire when someone copies the literal numbers. This is a 1-line inline note, not new knowledge.
+**Why auto-load and not ref-only:** R6 is auto-load; the trap is *at the point the numbers are read*. A →See pointer wouldn't fire when someone copies the literal numbers. This is a 1-line inline note, not new knowledge.
 
 **Falsifiable prediction:**
 - After APPLY: `wc -c` total ≤ 18,955 (still < 19,000).
@@ -45,12 +45,12 @@ Research surfaced 3 candidate gaps. Each was checked against existing auto-load 
 
 ## P2 — methodology credibility note (ref-only, NOT auto-load)
 
-**Gap:** `.claude/refs/karpathy-mnilax-best-solution.md` lineage cites "41%->3% mistake rate" and "76%->52% compliance past 14 rules" without flagging these are **single-author self-reported, non-peer-reviewed, non-reproducible** numbers. This is exactly the misattribution failure mode MEMORY already records (SELF-ROUTE 65%/39% wrong-sourced; enterprise-failure stat downgraded to LOW). Leaving it unflagged invites the same error on re-cite.
+**Gap:** `.claude/refs/karpathy-mnilax-best-solution.md` lineage cites "41%→3% mistake rate" and "76%→52% compliance past 14 rules" without flagging these are **single-author self-reported, non-peer-reviewed, non-reproducible** numbers. This is exactly the misattribution failure mode MEMORY already records (SELF-ROUTE 65%/39% wrong-sourced; enterprise-failure stat downgraded to LOW). Leaving it unflagged invites the same error on re-cite.
 
 **Proposed change (ref file §規則演化 Lineage, NOT auto-load — zero byte impact on cap):**
 ```diff
--           50 tasks × 30 codebases × 6 weeks；41%->3% mistake rate
-+           50 tasks × 30 codebases × 6 weeks；41%->3% mistake rate
+-           50 tasks × 30 codebases × 6 weeks；41%→3% mistake rate
++           50 tasks × 30 codebases × 6 weeks；41%→3% mistake rate
 +           [信度 MEDIUM：作者自報實驗，無公開資料集 / 非同儕審查，引用須標「作者自報」]
 ```
 
@@ -75,10 +75,10 @@ Research surfaced 3 candidate gaps. Each was checked against existing auto-load 
 
 | Item | Verdict | Auto-load byte Δ | APPLY gate |
 |---|---|---|---|
-| P1 R6 universalization note | APPLY-candidate | +~150 B -> 395 B margin | gated session |
+| P1 R6 universalization note | APPLY-candidate | +~150 B → 395 B margin | gated session |
 | P2 methodology credibility note | APPLY-candidate (ref) | 0 (on-demand) | bundle w/ P1 |
 | P3 R12 info-withholding | **NO-OP (covered)** | 0 | — |
 
-**Net if both APPLY:** auto-load 18,455 -> ~18,605, margin 545 -> ~395. §R1–§R12 articles **untouched**. R6 numbers **unchanged**. No conduct change — both items are *meta-notes* (one says "these numbers are local," one says "this stat is self-reported").
+**Net if both APPLY:** auto-load 18,455 → ~18,605, margin 545 → ~395. §R1–§R12 articles **untouched**. R6 numbers **unchanged**. No conduct change — both items are *meta-notes* (one says "these numbers are local," one says "this stat is self-reported").
 
 **Recommendation:** APPLY P1+P2 together in a gated session if the user approves; both are honesty/portability guards, not behavior changes. P3 confirmed NO-OP.

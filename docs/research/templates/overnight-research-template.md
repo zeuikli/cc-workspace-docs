@@ -134,7 +134,7 @@ ITERATIONS=   # autoresearch 迭代上限（整夜建議 20，快速測試用 5�
 - 執行 ONE focused change
 - git commit -m "experiment: [描述改動]"
 - 執行 verify command 並展示輸出
-- 若 wc -m 增加 -> Keep；相同或減少 -> git revert
+- 若 wc -m 增加 → Keep；相同或減少 → git revert
 
 ---
 ## Phase 5：最終驗證（必須執行並展示輸出）
@@ -163,9 +163,9 @@ git push -u origin HEAD
 
 - 不詢問任何授權、不等待確認、直接推進
 - 所有驗證指令必須執行並展示實際輸出（不得口頭聲稱「已完成」）
-- 遇到單一來源抓取失敗 -> 跳過並記錄，繼續下一個
-- 遇到 healthcheck FAIL -> **立即停止**，修復後才能繼續（blocking，不得跳過）；修復失敗 ≥ 3 次 -> 停止並回報用戶
-- 每完成一個 Phase -> 輸出 checkpoint：「Phase N 完成：[做了什麼 / 驗了什麼 / 剩什麼]」
+- 遇到單一來源抓取失敗 → 跳過並記錄，繼續下一個
+- 遇到 healthcheck FAIL → **立即停止**，修復後才能繼續（blocking，不得跳過）；修復失敗 ≥ 3 次 → 停止並回報用戶
+- 每完成一個 Phase → 輸出 checkpoint：「Phase N 完成：[做了什麼 / 驗了什麼 / 剩什麼]」
 ```
 
 ---

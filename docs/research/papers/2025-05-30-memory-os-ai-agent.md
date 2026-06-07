@@ -239,7 +239,7 @@ LoCoMo: **F1** and **BLEU-1**
 | STM queue length | 7 |
 | MTM max segments | 200 |
 | User KB / Agent Traits capacity | 100 |
-| Heat threshold τ (MTM->LPM) | 5 |
+| Heat threshold τ (MTM→LPM) | 5 |
 | α, β, γ weights | 1, 1, 1 |
 | Top-m segments | 5 |
 | Top-k pages (GVD / LoCoMo) | 5 / 10 |

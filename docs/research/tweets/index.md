@@ -2,7 +2,7 @@
 
 > **Type:** raw:tweet — 186 tweets；Claude Code / AI Engineering 技術 thread 歸檔  
 > **Updated**: 2026-06-04 | **Authors**: 50+ | **Files**: 186 .md  
-> **Query pattern**: BRAIN.md -> 本表（Author / Topic）-> `<date>-@<handle>-<id>.md`
+> **Query pattern**: BRAIN.md → 本表（Author / Topic）→ `<date>-@<handle>-<id>.md`
 
 ---
 
@@ -58,7 +58,7 @@
 | 2026-05-11 | @freeman1266 | Harness 入門科普 | 🔵 |
 | 2026-05-26 | @rohit4verse | swarm 架構 300 agents | 🔵 |
 | 2026-05-26 | @yan5xu | Harness 螺旋三圈框架 | 🔵 |
-| 2026-05-27 | @arvin17x | Harness 護城河 75%->95% | 🔵 |
+| 2026-05-27 | @arvin17x | Harness 護城河 75%→95% | 🔵 |
 | 2026-05-28 | @mfpiccolo | agent harness worker 架構 | 🔵 |
 | 2026-05-30 | @EXM7777 | Eval loop 六步驟 Hermes | 🔵 |
 | 2026-04-25 | @PawelHuryn | Compounding Agent 三原則 | 🔵 |
@@ -71,7 +71,7 @@
 
 | 日期 | Author | 核心主題 | 整合狀態 |
 |------|--------|---------|---------|
-| 2026-03-17 | @trq212 | Skill 九分類框架 | ✅ -> RESOLVER.md |
+| 2026-03-17 | @trq212 | Skill 九分類框架 | ✅ → RESOLVER.md |
 | 2026-03-26 | @berryxia | Skills 2.0 完全指南 | 🔵 |
 | 2026-03-26 | @Khazix0918 | Superpowers 14 Skills | 🔵 |
 | 2026-04-02 | @dotey | Skills Git+Symlink 版控 | 🔵 |
@@ -81,10 +81,10 @@
 | 2026-04-25 | @0x_kaize | 100 個 repo 完整索引 | 🔵 |
 | 2026-05-03 | @nateherk | 100+ Skills 6 大實用技能 | 🔵 |
 | 2026-05-04 | @zodchiii | Claude Skills 完全指南 | 🔵 |
-| 2026-05-05 | @Mnilax | 247->23 Skills 篩選 | 🔵 |
-| 2026-04-20 | @skill-authoring | -> ai-articles/scored | ✅ |
+| 2026-05-05 | @Mnilax | 247→23 Skills 篩選 | 🔵 |
+| 2026-04-20 | @skill-authoring | → ai-articles/scored | ✅ |
 | 2026-03-21 | @akshay_pachaar | .claude/ 資料夾解剖 | 🔵 |
-| 2026-02-27 | @trq212 | 工具設計哲學 progressive disclosure | ✅ -> refs/ |
+| 2026-02-27 | @trq212 | 工具設計哲學 progressive disclosure | ✅ → refs/ |
 | 2026-02-28 | @bcherny | /simplify /batch 新 Skill | 🔵 |
 | 2026-04-27 | @zodchiii | CLAUDE.md 五段落框架 | 🔵 |
 | 2026-04-22 | @eng_khairallah1 | Prompt 4 層架構 | 🔵 |
@@ -102,8 +102,8 @@
 
 | 日期 | Author | 核心主題 | 整合狀態 |
 |------|--------|---------|---------|
-| 2025-06-25 | @karpathy | Context Engineering 核心定義 | ✅ -> context-management.md |
-| 2026-02-19 | @trq212 | Prompt caching 五原則 | ✅ -> context-management.md |
+| 2025-06-25 | @karpathy | Context Engineering 核心定義 | ✅ → context-management.md |
+| 2026-02-19 | @trq212 | Prompt caching 五原則 | ✅ → context-management.md |
 | 2026-03-20 | @_avichawla | KV caching 5x 推論加速 | 🔵 |
 | 2026-04-09 | @0xKingsKuan | token 用量分析工具 | 🔵 |
 | 2026-04-20 | @FinanceYF5 | Token 省錢工具集 | 🔵 |
@@ -112,11 +112,11 @@
 | 2026-05-01 | @Mnilax | 27% productive tokens 分析 | 🔵 |
 | 2026-05-01 | @AYi_AInotes | Karpathy token 槓桿 | 🔵 |
 | 2026-05-08 | @trq212 | HTML 取代 markdown 輸出 | 🔵 |
-| 2026-05-12 | @DeRonin_ | $4200->$312 費用指南 | 🔵 |
+| 2026-05-12 | @DeRonin_ | $4200→$312 費用指南 | 🔵 |
 | 2026-05-12 | @DeRonin_ | AI coding 帳單削減 80% | 🔵 |
 | 2026-05-13 | @sairahul1 | 9 個隱性 token 浪費模式 | 🔵 |
 | 2026-05-21 | @nateherk | Prompt caching 80/20 | 🔵 |
-| 2026-05-23 | @Mnilax | 18 個 Claude 設定 $340->$87 | 🔵 |
+| 2026-05-23 | @Mnilax | 18 個 Claude 設定 $340→$87 | 🔵 |
 | 2026-05-30 | @ellen_in_sf | 11 個免費 token 省量技巧 | 🔵 |
 | 2026-06-01 | @0x_kaize | Opus 4.8 effort 分級 + fast mode + workflows token 指南 | 🔵 |
 | 2026-05-31 | @Mnilax | Opus 4.8 四 effort 量化 | 🔵 |
@@ -153,7 +153,7 @@
 | 2026-02-11 | @bcherny | 客製化設計目標 | 🔵 |
 | 2026-04-27 | @zodchiii | CLAUDE.md 五段落框架 | 🔵 |
 | 2026-05-07 | @vincemask | CLAUDE.md 8 條實戰 | 🔵 |
-| 2026-05-09 | @Mnilax | Karpathy 4 規則盲點 + 12 條 | ✅ -> refs/karpathy-mnilax-best-solution.md |
+| 2026-05-09 | @Mnilax | Karpathy 4 規則盲點 + 12 條 | ✅ → refs/karpathy-mnilax-best-solution.md |
 | 2026-05-14 | @Mnilax | CLAUDE.md 73% 在說謊 | 🔵 |
 | 2026-05-18 | @NainsiDwiv50980 | CLAUDE.md 錯誤防範系統 | 🔵 |
 | 2026-05-19 | @shao__meng | 開發日誌提示詞 | 🔵 |
@@ -165,7 +165,7 @@
 | 2026-04-26 | @HiTw93 | Claude HUD 監控工具 | 🔵 |
 | 2026-05-18 | @trq212 | implementation-notes.html | 🔵 |
 | 2026-06-01 | @0xMoysei | 10 Lifehacks for Using Claude | 🔵 |
-| 2026-06-01 | @AlphaSignalAI | dot-skill COLLEAGUE.SKILL 工作痕跡->versioned skill | 🔵 |
+| 2026-06-01 | @AlphaSignalAI | dot-skill COLLEAGUE.SKILL 工作痕跡→versioned skill | 🔵 |
 
 ---
 
@@ -173,13 +173,13 @@
 
 | 日期 | Author | 核心主題 | 整合狀態 |
 |------|--------|---------|---------|
-| 2025-06-25 | @karpathy | Context Engineering 定義 | ✅ -> context-management.md |
-| 2026-01-26 | @karpathy | Goal-Driven 哲學 | ✅ -> core.md §R4 |
+| 2025-06-25 | @karpathy | Context Engineering 定義 | ✅ → context-management.md |
+| 2026-01-26 | @karpathy | Goal-Driven 哲學 | ✅ → core.md §R4 |
 | 2026-04-30 | @karpathy | Sequoia 演講 agent economy | 🔵 |
 | 2026-05-01 | @karpathy | context engineering shift | 🔵 |
-| 2026-04-29 | @stephzhan | Agentic engineering 品質標準 | 📋 -> quality.md |
-| 2026-04-29 | @stephzhan | AI 代碼四缺陷 | 📋 -> karpathy-principles.md |
-| 2026-04-29 | @stephzhan | Jaggedness 框架 | 📋 -> subagent-strategy.md |
+| 2026-04-29 | @stephzhan | Agentic engineering 品質標準 | 📋 → quality.md |
+| 2026-04-29 | @stephzhan | AI 代碼四缺陷 | 📋 → karpathy-principles.md |
+| 2026-04-29 | @stephzhan | Jaggedness 框架 | 📋 → subagent-strategy.md |
 | 2026-04-29 | @stephzhan | 外包思考不外包理解 | 🗂 已在 core.md |
 | 2026-04-29 | @stephzhan | Software 3.0 核心問題 | 🗂 Karpathy 原文更完整 |
 | 2026-04-29 | @stephzhan | Sequoia thread 入口 | 🔵 |
@@ -199,10 +199,10 @@
 | 2025-11-12 | @trq212 | multi-agent fan-out | 🔵 |
 | 2026-01-31 | @bcherny | 10 個官方團隊技巧 | 🔵 |
 | 2026-02-04 | @trq212 | /insights 瓶頸診斷 | 🔵 |
-| 2026-02-19 | @trq212 | Prompt caching 五原則 | ✅ -> context-management.md |
+| 2026-02-19 | @trq212 | Prompt caching 五原則 | ✅ → context-management.md |
 | 2026-03-10 | @trq212 | /btw 非阻塞指令 | 🔵 |
 | 2026-03-14 | @trq212 | /effort max 上線 | 🔵 |
-| 2026-03-17 | @trq212 | Skill 九分類框架 | ✅ -> RESOLVER.md |
+| 2026-03-17 | @trq212 | Skill 九分類框架 | ✅ → RESOLVER.md |
 | 2026-03-21 | @trq212 | pinned thread 索引 | 🔵 |
 | 2026-03-30 | @bcherny | /loop+/schedule PR 自動化 | 🔵 |
 | 2026-03-30 | @bcherny | 隱藏功能 thread 起始 | 🔵 |

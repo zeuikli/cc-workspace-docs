@@ -27,21 +27,21 @@
 |----|----------|---------|------|
 | CLAUDE.md | 2,585 | ≤2,900 | The Loop 速查表取代 12-Rule 表（同等密度）|
 | core.md | 9,065 | ≤9,065 | 六階段重組；論文證據下沉 best-solution ref；新內容（三洞見壓縮句）抵銷退役編號省的字 |
-| context-management.md | 2,007 | ≤2,100 | §R6->TEST·Token 段；加 HTML comment 一行 |
+| context-management.md | 2,007 | ≤2,100 | §R6→TEST·Token 段；加 HTML comment 一行 |
 | output-discipline.md | 1,490 | ≤1,490 | 幾乎不動（橫切層）|
 | subagent-strategy.md | 3,450 | ≤3,450 | on-rails/off-rails 一句；其餘不動 |
 | **總計** | **18,597** | **≤18,597** | 每檔寫完即 wc -c |
 
--> 新內容靠「退役 12-Rule 編號表頭 + 論文細節下沉 ref」回收的 byte 容納，淨 ≤0。
+→ 新內容靠「退役 12-Rule 編號表頭 + 論文細節下沉 ref」回收的 byte 容納，淨 ≤0。
 
 ---
 
 ## 2. 逐檔改動規格
 
 ### 2.1 CLAUDE.md
-- **12-Rule Canon 表** -> **The Loop 六階段速查表**（每階段：階段名 + 一句紀律 + inline §R tag + 防止的失敗）。
+- **12-Rule Canon 表** → **The Loop 六階段速查表**（每階段：階段名 + 一句紀律 + inline §R tag + 防止的失敗）。
 - 保留：語言鐵律、Harness Loop 段（升為主敘事）、常駐規則 @import、模式/Effort、暫存。
-- Effort 段加一句：「ROI 遞減（xhigh vs high 僅差 2 分/4× 成本，作者自報 LOW）-> 預設 high」。
+- Effort 段加一句：「ROI 遞減（xhigh vs high 僅差 2 分/4× 成本，作者自報 LOW）→ 預設 high」。
 - 不動：5 源 byte 門檻、sub-agent 不繼承本檔。
 
 ### 2.2 core.md（核心重寫）
@@ -59,8 +59,8 @@
 ## Framework Integrity（含 canonical wc -c 指令 — gate 斷言點，不動措辭）
 ## 暫存 / 長任務 / 長期記憶 / Git 工作流程（不動）
 ```
-- **coverage 全帶入**：A1-A7 安全紅線、B1-B10 血淚、C1-C17 行為、D1-D13 機制 -> 各埋對應階段。
-- 論文證據細節 -> 不重複（指 best-solution ref）。
+- **coverage 全帶入**：A1-A7 安全紅線、B1-B10 血淚、C1-C17 行為、D1-D13 機制 → 各埋對應階段。
+- 論文證據細節 → 不重複（指 best-solution ref）。
 
 ### 2.3 context-management.md
 - §R6 段改 header `## TEST·Token Budget〔§R6〕`（保 gate 斷言點 b：grep `§R6` ≥1）。
@@ -79,20 +79,20 @@
 ## 3. healthcheck gate 改寫（measure.sh L94-121）
 
 ### 3.1 改動
-- L95 `RB_CORE=$(grep -c "^## §R" core.md)` 比 `=11` -> 改 `PHASE_CT=$(grep -cE '^## (OBSERVE|IDENTIFY|PROPOSE|APPLY|TEST|RECORD)' core.md)` 比 `=6`。
-- L96 `RB_R6` 比 `§R6` in context-management -> **保留**（inline tag `〔§R6〕` 仍在 context-management）。
-- L108 awk split `^## §R[0-9]` -> 改 split `^## (OBSERVE|IDENTIFY|PROPOSE|APPLY|TEST|RECORD|跨切)`；body 非 stub 檢查不變。
-- L121 canonical wc -c 指令檢查 -> 不動（core.md 保留該指令）。
+- L95 `RB_CORE=$(grep -c "^## §R" core.md)` 比 `=11` → 改 `PHASE_CT=$(grep -cE '^## (OBSERVE|IDENTIFY|PROPOSE|APPLY|TEST|RECORD)' core.md)` 比 `=6`。
+- L96 `RB_R6` 比 `§R6` in context-management → **保留**（inline tag `〔§R6〕` 仍在 context-management）。
+- L108 awk split `^## §R[0-9]` → 改 split `^## (OBSERVE|IDENTIFY|PROPOSE|APPLY|TEST|RECORD|跨切)`；body 非 stub 檢查不變。
+- L121 canonical wc -c 指令檢查 → 不動（core.md 保留該指令）。
 - 同步改錯誤訊息字串。
 
 ### 3.2 mutation test（advisor 強制 — 證明 gate 能抓回歸）
 ```
 # 1. 新結構下 gate 應 green
 bash scripts/measure.sh --gate; echo "exit=$?"   # 期望 0
-# 2. 故意刪一個 phase body -> 應 red
+# 2. 故意刪一個 phase body → 應 red
 （暫時掏空 ## TEST body）
 bash scripts/measure.sh --gate; echo "exit=$?"   # 期望 1
-# 3. 故意刪一個 phase header -> 應 red
+# 3. 故意刪一個 phase header → 應 red
 bash scripts/measure.sh --gate; echo "exit=$?"   # 期望 1
 # 4. 還原
 ```
@@ -129,6 +129,6 @@ bash scripts/measure.sh --gate; echo "exit=$?"   # 期望 1
 
 ## 6. 回滾計劃
 
-- gate 改壞 -> `git revert` measure.sh commit（gate 與規則同 PR，revert gate 不影響規則內容）。
-- 規則 eval 回歸 -> 走 /autoload-evolution；≥5pp 回歸則整 PR revert。
-- §R inline tag 漏 -> grep `core §R` 找斷指針補 tag。
+- gate 改壞 → `git revert` measure.sh commit（gate 與規則同 PR，revert gate 不影響規則內容）。
+- 規則 eval 回歸 → 走 /autoload-evolution；≥5pp 回歸則整 PR revert。
+- §R inline tag 漏 → grep `core §R` 找斷指針補 tag。

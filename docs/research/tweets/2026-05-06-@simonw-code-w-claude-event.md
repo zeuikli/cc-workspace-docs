@@ -21,7 +21,7 @@ type: tweet
 
 > "Live blogging Anthropic's Code w/ Claude 2026 event:
 >
-> - Rate limits doubled for Pro/Max/Enterprise (5-hour -> 10-hour Claude Code sessions)
+> - Rate limits doubled for Pro/Max/Enterprise (5-hour → 10-hour Claude Code sessions)
 > - Claude Code Routines GA — scheduled / webhook-triggered automated tasks
 > - Expanded MCP support with alwaysLoad:true for permanent tools
 > - Extension model: skills + sub-agents + hooks + MCP all composable
@@ -32,13 +32,13 @@ type: tweet
 
 ## 研究摘要
 
-**TL;DR**：Anthropic Code w/ Claude 2026 活動的即時記錄。核心訊號：速率限制加倍（session 長度 5h -> 10h），Routines GA，MCP alwaysLoad 機制上線。Simon 的核心洞見：**可擴充性（extensibility）是關鍵差異化，模型已成商品**。
+**TL;DR**：Anthropic Code w/ Claude 2026 活動的即時記錄。核心訊號：速率限制加倍（session 長度 5h → 10h），Routines GA，MCP alwaysLoad 機制上線。Simon 的核心洞見：**可擴充性（extensibility）是關鍵差異化，模型已成商品**。
 
 ### 重要功能更新
 
 | 功能 | 變化 | Harness 意涵 |
 |------|------|-------------|
-| Session 長度 | 5h -> 10h | 長任務 harness 需求增加 |
+| Session 長度 | 5h → 10h | 長任務 harness 需求增加 |
 | Routines GA | Scheduled + Webhook | Harness 自動化觸發點增加 |
 | `alwaysLoad: true` | MCP 永久工具常態可見 | Tool context 管理策略改變 |
 | Extension model | skills + agents + hooks + MCP | Harness 組合性是設計核心 |

@@ -26,7 +26,7 @@ The project's central thesis: "The point isn't who typed it, it's what shipped."
 
 ### Design Philosophy
 
-gstack operates on a **structured sprint model** organized as: **Think -> Plan -> Build -> Review -> Test -> Ship -> Reflect**
+gstack operates on a **structured sprint model** organized as: **Think → Plan → Build → Review → Test → Ship → Reflect**
 
 Rather than freestyle prompting, gstack embeds opinionated roles—CEO, Engineering Manager, Designer, QA Lead, Security Officer, Release Engineer—as automated workflows. Each skill feeds output to downstream skills, eliminating workflow gaps.
 
@@ -111,7 +111,7 @@ skills/
 - **`/plan-eng-review`** — technical architecture review with diagrams and system boundaries
 - **`/plan-design-review`** — design completeness audit at planning stage (0-10 scoring per dimension)
 - **`/design-consultation`** — build complete design systems from scratch with intentional creative risks
-- **`/autoplan`** — automated review pipeline running CEO -> Design -> Eng sequentially
+- **`/autoplan`** — automated review pipeline running CEO → Design → Eng sequentially
 
 ### Implementation & Code Quality Skills
 
@@ -136,7 +136,7 @@ skills/
 ### Deployment & Monitoring Skills
 
 - **`/ship`** — release engineering with test bootstrap and coverage audits
-- **`/land-and-deploy`** — merge -> deploy -> verify pipeline in one command
+- **`/land-and-deploy`** — merge → deploy → verify pipeline in one command
 - **`/canary`** — post-deploy monitoring for console errors and performance regressions
 - **`/benchmark`** — performance baselines (load time, Core Web Vitals, resource counts)
 
@@ -161,7 +161,7 @@ skills/
 - **`/freeze`** — restrict edits to single directory
 - **`/guard`** — combined `/careful` + `/freeze` for maximum safety
 - **`/ios-qa`** — live-device testing via USB CoreDevice tunnel
-- **`/ios-fix`** — find -> fix -> verify loop on real iPhones
+- **`/ios-fix`** — find → fix → verify loop on real iPhones
 - **`/ios-design-review`** — 10-dimension Apple HIG audit on device
 - **`/ios-sync`** — regenerate accessors after framework upgrades
 
@@ -234,8 +234,8 @@ gstack implements intelligent **skill routing** through the RESOLVER mechanism:
 5. **Feedback loop** — user can accept/reject/refine skill outputs
 
 **Examples of chaining:**
-- `/office-hours` -> `/plan-ceo-review` -> `/plan-eng-review` -> `/review` -> `/qa`
-- `/design-consultation` -> `/design-shotgun` -> `/design-html` -> `/qa`
+- `/office-hours` → `/plan-ceo-review` → `/plan-eng-review` → `/review` → `/qa`
+- `/design-consultation` → `/design-shotgun` → `/design-html` → `/qa`
 
 The system prevents skipping critical verification steps—each downstream skill expects upstream context and will error if missing.
 
@@ -387,7 +387,7 @@ Proponents counter:
 
 ### Integration
 
-**gbrain -> gstack workflow:**
+**gbrain → gstack workflow:**
 1. Developer runs `/learn` skill, which queries gbrain
 2. gbrain surfaces relevant patterns from prior sessions
 3. Subsequent skills (`/review`, `/design-shotgun`, etc.) apply learned preferences
@@ -422,7 +422,7 @@ Create or customize `.claude/CLAUDE.md` in your project root:
 - Database: PostgreSQL
 
 ## Development Sprint
-Think -> Plan -> Build -> Review -> Test -> Ship -> Reflect
+Think → Plan → Build → Review → Test → Ship → Reflect
 
 ## Safety Guardrails
 - Require /review before merging to main
@@ -722,10 +722,10 @@ Tan 的個人指標均已被多家獨立媒體交叉確認：
 
 ### ✅ 仍然有效的核心結論
 
-- **gstack 設計哲學**（Think -> Plan -> Build -> Review -> Test -> Ship -> Reflect）與 40+ skills 架構均仍有效；v1.26.3.0 已確認加入 `/ios-qa`、`/pair-agent`、Checkpoint mode 等。
+- **gstack 設計哲學**（Think → Plan → Build → Review → Test → Ship → Reflect）與 40+ skills 架構均仍有效；v1.26.3.0 已確認加入 `/ios-qa`、`/pair-agent`、Checkpoint mode 等。
 - **Garry Tan 生產力指標**（810×、240×）由多家獨立媒體交叉確認，且係個人基準對比（2026 vs 2013），非同儕研究——此注意事項仍成立。
-- **gbrain ↔ gstack 整合循環**（`/learn` -> gbrain 查詢 -> skill 應用 -> 記錄回 gbrain）架構說明仍正確。
-- **RESOLVER 機制**（skill 路由 -> 依賴解析 -> 順序執行）描述仍符合 workspace 實際狀態（`.claude/skills/RESOLVER.md` 已存在且含 16+ skills 決策樹）。
+- **gbrain ↔ gstack 整合循環**（`/learn` → gbrain 查詢 → skill 應用 → 記錄回 gbrain）架構說明仍正確。
+- **RESOLVER 機制**（skill 路由 → 依賴解析 → 順序執行）描述仍符合 workspace 實際狀態（`.claude/skills/RESOLVER.md` 已存在且含 16+ skills 決策樹）。
 - **MIT 授權、opt-in 遙測、無代碼收集**等策略均未改變。
 - **三層 CLAUDE.md 架構**（root / directory / session）仍是最佳實踐，workspace 已按此設計。
 - **競爭格局表格**（Claude Code / OpenAI Codex CLI / Gemini CLI / ForgeCode）的框架仍有效，但各家模型版本號需持續追蹤。

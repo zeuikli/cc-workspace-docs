@@ -35,7 +35,7 @@ The paper makes this concrete with a striking finding: **more capable models (GP
 ## 1. Four Practical Challenges Addressed by Vesper
 
 ### Challenge 1: Coding Agent Integration
-**Problem**: Prior algorithm discovery systems (FunSearch, OpenEvolve, AlphaEvolve) rely on stateless LLM calls—single prompt -> single response—which cannot inspect codebases, iterate within a session, or self-correct.
+**Problem**: Prior algorithm discovery systems (FunSearch, OpenEvolve, AlphaEvolve) rely on stateless LLM calls—single prompt → single response—which cannot inspect codebases, iterate within a session, or self-correct.
 
 **Solution**: Replace stateless LLM calls with autonomous coding agents capable of:
 - Multi-step reasoning within single sessions
@@ -176,6 +176,6 @@ Git worktree isolation enables linear scaling of parallel agents up to 4 agents 
 | Generator ≠ Evaluator (PGE) | `/deep-review` + PGE principle | ✅ Already aligned—independently validated |
 | Git worktree isolation | `bash scripts/feature.sh` | Already uses worktrees for feature branches |
 | Verification agent (hack detection) | Manual code review | Add automated cheating-detection step to `/deep-review` |
-| Capability paradox | No capability-scaling policy | Add rule: stronger model -> proportionally stronger verification |
+| Capability paradox | No capability-scaling policy | Add rule: stronger model → proportionally stronger verification |
 | Agent-directed DB query | Static `research/` files | Consider adding structured index for agent-queryable past research |
 | 4-parallel speedup | Sequential sub-agents | Fan-out limit of 4 sub-agents already matches optimal |

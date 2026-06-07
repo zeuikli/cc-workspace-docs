@@ -65,7 +65,7 @@ Claude Opus 4.6 在相同 benchmark 上：
 
 ### Stanford Meta-Harness 研究
 
-同模型，harness 變化範圍：59.6% -> 76.4%（16.8pp 差距）
+同模型，harness 變化範圍：59.6% → 76.4%（16.8pp 差距）
 
 ### Ewan Mak 實地案例（Claude Sonnet 4.6）
 
@@ -84,7 +84,7 @@ Claude Opus 4.6 在相同 benchmark 上：
 
 | 事件 | 時間 | 變更內容 | 影響 |
 |------|------|---------|------|
-| Reasoning effort 降級 | 3/4 | default: high -> medium | 「Claude 感覺不夠聰明」 |
+| Reasoning effort 降級 | 3/4 | default: high → medium | 「Claude 感覺不夠聰明」 |
 | Caching loop bug | 3/26 | thinking history 每輪清空（應每小時） | 「forgetful and repetitive」 |
 | Verbosity 限制 | 4/16 | 系統提示加 ≤25/≤100 words 限制 | Opus coding 品質下降 3% |
 
@@ -100,7 +100,7 @@ Claude Opus 4.6 在相同 benchmark 上：
 
 - 18 個模型在 NIAH（needle-in-a-haystack）任務上全部隨 context 增長而下降
 - 即使是簡單任務（文字複製）在 2,500+ token 後也崩潰
-- 加入語義相關但不正確的 distractor -> 性能複合下降
+- 加入語義相關但不正確的 distractor → 性能複合下降
 - 悖論：隨機排列的 haystack 表現反而優於邏輯連貫文件（18 個模型一致）
 
 ### 實踐啟示
@@ -111,12 +111,12 @@ Context rot 不能靠「更大的 context window」解決，只能靠結構性�
 Sub-Agent = Context Firewall
 
 主 Agent 只看到：
-  -> 給 sub-agent 的 prompt
-  -> sub-agent 的最終結論
+  → 給 sub-agent 的 prompt
+  → sub-agent 的最終結論
 
 中間過程（grep 輸出、工具呼叫、中間檔案讀取）
-  -> 留在 child context
-  -> 不污染主 thread
+  → 留在 child context
+  → 不污染主 thread
 ```
 
 ---
@@ -135,12 +135,12 @@ PLANNER AGENT
   ▼
 GENERATOR AGENT
   └─ 逐項實作
-  └─ 遇到 context limit -> 完整 reset（不靠摘要）
+  └─ 遇到 context limit → 完整 reset（不靠摘要）
   │
   ▼
 EVALUATOR AGENT
   └─ Playwright / 外部工具（非模型自評）
-  └─ Hard threshold：任一失敗 -> sprint 失敗
+  └─ Hard threshold：任一失敗 → sprint 失敗
   │
   ▼
 (Feedback Loop)
@@ -180,7 +180,7 @@ Addy Osmani 的延伸：「Every line in a good AGENTS.md should be traceable ba
 
 | 層 | Model 變強後的走向 | 原因 |
 |----|----------------|------|
-| **Body** | 長新器官：Computer Use -> 多 agent 並行 -> 跨 device | Model 能力提升，body 用得更好、能長更多東西 |
+| **Body** | 長新器官：Computer Use → 多 agent 並行 → 跨 device | Model 能力提升，body 用得更好、能長更多東西 |
 | **Harness** | 搬家但不消失：舊 scaffolding 退場，新 scaffolding 長出來 | Harness 解的是 non-determinism 這個結構問題，不是 model 弱的問題 |
 
 **真正會被 model 進步解掉的 harness**：補弱點用的（subagent for context isolation、early-stop 機制）
@@ -200,10 +200,10 @@ Addy Osmani 的延伸：「Every line in a good AGENTS.md should be traceable ba
 | Anthropic 《Harness Design》 | Planner/Generator/Evaluator 三層架構 |
 | Anthropic 《Building Effective Agents》 | 六種設計模式；從簡單 prompt 開始 |
 | Chroma 《Context Rot》 | 18 個模型的量化衰退數據；NIAH benchmark |
-| Ewan Mak《70% Rule》| 58%->81% harness 優化實地案例 |
+| Ewan Mak《70% Rule》| 58%→81% harness 優化實地案例 |
 | Terminal-Bench 2.0 | 同模型不同 harness 的 13pp 分數差距 |
 | Simon Willison | Agentic loop 設計原則；測試套件是 loop 基礎 |
-| Mitchell Hashimoto | Ratchet 原則：mistake -> permanent rule |
+| Mitchell Hashimoto | Ratchet 原則：mistake → permanent rule |
 | Addy Osmani | AGENTS.md 每行可追蹤到具體失敗 |
 
 ---

@@ -28,30 +28,30 @@ Boris Cherny（Claude Code 創始人）揭示個人工作流核心：`/loop` + r
 
 ## 主要內容結構
 
-#### 1. Claude Code 起源（00:00 -> ~04:30）
+#### 1. Claude Code 起源（00:00 → ~04:30）
 
-2024 年底 Boris 加入 Anthropic Labs（小型創新孵化器），與少數幾人建造 Claude Code、MCP、桌面 App。前 6 個月產品幾乎不能用，沒有 PMF。PMF 拐點在 2025 年 5 月 Opus 4 發布，之後每次 model 發布都再次拐點（4.5 -> 4.6 -> 4.7）。
+2024 年底 Boris 加入 Anthropic Labs（小型創新孵化器），與少數幾人建造 Claude Code、MCP、桌面 App。前 6 個月產品幾乎不能用，沒有 PMF。PMF 拐點在 2025 年 5 月 Opus 4 發布，之後每次 model 發布都再次拐點（4.5 → 4.6 → 4.7）。
 
-#### 2. 個人工作流：iPhone 為主的 Agentic Setup（~04:30 -> ~09:00）
+#### 2. 個人工作流：iPhone 為主的 Agentic Setup（~04:30 → ~09:00）
 
 Boris 主要用 iPhone 工作。Claude App 左側 code tab 有 5-10 個 sessions，每個 session 有多個 agents，當前約數百個 agents；夜間常跑幾千個做深度工作。核心工具是 `/loop`：用 Claude 呼叫 cron 排程重複 job，已有幾十個 loop 在跑，包括：babysit PRs + fix CI、自動 rebase、修 flaky test、每 30 分鐘彙整 Twitter feedback。另有 **routines**（server-side 版 loop，關上筆電仍繼續執行）。
 
-#### 3. Coding 已解決與 Claude Code Codebase（~09:00 -> ~13:00）
+#### 3. Coding 已解決與 Claude Code Codebase（~09:00 → ~13:00）
 
 Boris 自 2026 年起零手寫 code，一天最高紀錄 150 PRs。Claude Code codebase 是純 TypeScript + React（原因：對 model 最 on-distribution，模型能力較弱時語言選擇很重要）。今日模型已能處理任何語言。
 
-#### 4. 未來團隊結構（~13:00 -> ~16:30）
+#### 4. 未來團隊結構（~13:00 → ~16:30）
 
 跨學科 generalist 崛起：工程 + 設計 + 產品 + 資料科學。Anthropic 全團隊成員（PM、設計師、財務、研究員）全員寫 code。新創比大公司更有優勢，因為可從頭 AI-native 建造。
 
-#### 5. SaaS 生態與護城河變化（~16:30 -> ~19:00）
+#### 5. SaaS 生態與護城河變化（~16:30 → ~19:00）
 
 Seven Powers 框架：switching costs 和 process power 護城河被削弱（AI 可以 port 系統、hill-climb 任何流程）；network effects、scale economies、cornered resources 仍有效。未來 10 年新創數量將增加 10x。
 
-#### 6. Q&A：多面向洞察（~19:00 -> 24:35）
+#### 6. Q&A：多面向洞察（~19:00 → 24:35）
 
 - **Product vs Model Mix**：現 50/50；隨 model 更好，harness 重要性下降；安全機制（prompt injection、permission mode）會因 model alignment 進步而減少
-- **軟體民主化**：類比印刷機——1400 年代印刷機讓識字率從 10% -> 70%；軟體 literacy 即將完全民主化；最佳記帳軟體作者是好的會計師，不是工程師
+- **軟體民主化**：類比印刷機——1400 年代印刷機讓識字率從 10% → 70%；軟體 literacy 即將完全民主化；最佳記帳軟體作者是好的會計師，不是工程師
 - **Anthropic 的真實領先**：不在模型（同樣的模型對外開放）；在組織 DNA——全員 AI-native 流程，Claudes 透過 Slack 互相溝通，零手寫 code，所有 SQL 由 model 生成
 - **Multi-agent orchestration**：目前靠 prompting；4.7 已開始自動發起 loop；長期由 model 決定是否用 local 模型等，工程師不再需要做這類決策
 - **MCP 與 computer use**：MCP = knowledge work 整合的通用答案；computer use = 無 MCP 的 catchall；以 4.7 效果已相當好但慢

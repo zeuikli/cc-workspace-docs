@@ -4,7 +4,7 @@ type: template
 ---
 
 # Tweets 目錄深度研究 Prompt
-# 目標：research/tweets/ 全部文章分類 -> 可實作 prompt 檔 + 研究報告
+# 目標：research/tweets/ 全部文章分類 → 可實作 prompt 檔 + 研究報告
 # 使用方式：先貼 /goal，再貼工作 Prompt
 
 ---
@@ -191,7 +191,7 @@ git push -u origin HEAD
 - 不詢問任何確認，直接推進
 - Sub-Agent 必須在**單一訊息**中同時派遣（平行，非序列）
 - 每完成一個 Step 輸出 checkpoint：「Step N 完成：做了什麼 / 驗了什麼 / 剩什麼」
-- 遇到單一檔案讀取失敗 -> 跳過並記錄，不中斷整體流程
+- 遇到單一檔案讀取失敗 → 跳過並記錄，不中斷整體流程
 - Step 5 的所有命令必須執行並顯示實際輸出
 ```
 

@@ -40,7 +40,7 @@
 2. **Markdown 作為 SSoT**：git 管理的 markdown，人類可讀 + agent 可用
 3. **腦優先查找（brain-first lookup）**：每次查詢先過 brain，命中就不呼叫外部 API（省 token、省延遲）
 4. **Signal Detection**：每條 agent 訊息自動偵測實體/事件/時效性資訊並決定是否 ingest
-5. **可恢復工作隊列**：兩相持久化（pending->done）確保 LLM loop 崩潰不丟工作
+5. **可恢復工作隊列**：兩相持久化（pending→done）確保 LLM loop 崩潰不丟工作
 
 **Hermes Agent**（Nous Research）
 
@@ -91,10 +91,10 @@ Gap analysis 進行前，先盤點已有的構件，避免重複建設（Lesson 
 **影響**：重複抓取已有的知識（增加 token + 延遲）；本地合成知識（career-wiki 36 pages、20+ reports）被閒置；brain-first 精神未落地。
 
 **修復**：建立 `.claude/refs/brain-first-protocol.md`，定義四層 lookup hierarchy：
-1. career-wiki -> 職涯實戰知識
-2. RESEARCH-INDEX -> AI/Harness 研究
-3. .claude/refs/ -> 設計決策
-4. memory/MEMORY.md -> 跨 session 決策
+1. career-wiki → 職涯實戰知識
+2. RESEARCH-INDEX → AI/Harness 研究
+3. .claude/refs/ → 設計決策
+4. memory/MEMORY.md → 跨 session 決策
 
 只有前四層都未命中，才觸發 WebSearch。並定義 Signal Detection 五種觸發模式，以及 Post-Discovery 知識回流義務（不靜默跳過）。
 
@@ -149,7 +149,7 @@ Hermes 的核心主張是：一個 skill 在使用中應該**越來越好**，�
 
 cc-workspace 的 `skill-evolution` skill 已實現了這個哲學的控制平面，但缺少**資料平面**——METADATA.json 沒有記錄 skill 的使用歷史。這次補充的 `usage_count`/`refinement_count`/`quality_score` 欄位提供了演化的數據基礎：skill-evolution 分析時可直接讀取所有 skill 的 METADATA，找出哪些是高頻使用但品質低（優先改良），哪些是低頻但品質高（維持現狀）。
 
-`evolution_stage` 的設計借鑑 Hermes 的 skill lifecycle：`draft`（新建未驗證）-> `tested`（跑過少量場景）-> `stable`（battle-tested、已有 gotchas 記錄）-> `mature`（版本穩定、高頻使用）。overnight-research 設為 `tested`（新 skill），autoresearch v1.11 設為 `mature`（11 個改良週期）。
+`evolution_stage` 的設計借鑑 Hermes 的 skill lifecycle：`draft`（新建未驗證）→ `tested`（跑過少量場景）→ `stable`（battle-tested、已有 gotchas 記錄）→ `mature`（版本穩定、高頻使用）。overnight-research 設為 `tested`（新 skill），autoresearch v1.11 設為 `mature`（11 個改良週期）。
 
 ### 3.4 Brain-First vs WebSearch-First：成本與知識累積的分歧
 
@@ -198,7 +198,7 @@ WebSearch-first 的 agent 每次都從零開始——即使相同問題已被回
 
 | 工具 | 功能 | 狀態 |
 |------|------|------|
-| `scripts/wiki-ingest.py` | digest -> wiki 橋接，關鍵字匹配得分 | ✅ 生產就緒 |
+| `scripts/wiki-ingest.py` | digest → wiki 橋接，關鍵字匹配得分 | ✅ 生產就緒 |
 | `scripts/wiki-lint.sh` | wiki pages 健康檢查，Lint Score ≥85 = PASS | ✅ 生產就緒 |
 | `scripts/healthcheck.sh` | workspace 整體健康 | ✅ 生產就緒 |
 | `.claude/skills/autoresearch/` | wiki Ingest/Query/Lint ops 操作層 | ✅ v1.11 mature |
@@ -245,7 +245,7 @@ Post-Discovery 的四選一（Ingest/Archive/Memorize/Skip）把「靜默跳過�
 
 ### 7.2 Skill Telemetry 驅動的資源分配
 
-一旦 `usage_count` 開始被記錄，workspace 維護就能從主觀判斷（「這個 skill 感覺很常用」）轉為數據驅動（「這個 skill 被呼叫 23 次，gotchas_count 升至 8，refinement_count 仍為 0 -> 最需要改良」）。Hermes 的自我演化精神最終落地於此。
+一旦 `usage_count` 開始被記錄，workspace 維護就能從主觀判斷（「這個 skill 感覺很常用」）轉為數據驅動（「這個 skill 被呼叫 23 次，gotchas_count 升至 8，refinement_count 仍為 0 → 最需要改良」）。Hermes 的自我演化精神最終落地於此。
 
 ### 7.3 Brain-First 作為 Cost Engineering 的一部分
 

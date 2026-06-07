@@ -83,13 +83,13 @@ use the code-reviewer subagent to check the auth module
 have the debugger subagent investigate why users can't log in
 ```
 
-**建立自訂 subagent**：用 `/agents` -> "Create New subagent"，定義：識別符、使用時機、可存取工具、system prompt。在 `.claude/agents/` 建立供團隊共用。
+**建立自訂 subagent**：用 `/agents` → "Create New subagent"，定義：識別符、使用時機、可存取工具、system prompt。在 `.claude/agents/` 建立供團隊共用。
 
 ---
 
 ## Plan Mode — 安全的 Code 分析
 
-**Shift+Tab 循環切換**：Normal -> Auto-Accept（`⏵⏵ accept edits on`）-> Plan Mode（`⏸ plan mode on`）
+**Shift+Tab 循環切換**：Normal → Auto-Accept（`⏵⏵ accept edits on`）→ Plan Mode（`⏸ plan mode on`）
 
 ```bash
 # 以 Plan Mode 啟動新 session
@@ -296,7 +296,7 @@ claude --resume auth-refactor
 | 快捷鍵 | 操作 |
 |--------|------|
 | `↑` / `↓` | 在 sessions 間導航 |
-| `->` / `←` | 展開/收合分組 sessions |
+| `→` / `←` | 展開/收合分組 sessions |
 | `Enter` | 選擇並 resume 高亮的 session |
 | `Space` | 預覽 session 內容 |
 | `Ctrl+R` | 搜尋所有專案歷史（W19，v2.1.129）；在 picker 中為重命名高亮 session |

@@ -45,7 +45,7 @@ Memory mechanism is indispensable for enabling the self-evolving capability of L
 
 #### 1. 記憶寫入（Memory Writing）
 ```
-觸發條件 -> 選擇存儲內容 -> 格式化 -> 存入記憶庫
+觸發條件 → 選擇存儲內容 → 格式化 → 存入記憶庫
 ├── Always-write：每次交互後都寫入
 ├── Selective-write：滿足條件才寫入（SCM, ExpeL）
 └── Delayed-write：批量寫入（ExpeL 訓練後提取）
@@ -53,7 +53,7 @@ Memory mechanism is indispensable for enabling the self-evolving capability of L
 
 #### 2. 記憶讀取（Memory Reading）
 ```
-查詢形成 -> 相似度計算 -> Top-K 選擇 -> 注入上下文
+查詢形成 → 相似度計算 → Top-K 選擇 → 注入上下文
 ├── On-demand：按需檢索（MemGPT 中斷機制）
 ├── Proactive：主動預取（預測需要什麼記憶）
 └── Contextual：基於當前狀態自動觸發
@@ -61,7 +61,7 @@ Memory mechanism is indispensable for enabling the self-evolving capability of L
 
 #### 3. 記憶整合（Memory Consolidation）
 ```
-多個記憶條目 -> LLM 重寫/摘要 -> 更緊湊的表示
+多個記憶條目 → LLM 重寫/摘要 → 更緊湊的表示
 ├── 即時整合：每次添加新記憶後整合
 ├── 定期整合：N 次後觸發
 └── 按需整合：顯式觸發
@@ -108,10 +108,10 @@ Memory mechanism is indispensable for enabling the self-evolving capability of L
 
 ### 發現 1：沒有統一最優架構
 不同任務類型需要不同記憶策略：
-- 短期推理 -> Working Memory 即可
-- 長對話 -> Episodic + 向量檢索
-- 複雜推理 -> 結構化記憶（知識圖）
-- 開放式探索 -> 技能庫（Voyager 風格）
+- 短期推理 → Working Memory 即可
+- 長對話 → Episodic + 向量檢索
+- 複雜推理 → 結構化記憶（知識圖）
+- 開放式探索 → 技能庫（Voyager 風格）
 
 ### 發現 2：整合是高風險操作
 多個系統（包括 MemoryBank、A-MEM 等）在長時間運行後都觀察到性能退化，根源指向整合步驟的信息丟失。（2605.12978 後來系統性地驗證了這一觀察）

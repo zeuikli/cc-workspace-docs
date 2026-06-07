@@ -18,7 +18,7 @@
 | 5 | **Code Scaffolding & Templates** | 框架樣板 + 自然語言需求 | 新服務初始化、API endpoint 生成 |
 | 6 | **Code Quality & Review** | 品質強制與 code review 輔助 | 風格檢查、PR review |
 | 7 | **CI/CD & Deployment** | 程式碼管理與部署協調 | 自動部署、rollback |
-| 8 | **Runbooks** | 多工具調查工作流 -> 結構化報告 | 事件處理 SOP、on-call 指南 |
+| 8 | **Runbooks** | 多工具調查工作流 → 結構化報告 | 事件處理 SOP、on-call 指南 |
 | 9 | **Infrastructure Operations** | 日常維護與操作程序 | 資源清理、健康檢查 |
 
 ---
@@ -69,7 +69,7 @@ Analytics agent 與 coding agent 有根本差異：有「唯一正確答案」�
 
 | 失敗模式 | 說明 | 解法 |
 |---------|------|------|
-| 概念模糊 | "active users" -> 多個候選欄位 | Semantic layer 消除歧義 |
+| 概念模糊 | "active users" → 多個候選欄位 | Semantic layer 消除歧義 |
 | 資料過期 | Schema、定義持續變動 | 元資料視為產品維護 |
 | 檢索失敗 | 正確資料存在但找不到 | Skills 提升可發現性 |
 
@@ -92,12 +92,12 @@ Analytics agent 與 coding agent 有根本差異：有「唯一正確答案」�
 
 ```
 知識 Skill（Knowledge Router）
-  -> 薄層，路由到正確 unbook
-  -> 記錄：概念、grain、exclusions、gotchas、模式
+  → 薄層，路由到正確 unbook
+  → 記錄：概念、grain、exclusions、gotchas、模式
 
 程序 Skill（Unbook）
-  -> 詳細步驟，含 SQL 範例和錯誤處理
-  -> 與 transformation code 共置（data PR 自動同步）
+  → 詳細步驟，含 SQL 範例和錯誤處理
+  → 與 transformation code 共置（data PR 自動同步）
 ```
 
 ### CI 整合
@@ -111,7 +111,7 @@ Analytics agent 與 coding agent 有根本差異：有「唯一正確答案」�
 **內部實踐：**
 - 直接 commit 至 `./.claude/skills/`
 - 內部 plugin marketplace 跨團隊共享
-- Sandbox 資料夾有機採用 -> 達到一定使用量後升級為官方
+- Sandbox 資料夾有機採用 → 達到一定使用量後升級為官方
 
 **使用量追蹤：**
 透過 `PreToolUse` hook 記錄 skill 呼叫次數，識別高人氣和低使用率 skill。

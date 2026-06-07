@@ -12,7 +12,7 @@ verify: V1+V2
 
 ### [O] 官方 / Anthropic 一手資料
 
-- **CLAUDE.md budget**: bcherny 明示 ≤60 行最佳，≤200 行上限。超過後模型注意力稀釋 -> 有效規則密度下降。
+- **CLAUDE.md budget**: bcherny 明示 ≤60 行最佳，≤200 行上限。超過後模型注意力稀釋 → 有效規則密度下降。
 - **Prompt Caching 五原則**（bcherny）：Static first, dynamic last；工具列表與模型 mid-session 不可改；`defer_loading: true` 保持 cache prefix 穩定。Cache hit = 0.1× 費率，write = 1.25× 費率。
 - **Context Engineering**（Karpathy）：「填充恰好所需的資訊」是核心；too much context = 成本上升 + 品質下降，不是越多越好。
 - **Output Discipline 實測**：英文 -80.6%、繁中 -86.2% 輸出 token，LLM Judge 品質無衰退（T-B/T-C/T-D 驗證 2026-04-30）。
@@ -21,7 +21,7 @@ verify: V1+V2
 
 - **Contextmaxxing vs Tokenmaxxing**（ashwingop/Sentra）：compiled memory 可減少 50–98% token；「right context > more context」。⚠️ 幅度數字為特定應用實測，不可直接套用。
 - **Tool saturation**（nicbstme）：~20 工具飽和閾值；combined agents+MCP 約 15。超過後 routing 精度明顯下降。
-- **AgentOpt**（P-tier 研究）：Weak planner + strong solver pattern -> 13–32× 成本差距。
+- **AgentOpt**（P-tier 研究）：Weak planner + strong solver pattern → 13–32× 成本差距。
 - **Context rot 閾值**（Thariq @trq212）：約 300–400k tokens 開始影響輸出品質。⚠️ 社群觀察，高度任務依賴。
 
 ### [E] 行業報告
@@ -79,8 +79,8 @@ verify: V1+V2
 
 ## 輸出建議
 
-- 本次研究 -> **已實作**（prune pass 完成，見上表）
-- A1-A3 -> **未來 session**，複雜度較高，需單獨規劃
+- 本次研究 → **已實作**（prune pass 完成，見上表）
+- A1-A3 → **未來 session**，複雜度較高，需單獨規劃
 
 ---
 
@@ -127,7 +127,7 @@ verify: V1+V2
 
 **Prune Test 裁決追蹤**
 - ✅ 生產環境安全紅線「不可移除」：`core.md` 已保留（GCP/TF/K8s 含 prod）
-- ✅ Monitor 策略「不可移除」：`core.md` §長任務執行 已保留（Bash >30s -> Monitor + run_in_background）
+- ✅ Monitor 策略「不可移除」：`core.md` §長任務執行 已保留（Bash >30s → Monitor + run_in_background）
 - ✅ Git commit session URL 強制「不可移除」：`core.md` §Git 工作流程 已保留
 
 **架構建議（A1–A3）**
@@ -139,12 +139,12 @@ verify: V1+V2
 
 - ⚠️ **A3 AgentOpt 模式未完全落地**：`subagent-strategy.md` 的模型選擇以「獨立檔案數」為主要判斷依據（0–1 Haiku / 2–9 Sonnet / 10+ Sonnet/Opus），但 AgentOpt 的「強 solver + 弱 planner」模式（讓 Haiku/Sonnet 規劃，Opus 執行複雜決策）尚未系統化。2026-05-25 論文分析進一步驗證此模式：強模型當 Planner 在某些場景反而降低整體表現。
 - ⚠️ **Tool saturation ~20 工具閾值仍未驗證**：本報告標注「⚠️ 社群觀察，無 replications」。截至 2026-05-25，workspace MCP server 數量持續增長（Google Drive、GitHub 等），但未追蹤當前實際 MCP tools 總數，不確定是否已接近 ~15（combined agents+MCP）飽和閾值。
-- ⚠️ **TSCG Tool Schema 壓縮（DEFER 項目）**：最終論裁決「條件滿足時重新評估」。`2026-05-25-papers-analysis.md` 中 `tscg-tool-schema-compilation` 論文實測工具模式 52-57% token 節省（Phi-4 從 0%->84.4%）。隨 MCP 工具增長，此 DEFER 項目的評估條件（>10 MCP tools）可能已接近。需重新評估是否觸發。
+- ⚠️ **TSCG Tool Schema 壓縮（DEFER 項目）**：最終論裁決「條件滿足時重新評估」。`2026-05-25-papers-analysis.md` 中 `tscg-tool-schema-compilation` 論文實測工具模式 52-57% token 節省（Phi-4 從 0%→84.4%）。隨 MCP 工具增長，此 DEFER 項目的評估條件（>10 MCP tools）可能已接近。需重新評估是否觸發。
 - ⚠️ **Context rot 閾值 300-400k token（⚠️ 社群觀察）**：`context-management.md` 已採用此閾值作為「定時器」觸發條件，但本報告標注信度為 [C]（未官方確認）。2026-05 論文未提供更精確的實驗數據，仍需觀察。
 
 ### 新發現的最佳實踐補充（🆕）
 
-- 🆕 **「right context > more context」獲論文級驗證**：本報告的核心主張「加法思維是效率陷阱」獲 2026-05-25 論文分析強力支持。`natural-language-agent-harnesses-2603-25723` 實測 NLAH 將 context 從 60.1K -> 2.9K token（-95%），效能相當。「填充恰好所需資訊」不再只是經驗法則，而有論文級量化驗證。
+- 🆕 **「right context > more context」獲論文級驗證**：本報告的核心主張「加法思維是效率陷阱」獲 2026-05-25 論文分析強力支持。`natural-language-agent-harnesses-2603-25723` 實測 NLAH 將 context 從 60.1K → 2.9K token（-95%），效能相當。「填充恰好所需資訊」不再只是經驗法則，而有論文級量化驗證。
 - 🆕 **「Harness > 模型」對大道至簡的啟示**：論文分析的核心發現「Harness 配置效益超越模型升級」是大道至簡在 AI 編程領域最強的外部驗證：與其升級模型（花費）不如優化 CLAUDE.md + Hooks + Memory 設計（免費）。本報告的「加法思維是效率陷阱」獲得了更廣泛的框架支持。
 - 🆕 **Bayesian 優化 vs 手工調優的量化反差**：`harbor-automated-harness-optimization` 論文：Bayesian 優化 9 個配置旗標明顯優於手工調優，且手工調優可能產生退化（-37%）。這是 A3 AgentOpt 模式的新佐證：planner/solver 分工的最優邊界不應靠直覺手工設定，而需要系統性搜索。
 - 🆕 **`/goal` 命令作為大道至簡的工具化**：`/goal` 讓 Claude 迭代到達標（R4），減少人工介入的「你完成了嗎？」確認輪次。對需要多輪執行的任務，`/goal` 是 context 效率的提升工具（減少 prompt 往返）。與大道至簡原則高度契合：一次設定終止條件，而非多次手動 checkpoint。
@@ -155,7 +155,7 @@ verify: V1+V2
 > 此報告已多輪 re-check，gap 較窄。本次逐 2 篇候選論文校準：TSCG DEFER 無實質 gap（只更日期）、ACE brevity bias 1 條真 gap。
 
 - 🆕 **「大道至簡」有下限：brevity bias 在 knowledge-intensive 任務反傷效能**（ACE / ICLR 2026，arXiv:2510.04618）：前代 context 適應方法普遍患 brevity bias——為精簡摘要而丟棄 domain-specific heuristics（verbatim："brevity bias, which drops domain insights for concise summaries"，2025-10-06-agentic-context-engineering…md L18）。ACE Key Takeaway #1：「Context adaptation ≠ context compression: Growing a structured playbook outperforms repeatedly rewriting and shrinking it」（同檔 L147）。**對大道至簡的精化**：去除 redundancy（✅ 正確）≠ 削減 domain insight（⚠️ 知識密集場景反降效能）。簡潔下限 = 保留 task-critical heuristics。⚠️ 接地警示：ACE −82.6% 是 KV cache **billed cost reduction**（同檔 L112，命中率 91.8%），**非** brevity/簡潔幅度，不可誤植為「精簡帶來 −82.6%」。
-- **TSCG DEFER 現況**：條件門檻「>10 MCP tools」接近但未確認觸發——workspace MCP（Google Drive / GitHub）持續增長但未追蹤實際 tools 總數。論文數據（52–57% token 節省，Phi-4 0%->84.4%）前文已準確引用，無新 gap，僅更新 re-check 日期。
+- **TSCG DEFER 現況**：條件門檻「>10 MCP tools」接近但未確認觸發——workspace MCP（Google Drive / GitHub）持續增長但未追蹤實際 tools 總數。論文數據（52–57% token 節省，Phi-4 0%→84.4%）前文已準確引用，無新 gap，僅更新 re-check 日期。
 
 *Re-check 日期：2026-06-05 | 核心結論：「大道至簡」主張獲 2026 論文級驗證，A1/A2 已落地，A3 部分落地；新增 ACE「簡潔有下限」精化；TSCG DEFER 條件接近觸發（MCP 計數待確認）*
 
@@ -192,7 +192,7 @@ verify: V1+V2
 
 **接地審計**：
 - `10.17%` / `74.50%` / `~30%` ← "Baseline (no skill): 10.17%. Human-authored skills: 74.50%. Automated skill-learning methods: ~30% (ceiling)."（2026-04-22-skill-learn-bench-continual-skill-learning-2604-20087.md L20）
-- 64.3pp ceiling gap ← "The 74.50% -> 10.17% gap (64.3pp) represents the current ceiling on automated skill learning"（同檔 L46）
+- 64.3pp ceiling gap ← "The 74.50% → 10.17% gap (64.3pp) represents the current ceiling on automated skill learning"（同檔 L46）
 - context-storage 抗遺忘 ← "Context-storage skill representations (skills as markdown files) are catastrophic-forgetting-resistant by design."（同檔 L133）
 
 **啟示**：① 與 SkillsBench「自生成 skill −1.3pp」（見 auto-load-token 報告補充 5）一致——**workspace「人工建 skill + skill-evolution gate」決策獲雙論文背書**；② skill-as-markdown（`.claude/skills/*.md`，context-storage）設計被證為抗 catastrophic-forgetting，無需 fine-tune。⚠️ 74.50% 是特定 benchmark 的 human-authored 上界，不可泛化為「人寫 skill 永遠 7×於自動」；要點是**方向**（人工 gate > 全自動）。
@@ -202,11 +202,11 @@ verify: V1+V2
 **對 §架構建議 / 測試能力的補充**：本報告以 healthcheck.sh 等手工 checklist 評 harness，但缺「系統性改進的可觀測性基礎」概念。
 
 **接地審計**：
-- `69.7% -> 77.0%` ← "ten AHE iterations improved pass@1 from 69.7% to 77.0%, surpassing human-designed baselines."（2026-04-30-ahe-observability-driven-harness-2604-25850.md L24）
+- `69.7% → 77.0%` ← "ten AHE iterations improved pass@1 from 69.7% to 77.0%, surpassing human-designed baselines."（2026-04-30-ahe-observability-driven-harness-2604-25850.md L24）
 - 跨模型遷移 ← "Evolved harness transfers +5.1 to +10.1 pp gains across three alternative model families."（同檔 L24）
 - observability 定義 ← "Observability is not just logging — it is structured semantic tracing that enables systematic harness improvement. Without observability, harness engineering is artisanal; with it, it becomes engineering."（同檔 L163）
 
-**啟示**：呼應 autoload-evolution 閉環——harness 改進要可機械驗證（R4），「structured semantic tracing」是 OBSERVE 階段的學術接地。⚠️ 69.7->77.0% 是 Terminal-Bench 2 特定 benchmark + 10 iterations 的數字，非通用保證。
+**啟示**：呼應 autoload-evolution 閉環——harness 改進要可機械驗證（R4），「structured semantic tracing」是 OBSERVE 階段的學術接地。⚠️ 69.7→77.0% 是 Terminal-Bench 2 特定 benchmark + 10 iterations 的數字，非通用保證。
 
 ### 既有「ACE 簡潔有下限」段佐證（G13，非新條目）
 

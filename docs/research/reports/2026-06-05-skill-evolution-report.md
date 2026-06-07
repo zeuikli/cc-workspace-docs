@@ -43,7 +43,7 @@
 | P1 外部 Guard | Guard 必須是可觀測外部信號，不接受純 LLM 自評 | autoresearch |
 | P2 Token 透明 | 長時間任務需預估成本並設告警閾值 | autoresearch, opus-pilot, overnight-research |
 | P3 冪等 Verify | verify 命令不得有副作用（或使用 dry-run） | autoresearch |
-| P4 阻斷 healthcheck | healthcheck FAIL -> 停止迭代，不允許 bypass | overnight-research |
+| P4 阻斷 healthcheck | healthcheck FAIL → 停止迭代，不允許 bypass | overnight-research |
 | P5 Severity 分級 | 審查 finding 必須標記 Critical/High/Medium/Low | review-hub |
 | P6 Fallback 路徑 | 每個外部工具調用需有備用方案 | media-research, research-hub |
 | P7 SPA 解析優先序 | 多個解析器需有明確的選擇優先序 | research-hub |
@@ -58,7 +58,7 @@
 **官方規範**（來源：`best-practices/06-agent-skills-best-practices.md`）：
 - `description`：≤1024 字元、非空白、**不含 XML tags**
 - 格式：第三人稱，包含「做什麼」＋「何時用」
-- 推薦順序：[做什麼] -> [Triggers / Use when] -> [Do NOT use for]
+- 推薦順序：[做什麼] → [Triggers / Use when] → [Do NOT use for]
 
 ### 審查彙整表
 
@@ -75,16 +75,16 @@
 | overnight-research | 326 | 無 | ⚠️ When 先於 What | 無 | WARN |
 | research-hub | 520 | 無 | ⚠️ When 先於 What | 無 | WARN |
 | review-hub | 321 | 無 | ✅ | 無 | **PASS** |
-| security-compliance | 348 | 無 | ✅ | `Certification Body`（已移除）| WARN->**PASS** |
+| security-compliance | 348 | 無 | ✅ | `Certification Body`（已移除）| WARN→**PASS** |
 | ship-review | 371 | 無 | ✅ | disable-model-invocation（合理）| **PASS** |
-| **skill-evolution** | 254 | **`<skill-name>` (已修正->SKILL_NAME)** | ⚠️ | 無 | FAIL->**PASS** |
+| **skill-evolution** | 254 | **`<skill-name>` (已修正→SKILL_NAME)** | ⚠️ | 無 | FAIL→**PASS** |
 | sonnet-pilot | 566 | 無 | ✅ | 無 | **PASS** |
 | spec-implement | 279 | 無 | ⚠️ When 先於 What | 無 | WARN |
 | sre | 351 | 無 | ⚠️ When 先於 What | 無 | WARN |
 | tech-strategy | 248 | 無 | ⚠️ When 先於 What | 無 | WARN |
 
 **已修正問題（commit 6a8dbf2）**：
-1. `skill-evolution`：`<skill-name>` -> `SKILL_NAME`（XML tag 禁用）
+1. `skill-evolution`：`<skill-name>` → `SKILL_NAME`（XML tag 禁用）
 2. `security-compliance`：移除 `Certification Body: BSI`（非標準 frontmatter 欄位）
 
 **格式順序 WARN（14 個）**：均符合「包含 What + When」的基本要求，順序為 When 先於 What 是風格問題非硬性違規。字元數全部在 ≤1024 範圍內。所有 SKILL 均無 XML tags（修正後）。
@@ -137,7 +137,7 @@
 
 ### 3. haiku-pilot（修改）
 
-**改動 A — Fast-path 門檻 ≤100w -> ≤250w**
+**改動 A — Fast-path 門檻 ≤100w → ≤250w**
 
 **為什麼**：原本 ≤100w 是「all-or-nothing」規則，但大多數文字任務落在 150-250w，全被排除在 fast-path 外，強制走完整 pre-flight 造成不必要 overhead。實測（`haiku-pilot benchmark 2026-05-06`）顯示 Q04 vanilla Haiku 51/60 > haiku-pilot 49/60 就是因為 4-number recall 被強制走 pre-flight。擴至 ≤250w 更符合實際任務分佈。
 
@@ -145,7 +145,7 @@
 
 ```markdown
 > 明確模型名稱（"use Haiku"）> Pilot 模式詞（"haiku-pilot"）> 通用詞（"haiku"）
-> 與 sonnet-pilot 同時觸發時：若任務 ≥ 10 檔或需複雜推理 -> sonnet-pilot 優先。
+> 與 sonnet-pilot 同時觸發時：若任務 ≥ 10 檔或需複雜推理 → sonnet-pilot 優先。
 ```
 
 **為什麼**：Gap Analysis 識別 haiku-pilot / sonnet-pilot 邊界模糊，兩個 SKILL 在「haiku」或「sonnet」觸發時會衝突。明確優先序讓 RESOLVER 可以確定性路由。
@@ -161,7 +161,7 @@
 **改動 A — healthcheck FAIL 阻斷規則**
 
 ```markdown
-> 若 healthcheck 回傳非零 -> 立即停止迭代，不允許繞過
+> 若 healthcheck 回傳非零 → 立即停止迭代，不允許繞過
 ```
 
 **為什麼**：原設計中 healthcheck 失敗是 non-blocking（繼續跑完），這意味著在 broken 狀態下繼續生成 report，最終輸出是無效的。阻斷後讓用戶修復才能繼續，確保 /goal 條件真正有意義。
@@ -182,7 +182,7 @@
 
 ```bash
 python3 -c "import torch; print('GPU:', torch.cuda.is_available())"
-# 若為 CPU 且音頻 > 10 分鐘 -> 建議改用 base/small 模型
+# 若為 CPU 且音頻 > 10 分鐘 → 建議改用 base/small 模型
 ```
 
 **為什麼**：CPU 模式比 GPU 慢約 10x（large 模型 CPU≈5min/分鐘，GPU≈30s/分鐘），但 SKILL 從未提示用戶當前環境。雲端容器可能靜默以 CPU 模式跑完 30 分鐘影片需 150+ 分鐘。提前偵測讓用戶選擇正確模型。
@@ -197,7 +197,7 @@ curl -sf http://127.0.0.1:4416/ping || echo "server 未啟動，執行 node bgut
 
 **改動 C — `--langs` 自訂語言優先序**
 
-**為什麼**：原設計死板的 `zh-Hant -> zh-Hans -> en`，無法處理「影片只有日文字幕」的情況。改為 `--langs ja,en` 允許用戶指定優先序，字幕缺失時 fallback Whisper。
+**為什麼**：原設計死板的 `zh-Hant → zh-Hans → en`，無法處理「影片只有日文字幕」的情況。改為 `--langs ja,en` 允許用戶指定優先序，字幕缺失時 fallback Whisper。
 
 ---
 
@@ -207,7 +207,7 @@ curl -sf http://127.0.0.1:4416/ping || echo "server 未啟動，執行 node bgut
 
 ```markdown
 > Reverse-Advisor Loop 前估算：advisor call 次數 × 1K tokens × $15/1M = 預估成本
-> 超過 $0.50/session 預算 -> 提示確認後繼續
+> 超過 $0.50/session 預算 → 提示確認後繼續
 ```
 
 **為什麼**：xhigh reasoning 每次約 4-8K thinking tokens（$0.06-0.12/call），Reverse-Advisor Loop 無上限可能累積成非預期費用。成本透明原則（P2）要求提前告知。
@@ -277,7 +277,7 @@ curl -sf http://127.0.0.1:4416/ping || echo "server 未啟動，執行 node bgut
 **改動 B — GitHub MCP Fallback**
 
 ```markdown
-> MCP 失敗 -> WebFetch github.com 頁面 -> git clone --depth 1（本地）
+> MCP 失敗 → WebFetch github.com 頁面 → git clone --depth 1（本地）
 ```
 
 **為什麼**：MCP server 可能離線（connection refused / timeout），原設計無 fallback 導致任務整體失敗。三層 fallback 確保即使 MCP 不可用仍能完成 GitHub 相關任務。
@@ -367,9 +367,9 @@ WHERE (now() - query_start) > interval '5 minutes';
 
 ```markdown
 > 若兩選項分差 < 15%，執行：
-> 最高權重維度 +10% -> 結論是否改變？
-> 最高權重維度 -10% -> 結論是否改變？
-> 若改變 -> 標記「決策對 [維度] 敏感」，不直接推薦
+> 最高權重維度 +10% → 結論是否改變？
+> 最高權重維度 -10% → 結論是否改變？
+> 若改變 → 標記「決策對 [維度] 敏感」，不直接推薦
 ```
 
 **為什麼**：評估矩陣的權重（如「成本 25%」）是主觀設定，若兩選項分差小但對特定維度敏感，推薦可能不穩健。敏感性分析讓決策者知道「這個推薦在哪些條件下會反轉」。
@@ -381,9 +381,9 @@ WHERE (now() - query_start) > interval '5 minutes';
 **改動 — Sub-agent 失敗回溯規則**
 
 ```markdown
-> Sub-agent 回傳空結果或錯誤 -> 不計為「通過」
-> 同一 sub-agent 失敗 ≥2 次 -> 主 Agent 直接執行
-> 任何 Critical Finding 的 sub-agent 失敗 -> 整體結果 NO-GO
+> Sub-agent 回傳空結果或錯誤 → 不計為「通過」
+> 同一 sub-agent 失敗 ≥2 次 → 主 Agent 直接執行
+> 任何 Critical Finding 的 sub-agent 失敗 → 整體結果 NO-GO
 ```
 
 **為什麼**：ship-review 的 fan-out 設計中，若 sub-agent 失敗（timeout / crash）但沒有明確的失敗回溯規則，可能被當作「通過」（空結果 ≠ 問題）。明確規則防止因 sub-agent 故障而誤判 GO。
@@ -496,7 +496,7 @@ git show 6a8dbf2 --stat
 ## 後續建議
 
 1. **格式順序統一（選做）**：13 個 WARN 的 description 格式順序問題（「Use when」先於「做什麼」）是 style 問題非硬性違規，可在下次維護週期統一調整為官方推薦順序。
-2. **skill-evolution 定期執行**：建議每次 Claude 主版本更新（4.6->4.7 等）後執行 `skill-evolution:audit` 掃描全量 SKILL。
+2. **skill-evolution 定期執行**：建議每次 Claude 主版本更新（4.6→4.7 等）後執行 `skill-evolution:audit` 掃描全量 SKILL。
 3. **Review-by Date 追蹤**：harness-meta 新增的 review-by 機制需搭配 `harness:audit` 定期執行才有效。
 4. **spec-implement 時效性**：雖然未修改，但 spec-implement 的「Phase 2 外科刀式修改」未設行數上限，可考慮在下次維護時補充「每個 commit ≤100 行」提議。
 
@@ -512,7 +512,7 @@ git show 6a8dbf2 --stat
 - ✅ 已確認存在於 `/Users/zeuik/cc-workspace/.claude/skills/skill-evolution/SKILL.md`（193 行）
 - ✅ frontmatter 合規：`name`、`version: 1.0.0`、`allowed-tools`、`review-by: 2026-08-23` 均存在
 - ✅ 3 子命令（`scan` / `apply` / `audit`）均已實作
-- ✅ XML tag 問題（`<skill-name>` -> `SKILL_NAME`）已在 commit 6a8dbf2 修正
+- ✅ XML tag 問題（`<skill-name>` → `SKILL_NAME`）已在 commit 6a8dbf2 修正
 - ✅ RESOLVER.md 已同步新增 skill-evolution 路由條目（確認於 RESOLVER.md）
 
 **review-hub（修改）**：
@@ -522,7 +522,7 @@ git show 6a8dbf2 --stat
 **research-hub（修改）**：
 - ✅ `research-hub:gh-profile` 子模式已實作（路由表中確認）
 - ✅ SPA 解析器優先序（`self.__next_f.push` > `__NEXT_DATA__` > `__GATSBY_DATA__` > `__NUXT__` > JSON-LD > 純 HTML）已實作
-- ✅ GitHub MCP 三層 Fallback（MCP -> WebFetch -> git clone）已實作
+- ✅ GitHub MCP 三層 Fallback（MCP → WebFetch → git clone）已實作
 - ✅ `review-by: 2026-08-23` 已加入
 
 **autoresearch（修改）**：
@@ -554,12 +554,12 @@ git show 6a8dbf2 --stat
 - ✅ `autoresearch:wiki` 子命令已加入
 
 **media-research（修改）**：
-- ✅ Twitter 工具 Fallback（fxtwitter -> nitter 替代路徑）已加入（`api.fxtwitter.com` 為主，明確禁用 WebFetch）
+- ✅ Twitter 工具 Fallback（fxtwitter → nitter 替代路徑）已加入（`api.fxtwitter.com` 為主，明確禁用 WebFetch）
 - ✅ Thread 文章索引追蹤子模式已加入
 
 ### ⚠️ 部分實作或待確認
 
-- **haiku-pilot Fast-path 門檻（≤100w -> ≤250w）**：讀取到的 haiku-pilot SKILL.md 顯示採用外部參照（`refs/pilot-shared-preflights.md`）而非直接在 SKILL.md 中寫門檻值，無法在本次 Re-check 中直接確認 ≤250w 是否已更新（需讀取 refs 檔案）。
+- **haiku-pilot Fast-path 門檻（≤100w → ≤250w）**：讀取到的 haiku-pilot SKILL.md 顯示採用外部參照（`refs/pilot-shared-preflights.md`）而非直接在 SKILL.md 中寫門檻值，無法在本次 Re-check 中直接確認 ≤250w 是否已更新（需讀取 refs 檔案）。
 - **sonnet-pilot Decision-Log 多選項表格**：sonnet-pilot SKILL.md 未在本次 Re-check 中讀取，無法確認改動已套用。
 - **harness-meta Review-by Date 機制**：harness-meta SKILL.md 讀取前 40 行未見 `review-by` frontmatter 欄位——報告說「建議在新增 SKILL 時標注」但 harness-meta 本身可能未加此欄位。需讀取完整 frontmatter 才能確認。
 - **media-transcribe GPU/CPU 環境檢測 Phase 0**：未在本次 Re-check 中讀取 media-transcribe SKILL.md，無法確認。
@@ -598,16 +598,16 @@ git show 6a8dbf2 --stat
 
 ## 2026-06-05 Current Status（對齊當前 repo 實況）
 
-> 本段所有數字均以 bash/grep 親驗當前 `.claude/skills/`（researcher verdict 非證據），對齊 18->24->26->**27** 的演進。
+> 本段所有數字均以 bash/grep 親驗當前 `.claude/skills/`（researcher verdict 非證據），對齊 18→24→26→**27** 的演進。
 
 ### 當前實況（驗證指令 + 結果）
 
 | 指標 | 報告時（2026-05-23）| 當前（2026-06-05）| 驗證指令 |
 |------|------|------|---------|
-| Skill 總數 | 18 | **27** | `ls -d .claude/skills/*/ \| wc -l` -> 27 |
-| `review-by` 覆蓋率 | 未全覆蓋 | **27/27（100%）** | `grep -l "^review-by:" .claude/skills/*/SKILL.md \| wc -l` -> 27 |
-| `version` 覆蓋率 | 部分 | **27/27（100%）** | `grep -l "^version:" .claude/skills/*/SKILL.md \| wc -l` -> 27 |
-| skill-evolution 行數 | 193（新建）| **206** | `wc -l .claude/skills/skill-evolution/SKILL.md` -> 206 |
+| Skill 總數 | 18 | **27** | `ls -d .claude/skills/*/ \| wc -l` → 27 |
+| `review-by` 覆蓋率 | 未全覆蓋 | **27/27（100%）** | `grep -l "^review-by:" .claude/skills/*/SKILL.md \| wc -l` → 27 |
+| `version` 覆蓋率 | 部分 | **27/27（100%）** | `grep -l "^version:" .claude/skills/*/SKILL.md \| wc -l` → 27 |
+| skill-evolution 行數 | 193（新建）| **206** | `wc -l .claude/skills/skill-evolution/SKILL.md` → 206 |
 | skill-evolution 子命令 | scan/apply/audit | **三者皆存活** | frontmatter description 列出 |
 | RESOLVER.md 登錄 | 含 skill-evolution | **27/27 全登錄** | grep 各 skill 名命中 |
 
@@ -619,9 +619,9 @@ git show 6a8dbf2 --stat
 
 ### 與原報告/re-check 不符之處的更正
 
-1. **無 skill 消失或改名**：原報告（2026-05-23）+ 2026-05-25 re-check 涵蓋的 18+1 全部仍以**原名存在**，包括 `security-compliance` 與 `ship-review`（早前曾被懷疑可能整併/改名 -> 證實未改）。
+1. **無 skill 消失或改名**：原報告（2026-05-23）+ 2026-05-25 re-check 涵蓋的 18+1 全部仍以**原名存在**，包括 `security-compliance` 與 `ship-review`（早前曾被懷疑可能整併/改名 → 證實未改）。
 2. **系統提示的內建 skill ≠ workspace skill**：Claude Code 內建命令（`/code-review`、`/security-review`、`/research`、`/deploy` 等）與 plugin skills 屬不同層級，**不在** `.claude/skills/` 的 27 個 workspace skill 內，計數時不混算。
-3. **review-by 已成全域標準**：2026-05-25 re-check 推測「review-by 廣泛套用」-> 現已驗證為 **27/27 全覆蓋**，非僅部分。
+3. **review-by 已成全域標準**：2026-05-25 re-check 推測「review-by 廣泛套用」→ 現已驗證為 **27/27 全覆蓋**，非僅部分。
 
 ### 待確認項目結算（原報告 §2026-05-25「部分實作或待確認」）
 

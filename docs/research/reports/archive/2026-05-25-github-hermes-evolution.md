@@ -46,7 +46,7 @@ Garry Tan 在 meta-meta-prompting 文章中揭示了 GBrain 在他個人 workspa
 
 - **100,000 頁**知識庫，每天 **100+ cron jobs** 持續更新
 - **15 個持續運行的 cron**：meeting ingestion、email triage（每 10 分鐘）、entity propagation
-- **Skillify meta-loop**：每次手動執行 -> Skillify 萃取模式 -> 寫入 skill 檔 -> 自動路由
+- **Skillify meta-loop**：每次手動執行 → Skillify 萃取模式 → 寫入 skill 檔 → 自動路由
 
 這個規模對個人 workspace 來說過大，但其**設計原則**可以精縮為：
 1. 資料自動流入（從 GitHub Actions 的 digest 工作流已在做）
@@ -86,20 +86,20 @@ Layer 1: Data Ingestion（資料流入）
 
 Layer 2: Knowledge Synthesis（知識合成）    ← 本次新增
   新增：.github/workflows/wiki-evolution.yml  ← GBrain: cron-driven enrichment
-       -> 每週執行 /autoresearch:wiki lint
-       -> 執行 scripts/wiki-lint.sh
-       -> commit 報告
+       → 每週執行 /autoresearch:wiki lint
+       → 執行 scripts/wiki-lint.sh
+       → commit 報告
 
 Layer 3: Self-Evolution（自主進化）         ← 本次新增
   新增：.github/workflows/memory-consolidation.yml ← Hermes: memory consolidation
-       -> 週度 MEMORY.md 整合（≥ 100 行觸發）
+       → 週度 MEMORY.md 整合（≥ 100 行觸發）
   新增：.github/workflows/skill-evolution.yml ← Hermes: skill refinement
-       -> 掃描 METADATA.json quality metrics
-       -> 低品質 skill 觸發 /skill-evolution
+       → 掃描 METADATA.json quality metrics
+       → 低品質 skill 觸發 /skill-evolution
 ─────────────────────────────────────────────────────
 ```
 
-### 2.2 DAEMON-DESIGN.md -> GitHub Actions 的實現路徑
+### 2.2 DAEMON-DESIGN.md → GitHub Actions 的實現路徑
 
 `memory/DAEMON-DESIGN.md` 的 KAIROS tick 機制（15 分鐘一次）在 GitHub Actions 環境下的最小可行實作：
 
@@ -115,7 +115,7 @@ Layer 3: Self-Evolution（自主進化）         ← 本次新增
 
 **限制**：GitHub Actions 最短間隔為 1 小時（`schedule` 最短 cron 是每 5 分鐘，但 GitHub 對免費帳戶有限制）。DAEMON-DESIGN 的 15 分鐘 tick 在 GitHub Actions 環境下需調整為 daily/weekly 觸發，或用 `workflow_dispatch` 手動觸發。
 
-### 2.3 Hermes GEPA 自演化 -> cc-workspace 簡化實作
+### 2.3 Hermes GEPA 自演化 → cc-workspace 簡化實作
 
 Hermes 的完整 GEPA（Genetic-Pareto Prompt Evolution）需要：
 - 執行跡（execution traces）分析
@@ -149,7 +149,7 @@ Skill Quality Monitoring（替代 GEPA 監控層）：
 **觸發**：每週一 09:07 UTC+8（= 01:07 UTC），避開 cron 峰值。
 
 **執行步驟**：
-1. Checkout -> Setup Python -> Run `scripts/wiki-lint.sh`
+1. Checkout → Setup Python → Run `scripts/wiki-lint.sh`
 2. 用 `claude-code-action@v1` + `prompt: "/autoresearch:wiki"` 執行 lint 分析
 3. Commit `research/career-wiki/lint-report.md` 和 `LOG.md` 更新
 
@@ -163,7 +163,7 @@ Skill Quality Monitoring（替代 GEPA 監控層）：
 
 **執行**：
 1. 檢查 `memory/MEMORY.md` 行數
-2. 若 ≥ 100 行 -> 觸發 Claude Code Action `prompt: "/memory-compactor"`
+2. 若 ≥ 100 行 → 觸發 Claude Code Action `prompt: "/memory-compactor"`
 3. Commit 整合結果
 
 ### 3.3 skill-evolution.yml：週度 Skill 品質監控
@@ -204,7 +204,7 @@ claude_args: |
 GitHub Actions 的自主進化只需要一個 Secret：
 
 ```
-Repository Settings -> Secrets -> Actions
+Repository Settings → Secrets → Actions
 新增：ANTHROPIC_API_KEY = <你的 Anthropic API key>
 ```
 
@@ -213,7 +213,7 @@ Repository Settings -> Secrets -> Actions
 ### 4.4 CLAUDE.md 在 Actions 中的作用
 
 `claude-code-action@v1` 自動讀取 repository 根目錄的 `CLAUDE.md`（如果存在）。cc-workspace 的 `CLAUDE.md` 定義了：
-- 工作流程（git add -> commit -> push）
+- 工作流程（git add → commit → push）
 - 語言規則（繁體中文）
 - 品質標準（healthcheck.sh 驗證）
 
@@ -241,7 +241,7 @@ GitHub 文件警告：`schedule` 事件在「過載的高峰時段可能被延�
 
 ### 反模式 5：設定過長的 `--max-turns`
 
-自主 workflow 中，`--max-turns` 應設為任務預估所需的 2 倍（例如 wiki-lint 預估 10 turns -> 設 20）。過高的 max-turns 導致 API 費用不可控。
+自主 workflow 中，`--max-turns` 應設為任務預估所需的 2 倍（例如 wiki-lint 預估 10 turns → 設 20）。過高的 max-turns 導致 API 費用不可控。
 
 ---
 
@@ -256,7 +256,7 @@ Anthropic 在 2026-04-14 開放 Claude Code Routines 的 research preview。Rout
 - **本地執行**：直接在 Claude Code 內部，不需要 CI/CD 基礎設施
 
 **cc-workspace 的遷移路徑**：
-1. 現在：GitHub Actions -> 穩定、可審計、不依賴本地機器
+1. 現在：GitHub Actions → 穩定、可審計、不依賴本地機器
 2. 未來：當 Routines GA 後，將 `wiki-evolution` 和 `memory-consolidation` 遷移至 Routines（更低延遲、更少配置）
 3. GitHub Actions 保留用於：資料抓取類（需要 secrets 管理的 external API）
 
@@ -279,7 +279,7 @@ Hermes GEPA 的開源意味著 skill 的自動優化即將成為標準基礎設�
 
 ## 7. 可立即實作的行動建議
 
-1. **設定 `ANTHROPIC_API_KEY` Secret**（5 分鐘）：Repository Settings -> Secrets -> Actions -> `ANTHROPIC_API_KEY`
+1. **設定 `ANTHROPIC_API_KEY` Secret**（5 分鐘）：Repository Settings → Secrets → Actions → `ANTHROPIC_API_KEY`
 2. **啟用三個工作流**：本次提交的三個 yml 文件推送後即生效（需要上述 Secret）
 3. **手動觸發測試**：每個工作流都有 `workflow_dispatch`，推送後在 GitHub Actions 頁面點「Run workflow」驗證
 4. **設定 MEMORY.md 100 行觸發**：當 MEMORY.md 接近 100 行時，手動觸發 `memory-consolidation.yml`

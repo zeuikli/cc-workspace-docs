@@ -18,7 +18,7 @@ type: prompt
 
 ### 1. Context Engineering 是工業級 LLM App 核心（@karpathy，7.35分）
 - 「Prompt engineering」已過時，精確術語是「Context engineering」
-- Context 是雙刃劍：太少 -> 失敗；太多（不相關）-> 成本上升 + 效能下降
+- Context 是雙刃劍：太少 → 失敗；太多（不相關）→ 成本上升 + 效能下降
 - 工業強度 LLM App 的厚重層：控制流設計 / LLM 路由 / generation-verification UIUX / guardrails / evals / parallelism
 - **可操作定義**：「精準填充 context window，既是科學也是藝術」
 
@@ -37,17 +37,17 @@ type: prompt
 ### 4. CLAUDE.md 是會腐爛的 Cache（@Mnilax，8.95分，Others 獨有洞察）
 - 73% 規則在 90 天後已過時（80行 Python 實測 100 sessions / 6M tokens）
 - 三類刪除原因：① 一次性修正變成永久規則 ② context 過期 ③ 自我矛盾
-- **Dreaming 維護週期**：dream -> diff -> apply -> 14-30 天 -> 再 dream
+- **Dreaming 維護週期**：dream → diff → apply → 14-30 天 → 再 dream
 - 成本：$4.20/pass，cache hit 後 $0.80；個人 7 天追蹤改善 41%
 
 ### 5. Multi-Model Router 架構（@DeRonin_，7.15分）
-- $4,200 -> $312/月（92.6% 降幅）的具體策略
-- **三層 Router**：Premium（Opus，10% 架構/設計決策）-> Workhorse（Kimi 2.6，90% 日常實作）-> Utility（Haiku，cleanup/格式化）
+- $4,200 → $312/月（92.6% 降幅）的具體策略
+- **三層 Router**：Premium（Opus，10% 架構/設計決策）→ Workhorse（Kimi 2.6，90% 日常實作）→ Utility（Haiku，cleanup/格式化）
 - Kimi 2.6 對比：$0.04 vs Sonnet $0.12 per refactor，品質 9.2 vs 9.0（幾乎無差）
 - 批次請求：70-90% input token 節省
-- **30 天 Rollout 方案**：Week 1 計量 -> Week 2 分類任務 -> Week 3 路由器 -> Week 4 微調
+- **30 天 Rollout 方案**：Week 1 計量 → Week 2 分類任務 → Week 3 路由器 → Week 4 微調
 
-### 6. Karpathy 4 Rule -> 12 Rule 擴展（@Mnilax，7.55分）
+### 6. Karpathy 4 Rule → 12 Rule 擴展（@Mnilax，7.55分）
 **原始 4 條（Floor，適用任何 LLM）**：
 1. Think Before Coding（實作前顯露假設）
 2. Simplicity First（最小能解決問題的代碼）
@@ -57,25 +57,25 @@ type: prompt
 **新增 8 條（May 2026，修補 agent-driven 盲點）**：
 5. LLM Only for Judgment（routing/retry/status 留給確定性代碼）
 6. Hard Token Budget（per-task 4k / per-session 30k）
-7. Surface Conflicts（兩個矛盾模式 -> 選一，不混用）
+7. Surface Conflicts（兩個矛盾模式 → 選一，不混用）
 8. Read Before Write（改動前先讀 exports/callers/utilities）
 9. Test Verifies Intent（能通過任何實作的測試 = 沒有測試）
 10. Checkpoint（每重要步驟：做了什麼/驗了什麼/剩什麼）
 11. Convention First（codebase 慣例 > 個人偏好）
 12. Fail Loud（略過步驟或跳過驗證必須明示，不用「完成」掩蓋）
 
-**量化效果**：錯誤率從 41% 降至 3%；compliance 4條->78%，12條->76%（零額外 overhead）
+**量化效果**：錯誤率從 41% 降至 3%；compliance 4條→78%，12條→76%（零額外 overhead）
 
 ### 7. Goal-Driven 哲學（@karpathy，7.15分，20年工作流最大改變）
 - Karpathy：「20 年最大工作流改變」是交出 Goal 而非步驟
 - Slopacolypse 預言：平均 AI 代碼品質會下降，精英差距拉大
-- **系統設計師角色**：人從「prompt 保姆」升級為「系統設計師」；循環週期從每分鐘 -> 每週
+- **系統設計師角色**：人從「prompt 保姆」升級為「系統設計師」；循環週期從每分鐘 → 每週
 - 可外包思考，無法外包理解（@stephzhan）：執行可外包；「懂這個為什麼」不能
 
 ### 8. Capability vs Discipline Skill 框架（@Mnilax，Others 補充獨有洞察）
 - 社群 90% 品質改善不是來自新 Capability 而是 Discipline enforcement
 - 安裝順序比清單更重要（週期性稽核優於靜態清單）
-- 247個 Skills -> 23個（9.3% pass rate）的篩選哲學
+- 247個 Skills → 23個（9.3% pass rate）的篩選哲學
 
 ---
 
@@ -133,7 +133,7 @@ type: prompt
 1. **Context 影響**：這個決策如何影響 context 品質？會增加還是減少 token overhead？
 2. **Latent/Deterministic 邊界**：這個決策是否尊重了邊界？
 3. **Harness Thickness**：這個設計讓 harness 變厚還是變薄？
-4. **可觀測性**：能否量化改善（像 27%->65% productive tokens）？
+4. **可觀測性**：能否量化改善（像 27%→65% productive tokens）？
 
 輸出：建議 + 最主要的 trade-off + 量化成功標準
 ```

@@ -36,15 +36,15 @@ Architecture evolution trajectory:
 
 ```
 Monolithic context
-    -> Retrieval stores (RAG, vector DBs)
-        -> Hierarchical systems (tiered by recency/importance)
-            -> Adaptive architectures (dynamic load/evict based on task)
+    → Retrieval stores (RAG, vector DBs)
+        → Hierarchical systems (tiered by recency/importance)
+            → Adaptive architectures (dynamic load/evict based on task)
 ```
 
 Key tensions:
 - **Recency vs relevance**: Recent information is not always most relevant; retrieval strategies must balance both
 - **Compression fidelity**: Summarization loses nuance; raw storage is token-expensive
-- **Cross-session continuity**: Episodic memory degrades without active consolidation mechanisms (see Memory Survey 2603.07670: removing reflection -> 48h behavioral degradation)
+- **Cross-session continuity**: Episodic memory degrades without active consolidation mechanisms (see Memory Survey 2603.07670: removing reflection → 48h behavioral degradation)
 
 ---
 

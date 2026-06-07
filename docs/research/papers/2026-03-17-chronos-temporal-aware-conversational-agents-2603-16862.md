@@ -219,8 +219,8 @@ Ablations on a stratified 116-question subset (Table 3):
 | **Turns Only (no events)** | 92.2 | 94.4 | 87.1 | **100.0** | 85.7 | 87.5 | **96.8** |
 
 Key findings:
-- For Chronos Low: removing event access drops performance by **34.5 points** (93.1 -> 58.6).
-- For Chronos High: removing event access only drops **2.6 points** (94.8 -> 92.2) — more capable models partially compensate.
+- For Chronos Low: removing event access drops performance by **34.5 points** (93.1 → 58.6).
+- For Chronos High: removing event access only drops **2.6 points** (94.8 → 92.2) — more capable models partially compensate.
 - Dynamic prompting has no effect under Chronos High, reflecting advanced models' ability to distinguish between query types without explicit guidance.
 - Both grep and vector search are necessary: removing either causes significant drops.
 

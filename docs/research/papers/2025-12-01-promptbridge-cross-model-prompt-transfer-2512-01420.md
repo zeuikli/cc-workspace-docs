@@ -32,7 +32,7 @@ Large language models (LLMs) underpin applications in code generation, mathemati
 A(M_t, T, p*_{M_s,T}) < max_{p_{M_t,T}} A(M_t, T, p_{M_t,T})
 ```
 
-轉移缺口 Δ(M_s -> M_t, T) = 目標模型自身最優 − 轉移後的表現差距。
+轉移缺口 Δ(M_s → M_t, T) = 目標模型自身最優 − 轉移後的表現差距。
 
 ### PromptBridge 兩階段框架
 
@@ -41,8 +41,8 @@ A(M_t, T, p*_{M_s,T}) < max_{p_{M_t,T}} A(M_t, T, p_{M_t,T})
 - 輸出：一組 (p*_{M_s,S_i}, p*_{M_t,S_i}) calibrated prompt pairs
 
 **Phase 2：Cross-Model Prompt Mapping 學習**
-- 從 calibration pairs 學習映射函數 T_{M_s->M_t}
-- 測試時：給定 unseen task 的 source prompt -> 直接產出 target model 最佳 prompt
+- 從 calibration pairs 學習映射函數 T_{M_s→M_t}
+- 測試時：給定 unseen task 的 source prompt → 直接產出 target model 最佳 prompt
 - **Zero-shot 適應**：不需要 unseen task 的評估資料
 
 ### 評估範圍
@@ -60,11 +60,11 @@ A(M_t, T, p*_{M_s,T}) < max_{p_{M_t,T}} A(M_t, T, p_{M_t,T})
 | 轉移到 o3 | Terminal-Bench | **+39.44%** |
 
 **Model Drifting 嚴重性例證**（HumanEval）：
-| Source -> Target | Source 最佳 prompt 在 target | Target 自身最優 | Drift |
+| Source → Target | Source 最佳 prompt 在 target | Target 自身最優 | Drift |
 |----------------|----------------------------|----------------|-------|
-| GPT-5 -> Llama-3.1-70B-Instruct | 68.70% | 79.47% | **-10.77pp** |
-| Llama-3.1-70B -> GPT-5 | 96.95% | 99.39% | **-2.44pp** |
-| GPT-4o -> o3（direct） | 92.27% | 98.37% | **-6.10pp** |
+| GPT-5 → Llama-3.1-70B-Instruct | 68.70% | 79.47% | **-10.77pp** |
+| Llama-3.1-70B → GPT-5 | 96.95% | 99.39% | **-2.44pp** |
+| GPT-4o → o3（direct） | 92.27% | 98.37% | **-6.10pp** |
 
 **校準成本**：只需少量 alignment tasks，無需重新訓練模型（training-free）。
 
@@ -73,7 +73,7 @@ A(M_t, T, p*_{M_s,T}) < max_{p_{M_t,T}} A(M_t, T, p_{M_t,T})
 ## 對 Prompt Caching / Management / Engineering 的關聯
 
 ### Prompt Caching
-- **模型切換使快取失效**：Model Drifting 的核心場景（GPT-4o -> o3）等同於「快取的 prompt 在新模型上失效」——快取策略若依賴特定模型的 KV 結構，模型升級時快取全部作廢且 prompt 表現退化
+- **模型切換使快取失效**：Model Drifting 的核心場景（GPT-4o → o3）等同於「快取的 prompt 在新模型上失效」——快取策略若依賴特定模型的 KV 結構，模型升級時快取全部作廢且 prompt 表現退化
 - **PromptBridge 延伸**：可考慮在模型升級前預先用 MAP-RPE 校準新的 system prompt，降低 cache warm-up 期間的退化損耗
 
 ### Prompt Management

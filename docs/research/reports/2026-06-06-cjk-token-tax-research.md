@@ -22,7 +22,7 @@
 |------|-----------|----------------|---------|------|
 | 繁中 | o200k_base (GPT-4o) | 1.29–2.33× | 語意等量短句 | [親驗] |
 | 繁中 | cl100k_base (GPT-4) | 2.43–4.50× | 語意等量短句 | [親驗] |
-| 繁中 | o200k_base | 5.4× | 字元效率（chars/token 5.9->1.1）| [親驗] |
+| 繁中 | o200k_base | 5.4× | 字元效率（chars/token 5.9→1.1）| [親驗] |
 | 簡中 | cl100k_base | 繁中的 ~0.5–0.9× | 繁簡同義對比 | [親驗] |
 | 中文 | Claude (逆向) | 1.71× | 語意等量 vs Claude 英文基線 | [三方] Komatsuzaki，作者自承無第三方驗證 |
 | 中文 | OpenAI | 1.15× | 語意等量（簡中長文）| [三方] |
@@ -51,7 +51,7 @@
 | 使用者參考文章（Komatsuzaki）| Claude 中文 **1.71×** worse | 語意等量內容，**相對 Claude 自己的英文基線** |
 | researcher 子 agent | Claude 對中文**更省**（机器学习 3 vs GPT 4 tokens）| 單一簡中詞，**絕對 token 數** |
 
-**兩者皆可成立**：Claude 可以「單個 CJK 詞 tokenize 得很緊」**同時**「相對它極高效的英文基線仍貴 1.71×」。因為 Claude 英文 tokenizer 特別高效，分母小 -> 比值大。**這不是誰對誰錯，是分母不同**。
+**兩者皆可成立**：Claude 可以「單個 CJK 詞 tokenize 得很緊」**同時**「相對它極高效的英文基線仍貴 1.71×」。因為 Claude 英文 tokenizer 特別高效，分母小 → 比值大。**這不是誰對誰錯，是分母不同**。
 
 ⚠️ **本地驗證限制**：Claude tokenizer 詞彙表不公開；`count_tokens` API 需 cloud session 的 ingress token（本機 session 無，見 `refs/claude-oauth-token.md`）。`claude -p` 差分法**無法**精確量跨語言差（被 cache 邊界污染 1.7×，見 §4a-bis 判別實驗）。故 Claude 中文 **1.71× 維持 [三方] 信度**，未升 [親驗]。**唯一乾淨的本機 Claude 跨語言數字需 cloud session `count_tokens`**——建議在有 ingress token 的 cloud session 跑 `client.messages.count_tokens()` 切語意等量 TC/EN 對照。
 
@@ -76,7 +76,7 @@
 
 **先前版本宣稱用 `claude -p` 差分法量出「真實 Claude auto-load = 8,527 token，proxy 低估 41%」——此結論已撤回，是測量假象。**
 
-**判別實驗推翻**（advisor 攔下 + 親驗）：對一個 99.2% ASCII 的純英文檔（11,217 字元）跑差分法，得 4,475 token = **2.5 chars/token**。但英文真實密度 ~4 chars/token（o200k 同檔報 2,619 token = 4.28 chars/token）。**英文不可能 2.5 chars/token** -> 差分法 `FULL − EMPTY` 被 **cache block 邊界 / 最小快取粒度 / CLAUDE.md 注入位置**系統性污染，高估約 **1.7×**。
+**判別實驗推翻**（advisor 攔下 + 親驗）：對一個 99.2% ASCII 的純英文檔（11,217 字元）跑差分法，得 4,475 token = **2.5 chars/token**。但英文真實密度 ~4 chars/token（o200k 同檔報 2,619 token = 4.28 chars/token）。**英文不可能 2.5 chars/token** → 差分法 `FULL − EMPTY` 被 **cache block 邊界 / 最小快取粒度 / CLAUDE.md 注入位置**系統性污染，高估約 **1.7×**。
 
 | 量法 | 效力 | 結論 |
 |------|------|------|
@@ -85,7 +85,7 @@
 | `claude -p` 差分**跨語言精確比較** | ❌ 污染 1.7× | **不可用**——不能據此算 TC vs EN 精確差 |
 | Claude `count_tokens` API | ⛔ 本機不可用 | 需 cloud session 的 ingress token（見 `refs/claude-oauth-token.md`）|
 
-**誠實結論**：本機**無法**精確量 Claude 真實 token。auto-load 成本維持 **o200k proxy 6,038 token** [親驗-proxy]，並標明「Claude 對繁中實際更貴（§3 1.71×），故真實值高於 6,038，但精確值需 cloud session `count_tokens` 才能定」。**先前 commit 55261fc9 的 8,527 / 「省 20%->省 2.9%」推翻均作廢。**
+**誠實結論**：本機**無法**精確量 Claude 真實 token。auto-load 成本維持 **o200k proxy 6,038 token** [親驗-proxy]，並標明「Claude 對繁中實際更貴（§3 1.71×），故真實值高於 6,038，但精確值需 cloud session `count_tokens` 才能定」。**先前 commit 55261fc9 的 8,527 / 「省 20%→省 2.9%」推翻均作廢。**
 
 ### 4b. 改英文的 A/B 實測 [親驗]（4 段代表性規則）
 
@@ -99,7 +99,7 @@
 ### 4c. 結論：你的「byte cap」單位選錯了
 
 - **改英文確實省 token**（−20% 到 −44%，看 tokenizer），prompt cache 沒命中時直接省 input 成本。
-- **但會撞破 19,000 byte cap**：英文多 32.6% bytes -> 同樣規則改英文，byte 爆但 token 反降。
+- **但會撞破 19,000 byte cap**：英文多 32.6% bytes → 同樣規則改英文，byte 爆但 token 反降。
 - **根因**：byte cap 是「繁中 ≈ 3 B/token」時代的 token proxy。當內容語言改變，byte 與 token 解耦——**byte 守得住不代表 token 守得住，反之亦然**。
 - **你 CLAUDE.md 已寫對方向**：output-discipline.md「內部 instructions 可用英文，回應維持繁中」。本研究 [親驗] 量化了該規則的真實收益：auto-load 全英文化理論上省 ~20% Claude input token（cache miss 時）。
 
@@ -111,12 +111,12 @@
 
 | 維度 | 影響 | 量化 |
 |------|------|------|
-| Token 消耗 | 小降 | o200k 省 ~17%（[親驗]，1:1 直譯 6,038->4,997）；但 Claude 真值未定 |
-| Byte cap | 爆 | +16.5% bytes（18,726->21,824）-> 撞 19,000 byte cap |
+| Token 消耗 | 小降 | o200k 省 ~17%（[親驗]，1:1 直譯 6,038→4,997）；但 Claude 真值未定 |
+| Byte cap | 爆 | +16.5% bytes（18,726→21,824）→ 撞 19,000 byte cap |
 | **Cache 命中時** | **收益≈0** | 靜態前綴命中 cache 後 input 降 78–90%，語言省的 token 被攤銷掉——這是關鍵：日常 session 大多 cache 命中 |
 | 合規風險 | 低 | 規則是給 Claude 讀的指令（非回應），改英文不違反繁中鐵律 |
 
-**修正結論**：~~值得做~~ -> **不值得**。input 軸被 cache 攤銷、又多 16.5% bytes，工程/合規成本不划算。守繁中鐵律更安全。**真正該省的走結構槓桿**（低頻規則下沉 refs/，見附報告 `2026-06-06-autoload-token-optimization.md`），非語言切換。
+**修正結論**：~~值得做~~ → **不值得**。input 軸被 cache 攤銷、又多 16.5% bytes，工程/合規成本不划算。守繁中鐵律更安全。**真正該省的走結構槓桿**（低頻規則下沉 refs/，見附報告 `2026-06-06-autoload-token-optimization.md`），非語言切換。
 
 ---
 
@@ -139,8 +139,8 @@
 
 ### 7.2 文言文兩個硬傷 [論文]
 
-- **省幅有限**：文言只省白話 21%（Claude 實測 38->30 tok），換英文省 50%、砍 output 更多。
-- **理解力雙降**：WYWEB 模型 75.9 vs 人類 88；Fùxì GPT-4o 生成僅 35.7%（差 42.5pp）；WenyanGPT NER 91% vs GPT-4o 68%（−23pp）。指令文言文化 -> 幻覺率↑。
+- **省幅有限**：文言只省白話 21%（Claude 實測 38→30 tok），換英文省 50%、砍 output 更多。
+- **理解力雙降**：WYWEB 模型 75.9 vs 人類 88；Fùxì GPT-4o 生成僅 35.7%（差 42.5pp）；WenyanGPT NER 91% vs GPT-4o 68%（−23pp）。指令文言文化 → 幻覺率↑。
 
 ### 7.3 output 軸（更大槓桿）+ 精確量測指引
 

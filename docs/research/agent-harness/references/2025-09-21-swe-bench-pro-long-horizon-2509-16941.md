@@ -79,7 +79,7 @@ Three-stage augmentation per problem:
 | Gemini 2.5 Pro | 13.5% |
 | GPT-4o | 4.9% |
 
-*Note: For context, Claude Opus 4.7 improved from 53.4% -> 64.3% on SWE-Bench Pro per the Opus 4.7 System Card (April 2026)*
+*Note: For context, Claude Opus 4.7 improved from 53.4% → 64.3% on SWE-Bench Pro per the Opus 4.7 System Card (April 2026)*
 
 ### Commercial Set Performance (N=276)
 

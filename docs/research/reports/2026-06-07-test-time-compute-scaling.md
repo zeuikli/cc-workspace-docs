@@ -169,9 +169,9 @@ Setlur et al. 以反集中（anti-concentration）理論嚴格證明：在正確
 ### 對 AI 工程師的建議
 
 **1. 部署策略：先評估任務特性**
-- 任務有確定性 verifier（數學答案、程式碼執行結果）-> 優先考慮 Best-of-N + PRM，可大幅提升準確率
-- 任務無明確 verifier -> Self-consistency 是次佳選擇，但需警惕解空間異質性（Setlur et al., 2025）
-- 延遲敏感場景 -> 使用 Certaindex 類早退出機制，節省最多 50% 算力（Fu et al., 2024）
+- 任務有確定性 verifier（數學答案、程式碼執行結果）→ 優先考慮 Best-of-N + PRM，可大幅提升準確率
+- 任務無明確 verifier → Self-consistency 是次佳選擇，但需警惕解空間異質性（Setlur et al., 2025）
+- 延遲敏感場景 → 使用 Certaindex 類早退出機制，節省最多 50% 算力（Fu et al., 2024）
 
 **2. 模型選擇：小模型 + TTC 可能優於大模型**
 Snell et al.（2024）的 4 倍效率提升結果意味著：在算力預算固定的情況下，部署 7B–32B 模型搭配充分的 TTC 預算，可能優於部署 70B+ 模型搭配貪婪解碼。計算「cost per correct answer」時需同時考慮模型大小與推理次數。

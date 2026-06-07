@@ -54,14 +54,14 @@ conversation = [
 ]
 
 mem0.add(conversation, user_id="user_123")
-# -> 自動提取：{"content": "Prefers Python over JavaScript", 
+# → 自動提取：{"content": "Prefers Python over JavaScript", 
 #               "user_id": "user_123", "created_at": ...}
 ```
 
 **核心操作**：
 1. **提取（Extract）**：從對話中識別值得記住的資訊
 2. **去重（Deduplicate）**：檢測與現有記憶的重疊，避免冗余
-3. **整合（Consolidate）**：將相關記憶合并（如「喜歡 Python」+ 「不喜歡 JS」->「偏好 Python 而非 JS」）
+3. **整合（Consolidate）**：將相關記憶合并（如「喜歡 Python」+ 「不喜歡 JS」→「偏好 Python 而非 JS」）
 4. **檢索（Retrieve）**：根據查詢返回相關記憶
 
 ### Graph Memory（圖記憶系統）
@@ -73,10 +73,10 @@ mem0.add(conversation, user_id="user_123")
 邊：關係（"works at", "prefers", "lives in"）
 
 示例：
-user_123 -> works_at -> TechCorp
-user_123 -> prefers -> Python
-user_123 -> lives_in -> San Francisco
-TechCorp -> located_in -> San Francisco
+user_123 → works_at → TechCorp
+user_123 → prefers → Python
+user_123 → lives_in → San Francisco
+TechCorp → located_in → San Francisco
 ```
 
 圖記憶讓 Mem0 能回答：「用戶住在他工作的公司附近嗎？」（需要跨邊推理）

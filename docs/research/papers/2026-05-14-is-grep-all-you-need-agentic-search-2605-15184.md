@@ -124,7 +124,7 @@ The search layer operates over per-question files, serializing LongMemEval dialo
 
 Two reasons for adopting this layer:
 1. Study evaluates search techniques, not temporal reasoning — structured event extraction ensures success on temporal items reflects evidence location ability, not date reconstruction from fragmented mentions.
-2. Mirrors preprocessing a long-memory agent would use in deployment -> realistic production configuration.
+2. Mirrors preprocessing a long-memory agent would use in deployment → realistic production configuration.
 
 #### 3.2.2. Lexical Search (Grep)
 

@@ -1,5 +1,5 @@
 # CLAUDE.md
-> Traditional Chinese preferred · English supported · Tasks unrelated to this workspace -> `/clear`.
+> Traditional Chinese preferred · English supported · Tasks unrelated to this workspace → `/clear`.
 > Sub-agents do not inherit this file; parent instructs sub-agent "Read AGENTS.md first".
 > This file ≤ 200 lines (Mnilax: compliance drops sharply beyond this). Auto-load five-source byte threshold (three-tier soft limit, canonical unit: byte) — see core.md §Framework Integrity.
 

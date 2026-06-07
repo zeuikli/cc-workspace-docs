@@ -2,7 +2,7 @@
 
 > **Type:** schema:template — 3 個研究自動化 prompt 模板  
 > **Updated**: 2026-06-02  
-> **Query pattern**: BRAIN.md -> 本表 -> `<name>.md`
+> **Query pattern**: BRAIN.md → 本表 → `<name>.md`
 
 ---
 

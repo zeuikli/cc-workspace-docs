@@ -3,7 +3,7 @@ title: "Auto-load 完整測試框架藍圖 + 多輪修正計劃"
 date: 2026-06-04
 status: 藍圖 + 安全機械缺口本 session APPLY；R1-R12 打包 gate out-of-band
 btw: 規劃 auto-load 在不影響效能/功能下完整測試 + 調整
-decision: 先建測試能力 -> gated 調整（使用者定奪）
+decision: 先建測試能力 → gated 調整（使用者定奪）
 goal: 依報告 + Harness Loop 多輪修正直到全部 auto-load 修正完畢
 type: blueprint + execution-plan
 ---
@@ -53,13 +53,13 @@ advisor 校準：大部分能力**已存在**，只補真缺口，**不重建** 
 | G-B：§R1–§R12 header 存活無自動驗證 | 中 | ✅ APPLY | **measure.sh / standalone**（**不放 healthcheck**——已佔 pre-commit 96%，違「不影響效能」）|
 | G-C：hook 計時無可重跑腳本 | 低 | ✅ APPLY | standalone `scripts/measure-hook-timing.sh`（不 wire 進 hook）|
 | G-D：task-07/08 verdict 未跑 | 中 | ❌ out-of-band | RUNBOOK 既有；須 instrumented session |
-| G-E：auto-load 載入延遲量測 | — | ❌ **不建** | cold-start 已證 auto-load 非瓶頸（cache->0.1×），建它是測非瓶頸 |
+| G-E：auto-load 載入延遲量測 | — | ❌ **不建** | cold-start 已證 auto-load 非瓶頸（cache→0.1×），建它是測非瓶頸 |
 
-**「不影響效能」字面遵守**：① 新結構斷言**不入任何 hook**（off hot path）；② auto-load 非效能槓桿（cold-start 既證）-> 「不影響效能」近乎免費，因為 auto-load 本就不是 lever。
+**「不影響效能」字面遵守**：① 新結構斷言**不入任何 hook**（off hot path）；② auto-load 非效能槓桿（cold-start 既證）→ 「不影響效能」近乎免費，因為 auto-load 本就不是 lever。
 
 ---
 
-## 3. 多輪修正計劃（PROPOSE -> 逐輪 Harness Loop）
+## 3. 多輪修正計劃（PROPOSE → 逐輪 Harness Loop）
 
 ### Round 1 — 建安全機械 gate（§R 外，本 session）
 
@@ -89,10 +89,10 @@ advisor 校準：大部分能力**已存在**，只補真缺口，**不重建** 
 1. measure.sh 對現況（18,455）exit 0；注入 >19,000 樣本 exit 1；
 2. §R header 檢查對現況 PASS（11 + R6）；注入刪 header 樣本 FAIL；
 3. hook 計時腳本可重跑，輸出含方法學標注；
-4. healthcheck FAIL == 基線（0）；新腳本**不入 hook** -> pre-commit 效能 delta = 0；
+4. healthcheck FAIL == 基線（0）；新腳本**不入 hook** → pre-commit 效能 delta = 0；
 5. auto-load 5 檔內容 byte **不變**（18,455）——本 round 只加測試，不改 auto-load。
 
-**REFUTED 處置**：任一失守 -> 修腳本（非改 auto-load）；腳本無法達標 -> 回報不硬塞。
+**REFUTED 處置**：任一失守 → 修腳本（非改 auto-load）；腳本無法達標 → 回報不硬塞。
 
 ---
 
@@ -116,7 +116,7 @@ advisor 校準：大部分能力**已存在**，只補真缺口，**不重建** 
 
 **接地審計**：
 - telemetry 模式 ← "**Telemetry counters**: cache_hits, token_savings, reflections_written, reflections_retrieved, predictions_fired — enables silent bug detection via read/write asymmetry."（2026-04-22-harbor-automated-harness-optimization-2604-20938.md L100）
-- 實例 ← "`reflections_written=80, reflections_retrieved=0` -> container non-persistence"（同檔 L126）
+- 實例 ← "`reflections_written=80, reflections_retrieved=0` → container non-persistence"（同檔 L126）
 - 安全約束 ← "HARBOR's safety constraint (posterior chance constraint) is directly analogous to `autoresearch`'s Guard: discard changes whose lower bound violates the safety margin."（同檔 L165）
 
 **啟示**：未來若建 memory/skill 用量遙測（如 MEMORY 寫入 vs 召回計數），讀寫不對稱（written>0 但 retrieved=0）能抓出「寫了沒人讀 = 孤兒」的靜默缺陷——正是 MEMORY Lesson E「manual-read ref 孤兒 = 死重」的可遙測化。**落點**：非本 loop（須先有遙測基礎設施），記為 G-D 類 out-of-band 增建。
@@ -129,7 +129,7 @@ advisor 校準：大部分能力**已存在**，只補真缺口，**不重建** 
 - 定義 ← "Observability is not just logging — it is structured semantic tracing that enables systematic harness improvement. Without observability, harness engineering is artisanal; with it, it becomes engineering."（2026-04-30-ahe-observability-driven-harness-2604-25850.md L163）
 - 量化 ← "ten AHE iterations improved pass@1 from 69.7% to 77.0%"（同檔 L24）
 
-**啟示**：本藍圖的 measure.sh/healthcheck 屬「功能/結構」可觀測，但 §R 遵守度（behavioral）仍須 out-of-band per-model session（T3 已 defer）。AHE 印證「無結構化語意追蹤 -> harness 改進是手工藝」——強化 G-D（task-07/08 behavioral verdict）的必要性，但不改本 loop 終態判定。
+**啟示**：本藍圖的 measure.sh/healthcheck 屬「功能/結構」可觀測，但 §R 遵守度（behavioral）仍須 out-of-band per-model session（T3 已 defer）。AHE 印證「無結構化語意追蹤 → harness 改進是手工藝」——強化 G-D（task-07/08 behavioral verdict）的必要性，但不改本 loop 終態判定。
 
 ### 補充 G-H：自動化 skill 學習有 ~30% 天花板，人寫 gate 不可省（SkillLearnBench，arXiv:2604.20087）
 

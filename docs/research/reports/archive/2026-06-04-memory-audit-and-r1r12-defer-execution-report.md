@@ -9,12 +9,12 @@ type: execution-report
 
 # MEMORY 稽核修正 + R1-R12 計劃書 DEFER 執行報告
 
-> 使用者指令：依序執行 ① 確認雙 MEMORY 設計意圖 -> ② 清 machine-local 過期待辦 -> ③ R1-R12 計劃書 APPLY。
-> 走 Harness Loop：OBSERVE->IDENTIFY->PROPOSE->TEST->APPLY->RECORD。
+> 使用者指令：依序執行 ① 確認雙 MEMORY 設計意圖 → ② 清 machine-local 過期待辦 → ③ R1-R12 計劃書 APPLY。
+> 走 Harness Loop：OBSERVE→IDENTIFY→PROPOSE→TEST→APPLY→RECORD。
 
 ---
 
-## 步驟 1 — 雙 MEMORY 設計意圖確認（OBSERVE -> 裁決：設計如此，不對齊）
+## 步驟 1 — 雙 MEMORY 設計意圖確認（OBSERVE → 裁決：設計如此，不對齊）
 
 ### 證據（四源機械驗證）
 
@@ -23,7 +23,7 @@ type: execution-report
 | repo SSoT L3 自宣告 | 「**SSoT：跨裝置 Git 追蹤記憶；Auto Memory（Mac 本地補充）不同步**」 | `memory/MEMORY.md:3` |
 | 5/31d ADR | 「三檔 MEMORY.md（#1/#2 凍結 log；#3 machine-local 真實層）確認；依 **ADR 2層模型**退場」 | machine-local L55 |
 | sync-workspace.sh §13 | 只管理 `$WORKSPACE_ROOT/memory/MEMORY.md`（repo SSoT），**完全不碰 machine-local** | scripts L374-420 |
-| machine-local tracked 狀態 | `git ls-files` -> **NOT tracked**（在 `~/.claude/`，repo 外） | 機械驗證 |
+| machine-local tracked 狀態 | `git ls-files` → **NOT tracked**（在 `~/.claude/`，repo 外） | 機械驗證 |
 
 ### 裁決
 
@@ -31,7 +31,7 @@ type: execution-report
 - **repo SSoT**（200 行精煉版）：跨裝置權威，git-tracked，session-init 每次 pull，#448 壓縮維持 ≤200 行/≤25KB。
 - **machine-local**（178 行流水帳）：Mac 本地真實層，Auto Memory，詳細 session 記錄，**不同步**。
 
--> **不對齊**。強行合併違反 ADR 2層模型 + 5/31d Lesson「ADR 衝突未察」。machine-local 比 SSoT 詳細是正常設計。
+→ **不對齊**。強行合併違反 ADR 2層模型 + 5/31d Lesson「ADR 衝突未察」。machine-local 比 SSoT 詳細是正常設計。
 
 ---
 
@@ -48,9 +48,9 @@ type: execution-report
 
 **APPLY**：4 項全標 `[x]` + 一句證據，整區註記「早期 — 2026-06-04 稽核全數結清，最新待辦見文末」（保留歷史不抹除，符合 MEMORY 慣例）。最新待辦區（L168）與舊區無重複，不動。
 
-**stale 數字（researcher 發現的 🟡 L43 3500 token / L95 16,927 bytes）**：在歷史 session 段落內、不影響當前決策（低信度）-> 依 §R3「不過度清理」**跳過**，記為已評估。
+**stale 數字（researcher 發現的 🟡 L43 3500 token / L95 16,927 bytes）**：在歷史 session 段落內、不影響當前決策（低信度）→ 依 §R3「不過度清理」**跳過**，記為已評估。
 
-machine-local **NOT tracked -> 編輯即生效，不需 commit**。
+machine-local **NOT tracked → 編輯即生效，不需 commit**。
 
 ---
 
@@ -67,7 +67,7 @@ machine-local **NOT tracked -> 編輯即生效，不需 commit**。
 
 ### D1-D3 DEFER 的三個理由（advisor 校準）
 
-1. **可證明性結構消失**：#449 安全是因 diff **全在 §R 區塊外**（`@@ -74`/`@@ -96`），可斷言「R1-R12 逐字未觸」。D1-D3 編輯 **§R 內部** -> 此證明 by construction 不可得。grep 不變量（G2 枚舉/G3 條數/G4 motivation）**無法偵測散文重寫的語義漂移**。
+1. **可證明性結構消失**：#449 安全是因 diff **全在 §R 區塊外**（`@@ -74`/`@@ -96`），可斷言「R1-R12 逐字未觸」。D1-D3 編輯 **§R 內部** → 此證明 by construction 不可得。grep 不變量（G2 枚舉/G3 條數/G4 motivation）**無法偵測散文重寫的語義漂移**。
 2. **遵守度 eval out-of-band**：唯一真檢查（task-07/08 behavioral eval）依 #439 須 per-model 跑，**不能 inline**。計劃書自承「本批不在 inline 範圍」。
 3. **違自身 auto-load 規則**：core.md L79「≤1 規則/cycle」；D1-D3 一次動 4 條 canonical 規則（§R1/R2/R3/R12）。
 

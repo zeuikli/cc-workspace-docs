@@ -64,8 +64,8 @@ Automated scripts triggered at lifecycle events:
 Sub-agents function as isolated context environments, preventing intermediate tool calls and results from polluting parent sessions. This enables longer problem-solving sequences without degradation.
 
 ```
-Parent Agent (orchestration) -> Sub-Agent 1 (research) -> Condensed result
-                             -> Sub-Agent 2 (implementation) -> Condensed result
+Parent Agent (orchestration) → Sub-Agent 1 (research) → Condensed result
+                             → Sub-Agent 2 (implementation) → Condensed result
 ```
 
 ## Back-Pressure Mechanisms

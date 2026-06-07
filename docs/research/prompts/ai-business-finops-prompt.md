@@ -37,7 +37,7 @@ type: prompt
 | Moonshot Kimi | 估值 $20B | 2026-05 |
 
 **Anthropic 財務軌跡**（CFO Krishna Rao，TLDR AI 2026-05-15）：
-- 2 年內：$250M run-rate -> $30B run-rate（120× 增長）
+- 2 年內：$250M run-rate → $30B run-rate（120× 增長）
 - ARR 目標：$40B（年化 80× 增長）
 
 ### Token 成本分析（關鍵數據）
@@ -72,7 +72,7 @@ type: prompt
 
 ### 訂閱制商業模式危機
 
-- GitHub Copilot 月費制 -> token 計費（2026-04-28，The Neuron）
+- GitHub Copilot 月費制 → token 計費（2026-04-28，The Neuron）
 - ChatGPT $20/月上限 vs 實際算力無限需求的矛盾暴露
 - Cloudflare 裁員 20% 同時宣稱 AI 100× 生產力，股價跌 23%（Wisely Chen AI 2026-05-11）
   - 市場首次 punish「AI 取代人」的故事
@@ -103,7 +103,7 @@ type: prompt
 
 ### 與量產的距離
 
-- Sony Ace 純 sim RL -> 現實部署仍有「sim-to-real gap」
+- Sony Ace 純 sim RL → 現實部署仍有「sim-to-real gap」
 - OpenAI Sora 關閉（$1M/天燒費）：體現 AI 商業難度
 - 世界模型預期 2026 Q3 後才見產品化成果
 - AI 開始進行 frontier 科學（非只輔助），商業化路徑仍不明朗
@@ -121,9 +121,9 @@ type: prompt
 - 本地部署 TCO：DGX Spark 3 年 $4,729 vs API $22,500
 
 【商業模式轉變】
-- GitHub Copilot 月費 -> token 計費；OpenAI × Microsoft 授權多元化
-- Cloudflare 裁員 20% + AI 100× 宣稱 -> 股價跌 23%（市場懲罰 AI 取代人故事）
-- Anthropic：$250M -> $30B run-rate（2 年 120× 增長）
+- GitHub Copilot 月費 → token 計費；OpenAI × Microsoft 授權多元化
+- Cloudflare 裁員 20% + AI 100× 宣稱 → 股價跌 23%（市場懲罰 AI 取代人故事）
+- Anthropic：$250M → $30B run-rate（2 年 120× 增長）
 
 【物理 AI 現況】
 - AMI Labs（LeCun）$1.03B JEPA；Sony Ace 純 sim RL
@@ -156,7 +156,7 @@ type: prompt
 | Token 定價戰 | DeepSeek $1.74/$3.48 當前最低 | 每月 |
 | 中文 token 乘數 | Claude 1.71× / DeepSeek 0.95× | 每次模型更新 |
 | 物理 AI 融資 | AMI $1.03B / World Labs $1B | 重大融資事件 |
-| 訂閱制 -> token 計費趨勢 | GitHub Copilot 已轉 | 每季 |
+| 訂閱制 → token 計費趨勢 | GitHub Copilot 已轉 | 每季 |
 
 ---
 

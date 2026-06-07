@@ -27,8 +27,8 @@ Unlike humans who can remember, forget, and learn from past interactions, large 
 ## 核心創新：Ebbinghaus 遺忘曲線記憶機制
 
 人類記憶的兩個關鍵特性：
-1. **頻繁回想 -> 記憶增強**（Repetition strengthens retention）
-2. **時間流逝 -> 記憶衰退**（Time causes forgetting without reinforcement）
+1. **頻繁回想 → 記憶增強**（Repetition strengthens retention）
+2. **時間流逝 → 記憶衰退**（Time causes forgetting without reinforcement）
 
 MemoryBank 將 Ebbinghaus 遺忘曲線應用到記憶管理：
 
@@ -43,9 +43,9 @@ MemoryBank 將 Ebbinghaus 遺忘曲線應用到記憶管理：
 
 **記憶強度更新**：
 ```
-每次成功召回該記憶 -> S 增加（該記憶更難被遺忘）
-長時間未召回 -> R 自然衰減
-R < 閾值 -> 記憶自動淡出（模擬遺忘）
+每次成功召回該記憶 → S 增加（該記憶更難被遺忘）
+長時間未召回 → R 自然衰減
+R < 閾值 → 記憶自動淡出（模擬遺忘）
 ```
 
 ---
@@ -54,7 +54,7 @@ R < 閾值 -> 記憶自動淡出（模擬遺忘）
 
 ### 記憶存儲層
 ```
-用戶交互 -> 事件提取 -> 記憶條目
+用戶交互 → 事件提取 → 記憶條目
 記憶條目 = {
   "content": "用戶提到明天有重要會議",
   "timestamp": "2023-05-17T14:30:00",
@@ -65,7 +65,7 @@ R < 閾值 -> 記憶自動淡出（模擬遺忘）
 ```
 
 ### 記憶檢索層
-1. **語義搜索**：輸入查詢 -> 向量相似度 -> Top-K 相關記憶
+1. **語義搜索**：輸入查詢 → 向量相似度 → Top-K 相關記憶
 2. **時間過濾**：記憶強度 R > 閾值方才返回
 3. **重要性加權**：某些記憶（如用戶偏好）永久保留
 

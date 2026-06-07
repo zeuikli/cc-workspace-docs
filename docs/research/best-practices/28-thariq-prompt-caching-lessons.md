@@ -23,7 +23,7 @@ type: best-practices
 
 Prompt Caching 的工作方式：**逐 token 從頭比對前綴**，遇到第一個不同 token 即停止快取。
 
-**最有效的分層結構（靜態 -> 動態）**：
+**最有效的分層結構（靜態 → 動態）**：
 
 ```
 1. System prompt + Tools       ← 最穩定，全域快取
@@ -38,7 +38,7 @@ Prompt Caching 的工作方式：**逐 token 從頭比對前綴**，遇到第一
 
 ## 二、用 Messages 代替更新 System Prompt
 
-**錯誤做法**：有新資訊（時間戳、檔案變更）時修改 system prompt -> 無效化整個快取前綴。
+**錯誤做法**：有新資訊（時間戳、檔案變更）時修改 system prompt → 無效化整個快取前綴。
 
 **正確做法**：透過後續對話訊息傳遞更新資訊，使用 `<system-reminder>` 標籤標示動態注入內容：
 
@@ -58,7 +58,7 @@ Prompt Cache **是模型專屬的**。從 Opus 切換到 Haiku（或反之）：
 - 快取前綴全部失效
 - 下一輪請求必須重建整個快取（等同從頭支付計算費用）
 
-**正確做法**：需要用不同模型 -> 用 **Subagent**（每個 subagent 有獨立 context + 快取）。
+**正確做法**：需要用不同模型 → 用 **Subagent**（每個 subagent 有獨立 context + 快取）。
 
 ---
 
@@ -86,7 +86,7 @@ EnterPlanMode 等行為控制工具也用此模式——工具定義永遠在，
 
 Context window 滿了進行 Compact 時：
 
-**錯誤做法**：用不同的 system prompt 或 tools 建立 compaction 請求 -> 後續 session 失去快取匹配。
+**錯誤做法**：用不同的 system prompt 或 tools 建立 compaction 請求 → 後續 session 失去快取匹配。
 
 **正確做法**：Compact 請求必須使用**與父對話完全相同的** system prompt + tools + user context，確保前綴匹配：
 
@@ -111,7 +111,7 @@ cache_hit_rate = response.usage.cache_read_input_tokens / response.usage.input_t
 ```
 
 Claude Code 內部實踐：
-- Cache hit rate 下降 -> 觸發 incident 流程
+- Cache hit rate 下降 → 觸發 incident 流程
 - 找出導致快取失效的變更（通常是 system prompt 動態注入、工具增刪、模型切換）
 
 ---
@@ -119,7 +119,7 @@ Claude Code 內部實踐：
 ## 快速 Checklist
 
 - [ ] System prompt 結構：靜態內容放最前，動態資訊用 messages 傳遞
-- [ ] Session 內不切換模型（需換模型 -> 開 subagent）
+- [ ] Session 內不切換模型（需換模型 → 開 subagent）
 - [ ] 工具定義對話中不增刪（用 stub + defer_loading）
 - [ ] Compact 操作保留原始 system prompt + tools
 - [ ] Cache hit rate 加入 observability dashboard

@@ -19,7 +19,7 @@ Fiona Fung（Claude Code & Cowork Engineering Director）分享 Agentic Coding �
 
 ### Key Points
 - JIT Planning：原型驅動開發取代設計文件，快速內部用戶回饋循環
-- Context 蒐集：先問 Claude 再找人；手動摘要 -> 持續背景自動化
+- Context 蒐集：先問 Claude 再找人；手動摘要 → 持續背景自動化
 - 招聘優先「有產品感的創意建造者」和深度系統專家
 - 三指標：Onboarding ramp time（第一週 ship 真實程式碼）、PR cycle time、Claude-assisted commits（≈100%）
 - Claude Code 團隊連續四個月無非 Claude 協助 commit
@@ -106,7 +106,7 @@ London 開發者大會重點回顧。Boris Cherny 闡述 AI agent 正在壓縮�
 **Date:** 2026-05-14 | **URL:** https://claude.com/blog/the-founders-playbook
 
 ### Summary
-重構新創公司生命週期（Idea -> MVP -> Launch -> Scale）以反映 AI 原生開發能力。涵蓋如何用 Claude 驗證假設、規劃架構、防止技術債，以及以 Agentic Workflow 取代創辦人注意力。
+重構新創公司生命週期（Idea → MVP → Launch → Scale）以反映 AI 原生開發能力。涵蓋如何用 Claude 驗證假設、規劃架構、防止技術債，以及以 Agentic Workflow 取代創辦人注意力。
 
 ### Key Points
 - 以 Claude 驗證問題假設、進行競品分析和用戶訪談
@@ -157,7 +157,7 @@ Kostiantyn Vlasenko（PM，零編碼背景）在六週內用 Claude Code 建立�
 Thariq Shihipar 分享 Claude Code 團隊的 Prompt Caching 最佳實踐。Cache hit rate 被視為關鍵指標，下降時會觸發 incident 處理。靜態到動態的分層結構是最有效的快取策略。
 
 ### Key Points
-- 分層結構（靜態到動態）：system prompt + tools -> 專案檔案 -> session context -> 對話訊息
+- 分層結構（靜態到動態）：system prompt + tools → 專案檔案 → session context → 對話訊息
 - 用 messages 代替更新 system prompt（保護快取前綴）；用 `<system-reminder>` 標籤傳遞更新資訊
 - Mid-session 禁止切換模型（快取模型專屬，切換須重建整個快取）
 - 工具管理：對話中不增刪工具；用 stub + `defer_loading: true` 保持前綴穩定

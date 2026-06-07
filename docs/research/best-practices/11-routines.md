@@ -38,11 +38,11 @@ Routine 是一個儲存的 Claude Code 設定：prompt、一或多個 repository
 
 | 情境 | 觸發方式 | 說明 |
 |------|---------|------|
-| **Backlog 自動維護** | Schedule（每週日） | 讀取新 issue -> 貼標 -> 指派負責人 -> Slack 摘要 |
-| **Alert 分診** | API（監控工具呼叫） | 收 alert payload -> 拉 stack trace -> 比對近期 commit -> 開 draft PR |
-| **客製 Code Review** | GitHub（PR opened） | 套用 team checklist -> 留 inline comment -> 加摘要留言 |
-| **Deploy 驗證** | API（CD pipeline） | 跑 smoke test -> 掃 error log -> 貼 go/no-go 到 release channel |
-| **文件 drift 偵測** | Schedule（每週） | 掃合併 PR -> 標出 API 變更對應文件 -> 開更新 PR |
+| **Backlog 自動維護** | Schedule（每週日） | 讀取新 issue → 貼標 → 指派負責人 → Slack 摘要 |
+| **Alert 分診** | API（監控工具呼叫） | 收 alert payload → 拉 stack trace → 比對近期 commit → 開 draft PR |
+| **客製 Code Review** | GitHub（PR opened） | 套用 team checklist → 留 inline comment → 加摘要留言 |
+| **Deploy 驗證** | API（CD pipeline） | 跑 smoke test → 掃 error log → 貼 go/no-go 到 release channel |
+| **文件 drift 偵測** | Schedule（每週） | 掃合併 PR → 標出 API 變更對應文件 → 開更新 PR |
 | **SDK 跨語言 port** | GitHub（PR merged） | 一個 SDK 合併後自動 port 到另一語言 SDK，開配對 PR |
 
 ---
@@ -51,8 +51,8 @@ Routine 是一個儲存的 Claude Code 設定：prompt、一或多個 repository
 
 ### 三個入口（同步到同一帳號）
 
-1. **Web**：[claude.ai/code/routines](https://claude.ai/code/routines) -> New routine
-2. **Desktop App**：側邊欄 Routines -> New routine -> 選 **Remote**（Local = Desktop 本機任務）
+1. **Web**：[claude.ai/code/routines](https://claude.ai/code/routines) → New routine
+2. **Desktop App**：側邊欄 Routines → New routine → 選 **Remote**（Local = Desktop 本機任務）
 3. **CLI**：`/schedule` 或 `/schedule <自然語言描述>`
 
 ### 建立流程（Web 表單）
@@ -97,8 +97,8 @@ Routine 是一個儲存的 Claude Code 設定：prompt、一或多個 repository
 
 #### 設定步驟
 
-1. 編輯 Routine -> Add another trigger -> API
-2. 複製 URL -> 點 **Generate token**（token 只顯示一次，立即儲存）
+1. 編輯 Routine → Add another trigger → API
+2. 複製 URL → 點 **Generate token**（token 只顯示一次，立即儲存）
 3. 要輪換或撤銷 token：回同一視窗點 Regenerate / Revoke
 
 #### 呼叫範例
@@ -172,7 +172,7 @@ curl -X POST https://api.anthropic.com/v1/claude_code/routines/trig_01ABCDEFGHJK
 |------|------|
 | 立即執行 | 詳情頁點 **Run now** |
 | 暫停 / 恢復 | Repeats 區塊 toggle |
-| 編輯 | 點鉛筆圖示 -> Edit routine（可改 name、prompt、repo、env、connectors、觸發器）|
+| 編輯 | 點鉛筆圖示 → Edit routine（可改 name、prompt、repo、env、connectors、觸發器）|
 | 刪除 | 點刪除圖示（過去的 session 保留在 session 列表）|
 
 ### CLI 管理指令

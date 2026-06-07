@@ -28,7 +28,7 @@ Large Language Models (LLMs) struggle to reason over large-scale enterprise spre
 
 ## Core Thesis
 
-FRTR reframes enterprise spreadsheet analysis as a three-stage pipeline (Retrieve -> Verify -> Compose) using hybrid lexical-dense retrieval with RRF to surface only the minimal relevant evidence, bypassing LLM context limits entirely. By decomposing workbooks into multi-granular units (rows, columns, sliding windows, embedded images) and indexing them in a shared multimodal vector space, FRTR achieves 2–4× higher accuracy than compression-based approaches at 40% lower token cost, while preserving full provenance for audit compliance.
+FRTR reframes enterprise spreadsheet analysis as a three-stage pipeline (Retrieve → Verify → Compose) using hybrid lexical-dense retrieval with RRF to surface only the minimal relevant evidence, bypassing LLM context limits entirely. By decomposing workbooks into multi-granular units (rows, columns, sliding windows, embedded images) and indexing them in a shared multimodal vector space, FRTR achieves 2–4× higher accuracy than compression-based approaches at 40% lower token cost, while preserving full provenance for audit compliance.
 
 ---
 

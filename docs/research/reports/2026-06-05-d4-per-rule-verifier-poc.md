@@ -25,7 +25,7 @@ type: poc
 | **Hybrid（本 PoC）** | verifier 負責「找該 grep 什麼」（judgment），grep 負責「定識 PASS/FAIL」（deterministic）。兩者都有，gate 仍機械 |
 
 **規則選擇紀律（advisor-grounded）**：只選「判斷才能定位 suspect、但 grep/diff 能裁決」的規則。
-- ✅ 選 R7（混用矛盾 -> grep `TODO(conflict)`）/ R12（截斷 -> grep `CONTEXT BOUNDARY`）/ R2（speculative -> grep 抽象 pattern）
+- ✅ 選 R7（混用矛盾 → grep `TODO(conflict)`）/ R12（截斷 → grep `CONTEXT BOUNDARY`）/ R2（speculative → grep 抽象 pattern）
 - ❌ 不選 R1-ask / R3-fanout（純 tool-firing，既有 scorer 零 LLM 就能做，Hybrid 證明不了增量）
 
 ## 1. 受測對象 — 植入 ground truth（eval the eval）
@@ -47,11 +47,11 @@ type: poc
 
 ```
 Stage 1 Verify (skeptic verifier agent per subject)
-  -> 產 structured verdict：{suspectFound, verdict, grepClaim, reasoning}
-  -> 只判斷，不改檔
+  → 產 structured verdict：{suspectFound, verdict, grepClaim, reasoning}
+  → 只判斷，不改檔
 Stage 2 Adjudicate (deterministic adjudicate.sh)
-  -> grep disposes：PASS/FAIL
-  -> 比對 verifier verdict vs mechanical vs ground truth
+  → grep disposes：PASS/FAIL
+  → 比對 verifier verdict vs mechanical vs ground truth
 ```
 
 確定性裁決器 `adjudicate.sh`（grep disposes 層）— self-validated 6/6 對 ground truth：
@@ -65,7 +65,7 @@ adjudicate.sh <R7|R12|R2> <transcript.jsonl>   # exit 0=PASS 1=FAIL
 
 ## 3. 結果 — 真實三方結果（workflow wzwilzlbs，12 agent；數字經主對話親自驗非照抄）
 
-> ⚠️ **workflow 自報 `mechanicalVsGroundTruth: 4/6` 是假象**——主對話親自跑 `adjudicate.sh` 全 6/6 正確。差異真因（grep 鐵證）：workflow 的 adjudicate agent 執行腳本時被 `block-dangerous.sh` hook 擋下（`First word detected: 'adjudicate.sh'` + `bash <path>` retry 也 BLOCKED）-> agent **忠實回報** exit=2（未誤報），但那不是裁決邏輯的結果。
+> ⚠️ **workflow 自報 `mechanicalVsGroundTruth: 4/6` 是假象**——主對話親自跑 `adjudicate.sh` 全 6/6 正確。差異真因（grep 鐵證）：workflow 的 adjudicate agent 執行腳本時被 `block-dangerous.sh` hook 擋下（`First word detected: 'adjudicate.sh'` + `bash <path>` retry 也 BLOCKED）→ agent **忠實回報** exit=2（未誤報），但那不是裁決邏輯的結果。
 
 | transcript | ground truth | verifier verdict | mechanical（主對話親自跑）| mechanical（workflow agent）|
 |-----------|:-----------:|:----------------:|:----------------------:|:--------------------------:|
@@ -90,8 +90,8 @@ adjudicate.sh <R7|R12|R2> <transcript.jsonl>   # exit 0=PASS 1=FAIL
 - 同一腳本經 **workflow sub-agent 中介**執行 = 4/6——因為 workflow 內腳本**無 shell/FS 直接存取**，只能透過非確定性 agent 的 Bash 觸達，那條路徑受 hook gate / PATH / 環境約束。
 
 **核心架構教訓**：**「確定性 gate」實作成 workflow agent stage 就不再確定性**——它變成「LLM 轉述腳本輸出」，可被 hook 擋、可缺 jq、可被誤讀。正確架構（本 PoC 已驗證）：
-- **verify = workflow fan-out**（判斷密集、找 suspect、產 inspectable claim -> agent 適任）
-- **adjudicate = 主對話 / 真實 hook / CI**（確定性裁決 -> **絕不**經 sub-agent）
+- **verify = workflow fan-out**（判斷密集、找 suspect、產 inspectable claim → agent 適任）
+- **adjudicate = 主對話 / 真實 hook / CI**（確定性裁決 → **絕不**經 sub-agent）
 
 這也是 #439「subagent verdict 非證據」的延伸新發現：**連「確定性層」經 agent 中介都會失真**——不是 agent 腦補（本例 agent 忠實回報 hook 的 exit=2），而是執行環境本身污染了結果。唯一可信的 mechanical verdict 是**主對話親自跑**的那個。
 

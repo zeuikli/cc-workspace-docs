@@ -57,7 +57,7 @@ AG2：middleware 可選安裝，不裝就零 tracing
 
 LobeHub 的解法：狀態機模型 + 單步執行原則，讓 `run step = event boundary`，每個步驟天然就是一個 trace event。這個設計決策不只是技術選擇，更是 Self-Evolving 能力的基礎設施投資。
 
-在 cc-workspace 的 Harness 架構中，對應的機制是 `audit-log.sh`（PostToolUse）+ `failure-log.sh`（PostToolUseFailure）+ `notification-log.sh`（Notification）。這三個 hook 共同構成了本 workspace 的「黑匣子」基礎設施。但目前這些 log 的分析仍依賴人工查看，尚未進入「Trace -> Pattern -> Auto-Fix」的閉環，正好對應 L2 到 L3 的進化缺口。
+在 cc-workspace 的 Harness 架構中，對應的機制是 `audit-log.sh`（PostToolUse）+ `failure-log.sh`（PostToolUseFailure）+ `notification-log.sh`（Notification）。這三個 hook 共同構成了本 workspace 的「黑匣子」基礎設施。但目前這些 log 的分析仍依賴人工查看，尚未進入「Trace → Pattern → Auto-Fix」的閉環，正好對應 L2 到 L3 的進化缺口。
 
 ---
 
@@ -65,7 +65,7 @@ LobeHub 的解法：狀態機模型 + 單步執行原則，讓 `run step = event
 
 ### 2.1 L1：全人工（Manual）
 
-**定義**：人發現問題 -> 人分析根因 -> 人修復 -> 人驗證
+**定義**：人發現問題 → 人分析根因 → 人修復 → 人驗證
 
 **特徵**：
 - 錯誤發現依賴使用者回報或工程師偶然觀察
@@ -94,7 +94,7 @@ cc-workspace 在 2026-04-30 之前的狀態基本處於 L1。RATCHET.md 記錄�
 - 人工最終審查：approve 或 reject Agent 的修復方案
 
 **在 cc-workspace 的體現**：
-`harness-meta:audit` skill（5 階段 Diagnose -> Ratchet-Log 流程）是目前最接近 L2 的實踐。它讓 Agent 自動執行 healthcheck、分析 scorecard 缺口、提出修復建議，但每個修復動作都需要使用者明確確認。
+`harness-meta:audit` skill（5 階段 Diagnose → Ratchet-Log 流程）是目前最接近 L2 的實踐。它讓 Agent 自動執行 healthcheck、分析 scorecard 缺口、提出修復建議，但每個修復動作都需要使用者明確確認。
 
 **L2 的進化條件**：
 - Tracing 基礎設施必須就位（否則 Agent 無從分析）
@@ -113,7 +113,7 @@ cc-workspace 在 2026-04-30 之前的狀態基本處於 L1。RATCHET.md 記錄�
 
 ### 2.3 L3：Agent 主導（Agent-Led）
 
-**定義**：Agent 主導大部分流程；採集數據 -> 識別模式 -> 修改代碼 -> 提交 PR -> 跑驗證。人仍保留關鍵判斷（根因歸屬、修復方向、高風險決策）
+**定義**：Agent 主導大部分流程；採集數據 → 識別模式 → 修改代碼 → 提交 PR → 跑驗證。人仍保留關鍵判斷（根因歸屬、修復方向、高風險決策）
 
 **特徵**：
 - 端到端自動化：從數據採集到 PR 提交無需人工介入
@@ -127,7 +127,7 @@ Step 1：從後台拉取 error records，多維度分桶
 Step 2：對比已有 ERROR_PATTERNS，識別新模式
 Step 3：用戶側錯誤 vs Harness 自身 bug 分類
 Step 4：直接更新匹配 Pattern（用戶側）
-Step 5：commit -> push -> 開 PR
+Step 5：commit → push → 開 PR
 Step 6：刪除 Dashboard 中匹配新 pattern 的歷史噪音
 Step 7：Harness 自身 bug 做根因分析，建立修復 Task
 ```
@@ -153,7 +153,7 @@ Step 7：Harness 自身 bug 做根因分析，建立修復 Task
 **額外能力**（文章描述的「我們正在構建的未來」）：
 - **Agent Level 自動進化**：每個 Agent 在夜間自動回放當天 Tracing，分析失敗模式，自我調整 Prompt 和執行策略
 - **用戶 Level 自動進化**：識別用戶使用模式，自動更新生成提示詞與 Persona 記憶
-- **全局 Eval Harness**：每個 Failed Task 自動進入評估 -> 歸因 -> 修復閉環
+- **全局 Eval Harness**：每個 Failed Task 自動進入評估 → 歸因 → 修復閉環
 
 **L4 的技術前提**：
 - 完整的 Trace 基礎設施（已在 LobeHub 實現）
@@ -214,7 +214,7 @@ Step 7：Harness 自身 bug 做根因分析，建立修復 Task
 
 ## 4. 工作執行計畫：四個層次的實作路徑
 
-### 4.1 L1 -> L2 遷移計畫：建立自動化 Trace 分析基礎設施
+### 4.1 L1 → L2 遷移計畫：建立自動化 Trace 分析基礎設施
 
 **目標**：讓 Agent 能夠讀取 Trace 數據並生成可操作的分析報告，無需人工手動瀏覽 log 檔
 
@@ -326,7 +326,7 @@ harness-meta:audit Phase 1（新增）：
 grep -l "Trace 分析" /tmp/claude-scratch/*.md | wc -l  # ≥ 1
 ```
 
-### 4.2 L2 -> L3 遷移計畫：建立自動化定期巡檢閉環
+### 4.2 L2 → L3 遷移計畫：建立自動化定期巡檢閉環
 
 **目標**：建立定期自動執行的 Harness 巡檢，低風險修復不需人工確認，高風險修復自動建立確認請求
 
@@ -351,10 +351,10 @@ Step 2：模式識別
   - 識別 ≥ 2 次出現的新模式
 
 Step 3：自動分類
-  - 預期行為（hook 攔截）-> 標記為「正常」，不進入修復流程
-  - Known Gotchas 更新（低風險）-> 直接執行
-  - RATCHET.md 新條目（中風險）-> 草稿 + 等待確認
-  - hook 邏輯修改（高風險）-> 建立 GitHub Issue（或直接通知使用者）
+  - 預期行為（hook 攔截）→ 標記為「正常」，不進入修復流程
+  - Known Gotchas 更新（低風險）→ 直接執行
+  - RATCHET.md 新條目（中風險）→ 草稿 + 等待確認
+  - hook 邏輯修改（高風險）→ 建立 GitHub Issue（或直接通知使用者）
 
 Step 4：低風險自動修復
   - 更新 RATCHET.md（新增觀察中條目）
@@ -429,7 +429,7 @@ echo "[patrol $DATE] 完成"
   1. 立即執行 healthcheck.sh（基礎驗證）
   2. 委派 reviewer agent（模型不同於 implementer）評估修復的合理性
   3. 運行 per-model-eval-suite 的 5 個基準任務，確認修復未破壞現有能力
-  4. 如果 eval 結果有任何一項低於 baseline 5 pp -> 自動 git revert
+  4. 如果 eval 結果有任何一項低於 baseline 5 pp → 自動 git revert
 ```
 
 **評估指標**：
@@ -444,12 +444,12 @@ echo "[patrol $DATE] 完成"
 **決策樹**（確定性代碼實作）：
 ```
 修復類型判斷：
-  1. 只修改 RATCHET.md 文字（無代碼改動）-> 自動執行
-  2. 修改 skill Known Gotchas（無 allowed-tools 變更）-> 自動執行
-  3. 修改 healthcheck.sh 的閾值 -> 需要確認
-  4. 修改 hook 腳本（block-dangerous / pre-commit-review 等）-> 需要確認
-  5. 修改 CLAUDE.md 或 auto-load rules -> 需要確認
-  6. 任何修改超過 50 行 -> 需要確認（無論類型）
+  1. 只修改 RATCHET.md 文字（無代碼改動）→ 自動執行
+  2. 修改 skill Known Gotchas（無 allowed-tools 變更）→ 自動執行
+  3. 修改 healthcheck.sh 的閾值 → 需要確認
+  4. 修改 hook 腳本（block-dangerous / pre-commit-review 等）→ 需要確認
+  5. 修改 CLAUDE.md 或 auto-load rules → 需要確認
+  6. 任何修改超過 50 行 → 需要確認（無論類型）
 ```
 
 **實作**：`scripts/classify-fix-risk.py`，接受 `git diff HEAD` 作為輸入，輸出風險等級（low/medium/high）
@@ -467,7 +467,7 @@ git diff HEAD | python3 scripts/classify-fix-risk.py
 # 預期輸出：risk: high
 ```
 
-### 4.3 L3 -> L4 遷移計畫：Context 策略的自主優化
+### 4.3 L3 → L4 遷移計畫：Context 策略的自主優化
 
 **目標**：讓 Harness 能夠根據實際運行數據，自動調整 Context 壓縮閾值、sub-agent 委派時機等策略參數，並通過 A/B 測試驗證改動有效性
 
@@ -517,14 +517,14 @@ context-strategy-config.json：
 **自動調整邏輯**（L4 核心）：
 ```
 如果 CRI > 2.0（嚴重的 context rot）：
-  -> 降低 compact 閾值（如 70% -> 65%）
-  -> 在 pending-fixes 中記錄調整建議
-  -> 等待確認後生效
+  → 降低 compact 閾值（如 70% → 65%）
+  → 在 pending-fixes 中記錄調整建議
+  → 等待確認後生效
 
 如果 CEI < 1.0（compact 反而更差）：
-  -> 分析觸發 compact 前的 context 結構
-  -> 識別是否有不適合壓縮的內容類型
-  -> 建立針對性的 compact hint 模板
+  → 分析觸發 compact 前的 context 結構
+  → 識別是否有不適合壓縮的內容類型
+  → 建立針對性的 compact hint 模板
 ```
 
 #### Step 3.3：L4 的安全邊界
@@ -580,13 +580,13 @@ time bash scripts/analyze-traces.sh 30  # 分析 30 天數據
 | 高風險修復建立草稿 | hook 修改建議 | 建立 pending-fix，等待確認 | /tmp/claude-scratch/ 有對應檔案 |
 | 修復後回歸測試 | 任何自動修復 | 自動跑 healthcheck + eval | healthcheck PASS ≥ 95% |
 | 修復有效性驗證 | 已知 bug 的修復 | 修復後該 bug 不再出現（連續 3 天） | failure-log.sh 無對應 Pattern |
-| 誤修復自動回滾 | 故意引入壞修復 | 3 天內 eval 下降 5 pp -> 自動 revert | git log 包含 revert: 前綴 |
+| 誤修復自動回滾 | 故意引入壞修復 | 3 天內 eval 下降 5 pp → 自動 revert | git log 包含 revert: 前綴 |
 
 ### 5.4 L4 測試場景（Context 策略優化）
 
 | 場景 | 輸入 | 預期行為 | 評估指標 |
 |------|------|---------|---------|
-| 策略調整後 A/B 測試 | CRI > 2.0，觸發 compact 閾值調整 | 70% -> 65%，觀察 7 天 | CM1/CM2/CM3 比較 |
+| 策略調整後 A/B 測試 | CRI > 2.0，觸發 compact 閾值調整 | 70% → 65%，觀察 7 天 | CM1/CM2/CM3 比較 |
 | 無效調整自動回滾 | 調整後 CM2 反而上升 | 自動回滾到前一版本 | context-strategy-config.json 版本記錄 |
 | 目標超出範圍保護 | Agent 嘗試修改 hook 邏輯 | 被 classify-fix-risk.py 阻擋 | 測試腳本確認 high risk 輸出 |
 | 審計軌跡完整性 | 任何 L4 自動修改 | L4-audit-log.md 有對應記錄 | grep 確認 |
@@ -598,7 +598,7 @@ time bash scripts/analyze-traces.sh 30  # 分析 30 天數據
 ```bash
 # 在每次 L3/L4 自動修復後自動執行
 bash scripts/run-eval-suite.sh --compare-baseline research/evals/baseline/
-# 如果任何任務分數低於 baseline 5 pp -> 觸發回滾
+# 如果任何任務分數低於 baseline 5 pp → 觸發回滾
 ```
 
 **完成條件**：
@@ -627,7 +627,7 @@ wc -l research/agent-harness/RATCHET.md
 **指標 B：平均故障修復時間（MTTF）**
 - 定義：從錯誤首次出現到修復提交的時間
 - 測量：failure-log.jsonl 的時間戳 vs 對應 commit 的時間戳
-- 目標：L2 基線 -> 達到 L3 後 MTTF < 24 小時
+- 目標：L2 基線 → 達到 L3 後 MTTF < 24 小時
 
 **指標 C：Harness 成功率（對應 Agent 成功率）**
 - 定義：任務執行中，healthcheck.sh PASS 且無 failure-log 記錄的比率
@@ -637,7 +637,7 @@ wc -l research/agent-harness/RATCHET.md
 **指標 D：Pattern 增長趨勢**
 - 定義：每週新增 RATCHET.md 條目數
 - 期望趨勢：初期快速增長（系統開始觀察），逐漸趨緩（Pattern 庫飽和）
-- 報警：如果 Pattern 數在新功能上線後不增長 -> 可能是 Tracing 失效
+- 報警：如果 Pattern 數在新功能上線後不增長 → 可能是 Tracing 失效
 
 **指標 E：LLM 判斷準確率**
 - 定義：trace-audit skill 識別的 Pattern 中，人工確認為有效的比率
@@ -661,9 +661,9 @@ wc -l research/agent-harness/RATCHET.md
 ## 指標趨勢
 | 指標 | 上月 | 本月 | 趨勢 |
 |------|------|------|------|
-| 覆蓋率 | | | ↑/↓/-> |
-| MTTF | | | ↑/↓/-> |
-| 成功率 | | | ↑/↓/-> |
+| 覆蓋率 | | | ↑/↓/→ |
+| MTTF | | | ↑/↓/→ |
+| 成功率 | | | ↑/↓/→ |
 
 ## 本月重要發現
 （自動填充：最重要的 3 個新 Pattern）
@@ -679,11 +679,11 @@ wc -l research/agent-harness/RATCHET.md
 
 借鑒 KNOWLEDGE-MAP 中的「Harness 演化是持續過程」觀點，設計以下促進機制：
 
-**停滯警報**：如果連續 14 天 RATCHET.md 無新增 -> 發出警報（可能是 Tracing 失效或問題已飽和）
+**停滯警報**：如果連續 14 天 RATCHET.md 無新增 → 發出警報（可能是 Tracing 失效或問題已飽和）
 
-**正向激勵**：每當 MTTF 降低 25% -> 自動在月度報告中標記「進化里程碑」
+**正向激勵**：每當 MTTF 降低 25% → 自動在月度報告中標記「進化里程碑」
 
-**飽和檢測**：當 Error Pattern 覆蓋率 > 95% 且連續 30 天 < 2 個新 Pattern -> 標記為「L3 飽和，考慮 L4 策略優化」
+**飽和檢測**：當 Error Pattern 覆蓋率 > 95% 且連續 30 天 < 2 個新 Pattern → 標記為「L3 飽和，考慮 L4 策略優化」
 
 ---
 
@@ -755,7 +755,7 @@ KNOWLEDGE-MAP 中引用的「Code as Agent Harness（2605.18747）」論文指�
 
 ## 9. 可立即實作的行動建議
 
-### 優先序 P0（本週內，L1 -> L2）
+### 優先序 P0（本週內，L1 → L2）
 
 1. **建立 analyze-traces.sh**（2 小時）
    - 讀取 `.claude/logs/command-log.jsonl` 和 `failure-log.jsonl`
@@ -771,7 +771,7 @@ KNOWLEDGE-MAP 中引用的「Code as Agent Harness（2605.18747）」論文指�
    - 在 Phase 1 中增加 trace-audit 調用
    - 驗證：`/harness-meta:audit` 輸出包含 trace 分析節
 
-### 優先序 P1（下週，L2 -> L3 前置）
+### 優先序 P1（下週，L2 → L3 前置）
 
 4. **建立 classify-fix-risk.py**（3 小時）
    - 接受 `git diff HEAD` 輸入
@@ -836,8 +836,8 @@ KNOWLEDGE-MAP 中引用的「Code as Agent Harness（2605.18747）」論文指�
 
 | 數據點 | 來源 | 可信度 |
 |--------|------|--------|
-| LobeHub Agent 成功率 75%->95%+（9 輪）| @arvin17x 文章（一手資料）| 高（作者自述）|
-| Error Pattern 31->104（趨於飽和）| @arvin17x 文章 | 高 |
+| LobeHub Agent 成功率 75%→95%+（9 輪）| @arvin17x 文章（一手資料）| 高（作者自述）|
+| Error Pattern 31→104（趨於飽和）| @arvin17x 文章 | 高 |
 | 自主發現 20+ Harness 缺陷 | @arvin17x 文章 | 高 |
 | cc-workspace CAR 評分 13.0/14 | eval-2026-05-25.md（本地）| 最高 |
 | Terminal-Bench 13 pp 差距 | KNOWLEDGE-MAP.md（引用 tbench.ai）| 中（需獨立驗證）|
@@ -850,7 +850,7 @@ KNOWLEDGE-MAP 中引用的「Code as Agent Harness（2605.18747）」論文指�
 ## 附錄 B：實作時程表
 
 ```
-Week 1（2026-05-28 ~ 2026-06-04）：L1 -> L2
+Week 1（2026-05-28 ~ 2026-06-04）：L1 → L2
   2026-05-28: analyze-traces.sh 建立
   2026-05-29: trace-audit skill 建立
   2026-05-30: harness-meta:audit 整合

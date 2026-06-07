@@ -19,7 +19,7 @@ topics: [hooks, security, orchestration, memory, cost-optimization, enterprise, 
 
 2. **Context Drift 是最大生產力殺手**：3+ 小時長 session 後每 5 任務出現 1 次 regression，「One task, one session」反直覺但 empirically 驗證有效（Jamie Cole 47 任務 retrospective）。
 
-3. **並行不等於正確**：5 模型 adversarial debate 的 bug detection 從 53%->80%，但成本不等比例增加；Claude+Gemini 雙模型達 5 模型天花板的 91%，是最優性價比點。
+3. **並行不等於正確**：5 模型 adversarial debate 的 bug detection 從 53%→80%，但成本不等比例增加；Claude+Gemini 雙模型達 5 模型天花板的 91%，是最優性價比點。
 
 4. **Token 優化的最大槓桿在結構而非內容**：AST graph 注入（71x token 削減）、RAG-over-codebase（70-85% 削減）、memory 分層（60-80% 節省）均來自架構改變，不是壓縮 prompt 文字。
 
@@ -85,7 +85,7 @@ topics: [hooks, security, orchestration, memory, cost-optimization, enterprise, 
 
 #### 陷阱與反模式
 
-- **反模式**：在一個 hook 中用 if/elif 合併 10 條規則 -> 任何一條 regex 錯誤影響全部
+- **反模式**：在一個 hook 中用 if/elif 合併 10 條規則 → 任何一條 regex 錯誤影響全部
 - **反模式**：用 exit 1 以為是阻斷，實際上 Claude Code 繼續執行
 - **反模式**：LLM 作為唯一 permission 層（25s timeout 期間無防護）
 
@@ -116,7 +116,7 @@ topics: [hooks, security, orchestration, memory, cost-optimization, enterprise, 
 
 - 98.4% 的 Claude Code 能力依賴確定性基礎設施
 - 5 層壓縮降級路徑（可被利用導致 context collapse）：
-  `budget -> snip -> microcompact -> context collapse -> auto-compact`
+  `budget → snip → microcompact → context collapse → auto-compact`
 - **pre-trust window CVE**：hook 在 trust dialog 顯示前已執行，攻擊者可在用戶看到警告前完成操作
 - 50+ subcommand starvation：大量子命令並行導致資源耗盡
 
@@ -187,9 +187,9 @@ topics: [hooks, security, orchestration, memory, cost-optimization, enterprise, 
 
 **D1 — Branch8 APAC Team 8 週優化**[來源宣稱]
 
-- 成本：$2,400->$680/月（−72%）[來源宣稱]
+- 成本：$2,400→$680/月（−72%）[來源宣稱]
 - 關鍵參數：`sessionLimit: 500K` / `dailyLimit: 2M` / `autoCompactAt: 60%`
-- Cache hit rate：34.2%->60%+（提升 26pp）
+- Cache hit rate：34.2%→60%+（提升 26pp）
 - CLI aliases：`cc`（一般）/ `cc-quick`（haiku，快速任務）/ `cc-deep`（opus，架構任務）
 - APAC 特有問題：async session 跨時區較長，單 session 成本高於美國團隊
 
@@ -205,7 +205,7 @@ topics: [hooks, security, orchestration, memory, cost-optimization, enterprise, 
 
 - 技術棧：Tree-sitter AST + Leiden community detection clustering
 - 攔截點：注入 Glob/Grep tool，直接返回 graph navigation 結果
-- Token 削減：71x（12K-18K -> 2K navigation overhead）[來源宣稱]
+- Token 削減：71x（12K-18K → 2K navigation overhead）[來源宣稱]
 - Edge 類型：EXTRACTED（確定）/ INFERRED（推測）/ AMBIGUOUS（不確定）
 
 #### 最佳實踐建議
@@ -219,7 +219,7 @@ topics: [hooks, security, orchestration, memory, cost-optimization, enterprise, 
 
 - **反模式**：不設 autoCompactAt，讓 context 自然填滿再 compact（成本最高點才 compact）
 - **反模式**：在所有任務用 Opus（適合 <10% 的架構決策任務）
-- **反模式**：RAG 索引整個 repo 含 test fixtures/node_modules -> 雜訊遠超信號
+- **反模式**：RAG 索引整個 repo 含 test fixtures/node_modules → 雜訊遠超信號
 
 ---
 
@@ -259,7 +259,7 @@ topics: [hooks, security, orchestration, memory, cost-optimization, enterprise, 
 1. Memory 分層設計：always-loaded ≤200 行（硬上限），超過立即 compact
 2. 任何 >1 session 的任務必須有 handoff 文件（`STATUS.md` 或 `MEMORY.md` session 節）
 3. SQLite FTS5 是最低開發成本的記憶後端起點，先於 vector DB 部署
-4. Progressive disclosure：search -> timeline -> get，不要預設返回完整記憶
+4. Progressive disclosure：search → timeline → get，不要預設返回完整記憶
 
 #### 陷阱與反模式
 
@@ -285,8 +285,8 @@ topics: [hooks, security, orchestration, memory, cost-optimization, enterprise, 
 **F2 — Boldare Gas Trading Team**[來源宣稱]
 
 - 規模：6 人團隊
-- 測試覆蓋率：85%->95%（+10pp）
-- Sprint velocity：+15-31%（13->17 points）
+- 測試覆蓋率：85%→95%（+10pp）
+- Sprint velocity：+15-31%（13→17 points）
 - 工具分工：Frontend 50% Cursor / Backend ~90% Claude
 - 最大價值場景：「高量低認知負擔任務」（boilerplate、test generation、doc update）
 
@@ -344,7 +344,7 @@ topics: [hooks, security, orchestration, memory, cost-optimization, enterprise, 
 
 - **反模式**：在同一 session 鏈式執行 10+ 任務，第 6 個以後 context drift regression 顯著
 - **反模式**：Spec 只有自然語言描述，沒有可機械驗證的「完成條件」
-- **反模式**：Validator 擁有 write 權限（典型：「讓 reviewer 順便修一下」-> bug 被掩蓋）
+- **反模式**：Validator 擁有 write 權限（典型：「讓 reviewer 順便修一下」→ bug 被掩蓋）
 
 ---
 
@@ -354,7 +354,7 @@ topics: [hooks, security, orchestration, memory, cost-optimization, enterprise, 
 
 **H1 — HTTP Hooks × GitHub Actions（claudelab）**[來源宣稱]
 
-- 自愈迴圈：Block -> Rewrite -> Verify（三步閉環）
+- 自愈迴圈：Block → Rewrite → Verify（三步閉環）
 - 技術棧：Cloudflare Workers + Hono webhook server
 - `session_id` correlation：所有 hook 事件用 session_id 關聯，支援完整 audit trail
 - p95 >3s 告警：hook 延遲超過 3 秒觸發 alert（防 25s timeout 耗盡）
@@ -433,7 +433,7 @@ topics: [hooks, security, orchestration, memory, cost-optimization, enterprise, 
 
 **J2 — 8 Monorepo Tips（Das）**[來源宣稱]
 
-- Nested CLAUDE.md hierarchy：root level（架構）-> package level（實現細節）
+- Nested CLAUDE.md hierarchy：root level（架構）→ package level（實現細節）
 - Claude Code DRI designation：每個 package 指定一個「負責人」角色（DRI = Directly Responsible Individual）
 - Per-package skills：不要用 global skill 處理特定 package 邏輯
 - Subdirectory initialization：`claude --dir packages/foo` 只載入該 package context
@@ -459,7 +459,7 @@ topics: [hooks, security, orchestration, memory, cost-optimization, enterprise, 
 
 - typescript-test-specialist：生成測試
 - test-quality-reviewer（read-only）：審查覆蓋率和品質，不修改代碼
-- 效果：30%->50% coverage，<1 week [來源宣稱]
+- 效果：30%→50% coverage，<1 week [來源宣稱]
 - `mcp__ide__getDiagnostics`：即時 TypeScript type error 反饋（防止生成類型錯誤的測試）
 
 **K2 — RAG 11-day Case Study**[來源宣稱，最詳細]
@@ -496,7 +496,7 @@ topics: [hooks, security, orchestration, memory, cost-optimization, enterprise, 
 |--------|------|------|------|---------|
 | P0 | GitHub Action 升級 | 更新至 v2.1.128+，加 Read tool 路徑白名單 | 30 分鐘 | `gh release list` 確認版本 |
 | P0 | autoCompactAt 設定 | `settings.json` 加 `autoCompactAt: 60%`，sessionLimit: 500K | 15 分鐘 | 下次 session 觀察 compact 觸發點 |
-| P1 | Hook exit code 稽核 | grep 所有 hook scripts，確認 exit 1->exit 2 | 1 小時 | `grep -rn "exit 1" .claude/hooks/` |
+| P1 | Hook exit code 稽核 | grep 所有 hook scripts，確認 exit 1→exit 2 | 1 小時 | `grep -rn "exit 1" .claude/hooks/` |
 | P1 | CLI aliases | 設定 `cc`/`cc-quick`/`cc-deep` 對應 Sonnet/Haiku/Opus | 30 分鐘 | alias 測試 |
 | P1 | Session length 紀律 | 每 5 任務後 /clear，不鏈式執行跨 session 任務 | 即時行為調整 | 追蹤 abandonment rate |
 | P2 | MEMORY.md 200 行 cap | 加入 memory-compactor 自動觸發 | 2 小時 | `wc -l MEMORY.md` |
@@ -590,10 +590,10 @@ RAG case study 的 20% rejection rate 提供了一個 calibration benchmark：�
 ### 主題 C：大規模並行 Orchestration（3 篇）
 7. Dicklesworthstone — Agent Farm（20-50 agents, POSIX flock coordination）
 8. Eva Khmelinskaya — Overnight session failure modes（context exhaustion/dilution/stalling）
-9. Milvus — Multi-model adversarial debate（53%->80%->91% bug detection）
+9. Milvus — Multi-model adversarial debate（53%→80%→91% bug detection）
 
 ### 主題 D：成本與 Token 優化（3 篇）
-10. Branch8 APAC — 72% cost reduction in 8 weeks（$2,400->$680/月）
+10. Branch8 APAC — 72% cost reduction in 8 weeks（$2,400→$680/月）
 11. mcplens / Figueredo — RAG-over-codebase（Ollama+SQLite, 70-85% token reduction）
 12. Graphify — AST graph navigation（Tree-sitter+Leiden, 71x token reduction）
 
@@ -604,7 +604,7 @@ RAG case study 的 20% rejection rate 提供了一個 calibration benchmark：�
 
 ### 主題 F：企業部署（2 篇）
 16. General Analysis — 7-layer control architecture × 3 repo risk tiers
-17. Boldare — Gas trading team（6 人, 85%->95% test coverage, +15-31% velocity）
+17. Boldare — Gas trading team（6 人, 85%→95% test coverage, +15-31% velocity）
 
 ### 主題 G：Spec 與工作流程（3 篇）
 18. Pimzino — 4-agent spec workflow（executor + 3 read-only validators）
@@ -612,7 +612,7 @@ RAG case study 的 20% rejection rate 提供了一個 calibration benchmark：�
 20. Jamie Cole — 30-day production retrospective（47 tasks, 25% abandonment）
 
 ### 主題 H：CI/CD 與 Routines（3 篇）
-21. claudelab — HTTP hooks × GitHub Actions（Block->Rewrite->Verify self-healing loop）
+21. claudelab — HTTP hooks × GitHub Actions（Block→Rewrite→Verify self-healing loop）
 22. Claude Code Routines — Official（3 trigger types, Pro/Max/Team quotas）
 23. Microsoft — v2.1.128 security patch（/proc access block）
 
@@ -625,13 +625,13 @@ RAG case study 的 20% rejection rate 提供了一個 calibration benchmark：�
 27. Das — 8 monorepo tips（nested CLAUDE.md, DRI designation, per-package skills）
 
 ### 主題 K：測試自動化（2 篇）
-28. Melnik — Two-agent TDD（30%->50% coverage, mcp__ide__getDiagnostics）
+28. Melnik — Two-agent TDD（30%→50% coverage, mcp__ide__getDiagnostics）
 29. RAG 11-day case study — eval harness first（87% pass rate, 20% rejection rate）
 
 ### 未分類 / 跨主題（3 篇）
 30. Prompt Shelf — Claude Code hooks complete reference（PostToolBatch TSV）
 31. Microsoft Security Research follow-up — GitHub Action default trust design flaw
-32. VILA-Lab — 5-layer compression degradation path（budget->auto-compact CVE）
+32. VILA-Lab — 5-layer compression degradation path（budget→auto-compact CVE）
 
 ---
 

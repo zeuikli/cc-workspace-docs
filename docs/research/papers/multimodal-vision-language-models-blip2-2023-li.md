@@ -20,7 +20,7 @@ The cost of vision-and-language pre-training has become increasingly prohibitive
 - Outperforms **Flamingo80B by 8.7% on zero-shot VQAv2** with **54x fewer trainable parameters** (~188M vs. ~10B trainable), demonstrating extreme parameter efficiency
 - Demonstrates **emerging zero-shot image-to-text generation** capabilities guided by natural language instructions, without explicit instruction-following training
 - **ICML 2023** — Q-Former architecture established a highly influential connector paradigm adopted by InstructBLIP, MiniGPT-4, X-LLM, and many subsequent multimodal models
-- Shows that independently bootstrapping each modality bridge (vision->Q-Former, then Q-Former->LLM) is more sample-efficient than joint end-to-end training
+- Shows that independently bootstrapping each modality bridge (vision→Q-Former, then Q-Former→LLM) is more sample-efficient than joint end-to-end training
 - Compatible with any combination of frozen vision encoder (ViT-L, ViT-g) and frozen LLM (OPT, FlanT5), making it a modular and future-proof architecture
 
 ---

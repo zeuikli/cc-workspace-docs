@@ -16,7 +16,7 @@ type: best-practices
 ### 三層架構
 
 ```
-Hook Event -> Matcher Group -> Handler
+Hook Event → Matcher Group → Handler
 ```
 
 ```json
@@ -66,9 +66,9 @@ Hook Event -> Matcher Group -> Handler
 
 ```
 SessionStart
-  -> [UserPromptSubmit -> PreToolUse -> PostToolUse]*
-  -> Stop
-  -> SessionEnd
+  → [UserPromptSubmit → PreToolUse → PostToolUse]*
+  → Stop
+  → SessionEnd
 ```
 
 ---
@@ -104,7 +104,7 @@ paths:
 
 ### CLAUDE.md 載入順序
 
-1. 沿著目錄樹向上查找（CWD -> 祖目錄）
+1. 沿著目錄樹向上查找（CWD → 祖目錄）
 2. 同層級：CLAUDE.md + CLAUDE.local.md 同時載入
 3. 子目錄的 CLAUDE.md 按需載入（讀該目錄檔案時才載入）
 

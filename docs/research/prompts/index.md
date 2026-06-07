@@ -2,7 +2,7 @@
 
 > **Type:** schema:prompts — 9 個研究專用 system prompt 範本  
 > **Updated**: 2026-06-02  
-> **Query pattern**: BRAIN.md -> 本表（用途欄）-> `<name>.md`
+> **Query pattern**: BRAIN.md → 本表（用途欄）→ `<name>.md`
 
 ---
 

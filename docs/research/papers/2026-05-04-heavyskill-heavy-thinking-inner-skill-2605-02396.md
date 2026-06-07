@@ -18,7 +18,7 @@ source: "https://arxiv.org/abs/2605.02396"
 
 ## Abstract
 
-HeavySkill proposes that **heavy/deep thinking is both a minimal execution unit in orchestration harness AND an inner skill internalized within the model** (not just an external orchestration layer). The two-stage pipeline (parallel reasoning -> sequential deliberation) outperforms Best-of-N voting, with strong LLMs approaching theoretical Pass@K limits. The workflow is portable across any agent framework without modification.
+HeavySkill proposes that **heavy/deep thinking is both a minimal execution unit in orchestration harness AND an inner skill internalized within the model** (not just an external orchestration layer). The two-stage pipeline (parallel reasoning → sequential deliberation) outperforms Best-of-N voting, with strong LLMs approaching theoretical Pass@K limits. The workflow is portable across any agent framework without modification.
 
 ---
 
@@ -38,9 +38,9 @@ Two unified views:
 
 **Stage 1 — Parallel Reasoning**: Generate K independent trajectories: `T_πθ(q,K) = {y₁, ..., yK}`
 
-**Stage 2 — Sequential Deliberation**: Second LLM `πφ` processes serialized memory cache `xc` (pruned + shuffled trajectories) -> produces synthesized output.
+**Stage 2 — Sequential Deliberation**: Second LLM `πφ` processes serialized memory cache `xc` (pruned + shuffled trajectories) → produces synthesized output.
 
-**Iterative Deliberation** (N iterations): At iteration t, cache modified by concatenating prior deliberation outputs: `C(x^(t)) = T_πφ(x_c^(t-1), K^(t-1)) || x^(t-1)` -> recursive refinement.
+**Iterative Deliberation** (N iterations): At iteration t, cache modified by concatenating prior deliberation outputs: `C(x^(t)) = T_πφ(x_c^(t-1), K^(t-1)) || x^(t-1)` → recursive refinement.
 
 ### Readable Skill for Agentic Harness
 
@@ -130,6 +130,6 @@ Counter-intuitive finding: Qwen2.5-32B-Instruct (weaker independent reasoner) yi
 
 ## Workspace Relevance
 
-Directly validates `opus-pilot` **Mechanism #2 (Parallel Hypotheses + Synthesis)**: N=3 parallel candidates -> synthesis is the same two-stage pattern. Paper confirms this is superior to Best-of-N selection.
+Directly validates `opus-pilot` **Mechanism #2 (Parallel Hypotheses + Synthesis)**: N=3 parallel candidates → synthesis is the same two-stage pattern. Paper confirms this is superior to Best-of-N selection.
 
 For `haiku-pilot` / escalation gates: if the model has internalized heavy thinking (via RL training), the "escalate to Opus for deep reasoning" gate should account for whether the base model has this capability built in.

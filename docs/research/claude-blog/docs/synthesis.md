@@ -40,10 +40,10 @@ Anthropic 從 Nov 2025 開始以連續 5 篇文章系統性建立 Skill 知識�
 ### 關鍵框架：職責分離
 
 ```
-MCP Server    -> 連接（工具、外部 API、資料庫）
-Skills        -> 邏輯（領域知識、工作流、最佳實踐）
-Subagents     -> 任務委派（隔離 context、並行執行）
-Projects      -> 共享 context（跨對話的持久記憶）
+MCP Server    → 連接（工具、外部 API、資料庫）
+Skills        → 邏輯（領域知識、工作流、最佳實踐）
+Subagents     → 任務委派（隔離 context、並行執行）
+Projects      → 共享 context（跨對話的持久記憶）
 ```
 
 **意涵**：Agent 架構不是「訓練更聰明的模型」，而是「正確分配職責」。Skills 是組織機構知識的新容器。
@@ -68,12 +68,12 @@ Apr 10 當天連續發布三篇技術深度文章（協調模式 / 安全 / 工�
 
 **MCP 的演進定位：**
 
-從「模型可以呼叫工具」->「生產系統的標準化整合層」。3 億月下載量（Apr 2026）印證市場採用已過臨界點。
+從「模型可以呼叫工具」→「生產系統的標準化整合層」。3 億月下載量（Apr 2026）印證市場採用已過臨界點。
 
 ### 給 SRE/Infra 工程師的意涵
 
 多 Agent 系統正在成為新的「微服務」：有相似的協調複雜性、狀態管理需求、可觀測性挑戰。  
--> Cowork 採用 OpenTelemetry（Splunk 整合）是先行指標：「Agent Observability」將成為下一個重要技術領域。
+→ Cowork 採用 OpenTelemetry（Splunk 整合）是先行指標：「Agent Observability」將成為下一個重要技術領域。
 
 ---
 
@@ -151,10 +151,10 @@ Carta Healthcare 案例（Apr 8）揭示核心洞見：
 |------|------|--------|
 | Carta Healthcare | 臨床擷取準確率 | 98-99% |
 | Harvey | BigLaw Bench | 90.2%（首個超過 90% 的 Anthropic 模型） |
-| Anthropic Marketing | 廣告創作時間 | 30 分鐘 -> 30 秒 |
-| Anthropic Legal | 合規審閱周轉 | 2-3 天 -> 24 小時 |
-| Thomson Reuters | 法律研究時間 | 小時 -> 分鐘 |
-| eSentire | 威脅分析 | 5 小時 -> 7 分鐘（95% 準確率） |
+| Anthropic Marketing | 廣告創作時間 | 30 分鐘 → 30 秒 |
+| Anthropic Legal | 合規審閱周轉 | 2-3 天 → 24 小時 |
+| Thomson Reuters | 法律研究時間 | 小時 → 分鐘 |
+| eSentire | 威脅分析 | 5 小時 → 7 分鐘（95% 準確率） |
 | Anthropic Engineering | 每日合併 PR | +67% |
 | Claude Code 用量 | 程式碼 AI 輔助比例 | 70-90% |
 
@@ -167,13 +167,13 @@ Carta Healthcare 案例（Apr 8）揭示核心洞見：
 ```
 Platform Strategy（平台化）
 ├── Claude Managed Agents (Apr 8)
-│   └── 解決基礎設施複雜性 -> 開發者專注於邏輯
+│   └── 解決基礎設施複雜性 → 開發者專注於邏輯
 ├── Cowork for Enterprise (Apr 9)
-│   └── RBAC + OTel + 預算控制 -> 企業治理
+│   └── RBAC + OTel + 預算控制 → 企業治理
 ├── Compliance API (Mar 30)
-│   └── 審計日誌 -> 合規可觀測性
+│   └── 審計日誌 → 合規可觀測性
 └── MCP (Apr 22)
-    └── 標準協議層 -> 生態整合
+    └── 標準協議層 → 生態整合
 
 Skills Ecosystem（知識封裝）
 ├── Skills defined (Nov 2025)
@@ -183,23 +183,23 @@ Skills Ecosystem（知識封裝）
 └── MCP + Skills 協同 (Dec 2025, Apr 2026)
 
 Cost Engineering（成本分層）
-├── Advisor Tool (Apr 9) -> 模型分層（API 層）
-├── Prompt Caching (Apr 2) -> Context 靜態化
-├── Tool Search (Apr 22) -> 動態工具展開（工具層）
-└── xhigh effort -> 動態 token 控制
+├── Advisor Tool (Apr 9) → 模型分層（API 層）
+├── Prompt Caching (Apr 2) → Context 靜態化
+├── Tool Search (Apr 22) → 動態工具展開（工具層）
+└── xhigh effort → 動態 token 控制
 
 Developer Experience（開發者體驗）
-├── Desktop Redesign (Apr 14) -> 並行工作介面
-├── Routines (Apr 14) -> 自動化排程
-├── Session Management (Apr 15) -> Context 管理
-├── Code Review (Mar 9) -> 多 Agent 品質保證
-└── Subagents (Apr 7) -> 隔離 + 並行
+├── Desktop Redesign (Apr 14) → 並行工作介面
+├── Routines (Apr 14) → 自動化排程
+├── Session Management (Apr 15) → Context 管理
+├── Code Review (Mar 9) → 多 Agent 品質保證
+└── Subagents (Apr 7) → 隔離 + 並行
 
 Technical Depth（技術框架）
-├── 5-Pattern Coordination (Apr 10) -> 架構決策框架
-├── Tool Design Philosophy (Apr 10) -> Agent 工具設計
-├── Context Engineering (Apr 8) -> 新的核心能力定義
-└── Common Workflow Patterns (Mar 5) -> 模式選擇邏輯
+├── 5-Pattern Coordination (Apr 10) → 架構決策框架
+├── Tool Design Philosophy (Apr 10) → Agent 工具設計
+├── Context Engineering (Apr 8) → 新的核心能力定義
+└── Common Workflow Patterns (Mar 5) → 模式選擇邏輯
 ```
 
 ---

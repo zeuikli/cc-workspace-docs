@@ -9,7 +9,7 @@ version: 2.0
 
 # Claude Code 社群實踐深度研究 v2
 
-> 本報告為前版（32 篇）的盲點補足版，專門覆蓋四個已知研究缺口：A) 企業案例、B) 失敗案例、C) 數字可信度分級、D) 2025->2026 縱向演化。
+> 本報告為前版（32 篇）的盲點補足版，專門覆蓋四個已知研究缺口：A) 企業案例、B) 失敗案例、C) 數字可信度分級、D) 2025→2026 縱向演化。
 
 ---
 
@@ -19,7 +19,7 @@ version: 2.0
 
 ---
 
-## 第一章：2025->2026 縱向演化（盲點 D）
+## 第一章：2025→2026 縱向演化（盲點 D）
 
 ### 1.1 範式轉移：三個核心基礎設施改變
 
@@ -31,7 +31,7 @@ Sean Moran 的四月分析（`source-9`）記錄了三項使長 session 從「�
 | 計劃模式 | 用戶自製 workaround | 原生 /plan 命令 |
 | 平行探索 | 手動指示「模擬多個研究者」 | 原生 Sub-agent 平行探索 |
 
-**實際案例數據**：在單一連續對話中完成：生產環境調試 + Lambda/EC2 部署問題排除 + PostgreSQL->CSV 基礎設施遷移 + 14 個安全發現（3 critical / 8 high / 3 medium）＋817 insertions / 260 deletions 的模組重寫。
+**實際案例數據**：在單一連續對話中完成：生產環境調試 + Lambda/EC2 部署問題排除 + PostgreSQL→CSV 基礎設施遷移 + 14 個安全發現（3 critical / 8 high / 3 medium）＋817 insertions / 260 deletions 的模組重寫。
 
 **核心洞見**（個人宣稱）：
 > "the developer's role has moved from context management to outcome specification. The mechanical overhead of clearing context, maintaining artifact directories, crafting elaborate prompts... has been reduced substantially by the harness around the model."
@@ -47,9 +47,9 @@ Mnilax 的 effort 量化實測（`@Mnilax 2026-05-31`，5 任務 × 3 跑次，�
 | **high** | **93/100** | **<$1** | ~80s |
 | xhigh | 95/100 | ~$4+ | 慢 |
 
-**質性躍升點**：xhigh 只在「跨檔案遷移」任務顯示 ROI（high=78 -> xhigh=87），因為它追蹤到 generic wrapper 下 2 個會靜默失敗的 call site。
+**質性躍升點**：xhigh 只在「跨檔案遷移」任務顯示 ROI（high=78 → xhigh=87），因為它追蹤到 generic wrapper 下 2 個會靜默失敗的 call site。
 
-**月費試算**（個人宣稱）：300 任務/週，85% 例行性 -> 全 xhigh = ~$4,700/月；smart routing = ~$1,700/月，同等輸出品質。
+**月費試算**（個人宣稱）：300 任務/週，85% 例行性 → 全 xhigh = ~$4,700/月；smart routing = ~$1,700/月，同等輸出品質。
 
 **建議策略**：`/effort high` 為預設；`/effort xhigh` 只用在「自己無法在腦中完整 hold 的問題」；`/fast`（2.5x 速度、2x 成本）買延遲不買品質。
 
@@ -70,10 +70,10 @@ VILA-Lab arXiv 2604.14228（學術論文，`source 2026-06-07-dive-into-claude-c
 **來源可信度**：[企業自述] AMD 高級總監的 6,852 session 遙測數據 + Anthropic 官方 postmortem（InfoQ 報導）
 
 **量化崩潰指標**：
-- median visible thinking：2,200 -> 600 字符（-73%），Jan->Mar 2026
-- API 呼叫增加：80x more retries（Feb->Mar）
+- median visible thinking：2,200 → 600 字符（-73%），Jan→Mar 2026
+- API 呼叫增加：80x more retries（Feb→Mar）
 - Token 輸出增加：64x，但品質更差
-- 行為轉變：research-first -> edit-first（未思考即修改）
+- 行為轉變：research-first → edit-first（未思考即修改）
 
 **三個根本原因（時間序）**：
 
@@ -81,7 +81,7 @@ VILA-Lab arXiv 2604.14228（學術論文，`source 2026-06-07-dive-into-claude-c
 |------|------|------|
 | Feb 9 | Adaptive thinking by default | 部分用戶感知品質下降 |
 | Feb 12 | UI-only thinking redaction | thinking tokens 結構性消失 |
-| Mar 4 | Effort level: high -> medium | 最廣泛影響，Anthropic 承認「wrong tradeoff」 |
+| Mar 4 | Effort level: high → medium | 最廣泛影響，Anthropic 承認「wrong tradeoff」 |
 | Mar 26 | Caching bug（每輪清除思考） | 長 session 用戶 900K token full cache miss |
 | Apr 16 | System prompt verbosity limits「25 words」 | 3% 品質下降（ablation 驗證） |
 
@@ -121,13 +121,13 @@ VILA-Lab arXiv 2604.14228（學術論文，`source 2026-06-07-dive-into-claude-c
 General Analysis 指南（source-1，作者 Rez Havaei, Rex Liu, Maximilian Li，2026-05-22）提供最完整的企業安全框架：
 
 ```
-Layer 1: Managed Settings    -> policy distribution via MDM
-Layer 2: Dev Containers      -> non-root execution, scoped mounts
-Layer 3: Corporate Proxy     -> network routing, domain allowlists
-Layer 4: MCP Governance      -> approval by exact URL, version pinning
-Layer 5: Hooks               -> deterministic enforcement, audit evidence
-Layer 6: OpenTelemetry       -> structured event capture
-Layer 7: CI/CD Gates         -> ephemeral jobs, short-lived credentials
+Layer 1: Managed Settings    → policy distribution via MDM
+Layer 2: Dev Containers      → non-root execution, scoped mounts
+Layer 3: Corporate Proxy     → network routing, domain allowlists
+Layer 4: MCP Governance      → approval by exact URL, version pinning
+Layer 5: Hooks               → deterministic enforcement, audit evidence
+Layer 6: OpenTelemetry       → structured event capture
+Layer 7: CI/CD Gates         → ephemeral jobs, short-lived credentials
 ```
 
 **Kill-switch 架構**（核心原則）：
@@ -185,8 +185,8 @@ Windows: %ProgramData%\Claude\managed-settings.json（Group Policy）
 - AI 任務持續時間每 4 個月翻倍（前：7 個月）
 
 **[個人宣稱] 成本節省案例**（Branch8）：
-- 6 人分散式團隊 8 週 -72%（$2,400->$680/月）
-- Vietnam 子團隊：session 成本 $2.87->$0.94（scope-limited sessions）
+- 6 人分散式團隊 8 週 -72%（$2,400→$680/月）
+- Vietnam 子團隊：session 成本 $2.87→$0.94（scope-limited sessions）
 
 ---
 
@@ -200,7 +200,7 @@ Addy Osmani 的分析（source-8）提供最完整的三模式比較：
 |------|---------|-----------|---------|
 | Subagents | 3-10 並行任務，已知依賴 | ~220K 中性 | 父 orchestrator 手動管理 |
 | Agent Teams | 需要 peer messaging 的複雜任務 | 線性增長 | 共享任務清單 + 依賴自動解析 |
-| Dynamic Workflows | 未知範圍（security audit/大型遷移） | 可能 100 subagents -> $50-200/run | Claude 動態生成 |
+| Dynamic Workflows | 未知範圍（security audit/大型遷移） | 可能 100 subagents → $50-200/run | Claude 動態生成 |
 
 **Agent Teams 啟用**：`export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`
 
@@ -215,18 +215,18 @@ Addy Osmani 的分析（source-8）提供最完整的三模式比較：
 
 ```
 Pick（從 tasks.json 選任務）
-  -> Implement（只做這個任務）
-  -> Validate（測試/類型/lint）
-  -> Commit（通過才 commit，更新狀態）
-  -> Reset（清除 agent context）
-  -> 回到 Pick
+  → Implement（只做這個任務）
+  → Validate（測試/類型/lint）
+  → Commit（通過才 commit，更新狀態）
+  → Reset（清除 agent context）
+  → 回到 Pick
 ```
 
 **持久記憶跨 Reset**：git commit 歷史 + progress log + tasks.json + AGENTS.md
 
 **防止 AGENTS.md 退化**（學術數據，source-8）：
 > "LLM-generated AGENTS.md files offer no benefit and can marginally reduce success rates (~3%) while increasing inference costs by 20%."
--> **只有人類應修改 AGENTS.md**；agent 可提案，lead 審核後合併
+→ **只有人類應修改 AGENTS.md**；agent 可提案，lead 審核後合併
 
 ### 4.3 多 Agent 去中心化 Context 管理
 
@@ -266,10 +266,10 @@ Boris Cherny（Claude Code 創建者）定義（source-3）：
 
 **五層作用域**（last scope wins）：
 ```
-~/.claude/CLAUDE.md          -> Global（個人跨專案預設）
-./CLAUDE.md                  -> Project（版本控制，共享）
-./CLAUDE.local.md            -> Local Secret（.gitignore，個人筆記）
-./src/CLAUDE.md              -> Folder（模組級覆蓋）
+~/.claude/CLAUDE.md          → Global（個人跨專案預設）
+./CLAUDE.md                  → Project（版本控制，共享）
+./CLAUDE.local.md            → Local Secret（.gitignore，個人筆記）
+./src/CLAUDE.md              → Folder（模組級覆蓋）
 ```
 
 **精確度決定遵循率**：
@@ -295,14 +295,14 @@ Boris Cherny（Claude Code 創建者）定義（source-3）：
 
 **原則 3 — 結構化解析優於 regex**：hook 輸入是 JSON，`jq .command` 比 regex 解析整個字串更不脆弱。
 
-### 5.3 Block->Rewrite->Verify 自愈迴圈
+### 5.3 Block→Rewrite→Verify 自愈迴圈
 
 `2026-06-07-http-hooks-cicd-github-actions` 記錄的模式：
 
 ```
-hook block -> 把 reason 注入 Claude active context
-          -> Claude 讀取後自行修正
-          -> 直到通過 hook
+hook block → 把 reason 注入 Claude active context
+          → Claude 讀取後自行修正
+          → 直到通過 hook
 ```
 
 **可靠性設計**：
@@ -313,13 +313,13 @@ hook block -> 把 reason 注入 Claude active context
 
 `2026-06-07-advanced-workflow-writer-reviewer-fanout` 的設計論：
 
-- CLAUDE.md 每 session 全量載入 -> 把 workflow 指示塞進 CLAUDE.md 每次浪費 token
-- Skills 按需觸發 -> 只有被呼叫時才載入
+- CLAUDE.md 每 session 全量載入 → 把 workflow 指示塞進 CLAUDE.md 每次浪費 token
+- Skills 按需觸發 → 只有被呼叫時才載入
 - **設計原則**：CLAUDE.md 放身份認同（who you are）+ 硬規則；Skills 放工作流程（how to do X）
 
 **Skill 激活率問題**（source-7）：
 - 自然觸發 ~20%
-- UserPromptSubmit hook 注入評估邏輯後 -> **~84%**
+- UserPromptSubmit hook 注入評估邏輯後 → **~84%**
 
 **解決方案**（`.claude/settings.json`）：
 ```json
@@ -393,8 +393,8 @@ export CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING=1
 Graphify（`2026-06-07-graphify-ast-71x-token-reduction`）的 PreToolUse hook 方案：
 
 - **機制**：攔截 Glob/Grep 呼叫，透明注入預建 AST 知識圖譜 context
-- **數字**（個人宣稱，50K 行 codebase）：12,000-18,000 -> <2,000 tokens/session（-71x）
-- **隱私架構**：Pass 1 本地 Tree-sitter 解析（不出機器）-> Pass 3 只傳 docstring
+- **數字**（個人宣稱，50K 行 codebase）：12,000-18,000 → <2,000 tokens/session（-71x）
+- **隱私架構**：Pass 1 本地 Tree-sitter 解析（不出機器）→ Pass 3 只傳 docstring
 - **特性**：複利效益跨 session 才顯現，是長期投資
 
 ---
@@ -409,15 +409,15 @@ Graphify（`2026-06-07-graphify-ast-71x-token-reduction`）的 PreToolUse hook �
 **三 Agent 架構**：
 
 ```
-tdd-test-writer  (RED)    -> 只有 Read/Glob/Grep/Write/Edit/Bash
-                            -> 必須確認測試失敗才返回
+tdd-test-writer  (RED)    → 只有 Read/Glob/Grep/Write/Edit/Bash
+                            → 必須確認測試失敗才返回
                             
-tdd-implementer  (GREEN)  -> 相同工具集
-                            -> 原則：只寫測試要求的代碼
-                            -> 必須確認測試通過才返回
+tdd-implementer  (GREEN)  → 相同工具集
+                            → 原則：只寫測試要求的代碼
+                            → 必須確認測試通過才返回
                             
-tdd-refactorer  (REFACTOR) -> 決策框架：何時重構有益
-                             -> 可合法返回「不需要重構」+ 理由
+tdd-refactorer  (REFACTOR) → 決策框架：何時重構有益
+                             → 可合法返回「不需要重構」+ 理由
 ```
 
 **Gate 語言**：「Do NOT proceed until test fails/passes」比指導性語言更有效。
@@ -427,11 +427,11 @@ tdd-refactorer  (REFACTOR) -> 決策框架：何時重構有益
 `2026-06-07-claude-code-spec-workflow` 的持久 steering 層：
 
 ```
-product.md    -> 產品目標與約束（一次定義，所有 spec 繼承）
-tech.md       -> 技術決策與架構（一次定義）
-structure.md  -> 代碼結構映射（一次定義）
+product.md    → 產品目標與約束（一次定義，所有 spec 繼承）
+tech.md       → 技術決策與架構（一次定義）
+structure.md  → 代碼結構映射（一次定義）
 
-spec-*.md     -> 繼承三個 steering docs，只需描述這個變更做什麼
+spec-*.md     → 繼承三個 steering docs，只需描述這個變更做什麼
 ```
 
 **Token 節省**：60-80%（主要來源：快取 + 批量模板載入）
@@ -458,8 +458,8 @@ spec-*.md     -> 繼承三個 steering docs，只需描述這個變更做什麼
 
 **自我演化機制**：
 1. Tracing-first 設計：每個 Agent 執行產生完整 Execution Snapshot（per-step tokens/cost/cache hit/call chain/error context）
-2. Error Pattern 自動 bucket 化：按 provider/errorType/status/message 分類 -> 匹配已知模式 -> 自動修復 user-side 錯誤 -> PR 提交
-3. 9 輪 inspection 後：pattern library 31->104（飽和）；Agent 成功率 75%->95%+；自動發現 20+ Harness self-bug
+2. Error Pattern 自動 bucket 化：按 provider/errorType/status/message 分類 → 匹配已知模式 → 自動修復 user-side 錯誤 → PR 提交
+3. 9 輪 inspection 後：pattern library 31→104（飽和）；Agent 成功率 75%→95%+；自動發現 20+ Harness self-bug
 
 **Signal density moat**（決定 self-evolution 天花板）：
 - 消費者產品（10,000+ agent runs/day）：幾分鐘內獲得 pattern 反饋
@@ -467,7 +467,7 @@ spec-*.md     -> 繼承三個 steering docs，只需描述這個變更做什麼
 
 ### 8.2 Skillify 工作流（@garrytan）
 
-> "after a task works, say 'skillify it' -> agent auto-generates 7 files"
+> "after a task works, say 'skillify it' → agent auto-generates 7 files"
 
 7 個自動生成的文件：
 1. markdown skill（主體）
@@ -482,7 +482,7 @@ spec-*.md     -> 繼承三個 steering docs，只需描述這個變更做什麼
 - 舊經濟學（貴 LLM）：用大量代碼包裝 LLM 呼叫
 - 新經濟學（便宜模型 + 可寫代碼）：指示放 markdown，只在真正有幻覺風險的地方才加確定性層
 
-**Token 成本軌跡**（個人預測）：$100K/年 現在 -> $10K -> $1K -> ~$100 至 2028 年底
+**Token 成本軌跡**（個人預測）：$100K/年 現在 → $10K → $1K → ~$100 至 2028 年底
 
 ---
 
@@ -530,7 +530,7 @@ export CLAUDE_CODE_SUBAGENT_MODEL="claude-sonnet-4-5-20250929"
 **P1-3：Effort Routing 實施**
 - 預設 `/effort high`（cost<$1，quality 93/100）
 - 只對「無法在腦中完整 hold 的跨檔案問題」升級 `/effort xhigh`
-- 月費預估：從全 xhigh ~$4,700 -> smart routing ~$1,700
+- 月費預估：從全 xhigh ~$4,700 → smart routing ~$1,700
 
 **P1-4：CLAUDE.md 精確度稽核**
 - 稽核所有現有規則是否符合「精確指令」標準
@@ -575,7 +575,7 @@ export CLAUDE_CODE_SUBAGENT_MODEL="claude-sonnet-4-5-20250929"
 | Branch8 成本優化 | [企業自述] | ★★★☆☆ | -72%（6 人，8 週） |
 | Mnilax effort 量化 | [個人自述] | ★★★☆☆ | 5 任務×3 跑，機器評分 |
 | @garrytan Skillify | [個人自述] | ★★★☆☆ | 350 skill packs |
-| @arvin17x LobeHub | [個人自述] | ★★★☆☆ | 75%->95% 成功率 |
+| @arvin17x LobeHub | [個人自述] | ★★★☆☆ | 75%→95% 成功率 |
 | Boris Cherny CLAUDE.md | [官方引述] | ★★★★☆ | ~70% rule adherence |
 | Addy Osmani multi-agent | [業界領袖] | ★★★★☆ | -3% LLM-gen AGENTS.md |
 
@@ -588,15 +588,15 @@ export CLAUDE_CODE_SUBAGENT_MODEL="claude-sonnet-4-5-20250929"
 Check Point Research（2026-02-25 公開，source-11）記錄了三個已修補但設計層面影響持續的漏洞：
 
 **CVE-2025-59536（CVSS 8.7）— RCE via Hooks**
-- 攻擊路徑：惡意 repo -> .claude/settings.json -> hook 在 trust dialog 前執行 -> 任意 shell 命令
+- 攻擊路徑：惡意 repo → .claude/settings.json → hook 在 trust dialog 前執行 → 任意 shell 命令
 - 根本原因：pre-trust window 架構性問題（hooks 在 consent 前執行）
 
 **CVE-2026-21852（CVSS 5.3）— API Key 洩漏**
-- 攻擊路徑：.claude/settings.json 覆寫 `ANTHROPIC_BASE_URL` -> API request（含 auth header）在 trust dialog 前傳送 -> API key 被截取
+- 攻擊路徑：.claude/settings.json 覆寫 `ANTHROPIC_BASE_URL` → API request（含 auth header）在 trust dialog 前傳送 → API key 被截取
 - 擴大影響：被竊 API key 可存取整個 workspace 共享文件
 
 **50 subcommand 上限 bypass**
-- 攻擊路徑：惡意 bash command 包含 >50 個 subcommand -> 超過上限後 deny rules 不生效，改為「詢問」-> 用戶可能不察覺地授權
+- 攻擊路徑：惡意 bash command 包含 >50 個 subcommand → 超過上限後 deny rules 不生效，改為「詢問」→ 用戶可能不察覺地授權
 
 ### 10.2 供應鏈攻擊面
 
@@ -669,7 +669,7 @@ grep -r "ANTHROPIC_BASE_URL" .claude/ 2>/dev/null
 | Anthropic postmortem（InfoQ） | [官方媒體] | ★★★★★ | 三根本原因時間序 |
 | Sean Moran（Medium）| [個人宣稱] | ★★★☆☆ | 長 session 範式轉移 |
 | MCP production guide | [個人宣稱] | ★★★☆☆ | $30-70/月 MCP server 成本 |
-| LobeHub @arvin17x | [個人宣稱] | ★★★☆☆ | 75%->95% 成功率（9 輪 inspection） |
+| LobeHub @arvin17x | [個人宣稱] | ★★★☆☆ | 75%→95% 成功率（9 輪 inspection） |
 | Mnilax effort 量化 | [個人宣稱] | ★★★☆☆ | high=93 vs xhigh=95（5 任務×3 跑） |
 | Branch8 成本優化 | [企業自述] | ★★★☆☆ | -72%（6 人，8 週實測） |
 

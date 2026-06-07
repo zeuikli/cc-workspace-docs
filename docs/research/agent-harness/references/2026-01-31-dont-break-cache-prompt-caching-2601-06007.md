@@ -69,13 +69,13 @@ Cache hits are billed at a lower rate:
 The paper identifies the most common sources of cache invalidation in agentic workflows:
 
 ### 1. Dynamic Tool Results
-Tool outputs (file reads, web fetches, shell commands) vary between calls -> any token in the cached prefix after a tool result is invalidated.
+Tool outputs (file reads, web fetches, shell commands) vary between calls → any token in the cached prefix after a tool result is invalidated.
 
 ### 2. Timestamps and UUIDs
 System prompts or messages containing `datetime.now()`, request IDs, or session UUIDs break the cache prefix on every call.
 
 ### 3. MCP (Model Context Protocol) Servers
-MCP tool definitions are injected dynamically at runtime. If MCP tool lists change between calls (e.g., server restarts, capability negotiation), the tool block in the system prompt changes -> **MCP breaks cache boundaries**.
+MCP tool definitions are injected dynamically at runtime. If MCP tool lists change between calls (e.g., server restarts, capability negotiation), the tool block in the system prompt changes → **MCP breaks cache boundaries**.
 
 ### 4. Conversation Turn Insertion
 Inserting a new user/assistant turn in the middle of a cached conversation invalidates everything after the insertion point.
@@ -113,10 +113,10 @@ Inserting a new user/assistant turn in the middle of a cached conversation inval
 ### Anti-Patterns to Avoid
 
 ```
-❌ System prompt with datetime.now()  ->  breaks cache every second
-❌ Tool results placed before cache_control marker  ->  invalidates on every tool call
-❌ MCP server restart between calls  ->  tool list changes, cache miss
-❌ UUID in system prompt header  ->  unique per session, zero cache hits
+❌ System prompt with datetime.now()  →  breaks cache every second
+❌ Tool results placed before cache_control marker  →  invalidates on every tool call
+❌ MCP server restart between calls  →  tool list changes, cache miss
+❌ UUID in system prompt header  →  unique per session, zero cache hits
 ```
 
 ### Recommended Prompt Structure

@@ -36,9 +36,9 @@
 ```markdown
 ## Cache 健康指標（agentic 生產紅線）
 - `cache_hit_rate = cache_read_input_tokens / input_tokens`；長跑 session 應 > 0.7。
-- 觸發 incident：hit_rate 驟降 -> 先查是否 mid-session 切了 model/tool/CLAUDE.md（A.4 四大破快取源）。
+- 觸發 incident：hit_rate 驟降 → 先查是否 mid-session 切了 model/tool/CLAUDE.md（A.4 四大破快取源）。
 - 動態資訊（時間戳/檔變更）一律經 `<system-reminder>` 注入 messages，**不寫進 CLAUDE.md 前綴**。
-- Agentic 長任務（工具迴圈 >5min）-> 啟用 1h TTL（`ENABLE_PROMPT_CACHING_1H=1`），代價 2× 寫入費但避免 mid-loop cache miss。
+- Agentic 長任務（工具迴圈 >5min）→ 啟用 1h TTL（`ENABLE_PROMPT_CACHING_1H=1`），代價 2× 寫入費但避免 mid-loop cache miss。
 ```
 **驗證**：`grep -c "cache_hit_rate" .claude/rules/context-management.md` ≥ 1；`bash scripts/healthcheck.sh` FAIL=0；`wc -c` 確認 auto-load byte 仍 < 18,000 上限。
 **風險**：增加 auto-load byte。先量增量 `wc -c` 再決定是否納入 auto-load 或改 on-demand。
@@ -47,13 +47,13 @@
 
 **動作**：建 path-scoped on-demand 規則檔（編輯 `.claude/rules/`、`CLAUDE.md`、`research/prompts/` 時觸發），承載「不夠高頻、不該佔 auto-load」的完整知識：cross-provider 決策表、cross-model 遷移 re-express 原則、structured-output 陷阱、eval-driven prompt 迭代。
 
-**理由**：報告 Section A.1/B.4/C.2 是「需要時查」而非「每 session 載入」-> on-demand 是正確 NLAH placement（避免無謂 auto-load byte 膨脹，符合 Framework Integrity）。
+**理由**：報告 Section A.1/B.4/C.2 是「需要時查」而非「每 session 載入」→ on-demand 是正確 NLAH placement（避免無謂 auto-load byte 膨脹，符合 Framework Integrity）。
 **驗證**：檔案存在、有 frontmatter schema、`README.md` Path-scoped 表新增一列；healthcheck PASS。
 
 ### Step 3 — prompt-as-code：把 auto-load 規則當 prompt artifact 做 eval-driven 版控（高 ROI，呼應既有 autoload-evolution）
 
 **動作**：本 harness 已有 `/autoload-evolution` 閉環 + Falsifiable Prediction 機制（見 MEMORY.md）。將報告 C.4「Better Prompts Hurt」+ B.1 prompt-as-code 整合進該閉環的驗收標準：
-- 每次改 auto-load 規則 -> 必附 falsifiable prediction（已有慣例）**+ 明確 eval 條件**（R1–R12 behavioral 存活、healthcheck FAIL=0、byte cap）。
+- 每次改 auto-load 規則 → 必附 falsifiable prediction（已有慣例）**+ 明確 eval 條件**（R1–R12 behavioral 存活、healthcheck FAIL=0、byte cap）。
 - 規則變更走 feature branch + PR（已有），等同 prompt registry 的 staged deployment（B.1）。
 **驗證**：下次 `/autoload-evolution` cycle 套用此標準；git log 顯示規則變更皆經 PR。
 **現況**：本 harness 已 80% 符合（Falsifiable Prediction + PR 流程）— 此步是「形式化既有實踐」，非新建。
@@ -88,7 +88,7 @@
 | 4 | Step 4（prompts INDEX 備註） | 極低 | grep 驗證 |
 | 5 | Step 3（prompt-as-code 形式化） | 流程改變 | 下次 autoload-evolution cycle |
 
-**所有 Step 走 `/autoload-evolution` 閉環：≤1 規則/cycle、≤50 行 diff、eval 回歸 ≥5pp -> `git revert`**（本 harness 既有約束，不另立）。
+**所有 Step 走 `/autoload-evolution` 閉環：≤1 規則/cycle、≤50 行 diff、eval 回歸 ≥5pp → `git revert`**（本 harness 既有約束，不另立）。
 
 ---
 

@@ -139,11 +139,11 @@ At very long contexts (200K+ tokens), long-context models suffer from the "Lost 
 
 ```
 Conversation length?
-  ≤ 10 turns -> Long-context (better accuracy, comparable cost)
-  11-30 turns, accuracy-critical -> Long-context (better accuracy, higher cost)
-  11-30 turns, cost-constrained -> Memory (26% cheaper, 25-35pp accuracy cost)
-  30+ turns, cost-constrained -> Memory (40%+ cheaper, accept accuracy trade-off)
-  200K+ tokens -> Hybrid (memory for oldest turns, full context for recent 50K)
+  ≤ 10 turns → Long-context (better accuracy, comparable cost)
+  11-30 turns, accuracy-critical → Long-context (better accuracy, higher cost)
+  11-30 turns, cost-constrained → Memory (26% cheaper, 25-35pp accuracy cost)
+  30+ turns, cost-constrained → Memory (40%+ cheaper, accept accuracy trade-off)
+  200K+ tokens → Hybrid (memory for oldest turns, full context for recent 50K)
 ```
 
 ### For Coding Agents Specifically

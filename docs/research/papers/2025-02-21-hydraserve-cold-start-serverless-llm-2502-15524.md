@@ -25,6 +25,6 @@ topic: cold-start / serverless LLM / startup latency
 - SLO attainment 改善 **1.43×–1.74×**（vs baselines）
 
 ## 對 cc-workspace 的遷移啟示
-- **Overlap stages** -> SessionStart hook 串行 spawn（session-init 592ms + 其他）可改並行/async（`async: true`）
-- **Proactive distribution / pre-warm** -> prompt cache pre-warming（`max_tokens:0`）保持 cache 暖態
+- **Overlap stages** → SessionStart hook 串行 spawn（session-init 592ms + 其他）可改並行/async（`async: true`）
+- **Proactive distribution / pre-warm** → prompt cache pre-warming（`max_tokens:0`）保持 cache 暖態
 - 核心類比：冷啟動延遲可由**架構重疊與預備**消除，而非僅靠縮減載入量

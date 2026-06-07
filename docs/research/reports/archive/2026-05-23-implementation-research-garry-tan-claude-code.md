@@ -103,9 +103,9 @@ WARN 項目（架構已知）：
 
 1. **cc-workspace 已達 Thin Harness 目標**（CLAUDE.md ≤ 200 行、@auto-load rules）；當前需著手兩大缺口：**Skill Files 標準化**（無 SKILL.md.tmpl 模板）與 **RESOLVER 路由機制**（手動匹配，非自動 intent 偵測）。
 
-2. **Claude Code 洩漏揭示三層記憶系統**（Session context -> Auto Memory append logs -> autoDream consolidation）；可透過現有 hooks 與手動 workflow 模擬 25KB 記憶預算，達成 80% 效果而無需等待 KAIROS/autoDream 釋出。
+2. **Claude Code 洩漏揭示三層記憶系統**（Session context → Auto Memory append logs → autoDream consolidation）；可透過現有 hooks 與手動 workflow 模擬 25KB 記憶預算，達成 80% 效果而無需等待 KAIROS/autoDream 釋出。
 
-3. **Diarization 能力**（多源融合 -> 單頁 profile）可立即實作，作為 `/research-hub` skill 的升級方案；YC founder profile 分析流程可泛化至任何角色分析（工程師、投資人、競爭對手）。
+3. **Diarization 能力**（多源融合 → 單頁 profile）可立即實作，作為 `/research-hub` skill 的升級方案；YC founder profile 分析流程可泛化至任何角色分析（工程師、投資人、競爭對手）。
 
 ---
 
@@ -145,7 +145,7 @@ Frontmatter 定義 trigger words：「debug」「root cause analysis」「invest
 
 **成功條件**：
 - 執行 `/investigate` 自動進行四階段流程
-- 不修正代碼即完成「症狀 -> 模式匹配 -> 假設驗證」
+- 不修正代碼即完成「症狀 → 模式匹配 → 假設驗證」
 
 **預估工時**：3–4 小時
 
@@ -155,13 +155,13 @@ Frontmatter 定義 trigger words：「debug」「root cause analysis」「invest
 
 ### [P1] 建立 RESOLVER.md（三層快取路由）
 
-**目標**：實作 task type -> skill 的自動路由，避免手動選擇。
+**目標**：實作 task type → skill 的自動路由，避免手動選擇。
 
 **實作方式**：在 `skills/RESOLVER.md` 建立三層架構：
 
-- L1 Trigger Words (常駐載入)：「investigate」-> /investigate、「review」-> /review 等
+- L1 Trigger Words (常駐載入)：「investigate」→ /investigate、「review」→ /review 等
 - L2 On-Demand Skills (按需載入)：讀取 skills/INDEX.md，parse 使用者 query，返回 top-3 候選
-- L3 On-Match Skills (執行時載入)：檢查依賴 -> 自動串接前置 skill
+- L3 On-Match Skills (執行時載入)：檢查依賴 → 自動串接前置 skill
 
 生成 `skills/INDEX.md`（從所有 `.tmpl` auto-generated），包含 description + triggers 欄位供路由使用。
 
@@ -192,7 +192,7 @@ Frontmatter 定義 trigger words：「debug」「root cause analysis」「invest
 
 **預估工時**：2–3 小時
 
-**參考**：當前 CLAUDE.md；Garry Tan「20,000 行 -> 200 行指標」經驗
+**參考**：當前 CLAUDE.md；Garry Tan「20,000 行 → 200 行指標」經驗
 
 ---
 
@@ -327,7 +327,7 @@ KAIROS 15 秒 blocking budget 模擬：「PostToolUse 執行 ≤ 5 秒；若超�
 
 ### [P0] 單主題全源融合 Brief 生成 Skill
 
-**目標**：讀取主題所有材料 -> 產出一頁結構化 brief（如 founder profile）。
+**目標**：讀取主題所有材料 → 產出一頁結構化 brief（如 founder profile）。
 
 **實作方式**：在 `skills/research-hub.md.tmpl` 實作三層融合：
 
@@ -485,7 +485,7 @@ One-Page Brief 格式：核心能力、決策模式、潛在盲點、建議（1�
 ```markdown
 ---
 name: /investigate
-description: "四階段系統性 root-cause 分析：症狀 -> 模式 -> 假設 -> 驗證"
+description: "四階段系統性 root-cause 分析：症狀 → 模式 → 假設 → 驗證"
 triggers:
   - "investigate"
   - "debug"
@@ -536,7 +536,7 @@ Propose 3 root cause hypotheses. For each:
 3. Run the test
 4. Record result (confirm / deny / inconclusive)
 
-If all 3 are denied -> STOP. Seek second opinion or escalate.
+If all 3 are denied → STOP. Seek second opinion or escalate.
 
 ## Phase 4: Implementation (Minimal Fix)
 
@@ -558,7 +558,7 @@ Then:
 ```markdown
 ---
 name: /research-hub
-description: "多源融合 diarization：GitHub + docs -> 一頁 profile brief"
+description: "多源融合 diarization：GitHub + docs → 一頁 profile brief"
 triggers:
   - "research"
   - "analyze subject"
@@ -672,9 +672,9 @@ Constraint: ≤ 500 words total.
 
 ### 使用範例
 
-- 開工時檢查：`/usage` -> 15% -> 🟢 -> 無限制
-- 研究中途檢查：`/usage` -> 72% -> 🟠 -> 執行 `/compact <hint>`
-- 接近限制：`/usage` -> 88% -> 🔴 -> 停止新工作；準備 `/clear`
+- 開工時檢查：`/usage` → 15% → 🟢 → 無限制
+- 研究中途檢查：`/usage` → 72% → 🟠 → 執行 `/compact <hint>`
+- 接近限制：`/usage` → 88% → 🔴 → 停止新工作；準備 `/clear`
 ```
 
 ### 修改 4：core.md 擴展 Rule 5 判斷準則
@@ -692,18 +692,18 @@ Constraint: ≤ 500 words total.
   判斷的特徵：多個合理解釋並存；無唯一正確答案；後續驗證可糾正。
   
   具體例：
-  - 「這個 bug 根本原因是什麼？」-> Latent（多個假設、需驗證）
-  - 「摘要這 10 篇文章的共同主題」-> Latent（多種有效摘要方式）
-  - 「分類這 100 個 issue 的優先級」-> Latent（優先級判斷存在主觀性）
+  - 「這個 bug 根本原因是什麼？」→ Latent（多個假設、需驗證）
+  - 「摘要這 10 篇文章的共同主題」→ Latent（多種有效摘要方式）
+  - 「分類這 100 個 issue 的優先級」→ Latent（優先級判斷存在主觀性）
 
 - **確定性代碼做「決定」（Deterministic）**：路由 / 重試 / HTTP status code / 數學計算 ❌
 
   決定的特徵：唯一正確答案；無法由 LLM 推翻；失敗有確定後果。
   
   具體例反模式：
-  - ❌ 「如果 API 返回 500，由 LLM 判斷是否重試」-> 應改為「5xx 自動重試 3 次，指數退避」
-  - ❌ 「由 LLM 決定要不要合併這個 PR」-> 應改為「自動化 lint/test gate，人工審查 code quality」
-  - ❌ 「根據 LLM 輸出決定路由到 /api/v1 或 /api/v2」-> 應改為「精確檢查 schema，確定性分流」
+  - ❌ 「如果 API 返回 500，由 LLM 判斷是否重試」→ 應改為「5xx 自動重試 3 次，指數退避」
+  - ❌ 「由 LLM 決定要不要合併這個 PR」→ 應改為「自動化 lint/test gate，人工審查 code quality」
+  - ❌ 「根據 LLM 輸出決定路由到 /api/v1 或 /api/v2」→ 應改為「精確檢查 schema，確定性分流」
 ```
 
 ---
@@ -739,9 +739,9 @@ fi
 - 建立臨時索引
 
 **Phase 3: Consolidate**
-- 合併重複：相同主題多次提及 -> 統一版本 + consolidated timestamp
+- 合併重複：相同主題多次提及 → 統一版本 + consolidated timestamp
 - 消除矛盾：若條目 A 與 B 衝突，保留較新版本 + 標註「superseded」
-- 轉換時間：相對時間（「上週」、「3 天前」）-> 絕對 ISO 8601（「2026-05-20」）
+- 轉換時間：相對時間（「上週」、「3 天前」）→ 絕對 ISO 8601（「2026-05-20」）
 - 重建索引：確保跨條目 reference 仍然有效
 
 **Phase 4: Prune**
@@ -789,7 +789,7 @@ fi
 # John Doe Founder Profile Brief
 
 ## Core Capabilities
-- **Backend architecture**: 47% of commits in infra/, scaling from 1K -> 10K RPS
+- **Backend architecture**: 47% of commits in infra/, scaling from 1K → 10K RPS
 - **DevOps/automation**: Terraform + CI/CD setup, 3 microservices deployed
 - **Communication**: Clear commit messages, comprehensive README, weekly blog posts
 
@@ -1052,7 +1052,7 @@ scripts/latent-audit.sh
 - **CAR 14 構件 Scorecard（13/14，92.9%）**的評估框架仍有效；C3 Filesystem Boundary 的「有意識技術債」描述仍準確。
 - **Auto-load token 量測**（~3,467 tokens，≤ 4,500 cap）：auto-load 規則在報告後無新增，餘裕仍充足。
 - **Latent vs Deterministic 分離（Rule 5）**設計原則仍是 core.md 的核心，`latent-audit.sh` 已驗證 0 紅旗。
-- **Part D diarization 已實作**：`research-hub:gh-profile` 子模式已在 `.claude/skills/research-hub/SKILL.md` 中確認存在，且含 GitHub MCP 三層 fallback（MCP -> WebFetch -> git clone）。
+- **Part D diarization 已實作**：`research-hub:gh-profile` 子模式已在 `.claude/skills/research-hub/SKILL.md` 中確認存在，且含 GitHub MCP 三層 fallback（MCP → WebFetch → git clone）。
 
 ### ⚠️ 可能過期或需要修正的資訊
 

@@ -2,7 +2,7 @@
 title: "Workspace Harness Alignment 規格書"
 date: 2026-06-07
 status: PROPOSED — 待使用者核准後執行
-disposition_authority: 破壞性項（routing 改動）-> core.md APPLY gate；非破壞性項可即執行
+disposition_authority: 破壞性項（routing 改動）→ core.md APPLY gate；非破壞性項可即執行
 source: 全 workspace 盤點（兩路 researcher + 主對話親驗）
 type: alignment-spec
 ---
@@ -11,7 +11,7 @@ type: alignment-spec
 
 > **目的**：讓全 workspace 的檔案都依循 CLAUDE.md / AGENTS.md / The Loop 六階段準則。
 > **核心紀律**：本規格書是 PROPOSE 產物，非授權執行。每條標「即執行」或「待核准」。
-> **方法**：兩路 researcher 並行盤點 -> 主對話親驗關鍵數字 -> 規格書 -> AskUserQuestion -> APPLY。
+> **方法**：兩路 researcher 並行盤點 → 主對話親驗關鍵數字 → 規格書 → AskUserQuestion → APPLY。
 
 ---
 
@@ -56,8 +56,8 @@ type: alignment-spec
 AGENTS.md §6 cross-reference 表的 12 個 refs 全部實際存在。**無 dead link。**
 
 ### B1 — Hooks exit code 語義全正確
-- PreToolUse block -> `exit 2` ✓（block-dangerous / protect-sensitive-files / pre-compact / pre-commit-review）
-- PostToolUse / Stop -> `exit 0` ✓
+- PreToolUse block → `exit 2` ✓（block-dangerous / protect-sensitive-files / pre-compact / pre-commit-review）
+- PostToolUse / Stop → `exit 0` ✓
 - memory-sync.sh `exit 1`（line 44）= dead code（ADR 停用後 `exit 0` 在 line 17 早返回），**不影響行為** ✓
 
 ### F1 — research/ INDEX.md 新鮮度正常
@@ -137,7 +137,7 @@ AGENTS.md §6 cross-reference 表的 12 個 refs 全部實際存在。**無 dead
 **修正**：更新 MEMORY.md 待辦節中「19,000 近滿監控」一行：
 
 ```diff
-- [ ] **19,000 近滿監控**：~~餘 45~~ -> **餘 545**，下次 auto-load 增補前重新評估
+- [ ] **19,000 近滿監控**：~~餘 45~~ → **餘 545**，下次 auto-load 增補前重新評估
 + [ ] **19,000 近滿監控**：實測 18,984/19,000，**餘裕 16B**（2026-06-07 量測）。任何 auto-load 增補前必先壓出空間。
 ```
 

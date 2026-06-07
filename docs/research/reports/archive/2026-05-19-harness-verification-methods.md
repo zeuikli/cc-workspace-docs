@@ -15,12 +15,12 @@
 3. **如何持續完善 Harness 準則？** — Ratchet 升格機制：每個驗證失敗都是自動升格的觸發點。
 
 **核心數據**：
-- 同一個 Opus 4.6，harness 改進後 Terminal-Bench 2.0 從 52.8 -> 66.5（+13.7pp），**不換模型**
-- Can.ac 案例：工具格式調整一項，同一模型準確率 6.7% -> 68.3%（**10 倍提升**）
+- 同一個 Opus 4.6，harness 改進後 Terminal-Bench 2.0 從 52.8 → 66.5（+13.7pp），**不換模型**
+- Can.ac 案例：工具格式調整一項，同一模型準確率 6.7% → 68.3%（**10 倍提升**）
 - SWE-Bench Pro：同一 Opus 4.5，三種不同 harness = 50.2%–55.4%（5.2pp 差距）
 - Claude Code TerminalBench 2.0：92.1% vs Codex CLI 77.3%（14.8pp 差距）
 - 88% AI agent 專案無法上線，主因 harness 太脆弱（Pinggy.io 統計）
-- Mnilax 8 週測試：41% -> 3% 錯誤率（50 tasks × 30 codebases × 12 rules）
+- Mnilax 8 週測試：41% → 3% 錯誤率（50 tasks × 30 codebases × 12 rules）
 
 ---
 
@@ -123,7 +123,7 @@ Tejas Kumar（IBM, AI Engineer Europe 2026-05-17）的 Live Demo 結論更直接
 
 **Week 3-6（品質層）**：加入 Hallucination Rate、Tool Selection Accuracy
 - 建立 CI/CD 整合：每次 merge 前自動跑 eval suite
-- 設定 regression threshold（> 0.07-0.10 的 metric delta -> 警報）
+- 設定 regression threshold（> 0.07-0.10 的 metric delta → 警報）
 
 **Week 7+（生產層）**：Cost per Query、P99 Latency
 - 1-2% 生產流量抽樣送人工審查，校準 LLM judge 對齊度
@@ -151,16 +151,16 @@ Ratchet 的獨特之處：**它不是記錄失敗，而是把失敗轉化為防�
 
 ```
 驗證失敗
-  -> 記錄到 RATCHET.md（日期・具體場景・後果・影響評估）
-  -> 評估升格層級
-       ├── 頻率 > 3次/月 -> PreToolUse Hook（執行前阻斷）
-       ├── Skill 相關 -> Known Gotchas（該 skill frontmatter）
-       ├── 可量化 -> PostToolUse Hook（執行後審計）
-       └── 一般性 -> CLAUDE.md rule（觀察 2 週仍反覆 -> 升格）
-  -> 升格到 Hook 後：從 CLAUDE.md 移除對應規則（保持精簡）
+  → 記錄到 RATCHET.md（日期・具體場景・後果・影響評估）
+  → 評估升格層級
+       ├── 頻率 > 3次/月 → PreToolUse Hook（執行前阻斷）
+       ├── Skill 相關 → Known Gotchas（該 skill frontmatter）
+       ├── 可量化 → PostToolUse Hook（執行後審計）
+       └── 一般性 → CLAUDE.md rule（觀察 2 週仍反覆 → 升格）
+  → 升格到 Hook 後：從 CLAUDE.md 移除對應規則（保持精簡）
 ```
 
-**關鍵洞見**：Ratchet 是把「驗證失敗 -> 規則升格 -> 代碼層防護」的閉環。與靜態測試套件不同，Ratchet 是**隨每次失敗自動強化的驗證基礎設施**。
+**關鍵洞見**：Ratchet 是把「驗證失敗 → 規則升格 → 代碼層防護」的閉環。與靜態測試套件不同，Ratchet 是**隨每次失敗自動強化的驗證基礎設施**。
 
 ### 4.3 七條不可壓縮規則的驗證優先序
 
@@ -180,7 +180,7 @@ Ratchet 的獨特之處：**它不是記錄失敗，而是把失敗轉化為防�
 
 | 反模式 | 現象 | 根本原因 | 防範 |
 |--------|------|---------|------|
-| **用相同模型生成和評估** | 評估分數虛高 | Judge inflating | 生成用 Sonnet -> 評估用 Opus，或反之 |
+| **用相同模型生成和評估** | 評估分數虛高 | Judge inflating | 生成用 Sonnet → 評估用 Opus，或反之 |
 | **只看最終結果不看軌跡** | 「通過了錯誤邏輯的正確答案」 | 缺 Trajectory Analysis | 審計每次 tool call 歷史，不只看輸出 |
 | **Keyword matching 替代語意評估** | grep 通過但行為合併後只觸發其中一個 | 缺「context 壓力下行為」測試 | 用 K×M 框架問「移除後在哪個場景犯錯？」 |
 | **Token-only 優化目標** | 達到 token 目標但語意損失 | 單一成功條件 | 雙成功條件：token ≤ 3,500 AND K×M ≥ 90 |
@@ -198,7 +198,7 @@ Ratchet 的獨特之處：**它不是記錄失敗，而是把失敗轉化為防�
 Karpathy（2026-05-01）宣告轉型：**「Context Engineering = 稀缺資源管理」**。CLAUDE.md 不再是「指令文件」，而是「context 的初始分配」——每個 token 都是花掉的 context 預算。
 
 實作影響：
-- CLAUDE.md 類型分類從「越詳細越好」-> 「TYPE A（行為規則）保留，TYPE C（背景說明）刪除」
+- CLAUDE.md 類型分類從「越詳細越好」→ 「TYPE A（行為規則）保留，TYPE C（背景說明）刪除」
 - 目標：每 token 做有用的工作，不載入說明性 context
 
 ### 6.2 Values over Rules（VILA-Lab 2026）
@@ -219,7 +219,7 @@ Tejas Kumar（IBM, 2026-05-17）預測：Agent 在執行任務前**自動產生�
 
 外部研究（The Prompt Shelf, 2026）確認：**Lazy-loading pattern 可回收 40-70% 的每任務 token 消耗**。
 
-路徑：`core auto-load -> on-demand skill -> path-scoped rule`
+路徑：`core auto-load → on-demand skill → path-scoped rule`
 
 ---
 
@@ -244,7 +244,7 @@ Tejas Kumar（IBM, 2026-05-17）預測：Agent 在執行任務前**自動產生�
 - 建立 labeled eval set（至少 20 個典型任務的預期輸出）
 
 **Week 3（持續驗證層）**：
-- Ratchet 週期：每月審查 RATCHET.md，識別 > 3次/月 的失敗模式 -> 升格 Hook
+- Ratchet 週期：每月審查 RATCHET.md，識別 > 3次/月 的失敗模式 → 升格 Hook
 
 ### 7.2 K×M 快速評估腳本
 
@@ -272,22 +272,22 @@ echo "K3: (Manual) 有無觸及任務外的規則？"
 
 按 TYPE 分類每行，依序執行：
 
-1. **TYPE D**（`詳見 xxx.md` 純導航行）-> 全部刪除（零風險）
-2. **TYPE C**（背景說明，無行為動詞）-> 全部刪除（低風險）
-3. **TYPE B**（規則+解釋混合）-> 保留行為動詞，刪除原因說明
-4. **TYPE A**（純行為規則）-> 不得動
+1. **TYPE D**（`詳見 xxx.md` 純導航行）→ 全部刪除（零風險）
+2. **TYPE C**（背景說明，無行為動詞）→ 全部刪除（低風險）
+3. **TYPE B**（規則+解釋混合）→ 保留行為動詞，刪除原因說明
+4. **TYPE A**（純行為規則）→ 不得動
 
 執行後跑 `bash scripts/measure.sh`，目標 ≤ 3,500 tok。
 
 ### 7.4 完善準則的長期路徑
 
 **每次 session 結束**：
-- 新 Gotcha -> 當下記入 RATCHET.md
-- K×M ≥ 90 AND token ≤ 3,500 -> 準則穩定
+- 新 Gotcha → 當下記入 RATCHET.md
+- K×M ≥ 90 AND token ≤ 3,500 → 準則穩定
 
 **每月**：
-- RATCHET.md 失敗頻率審查 -> 升格 Hook
-- CLAUDE.md rules ≥ 15 條 -> 合併觸發頻率最低的
+- RATCHET.md 失敗頻率審查 → 升格 Hook
+- CLAUDE.md rules ≥ 15 條 → 合併觸發頻率最低的
 
 **每季**：
 - `/harness-meta:hmf` 全評（7D HMF）
@@ -302,7 +302,7 @@ echo "K3: (Manual) 有無觸及任務外的規則？"
 
 Boris Cherny（Anthropic）提出：**「After Claude is corrected, update CLAUDE.md directly so the rule evolves with actual codebase knowledge.」**
 
-這與 cc-workspace 目前的「Lesson YYYY-MM-DD: [失敗模式] -> [防範規則]」模式有本質差異：
+這與 cc-workspace 目前的「Lesson YYYY-MM-DD: [失敗模式] → [防範規則]」模式有本質差異：
 
 | 方式 | 效果 | 問題 |
 |------|------|------|
@@ -311,8 +311,8 @@ Boris Cherny（Anthropic）提出：**「After Claude is corrected, update CLAUD
 | **直注 CLAUDE.md rule** | Claude 每次 session 都讀到 | 會增加 token，需平衡 FRAMEWORK-FIRST |
 
 **cc-workspace 的平衡做法**：
-- 重要防範規則 -> 直注 core.md（TYPE A 行為動詞）
-- 一般性記錄 -> RATCHET.md（頻率 > 3次/月 再升格）
+- 重要防範規則 → 直注 core.md（TYPE A 行為動詞）
+- 一般性記錄 → RATCHET.md（頻率 > 3次/月 再升格）
 - Boris 的精神：**不等 Ratchet 升格，當場就改**
 
 ### 8.2 Harness 分層的層次依賴（不可壓縮規則）
@@ -324,23 +324,23 @@ Boris Cherny（Anthropic）提出：**「After Claude is corrected, update CLAUD
 ```
 Layer 1（基礎層）—— 不可觸動：
   R1 Think Before Coding
-      -> R2 Simplicity（需先理解假設才能精簡）
-      -> R3 Surgical Changes（需知道範圍才能只動最小）
+      → R2 Simplicity（需先理解假設才能精簡）
+      → R3 Surgical Changes（需知道範圍才能只動最小）
 
 Layer 2（Agent 執行層）—— 不可觸動：
   R4 Goal-Driven
-      -> R10 Checkpoint（目標需追蹤進度）
-      -> R6 Token Budget（執行需預算以免螺旋）
-  R10 -> R12 Fail Loud（每個 checkpoint 必須顯式）
+      → R10 Checkpoint（目標需追蹤進度）
+      → R6 Token Budget（執行需預算以免螺旋）
+  R10 → R12 Fail Loud（每個 checkpoint 必須顯式）
 
 Layer 3（確定性邊界層）—— 可輕度壓縮：
   R5 LLM-for-Judgment
-      -> R7 Surface Conflicts（判斷/決定分清才能解衝突）
-      -> R8 Read Before Write（衝突辨識需讀現有代碼）
+      → R7 Surface Conflicts（判斷/決定分清才能解衝突）
+      → R8 Read Before Write（衝突辨識需讀現有代碼）
 
 Layer 4（品質保證層）—— 可合併壓縮：
-  R9 Test Intent -> R4（測試意圖是目標的具體化）
-  R11 Convention -> R3（慣例尊重是外科修改的實現）
+  R9 Test Intent → R4（測試意圖是目標的具體化）
+  R11 Convention → R3（慣例尊重是外科修改的實現）
 ```
 
 **黃金規則**：任何 CLAUDE.md 壓縮，必須從 Layer 4 開始，絕不碰 Layer 1/2。
@@ -379,19 +379,19 @@ Layer 4（品質保證層）—— 可合併壓縮：
 
 ```
 overnight-research（外部研究）
-  -> 搜尋三輪：harness verification、CLAUDE.md optimization、12-metric framework
-  -> 抓取 7 個外部來源
-  -> 建立外部知識基線
+  → 搜尋三輪：harness verification、CLAUDE.md optimization、12-metric framework
+  → 抓取 7 個外部來源
+  → 建立外部知識基線
 
 autoresearch:learn（內部合成）
-  -> 掃描全量 workspace 材料（12 個研究目錄）
-  -> 識別外部基線與內部文件的差距
-  -> 輸出 4 個高優先級缺口 + 8 個量化數據點
+  → 掃描全量 workspace 材料（12 個研究目錄）
+  → 識別外部基線與內部文件的差距
+  → 輸出 4 個高優先級缺口 + 8 個量化數據點
 
 交叉驗證
-  -> 共識點（兩邊都確認）：harness > 模型；雙層驗證；Ratchet 升格
-  -> 分歧點（外部有但內部沒有）：Can.ac 10x case、Hook 延遲層次
-  -> 補強（內部有但外部沒有）：K×M 雙評分、7 不可壓縮規則、4 層依賴結構
+  → 共識點（兩邊都確認）：harness > 模型；雙層驗證；Ratchet 升格
+  → 分歧點（外部有但內部沒有）：Can.ac 10x case、Hook 延遲層次
+  → 補強（內部有但外部沒有）：K×M 雙評分、7 不可壓縮規則、4 層依賴結構
 ```
 
 **這個協作模式的價值**：overnight-research 帶來外部視角和量化基準，autoresearch:learn 帶來 workspace 特定深度。兩者交叉驗證消除偏見，共識點可信度高。
@@ -404,17 +404,17 @@ autoresearch:learn（內部合成）
 |------|--------------|---------|
 | QubitTool Agent Harness Eval Guide 2026 | A/B/A/A/A | 驗證方法分類、生產部署 checklist |
 | Towards Data Science 12-Metric Framework | A/A/A/A/A | 四層 12 指標、三週實作路線圖、judge 校準 |
-| rmax.ai Harness Engineering Lever 2026 | A/A/A/A/A | Terminal-Bench 52.8->66.5 案例、4 個 harness 品質維度 |
+| rmax.ai Harness Engineering Lever 2026 | A/A/A/A/A | Terminal-Bench 52.8→66.5 案例、4 個 harness 品質維度 |
 | Pinggy.io AI Harness Engineering | B/A/A/A/A | 88% 專案失敗統計、CI/CD 整合模式 |
 | The Prompt Shelf CLAUDE.md Optimization | B/A/A/A/A | Lazy-loading 40-70% token 回收、TYPE 分類驗證 |
-| cc-workspace HARNESS-CARD / RATCHET / BENCHMARK | A/A/A/A/A | 現行驗證架構、量化基線 87.5%->93.75%、缺口識別 |
+| cc-workspace HARNESS-CARD / RATCHET / BENCHMARK | A/A/A/A/A | 現行驗證架構、量化基線 87.5%→93.75%、缺口識別 |
 | cc-workspace framework-integrity-optimization | A/A/A/A/A | K×M 雙評分框架、7 不可壓縮規則、FRAMEWORK-FIRST |
 | cc-workspace HMF Full Report 2026-05-18 | A/A/A/A/A | 當前 7D 分數（62/70）、Top-3 改進行動 |
 | karpathy-mnilax-best-solution.md | A/A/A/A/A | 14 條規則完整 Mechanical Checklist、FATAL/MAJOR bug class、R13/R14 |
-| cc-workspace ai-articles/HARNESS-ARTICLES-DIGEST | A/A/A/A/A | Can.ac 6.7%->68.3%、SWE-Bench Pro 5.2pp gap、5 跨文章共識點 |
-| bcherny-config-github.md | B/A/A/A/A | CLAUDE.md 直注模式（After correction -> 直接更新 rule）|
+| cc-workspace ai-articles/HARNESS-ARTICLES-DIGEST | A/A/A/A/A | Can.ac 6.7%→68.3%、SWE-Bench Pro 5.2pp gap、5 跨文章共識點 |
+| bcherny-config-github.md | B/A/A/A/A | CLAUDE.md 直注模式（After correction → 直接更新 rule）|
 | nyosegawa-best-practices | B/A/A/A/A | Hook 四分類（Safety/Quality/Completion/Observability）+ 延遲層次 |
-| research/tweets/Mnilax 2026-05-09 | A/A/A/A/A | 一手量化數據（41%->3%、規則上限 14 條 compliance 52%）|
+| research/tweets/Mnilax 2026-05-09 | A/A/A/A/A | 一手量化數據（41%→3%、規則上限 14 條 compliance 52%）|
 
 ---
 
@@ -454,11 +454,11 @@ autoresearch:learn（內部合成）
 
 ### 尚未落地的建議
 
-- ⚠️ **RATCHET.md 機制**：報告第 4.2 節建議建立 RATCHET.md 記錄驗證失敗並升格 Hook，目前 workspace 使用 `memory/MEMORY.md` 的「Lesson YYYY-MM-DD」格式替代，但 RATCHET.md 本身不存在，無失敗頻率追蹤（>3次/月 -> 升格 Hook 的自動化規則未落地）。
+- ⚠️ **RATCHET.md 機制**：報告第 4.2 節建議建立 RATCHET.md 記錄驗證失敗並升格 Hook，目前 workspace 使用 `memory/MEMORY.md` 的「Lesson YYYY-MM-DD」格式替代，但 RATCHET.md 本身不存在，無失敗頻率追蹤（>3次/月 → 升格 Hook 的自動化規則未落地）。
 - ⚠️ **labeled eval set（≥ 100 個 ground truth 案例）**：報告週 2 建議建立，目前沒有正式的 labeled eval set，K×M 評估仍為手動執行。
 - ⚠️ **per-model ablation 測試套件**：報告第 3 節與週 2 建議的 Haiku / Sonnet / Opus 分別測試，目前無正式記錄。
 - ⚠️ **Hallucination Rate / Tool Selection Accuracy 量化追蹤**：報告第 3.1 節的 12-metric 框架中「生成層」和「代理層」指標，目前 workspace 僅有確定性驗證層（healthcheck），語意品質層未量化追蹤。
-- ⚠️ **LLM-as-Judge 用不同模型評估**：報告強調生成用 Sonnet -> 評估用 Opus（或反之），目前 `/deep-review` skill 存在但其模型配置未確認是否強制使用不同於生成模型的評估模型。
+- ⚠️ **LLM-as-Judge 用不同模型評估**：報告強調生成用 Sonnet → 評估用 Opus（或反之），目前 `/deep-review` skill 存在但其模型配置未確認是否強制使用不同於生成模型的評估模型。
 - ⚠️ **R13 PGE 缺文件**：報告第 8.4 節識別此技術債（在 harness-design.md，不在 auto-load），2026-05-25 仍未見修補。
 - ⚠️ **R14 Polyglot 安全審查**：報告識別此缺口，2026-05-25 仍未見 auto-load 補充。
 - ⚠️ **月度 RATCHET.md 失敗頻率審查**：報告第 7.4 節建議每月審查，目前無此流程記錄。

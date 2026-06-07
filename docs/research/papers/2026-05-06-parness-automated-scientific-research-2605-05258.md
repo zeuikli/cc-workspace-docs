@@ -115,9 +115,9 @@ Single-file modules with `@register` decorator + single-document YAML pipelines 
 
 All four pipelines run on the same DAG kernel — demonstrating L1 compliance:
 
-- **ML benchmark loop**: idea -> gate -> experiment loop
-- **Wet-lab biology**: hypothesis -> idea-discussion -> peer-gate -> protocol -> biosafety -> wet-lab -> replicate -> stat-gate
-- **Social-science survey**: RQ -> instrument -> pilot -> IRB -> recruit -> coding -> analyse -> revise
+- **ML benchmark loop**: idea → gate → experiment loop
+- **Wet-lab biology**: hypothesis → idea-discussion → peer-gate → protocol → biosafety → wet-lab → replicate → stat-gate
+- **Social-science survey**: RQ → instrument → pilot → IRB → recruit → coding → analyse → revise
 - **Theory+simulation**: parallel proof attempts and parameter sweeps with evidence merging
 
 ---

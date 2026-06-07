@@ -162,19 +162,19 @@ Every model sees performance degrade on every task comparing Full vs. Sharded, w
 |-------|-----------|--------------|------|
 | Llama3.1-8B | ~27–45 range | lower | ~37% |
 | OLMo-2-13B | ~19 | lower | ~86.5% drop noted |
-| Claude 3 Haiku | ~45 | ~32 | ~91.6% retained -> ~8% drop |
-| GPT-4o-mini | ~76 | ~50 | ~93.0% -> 56.2% |
-| Llama3.3-70B | ~72 | ~52 | ~93.2% -> 64.2% |
-| Phi-4 | ~53 | ~39 | ~99.0% -> 61.7% |
-| Command-A | ~72 | ~45 | ~97.3% -> 60.4% |
-| Llama 4 Scout | ~74 | ~46 | ~91.0% -> 66.1% |
-| **o3** | **~86** | **~53** | **98.1% -> 64.1%** |
-| Claude 3.7 Sonnet | ~78 | ~66 | ~100.4% -> 65.9% |
-| DeepSeek-R1 | ~99 | ~71 | ~103.6% -> 60.8% |
-| GPT-4o | ~88 | ~61 | ~94.5% -> 57.9% |
-| Gemini 2.5 Flash | ~97 | ~68 | ~99.3% -> 65.8% |
-| GPT-4.1 | ~97 | ~73 | ~97.9% -> 61.8% |
-| Gemini 2.5 Pro | ~97 | ~68 | ~100.1% -> 64.5% |
+| Claude 3 Haiku | ~45 | ~32 | ~91.6% retained → ~8% drop |
+| GPT-4o-mini | ~76 | ~50 | ~93.0% → 56.2% |
+| Llama3.3-70B | ~72 | ~52 | ~93.2% → 64.2% |
+| Phi-4 | ~53 | ~39 | ~99.0% → 61.7% |
+| Command-A | ~72 | ~45 | ~97.3% → 60.4% |
+| Llama 4 Scout | ~74 | ~46 | ~91.0% → 66.1% |
+| **o3** | **~86** | **~53** | **98.1% → 64.1%** |
+| Claude 3.7 Sonnet | ~78 | ~66 | ~100.4% → 65.9% |
+| DeepSeek-R1 | ~99 | ~71 | ~103.6% → 60.8% |
+| GPT-4o | ~88 | ~61 | ~94.5% → 57.9% |
+| Gemini 2.5 Flash | ~97 | ~68 | ~99.3% → 65.8% |
+| GPT-4.1 | ~97 | ~73 | ~97.9% → 61.8% |
+| Gemini 2.5 Pro | ~97 | ~68 | ~100.1% → 64.5% |
 
 Key findings:
 - **Concat ≈ Full** (Concat averages 95.1% of Full), confirming performance loss is not due to information loss during sharding
@@ -183,7 +183,7 @@ Key findings:
 
 ### 6.2 Aptitude vs. Reliability Analysis
 
-**Single-turn pattern**: Higher aptitude -> higher reliability (lower unreliability). Better models more robust to input variation.
+**Single-turn pattern**: Higher aptitude → higher reliability (lower unreliability). Better models more robust to input variation.
 
 **Multi-turn pattern (dramatic contrast)**:
 - Aptitude drop: only **-16%** on average (modest)
@@ -241,7 +241,7 @@ Unreliability (U¹⁰⁹⁰) at varying assistant temperatures (AT):
 - Single-turn: 50–80% unreliability improvement when AT decreases
 - Multi-turn: GPT-4o-mini sees **no improvement** with lower AT; GPT-4o only 15–20%
 - Even at T=0.0 for both user and assistant, unreliability remains ~30%
-- Root cause: one token difference in early turn -> cascading deviations across the conversation
+- Root cause: one token difference in early turn → cascading deviations across the conversation
 
 **Call to action for LLM builders**: jointly optimize aptitude AND reliability. A reliable LLM should:
 1. Achieve similar aptitude in single- and multi-turn settings

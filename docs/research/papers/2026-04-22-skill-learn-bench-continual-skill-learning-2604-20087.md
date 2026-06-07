@@ -43,7 +43,7 @@ Traditional agents rely on static, pre-authored skill libraries. SkillLearnBench
 | Best automated skill-learning method | ~30% |
 | **Human-authored skills** | **74.50%** |
 
-The 74.50% -> 10.17% gap (64.3pp) represents the current ceiling on automated skill learning — a large open research problem.
+The 74.50% → 10.17% gap (64.3pp) represents the current ceiling on automated skill learning — a large open research problem.
 
 ---
 
@@ -138,7 +138,7 @@ Context-storage skill representations (skills as markdown files) are catastrophi
 
 Critical calibration for workspace skill lifecycle management:
 
-1. **10.17% (no skill) -> 74.50% (human-authored)**: The 64pp gap confirms that investing in high-quality human-authored skills (like the workspace's `research-hub`, `autoresearch`, `harness-meta`) is the highest-leverage improvement available.
+1. **10.17% (no skill) → 74.50% (human-authored)**: The 64pp gap confirms that investing in high-quality human-authored skills (like the workspace's `research-hub`, `autoresearch`, `harness-meta`) is the highest-leverage improvement available.
 2. **Automated methods plateau at ~30%**: Don't automate skill generation for production use — current automated methods can't approach human-authored quality. Human gate on new skills remains mandatory.
 3. **External feedback > self-feedback**: When refining skills (e.g., improving `research-hub` after observing failures), use external feedback (user reports, task success rates) not self-generated critiques.
 4. **No method dominates across task types**: The workspace skill library needs different approaches for different domains — a research skill and a security-review skill can't use the same generation methodology.

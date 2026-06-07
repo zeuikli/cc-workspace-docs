@@ -84,7 +84,7 @@ Core components made explicit:
 |-----------|-------------|
 | **Contracts** | Required inputs/outputs, format constraints, validation gates, permission boundaries, retry and stop rules |
 | **Roles** | Role prompts (solver, verifier, researcher, orchestrator) with non-overlapping responsibilities |
-| **Stage structure** | Explicit workload topology (e.g., plan -> execute -> verify -> repair) |
+| **Stage structure** | Explicit workload topology (e.g., plan → execute → verify → repair) |
 | **Adapters and scripts** | Named hooks for deterministic actions (tests, verifiers, retrieval, parsing) |
 | **State semantics** | What persists across steps (artifacts, ledgers, child workspaces) and how it is reopened (paths, manifests) |
 | **Failure taxonomy** | Named failure modes that drive recovery (missing artifact, wrong path, verifier failure, tool error, timeout) |
@@ -264,7 +264,7 @@ The authors study whether the harness design-pattern layer can be externalized a
 Across the current coding and computer-use benchmarks, controlled evidence shows this stack is:
 1. **Operationally viable** — the shared runtime and harness logic are behaviorally real controls, not prompt decoration
 2. **Module-level ablatable** — explicit modules can be composed and ablated; module effects concentrate on boundary cases, not uniform benchmark shifts
-3. **Migration-capable** — code-to-NLAH migration is feasible and yielded a +16.8 pp improvement (30.4% -> 47.2%) for OS-Symphony on OSWorld
+3. **Migration-capable** — code-to-NLAH migration is feasible and yielded a +16.8 pp improvement (30.4% → 47.2%) for OS-Symphony on OSWorld
 
 These results suggest a path toward **harness representation science**, where harness modules become first-class research artifacts rather than incidental glue around models.
 

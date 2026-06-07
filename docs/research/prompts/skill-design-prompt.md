@@ -19,7 +19,7 @@ type: prompt
 ### 1. Capability vs Discipline 雙框架（@Mnilax）
 - **Capability Skills**：補足 Claude 本身無法完成的任務（最小集合，約 20%）
 - **Discipline Skills**：強制一致性風格、工作流紀律（最大品質槓桿，約 80%）
-- 決策問題：「沒有這個 Skill，Claude 完全做不到嗎？」是 -> Capability；否 -> Discipline
+- 決策問題：「沒有這個 Skill，Claude 完全做不到嗎？」是 → Capability；否 → Discipline
 
 ### 2. 量化評估勝於主觀感受（@Mnilax）
 - 雙門檻：品質提升 ≥ 1.5 分（10分制）+ 時間節省 ≥ 30%，兩者同時達標才保留
@@ -29,17 +29,17 @@ type: prompt
 ### 3. 活躍數量上限 5-7 個（@Mnilax）
 - 超過 9 個 = overhead ~13,500 tokens per task，回報遞減
 - Tier S 必裝（經實測）：frontend-design、superpowers、simplify、skill-creator、web-design-guidelines
-- 安裝順序：Week 1 基礎 4 個 -> Week 2 領域 1-2 個 -> Week 3+ 按需評估
+- 安裝順序：Week 1 基礎 4 個 → Week 2 領域 1-2 個 → Week 3+ 按需評估
 
 ### 4. 真實範例 > 抽象規則（@berryxia）
 - 「任何重複告訴 Claude 的，都值得變成 Skill」
-- 建構七步驟：反向提問 -> 反向發現 -> 對話轉化 -> **範例優先**（一個好例子 > 十條描述）-> 三輪迭代 -> 加自查清單 -> 手動通讀
+- 建構七步驟：反向提問 → 反向發現 → 對話轉化 → **範例優先**（一個好例子 > 十條描述）→ 三輪迭代 → 加自查清單 → 手動通讀
 - Skills 2.0 機制：內建評估斷言、A/B 測試、觸發詞自動優化
 
 ### 5. YAML frontmatter 控制行為（@zodchiii）
 - `description` 是給模型的觸發詞，不是給人讀的說明
 - `allowed-tools` 明確限制 Skill 可用的工具範圍
-- 命名：`.claude/skills/<command-name>.md` -> 對應 `/<command-name>` 呼叫
+- 命名：`.claude/skills/<command-name>.md` → 對應 `/<command-name>` 呼叫
 
 ### 6. 蘇格拉底式一次一問（@Khazix0918）
 - 複雜任務 Skill：先問至 95% 確信度再執行，不並行提問
@@ -49,7 +49,7 @@ type: prompt
 ### 7. Context Decay 閾值管理（@nateherk）
 - 30 分鐘後 context 品質明顯衰減（~40% token 成為雜訊）
 - Skill 設計需包含 `/compact` 觸發時機或明確的 context reset 提示
-- Context Mode（content-mode Skill）可將 Playwright 56KB -> 精煉版本
+- Context Mode（content-mode Skill）可將 Playwright 56KB → 精煉版本
 
 ---
 
@@ -91,7 +91,7 @@ type: prompt
 [列出當前 active skills]
 
 對每個 Skill 回答：
-1. 觸發次數（0 次 -> 停用候選）
+1. 觸發次數（0 次 → 停用候選）
 2. 品質提升評分（1-10）
 3. 時間節省百分比（估計）
 4. 是否與其他 Skill 有功能重疊？

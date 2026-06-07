@@ -154,7 +154,7 @@ export ENABLE_PROMPT_CACHING_1H=1
 }
 ```
 
-**常見錯誤**：把 breakpoint 放在變動內容上（timestamp、per-request context）-> 每次都 cache miss。
+**常見錯誤**：把 breakpoint 放在變動內容上（timestamp、per-request context）→ 每次都 cache miss。
 
 **Lookback window**：系統從 breakpoint 往前最多查 20 個 block 找快取前綴。
 
@@ -239,9 +239,9 @@ Sub-agent 的 progress summaries 現在自動命中 prompt cache，無需任何�
 
 ## Key Takeaways
 
-- 多輪對話 -> **自動快取**（頂層 cache_control）
-- 不同頻率的段落 -> **明確 breakpoint**（最多 4 個）
+- 多輪對話 → **自動快取**（頂層 cache_control）
+- 不同頻率的段落 → **明確 breakpoint**（最多 4 個）
 - Breakpoint 放在 **跨請求不變**的最後一個 block
 - 監控 `cache_read_input_tokens` 評估命中率
-- 延遲敏感 -> **pre-warm** 消除冷啟動
+- 延遲敏感 → **pre-warm** 消除冷啟動
 - 快取命中 = 基礎輸入費率的 **0.1×**（省 90%）

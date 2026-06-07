@@ -90,8 +90,8 @@ type: blog-index
 - **Enterprise AI Services**（May 4）：與 Blackstone、Goldman Sachs 合作，服務中型企業
 
 **Agent 自主改進回路**：
-- **Managed Agents Dreaming**（May 6）：Agent 自動審閱過去 session -> 提取模式 -> 改進；Harvey 6x 完成率
-- **Managed Agents Outcomes**（May 6）：定義成功標準 -> grader 評估 -> 自校正；文件生成 +8.4%
+- **Managed Agents Dreaming**（May 6）：Agent 自動審閱過去 session → 提取模式 → 改進；Harvey 6x 完成率
+- **Managed Agents Outcomes**（May 6）：定義成功標準 → grader 評估 → 自校正；文件生成 +8.4%
 - **Agent View in Claude Code**（May 11）：統一介面管理多個並行 Session
 
 **從工具到平台到垂直服務**：

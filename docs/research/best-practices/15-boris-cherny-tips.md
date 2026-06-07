@@ -195,10 +195,10 @@ Edit(/docs/**)        # 只允許編輯 docs 目錄
 ### Auto Mode — 智慧型權限路由（Opus 4.7）
 
 Auto mode 將權限提示路由給模型分類器判斷：
-- 安全 -> 自動批准
-- 有風險 -> 暫停詢問
+- 安全 → 自動批准
+- 有風險 → 暫停詢問
 
-`Shift+Tab` 切換：`Ask permissions` -> `Plan mode` -> `Auto mode`
+`Shift+Tab` 切換：`Ask permissions` → `Plan mode` → `Auto mode`
 
 這讓你能同時跑更多 Claude，安全的操作自動通過，不需守候。
 
@@ -252,7 +252,7 @@ Slack MCP 設定 check in 到 `.mcp.json` 與團隊共享。
 ### Output Styles — 調整 Claude 的輸出風格
 
 ```
-/config  -> 設定 output style
+/config  → 設定 output style
 ```
 
 - **Explanatory**：熟悉新 codebase 時，Claude 解釋框架和程式碼模式

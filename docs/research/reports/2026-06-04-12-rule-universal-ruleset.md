@@ -14,7 +14,7 @@ type: ruleset
 > **What this is.** A portable discipline ruleset for *any* AI coding agent (Claude Code, Cursor, Copilot, Aider, Devin, a custom agent, or a human reviewing AI output) on *any* stack. Derived from Karpathy's R1–R4 + Mnilax's R5–R12, grounded in agent-failure research, stripped of any single tool's mechanisms.
 >
 > **How to read each rule.** Every rule is one triad:
-> **① Failure it prevents -> ② Mechanism any team can adopt -> ③ Mechanically-checkable verification.**
+> **① Failure it prevents → ② Mechanism any team can adopt → ③ Mechanically-checkable verification.**
 > The third column is the point: a rule you cannot mechanically check is a vibe, not a rule.
 >
 > **Why exactly 12.** The original author observed compliance dropping from 76% to 52% past ~14 rules (self-reported). Keep your active ruleset ≤ 12. Adding a 13th means merging or cutting one.
@@ -30,8 +30,8 @@ type: ruleset
 
 | | |
 |---|---|
-| **① Prevents** | Acting on a silent assumption; hiding confusion instead of surfacing it. *(Parallel: MAST "Fail to ask for clarification" — acting on unclear/incomplete data -> incorrect actions. arXiv:2503.13657)* |
-| **② Mechanism** | Before writing code, state in ≤2 sentences: your interpretation (not a restatement of the request) + key assumptions. If multiple interpretations exist, **present them and let the human choose** — don't pick silently. Calibrate ask-rate: trivial equivalent choices (naming, formatting, default values) -> decide and note it in one line; **scope changes or irreversible actions -> always ask.** |
+| **① Prevents** | Acting on a silent assumption; hiding confusion instead of surfacing it. *(Parallel: MAST "Fail to ask for clarification" — acting on unclear/incomplete data → incorrect actions. arXiv:2503.13657)* |
+| **② Mechanism** | Before writing code, state in ≤2 sentences: your interpretation (not a restatement of the request) + key assumptions. If multiple interpretations exist, **present them and let the human choose** — don't pick silently. Calibrate ask-rate: trivial equivalent choices (naming, formatting, default values) → decide and note it in one line; **scope changes or irreversible actions → always ask.** |
 | **③ Verify** | Before the first edit, the transcript contains an explicit interpretation + assumptions line. For any destructive keyword (`DELETE` / `DROP` / `TRUNCATE` / prod deploy / key rotation / `rm -rf` / `--force` push / infra destroy), a confirmation summary was shown and acknowledged **even if the human said "just do it."** |
 
 **Irreversible-action exception:** the destructive keywords above always require a summary + wait, regardless of "just do it." This is the one place "Think Before" is non-negotiable.
@@ -46,7 +46,7 @@ type: ruleset
 | **② Mechanism** | Write the minimum code that solves the stated problem. No feature beyond what was asked. **Rule of 3:** extract a helper only at the 3rd call site. Self-test: "Would a senior engineer call this overcomplicated?" If yes, rewrite smaller. If you wrote 200 lines and it could be 50, rewrite it. |
 | **③ Verify** | Diff contains no abstraction with <3 call sites, no config/flag that wasn't requested, no error branch for an input that cannot occur. Line count is justifiable to a senior reviewer. |
 
-**Security exception (always a shared function, exempt from Rule-of-3):** crypto primitives, key operations, input validation, authentication. Never inline nonce/IV generation per-algorithm (-> IV-reuse vulnerability).
+**Security exception (always a shared function, exempt from Rule-of-3):** crypto primitives, key operations, input validation, authentication. Never inline nonce/IV generation per-algorithm (→ IV-reuse vulnerability).
 
 ---
 
@@ -56,7 +56,7 @@ type: ruleset
 |---|---|
 | **① Prevents** | Tangential refactoring, reformatting, renaming — noise that buries the real change. Wide-blast-radius edits also raise cascade risk. *(Parallel (thin — architecture-level, not diff-hygiene): SWE-agent "Cascading Failed Edits" = 23.4% of failures, the largest category; this grounds the cascade-risk half of R3 and overlaps R8. Scope-discipline itself is not directly measured in these papers. arXiv:2405.15793)* |
 | **② Mechanism** | Touch only what the task requires. Don't "improve" adjacent code/comments/formatting. Match existing style even if you'd do it differently. Clean up only **your own** orphans (imports/vars your change made unused) — leave pre-existing dead code (mention it, don't delete). |
-| **③ Verify** | **Every changed line traces directly to the request.** Soft bounds: bug fix ≤ 50 lines, feature ≤ 300, single file ≤ 500. Unrelated bug found mid-task -> logged & reported, **not** auto-fixed (keeps commits atomic). |
+| **③ Verify** | **Every changed line traces directly to the request.** Soft bounds: bug fix ≤ 50 lines, feature ≤ 300, single file ≤ 500. Unrelated bug found mid-task → logged & reported, **not** auto-fixed (keeps commits atomic). |
 
 **P0 security exception (fix on sight):** hardcoded credentials, SQLi, path traversal, auth bypass. Isolate the fix on its own branch — don't bury a security patch inside a feature commit. Credential scans must exclude test/fixture/example/docs dirs to avoid drowning real leaks in fake data.
 
@@ -67,8 +67,8 @@ type: ruleset
 | | |
 |---|---|
 | **① Prevents** | Walking steps toward a weak goal ("make it work") and stalling on the next step instead of converging on a verifiable outcome. *(Parallel: SWE-agent "fast success, slow failure" — resolved tasks median 12 steps/$1.21; unresolved 21 steps/$2.52, "increasing budget unlikely to improve.")* |
-| **② Mechanism** | Transform the task into an observable success condition **before** starting, then loop to it: "add validation" -> "write tests for invalid inputs, then make them pass"; "fix the bug" -> "write a test that reproduces it, then make it pass." For multi-step work, state a brief plan with a per-step check. |
-| **③ Verify** | Success condition is **mechanically checkable** (a command exits 0 / a test passes / a specific output appears) — never "looks correct." The verification command actually ran and its output is shown. *(Empirical payoff: Reflexion loop-until-`outcome.success` -> 91% pass@1 vs one-shot GPT-4 80% on HumanEval. arXiv:2303.11366. Confucius makes verification a mandatory pipeline stage: "if tests fail, the agent enters a debugging sub-loop." arXiv:2512.10398)* |
+| **② Mechanism** | Transform the task into an observable success condition **before** starting, then loop to it: "add validation" → "write tests for invalid inputs, then make them pass"; "fix the bug" → "write a test that reproduces it, then make it pass." For multi-step work, state a brief plan with a per-step check. |
+| **③ Verify** | Success condition is **mechanically checkable** (a command exits 0 / a test passes / a specific output appears) — never "looks correct." The verification command actually ran and its output is shown. *(Empirical payoff: Reflexion loop-until-`outcome.success` → 91% pass@1 vs one-shot GPT-4 80% on HumanEval. arXiv:2303.11366. Confucius makes verification a mandatory pipeline stage: "if tests fail, the agent enters a debugging sub-loop." arXiv:2512.10398)* |
 
 ---
 
@@ -78,7 +78,7 @@ type: ruleset
 |---|---|
 | **① Prevents** | Using the LLM where deterministic code belongs — routing, retries, status-code handling, math, transforms. Non-deterministic answers to deterministic questions. |
 | **② Mechanism** | **LLM (latent/judgment):** classification, drafting, summarization, extraction from unstructured text. **Code (deterministic):** routing, retries, HTTP status handling, arithmetic, format transforms. If a status code already answers the question, plain code answers the question. |
-| **③ Verify** | No control-flow decision (route/retry/branch on a known signal) is delegated to a model call. *(Empirical: Dynamic Cheatsheet — once the model judged "use a Python solver" and let deterministic code compute, Game of 24 went 10%->99%; equation-balancing ~50%->98–100% while LLM-only "baselines stagnated around 50%." arXiv:2504.07952)* |
+| **③ Verify** | No control-flow decision (route/retry/branch on a known signal) is delegated to a model call. *(Empirical: Dynamic Cheatsheet — once the model judged "use a Python solver" and let deterministic code compute, Game of 24 went 10%→99%; equation-balancing ~50%→98–100% while LLM-only "baselines stagnated around 50%." arXiv:2504.07952)* |
 
 ---
 
@@ -110,7 +110,7 @@ type: ruleset
 |---|---|
 | **① Prevents** | Adding code without understanding the interface contract or upstream impact. "Looks orthogonal to me" is the most dangerous phrase in any codebase. |
 | **② Mechanism** | Before editing a file, read: its exports (interface contract) + the immediate caller (upstream impact) + obvious shared utilities (lateral deps). If you don't understand *why* existing code is structured a certain way, ask before adding to it. |
-| **③ Verify** | The transcript shows the relevant exports/callers were read **before** the edit. *(Empirical: SWE-agent's successful trajectories open with find/read/reproduce (turns 1–4) then zoom-in dir->file->line; skipping it is costly — recovery rate collapses 90.5%->57.2% after the first failed edit. arXiv:2405.15793. Confucius enforces a Retrieval+Localization phase before Implementation. arXiv:2512.10398)* |
+| **③ Verify** | The transcript shows the relevant exports/callers were read **before** the edit. *(Empirical: SWE-agent's successful trajectories open with find/read/reproduce (turns 1–4) then zoom-in dir→file→line; skipping it is costly — recovery rate collapses 90.5%→57.2% after the first failed edit. arXiv:2405.15793. Confucius enforces a Retrieval+Localization phase before Implementation. arXiv:2512.10398)* |
 
 ---
 
@@ -120,7 +120,7 @@ type: ruleset
 |---|---|
 | **① Prevents** | Tests that pass any implementation regardless of correctness. `expect(getUserName()).toBe('John')` is worthless if the function returns a hardcoded ID. |
 | **② Mechanism** | Every test encodes **why** the behavior matters, not just **what** it does. Mock external boundaries, not the business core. The test: if you can't write a test that would **fail when the business logic changes**, the function is wrong. |
-| **③ Verify** | Flip a line of business logic -> at least one test fails. *(Empirical: Reflexion explicitly distinguishes "explicit test cases" from "LLM self-evaluation" as evaluators — the 91% result used the former. arXiv:2303.11366. SWE-bench-Pro required human-vetted test suites as ground truth — test *quality*, not presence, is what verifies intent. arXiv:2509.16941. SWE-agent's reproduction-first `(create, edit, python)` = write the failing case before the fix. arXiv:2405.15793)* |
+| **③ Verify** | Flip a line of business logic → at least one test fails. *(Empirical: Reflexion explicitly distinguishes "explicit test cases" from "LLM self-evaluation" as evaluators — the 91% result used the former. arXiv:2303.11366. SWE-bench-Pro required human-vetted test suites as ground truth — test *quality*, not presence, is what verifies intent. arXiv:2509.16941. SWE-agent's reproduction-first `(create, edit, python)` = write the failing case before the fix. arXiv:2405.15793)* |
 
 ---
 
@@ -128,7 +128,7 @@ type: ruleset
 
 | | |
 |---|---|
-| **① Prevents** | Continuing from a state you can't describe; repeating already-done work. *(Parallel: MAST "Loss of conversation history" (context truncation -> revert to stale state) + "Step repetition." arXiv:2503.13657)* |
+| **① Prevents** | Continuing from a state you can't describe; repeating already-done work. *(Parallel: MAST "Loss of conversation history" (context truncation → revert to stale state) + "Step repetition." arXiv:2503.13657)* |
 | **② Mechanism** | After each step in a multi-step task, emit one line: **what was done / what's verified / what's left.** If you lose track, **stop and restate** — don't continue from an undescribable state. |
 | **③ Verify** | A checkpoint line exists per major step and accurately reflects current state. *(Empirical: Confucius's "Architect" checkpoint preserves task spec + decisions + file paths + recent N messages; persistent notes save ~11k tokens, 3 turns/task and +1.4pp Resolve@1 by not re-discovering or repeating failed approaches. arXiv:2512.10398)* |
 
@@ -138,7 +138,7 @@ type: ruleset
 
 | | |
 |---|---|
-| **① Prevents** | Silently forking convention (snake_case->camelCase, classes->hooks) on taste. Re-deriving what already exists. *(Parallel: DC — "repeatedly re-discovering… the same solutions and mistakes" is the cost of ignoring accumulated conventions; reusing the existing solution took Game of 24 10%->99%. arXiv:2504.07952)* |
+| **① Prevents** | Silently forking convention (snake_case→camelCase, classes→hooks) on taste. Re-deriving what already exists. *(Parallel: DC — "repeatedly re-discovering… the same solutions and mistakes" is the cost of ignoring accumulated conventions; reusing the existing solution took Game of 24 10%→99%. arXiv:2504.07952)* |
 | **② Mechanism** | Inside the codebase, **conformance > taste.** snake_case if it's snake_case; class-based if it's class-based. Disagreement is a separate conversation. Treat existing conventions as an **evolving playbook** — the authoritative starting point, not a blank slate. *(ACE "evolving playbooks." arXiv:2510.04618)* |
 | **③ Verify** | New code matches surrounding style/naming/structure. If a convention is genuinely harmful (e.g., SQL string concatenation), it's surfaced as a flagged issue — **not silently forked**. |
 
@@ -160,10 +160,10 @@ type: ruleset
 
 **Every mistake is an opportunity to update the ruleset so it never recurs.**
 
-- **Mechanism:** after a mistake, ask "will this recur?" -> if yes, add a guard (a hook/lint if mechanizable; otherwise a written rule). Record only **verified** constraints — never speculative "expected behavior" (that pollutes the ruleset).
+- **Mechanism:** after a mistake, ask "will this recur?" → if yes, add a guard (a hook/lint if mechanizable; otherwise a written rule). Record only **verified** constraints — never speculative "expected behavior" (that pollutes the ruleset).
 - **Verify:** the same failure mode does not recur in the next session.
 - *Empirical: ReasoningBank — agents that "fail to learn from accumulated history… discard insights and repeat past errors"; distilling lessons from successes AND failures is a "new scaling dimension." arXiv:2509.25140. ACE's "Reflector" extracts "what worked, what failed, and why." arXiv:2510.04618. A survey of 100+ papers calls memory "indispensable for self-evolving capability." arXiv:2404.13501.*
-- **Guard against the cliff:** when active rules exceed ~14, compliance drops (self-reported 76%->52%). Merge or cut before adding.
+- **Guard against the cliff:** when active rules exceed ~14, compliance drops (self-reported 76%→52%). Merge or cut before adding.
 
 ---
 

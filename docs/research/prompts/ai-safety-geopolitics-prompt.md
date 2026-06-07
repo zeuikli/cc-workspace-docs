@@ -35,7 +35,7 @@ type: prompt
 
 **晶片戰現況：**
 - DeepSeek V4 同時支援 NVIDIA 和 Huawei Ascend（Vendor Agnostic）
-- NVIDIA 軟體棧護城河（Q1）：硬體管制 -> 軟體生態成護城河
+- NVIDIA 軟體棧護城河（Q1）：硬體管制 → 軟體生態成護城河
 - 企業對策：Vendor Agnostic 架構成地緣政治避險標配
 
 **中美 AI 能力差距（2026-04-25，The Neuron）：**

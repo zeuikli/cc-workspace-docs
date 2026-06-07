@@ -8,7 +8,7 @@ type: best-practices
 
 > 來源：https://code.claude.com/docs/en/best-practices
 > 收錄日期：2026-05-01
-> 涵蓋：驗證工作流、探索->規劃->實作四階段、Context 管理、平行化與自動化、常見失敗模式
+> 涵蓋：驗證工作流、探索→規劃→實作四階段、Context 管理、平行化與自動化、常見失敗模式
 
 ---
 
@@ -39,7 +39,7 @@ UI 變更可用 **Claude in Chrome extension** 驗證（自動開新 tab、測�
 
 ---
 
-## 2. 探索->規劃->實作->Commit 四階段工作流
+## 2. 探索→規劃→實作→Commit 四階段工作流
 
 用 Plan Mode 分離探索與執行，避免解決錯誤問題。
 
@@ -217,7 +217,7 @@ Keep interviewing until we've covered everything, then write a complete spec to 
 
 來源：Thariq（@trq212，Anthropic Claude Code 核心成員），持續推薦的工作流
 
-### 模式：minimal spec -> 訪問 -> 整理 -> 新 session 執行
+### 模式：minimal spec → 訪問 → 整理 → 新 session 執行
 
 ```
 1. 寫一個 minimal spec（一段話或幾個要點）
@@ -268,7 +268,7 @@ claude   # 新 session，乾淨 context
 | **寫作輔助** | 長文草稿 + 迭代修改，跨 session 維持脈絡 |
 | **數據分析** | 讀 CSV、分析、可視化，輸出報告 |
 | **會議準備** | 讀相關文件 + 整理要點 + 生成議程 |
-| **系統設計文件** | 訪問（AskUserQuestionTool）-> spec -> 文件草稿 |
+| **系統設計文件** | 訪問（AskUserQuestionTool）→ spec → 文件草稿 |
 
 ### 啟示：CLAUDE.md 不應限制只處理程式碼任務
 
@@ -287,14 +287,14 @@ CLAUDE.md 中加入「只處理程式碼任務」等限制，會把 Claude Code 
 | `"Undo that"` | 讓 Claude revert 其變更 |
 | `/clear` | 重置 context（任務之間） |
 
-**重要規則**：若對同一問題修正超過兩次 -> 執行 `/clear`，用更具體的 prompt 重新開始。
+**重要規則**：若對同一問題修正超過兩次 → 執行 `/clear`，用更具體的 prompt 重新開始。
 
 ### 積極管理 Context
 
 - 不相關任務之間用 `/clear` 重置 context window
 - auto compaction 觸發時 Claude 自動摘要（保留 code patterns、檔案狀態、關鍵決策）
 - 更多控制：`/compact <instructions>`（例：`/compact Focus on the API changes`）
-- 局部摘要：`Esc + Esc` -> 選訊息 checkpoint -> **Summarize from here**
+- 局部摘要：`Esc + Esc` → 選訊息 checkpoint → **Summarize from here**
 - 在 CLAUDE.md 中自訂 compaction 行為：`"When compacting, always preserve the full list of modified files and any test commands"`
 - 快速問題不需要留在 context：用 `/btw`（答案顯示在可關閉的 overlay，不進入對話歷史）
 
@@ -351,7 +351,7 @@ claude -p "Analyze this log file" --output-format stream-json
 | **Claude Code on the web** | Anthropic 安全雲端基礎設施，獨立 VM | 無本地環境 |
 | **Agent teams** | 多 session 自動協調，共享 tasks | 複雜平行工作 |
 
-**Writer/Reviewer pattern**：Session A 實作 -> Session B 獨立 review（新 context 不受實作偏見影響）
+**Writer/Reviewer pattern**：Session A 實作 → Session B 獨立 review（新 context 不受實作偏見影響）
 
 ### Fan-out 大規模作業
 
@@ -390,7 +390,7 @@ claude --permission-mode auto -p "fix all lint errors"
 |------|------|------|
 | **廚房水槽 session** | 混雜多個不相關任務，context 充斥不相關資訊 | 不相關任務之間執行 `/clear` |
 | **不斷修正** | Claude 一再做錯，context 被失敗方法污染 | 兩次修正後 `/clear`，用涵蓋學到教訓的更好 prompt 重啟 |
-| **過長的 CLAUDE.md** | 太長導致 Claude 忽略其中一半的規則 | 無情刪減；不需要的指令 -> 刪除或轉成 hook |
+| **過長的 CLAUDE.md** | 太長導致 Claude 忽略其中一半的規則 | 無情刪減；不需要的指令 → 刪除或轉成 hook |
 | **信任但不驗證缺口** | Claude 產出看起來正確但有邊界情況的實作 | 永遠提供驗證（測試、腳本、截圖）；無法驗證就不上線 |
 | **無限探索** | 沒有限定範圍的「調查」讓 Claude 讀數百個檔案填滿 context | 縮小調查範圍，或使用 subagents（探索留在 child context） |
 

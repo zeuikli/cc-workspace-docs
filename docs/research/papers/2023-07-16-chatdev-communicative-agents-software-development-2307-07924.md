@@ -4,7 +4,7 @@
 
 ## 核心貢獻
 
-以「虛擬軟體公司」為比喻，採用 waterfall 模型分階段（設計->編碼->測試->文件）讓多個 LLM agent 以自然語言和程式語言交互協作。核心創新：**Chat Chain**（控制通訊順序）+ **Communicative Dehallucination**（雙 agent 對話中主動偵測並消除幻覺輸出）。發表於 ACL 2024。
+以「虛擬軟體公司」為比喻，採用 waterfall 模型分階段（設計→編碼→測試→文件）讓多個 LLM agent 以自然語言和程式語言交互協作。核心創新：**Chat Chain**（控制通訊順序）+ **Communicative Dehallucination**（雙 agent 對話中主動偵測並消除幻覺輸出）。發表於 ACL 2024。
 
 ## 方法 / 架構
 

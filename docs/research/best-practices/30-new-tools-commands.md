@@ -2,7 +2,7 @@
 
 > 來源：23-whats-new-w13-w17.md / 26-new-features-2026-q1.md / 27-whats-new-w18-w19.md / 2026-w20 整合  
 > 整理日期：2026-05-28  
-> 涵蓋版本：v2.1.83 -> v2.1.142（W13–W20）
+> 涵蓋版本：v2.1.83 → v2.1.142（W13–W20）
 
 補充各主題章節未收錄的使用者介面、終端體驗、及新增 slash commands。
 
@@ -28,7 +28,7 @@
 CLI 也可使用 Computer Use：
 
 ```text
-/mcp -> 找到 computer-use -> 開啟
+/mcp → 找到 computer-use → 開啟
 ```
 
 ---
@@ -77,7 +77,7 @@ claude
 
 ## 三、Session 管理新指令
 
-### Session Recap（W16 Other wins -> W17 正式功能）
+### Session Recap（W16 Other wins → W17 正式功能）
 
 切換 focus 後回到 session 時顯示一行摘要，適合同時跑多個 Claude session：
 

@@ -75,7 +75,7 @@ Tier escalation occurs automatically based on risk score from Tier 1.
 - **Tier enforcement**: Dynamic privilege ceilings preventing privilege escalation
 - **Integrity verification**: HMAC-SHA256 signatures on tool descriptions (detecting tool tampering)
 
-**Five tool risk tiers**: `read_only` -> `write` -> `execute` -> `network` -> `destructive`
+**Five tool risk tiers**: `read_only` → `write` → `execute` → `network` → `destructive`
 
 ### Layer 4: Correct (State Update)
 **Stage**: After execution, state recovery
@@ -152,10 +152,10 @@ Attack scenarios tested:
 
 ### Utility Preservation (Task Completion Rate)
 - **ReAct / Self-Evolving**: TCR within 1–2pp of unprotected — utility maintained
-- **Multi-Agent**: 86.5% -> 77.9% TCR — reflects blocked unsafe completions (expected tradeoff)
+- **Multi-Agent**: 86.5% → 77.9% TCR — reflects blocked unsafe completions (expected tradeoff)
 
 ### Utility Under Attack (UA = completed AND safe)
-- **ReAct (Chat)**: 45.6% -> 67.5% (+21.9pp) — substantial improvement in safe completions
+- **ReAct (Chat)**: 45.6% → 67.5% (+21.9pp) — substantial improvement in safe completions
 
 ### Defense Activity
 - Guardrail/LlamaFirewall: 54–184 blocked actions per evaluation
@@ -225,7 +225,7 @@ Attack scenarios tested:
 | Provenance tagging | No source tracking on tool outputs | Tag external content in `<untrusted_external_data>` (already in subagent-strategy.md) ✅ |
 | HMAC tool integrity | No tool description signing | Low priority for local harness |
 | Entropy monitor (violation rate) | Manual observation only | Add violation counter to GOTCHAS.md tracking |
-| Progressive degradation (5 levels) | Binary: proceed or stop | Model as: normal -> warn -> require confirmation -> read-only -> halt |
+| Progressive degradation (5 levels) | Binary: proceed or stop | Model as: normal → warn → require confirmation → read-only → halt |
 | Protected memory with provenance | MEMORY.md (no provenance) | Add source/date fields to MEMORY.md entries |
 | Indirect injection defense (L1) | `<untrusted_external_data>` wrapping | ✅ Already partially aligned—strengthen in hooks |
 | UBR metric | No safety metric tracking | Consider tracking unexpected tool calls per session |

@@ -2,7 +2,7 @@
 
 > **研究日期**：2026-06-03
 > **研究主導模型**：Claude Opus 4.8（1M context, effort=high）
-> **研究方法**：4 個 researcher sub-agent 平行採集（web + arXiv）-> 機械對抗驗證 -> 手動合成
+> **研究方法**：4 個 researcher sub-agent 平行採集（web + arXiv）→ 機械對抗驗證 → 手動合成
 > **新增論文全文**：11 篇（research/papers/，全 PDF 驗證）
 > **信度分層**：HIGH（arXiv 一手 / 官方文件）· MEDIUM（單一可信 blog，與公開資料自洽）· LOW（二手 blog 統計，無法同儕溯源）
 
@@ -65,7 +65,7 @@ Context window 不是「越大越好」的線性資源，而是受**三重物理
 |------|------|------|------|
 | FlashAttention-1 | Q/K/V 分塊載入 SRAM，不具現化完整 N×N matrix | HBM 存取降至 O(N²d²M⁻¹)；GPT-2 3× / 記憶體減 5–20× | arXiv 2205.14135（NeurIPS 2022） |
 | FlashAttention-2 | 改善 GPU warp 分工，減少非矩陣乘法運算 | 達 A100 理論 FP16 的 50–73% | arXiv 2307.08691（ICLR 2024） |
-| FlashAttention-3 | H100 WGMMA/TMA 指令 + pipeline overlap | A100->H100 再加速 1.5–2× | arXiv 2407.08608 |
+| FlashAttention-3 | H100 WGMMA/TMA 指令 + pipeline overlap | A100→H100 再加速 1.5–2× | arXiv 2407.08608 |
 
 ### 2.2 KV Cache 管理——長上下文的真實記憶體瓶頸
 
@@ -74,7 +74,7 @@ KV cache 大小 = 2 × layers × heads × head_dim × seq_len × bytes。LLaMA-7
 | 技術 | 機制 | 量化效果 | 來源（信度 HIGH） |
 |------|------|---------|------|
 | **PagedAttention/vLLM** | KV cache 仿 OS 虛擬記憶體分頁，消除 fragmentation（傳統浪費 60–80%） | 2–4× throughput | arXiv 2309.06180（SOSP 2023，全文收錄） |
-| **H2O Heavy-Hitter** | attention 分數呈 power-law，保留 recent + Heavy-Hitter token，動態 evict | 20% H2 比例 -> throughput 最高 29× | arXiv 2306.14048（NeurIPS 2023，**新收錄**） |
+| **H2O Heavy-Hitter** | attention 分數呈 power-law，保留 recent + Heavy-Hitter token，動態 evict | 20% H2 比例 → throughput 最高 29× | arXiv 2306.14048（NeurIPS 2023，**新收錄**） |
 | **StreamingLLM** | 保留 4 個 attention sink token + sliding window | 穩定串流 4M tokens，無需 fine-tune，比 recompute baseline 快 22.2× | arXiv 2309.17453（ICLR 2024，**新收錄**） |
 | **SnapKV** | 用 observation window 的 attention pattern 選重要 KV position | 壓縮至 1024 tokens，16 dataset 性能幾乎無損 | arXiv 2404.14469（NeurIPS 2024，**新收錄**） |
 | **KVQuant** | KV cache 3-bit 量化（Pre-RoPE Key Quant 避免誤差放大） | 單 A100 服務 1M context；8 GPU 達 10M | arXiv 2401.18079（NeurIPS 2024） |
@@ -93,8 +93,8 @@ KV cache 大小 = 2 × layers × heads × head_dim × seq_len × bytes。LLaMA-7
 
 | 方法 | 機制 | 效果 | 來源（信度 HIGH） |
 |------|------|------|------|
-| RoPE | Q/K 向量旋轉編碼相對位置 | LLaMA/Mistral/Gemma/Qwen 標準；**超訓練長度時高頻維度旋轉過快 -> perplexity 爆炸** | arXiv 2104.09864 |
-| ALiBi | attention score 加 linear decay 懲罰 | 訓練 1024 -> 推理 2048 perplexity 不降；可外推 5–10× | arXiv 2108.12409 |
+| RoPE | Q/K 向量旋轉編碼相對位置 | LLaMA/Mistral/Gemma/Qwen 標準；**超訓練長度時高頻維度旋轉過快 → perplexity 爆炸** | arXiv 2104.09864 |
+| ALiBi | attention score 加 linear decay 懲罰 | 訓練 1024 → 推理 2048 perplexity 不降；可外推 5–10× | arXiv 2108.12409 |
 | **YaRN** | NTK-by-Parts：高頻不插值、低頻線性插值、中頻混合 + attention logit scaling | RoPE-extension 現有方法中最優，零額外開銷 | arXiv 2309.00071（**新收錄**） |
 | **LongRoPE** | 非均勻插值搜尋 + progressive finetuning | 延伸至 2M tokens，僅 1K finetune steps，整合進 Phi-3 | arXiv 2402.13753（**新收錄**） |
 
@@ -102,8 +102,8 @@ KV cache 大小 = 2 × layers × heads × head_dim × seq_len × bytes。LLaMA-7
 
 > **「為何 1M context 的可靠工作區實際僅 64K–128K」的機制解釋**
 
-1. **Attention Sink（Softmax 零和本質）**：softmax 強制所有位置 attention sum=1。當無重要 token 時，模型把 attention 傾倒至固定 anchor（通常 BOS）。這些 sink token value 貢獻小，但移除會改變 attention 分母 -> 整個 distribution 崩潰。【StreamingLLM 2309.17453，HIGH】
-2. **Attention Entropy 稀釋**：N 增大時，固定比例的重要 token 各自分到的注意力份額下降，entropy 升高 -> 難以集中關鍵 token。【binzhango.net / diffray.ai blog 分析，MEDIUM】
+1. **Attention Sink（Softmax 零和本質）**：softmax 強制所有位置 attention sum=1。當無重要 token 時，模型把 attention 傾倒至固定 anchor（通常 BOS）。這些 sink token value 貢獻小，但移除會改變 attention 分母 → 整個 distribution 崩潰。【StreamingLLM 2309.17453，HIGH】
+2. **Attention Entropy 稀釋**：N 增大時，固定比例的重要 token 各自分到的注意力份額下降，entropy 升高 → 難以集中關鍵 token。【binzhango.net / diffray.ai blog 分析，MEDIUM】
 3. **Lost-in-the-Middle**：U 型偏差（primacy + recency bias），中間位置最多 30%+ 準確率下降。成因雙重：訓練資料偏短上下文（中間缺監督）+ positional encoding 距離衰減。【arXiv 2307.03172，HIGH】
 
 **工程結論**：64K–128K 是多數 production 系統可靠上限；1M 為名義上限，中間位置可靠性顯著低於頭尾。評測多用粗粒度 needle-in-haystack，不測中間細粒度理解，故名義可靠性被高估。
@@ -139,8 +139,8 @@ KV cache 大小 = 2 × layers × heads × head_dim × seq_len × bytes。LLaMA-7
 ### 3.2 RAG 工程決策
 
 - **Chunking**：Recursive 512-token + 10–20% overlap = benchmark default（Vecta，accuracy 69%）；**chunking config 影響 ≥ embedding model 選擇**（Vectara NAACL 2025）；semantic chunking 的 43-token 碎片陷阱（end-to-end 降至 54%）。【MEDIUM】
-- **Hybrid search**：BM25（exact identifier/SKU/error code，dense 在此 fails silently）+ dense ANN（語意），RRF fusion -> cross-encoder rerank 兩階段。
-- **RAG vs Long-Context 決策**：RAG $0.00008/query vs 100K-token LC $0.20 input -> **~1,250x**【MEDIUM】。60% query 兩者結果相同；**SELF-ROUTE 路由省 65%（Gemini-1.5-Pro）/ 39%（GPT-4o）不犧牲 performance**【arXiv 2407.16833，EMNLP 2024，**HIGH**——已更正歸屬】。
+- **Hybrid search**：BM25（exact identifier/SKU/error code，dense 在此 fails silently）+ dense ANN（語意），RRF fusion → cross-encoder rerank 兩階段。
+- **RAG vs Long-Context 決策**：RAG $0.00008/query vs 100K-token LC $0.20 input → **~1,250x**【MEDIUM】。60% query 兩者結果相同；**SELF-ROUTE 路由省 65%（Gemini-1.5-Pro）/ 39%（GPT-4o）不犧牲 performance**【arXiv 2407.16833，EMNLP 2024，**HIGH**——已更正歸屬】。
 
 ### 3.3 Streaming/Incremental Context
 
@@ -186,14 +186,14 @@ KV cache 大小 = 2 × layers × heads × head_dim × seq_len × bytes。LLaMA-7
 
 | 框架 | State 機制 | 重點 |
 |------|------|------|
-| **LangGraph** | StateGraph + checkpointer（thread/cross-session） | 60%+ production 事故源於 state management【LOW】；建議 MemorySaver->PostgresSaver；30K+ stars |
-| **AutoGen/MAF** | 事件驅動->圖形工作流 | AutoGen + Semantic Kernel 合併為 Microsoft Agent Framework（2025 Q4 maintenance），MAF GA Q1 2026 |
+| **LangGraph** | StateGraph + checkpointer（thread/cross-session） | 60%+ production 事故源於 state management【LOW】；建議 MemorySaver→PostgresSaver；30K+ stars |
+| **AutoGen/MAF** | 事件驅動→圖形工作流 | AutoGen + Semantic Kernel 合併為 Microsoft Agent Framework（2025 Q4 maintenance），MAF GA Q1 2026 |
 | **CrewAI** | role-based 共享 context | 無 low-level state primitive |
 
 ### 4.3 官方最佳實踐
 
-- **Anthropic Compaction API**（HIGH，platform.claude.com）：trigger 預設 150K（最低 50K）；同模型做 summarization；`pause_after_compaction`；**工具存在時可能靜默失敗（content: null）-> instructions 須明說 "Do not call tools"**；cost tracking 須 sum `usage.iterations`（頂層 token 不含壓縮成本）。
-- **OpenAI**：GPT-4o-mini 壓縮歷史；模型可靠 context 通常比標示少 ~30%（200K->130K），性能邊界附近**突降非漸降**。
+- **Anthropic Compaction API**（HIGH，platform.claude.com）：trigger 預設 150K（最低 50K）；同模型做 summarization；`pause_after_compaction`；**工具存在時可能靜默失敗（content: null）→ instructions 須明說 "Do not call tools"**；cost tracking 須 sum `usage.iterations`（頂層 token 不含壓縮成本）。
+- **OpenAI**：GPT-4o-mini 壓縮歷史；模型可靠 context 通常比標示少 ~30%（200K→130K），性能邊界附近**突降非漸降**。
 - **Google Gemini**：2.5 Pro 2M 上限；建議 **query 放 context 之後**；實務停在 1M 以下。
 
 ### 4.4 Cache Invalidation 觸發事件（openclacky，MEDIUM）
@@ -201,9 +201,9 @@ KV cache 大小 = 2 × layers × heads × head_dim × seq_len × bytes。LLaMA-7
 | 事件 | 機制 |
 |------|------|
 | History growth | 新訊息改變 prefix 位置 |
-| Tool schema change | tool 定義變 -> 全下游失效 |
-| System prompt modification | 動態注入 date/model ID -> 破壞 coherence |
-| **Compression event** | 壓縮替換舊訊息 -> **100% cache miss** |
+| Tool schema change | tool 定義變 → 全下游失效 |
+| System prompt modification | 動態注入 date/model ID → 破壞 coherence |
+| **Compression event** | 壓縮替換舊訊息 → **100% cache miss** |
 | Tool call retry | orphan cache markers |
 | Model switch | namespace 碎片化 |
 
@@ -213,7 +213,7 @@ KV cache 大小 = 2 × layers × heads × head_dim × seq_len × bytes。LLaMA-7
 
 ## 5. 跨維度綜合洞察
 
-1. **三層約束統一視角**：物理（KV/attention）-> 品質（context rot）-> 治理（context engineering）。下層約束無法靠上層繞過——再好的 prompt 也救不了 attention dilution。
+1. **三層約束統一視角**：物理（KV/attention）→ 品質（context rot）→ 治理（context engineering）。下層約束無法靠上層繞過——再好的 prompt 也救不了 attention dilution。
 2. **「越大越好」是迷思**：名義 1M ≠ 可靠 1M。工程上應**主動限制注入量到可靠工作區（64K–128K）**，而非填滿。本 workspace 的 NLAH「Right context > more context」與此一致。
 3. **Compaction 是有損操作，不是免費的**：既毀 KV cache（成本），又丟資訊（品質）。最優策略是延遲 + 可逆（Event Store）+ 驗證（Slipstream）。
 4. **Cache 是脆弱前綴**：任何破壞 prefix 穩定性的動作（換模型/改 system/壓縮）都 100% miss。static-first 是唯一防線。

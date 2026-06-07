@@ -2,7 +2,7 @@
 
 > **Type:** raw:paper — 126 papers (103 .md + 25 .pdf)；2020–2026  
 > **Updated**: 2026-06-03  
-> **Query pattern**: BRAIN.md -> 本表（domain 欄位）-> 具體 paper
+> **Query pattern**: BRAIN.md → 本表（domain 欄位）→ 具體 paper
 
 ---
 
@@ -34,7 +34,7 @@
 | [amem-2502-12110](2025-02-17-amem-agentic-memory-llm-agents-2502-12110.md) | 2025 | Agentic Memory；動態記憶圖 | reports/agent-memory-architecture-2026 |
 | [mem0-2504-19413](2025-04-28-mem0-production-long-term-memory-2504-19413.md) | 2025 | 生產長期記憶；Mem0 多範圍 | reports/llm-memory-control-comprehensive-survey |
 | [memory-os-ai-agent](2025-05-30-memory-os-ai-agent.md) | 2025 | Memory OS 架構 | reports/memory-control-architecture |
-| [human-memory-to-ai-2504-15965](2025-04-22-human-memory-to-ai-memory-survey-2504-15965.md) | 2025 | 人類記憶->AI 記憶映射調查 | — |
+| [human-memory-to-ai-2504-15965](2025-04-22-human-memory-to-ai-memory-survey-2504-15965.md) | 2025 | 人類記憶→AI 記憶映射調查 | — |
 | [memory-autonomous-survey-2603-07670](2026-03-08-memory-autonomous-llm-agents-survey-2603-07670.md) | 2026 | 自主 agent 記憶全調查 | reports/llm-memory-deep-research |
 | [multi-agent-memory-computer-2603-10062](2026-03-09-multi-agent-memory-computer-architecture-2603-10062.md) | 2026 | 多代理記憶電腦架構 | — |
 | [beyond-context-window-2603-04814](2026-03-05-beyond-context-window-memory-vs-longcontext-2603-04814.md) | 2026 | Memory vs long-context 實測 | reports/llm-memory-deep-research |
@@ -58,7 +58,7 @@
 | Paper | Year | Core Claim | Workspace Use |
 |-------|------|------------|--------------|
 | [nlah-2603-25723](2026-03-25-natural-language-agent-harnesses-2603-25723.md) | 2026 | NLAH：自然語言 harness 可移植性 | agent-harness/RESEARCH.md |
-| [meta-harness-2603-28052](2026-05-12-meta-harness-2603-28052.md) | 2026 | Meta-Harness；59.6%->76.4% (+16.8pp) | KNOWLEDGE-MAP.md |
+| [meta-harness-2603-28052](2026-05-12-meta-harness-2603-28052.md) | 2026 | Meta-Harness；59.6%→76.4% (+16.8pp) | KNOWLEDGE-MAP.md |
 | [ahe-observability-2604-25850](2026-04-30-ahe-observability-driven-harness-2604-25850.md) | 2026 | AHE；observability-driven 自動優化 | KNOWLEDGE-MAP.md |
 | [harbor-automated-2604-20938](2026-04-22-harbor-automated-harness-optimization-2604-20938.md) | 2026 | Harbor；自動化 harness 優化 | — |
 | [car-harness-2604-23xxx](2026-04-23-harness-engineering-language-agents-car.md) | 2026 | CAR 14-component framework | HARNESS-CARD.md |
@@ -167,7 +167,7 @@ PDF 格式，無 .md 摘要：
 | deepseek-v3-2412-19437.pdf | 2024 | DeepSeek-V3 技術報告 |
 | streamingllm-attention-sink-2309-17453.pdf | 2023 | Attention sink；穩定串流 4M tokens；比 recompute 快 22.2× |
 | snapkv-kv-cache-compression-2404-14469.pdf | 2024 | observation window 選 KV；壓縮至 1024 tokens 幾乎無損 |
-| h2o-heavy-hitter-oracle-kv-cache-2306-14048.pdf | 2023 | Heavy-Hitter eviction；20% H2 -> throughput 最高 29× |
+| h2o-heavy-hitter-oracle-kv-cache-2306-14048.pdf | 2023 | Heavy-Hitter eviction；20% H2 → throughput 最高 29× |
 | mamba-ssm-selective-state-space-2312-00752.pdf | 2023 | Selective SSM；推理 O(1) 無 KV cache；throughput 5× |
 | jamba-hybrid-transformer-mamba-2403-19887.pdf | 2024 | Attn:Mamba=1:7 hybrid；256K context；KV cache 小 8–32× |
 | yarn-rope-context-extension-2309-00071.pdf | 2023 | NTK-by-Parts RoPE 擴展；現有方法最優，零額外開銷 |
@@ -223,7 +223,7 @@ PDF 格式，無 .md 摘要：
 | parallel-context-compaction-2605-23296.pdf | 2026 | 非同步平行 compaction；fine-grained 可控 summary volume |
 | slipstream-compaction-validation-2605-08580.pdf | 2026 | trajectory-grounded 驗證；+8.8pp accuracy / −39.7% latency |
 | fast-kv-compaction-attention-matching-2602-16284.pdf | 2026 | latent space KV 壓縮；50× 幾乎無損 |
-| [when-better-prompts-hurt-2601-22025](2026-01-29-when-better-prompts-hurt-eval-driven-2601-22025.md) | 2026 | Eval-driven prompt 迭代；MVES；泛用 prompt 反而降準（100%->90%） |
+| [when-better-prompts-hurt-2601-22025](2026-01-29-when-better-prompts-hurt-eval-driven-2601-22025.md) | 2026 | Eval-driven prompt 迭代；MVES；泛用 prompt 反而降準（100%→90%） |
 | [promptbridge-2512-01420](2025-12-01-promptbridge-cross-model-prompt-transfer-2512-01420.md) | 2025 | Cross-model prompt transfer；Model Drifting；SWE-Bench +27.39% |
 
 ---
@@ -235,7 +235,7 @@ PDF 格式，無 .md 摘要：
 | Paper | Year | Core Claim |
 |-------|------|------------|
 | [hydraserve-2502-15524](2025-02-21-hydraserve-cold-start-serverless-llm-2502-15524.md) | 2025 | Cold start 降 1.7–4.7×；overlap stages + proactive distribution |
-| [cold-start-antipatterns-2512-16066](2025-12-19-cold-start-antipatterns-serverless-2512-16066.md) | 2025 | Cold-start 為 developer-visible 設計問題；81 issues -> 反模式分類；Amazon +100ms = -1% 銷售 |
+| [cold-start-antipatterns-2512-16066](2025-12-19-cold-start-antipatterns-serverless-2512-16066.md) | 2025 | Cold-start 為 developer-visible 設計問題；81 issues → 反模式分類；Amazon +100ms = -1% 銷售 |
 
 ---
 

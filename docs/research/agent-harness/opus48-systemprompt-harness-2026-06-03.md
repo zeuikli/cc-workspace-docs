@@ -2,7 +2,7 @@
 
 > **Type:** wiki:compiled — Opus 4.8 行為位移如何驅動 CC system-prompt 與 harness 改動
 > **Updated**: 2026-06-03 | **Consumer**: `harness-meta` skill、`subagent-strategy.md`、`context-management.md`
-> **範圍**:Claude Code v2.1.154 -> v2.1.161
+> **範圍**:Claude Code v2.1.154 → v2.1.161
 > **三源接地**:
 > 1. CHANGELOG（[Piebald-AI/claude-code-system-prompts](https://github.com/Piebald-AI/claude-code-system-prompts/blob/main/CHANGELOG.md)）
 > 2. system-prompts 原始檔（[同 repo /system-prompts](https://github.com/Piebald-AI/claude-code-system-prompts/tree/main/system-prompts)）
@@ -18,18 +18,18 @@
 
 ---
 
-## 1. 全景:v2.1.154 -> v2.1.161 改動表
+## 1. 全景:v2.1.154 → v2.1.161 改動表
 
 | 版本 | token | 與 Opus 4.8 / harness 相關的關鍵改動 |
 |---|---|---|
-| **2.1.154** | +11,516 | **Opus 4.8 落地大版本**:model catalog 加 Opus 4.8(1M/128K);API ref(cURL/Go/Py/TS)4.7->4.8;**Model migration guide 加 Opus 4.8 章**;Building-LLM-apps skill;Agent Design Patterns 改用 beta `role:"system"`;**Workflow tool-desc:ultracode 為 standing opt-in、首呼須 inline script、JSON args、純 JS 非 TS**;**AskUserQuestion 收緊(僅 blocked 時問)**;Coordinator worker 計量改 subagent tokens;background 暫存改 `$CLAUDE_JOB_DIR/tmp` |
+| **2.1.154** | +11,516 | **Opus 4.8 落地大版本**:model catalog 加 Opus 4.8(1M/128K);API ref(cURL/Go/Py/TS)4.7→4.8;**Model migration guide 加 Opus 4.8 章**;Building-LLM-apps skill;Agent Design Patterns 改用 beta `role:"system"`;**Workflow tool-desc:ultracode 為 standing opt-in、首呼須 inline script、JSON args、純 JS 非 TS**;**AskUserQuestion 收緊(僅 blocked 時問)**;Coordinator worker 計量改 subagent tokens;background 暫存改 `$CLAUDE_JOB_DIR/tmp` |
 | 2.1.156 | — | 無 prompt 改動 |
 | **2.1.157** | +674 | **tool-use-concepts:tool description 應規定「何時呼叫」,特別為改善 recent Opus 的 should-call;Model migration guide:Opus 4.8 把 tool-triggering 指示放進「每個工具自己的 description」,不只 system prompt**;EnterWorktree 可 path 切換;Security monitor 擴充 |
 | 2.1.158/159 | — | 無 prompt 改動 |
 | **2.1.160** | +10,510 | **Workflow tool-desc:`ultracode` 改為「明確關鍵字」,自然語言「use a workflow」亦算 opt-in**(此版前字面觸發詞是 `workflow`);新增 /design-sync skill + DesignSync 工具;/code-review 重構(移除 part 4 三態驗證,改 recall-biased) |
 | **2.1.161** | +64 | **Action safety:啟用 durable approval context 時,hard-to-reverse/outward-facing 動作的核准可跨 context 留存**(否則維持單 context 較嚴規則);Agent tool-desc:subagent-type 依「可用性」而非「訊息續傳」判定;Background monitor streaming |
 
-> 旁註(範圍外但關鍵)——**2.1.152/2.1.153**:Workflow 關鍵字 `ultrawork->workflow`;/code-review 從 5 finder angle 擴到 9(加 reuse/simplification/efficiency/altitude);新增 Coordinator mode。這條線在 2.1.154 與 Opus 4.8 匯流。
+> 旁註(範圍外但關鍵)——**2.1.152/2.1.153**:Workflow 關鍵字 `ultrawork→workflow`;/code-review 從 5 finder angle 擴到 9(加 reuse/simplification/efficiency/altitude);新增 Coordinator mode。這條線在 2.1.154 與 Opus 4.8 匯流。
 
 ---
 
@@ -43,7 +43,7 @@
 | 移除 | sampling params(`temperature/top_p/top_k`)、`budget_tokens`、last-assistant-turn prefill — 皆 400 |
 | structured_outputs | 支援 |
 | effort | `low/medium/high/xhigh/max`(同 4.7) |
-| API surface | **與 4.7 完全相同**——4.7->4.8 = model-ID 替換 + prompt 再調校,無新 breaking change |
+| API surface | **與 4.7 完全相同**——4.7→4.8 = model-ID 替換 + prompt 再調校,無新 breaking change |
 | 定位 | 最強 GA 模型;state-of-the-art 長程 agentic、knowledge work、memory;文筆更暖、更少 hedge |
 
 ---
@@ -67,7 +67,7 @@
 
 ---
 
-## 4. 核心因果:行為位移 -> system-prompt 改動 -> harness
+## 4. 核心因果:行為位移 → system-prompt 改動 → harness
 
 把 §1 的改動逐一對回 §3 的行為位移,因果就清楚了——**改動是補償**:
 
@@ -76,8 +76,8 @@
 | **AskUserQuestion 收緊「僅 blocked 才問」(2.1.154)** | B4 更愛問 | harness 層直接壓 ask-rate,呼應 migration guide「小決策自決」 |
 | **tool-use-concepts「描述要規定何時呼叫」+ migration「triggering 放進工具自身 description」(2.1.157)** | B2 under-utilization、B1 tool-triggering | should-call rate 的結構性修復——把觸發條件下沉到工具描述層 |
 | **Workflow:ultracode standing opt-in、首呼 inline script、純 JS(2.1.154);ultracode 成明確關鍵字(2.1.160)** | B2(尤其 subagent 委派保守) | 把「編排子代理」變成**顯式可觸發的一級結構**;4.8 不主動 fan-out,就用關鍵字 + 工具把它叫出來 |
-| **/code-review 改 recall-biased(PLAUSIBLE-by-default、移除三態 part 4)(2.1.152/2.1.160)** | B4/「be conservative 被字面遵守 -> recall 掉」 | report-everything-filter-downstream;對抗 agentic laziness |
-| **Coordinator worker 計量 total->subagent tokens(2.1.154)** | 長程 agentic + 多 worker | 多代理執行下的成本歸因正確化 |
+| **/code-review 改 recall-biased(PLAUSIBLE-by-default、移除三態 part 4)(2.1.152/2.1.160)** | B4/「be conservative 被字面遵守 → recall 掉」 | report-everything-filter-downstream;對抗 agentic laziness |
+| **Coordinator worker 計量 total→subagent tokens(2.1.154)** | 長程 agentic + 多 worker | 多代理執行下的成本歸因正確化 |
 | **Action safety:durable approval 跨 context 留存(2.1.161)** | 長程自主執行 | 過夜/長 run 不必每 context 重新核准;與 workflow 背景執行相容 |
 | **Agent Design Patterns / API ref 改 beta `role:"system"` mid-session(2.1.154)** | (cache 友善 + prompt-injection 安全) | 中途送 operator context 不動 top-level prompt、不毀快取——對齊本 workspace `context-management.md` static-first |
 
@@ -89,13 +89,13 @@
 
 1. **為何 4.8 才有 dynamic workflow**:Thariq 文章明言「With Claude Opus 4.8, Claude is now intelligent enough to write a custom harness tailor-made」。即 §3 的**長程 agentic + 一次給足規格 + 高 effort 規劃**能力,正是「讓 Claude 即時寫出可用 harness」的前提。harness 是 4.8 規劃能力的下游應用。
 
-2. **失敗模式被 4.8 的自主性放大**:更長 horizon + 更高自主 -> 一旦 drift/lazy/自我偏袒,代價更大。於是需要兩種對策:
+2. **失敗模式被 4.8 的自主性放大**:更長 horizon + 更高自主 → 一旦 drift/lazy/自我偏袒,代價更大。於是需要兩種對策:
    - **單 context 校準**(prompt 再調校):ask-rate、narration、tool-triggering —— §4 的改動
    - **跨 context 結構**(dynamic workflow harness):把 loop/分支/中間結果搬進確定性 JS,各 subagent 拿乾淨 context —— 前篇 §3
 
 3. **「給足規格 + /goal」= harness 的 spec-first**:migration guide 的「single well-specified initial turn」與 workflow「指令碼保存計畫、Claude context 只留最終答案」是同一哲學的兩種落法。
 
-4. **B2 + workflow opt-in 的張力**:4.8 *不主動*委派子代理(保守),但 workflow 需要*大規模* fan-out。解法是把編排做成**顯式觸發**(`ultracode` 關鍵字 / standing opt-in / 工具描述明說何時用),而非寄望模型自發。這解釋了 workflow tool-desc 為何反覆強化 opt-in 語言(2.1.153->154->160)。
+4. **B2 + workflow opt-in 的張力**:4.8 *不主動*委派子代理(保守),但 workflow 需要*大規模* fan-out。解法是把編排做成**顯式觸發**(`ultracode` 關鍵字 / standing opt-in / 工具描述明說何時用),而非寄望模型自發。這解釋了 workflow tool-desc 為何反覆強化 opt-in 語言(2.1.153→154→160)。
 
 ---
 
@@ -104,11 +104,11 @@
 | 版本 | 觸發詞 | 語義變化 |
 |---|---|---|
 | ≤2.1.152 | `ultrawork` | 初始 opt-in 關鍵字 + 單階段 workflow 範例、跨輪串接、ToolSearch 取 MCP |
-| 2.1.153 | `ultrawork`->`workflow` | 改名;model override 預設省略(繼承 session model);加 exhaustive-review(dedup against all seen、perspective-diverse verify、loop-until-dry) |
+| 2.1.153 | `ultrawork`→`workflow` | 改名;model override 預設省略(繼承 session model);加 exhaustive-review(dedup against all seen、perspective-diverse verify、loop-until-dry) |
 | 2.1.154 | `workflow` | ultracode 成 **standing opt-in**;首呼須 inline script;JSON args;明示純 JS 非 TS |
-| 2.1.160 | `workflow`->**`ultracode`** | ultracode 成「明確關鍵字」;自然語言「use a workflow」亦算 opt-in |
+| 2.1.160 | `workflow`→**`ultracode`** | ultracode 成「明確關鍵字」;自然語言「use a workflow」亦算 opt-in |
 
-> 與 [code.claude.com/docs](https://code.claude.com/docs/zh-TW/workflows) 一致:「在 v2.1.160 之前,字面觸發關鍵字是 `workflow`」。關鍵字三度更名,反映 harness 從實驗(ultrawork)-> 泛用(workflow)-> 與 effort 整合(ultracode = xhigh + 自動協調)的定位收斂。
+> 與 [code.claude.com/docs](https://code.claude.com/docs/zh-TW/workflows) 一致:「在 v2.1.160 之前,字面觸發關鍵字是 `workflow`」。關鍵字三度更名,反映 harness 從實驗(ultrawork)→ 泛用(workflow)→ 與 effort 整合(ultracode = xhigh + 自動協調)的定位收斂。
 
 ---
 

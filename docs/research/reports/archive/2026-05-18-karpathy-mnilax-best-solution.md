@@ -2,7 +2,7 @@
 
 > 版本：AB4.0（最終）· 2026-05-18  
 > 精煉方法：50+ 輪對抗式驗證（4 輪 × 5 位盲評法官，3 連勝收斂）  
-> 收斂歷程：Round 1->B · Round 2->AB2 · Round 3->AB3(4:1) · Round 4->AB4(3+:5) ← **本版本**  
+> 收斂歷程：Round 1→B · Round 2→AB2 · Round 3→AB3(4:1) · Round 4→AB4(3+:5) ← **本版本**  
 > 一手來源：`research/ai-articles/` 38 篇 + `karpathy-principles.md` + `mnilax-12rules.md`  
 > 來源溯源標注：[自測] = 內部實驗；[獨立驗證·公開來源] = 有公開引用；[理論] = 邏輯推導
 
@@ -20,14 +20,14 @@ R1–R4：Karpathy 4 Floor · R5–R12：Mnilax 8 增量 · R13–R14：新增 2
 
 實作前必須明說：(1) 對需求的詮釋（≤2 句，非複述原話）；(2) 關鍵假設；(3) 多解法時列選項讓用戶確認，不自選。
 
-「直接做」「不用解釋」-> 可跳過假設顯露，但**不可逆操作無論如何必須確認（MAJOR-4）**：
+「直接做」「不用解釋」→ 可跳過假設顯露，但**不可逆操作無論如何必須確認（MAJOR-4）**：
 
 - 破壞性資料操作（DELETE / TRUNCATE / DROP）
 - 生產環境 deploy / destroy
 - 金鑰生成 / 銷毀 / 旋轉
 - 不可回滾的 migration
 
-執行中遭遇阻礙或方向明顯偏差 -> 停下重新規劃，不硬撐繼續。
+執行中遭遇阻礙或方向明顯偏差 → 停下重新規劃，不硬撐繼續。
 
 ### 機械檢查表
 
@@ -56,7 +56,7 @@ fi
 
 寫最小能解決問題的代碼：不加推測性功能、不為一次性使用抽 helper、不鋪「未來可能需要」的支撐。
 
-**加密基底共用原則（FATAL-2）**：`secure_random_bytes`、`constant_time_compare` 等安全基底必須是獨立共用函式；禁止兩個算法函式各自 inline nonce 生成（-> AES-GCM IV reuse 漏洞）。
+**加密基底共用原則（FATAL-2）**：`secure_random_bytes`、`constant_time_compare` 等安全基底必須是獨立共用函式；禁止兩個算法函式各自 inline nonce 生成（→ AES-GCM IV reuse 漏洞）。
 
 **安全例外（永遠獨立函式，不受呼叫點計數限制）**：
 
@@ -67,7 +67,7 @@ fi
 | 輸入驗證（Input Validation） | 外部輸入的格式/範圍/字元集驗證 |
 | 身份驗證邏輯（Auth Logic） | 登入、Token 核發、Session 驗證 |
 
-**Rule of 3**：同一邏輯出現 ≥ 3 個呼叫點 -> 抽 helper。自我檢驗：資深工程師會說「這太複雜了」嗎？是 -> 砍到最簡。
+**Rule of 3**：同一邏輯出現 ≥ 3 個呼叫點 → 抽 helper。自我檢驗：資深工程師會說「這太複雜了」嗎？是 → 砍到最簡。
 
 ### 機械檢查表
 
@@ -77,7 +77,7 @@ grep -rn "os\.urandom\|random_bytes\|generate_nonce\|gen_iv\|crypto\.getRandomVa
   --include="*.py" --include="*.js" --include="*.ts" --include="*.go" \
   --exclude-dir={tests,test,fixtures,examples,__mocks__,docs} \
   . | head -30
-# nonce/IV 生成應只出現在一個共用函式中，若多處出現 -> 重構為共用基底
+# nonce/IV 生成應只出現在一個共用函式中，若多處出現 → 重構為共用基底
 # 觸發時機：任何涉及加密/隨機數的檔案變動（建議加入 pre-commit hook）
 ```
 
@@ -95,7 +95,7 @@ grep -rn "os\.urandom\|random_bytes\|generate_nonce\|gen_iv\|crypto\.getRandomVa
 
 ### 核心原則
 
-只動任務要求的最小範圍。改動前先讀 exports、直接 caller、共用 utility；任務外 bug -> 記錄回報，不自動修（commit 原子性）。**量化界線（軟）**：Bug fix ≤ 50 行、新功能 ≤ 300 行、單檔 ≤ 500 行。
+只動任務要求的最小範圍。改動前先讀 exports、直接 caller、共用 utility；任務外 bug → 記錄回報，不自動修（commit 原子性）。**量化界線（軟）**：Bug fix ≤ 50 行、新功能 ≤ 300 行、單檔 ≤ 500 行。
 
 **P0 安全例外（發現即修復）**：
 
@@ -189,7 +189,7 @@ Agent 口頭說「測試都通過了」但未實際執行，integration tests �
 - **LLM 只做「判斷」（Latent）**：分類 / 摘要 / 提取 / 創意生成 ✅
 - **確定性代碼做「決定」（Deterministic）**：路由 / 重試次數 / HTTP status code / 數學計算 ❌
 
-最常見錯誤：讓 LLM 選 HTTP status code 或控制 retry 次數 -> 結果不可預測。
+最常見錯誤：讓 LLM 選 HTTP status code 或控制 retry 次數 → 結果不可預測。
 
 ### 機械檢查表
 
@@ -216,10 +216,10 @@ LLM 決定 HTTP status code，同一請求在不同推理時得到不同值，�
 ### 核心原則
 
 - Per-task 預算：**4,000 tokens**（軟上限）；Per-session 預算：**30,000 tokens**（軟上限）
-- **決策表**：0–40% 無限制 -> 40–70% 聚焦 -> 70–85% 主動 `/compact` -> 85–95% 停止新任務 -> 95%+ 立即 `/clear`
+- **決策表**：0–40% 無限制 → 40–70% 聚焦 → 70–85% 主動 `/compact` → 85–95% 停止新任務 → 95%+ 立即 `/clear`
 
 **Compact 觸發三層**（優先序：行為信號 > 數字閾值 > 定時器）：
-1. **行為信號**：模型出現「請提供更多上下文」等迷失問句 -> 立即 compact
+1. **行為信號**：模型出現「請提供更多上下文」等迷失問句 → 立即 compact
 2. **數字閾值**：一般任務 70%；長 agentic 任務 30–35%
 3. **定時器**：複雜 agentic 每 300–400K token 主動 compact
 
@@ -248,9 +248,9 @@ compact 時未保留「安全紅線」hint，重建的 context 遺忘「prod 操
 
 發現互相矛盾的模式時必須浮現衝突，不靜默選擇。不混用兩種模式。
 
-**統一優先序（MAJOR-2）**：ADR / CONTRIBUTING.md 指定 -> 最近 3 commit 風格 -> 覆蓋率數字
+**統一優先序（MAJOR-2）**：ADR / CONTRIBUTING.md 指定 → 最近 3 commit 風格 → 覆蓋率數字
 
-說明：無 ADR/CONTRIBUTING.md 時，先參考最近 3 commit 風格，再看覆蓋率。若兩個 ADR 互相矛盾 -> 必須浮現給用戶決策，不自行選擇。
+說明：無 ADR/CONTRIBUTING.md 時，先參考最近 3 commit 風格，再看覆蓋率。若兩個 ADR 互相矛盾 → 必須浮現給用戶決策，不自行選擇。
 
 **機械 Artifact（必寫）**：
 ```
@@ -281,7 +281,7 @@ TODO(conflict): chose <A> over <B>; reason: <說明>; remove <B> before <milesto
 ### 機械檢查表
 
 ```bash
-# 優先序：ADR/CONTRIBUTING.md -> 最近 3 commit -> 覆蓋率
+# 優先序：ADR/CONTRIBUTING.md → 最近 3 commit → 覆蓋率
 for dir in "docs/adr" "adr" "docs/decisions" "docs/architecture"; do
   [ -d "$dir" ] && { echo "[ADR] 找到：$dir"; ls "$dir" | head -10; break; }
 done
@@ -343,7 +343,7 @@ grep -rn --exclude-dir={node_modules,vendor,.git,dist,build} \
 grep -rn --include="*test*" --include="*spec*" \
   --exclude-dir={node_modules,vendor,.git} \
   -E "toHaveBeenCalled\(\)|assert_called\(\)" . | head -10
-# 上方結果若無配套輸出值驗證 -> 屬於弱測試
+# 上方結果若無配套輸出值驗證 → 屬於弱測試
 
 npx stryker run 2>&1 | grep 'Mutation score'  # JS/TS
 mutmut run && mutmut results                   # Python
@@ -388,7 +388,7 @@ Agent 在 10 步重構的第 7 步發現方向偏差，但沒有 checkpoint 繼�
 
 ### 核心原則
 
-Codebase 既有慣例 > Agent 偏好；不確定跟隨最近 3 個 commit 的風格。慣例本身有害 -> 明說並另開議題，不要 silent fork。偏離慣例的選擇必須在 commit message 標注原因。
+Codebase 既有慣例 > Agent 偏好；不確定跟隨最近 3 個 commit 的風格。慣例本身有害 → 明說並另開議題，不要 silent fork。偏離慣例的選擇必須在 commit message 標注原因。
 
 ### 機械檢查表
 
@@ -437,7 +437,7 @@ Agent 發現「SQL query 直接字串拼接」是 codebase 慣例，選擇跟隨
 ```bash
 [ -f "scripts/healthcheck.sh" ] && bash scripts/healthcheck.sh || echo "[WARNING] healthcheck.sh 不存在"
 grep -Ern '（略）|（待補）|TODO[^(]' docs/ .claude/ *.md 2>/dev/null
-# 完成宣告自問：資深工程師會核准這個嗎？否 -> 先修再報
+# 完成宣告自問：資深工程師會核准這個嗎？否 → 先修再報
 ```
 
 ### 失敗案例
@@ -454,9 +454,9 @@ Agent 驗證失敗後靜默跳過並輸出「任務完成」，用戶以為系�
 
 ### 核心原則
 
-任何自動化任務（CI/CD、migration、deployment）必須明確三層。**P 層**確認前置條件（失敗 -> `exit 1`，不 skip）；**G 層**驗證目標達成（使用 `<DB_VERIFY_CMD>` 佔位符，不硬綁 DB 類型）；**E 層**蒐集執行證據。E 層缺失時除錯成本約 3 倍。
+任何自動化任務（CI/CD、migration、deployment）必須明確三層。**P 層**確認前置條件（失敗 → `exit 1`，不 skip）；**G 層**驗證目標達成（使用 `<DB_VERIFY_CMD>` 佔位符，不硬綁 DB 類型）；**E 層**蒐集執行證據。E 層缺失時除錯成本約 3 倍。
 
-> 前置條件失敗 -> `exit 1`，**不 skip**。跳過前置條件的測試會在 prod 環境「成功」，掩蓋真實問題。
+> 前置條件失敗 → `exit 1`，**不 skip**。跳過前置條件的測試會在 prod 環境「成功」，掩蓋真實問題。
 
 ### 機械檢查表
 
@@ -499,7 +499,7 @@ G 層硬寫 `psql -c "..."` 但環境使用 SQLite，G 層因 psql 不存在崩�
 
 ### 核心原則
 
-多語言專案必須對每種語言做依賴安全審查，版本鎖定確保可重現。工具未安裝 -> Fail Loud（顯示安裝指令），不靜默跳過。**未涵蓋**：Swift / PHP / .NET (C#)（替代：`swift package audit` / `composer audit` / `dotnet list package --vulnerable`）。
+多語言專案必須對每種語言做依賴安全審查，版本鎖定確保可重現。工具未安裝 → Fail Loud（顯示安裝指令），不靜默跳過。**未涵蓋**：Swift / PHP / .NET (C#)（替代：`swift package audit` / `composer audit` / `dotnet list package --vulnerable`）。
 
 **工具版本鎖定**：
 
@@ -558,11 +558,11 @@ Go + Python 混合專案只跑 `pip-audit`，忽略 `govulncheck`，Go 依賴中
 | 用戶說「直接做」，操作是 DELETE/DROP | 不可逆操作 | R1（不可逆例外） | 仍需顯示摘要 + 等待確認 | 跳過確認直接執行 |
 | 兩個加密函式各自 inline IV/nonce | 重複 nonce 生成 | R2（FATAL-2） | 重構為共用 `secure_random_bytes()` | 「各自獨立」保留現狀 |
 | grep 憑證掃描命中假資料 | tests/fixtures 大量誤報 | R3（FATAL-1） | `--exclude-dir={tests,fixtures,...}` + 推薦 gitleaks | 直接呈現全部結果 |
-| 修功能時發現硬編碼 API Key | P0 安全漏洞 | R3（P0） | stash -> hotfix 分支 -> PR -> 回報 | 繼續功能開發 |
+| 修功能時發現硬編碼 API Key | P0 安全漏洞 | R3（P0） | stash → hotfix 分支 → PR → 回報 | 繼續功能開發 |
 | 宣告「完成」前的檢查 | 任何任務收尾 | R4 + R12 | 執行驗證，展示前 5 後 5 行輸出 | 口頭說「測試通過」 |
 | LLM 被設計為決定 HTTP status code | 確定性邏輯讓 LLM 控制 | R5 | 移到確定性 if/switch | 「LLM 判斷比較靈活」 |
 | Token 使用率達 80%，接新任務 | context window 壓力 | R6 | 先 `/compact` 保留安全紅線 | 直接接受，擠壓已有 context |
-| 看到兩種寫法衝突 | 代碼庫模式不一致 | R7 | ADR -> 最近 commit -> 覆蓋率；寫 TODO(conflict) | 靜默選一種，不標注 |
+| 看到兩種寫法衝突 | 代碼庫模式不一致 | R7 | ADR → 最近 commit → 覆蓋率；寫 TODO(conflict) | 靜默選一種，不標注 |
 | ADR 與覆蓋率衝突 | ADR-005 指定 jest，mocha 80% | R7 | 選 jest（ADR 優先）+ TODO 標注 | 選 mocha（覆蓋率高） |
 | 要改一個函式 | 不熟悉現有結構 | R8 | 讀 exports + caller + utility | 直接改，不看 caller |
 | 目標檔案超過 200 行 | 大型源碼檔 | R8 | 分段讀取，每段後標注剩餘行數 | 一次讀完或假設截斷後為空 |
@@ -578,11 +578,11 @@ Go + Python 混合專案只跑 `pip-audit`，忽略 `govulncheck`，Go 依賴中
 | 版本 | 日期 | 主要變更 |
 |------|------|----------|
 | A1.0 | 2026-04 | Karpathy R1-R4 + Mnilax R5-R12 初版（12 條） |
-| A2.0 | 2026-05 | 新增 R13（PGE）、R14（Polyglot 安全審查）-> 14 條 |
+| A2.0 | 2026-05 | 新增 R13（PGE）、R14（Polyglot 安全審查）→ 14 條 |
 | A3.0 | 2026-05-18 | R7 四欄衝突表、R14 安裝指引、R13 E 層理由、台灣語境補充 |
 | B3.0 | 2026-05-18 | FATAL-1/2、MAJOR-1/2/3/4 全部修復；版本鎖定、已知限制 inline |
 | AB3.0 | 2026-05-18 | 合成 A3 + B3，保留所有 FATAL/MAJOR 修復 + 台灣語境補充（860 行） |
-| A4.0 | 2026-05-18 | J5 批評回應：860->582 行精簡；R7 優先序統一；互動矩陣合併為情境速查表 |
+| A4.0 | 2026-05-18 | J5 批評回應：860→582 行精簡；R7 優先序統一；互動矩陣合併為情境速查表 |
 | B4.0 | 2026-05-18 | Critic 修復：R13 G 層日期佔位符；R1 不可逆關鍵字補全；R3 stash pop 還原；R2 觸發條件 |
 | **AB4.0** | **2026-05-18** | **合成 A4 + B4；3 連勝收斂版本（Round 4 J1/J2/J3=L）** |
 
@@ -631,7 +631,7 @@ Go + Python 混合專案只跑 `pip-audit`，忽略 `govulncheck`，Go 依賴中
 
 ### 待追蹤的 gap（⚠️）
 
-- ⚠️ **R13 的 G 層 DB 驗證佔位符**：本報告 §R13 機械檢查表使用 `<DB_VERIFY_CMD>` 佔位符，但 workspace 的 `scripts/healthcheck.sh` 實際內容未核查是否有等效實作。R13 的「前置條件失敗 -> exit 1，不 skip」概念需要在 healthcheck 腳本中體現。
+- ⚠️ **R13 的 G 層 DB 驗證佔位符**：本報告 §R13 機械檢查表使用 `<DB_VERIFY_CMD>` 佔位符，但 workspace 的 `scripts/healthcheck.sh` 實際內容未核查是否有等效實作。R13 的「前置條件失敗 → exit 1，不 skip」概念需要在 healthcheck 腳本中體現。
 - ⚠️ **R14 Polyglot 安全審查未進入 auto-load**：本報告 §R14 的多語言 dependency audit checklist 僅在報告中記錄，未在 `.claude/rules/security-hygiene.md` 或任何 hook 中落地。Python / Go / Rust / Ruby 的 audit 工具鏈（`pip-audit` / `govulncheck` / `cargo-audit`）缺乏自動觸發機制。
 - ⚠️ **FATAL-1（憑證掃描排除假資料）的 hook 整合**：本報告 §R3 機械檢查表建議 `--exclude-dir={tests,fixtures,...}` 過濾，但 `pre-commit-review.sh` 是否已實作此排除邏輯未驗證。
 - ⚠️ **R2 安全例外（加密基底共用）未在 rules 中明文**：`core.md` §規格極簡 只寫「不為單次使用抽 helper」，未標示加密原語（nonce/IV 生成）的安全例外。此規則在涉及加密的任務中容易造成誤解（Claude 可能以「單次使用」理由 inline nonce）。
@@ -639,7 +639,7 @@ Go + Python 混合專案只跑 `pip-audit`，忽略 `govulncheck`，Go 依賴中
 ### 新發現的最佳實踐補充（🆕）
 
 - 🆕 **「Harness > 模型」對 R2 的延伸詮釋**：`2026-05-25-papers-analysis.md` 中 `harbor-automated-harness-optimization` 論文發現「手工調優產生退化 -37%」——即過度優化 harness 配置（違反 R2 Simplicity First）會造成性能退化。R2 的精簡原則不只適用於代碼，也適用於 harness 配置：用 Bayesian 優化系統性搜索 9 個旗標遠勝手工試錯。
-- 🆕 **R8 的大檔分段讀取與 Token Budget 的交叉**：`natural-language-agent-harnesses-2603-25723` 論文實測 NLAH（Natural Language Agent Harnesses）將 context 從 60.1K -> 2.9K token（-95%），效能相當。對 R8「讀取超過 200 行必須分段」的補充：分段讀取不只防止 context 截斷，也應考慮只讀取「解決問題所需的最小行數」（與 R6 Token Budget 交叉），避免超過 per-task 4,000 token 預算。
+- 🆕 **R8 的大檔分段讀取與 Token Budget 的交叉**：`natural-language-agent-harnesses-2603-25723` 論文實測 NLAH（Natural Language Agent Harnesses）將 context 從 60.1K → 2.9K token（-95%），效能相當。對 R8「讀取超過 200 行必須分段」的補充：分段讀取不只防止 context 截斷，也應考慮只讀取「解決問題所需的最小行數」（與 R6 Token Budget 交叉），避免超過 per-task 4,000 token 預算。
 - 🆕 **`/goal` 命令對 R4 的工具化**：R4 要求「開工前寫成功的可觀測條件，迭代到達標」，`/goal` 命令（Week 20, v2.1.139）是 R4 的原生實現工具：`/goal all tests pass and lint is clean` 後 Claude 自動跨多輪工作直到條件成立。建議在 `core.md` §R4 補充 `/goal` 作為強可驗證條件的推薦實現方式。
 - 🆕 **R12 Fail Loud 的 `continueOnBlock` 新語義**：v2.1.141 引入 `continueOnBlock: true` hook 配置，PostToolUse hook 拒絕時將拒絕原因回饋 Claude 並繼續 turn（而非結束）。這是 R12「失敗必須立即顯示完整錯誤訊息」的一種新形式：hook 失敗資訊被回饋給 Claude，讓 Claude 有機會自我修正。需注意：此配置可能讓 hook 看起來「被忽略」（GOTCHA #42），需要明確設計意圖。
 

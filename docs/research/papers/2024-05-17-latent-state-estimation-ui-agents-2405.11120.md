@@ -44,9 +44,9 @@ The LLM achieved high accuracy across five state aspects, ranging from "76.8%–
 ### Performance Improvements
 
 When agents explicitly reasoned about latent state, task success increased substantially:
-- Zero-shot: 28.1% -> 45.9%
-- CoT-SC: 28.1% -> 42.2%
-- ReAct: 35.6% -> 43.7%
+- Zero-shot: 28.1% → 45.9%
+- CoT-SC: 28.1% → 42.2%
+- ReAct: 35.6% → 43.7%
 
 ### Evaluation Methodology
 

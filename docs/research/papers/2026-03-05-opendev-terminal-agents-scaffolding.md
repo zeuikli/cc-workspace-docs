@@ -272,7 +272,7 @@ The system maintains two memory structures:
 **Interaction**:
 - Working memory handles immediate decisions
 - Episodic memory provides context continuity
-- Periodic consolidation moves insights from working -> episodic
+- Periodic consolidation moves insights from working → episodic
 - Retrieval-augmented generation incorporates relevant episodic memories
 
 ### 3.5 Context-Aware Reminders
@@ -290,15 +290,15 @@ To counteract instruction degradation over time:
 Step 1: [normal operation, agent understands goal]
 ...
 Step 20: [agent begins tangential investigation, drifting from goal]
--> Reminder: "Your goal is to fix memory leak in auth module, not to 
+→ Reminder: "Your goal is to fix memory leak in auth module, not to 
             refactor database code. Return to goal?"
 
 Step 40: [agent continuing on wrong track]
--> Critical reminder: "You have spent 40 steps on database refactoring.
+→ Critical reminder: "You have spent 40 steps on database refactoring.
                     Return to original goal immediately."
 
 Step 50: [context at 85% usage]
--> Resource reminder: "Context at 85%. Begin preparing for conclusion
+→ Resource reminder: "Context at 85%. Begin preparing for conclusion
                     or context compaction."
 ```
 
@@ -319,7 +319,7 @@ When context reaches threshold (typically 80% utilization):
    - Size reduction: Typically 40–60%
 
 3. **Preserve continuity**:
-   - Maintain causality (actions -> outcomes)
+   - Maintain causality (actions → outcomes)
    - Keep enough detail for error diagnosis
    - Support rollback to previous decision points
 

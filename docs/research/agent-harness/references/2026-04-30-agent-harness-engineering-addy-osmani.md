@@ -50,7 +50,7 @@ Convert each agent failure into permanent rules—the harness tightens with ever
 
 ## Critical Data Point
 
-Claude Opus 4.6 in Claude Code scores lower than the same model in custom harnesses optimized for specific tasks (Top 30 -> Top 5 on Terminal Bench 2.0 by harness changes alone).
+Claude Opus 4.6 in Claude Code scores lower than the same model in custom harnesses optimized for specific tasks (Top 30 → Top 5 on Terminal Bench 2.0 by harness changes alone).
 
 ## Architecture Pattern
 

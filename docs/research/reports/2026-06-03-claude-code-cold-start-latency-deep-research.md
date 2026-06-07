@@ -1,17 +1,17 @@
 # Claude Code 冷啟動延遲與 Auto-Load 載入優化深度研究報告
 
 **日期**：2026-06-03 | **分支**：`feature/autoload-coldstart-research`
-**研究方法**：gap-map 去重 -> latency 主軸 pivot -> 本機實測 -> arXiv 接地 -> adversarial 校驗
+**研究方法**：gap-map 去重 → latency 主軸 pivot → 本機實測 → arXiv 接地 → adversarial 校驗
 **來源**：官方文件 5 處 · GitHub issues 9 個 · 社群/blog 5 處 · arXiv 全文 2 篇（另 2 篇摘要）· 本機 hook 實測 10+ 點
 
 ---
 
 ## 執行摘要
 
-前作（2026-05-18 / 05-25 共 9+ 份報告）已徹底覆蓋 **token 重量**維度（auto-load ≤ 3,500 tokens、合規率 76%->52%、TYPE A/B/C/D 分類、defer_loading -85%）。本報告填補**未覆蓋的兩個 GAP**：
+前作（2026-05-18 / 05-25 共 9+ 份報告）已徹底覆蓋 **token 重量**維度（auto-load ≤ 3,500 tokens、合規率 76%→52%、TYPE A/B/C/D 分類、defer_loading -85%）。本報告填補**未覆蓋的兩個 GAP**：
 
 1. **冷啟動 wall-clock latency**（hook 執行時間、session init、MCP 連線）— 前作零覆蓋
-2. **prompt cache 冷->暖機制**對 startup 的影響 — 前作僅覆蓋成本面，缺機制與 deferred-tool 交互
+2. **prompt cache 冷→暖機制**對 startup 的影響 — 前作僅覆蓋成本面，缺機制與 deferred-tool 交互
 
 **核心結論**：Claude Code 的啟動與互動延遲，主要不在「載入多少 token」，而在「**每個 hook 各自 spawn 一個 Node.js/bash 進程的 cold-start 開銷**」。社群實測：11+ hooks 可使每 prompt 從 4.8s 暴增至 18–21s（+13–16s）。本機實測同樣指認 hook spawn 與同步 healthcheck 為延遲主因，而非 auto-load token 量。
 
@@ -19,8 +19,8 @@
 | 優先 | 動作 | 預期效果 | 來源 |
 |------|------|---------|------|
 | P0 | side-effect hook 加 `async: true`（v2.1.45+） | 不阻塞 model，回收阻塞延遲 | 官方 hooks doc |
-| P0 | **security hook 不可 async** -> 改 dispatcher / 內部優化 | 保留安全 + 降 spawn | Lane A #6/#8 + 安全紅線 |
-| P1 | dispatcher 模式合併多 hook | V8 spawn 50–80ms -> IPC ~2–5ms（-94~99%） | GitHub #26521 |
+| P0 | **security hook 不可 async** → 改 dispatcher / 內部優化 | 保留安全 + 降 spawn | Lane A #6/#8 + 安全紅線 |
+| P1 | dispatcher 模式合併多 hook | V8 spawn 50–80ms → IPC ~2–5ms（-94~99%） | GitHub #26521 |
 | P1 | prompt cache pre-warm（`max_tokens:0`） | 維持 cache 暖態，避免 resume cache miss | 官方 caching doc |
 | P2 | MCP project-scoped + 待 `lazyConnect` | 減少 idle server spawn | GitHub #63251 |
 
@@ -33,7 +33,7 @@
 使用者首要訴求是「speed up cold start / 提升載入速度」。Gap-map 掃描 9+ 份既有報告 + 60+ 篇 papers，確認：
 
 - **已覆蓋**：token-loaded-before-first-turn（auto-load 上限、合規率、cache 成本倍率、deferred token 數字）
-- **零覆蓋**：startup 的真實 wall-clock 時間 — hook 執行 ms、session init 耗時、MCP 連線延遲、cache 冷->暖端到端時間
+- **零覆蓋**：startup 的真實 wall-clock 時間 — hook 執行 ms、session init 耗時、MCP 連線延遲、cache 冷→暖端到端時間
 
 本報告 lead with latency（未服務的維度），token 維度僅引用前作數字接合，不重述。
 
@@ -78,10 +78,10 @@
 | 11+ hooks（9 lifecycle）每 prompt | **18–21s**（無 hook 4.8s，+13–16s） | ruflo #1530 | 定量實測 |
 | 每 Node.js process spawn V8 cold-start | **50–80ms** | GitHub #26521 | 定量實測 |
 | 63 hooks blocking overhead/tool call | **375–525ms** | GitHub #26521 | 定量實測 |
-| -> `type:"server"` IPC hook | **~2–5ms/call（-94~99%）** | GitHub #26521 提案 | 原型實測 |
+| → `type:"server"` IPC hook | **~2–5ms/call（-94~99%）** | GitHub #26521 提案 | 原型實測 |
 | 95 hooks dispatcher 模式總開銷 | **~200ms/event** | blakecrosley.com | 實測 |
-| static-analysis RAG hook wall-clock | **-35.3%（11.80s->7.64s）** | GitHub #53224 / MIT context-os | 定量實測 |
-| Windows `tasklist\|findstr` | **599,879ms（~10min）-> 336ms** | GitHub #16257（已修） | 定量實測 |
+| static-analysis RAG hook wall-clock | **-35.3%（11.80s→7.64s）** | GitHub #53224 / MIT context-os | 定量實測 |
+| Windows `tasklist\|findstr` | **599,879ms（~10min）→ 336ms** | GitHub #16257（已修） | 定量實測 |
 | Claude Desktop eager loading 重啟 | **30–60s**（清 git-worktrees.json 可解） | GitHub #38346 | 定量實測 |
 | MCP server 全部 eager connect | 無 wall-clock 數字（提案 `lazyConnect`） | GitHub #63251 | 定性 |
 | HTTP MCP transport/call | +30–200ms（vs stdio 本地） | TrueFoundry | 估算 |
@@ -90,7 +90,7 @@
 
 ---
 
-## 3. Prompt Cache 冷->暖機制（官方明文，Lane B）
+## 3. Prompt Cache 冷→暖機制（官方明文，Lane B）
 
 前作覆蓋 TTL 5min + 90% discount。本報告補機制：
 
@@ -102,7 +102,7 @@
 | Cache read（暖） | **0.1×** base input | 兩種 TTL 皆同 |
 
 - **回本點**：1.25 / (1−0.1) ≈ **1.4 次命中即打平**；≥2 次命中淨賺
-- **無背景刷新**：cache 僅在被使用時刷新；TTL 過期 -> 下次請求整個前綴重新 write（1.25×，非 read）
+- **無背景刷新**：cache 僅在被使用時刷新；TTL 過期 → 下次請求整個前綴重新 write（1.25×，非 read）
 - 最低 cacheable：Opus 4.8 / Sonnet 4.6 = **1,024 tokens**；Haiku 4.5 = 4,096
 
 ### 3.2 Cache pre-warming（降冷啟動體感）
@@ -115,10 +115,10 @@ client.messages.create(model="claude-opus-4-8", max_tokens=0,
 不相容：`stream=true` / extended thinking / structured outputs / `tool_choice:any|tool` / batch。
 
 ### 3.3 20-block lookback
-cache read 時從 breakpoint 往回最多掃 **20 個 block** 找最長匹配前綴；超出視為 miss -> 需在舊 breakpoint 加 `cache_control`。每 request 最多 **4 breakpoints**。
+cache read 時從 breakpoint 往回最多掃 **20 個 block** 找最長匹配前綴；超出視為 miss → 需在舊 breakpoint 加 `cache_control`。每 request 最多 **4 breakpoints**。
 
 ### 3.4 cache-breaking 反模式（接合前作 dont-break-cache 論文）
-timestamps / UUID / MCP server restart / mid-session 改 CLAUDE.md / 增刪 tool -> 破壞靜態前綴 -> cache miss -> 成本 +30–60%。對應 CLAUDE.md context-management.md「mid-session 禁止切模型/增刪 tool/改 CLAUDE.md」。
+timestamps / UUID / MCP server restart / mid-session 改 CLAUDE.md / 增刪 tool → 破壞靜態前綴 → cache miss → 成本 +30–60%。對應 CLAUDE.md context-management.md「mid-session 禁止切模型/增刪 tool/改 CLAUDE.md」。
 
 ---
 
@@ -127,14 +127,14 @@ timestamps / UUID / MCP server restart / mid-session 改 CLAUDE.md / 增刪 tool
 本 session 即為實例：~30 個 deferred tools 經 ToolSearch 按需載入。
 
 ### 4.1 觸發閾值
-- tool definitions > **10K tokens**，或 **10+ tools** -> 自動 `defer_loading: true`
-- Token 節省：50+ MCP 工具 77K -> 8.7K tokens（**-85%**）；ToolSearch overhead 僅 ~500 tokens
+- tool definitions > **10K tokens**，或 **10+ tools** → 自動 `defer_loading: true`
+- Token 節省：50+ MCP 工具 77K → 8.7K tokens（**-85%**）；ToolSearch overhead 僅 ~500 tokens
 
 ### 4.2 與 cache 的交互（關鍵 — 前作未答）
 官方明文：
 > "Deferred tools are not included in the system-prompt prefix... the API appends a `tool_reference` block inline in the conversation... **The prefix is untouched, so prompt caching is preserved.**"
 
-- deferred tool 的 schema **不計入 cache prefix**，被搜尋時注入 **messages 層**而非 system/tools 層 -> **不破壞 cache**
+- deferred tool 的 schema **不計入 cache prefix**，被搜尋時注入 **messages 層**而非 system/tools 層 → **不破壞 cache**
 - 兩種搜尋：`regex`（≤200 字元 pattern）/ `bm25`（自然語言）；每次返回 3–5 個工具
 - 約束：**不可全部 deferred**（至少一個非 deferred，否則 400）；strict mode 相容
 
@@ -148,17 +148,17 @@ timestamps / UUID / MCP server restart / mid-session 改 CLAUDE.md / 增刪 tool
 ### 5.1 啟動層（SessionStart）
 1. 升級至最新版（修 showSetupScreens async、Windows tasklist bug）
 2. **SessionStart hook 維持 < 1s**（官方建議）；本機 session-init 592ms 可接受但 skill 掃描可快取
-3. 清 stale `git-worktrees.json`（Desktop 30–60s -> 大幅改善）
+3. 清 stale `git-worktrees.json`（Desktop 30–60s → 大幅改善）
 
 ### 5.2 互動層（每 prompt / 每 tool call）
 4. **side-effect hook 加 `async:true`**（logging/audit/notification）— v2.1.45+
-5. **security/validation/context hook 維持同步**，改用 dispatcher 模式降 spawn（V8 50–80ms -> IPC 2–5ms）
+5. **security/validation/context hook 維持同步**，改用 dispatcher 模式降 spawn（V8 50–80ms → IPC 2–5ms）
 6. UserPromptSubmit hook 預設 timeout 30s（其他 600s）— 保持輕量
-7. 同一 event 多 hook -> 單一 dispatcher（cached stdin），避免各自讀 stdin 造成 JSON corruption
+7. 同一 event 多 hook → 單一 dispatcher（cached stdin），避免各自讀 stdin 造成 JSON corruption
 
 ### 5.3 Cache 層
-8. 靜態前綴（CLAUDE.md/rules/tools）放最前不動 -> 最大化 cache 命中
-9. resume 間隔 > 5min（TTL）-> 接受 cache miss 或 pre-warm；長閒置考慮 1hr TTL
+8. 靜態前綴（CLAUDE.md/rules/tools）放最前不動 → 最大化 cache 命中
+9. resume 間隔 > 5min（TTL）→ 接受 cache miss 或 pre-warm；長閒置考慮 1hr TTL
 10. 不在 mid-session 改 CLAUDE.md / 切模型 / 增刪 tool
 
 ### 5.4 MCP / Tool 層

@@ -58,12 +58,12 @@ CoALA 將記憶分為四類：
 ### 3. 決策過程（Decision-Making Process）
 
 ```
-當前觀察 -> Working Memory 更新
-          -> 記憶提取（從 Episodic/Semantic/Procedural）
-          -> LM 推理（選擇行動）
-          -> 行動執行
-          -> 觀察 -> 記憶更新
-                 -> 反思（若觸發條件滿足）
+當前觀察 → Working Memory 更新
+          → 記憶提取（從 Episodic/Semantic/Procedural）
+          → LM 推理（選擇行動）
+          → 行動執行
+          → 觀察 → 記憶更新
+                 → 反思（若觸發條件滿足）
 ```
 
 ### 4. 學習機制（Learning Mechanism）
@@ -102,7 +102,7 @@ CoALA 將記憶分為四類：
 
 CoALA 識別的關鍵未解問題：
 
-1. **記憶一致性**：如何在多種記憶形式之間保持一致性？（Working -> Episodic -> Semantic 更新的同步問題）
+1. **記憶一致性**：如何在多種記憶形式之間保持一致性？（Working → Episodic → Semantic 更新的同步問題）
 
 2. **遺忘機制**：何時刪除舊記憶？主動遺忘（learned forgetting）vs 被動衰減
 
@@ -120,8 +120,8 @@ CoALA 是 LLM 記憶研究的**統一分類框架**。當解讀以下研究時�
 
 - **MemGPT** = 顯式管理 Episodic + Semantic Memory 的讀寫
 - **Reflexion** = Episodic Memory 的反思更新
-- **Generative Agents** = 全類型記憶 + 整合（consolidation = Episodic -> Semantic）
-- **2605.12978** = 發現 Episodic -> Semantic 整合的失真問題（consolidation failure）
+- **Generative Agents** = 全類型記憶 + 整合（consolidation = Episodic → Semantic）
+- **2605.12978** = 發現 Episodic → Semantic 整合的失真問題（consolidation failure）
 - **δ-mem** = 在 Procedural Memory 層面引入參數記憶（不同於上層管理）
 
 ---

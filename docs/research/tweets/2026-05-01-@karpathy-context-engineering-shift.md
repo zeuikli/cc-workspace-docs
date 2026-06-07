@@ -37,7 +37,7 @@ type: tweet
 
 1. **Prompt Engineering 的侷限性**：prompt 只是一句話，context engineering 是系統架構決策
 2. **Context Window as Resource**：填充的「不是更多資訊」，而是「下一步恰好所需的資訊」
-3. **Harness 與 Context 的連結**：harness 決定了哪些資訊進入 context -> harness IS context engineering
+3. **Harness 與 Context 的連結**：harness 決定了哪些資訊進入 context → harness IS context engineering
 
 ### 關鍵引用
 
@@ -59,7 +59,7 @@ type: tweet
 ## 與 cc-workspace 的連結
 
 - `context-management.md` §理論錨點直接引用此推文（已收錄）
-- 支持 CLAUDE.md 的三層載入策略（auto -> on-demand -> manual = context engineering）
+- 支持 CLAUDE.md 的三層載入策略（auto → on-demand → manual = context engineering）
 - 強化 harness-design.md 的設計哲學：harness 工程 = context 工程
 
 **已在 workspace 中引用**：`research/tweets/2025-06-25-@karpathy-607626.md`（原始推文版本，此為 2026-05 後續討論擴散版）

@@ -58,7 +58,7 @@ Routines（Research Preview）：三種自動化模式（排程/API/GitHub webho
 
 ### 2026-04-09 — Announcements
 **[The advisor strategy: Give agents an intelligence boost](https://claude.com/blog/the-advisor-strategy)**  
-Advisor Tool：Haiku + Opus Advisor 可達 BrowseComp 19.7%->41.2%，成本降 85%。一行 API 實作。
+Advisor Tool：Haiku + Opus Advisor 可達 BrowseComp 19.7%→41.2%，成本降 85%。一行 API 實作。
 
 ### 2026-04-09 — Announcements
 **[Making Claude Cowork ready for enterprise](https://claude.com/blog/cowork-for-enterprise)**  

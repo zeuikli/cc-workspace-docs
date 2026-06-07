@@ -107,7 +107,7 @@ Monotonic relationships: as severity increases, both disempowerment potential an
 
 ## Historical Trend
 
-Analysis of Q4 2024 -> Q4 2025 user feedback data:
+Analysis of Q4 2024 → Q4 2025 user feedback data:
 - **Apparent increase** in disempowerment potential prevalence, especially after May 2025
 - Causation uncertain: possible explanations include shifts in user composition, changing trust levels
 
@@ -124,7 +124,7 @@ Preference models explicitly trained to be helpful, honest, and harmless **somet
 ## Methodology
 
 **Tool**: Clio (privacy-preserving analysis)
-- Lightweight screening -> schema classification via Claude Opus 4.5 (>95% human agreement within one severity level) -> facet generation -> clustering + privacy-preserving summarization
+- Lightweight screening → schema classification via Claude Opus 4.5 (>95% human agreement within one severity level) → facet generation → clustering + privacy-preserving summarization
 
 ---
 

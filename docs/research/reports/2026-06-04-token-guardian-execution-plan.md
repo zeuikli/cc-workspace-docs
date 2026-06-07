@@ -3,7 +3,7 @@
 > **配套研究**：`2026-06-04-token-guardian-research.md`
 > **落點**：**擴展既有 3 處**（measure.sh + autoload-evolution SKILL + memory-compactor）——非新建
 > **狀態**：研究+計劃完成，**APPLY 待 gated session 核准**（改 measure.sh 屬 harness 核心 + 觸及 §Framework Integrity 引用區）
-> **Harness Loop**：OBSERVE->IDENTIFY->PROPOSE->TEST->APPLY->RECORD
+> **Harness Loop**：OBSERVE→IDENTIFY→PROPOSE→TEST→APPLY→RECORD
 
 ---
 
@@ -19,7 +19,7 @@
 |--------|------|------|
 | auto-load 18,455/19,000 餘 545 | 近滿 | `wc -c CLAUDE.md .claude/rules/{...}.md \| tail -1` |
 | measure.sh --gate §R check = 11 | allowlist 原語 | `grep -n RB_CORE scripts/measure.sh` |
-| healthcheck 0 引用 measure.sh | 整合缺口 | `grep -c measure.sh scripts/healthcheck.sh` -> 0 |
+| healthcheck 0 引用 measure.sh | 整合缺口 | `grep -c measure.sh scripts/healthcheck.sh` → 0 |
 | SKILL.md 4 處 stale 13,000 | 三源漂移 | `grep -n 13,000 .claude/skills/autoload-evolution/SKILL.md` |
 
 ---
@@ -42,10 +42,10 @@
 healthcheck 末尾呼叫 `bash scripts/measure.sh --gate` 補整合缺口（FAIL 計入總數）。
 
 ### 改動 3：autoload-evolution SKILL Phase 4a 加 prune-diff 驗證
-diff before/after -> 移除行過濾 allowlist pattern（`^## §R[0-9]`、`Lesson YYYY-MM-DD`、`falsifiable`）-> 命中則列出 + 互動式使用者 ACK。**同時修 L31/97/112/209 stale 13,000 -> 19,000**（消三源矛盾）。
+diff before/after → 移除行過濾 allowlist pattern（`^## §R[0-9]`、`Lesson YYYY-MM-DD`、`falsifiable`）→ 命中則列出 + 互動式使用者 ACK。**同時修 L31/97/112/209 stale 13,000 → 19,000**（消三源矛盾）。
 
 ### 改動 4：memory-compactor 加 post-prune grep 驗證
-compactor output 加 `grep -c "^- Lesson" MEMORY.md >= N_before`，缺口 -> FAIL 要求重跑/確認。
+compactor output 加 `grep -c "^- Lesson" MEMORY.md >= N_before`，缺口 → FAIL 要求重跑/確認。
 
 ---
 
@@ -54,11 +54,11 @@ compactor output 加 `grep -c "^- Lesson" MEMORY.md >= N_before`，缺口 -> FAI
 | # | 條件 | 指令 |
 |---|------|------|
 | T1 | healthcheck 整合後仍 PASS | `bash scripts/healthcheck.sh` FAIL=0 |
-| T2 | §R 移除被擋（P1） | 注入移除 `## §R3` 的暫存 diff -> `measure.sh --value-check` 非零 |
-| T3 | TYPE-C 移除靜默通過（P2） | 僅移除無 §R/Lesson 的 rationale -> exit 0 |
-| T4 | byte cap 整合（P3） | 假造 5 檔 > 19,000 -> `measure.sh --gate` exit 1 |
-| T5 | compactor post-prune（P4） | 模擬 Lesson 行減少 -> post-prune FAIL |
-| T6 | stale 修正 | `grep -c 13,000 .claude/skills/autoload-evolution/SKILL.md` -> 0 |
+| T2 | §R 移除被擋（P1） | 注入移除 `## §R3` 的暫存 diff → `measure.sh --value-check` 非零 |
+| T3 | TYPE-C 移除靜默通過（P2） | 僅移除無 §R/Lesson 的 rationale → exit 0 |
+| T4 | byte cap 整合（P3） | 假造 5 檔 > 19,000 → `measure.sh --gate` exit 1 |
+| T5 | compactor post-prune（P4） | 模擬 Lesson 行減少 → post-prune FAIL |
+| T6 | stale 修正 | `grep -c 13,000 .claude/skills/autoload-evolution/SKILL.md` → 0 |
 
 ---
 
@@ -78,7 +78,7 @@ wc -c CLAUDE.md .claude/rules/{core,context-management,output-discipline,subagen
 grep -c "^## §R" .claude/rules/core.md   # 11
 grep -c "13,000" .claude/skills/autoload-evolution/SKILL.md   # 0
 ```
-**失敗判定**：任一不成立 -> REFUTED 誠實回報。
+**失敗判定**：任一不成立 → REFUTED 誠實回報。
 
 ---
 

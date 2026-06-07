@@ -40,9 +40,9 @@ Opus 4.7 嚴格遵守低 effort 設定（不自作主張），複雜任務若觀
 
 | 時間 | 受影響對象 | 變動 |
 |------|----------|------|
-| W15（Apr 2026） | API key、Bedrock、Vertex、Foundry、Team、Enterprise | default effort `medium` -> `high` |
+| W15（Apr 2026） | API key、Bedrock、Vertex、Foundry、Team、Enterprise | default effort `medium` → `high` |
 | W16（Apr 2026） | Max 用戶 | Opus 4.7 成為新預設模型 |
-| W17（Apr 2026） | Pro / Max 用戶 | Opus 4.6 / Sonnet 4.6 default effort `medium` -> `high` |
+| W17（Apr 2026） | Pro / Max 用戶 | Opus 4.6 / Sonnet 4.6 default effort `medium` → `high` |
 
 從 Sonnet 4.5 或舊版遷移若觀察到延遲升高，確認是否因 default effort 提升所致（可顯式設定 `--effort medium` 降回）。
 

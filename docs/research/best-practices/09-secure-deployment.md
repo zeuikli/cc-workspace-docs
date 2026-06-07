@@ -16,7 +16,7 @@ type: best-practices
 
 Agent 可能因 **prompt injection**（惡意內容植入指令）或模型錯誤而採取非預期行動。Claude 模型本身抗 injection，但縱深防禦仍是最佳實踐。
 
-**例**：agent 處理惡意檔案，被指示傳送客戶資料到外部伺服器 -> 網路控制可完全阻斷此請求。
+**例**：agent 處理惡意檔案，被指示傳送客戶資料到外部伺服器 → 網路控制可完全阻斷此請求。
 
 ---
 
@@ -25,7 +25,7 @@ Agent 可能因 **prompt injection**（惡意內容植入指令）或模型錯�
 | 功能 | 說明 |
 |------|------|
 | **Permissions system** | 每個 tool 和 bash 指令可設為 allow / block / prompt。支援 glob pattern（如「允許所有 npm 指令」「封鎖含 sudo 的指令」）。組織可設全員套用的 policy |
-| **Command parsing** | 執行 bash 前解析成 AST 並比對 permission rules。無法解析或不符合 allow rule -> 需要明確核准。`eval` 等特定構造永遠需要核准 |
+| **Command parsing** | 執行 bash 前解析成 AST 並比對 permission rules。無法解析或不符合 allow rule → 需要明確核准。`eval` 等特定構造永遠需要核准 |
 | **Web search summarization** | 搜尋結果經摘要後才進入 context，降低惡意網頁 prompt injection 風險 |
 | **Sandbox mode** | Bash 指令可在限制 filesystem 和網路存取的沙箱中執行 |
 

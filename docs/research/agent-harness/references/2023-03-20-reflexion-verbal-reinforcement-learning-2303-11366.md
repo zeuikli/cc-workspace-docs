@@ -34,9 +34,9 @@ Large language models are increasingly being used as agents that make decisions 
 **Reflexion 的解法**：用**語言反思（verbal reflection）**替代梯度更新。
 
 ```
-嘗試 1：失敗 -> 語言反思：「我沒有考慮到邊界情況」
-               -> 存入 episodic memory
-嘗試 2（帶記憶）-> 更好的決策 -> 成功
+嘗試 1：失敗 → 語言反思：「我沒有考慮到邊界情況」
+               → 存入 episodic memory
+嘗試 2（帶記憶）→ 更好的決策 → 成功
 ```
 
 ---

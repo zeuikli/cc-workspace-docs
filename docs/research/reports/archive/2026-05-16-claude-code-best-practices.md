@@ -33,7 +33,7 @@ CLAUDE.md 是 Claude Code 的靈魂文件，每次 session 自動載入。但大
 
 **黃金法則**：CLAUDE.md 長度 ≤ 200 行，最佳 60 行。研究數據顯示，超過 200 行後，模型對規則的遵從率從 76% 跌至 52%。
 
-每行都應通過這個問題的測試：「如果移除這行，Claude 會犯錯嗎？」答案是否 -> 立即刪除。
+每行都應通過這個問題的測試：「如果移除這行，Claude 會犯錯嗎？」答案是否 → 立即刪除。
 
 **應該寫什麼：**
 
@@ -99,10 +99,10 @@ Auto Memory 是 Claude Code 的自學機制，存放在 `~/.claude/projects/<pro
 
 ```
 Auto Memory（~/.claude/projects/.../ memory/MEMORY.md）
-  -> 自動寫入，存放 session 間學習成果
+  → 自動寫入，存放 session 間學習成果
   
 MEMORY.md（Git 追蹤，workspace 根目錄）
-  -> 手動維護，存放跨裝置共享的決策與狀態
+  → 手動維護，存放跨裝置共享的決策與狀態
 ```
 
 **自我改進觸發（Boris Cherny 方法）**：每次 Claude 犯錯並被糾正後，立即更新 CLAUDE.md 加入防範規則。隨時間累積，CLAUDE.md 成為最有價值的 codebase 知識庫。
@@ -148,7 +148,7 @@ skills/
 Hooks 是 Claude Code 的自動化引擎，讓你在工具呼叫的生命週期插入自訂邏輯：
 
 ```
-Event -> Matcher Group -> Handler
+Event → Matcher Group → Handler
 ```
 
 **事件種類（25 種）：**
@@ -376,11 +376,11 @@ response = client.messages.create(
 
 以下任一操作都會導致快取完全失效：
 
-1. **動態修改 system prompt**（如注入時間戳）-> 改用 `<system-reminder>` 在 messages 中注入
-2. **Mid-session 切換模型** -> 需換模型時用 Subagent（獨立 context）
-3. **對話中增刪工具定義** -> 用 stub + `defer_loading: true` 保持定義穩定
-4. **Compact 時改變 system prompt** -> 必須用完全相同的 system prompt 重建 session
-5. **不一致的工具清單** -> 每次請求工具定義 hash 必須相同
+1. **動態修改 system prompt**（如注入時間戳）→ 改用 `<system-reminder>` 在 messages 中注入
+2. **Mid-session 切換模型** → 需換模型時用 Subagent（獨立 context）
+3. **對話中增刪工具定義** → 用 stub + `defer_loading: true` 保持定義穩定
+4. **Compact 時改變 system prompt** → 必須用完全相同的 system prompt 重建 session
+5. **不一致的工具清單** → 每次請求工具定義 hash 必須相同
 
 **正確的動態資訊注入方式：**
 
@@ -409,11 +409,11 @@ Context Engineering 的三個核心問題：
 **Compact 決策樹：**
 
 ```
-同一任務 context 仍相關 -> Continue（不 compact）
-走錯路徑 -> /rewind（移除失敗嘗試）
-中段膨脹、任務未完 -> /compact <hint>（保持 context 但壓縮中間過程）
-真正新任務 -> /clear（完全清除）
-大量中間輸出 -> Subagent（隔離 context）
+同一任務 context 仍相關 → Continue（不 compact）
+走錯路徑 → /rewind（移除失敗嘗試）
+中段膨脹、任務未完 → /compact <hint>（保持 context 但壓縮中間過程）
+真正新任務 → /clear（完全清除）
+大量中間輸出 → Subagent（隔離 context）
 ```
 
 ---
@@ -424,7 +424,7 @@ Context Engineering 的三個核心問題：
 
 Thariq Shihipar 提供最精確的判斷框架：
 
-> 「Subagent 是 context 管理的一種形式。Mental test：我需要工具輸出本身，還是只需要結論？只需結論 -> 委派 subagent。」
+> 「Subagent 是 context 管理的一種形式。Mental test：我需要工具輸出本身，還是只需要結論？只需結論 → 委派 subagent。」
 
 **五個委派觸發條件（任一成立即委派）：**
 
@@ -442,7 +442,7 @@ Thariq Shihipar 提供最精確的判斷框架：
 
 **通訊限 parent ↔ child**：child 間不直接溝通，失敗返回 parent 決策。
 
-**child 不 self-retry**：失敗 -> 返回主 Agent，由主 Agent 判斷是否重試或改策略。
+**child 不 self-retry**：失敗 → 返回主 Agent，由主 Agent 判斷是否重試或改策略。
 
 **模型分層（AgentOpt 實測數據）：**
 
@@ -483,11 +483,11 @@ effort: xhigh
 Boris Cherny 的高產出工作流：
 
 ```
-開 3-5 個 git worktree -> 各自 Claude session -> 並行執行獨立工作
--> /test-and-fix 各自驗證
--> /review-changes 交叉審查
--> /grill（adversarial review，找漏洞）
--> /commit-push-pr
+開 3-5 個 git worktree → 各自 Claude session → 並行執行獨立工作
+→ /test-and-fix 各自驗證
+→ /review-changes 交叉審查
+→ /grill（adversarial review，找漏洞）
+→ /commit-push-pr
 ```
 
 **Git Worktree 快速啟動：**
@@ -619,7 +619,7 @@ For OCR, scanned PDFs, and form filling, see:
 **保留門檻（30 天評估）：**
 
 - 品質提升 ≥ 1.5 分（10 分制）+ 時間節省 ≥ 30%，兩者同時達標才保留
-- 0 觸發次數 -> 停用
+- 0 觸發次數 → 停用
 
 **API 最大 Skill 數量：8 個**。超過後 Claude 的 recall accuracy 顯著下降，建議按角色分組，不要同時載入所有 Skill。
 
@@ -634,10 +634,10 @@ MCP（Model Context Protocol）是 Claude 連接外部世界的標準協議，3 
 **職責分離原則：**
 
 ```
-MCP Server    -> 連接（工具、外部 API、資料庫）
-Skills        -> 邏輯（領域知識、工作流、最佳實踐）
-Subagents     -> 任務委派（隔離 context、並行執行）
-Hooks         -> 自動化（確定性流程，非 Claude 控制）
+MCP Server    → 連接（工具、外部 API、資料庫）
+Skills        → 邏輯（領域知識、工作流、最佳實踐）
+Subagents     → 任務委派（隔離 context、並行執行）
+Hooks         → 自動化（確定性流程，非 Claude 控制）
 ```
 
 ### 6.2 三種 Transport 模式
@@ -728,7 +728,7 @@ Container 層（Docker/gVisor/VM 隔離）
 
 ### 7.2 Permission 系統
 
-**評估規則：deny -> ask -> allow，第一匹配勝出**
+**評估規則：deny → ask → allow，第一匹配勝出**
 
 ```json
 {
@@ -753,7 +753,7 @@ Container 層（Docker/gVisor/VM 隔離）
 **Wildcard 語法注意事項：**
 
 - `Bash(npm run *)` 匹配 `npm run test` 但**不**匹配 `npm run-linter`（無 word boundary）
-- `Bash(curl *)` 容易被 redirect/protocol 繞過 -> 改用 `deny Bash(curl *)` + `WebFetch(domain:...)` 組合
+- `Bash(curl *)` 容易被 redirect/protocol 繞過 → 改用 `deny Bash(curl *)` + `WebFetch(domain:...)` 組合
 - Process wrapper 自動剝離：`timeout`、`time`、`nice` 等自動移除；`docker exec`、`npx` **不剝離**
 
 ### 7.3 Sandboxing
@@ -848,19 +848,19 @@ Boris 用 `/loop` 實現全自動工作流：
 ```bash
 # PR 自動 shepherd（每 5 分鐘）
 /loop 5m /babysit
-# -> 監控 PR 狀態 -> 回應 reviewer 留言 -> 推更新
+# → 監控 PR 狀態 → 回應 reviewer 留言 → 推更新
 
 # Slack 回饋轉 PR（每 30 分鐘）
 /loop 30m /slack-feedback
-# -> 讀取 #feedback 頻道 -> 分析問題 -> 建立對應 PR
+# → 讀取 #feedback 頻道 → 分析問題 → 建立對應 PR
 
 # Post-merge 掃尾（每次 merge 後）
 /loop /post-merge-sweeper
-# -> 處理 merge 後遺留的 review 留言
+# → 處理 merge 後遺留的 review 留言
 
 # Stale PR 清理（每 1 小時）
 /loop 1h /pr-pruner
-# -> 關閉超過 30 天無活動的 PR
+# → 關閉超過 30 天無活動的 PR
 ```
 
 ### 8.3 常見自動化場景
@@ -912,11 +912,11 @@ Haiku（Executor，高頻低複雜）
 
 **層二：Context 層（靜態前置快取）**
 
-System Prompt + Tools 完全靜態 -> Prompt Caching -> Cache Hit Rate 90% -> 節省 90% 輸入費用
+System Prompt + Tools 完全靜態 → Prompt Caching → Cache Hit Rate 90% → 節省 90% 輸入費用
 
 **層三：工具層（按需展開工具 Schema）**
 
-Tool Search（`defer_loading: true`）-> 降低 85% tool schema token -> 更多可用 context 給真正的任務
+Tool Search（`defer_loading: true`）→ 降低 85% tool schema token → 更多可用 context 給真正的任務
 
 ### 9.2 Effort Level 選擇
 
@@ -956,10 +956,10 @@ Max 150 words unless code block dominates.
 | 組織 | 改善指標 | 數據 |
 |------|---------|------|
 | Anthropic Engineering | 每日合併 PR 數 | +67% |
-| Anthropic Marketing | 廣告創作時間 | 30 分鐘 -> 30 秒 |
-| Anthropic Legal | 合規審閱周轉 | 2-3 天 -> 24 小時 |
-| eSentire | 威脅分析時間 | 5 小時 -> 7 分鐘（95% 準確率） |
-| Skyline（70 萬行 C#）| 功能開發時間 | 一年專案 -> 兩週 |
+| Anthropic Marketing | 廣告創作時間 | 30 分鐘 → 30 秒 |
+| Anthropic Legal | 合規審閱周轉 | 2-3 天 → 24 小時 |
+| eSentire | 威脅分析時間 | 5 小時 → 7 分鐘（95% 準確率） |
+| Skyline（70 萬行 C#）| 功能開發時間 | 一年專案 → 兩週 |
 
 ---
 
@@ -981,7 +981,7 @@ Max 150 words unless code block dominates.
 
 Boris Cherny 的完成驗證心法：
 
-> 「宣告完成前自問：資深工程師會核准這個嗎？否 -> 先修再報。」
+> 「宣告完成前自問：資深工程師會核准這個嗎？否 → 先修再報。」
 
 **完成驗證的可觀測條件（開工前就寫）：**
 
@@ -1002,7 +1002,7 @@ Boris Cherny 的完成驗證心法：
 Checkpoint：做了什麼 / 驗了什麼 / 剩什麼
 ```
 
-無法描述當前狀態時 -> 停下重述，不繼續推進。
+無法描述當前狀態時 → 停下重述，不繼續推進。
 
 ---
 
@@ -1151,7 +1151,7 @@ def make_request(user_message: str, conversation_history: list) -> str:
     - system 陣列內容必須保持 100% 靜態，breakpoint 才能穩定命中
     - 動態資訊（時間、branch、最近修改）放在 user message 的 content 中
     - 用 <system-reminder> XML tag 標記動態段，讓 Claude 區分動態/靜態
-    - 這樣 system 前綴不變 -> 快取持續命中
+    - 這樣 system 前綴不變 → 快取持續命中
     """
     from datetime import datetime
     # 動態資訊作為 user message 的前綴（<system-reminder> tag 告知 Claude 這是動態注入）
@@ -1161,8 +1161,8 @@ Current time: {datetime.utcnow().isoformat()}Z
 Current working branch: main
 </system-reminder>"""
     
-    # system prompt 保持完全靜態 -> 快取穩定命中
-    # 動態資訊在 user message 中 -> 不影響 system 前綴
+    # system prompt 保持完全靜態 → 快取穩定命中
+    # 動態資訊在 user message 中 → 不影響 system 前綴
     messages = conversation_history + [
         {"role": "user", "content": f"{dynamic_context}\n\n{user_message}"}
     ]
@@ -1213,20 +1213,20 @@ Current working branch: main
 ### B.2 何時委派 Subagent
 
 ```
-讀取 ≥ 10 檔 -> 委派 researcher
-工具呼叫 > 20 次 -> 委派給適合的 agent
-可拆 ≥ 3 獨立任務 -> 平行 fan-out（最多 4 個）
-只需結論，不需中間過程 -> 委派 subagent
+讀取 ≥ 10 檔 → 委派 researcher
+工具呼叫 > 20 次 → 委派給適合的 agent
+可拆 ≥ 3 獨立任務 → 平行 fan-out（最多 4 個）
+只需結論，不需中間過程 → 委派 subagent
 ```
 
 ### B.3 Context 狀態決策
 
 ```
-context 0-40%  -> 無限制，正常執行
-context 40-70% -> 聚焦，避免引入新話題
-context 70-85% -> 主動 /compact <hint>
-context 85-95% -> 停止新任務，完成手頭工作
-context 95%+   -> 立即 /clear，新 session 繼續
+context 0-40%  → 無限制，正常執行
+context 40-70% → 聚焦，避免引入新話題
+context 70-85% → 主動 /compact <hint>
+context 85-95% → 停止新任務，完成手頭工作
+context 95%+   → 立即 /clear，新 session 繼續
 ```
 
 ---
@@ -1472,7 +1472,7 @@ Week 20 新增 hooks 能力：
 - ✅ `/batch`（G1）：`trigger-index.md §B5` 已補充
 
 **第七章：安全**
-- ✅ 多層防禦（Permission -> Sandbox -> Proxy -> Container）：本報告第七章完整
+- ✅ 多層防禦（Permission → Sandbox → Proxy → Container）：本報告第七章完整
 - ✅ 生產環境安全紅線（plan/diff + 二次確認）：`core.md` 已落地
 
 **第十章：驗證**

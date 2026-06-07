@@ -39,7 +39,7 @@ Q1 確立的開源三層分化框架（邊緣 ≤7B / 中層 27-70B / 研究 500
 
 ## 4. AI 產品經濟學：融資戰與計費模式危機
 
-2026 Q1-Q2 的融資規模令人咋舌：Anthropic 獲 Google $40B 投資（累計 Amazon $25B），估值逼近 $900B；OpenAI $122B 融資輪估值 $852B，CoreWeave × Meta $35B 長期算力合約。Cerebras IPO 以 2000 倍超額認購達到 $40B 市值。Anthropic CFO 揭露 2 年財務軌跡：$250M -> $30B run-rate（120 倍增長），目標 $40B ARR。
+2026 Q1-Q2 的融資規模令人咋舌：Anthropic 獲 Google $40B 投資（累計 Amazon $25B），估值逼近 $900B；OpenAI $122B 融資輪估值 $852B，CoreWeave × Meta $35B 長期算力合約。Cerebras IPO 以 2000 倍超額認購達到 $40B 市值。Anthropic CFO 揭露 2 年財務軌跡：$250M → $30B run-rate（120 倍增長），目標 $40B ARR。
 
 但繁榮背後出現裂縫：Cloudflare 裁員 20% 同時宣稱 AI 100 倍生產力，股價跌 23%——Wisely Chen AI（2026-05-11）指出這是市場首次懲罰「AI 取代人」的商業敘事。Token 計費複雜度成企業採購障礙：Reasoning token 可達基準成本 15 倍，Claude 中文場景有 1.71 倍 Token 稅（DeepSeek 僅 0.95 倍），導致多語言企業需重算 API 預算。GitHub Copilot 轉 token 計費標誌訂閱制甜蜜期終結。OpenAI × Microsoft 合約重寫（授權非專屬化、AGI 定義移除）解鎖多雲選擇，Lock-in 風險降低，對企業採購談判有利。
 
@@ -65,7 +65,7 @@ AI 進入 frontier 科學是 2026 Q2 最重要的範式轉變：GPT-5 生成 110
 
 Two-Slice Team 模型（Chain of Thought 2026-04-25）是 2026 年最具操作性的組織洞察：2 名工程師搭配 AI 達成傳統 8-10 人輸出，Compound Engineering 實現單人維護 5 個產品。企業案例：Glean 代理帶來 +42.9% 幫助率，Genspark 對話轉換率 +26%。Humanwork A2P 市場代理-人類 30 秒移交、87% 解決率。
 
-但 Wisely Chen AI（2026-05-12）的調查提出反面警告：73% 工程師使用 AI 後技術理解力下降（Cognitive Surrender），「AI 讓我寫代碼但我不再理解它」。Anthropic CFO 透露 2 年 $250M -> $30B run-rate，Claude 成「#1 商業 AI」，The Neuron 確認 Claude 已超越 OpenAI 在企業 AI 領域的地位（2026-05-14）。開發工具市場整合：Cursor 被 xAI 收購，Replit 拒絕收購選擇獨立（300% NRR，正向毛利），顯示優質開發工具有選擇底氣。Anthropic Orbit（企業情報 briefing 工具）推出，擴展生態。
+但 Wisely Chen AI（2026-05-12）的調查提出反面警告：73% 工程師使用 AI 後技術理解力下降（Cognitive Surrender），「AI 讓我寫代碼但我不再理解它」。Anthropic CFO 透露 2 年 $250M → $30B run-rate，Claude 成「#1 商業 AI」，The Neuron 確認 Claude 已超越 OpenAI 在企業 AI 領域的地位（2026-05-14）。開發工具市場整合：Cursor 被 xAI 收購，Replit 拒絕收購選擇獨立（300% NRR，正向毛利），顯示優質開發工具有選擇底氣。Anthropic Orbit（企業情報 briefing 工具）推出，擴展生態。
 
 ---
 
@@ -77,7 +77,7 @@ Two-Slice Team 模型（Chain of Thought 2026-04-25）是 2026 年最具操作�
 
 ---
 
-## 9. 跨主題綜合：Q1->Q2 的 5 個拐點
+## 9. 跨主題綜合：Q1→Q2 的 5 個拐點
 
 **拐點 1（2026-03-16）**：Claude 1M context GA + Anthropic 被 Pentagon 移除同日——代理能力與安全合規雙重壓力並現，多供應商備援策略從建議變必要。
 
@@ -113,7 +113,7 @@ Two-Slice Team 模型（Chain of Thought 2026-04-25）是 2026 年最具操作�
 - **AlphaSignal / Turing Post**（狀態 ⚠️）：技術論文摘要可，但解析深度不足。
 - **Ahead of AI / One Useful Thing / Last Week in AI**（低頻 📭）：發布頻率低，偶爾有精品（LeCun 架構演進分析），適合月度回顧而非日常追蹤。
 
-**推薦訂閱優先序**：Wisely Chen AI -> Latent Space -> Import AI -> Interconnects AI -> The Decoder -> TLDR AI（日常掃描）。
+**推薦訂閱優先序**：Wisely Chen AI → Latent Space → Import AI → Interconnects AI → The Decoder → TLDR AI（日常掃描）。
 
 ---
 
@@ -173,7 +173,7 @@ Two-Slice Team 模型（Chain of Thought 2026-04-25）是 2026 年最具操作�
 
 - 🆕 **Cohere Command A+**（218B MoE，48 語言，Apache 2.0）：需 2×H100 運行，為現有最強開源多語言模型之一
 - 🆕 **NVIDIA Nemotron-Labs-Diffusion**：擴散式語言模型，支援多 token 並行生成
-- 🆕 **TencentDB-Agent-Memory**：符號短期記憶 + 4 層長期記憶（L0 原始 -> L3 persona），開源
+- 🆕 **TencentDB-Agent-Memory**：符號短期記憶 + 4 層長期記憶（L0 原始 → L3 persona），開源
 - 🆕 **CLI-Anything**（港大，30K stars）：將任意桌面軟體轉為 Agent CLI 的工具
 - 🆕 **Hugging Face LeRobot 人形機器人**：約 $2,500 可自組裝，完全開源技術棧
 
@@ -196,7 +196,7 @@ Two-Slice Team 模型（Chain of Thought 2026-04-25）是 2026 年最具操作�
 - 🆕 **中國封鎖法二次啟動**：2 週內兩度對域外立法採取反制措施
 - 🆕 **Tata-ASML 半導體合作備忘錄**：印度-荷蘭半導體合作框架簽署
 - 🆕 **EU 關鍵礦物聯合儲備**：鎢/稀土/鎵納入歐盟關鍵礦物聯合儲備清單
-- 🆕 **SK Hynix HBM 榮景**：AI 利潤鏈 NVIDIA -> 記憶體晶片廠 -> 生產線工人；AMD CEO 赴北京/上海/蘇州密會
+- 🆕 **SK Hynix HBM 榮景**：AI 利潤鏈 NVIDIA → 記憶體晶片廠 → 生產線工人；AMD CEO 赴北京/上海/蘇州密會
 
 ### 主題 6 — 物理 AI 與機器人
 

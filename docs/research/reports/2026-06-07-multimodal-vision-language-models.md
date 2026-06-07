@@ -70,7 +70,7 @@ Flamingo 在 16 個 few-shot 視覺語言任務上取得 SOTA，包括 VQA、圖
 
 Q-Former 的設計以參數效率為核心訴求。188M 可訓練參數的 BLIP-2 在 zero-shot VQAv2 上達 65.2%，超越 Flamingo-80B（56.3%）8.7 個百分點，而後者有超過 80B 參數。訓練成本同樣大幅降低：BLIP-2 僅需 8 張 A100 數天即可復現，而 Flamingo 的訓練耗費了大量 TPU 計算。Q-Former 的兩個注意力流——自注意力（query tokens 互相交互）與交叉注意力（query tokens 與視覺特徵交互）——分別處理語言對齊與視覺特徵提取，架構簡潔但功能分離清晰。此後 InstructBLIP、MiniGPT-4、Otter 等大量工作都直接採用 Q-Former 作為視覺橋接。
 
-### 3.3 LLaVA 系列（NeurIPS 2023 Oral -> CVPR 2024）
+### 3.3 LLaVA 系列（NeurIPS 2023 Oral → CVPR 2024）
 
 **論文**：*Visual Instruction Tuning* [Liu et al., 2023]；*Improved Baselines with Visual Instruction Tuning* [Liu et al., 2023]
 
@@ -78,7 +78,7 @@ LLaVA 原版（2023 年 4 月）的主要貢獻是方法論而非性能：證明
 
 LLaVA-1.5 的結果更具衝擊性：**單 MLP 連接器 + CLIP-ViT-L-336px** 在 11 個標準基準（VQAv2、GQA、TextVQA、MME、MMBench 等）全面超越之前複雜架構。訓練資料僅 1.2M 公開樣本，8 張 A100 約 1 天訓練完成。這一結果有力反駁了「連接器越複雜越好」的直覺，並將 LLaVA-1.5 確立為後續研究的通用強基線。
 
-### 3.4 InternVL 系列（CVPR 2024 Oral -> 2025）
+### 3.4 InternVL 系列（CVPR 2024 Oral → 2025）
 
 **論文**：*InternVL: Scaling up Vision Foundation Models* [Chen et al., 2023]；*InternVL3* [Zhu et al., 2025]
 
@@ -105,7 +105,7 @@ InternVL3（2025 年）進一步引入原生多模態預訓練：InternVL3-78B �
 | **高解析度支援** | 有限 | 有限 | LLaVA-1.5+ 支援 | V2PE 原生支援 |
 | **適用場景** | 多任務少樣本泛化 | 計算資源受限的應用 | 快速部署、研究基線 | 前沿性能目標 |
 
-**選擇建議**：計算資源有限且需要 few-shot -> Q-Former；快速構建研究基線 -> LLaVA-1.5；追求 SOTA 且可接受完整訓練 -> InternVL3 系列；需要視頻理解 -> LLaVA-OneVision。
+**選擇建議**：計算資源有限且需要 few-shot → Q-Former；快速構建研究基線 → LLaVA-1.5；追求 SOTA 且可接受完整訓練 → InternVL3 系列；需要視頻理解 → LLaVA-OneVision。
 
 MLP connector 的反直覺優勢部分源於：Q-Former 的信息瓶頸（固定 32 個 query token）在需要細節的任務（如 OCR、圖表理解）中成為限制，而 MLP 保留了完整的視覺 token 序列。
 

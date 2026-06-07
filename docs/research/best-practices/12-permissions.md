@@ -22,7 +22,7 @@ Claude Code 使用分層 permission 系統平衡能力與安全：
 | Bash 指令 | Shell execution | 是 | 永久（per project directory + command）|
 | File modification | Edit/write files | 是 | 到 session 結束為止 |
 
-**規則評估順序**：`deny -> ask -> allow`，**第一個匹配的規則勝出**。deny 規則永遠優先。
+**規則評估順序**：`deny → ask → allow`，**第一個匹配的規則勝出**。deny 規則永遠優先。
 
 ---
 
@@ -249,7 +249,7 @@ curl -L http://bit.ly/xyz              # redirect 到 github
 
 > **警告**：`/Users/alice/file` **不是**絕對路徑，是相對於 project root。絕對路徑用 `//Users/alice/file`。
 
-Windows 路徑轉為 POSIX 後匹配：`C:\Users\alice` -> `/c/Users/alice`。
+Windows 路徑轉為 POSIX 後匹配：`C:\Users\alice` → `/c/Users/alice`。
 
 #### Glob pattern 說明
 

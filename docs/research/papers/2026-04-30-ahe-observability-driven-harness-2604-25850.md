@@ -49,10 +49,10 @@ Each edit operates at file granularity with git-level tracking and rollback capa
 │                                                      │
 │  ┌─────────────┐    ┌──────────────┐    ┌─────────┐  │
 │  │  NexAU      │    │   Agent      │    │  Evolve │  │
-│  │  Substrate  │←───│  Debugger    │───->│  Agent  │  │
+│  │  Substrate  │←───│  Debugger    │───→│  Agent  │  │
 │  │             │    │              │    │         │  │
 │  │ (harness as │    │ (trajectory  │    │(evidence│  │
-│  │   files)    │    │  -> evidence) │    │  edits) │  │
+│  │   files)    │    │  → evidence) │    │  edits) │  │
 │  └─────────────┘    └──────────────┘    └─────────┘  │
 └─────────────────────────────────────────────────────┘
 ```
@@ -137,7 +137,7 @@ Return: evolved harness ℋ^(K)
 
 Sum of single-component gains: +11.1 pp
 Full AHE gain: +7.3 pp
--> Components interact **non-additively**; interference on long-horizon tasks.
+→ Components interact **non-additively**; interference on long-horizon tasks.
 
 ### Cross-Domain Transfer
 
@@ -154,7 +154,7 @@ Full AHE gain: +7.3 pp
 | Gemini-3.1-flash-lite | +5.1 pp |
 | GPT-5.4 variants | +2.3 to +7.3 pp |
 
-Larger gains on less-saturated models -> evolved components encode **general coordination patterns**, not model-family-specific tuning.
+Larger gains on less-saturated models → evolved components encode **general coordination patterns**, not model-family-specific tuning.
 
 ---
 
@@ -181,7 +181,7 @@ This positions observability-driven evolution as **complementary to model traini
 | Component observability | `healthcheck.sh` component validation | ⚠️ Static validation, not execution trace |
 | Experience observability | `research/ablations/` + session retros | ⚠️ Manual, not automated |
 | Decision observability | `/deep-review` decision review | ⚠️ Post-session review, not real-time |
-| Automatic evolution loop | Manual Ratchet (Known Gotchas -> rule) | ❌ No automation |
+| Automatic evolution loop | Manual Ratchet (Known Gotchas → rule) | ❌ No automation |
 | Git-level rollback | `git revert` (manual) | ⚠️ Not integrated with harness edits |
 
 **Gap summary**: cc-workspace observability mechanisms are all manual. AHE provides the automation path but requires significant infrastructure investment.

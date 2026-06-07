@@ -19,7 +19,7 @@ LLM 記憶系統已從單純的 context window 擴充，演化為多層次、多
 
 **MemGPT 的 OS 類比** [P：2310-08560] 是分層架構的里程碑：將 LLM 類比作業系統，定義 **主記憶（Main Context）** 為處理器可直接操作的 RAM，**外部記憶（External Storage）** 為磁碟，並實作顯式的分頁換入換出（page in/out）中斷機制。函式呼叫觸發 `memory_load`、`memory_save` 操作，讓 LLM 自行決定何時換頁——這是記憶主控性（agentic memory control）的起點。
 
-**MemoryOS** [P：2506-06326] 進一步精煉為三層：短期（Short-term, STM）-> 中期（Mid-term, MTM）-> 長期（Long-term, LTM）。升格規則：STM->MTM 依對話鏈 FIFO 原則，MTM->LTM 採分段頁面組織（segmented page）加熱度門檻（heat threshold）。在 LoCoMo benchmark 上對 GPT-4o-mini 達到 F1 +49.11%，BLEU-1 +46.18% [P：2506-06326]。
+**MemoryOS** [P：2506-06326] 進一步精煉為三層：短期（Short-term, STM）→ 中期（Mid-term, MTM）→ 長期（Long-term, LTM）。升格規則：STM→MTM 依對話鏈 FIFO 原則，MTM→LTM 採分段頁面組織（segmented page）加熱度門檻（heat threshold）。在 LoCoMo benchmark 上對 GPT-4o-mini 達到 F1 +49.11%，BLEU-1 +46.18% [P：2506-06326]。
 
 **AgeMem（Agentic Memory Unified LTM+STM）** [P：2601-01885] 批評既有系統「獨立優化 LTM 與 STM 後以臨時方式組合」，改採工具導向行動（tool-as-action）讓 agent 自主執行 store/retrieve/update/summarize/discard，以三階段漸進 RL（GRPO）端對端學習記憶管理策略——超越 5 個長視地平線 benchmark 的所有基線 [P：2601-01885]。
 
@@ -59,7 +59,7 @@ LLM 記憶系統已從單純的 context window 擴充，演化為多層次、多
 
 **Rethinking Memory** [P：2505-00675] 的最大貢獻是區分 **參數記憶（Parametric Memory，存於模型權重）** 與 **上下文記憶（Contextual Memory，存於模型外部）**，並指出前者需透過微調或知識編輯（ROME、MEMIT）更新，後者透過 CRUD 操作更新——兩種更新路徑的成本與可逆性完全不同。
 
-**security-long-term-memory** [P：2604-16548] 將操作抽象成六階段生命週期：Write -> Store -> Retrieve -> Execute -> Share -> Forget/Rollback，對應四個安全目標（Integrity、Confidentiality、Availability、Governance），定義「記憶主權（Mnemonic Sovereignty）」為可驗證、可恢復的治理能力 [P：2604-16548]。
+**security-long-term-memory** [P：2604-16548] 將操作抽象成六階段生命週期：Write → Store → Retrieve → Execute → Share → Forget/Rollback，對應四個安全目標（Integrity、Confidentiality、Availability、Governance），定義「記憶主權（Mnemonic Sovereignty）」為可驗證、可恢復的治理能力 [P：2604-16548]。
 
 ---
 
@@ -71,7 +71,7 @@ LLM 記憶系統已從單純的 context window 擴充，演化為多層次、多
 
 **MemoryBank** [P：2305-10250] 以語義向量 DB 儲存對話事件與用戶特質，結合遺忘曲線排序，在 ChatGPT（3.5）上下支援跨 session 長期個人化對話 [P：2305-10250]。
 
-**MemoryOS** [P：2506-06326] 的三層檢索：STM（精確 embedding 匹配）-> MTM（分段語義檢索）-> LTM（個性化圖檢索）。熱度分數（heat score）融合頻率、近期度、相關性 [P：2506-06326]。
+**MemoryOS** [P：2506-06326] 的三層檢索：STM（精確 embedding 匹配）→ MTM（分段語義檢索）→ LTM（個性化圖檢索）。熱度分數（heat score）融合頻率、近期度、相關性 [P：2506-06326]。
 
 ---
 
@@ -79,9 +79,9 @@ LLM 記憶系統已從單純的 context window 擴充，演化為多層次、多
 
 **A-MEM** [P：2502-12110]（NeurIPS 2025）採 **Zettelkasten 筆記系統**哲學：每筆記憶進入時，LLM 自動生成上下文描述、關鍵詞、標籤，並主動分析歷史記憶建立連結網絡。記憶的互聯性（interconnectivity）比單純的相似度檢索捕捉更豐富的關聯 [P：2502-12110]。
 
-**ReasoningBank** [P：2509-25140] 不儲存原始軌跡，而是蒸餾**可泛化推理策略（generalizable reasoning strategies）**——從 agent 自我評判的成功與失敗經驗中提取。MaTTS（Memory-aware Test-Time Scaling）透過更多算力生成多元對比經驗，形成「更好記憶 -> 更有效 scaling -> 更好記憶」的正向循環。在 web browsing + software engineering benchmark 超越儲存原始軌跡或只儲存成功例子的方法 [P：2509-25140]。
+**ReasoningBank** [P：2509-25140] 不儲存原始軌跡，而是蒸餾**可泛化推理策略（generalizable reasoning strategies）**——從 agent 自我評判的成功與失敗經驗中提取。MaTTS（Memory-aware Test-Time Scaling）透過更多算力生成多元對比經驗，形成「更好記憶 → 更有效 scaling → 更好記憶」的正向循環。在 web browsing + software engineering benchmark 超越儲存原始軌跡或只儲存成功例子的方法 [P：2509-25140]。
 
-**Hindsight 四網絡** [P：2512-12818]：Retain（記憶寫入）-> Recall（查詢）-> Reflect（更新）三核心操作，組織四類記憶網絡（World facts / Agent experiences / Entity summaries / Evolving beliefs），強調「證據與推理分離」——不混合原始事實與推論，確保可解釋性 [P：2512-12818]。
+**Hindsight 四網絡** [P：2512-12818]：Retain（記憶寫入）→ Recall（查詢）→ Reflect（更新）三核心操作，組織四類記憶網絡（World facts / Agent experiences / Entity summaries / Evolving beliefs），強調「證據與推理分離」——不混合原始事實與推論，確保可解釋性 [P：2512-12818]。
 
 ---
 
@@ -89,7 +89,7 @@ LLM 記憶系統已從單純的 context window 擴充，演化為多層次、多
 
 **Dynamic Cheatsheet** [P：2504-07952] 是 test-time learning 的早期代表：在推理時累積可更新的「作弊表」，讓模型在不重訓練的前提下快速適應新資訊或偏好 [P：2504-07952]。
 
-**ACE（Agentic Context Engineering）** [P：2510-04618]（ICLR 2026）將 context 視為「演化式作戰手冊（evolving playbooks）」，採三模組流程：Generator（生成軌跡）-> Reflector（提取 insights，含失敗分析）-> Curator（增量 delta 更新，語義去重）。明確對抗兩大失效模式：**brevity bias**（因求簡潔丟棄細節）與 **context collapse**（整體改寫破壞積累知識）。在 AppWorld leaderboard 以小型開源模型匹敵頂級生產 GPT-4.1 agent [P：2510-04618]。
+**ACE（Agentic Context Engineering）** [P：2510-04618]（ICLR 2026）將 context 視為「演化式作戰手冊（evolving playbooks）」，採三模組流程：Generator（生成軌跡）→ Reflector（提取 insights，含失敗分析）→ Curator（增量 delta 更新，語義去重）。明確對抗兩大失效模式：**brevity bias**（因求簡潔丟棄細節）與 **context collapse**（整體改寫破壞積累知識）。在 AppWorld leaderboard 以小型開源模型匹敵頂級生產 GPT-4.1 agent [P：2510-04618]。
 
 **交叉驗證**：useful-memories-faulty [P：2605-12978] 與 ACE [P：2510-04618] 均獨立識別「LLM-based 整合/改寫導致資訊退化」問題，ACE 的增量 delta 更新正是對此的工程回應 [P D2]。
 
@@ -107,7 +107,7 @@ LLM 記憶系統已從單純的 context window 擴充，演化為多層次、多
 
 **MemTool** [P：2507-21428] 填補短期工具記憶（tool context）的空白：提出三模式（Autonomous / Workflow / Hybrid）管理 100+ 輪多輪對話中的動態工具集，Autonomous 模式下推理模型達 90–94% 工具移除效率（相當於準確的「工具遺忘」），中型模型僅 0–60% [P：2507-21428]。
 
-**Externalization** [P：2604-08224] 從認知架構角度統一框架：記憶（Memory）、技能（Skills）、協議（Protocols）、Harness 都是 LLM 的外部化（externalization），其演化軌跡：Monolithic context -> Retrieval stores -> Hierarchical systems [P：2604-08224]。
+**Externalization** [P：2604-08224] 從認知架構角度統一框架：記憶（Memory）、技能（Skills）、協議（Protocols）、Harness 都是 LLM 的外部化（externalization），其演化軌跡：Monolithic context → Retrieval stores → Hierarchical systems [P：2604-08224]。
 
 ---
 
@@ -123,7 +123,7 @@ LLM 記憶系統已從單純的 context window 擴充，演化為多層次、多
 
 **Multi-Agent Memory from Computer Architecture** [P：2603-10062]（Position Paper）將多代理記憶問題框架化為計算機架構問題：
 - **共享記憶（Shared Memory）** 類比 SMP；**分散記憶（Distributed Memory）** 類比分散式計算
-- 三層階層：I/O 層（agent-世界交換）-> 快取層（高頻存取）-> 主記憶層（持久化）
+- 三層階層：I/O 層（agent-世界交換）→ 快取層（高頻存取）→ 主記憶層（持久化）
 - **最緊迫挑戰：多代理快取一致性（Cache Coherency）**——當多個 agent 並發存取或修改共享記憶時，語義豐富性 + 非確定性推理使傳統 cache coherency 協議無法直接套用 [P：2603-10062]
 
 ---
@@ -135,7 +135,7 @@ LLM 記憶系統已從單純的 context window 擴充，演化為多層次、多
 **Useful Memories Become Faulty** [P：2605-12978] 是 2026 年最重要的記憶安全警告：
 
 - **核心發現**：連續整合 ground-truth 成功解答軌跡後，GPT-5.4 在 ARC-AGI 問題上失敗率 **54%**（從 100% 成功跌至 46%）[P：2605-12978]
-- **退化曲線非單調**：utility 先升後降，最終落到 no-memory 基線以下（WebShop：0.64 -> 0.20）
+- **退化曲線非單調**：utility 先升後降，最終落到 no-memory 基線以下（WebShop：0.64 → 0.20）
 - **三種失效機制**：
   1. **Misgrouping**：將不同問題家族的 episode 錯誤歸類，產生跨類別混合規則
   2. **Interference**：抽象化剝除適用條件，造成過度泛化（ScienceWorld 累積整合的過度泛化率是孤立任務整合的 5×）
@@ -172,7 +172,7 @@ LLM 記憶系統已從單純的 context window 擴充，演化為多層次、多
 | 發表時間 | 2024-04 | 2026-03 | 2025-04 |
 | 主要框架 | 記憶形式 × 操作 × 應用 | Write-Manage-Read 循環 × 三維分類 | 三維八象限（Object × Form × Time） |
 | 記憶形式 | 文字、向量、結構化、參數、混合 | 向量、圖、語言、代碼 | 顯式 vs 隱式（嵌入人類心理學分類） |
-| 操作抽象 | 寫入（Always/Selective/Delayed）、讀取、遺忘 | 五大機制族群（壓縮/RAG/反思/階層/策略學習） | 感覺->工作->情節->語義->程序 |
+| 操作抽象 | 寫入（Always/Selective/Delayed）、讀取、遺忘 | 五大機制族群（壓縮/RAG/反思/階層/策略學習） | 感覺→工作→情節→語義→程序 |
 | 核心補充 | 最完整的早期分類，100+ papers | 最新（2022-2026），強調評估轉向多 session | 生物心理學接地，識別 AI 未覆蓋的維度 |
 | **對齊點** | 三者均認可 STM/LTM 分層必要性；均指出遺忘策略（Forgetting）研究不足 | | |
 | **分歧點** | 2404-13501 不含安全維度；2603-07670 補充「學習型遺忘（Learned Forgetting）」作為開放挑戰 | | |
@@ -186,13 +186,13 @@ LLM 記憶系統已從單純的 context window 擴充，演化為多層次、多
 | **寫入觸發策略** | Always-write vs Selective-write vs Delayed-write | 2404-13501, 2304-13343 (SCM) | Always-write 導致記憶膨脹與雜訊；Selective-write 漏記重要事件 | 條件式觸發（SCM 的記憶控制器）；重要性評分門檻 |
 | **整合頻率（Consolidation Gate）** | 控制何時觸發 LLM 重寫記憶 | 2605-12978, 2510-04618 (ACE) | 過頻整合觸發 Misgrouping + Interference，utility 退化至 no-memory 以下 | **顯式門控**：預設保留 raw episodes，非必要不整合；增量 delta 更新（ACE）而非全文改寫 |
 | **遺忘策略** | 依時間衰減（遺忘曲線）、熱度分數、LRU 淘汰 | 2305-10250 (MemoryBank), 2506-06326 (MemoryOS) | 過激遺忘丟失重要歷史；不遺忘導致無限膨脹與檢索效率下降 | 熱度 + 時間的複合評分；LTM vs STM 差異化策略 |
-| **分層深度（Tiering Depth）** | STM / MTM / LTM 層數與升格閾值 | 2310-08560 (MemGPT), 2506-06326, 2601-01885 | 層數太少 -> context 溢出；太多 -> 升格延遲高，熱資料在冷層 | 三層為黃金分割（多篇一致）；熱度感知升格 |
+| **分層深度（Tiering Depth）** | STM / MTM / LTM 層數與升格閾值 | 2310-08560 (MemGPT), 2506-06326, 2601-01885 | 層數太少 → context 溢出；太多 → 升格延遲高，熱資料在冷層 | 三層為黃金分割（多篇一致）；熱度感知升格 |
 | **檢索策略（Retrieval Strategy）** | Dense（embedding 相似度）/ Sparse（BM25）/ Graph（PPR）/ Temporal（事件日曆） | 2405-14831 (HippoRAG), 2603-16862 (Chronos), 2504-19413 (Mem0) | Pure dense 失於多跳推理；pure sparse 失於語義泛化；無時序索引失於時間敏感查詢 | 混合索引（dense + sparse + graph）；時間感知索引（Chronos SVO calendar） |
 | **記憶形式（Memory Form）** | 文字、向量、圖、聯想矩陣、參數 | 2505-00675, 2605-12357 (δ-mem), 2405-14831 | 純文字缺結構；純向量缺可解釋性；圖構建成本高；參數記憶更新可能干擾原有知識 | 混合形式（Mem0 base + graph variant）；依任務選形式 |
 | **Context vs Memory 決策點** | 短對話保留全上下文；超過約 10 輪或 100K tokens 後改用記憶壓縮 | 2603-04814, 2307-03172 | 長上下文準確率高但成本隨對話線性增加；記憶壓縮 35:1 但資訊損失顯著 | 動態決策：per-session 追蹤 token 用量，crossover 後切換；Lost-in-Middle 的位置偏差意味著結構化檢索仍有價值 |
 | **工具記憶（Tool Context）管理** | Autonomous / Workflow / Hybrid 三模式動態工具集增刪 | 2507-21428 (MemTool) | 推理模型 Autonomous 模式效率高（90–94%）；中型模型 Autonomous 模式失控（0–60%） | 依模型能力選模式：推理模型用 Autonomous；中型模型用 Hybrid/Workflow |
 | **多代理記憶一致性** | 共享 vs 分散記憶架構；快取一致性協議 | 2603-10062 | LLM 非確定性推理使傳統快取一致性協議失效；並發寫入導致語義衝突 | 樂觀鎖 + 版本戳；語義衝突偵測（研究空白，待解） |
-| **快取層（Prompt Cache）** | System-prompt-only 快取策略 | 2601-06007 | 動態內容（工具呼叫結果、軌跡）破壞快取前綴 -> 快取命中率歸零 | 靜態前綴優先（CLAUDE.md 類固定前綴）；動態內容排至尾部 |
+| **快取層（Prompt Cache）** | System-prompt-only 快取策略 | 2601-06007 | 動態內容（工具呼叫結果、軌跡）破壞快取前綴 → 快取命中率歸零 | 靜態前綴優先（CLAUDE.md 類固定前綴）；動態內容排至尾部 |
 | **記憶主權（Mnemonic Sovereignty）** | 寫入/讀取/更新/遺忘的治理與存取控制 | 2604-16548 | 注入式投毒（prompt injection）；跨 agent 未授權傳播；拒絕遺忘攻擊（DoS on Forgetting） | Write/Retrieve 的完整性驗證；隔離 tenant 記憶；實作 Forget/Rollback 操作（目前 9 個治理原語均未完整實作）|
 | **Episodic 優先原則** | 在整合前保留原始 episode 作為 first-class evidence | 2605-12978 | 純 episode storage 占用空間大；但 consolidation 引入失真 | ARC-AGI Stream 環境中 Episodic-only ≈ AutoMode（允許自主選擇），均優於 forced-consolidation |
 

@@ -4,7 +4,7 @@ type: template
 ---
 
 # AI News 目錄深度研究 Prompt
-# 目標：research/ai-news/ 全部內容分類 -> 可實作 prompt 檔 + 研究報告
+# 目標：research/ai-news/ 全部內容分類 → 可實作 prompt 檔 + 研究報告
 # 使用方式：先貼 /goal，再貼工作 Prompt
 
 ---
@@ -84,7 +84,7 @@ cat research/ai-news/TOPIC-INDEX.md
   ## Q1 基線摘要
   ### 持續延伸趨勢：
   ### 已消退或被取代趨勢：
-  ### Q1->Q2 轉變的關鍵拐點：
+  ### Q1→Q2 轉變的關鍵拐點：
   ```
 
 **Sub-Agent D — Digests + 來源分析**
@@ -184,7 +184,7 @@ cat research/ai-news/TOPIC-INDEX.md
 ## 8. AI 對齊與安全：供應鏈攻擊到 Glasswing（目標 400 字元）
 [npm 供應鏈攻擊案例、Project Glasswing、Subliminal Learning 研究]
 
-## 9. 跨主題綜合：Q1->Q2 的 5 個拐點（目標 400 字元）
+## 9. 跨主題綜合：Q1→Q2 的 5 個拐點（目標 400 字元）
 [哪些 Q1 預測在 Q2 成真，哪些被推翻，下半年最值得關注的信號]
 
 ## 10. 來源品質評估：17 個 newsletter 的洞察密度（目標 300 字元）
@@ -226,7 +226,7 @@ git push -u origin HEAD
 - 每完成一個 Step 輸出 checkpoint：「Step N 完成：做了什麼 / 驗了什麼 / 剩什麼」
 - **不要逐篇讀 131 篇個別日報**：優先 digest 檔，個別檔只補充最新 1 週的新鮮度
 - Step 5 的所有命令必須執行並顯示實際輸出
-- 遇到單一檔案讀取失敗 -> 跳過並記錄，不中斷整體流程
+- 遇到單一檔案讀取失敗 → 跳過並記錄，不中斷整體流程
 ```
 
 ---

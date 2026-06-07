@@ -61,7 +61,7 @@ npm run test:watch   # Watch mode for TDD
 
 ## Agent 設計模式
 
-### Command -> Agent -> Skill 架構
+### Command → Agent → Skill 架構
 
 ```
 /weather                 ← Command（使用者觸發）
@@ -109,8 +109,8 @@ Provide specific line references for each finding.
 
 **Subagent vs 直接執行的心智模型：**
 > "Will I need this tool output again, or just the conclusion?"
-- 只需要結論 -> 委派 subagent
-- 需要反覆檢視中間產物 -> 主對話自己做
+- 只需要結論 → 委派 subagent
+- 需要反覆檢視中間產物 → 主對話自己做
 
 ### 工具作用域原則
 
@@ -248,9 +248,9 @@ Output: "GET /api/v1/user-profiles/{id}/preferences?page=1&limit=20"
 
 ✅ 目標驅動：「寫 validateEmail 函式。
    測試用例：
-     user@example.com -> true
-     invalid -> false
-     user@.com -> false
+     user@example.com → true
+     invalid → false
+     user@.com → false
    實作後跑測試並通過」
 ```
 

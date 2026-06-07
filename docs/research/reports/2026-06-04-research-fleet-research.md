@@ -1,4 +1,4 @@
-# 平行研究->報告 Agent 艦隊 — 深度研究報告
+# 平行研究→報告 Agent 艦隊 — 深度研究報告
 
 > **日期**：2026-06-04
 > **分支**：feature/insights-horizon-research
@@ -15,7 +15,7 @@
 **真實痛點**：
 - **研究 session 因 API output-token-limit 在 synthesis 階段中斷**。
   > ⚠️ **CAVEAT（保留 advisor 要求的誠實邊界）**：「至少 5 個 session」此具體數字來自 `/insights` parent context，**repo 內多次 grep（MEMORY/reports/skills）未找到直接佐證**。採信為需求背景，非 repo 已證實事實。repo 實際佐證的相關 failure mode 是：overnight-research GOTCHAS 的 session 逾時終止、dynamic workflow 幻覺、citation 歸錯源（SELF-ROUTE 65%）——間接支持需求真實性。
-- **subagent verdict 非證據**（Lesson 2026-06-04-C：委派建檔落 isolated worktree，主 tree 找不到 -> 必 grep 主 tree）。
+- **subagent verdict 非證據**（Lesson 2026-06-04-C：委派建檔落 isolated worktree，主 tree 找不到 → 必 grep 主 tree）。
 - **citation 歸錯源先例**（SELF-ROUTE 65% 歸錯源，靠手動對抗驗證修正）。
 
 ---
@@ -37,11 +37,11 @@ Context Builder agent 建超越 context length 的 hierarchical knowledge base�
 > 來源：arXiv 2602.01566 [MEDIUM，摘要層級]；per-agent budget 具體數字 [LOW，疑 PDF fetch 外推]
 
 ### F4 — checkpoint = scratch 檔本身，優於 workflow resumeFromRunId
-`dynamic-workflows-harness-2026-06-03.md` §5 L128 明確：「退出 CC 則下個 session 重啟」——跨 session（正是 resume 需求）workflow runtime 無法保證。scratch 檔是天然 checkpoint：resume = 掃描哪些 `source-N.md` 已存在 -> 只補缺的 -> reducer 讀所有 scratch 生報告。比 resumeFromRunId 更簡、不依賴 session 存活。
+`dynamic-workflows-harness-2026-06-03.md` §5 L128 明確：「退出 CC 則下個 session 重啟」——跨 session（正是 resume 需求）workflow runtime 無法保證。scratch 檔是天然 checkpoint：resume = 掃描哪些 `source-N.md` 已存在 → 只補缺的 → reducer 讀所有 scratch 生報告。比 resumeFromRunId 更簡、不依賴 session 存活。
 > 來源：repo `dynamic-workflows-harness-2026-06-03.md` L128 [HIGH，一手]
 
 ### F5 — citation 重驗須機械化（§R5）
-每個 scratch 檔存：source URL/path + verbatim 引文 + 位置（行號/段落）。reducer 把每個 claim 的引文 grep 回 scratch 檔，命中=VERIFIED、miss=⚠️。直接解 SELF-ROUTE 65% citation 歸錯源（「手動對抗驗證」-> 系統化）。非 LLM 自評，pure grep/read。
+每個 scratch 檔存：source URL/path + verbatim 引文 + 位置（行號/段落）。reducer 把每個 claim 的引文 grep 回 scratch 檔，命中=VERIFIED、miss=⚠️。直接解 SELF-ROUTE 65% citation 歸錯源（「手動對抗驗證」→ 系統化）。非 LLM 自評，pure grep/read。
 > 來源：repo + Anthropic CitationAgent blog [HIGH]
 
 ### F6 — dynamic workflow 是 orchestration 可選項，非必要
@@ -58,10 +58,10 @@ dynamic workflow JS 控制平面**不能碰 FS**（§3.1）——scratch 寫檔�
 **overnight-research 已有**：fan-out（Phase 2 ≤4 sub-agent）、寫盤報告（Phase 3 + REPORT_PATH）、autoresearch 迭代（Phase 4）、keepalive heartbeat（機械重驗確認 L118-121）、per-phase checkpoint。
 
 **缺少的 4 個 gap（精確 diff）**：
-1. Phase 2 subagent 目前 **inline 回傳**（機械重驗：SKILL.md L36 inline 模式屬實）-> 改 Write `research/scratch/source-N.md`
-2. Phase 3 整份報告一次生成 -> 改 reducer 逐節串流 Write
-3. citation 無機械 re-verify pass -> Phase 3/5 加 grep-back
-4. 無 disk-resume -> Phase 0 加 scratch 掃描，已存在 source 跳過
+1. Phase 2 subagent 目前 **inline 回傳**（機械重驗：SKILL.md L36 inline 模式屬實）→ 改 Write `research/scratch/source-N.md`
+2. Phase 3 整份報告一次生成 → 改 reducer 逐節串流 Write
+3. citation 無機械 re-verify pass → Phase 3/5 加 grep-back
+4. 無 disk-resume → Phase 0 加 scratch 掃描，已存在 source 跳過
 
 新建 SKILL 違 R2（骨架已覆蓋）+ Lesson 2026-06-04-E（孤兒）。**改進是唯一 R2 合規選擇**。
 
@@ -73,25 +73,25 @@ dynamic workflow JS 控制平面**不能碰 FS**（§3.1）——scratch 寫檔�
 Phase 0 — Resume 偵測
   mkdir -p research/scratch/
   EXISTING=$(ls research/scratch/source-*.md 2>/dev/null | wc -l)
-  [已存在 M 個 -> 從第 M+1 個繼續]
+  [已存在 M 個 → 從第 M+1 個繼續]
 
 Phase 1 — 網搜（現有保留）
 
 Phase 2 — Fan-out（每來源一 subagent，≤4 並行）
-  per subagent: WebFetch -> 分析 -> Write research/scratch/source-N.md
+  per subagent: WebFetch → 分析 → Write research/scratch/source-N.md
     格式: url / claims[claim+verbatim引文+位置] / key_facts / source層級(P/O/C/E)
   inline 回傳: ≤200 token reference
   [checkpoint: ls research/scratch/source-N.md 機械確認存在（subagent verdict 非證據）]
 
 Phase 3 — Reducer 逐節串流
   for SECTION in [摘要,背景,核心,最佳實踐,工具比較,陷阱,趨勢,建議,附錄]:
-    grep 篩相關 scratch -> 生成該節 -> Append Write
+    grep 篩相關 scratch → 生成該節 → Append Write
     [checkpoint: wc -m 報告字數]
 
 Phase 4 — Citation 機械重驗
   for claim in 報告 [citation]:
-    grep verbatim 回 scratch/source-N.md -> HIT/MISS
-    MISS -> 標 ⚠️（非刪，research-hub:deep 規範）
+    grep verbatim 回 scratch/source-N.md → HIT/MISS
+    MISS → 標 ⚠️（非刪，research-hub:deep 規範）
 
 Phase 5 — 現有驗證（wc -m ≥ MIN_CHARS + healthcheck）
 Phase 6 — 現有提交（保留）
@@ -101,7 +101,7 @@ Phase 6 — 現有提交（保留）
 
 ## 4. 關鍵風險與下限約束
 
-- **subagent verdict 非證據**：Phase 2 每 subagent 聲稱「已寫 source-N.md」-> parent 必 `ls` 機械確認（Lesson 2026-06-04-C）。
+- **subagent verdict 非證據**：Phase 2 每 subagent 聲稱「已寫 source-N.md」→ parent 必 `ls` 機械確認（Lesson 2026-06-04-C）。
 - **信度分層**：scratch 記 source 層級，reducer 標 HIGH/MEDIUM/LOW。
 - **幻覺防護**：reducer 不得從 memory/context 推斷 citation，只讀 scratch verbatim 欄。
 - **下限**：Anthropic 的「1,000–2,000 token distilled」是實測值非 scratch 上限，設計不能倒推。

@@ -116,7 +116,7 @@ export CLAUDE_CODE_PERFORCE_MODE=1
 
 ### Push Notification（W16）
 
-Remote Control 連接後，在 Remote Control 設定開啟「Push when Claude decides」-> Claude 可推播手機通知（適合長任務背景執行時通知完成）。
+Remote Control 連接後，在 Remote Control 設定開啟「Push when Claude decides」→ Claude 可推播手機通知（適合長任務背景執行時通知完成）。
 
 ### `claude auth login` 無瀏覽器回調（W18, v2.1.126）
 
@@ -237,7 +237,7 @@ claude --continue --fork-session
 
 Context 包含：對話歷史、檔案內容、指令輸出、CLAUDE.md、auto memory、loaded skills、system instructions。
 
-**Context 填滿時**：Claude Code 先清除較舊的工具輸出，若有需要再摘要整個對話。重要的 code snippets 會保留；早期詳細指令可能遺失 -> **把持久規則放進 CLAUDE.md**。
+**Context 填滿時**：Claude Code 先清除較舊的工具輸出，若有需要再摘要整個對話。重要的 code snippets 會保留；早期詳細指令可能遺失 → **把持久規則放進 CLAUDE.md**。
 
 MCP tool definitions 預設延遲載入，透過 tool search 按需取得 schema，只有 tool 名稱佔用 context。
 

@@ -44,7 +44,7 @@ EverOS 擴展分類（企業級）：
 - 通訊限 parent ↔ child：child 間不直接溝通
 
 ### 5. 序列執行複合效益（@heynavtoor，6.25分）
-- 同一業務流程：Researcher -> Editor -> Analyst 序列執行
+- 同一業務流程：Researcher → Editor → Analyst 序列執行
 - 每步驟的輸出是下一步驟的高質量輸入（複利效應）
 - 角色設計要點：每個 agent 含 YAML frontmatter + 禁止清單 + 結尾語
 - 禁止詞清單範例（Editor agent）：leverage / robust / seamless / delve
@@ -120,7 +120,7 @@ allowed-tools: [Read, Bash, Grep]  # 明確限制工具範圍
 - **停 ≠ 完成**：達到 token budget 時記錄進度後繼續，不將中途停止視為完成
 - **不確定性 = 未完成**：遇到模糊情況時選擇繼續執行而非停下詢問
 - 每完成重要步驟輸出 1 句 checkpoint：「做了什麼 / 驗了什麼 / 剩什麼」
-- 單一檔案失敗 -> 跳過並記錄，不中斷整體流程
+- 單一檔案失敗 → 跳過並記錄，不中斷整體流程
 
 ## 驗證（完成前必須執行）
 [列出驗證命令，輸出必須顯示在 transcript]

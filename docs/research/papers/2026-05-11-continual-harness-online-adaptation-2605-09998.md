@@ -49,7 +49,7 @@ Joint optimization of model weights and harness components during reset-free tra
 
 ```
 Inner Loop (Agent Action):
-  Model wrapped in current harness -> processes observations -> selects actions
+  Model wrapped in current harness → processes observations → selects actions
 
 Outer Loop (Harness Refinement):
   Every F steps after warm-up:
@@ -90,7 +90,7 @@ Skills refined during 24-hour runs: navigation cost improved from ~50% penalty v
 
 ## Key Findings
 
-1. **Refinement concentrates on small component subsets**: Update operations cluster on bottleneck components (navigation, battle) rather than uniformly across all harness elements -> emergent specialization.
+1. **Refinement concentrates on small component subsets**: Update operations cluster on bottleneck components (navigation, battle) rather than uniformly across all harness elements → emergent specialization.
 
 2. **Harness is the transferable unit**: Inheriting harness from successful runs accelerates subsequent runs. Abandoning inherited sub-agents triggers regressions.
 
@@ -110,4 +110,4 @@ Skills refined during 24-hour runs: navigation cost improved from ~50% penalty v
 
 ## Workspace Relevance
 
-Validates the **autoresearch skill's** Modify->Verify->Keep/Discard loop at the harness level: the Refiner is an autonomous version of the same pattern applied to scaffolding components (system prompt, sub-agents, skills, memory) rather than code.
+Validates the **autoresearch skill's** Modify→Verify→Keep/Discard loop at the harness level: the Refiner is an autonomous version of the same pattern applied to scaffolding components (system prompt, sub-agents, skills, memory) rather than code.

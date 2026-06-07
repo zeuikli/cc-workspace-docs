@@ -32,7 +32,7 @@ type: tweet
 ```
 Main Task Flow (不被阻斷)
       │
-      ├── Error occurs -> Error event 被記錄到 Dreaming buffer
+      ├── Error occurs → Error event 被記錄到 Dreaming buffer
       │
       └── Task continues...
 
@@ -58,7 +58,7 @@ Offline Dreaming Process (非同步)
 
 此功能直接對應 §六 延伸議題 **議題 2：Post-task Reflection 機制**：
 
-> "Memory Survey（2603.07670）實驗：移除反思 -> 48 小時內行為退化。本 workspace 目前 Auto Memory 是扁平累積，沒有明確的「任務後反思」步驟。"
+> "Memory Survey（2603.07670）實驗：移除反思 → 48 小時內行為退化。本 workspace 目前 Auto Memory 是扁平累積，沒有明確的「任務後反思」步驟。"
 
 Dreaming 是 Anthropic 對此問題的官方解法。
 

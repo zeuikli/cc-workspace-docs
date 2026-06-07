@@ -177,7 +177,7 @@ command_files:
 - Window size: 100, 200 lines
 - History: Full history vs. Last 5 observations
 
-**Optimal config (GPT-4 Turbo)**: Temperature=0.0, Window=100 lines, History=Last 5 Obs -> 15.1% on dev set
+**Optimal config (GPT-4 Turbo)**: Temperature=0.0, Window=100 lines, History=Last 5 Obs → 15.1% on dev set
 
 ---
 
@@ -278,7 +278,7 @@ Collapsing old observations improves performance by reducing context clutter.
 ### Key Behavioral Findings
 
 1. **Reproduction-first strategy** — Most common initial action triple: `(create, edit, python)`. Models establish baseline behavior before fixing.
-2. **Zoom-in pattern** — Directory-level -> file-level -> line-level; mirrors natural debugging.
+2. **Zoom-in pattern** — Directory-level → file-level → line-level; mirrors natural debugging.
 3. **Edit-test loops dominate** after localization (`edit`, `python` correlation: 0.85+).
 4. **Editing challenges persist** — 51.7% of trajectories have ≥1 failed edit; 90.5% recovery rate from first failure; rate drops with additional failures (57.2% after one failure).
 5. **Fast success, slow failure** — Median resolved: $1.21 cost, 12 steps; mean unresolved: $2.52 cost, 21 steps. Increasing budget unlikely to improve performance.
@@ -335,7 +335,7 @@ No clear temporal bias; performance is stable across issue ages.
 ## Key Contributions
 
 1. **ACI concept** — New framework for designing LM-agent interactions; differs fundamentally from human UIs; tailored to LM strengths and weaknesses.
-2. **SWE-agent system** — Open-source implementation achieving SOTA on SWE-bench (12.47%); portable across different LMs (GPT-4 -> Claude).
+2. **SWE-agent system** — Open-source implementation achieving SOTA on SWE-bench (12.47%); portable across different LMs (GPT-4 → Claude).
 3. **Design methodology** — Principled approach inspired by HCI; qualitative analysis + grid search; reusable design patterns for ACI construction.
 4. **Unified framework** — Isolates ACI as an independent variable; shows interface design substantially impacts performance.
 5. **Comprehensive analysis** — Ablation studies quantifying each design choice; behavioral analysis revealing agent problem-solving patterns; insights into failure modes and recovery.

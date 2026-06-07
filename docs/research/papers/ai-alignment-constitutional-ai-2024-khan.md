@@ -35,8 +35,8 @@ The paper investigates debate as a scalable oversight mechanism: can less capabl
 
 ## Main Results
 
-- Non-expert model evaluators: debate -> 76% accuracy; single-argument baseline -> 48% accuracy. A 28 percentage point gain from debate structure alone.
-- Human evaluators: debate -> 88% accuracy; single-argument baseline -> 60% accuracy. A 28 percentage point gain consistent across both evaluator types.
+- Non-expert model evaluators: debate → 76% accuracy; single-argument baseline → 48% accuracy. A 28 percentage point gain from debate structure alone.
+- Human evaluators: debate → 88% accuracy; single-argument baseline → 60% accuracy. A 28 percentage point gain consistent across both evaluator types.
 - Persuasiveness training (unsupervised) further improves non-expert model accuracy beyond the static debate baseline, validating the claim that optimizing for persuasiveness in an adversarial debate context produces more truthful, higher-quality arguments.
 - Debate benefits are robust across question difficulty levels; harder questions (where baselines struggle most) show the largest relative accuracy improvements from debate.
 - Human judges benefit from debate even when they lack the domain knowledge to independently verify claims, confirming the mechanism works under the intended information asymmetry condition.

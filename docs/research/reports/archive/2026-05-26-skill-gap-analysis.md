@@ -5,7 +5,7 @@
 
 ## 執行摘要
 
-cc-workspace 現有 19 個 skills（含 RESOLVER.md 索引），從 41->13->19 演進，已完成一輪大道至簡審查。本報告基於三個設計源（Karpathy LLM Wiki / Hermes Agent / GBrain）和外部 SRE/DevOps skill 生態評估，提供：(1) 候選 skill 評分表，(2) README 優化清單，(3) 評分 ≥ 2.0 的 skill 草稿。
+cc-workspace 現有 19 個 skills（含 RESOLVER.md 索引），從 41→13→19 演進，已完成一輪大道至簡審查。本報告基於三個設計源（Karpathy LLM Wiki / Hermes Agent / GBrain）和外部 SRE/DevOps skill 生態評估，提供：(1) 候選 skill 評分表，(2) README 優化清單，(3) 評分 ≥ 2.0 的 skill 草稿。
 
 核心發現：現有 19 skills 覆蓋率良好，只有 2 個候選通過 2.0 門檻值得加入（iac-review 和 diagram-gen）；README 有 3 處結構性改善空間。
 
@@ -14,7 +14,7 @@ cc-workspace 現有 19 個 skills（含 RESOLVER.md 索引），從 41->13->19 �
 ## 1. 三源設計理念回顧
 
 ### Karpathy LLM Wiki
-**核心洞見**：知識在 query-time 重新推導 -> 持久化 wiki 累積。三層架構：
+**核心洞見**：知識在 query-time 重新推導 → 持久化 wiki 累積。三層架構：
 - **Raw Sources**：不可變來源（文章/論文/影片），LLM 只讀不改
 - **Wiki Layer**：LLM 生成的 Markdown，10-15 頁跨引用更新（已落地：research/ 目錄）
 - **Schema Layer**：co-evolve with knowledge base，永遠放 prompt 最前（已落地：CLAUDE.md / AGENTS.md / rules/）
@@ -27,7 +27,7 @@ cc-workspace 現有 19 個 skills（含 RESOLVER.md 索引），從 41->13->19 �
 2. **Active Learning**：Skills 在使用中自我改進（use 觸發 improvement）
 3. **Persistence**：FTS5 session search + LLM 摘要，跨 session 檢索過往解法
 
-**對 workspace 的啟示**：skill-evolution skill 已實作 Phase 2，但 Phase 1（task complexity detection -> auto-create）和 Phase 3（session search for similar past solutions）尚未完全落地。GOTCHAS.md 協議是 Phase 1 的輕量替代。
+**對 workspace 的啟示**：skill-evolution skill 已實作 Phase 2，但 Phase 1（task complexity detection → auto-create）和 Phase 3（session search for similar past solutions）尚未完全落地。GOTCHAS.md 協議是 Phase 1 的輕量替代。
 
 ### GBrain
 **核心洞見**：thin harness + typed-edge knowledge graph；關鍵設計：
@@ -78,7 +78,7 @@ cc-workspace 現有 19 個 skills（含 RESOLVER.md 索引），從 41->13->19 �
 
 #### 候選 B：diagram-gen（架構圖生成）
 
-**定位**：從程式碼 / Terraform / 文字描述 -> Mermaid / PlantUML 架構圖；系統設計文件輸出。
+**定位**：從程式碼 / Terraform / 文字描述 → Mermaid / PlantUML 架構圖；系統設計文件輸出。
 
 | 維度 | 分數 | 理由 |
 |------|------|------|
@@ -161,7 +161,7 @@ cc-workspace 現有 19 個 skills（含 RESOLVER.md 索引），從 41->13->19 �
 
 #### 候選 G：quick-commit / quick-pr（快速提交/PR）
 
-**狀態調查**：`quick-commit` 和 `quick-pr` 在 RESOLVER.md 中出現但不在 .claude/skills/ 目錄 -> 疑似為 built-in Claude Code 指令（`/commit`、`/pr`）而非 custom skill，或曾存在已刪除。
+**狀態調查**：`quick-commit` 和 `quick-pr` 在 RESOLVER.md 中出現但不在 .claude/skills/ 目錄 → 疑似為 built-in Claude Code 指令（`/commit`、`/pr`）而非 custom skill，或曾存在已刪除。
 
 | 維度 | 分數 | 理由 |
 |------|------|------|
@@ -196,7 +196,7 @@ cc-workspace 現有 19 個 skills（含 RESOLVER.md 索引），從 41->13->19 �
 README.md 目前 260 行 / 9.7KB，結構完整但有三個問題：
 
 **問題 1：Agent Entry Point 表格有重複項目**
-第 14 行 `Which skill to use -> .claude/skills/RESOLVER.md` 和第 22 行 `Full skill triggers -> .claude/skills/RESOLVER.md` 指向同一路徑，重複。
+第 14 行 `Which skill to use → .claude/skills/RESOLVER.md` 和第 22 行 `Full skill triggers → .claude/skills/RESOLVER.md` 指向同一路徑，重複。
 
 **問題 2：Component Registry 數字可能過期**
 `skills/` 顯示 18，但實際目錄 19 個（含 RESOLVER.md）；`hooks/` 顯示 19 但 HARNESS-CARD 說 15；reports/ 顯示 33 但實際可能已變化。這類 hardcoded metrics 應改為「見 healthcheck.sh 輸出」或移至 Current State 表。
@@ -221,19 +221,19 @@ README.md 目前 260 行 / 9.7KB，結構完整但有三個問題：
 #### 改動 3：Knowledge Graph 加入 Hermes self-evolution 邊
 在 Typed Edges 表加一條：
 ```markdown
-| `hooks/post-tool-use` -> | `logs_to` | `failure-log.sh` (failure trajectory capture) |
+| `hooks/post-tool-use` → | `logs_to` | `failure-log.sh` (failure trajectory capture) |
 ```
 
 #### 改動 4：Self-Evolution Loop 加入 Hermes 三階段標記
 現有 Loop 圖只有線性箭頭，加入 Hermes 三階段標籤提升可讀性：
 ```
-Phase 1 [Experience Capture]  -> Skill Creation ←── /skill-evolution
-Phase 2 [Active Learning]     -> Skill Improvement ←── /harness-meta
-Phase 3 [Persistence]         -> Memory Persistence ←── memory/MEMORY.md
+Phase 1 [Experience Capture]  → Skill Creation ←── /skill-evolution
+Phase 2 [Active Learning]     → Skill Improvement ←── /harness-meta
+Phase 3 [Persistence]         → Memory Persistence ←── memory/MEMORY.md
 ```
 
 #### 改動 5（低優先級）：Three-Layer Architecture 數字更新
-`33 autoresearch-generated deep reports` -> 改為 `N reports（見 ls research/reports/ | wc -l）`
+`33 autoresearch-generated deep reports` → 改為 `N reports（見 ls research/reports/ | wc -l）`
 
 ### 不建議改動
 
@@ -273,7 +273,7 @@ allowed-tools: Read, Grep, Glob, Bash
 ### Phase 1：分析輸入類型
 
 偵測輸入類型：
-- Terraform plan output（`terraform plan -out=tfplan` -> `terraform show -json tfplan`）
+- Terraform plan output（`terraform plan -out=tfplan` → `terraform show -json tfplan`）
 - K8s YAML 檔案（`kubectl apply --dry-run=client -f <file>`）
 - Helm chart（`helm template <release> <chart> -f values.yaml`）
 
@@ -286,8 +286,8 @@ git diff --name-only HEAD | grep -E '\.(yaml|yml)$' | xargs grep -l 'kind:' 2>/d
 
 ### Phase 2：風險分類審查
 
-**Terraform 審查清單（Critical -> Warning -> Info）**：
-- Critical：`destroy`、`replace`、`delete` 操作 -> 停止並警告
+**Terraform 審查清單（Critical → Warning → Info）**：
+- Critical：`destroy`、`replace`、`delete` 操作 → 停止並警告
 - Critical：resource 中含明文 secret（password/key/token）
 - Warning：`recreate` 操作影響有狀態資源（DB/PVC）
 - Warning：`count = 0` 或 `enabled = false` 在生產環境
@@ -326,7 +326,7 @@ GO / NO-GO + 理由
 ```yaml
 ---
 name: diagram-gen
-description: '從程式碼 / Terraform / 文字描述 -> Mermaid / PlantUML 架構圖。Use when user types diagram-gen, diagram, 架構圖, 畫圖, sequence diagram, ER diagram, C4, mermaid. Do NOT use for: tech-strategy 評估（用 tech-strategy）、Grafana dashboard（用 sre:monitoring）。 English triggers: diagram, draw.'
+description: '從程式碼 / Terraform / 文字描述 → Mermaid / PlantUML 架構圖。Use when user types diagram-gen, diagram, 架構圖, 畫圖, sequence diagram, ER diagram, C4, mermaid. Do NOT use for: tech-strategy 評估（用 tech-strategy）、Grafana dashboard（用 sre:monitoring）。 English triggers: diagram, draw.'
 version: 1.0.0
 allowed-tools: Read, Grep, Glob, Bash
 ---
@@ -364,7 +364,7 @@ allowed-tools: Read, Grep, Glob, Bash
 **Mermaid 輸出規則**：
 - node 名稱用英文（避免 Mermaid 解析 CJK 問題）
 - 加上 `%%` 行注釋說明複雜節點
-- 超過 20 個節點 -> 拆成 2 張子圖
+- 超過 20 個節點 → 拆成 2 張子圖
 
 ### Phase 3：驗證與調整
 
@@ -376,7 +376,7 @@ allowed-tools: Read, Grep, Glob, Bash
 ## 5. README 實施後預期效果
 
 套用上述 5 項改動後，README 預計：
-- 行數：260 -> 262 行（+2 行說明，-1 行重複）
+- 行數：260 → 262 行（+2 行說明，-1 行重複）
 - LLM 讀入效率：agent entry point 去重，減少歧義
 - Self-evolution 可讀性：Hermes 三階段標記讓 LLM 快速理解進化機制
 - 維護性：Current State 數字加 dynamic 提示，減少 staleness
@@ -390,7 +390,7 @@ allowed-tools: Read, Grep, Glob, Bash
 | Karpathy LLM Wiki | 三層 Raw/Wiki/Schema | ✅ 已落地 | ✅ 無需改動 |
 | Karpathy LLM Wiki | log.md append-only | ⚠️ MEMORY.md 替代，無 log.md | 低優先，可後補 |
 | Hermes Agent | Skills = procedural memory | ✅ 19 skills | ✅ +2 skills 通過門檻 |
-| Hermes Agent | Self-evolving（task -> skill） | ⚠️ GOTCHAS 協議是輕量替代 | README 加 Phase 標記 |
+| Hermes Agent | Self-evolving（task → skill） | ⚠️ GOTCHAS 協議是輕量替代 | README 加 Phase 標記 |
 | GBrain | Typed edges knowledge graph | ✅ README 已有 | ✅ +1 failure-log edge |
 | GBrain | Gap analysis 顯式輸出 | ⚠️ 未標準化 | 可在 autoresearch:reason 加 gap 區塊 |
 | 大道至簡 | 只加有價值的 | ✅ 評分機制篩出 2/7 候選 | ✅ 符合 |
@@ -406,7 +406,7 @@ allowed-tools: Read, Grep, Glob, Bash
 
 **P1（本週）**：
 4. README.md 改動 1-4（移除重複 / 加動態說明 / 加 Hermes 邊 / 加 Phase 標記）
-5. 更新 CLAUDE.md skill 計數（18 -> 21）
+5. 更新 CLAUDE.md skill 計數（18 → 21）
 6. 跑 `bash scripts/healthcheck.sh` 驗證無 FAIL
 
 **P2（可選）**：
@@ -571,8 +571,8 @@ GBrain 的 43 個 curated skills 按類別分組：signal capture / ingest / enr
 **GBrain 設計**：idea、media、meeting 的快速 ingest；支援 stdin / webhook / file。
 
 **對 workspace 的啟發**：
-- `research-hub:archive` 已有類似功能（URL -> Markdown 歸檔）
-- gbrain 的 **meeting notes ingest** 是 cc-workspace 缺失的（會議記錄 -> wiki page）
+- `research-hub:archive` 已有類似功能（URL → Markdown 歸檔）
+- gbrain 的 **meeting notes ingest** 是 cc-workspace 缺失的（會議記錄 → wiki page）
 - 但用戶主要工作場景不是 meeting 重，不值得單獨建立 skill
 
 **加權分**：1.10 ❌ **不建議加入**（research-hub:archive 已覆蓋主要場景）
@@ -604,8 +604,8 @@ GBrain 的 43 個 curated skills 按類別分組：signal capture / ingest / enr
 | GBrain | brain-ops | 0.30 | ❌ harness-meta 已覆蓋 |
 
 **核心結論**：兩個 repo 的具體 skills 均不通過 2.0 門檻。原因是 cc-workspace 已有高度特化的 skills 覆蓋了主要工作場景。最有價值的不是「引入新 skill」，而是**借鑑設計模式**：
-- GBrain gap analysis 輸出格式 -> 加入 autoresearch:reason（低成本）
-- Hermes 三階段進化標記 -> 已加入 README Self-Evolution Loop（本次已完成）
+- GBrain gap analysis 輸出格式 → 加入 autoresearch:reason（低成本）
+- Hermes 三階段進化標記 → 已加入 README Self-Evolution Loop（本次已完成）
 
 ---
 

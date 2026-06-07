@@ -2,7 +2,7 @@
 
 > **日期**：2026-06-03 ｜ **語言**：繁體中文（技術術語保留英文）
 > **類型**：multi-source deep-research（官方最佳實踐 / GitHub 開源 / 社群討論 / 學術論文 四源）
-> **編排**：`research-hub:deep`（語料合成）-> 並行 researcher fan-out（四源）-> `autoresearch:reason`（對抗論證）-> `overnight-research`（verify + commit 閘門）
+> **編排**：`research-hub:deep`（語料合成）→ 並行 researcher fan-out（四源）→ `autoresearch:reason`（對抗論證）→ `overnight-research`（verify + commit 閘門）
 > **定位**：本報告與既有 `2026-05-17-claude-code-subagent-delegation-gotchas.md`、`2026-05-31-consolidated-agent-engineering-research.md` 互補——**sub-agent 段引用既有研究不重推，淨新研究力投入 agent-team（多代理團隊協作）維度**。
 > **引用原則**：所有數據可回溯到具體論文檔名或 URL；二手轉述數字標注來源信度。配套行動計劃見 `2026-06-03-subagent-agent-team-execution-plan.md`。
 
@@ -29,7 +29,7 @@
 | 維度 | Sub-Agent（子代理） | Agent Team（代理團隊） |
 |------|---------------------|------------------------|
 | 主隱喻 | 「資訊蒐集助手」 | 「協作組織 / 公司」 |
-| 拓撲 | Orchestrator -> workers（單層 fan-out） | 可多層、可 peer、可動態組成 |
+| 拓撲 | Orchestrator → workers（單層 fan-out） | 可多層、可 peer、可動態組成 |
 | 通訊 | 限 parent↔child，child 間不直接溝通 | 視框架：handoff / group chat / blackboard |
 | 主用途 | context isolation + 平行蒐集 | 角色專業化 + 多輪協作 + 共識 |
 | 代表 | Claude Code Agent tool、Claude Agent SDK subagent | CrewAI、AutoGen GroupChat、MetaGPT、ChatDev |
@@ -59,9 +59,9 @@
 
 **官方委派量表**（embed 進 orchestrator 的明確規則）：
 
-- 1 agent -> 簡單事實查詢
-- 2–4 agents -> 直接比較
-- 10+ agents -> 複雜研究
+- 1 agent → 簡單事實查詢
+- 2–4 agents → 直接比較
+- 10+ agents → 複雜研究
 
 > **與本 workspace 衝突點（R7 浮現）**：Anthropic 內部對複雜研究用 **10+** subagents，而 workspace `subagent-strategy.md` 設 fan-out 上限 **4**。這不是矛盾——workspace 上限是「主對話手動委派」的保守邊界（防 context 污染主線程），而 dynamic workflow 內由 runtime 控管 ≤16 並行 / ≤1000 總量，與 Anthropic 的 10+ 一致。兩者適用範圍不同。
 
@@ -90,14 +90,14 @@
 
 > *"Teams frequently make this choice incorrectly, leading to coordination overhead that negates the benefits."*
 
-**設計鐵律**：按 **context 邊界**分工，不按**任務類型**分工。按類型分工 -> 每次 handoff 損失 context。
+**設計鐵律**：按 **context 邊界**分工，不按**任務類型**分工。按類型分工 → 每次 handoff 損失 context。
 
 ### 2.3 Claude Agent SDK
 
 **來源**：[Building agents with the Claude Agent SDK](https://claude.com/blog/building-agents-with-the-claude-agent-sdk)
 
 - 核心隱喻：「Give your agents a computer」
-- Agent 迴圈：gather context -> take action -> verify work -> repeat
+- Agent 迴圈：gather context → take action → verify work → repeat
 - Subagent 兩大官方用途：**Parallelization** + **Context isolation**
 - 驗證三法：rules-based feedback / visual feedback / LLM-as-judge
 - **官方支持 subagent 寫程式碼**（bash、code generation 列為核心能力）
@@ -163,7 +163,7 @@
 ### 3.1 MetaGPT（2308.00352）— SOP 即協調協定
 
 把人類軟體工程 SOP 直接編碼為 agent prompt sequence，強制**結構化輸出（文件/圖表）而非自由對話**。HumanEval Pass@1 **85.9%**，token 效率比 ChatDev 省 **50%**。
-> **啟示**：限制溝通格式 = 降幻覺 + 提效率。對映 workspace「child 輸出只含結果，JSON->純 JSON」規則。
+> **啟示**：限制溝通格式 = 降幻覺 + 提效率。對映 workspace「child 輸出只含結果，JSON→純 JSON」規則。
 
 ### 3.2 ChatDev（2307.07924）— 雙代理對話即驗收
 
@@ -172,7 +172,7 @@ Staged Chat Chain + Communicative Dehallucination：waterfall pipeline 每階段
 
 ### 3.3 AgentVerse（2308.10848）— 動態團隊組成
 
-recruit -> execute -> evaluate -> evolve 四階段讓 team 組成隨任務調整。**存在最優 team size**，過多 agent 引入 coordination overhead；groupthink / free-riding 需 orchestrator 主動干預。
+recruit → execute → evaluate → evolve 四階段讓 team 組成隨任務調整。**存在最優 team size**，過多 agent 引入 coordination overhead；groupthink / free-riding 需 orchestrator 主動干預。
 > **啟示**：team size 非越大越好；動態組成優於靜態固定角色。
 
 ### 3.4 AutoGen（2308.08155）— 通用對話介面
@@ -232,13 +232,13 @@ ConversableAgent 支援 LLM/工具/人類任意組合。Three-level 拓撲：Two
 ## 5. 社群討論：共識光譜
 
 ```
-「Multi-Agent 是炒作」←———A———B———C———D———->「Multi-Agent 是必須」
+「Multi-Agent 是炒作」←———A———B———C———D———→「Multi-Agent 是必須」
                         反方   條件論   正方(條件)  正方(強)
 ```
 
 **A — 反方（強）**：Cognition「Don't Build Multi-Agents」(2025-06)。Devin team 實戰：parallel sub-agents 因 context isolation 衝突（Flappy Bird 例：一 agent 做 Mario 背景、另一做鳥，互不知設計決策）。主張 single-threaded 線性 agent。HN 頂評精煉為「不要建 *平行* multi-agent」。
 
-**B — 條件論（2026 主流）**：Philipp Schmid 等。sequential/state-dependent -> single；parallelizable/exploratory -> multi。「framework 選擇次要，eval + observability 才是關鍵」。
+**B — 條件論（2026 主流）**：Philipp Schmid 等。sequential/state-dependent → single；parallelizable/exploratory → multi。「framework 選擇次要，eval + observability 才是關鍵」。
 
 **C — 正方（條件）**：Anthropic 研究系統（breadth-first +90.2%）；HN colonCapitalDee：「sub-agent 過濾 web search 結果大幅提升品質，more context is not always better」。
 
@@ -273,7 +273,7 @@ ConversableAgent 支援 LLM/工具/人類任意組合。Three-level 拓撲：Two
 2. **失敗分類學標準化**（MAST 14 模式）：multi-agent debugging 從 ad-hoc 走向 taxonomy-driven。
 3. **動態團隊組成**（AgentVerse）取代靜態角色：recruit-evaluate-evolve 成為高階模式。
 4. **協調—隱私權衡基準化**（calbench 2605.09823）：多代理共享 context 的隱私成本被量化。
-5. **框架收斂**：AutoGen -> MAF、Swarm -> Agents SDK，輕量教育框架退場，生產框架（LangGraph）與 SDK 化（Agent SDK）並進。
+5. **框架收斂**：AutoGen → MAF、Swarm → Agents SDK，輕量教育框架退場，生產框架（LangGraph）與 SDK 化（Agent SDK）並進。
 
 ---
 

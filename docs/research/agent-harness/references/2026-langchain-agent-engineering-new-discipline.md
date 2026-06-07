@@ -35,7 +35,7 @@ source_tier: P
 ## 工程循環
 
 ```
-Build -> Test -> Ship -> Observe -> Refine -> Repeat
+Build → Test → Ship → Observe → Refine → Repeat
 ```
 
 關鍵轉變：放棄「發布前完美」，改為快速發行 + 生產學習。

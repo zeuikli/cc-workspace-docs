@@ -21,7 +21,7 @@ Anthropic Data Science/Engineering 團隊分享自助資料分析架構。問題
 
 ### Key Points
 - 三大失敗模式：概念到實體的歧義（"active users"映射）、資料過期（Schema 漂移）、檢索失敗（找不到正確資料）
-- 四層技術架構：Data Foundations（Canonical datasets）-> Sources of Truth（Semantic layer）-> Skills（知識 + 程序 Skill 配對）-> Validation（離線 eval + adversarial review）
+- 四層技術架構：Data Foundations（Canonical datasets）→ Sources of Truth（Semantic layer）→ Skills（知識 + 程序 Skill 配對）→ Validation（離線 eval + adversarial review）
 - Semantic layer 是第一道強制步驟：預建 join、grain、filter 消除歧義
 - Skills 配對：薄層知識 router + 詳細程序 unbook；~90% data PR 現在包含 skill 修改
 - Adversarial review sub-agent：+6% 準確率，但 +32% 延遲
@@ -33,10 +33,10 @@ Anthropic Data Science/Engineering 團隊分享自助資料分析架構。問題
 **Date:** 2026-05-27 | **URL:** https://claude.com/blog/using-llms-to-secure-source-code
 
 ### Summary
-Eugene Yan 和 Henna Dattani 分享六步驟漏洞掃描方法論：Threat Modeling -> Sandbox -> Discovery -> Verification -> Triage -> Patching。Anthropic 已在開源軟體中揭露 1,596 個漏洞。
+Eugene Yan 和 Henna Dattani 分享六步驟漏洞掃描方法論：Threat Modeling → Sandbox → Discovery → Verification → Triage → Patching。Anthropic 已在開源軟體中揭露 1,596 個漏洞。
 
 ### Key Points
-- 六步驟框架：建立 `THREAT_MODEL.md` -> 沙箱隔離（容器/Firecracker/VM）-> 並行 discovery（非指令性 prompt）-> 獨立 verifier（反駁而非確認）-> 根因去重 triage -> 先寫失敗測試再修補
+- 六步驟框架：建立 `THREAT_MODEL.md` → 沙箱隔離（容器/Firecracker/VM）→ 並行 discovery（非指令性 prompt）→ 獨立 verifier（反駁而非確認）→ 根因去重 triage → 先寫失敗測試再修補
 - 驗證 Agent 與 Discovery Agent 分離，減少 false positive 約 50%；要求 PoC 驗證後 false positive 趨近於零
 - 參考實作：`defending-code-reference-harness` GitHub repo + Claude Security managed product
 - 第一次掃描發現量高，後續掃描發現較少但更複雜的漏洞
@@ -68,7 +68,7 @@ CodeRabbit 使用 Claude 建立 Agent 協調系統，用於自動化 code review
 ### Key Points
 - AI 加速威脅：模型可發現傳統工具和人工 reviewer 多年未發現的嚴重漏洞
 - Agentic 系統特有漏洞：工具存取/自主決策、Context 持久化和記憶毒化、多 Agent 協調風險、Prompt injection 和工具毒化、身份與權限濫用、Supply chain 攻擊
-- 三層框架：Foundation（基本身份存取控制）-> Advanced（增強範圍和沙箱）-> Optimized（AI 加速防禦操作）
+- 三層框架：Foundation（基本身份存取控制）→ Advanced（增強範圍和沙箱）→ Optimized（AI 加速防禦操作）
 - 八大實施面：加密根身份、任務範圍權限、記憶保護、輸入/輸出控制、Agentic SOAR
 
 ---
@@ -145,7 +145,7 @@ Alice Fong（Anthropic 企業財務策略）分享財務團隊使用 Claude Cowo
 - 產品矩陣：Chat（研究）、Cowork（多檔案專案）、Code（量化/工程）、Microsoft 365（試算表/文件）、Managed Agents（客製應用）
 - 10 個金融 Agent 模板：Pitch Builder、Market Researcher、KYC Screener、General Ledger Reconciler、Month-end tools 等
 - 案例：AIG、Commonwealth Bank of Australia、IG Group、Moody's
-- 三階段計劃：基礎 -> 試點 -> 規模化，附具體行動步驟
+- 三階段計劃：基礎 → 試點 → 規模化，附具體行動步驟
 
 ---
 

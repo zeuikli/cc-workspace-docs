@@ -30,7 +30,7 @@ GPT-OSS-20B、Qwen3-Next-80B-A3B-Thinking、GPT-OSS-120B — 共同特點：整�
 | 攻擊方式 | 攻擊成功率 |
 |---------|----------|
 | CoT 攻擊（通過 response prefix）| 平均 **3.34× 提升** |
-| 部分模型極端案例 | 從 **0.6% -> 96.3%** |
+| 部分模型極端案例 | 從 **0.6% → 96.3%** |
 
 文字補全介面（text-completion interfaces）和用戶定義 response prefix 存在嚴重安全風險。
 

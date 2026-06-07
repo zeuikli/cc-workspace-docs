@@ -158,9 +158,9 @@ sudo dnf install bubblewrap socat
 
 | 前綴 | 意義 | 範例 |
 |------|------|------|
-| `/` | **絕對路徑**（filesystem root）| `/tmp/build` -> `/tmp/build` |
-| `~/` | 相對於 home directory | `~/.kube` -> `$HOME/.kube` |
-| `./` 或無前綴 | 相對於 project root（project settings 中），或 `~/.claude`（user settings 中）| `./output` -> `<project-root>/output` |
+| `/` | **絕對路徑**（filesystem root）| `/tmp/build` → `/tmp/build` |
+| `~/` | 相對於 home directory | `~/.kube` → `$HOME/.kube` |
+| `./` 或無前綴 | 相對於 project root（project settings 中），或 `~/.claude`（user settings 中）| `./output` → `<project-root>/output` |
 
 > **注意**：sandbox filesystem 路徑用**標準慣例**（`/tmp` 是絕對路徑）；與 Read/Edit permission rules 用 `//path` 表示絕對路徑的語法**不同**。
 

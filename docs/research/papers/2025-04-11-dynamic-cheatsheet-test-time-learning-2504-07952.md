@@ -19,9 +19,9 @@ Despite their impressive performance on complex tasks, current language models (
   - **DC-Cu（Cumulative）**：生成答案後，由 Curator 模組決定是否將策略/code snippet 寫入記憶；依次累積擴充。
   - **DC-RS（Retrieval & Synthesis）**：在生成前先用餘弦相似度檢索最相關的歷史 input-output pair，更新記憶後再生成，兼具檢索與策略合成能力。
 - **顯著效能提升**：
-  - Claude 3.5 Sonnet 在 AIME 2024 從 23% -> 50%（+27%）；AIME 2025 +30%
-  - GPT-4o 在 Game of 24 從 10% -> 99%（模型發現 Python 暴力解並重用）
-  - Math Equation Balancer：GPT-4o 和 Claude 從 45–50% -> 98–100%
+  - Claude 3.5 Sonnet 在 AIME 2024 從 23% → 50%（+27%）；AIME 2025 +30%
+  - GPT-4o 在 Game of 24 從 10% → 99%（模型發現 Python 暴力解並重用）
+  - Math Equation Balancer：GPT-4o 和 Claude 從 45–50% → 98–100%
   - GPQA-Diamond：+9%；MMLU-Pro Engineering/Physics：+8%
 - **自主記憶策略**：記憶由模型自我策展（self-curated），儲存精簡且可遷移的知識，不依賴 ground-truth labels 或人工標注，避免 context 膨脹。
 - **局限**：小模型（GPT-4o-mini）受益有限，因本身產出高品質答案的能力不足，記憶庫容易被錯誤策略污染。
@@ -110,12 +110,12 @@ GPT-4o, Claude 3.5 Sonnet (primary); GPT-4o-mini, Claude 3.5 Haiku, DeepSeek R1 
 ### 4 Results and Discussion
 
 Key results (Claude 3.5 Sonnet):
-- AIME 2024: BL 23.3% -> DC-Cu 50.0% (+26.7%)
-- AIME 2025: BL 26.7% -> DC-Cu 56.7% (+30%)
-- GPQA-Diamond: BL ~55% -> DC ~64% (+9%)
+- AIME 2024: BL 23.3% → DC-Cu 50.0% (+26.7%)
+- AIME 2025: BL 26.7% → DC-Cu 56.7% (+30%)
+- GPQA-Diamond: BL ~55% → DC ~64% (+9%)
 - MMLU-Pro Engineering: +8%
-- Game of 24 (GPT-4o): BL 10% -> DC-RS 99% (+89%)
-- Math Equation Balancer: BL ~50% -> DC ~98–100%
+- Game of 24 (GPT-4o): BL 10% → DC-RS 99% (+89%)
+- Math Equation Balancer: BL ~50% → DC ~98–100%
 
 **Key finding**: DC works best when the base model is already capable of generating high-quality solutions; it amplifies strengths but cannot compensate for foundational reasoning gaps. Smaller models (GPT-4o-mini) showed minimal benefit.
 

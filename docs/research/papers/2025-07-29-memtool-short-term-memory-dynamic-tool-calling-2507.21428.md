@@ -184,8 +184,8 @@ Combines both approaches: the deterministic prune step (a fresh LLM call removes
 
 **Key findings:**
 - All models achieve >90% removal ratio — dramatic improvement over Autonomous Agent Mode for weaker models
-- LLaMA 3 70B: 0.244 removal in Autonomous -> 0.932 in Workflow
-- Claude 3.5 Sonnet: 0.062 -> 0.917
+- LLaMA 3 70B: 0.244 removal in Autonomous → 0.932 in Workflow
+- Claude 3.5 Sonnet: 0.062 → 0.917
 - GPT-o3 leads on Tool Correctness (88%) and Task Completion (84%)
 - GPT-4.1 Nano and Gemini 2.5 Flash: excellent removal but weaker at reasoning over tools
 - Workflow removes the burden of memory optimization from the model, enabling even smaller models to perform well

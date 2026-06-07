@@ -83,14 +83,14 @@ H = (E, T, C, S, L, V)
 4. **工具數量**：超過 10 個工具時應分割 sub-agent；lazy loading 可減少 95% 平時 token 消耗
 5. **驗證機制深度**：規則型 + 視覺 + LLM-as-judge 三層組合達 2-3x 品質提升
 6. **記憶持久化方式**：filesystem（長期）/ context window（短期）/ episodic notes（跨 session）
-7. **錯誤恢復層次**：Retry -> Rollback -> Decompose -> Escalate
+7. **錯誤恢復層次**：Retry → Rollback → Decompose → Escalate
 
 ### 2.3 Harness 品質的量化證據
 
 | 來源 | 介入 | 效果 |
 |------|------|------|
-| Can.ac | Harness 重設計 | 6.7% -> 68.3%（10倍） |
-| LangChain 52.8% -> 66.5% | 純 harness 改善 | +13.7pp |
+| Can.ac | Harness 重設計 | 6.7% → 68.3%（10倍） |
+| LangChain 52.8% → 66.5% | 純 harness 改善 | +13.7pp |
 | SWE-agent CLI 重設計 | 無模型改變 | ~40% 提升 |
 | AgentFlow 同模型不同 harness | 效能差 4 倍 | 量化確認 |
 | AgentOpt 最佳/最差模型組合 | 相同準確率 | 成本差 13-32 倍 |
@@ -134,7 +134,7 @@ Layer 5: Settings（權限控制層）   — 已有，bypassPermissions 部分�
 
 ### 3.2 逐維度 HMF 分析
 
-#### Session 層（H->E 執行迴路）
+#### Session 層（H→E 執行迴路）
 
 **現況優勢**：
 - AutoMemory 啟用（`autoMemoryEnabled: true`）
@@ -148,7 +148,7 @@ Layer 5: Settings（權限控制層）   — 已有，bypassPermissions 部分�
 
 **建議**：在 SessionStart hook 注入 `HARNESS_MODEL_VERSION` 變數，每次 session 開始自動記錄當前模型版本與 harness 版本，為後續 drift 追蹤提供基線。
 
-#### Prompt 層（H->C Context 管理）
+#### Prompt 層（H→C Context 管理）
 
 **現況優勢**：
 - 三層載入策略（Auto / On-demand / Manual Read）= Progressive Disclosure 最佳實踐
@@ -162,7 +162,7 @@ Layer 5: Settings（權限控制層）   — 已有，bypassPermissions 部分�
 
 **建議**：執行 CLAUDE.md 的「無法自行推斷」審核，目標從 ≤200 行壓縮至 ≤150 行，並為每條規則標記是 Feedforward 還是 Feedback 控制。
 
-#### Architecture 層（H->T 工具整合）
+#### Architecture 層（H→T 工具整合）
 
 **現況優勢**：
 - Deferred tools 機制（MCP schema 延遲載入）
@@ -176,7 +176,7 @@ Layer 5: Settings（權限控制層）   — 已有，bypassPermissions 部分�
 
 **建議**：每月從 `command-log.jsonl` 分析工具使用分佈，移除低頻工具，新增高頻未涵蓋的工具。
 
-#### SKILL 層（H->L 生命週期治理）
+#### SKILL 層（H→L 生命週期治理）
 
 **現況優勢**：
 - 14+ 個 skills，覆蓋研究、審查、實作、提交等主要工作流
@@ -191,22 +191,22 @@ Layer 5: Settings（權限控制層）   — 已有，bypassPermissions 部分�
 
 **建議**：建立 Skill 審核清單（見附錄 B），每個新 Skill 必須通過 7 項品質檢查。
 
-#### AGENT 層（H->E 多代理協調）
+#### AGENT 層（H→E 多代理協調）
 
 **現況優勢**：
 - `.claude/agents/` 目錄存在
 - subagent-strategy.md 定義 fan-out 上限（4）、parent-child 拓撲
-- 多代理模型選擇原則（0-1 檔 -> Haiku、2-9 -> Sonnet、10+ -> Sonnet/Opus）
+- 多代理模型選擇原則（0-1 檔 → Haiku、2-9 → Sonnet、10+ → Sonnet/Opus）
 
 **HMF 缺口**：
 - 缺乏 HarnessCard（每個 Agent 的 CAR 三段摘要）
 - 無系統性「強模型當 Planner 反而最差」的防護設計（AgentOpt 發現）
-- 跨 Agent 失敗恢復的四層機制（Retry->Rollback->Decompose->Escalate）未文件化
+- 跨 Agent 失敗恢復的四層機制（Retry→Rollback→Decompose→Escalate）未文件化
 - Orchestrator 選用強模型可能抑制 sub-agent 使用率的風險
 
 **建議**：在 subagent-strategy.md 加入 HarnessCard 模板，並記錄「Planner 選模型的反直覺原則」（懂得委派的弱規劃者 > 什麼都做的強規劃者）。
 
-#### HOOK 層（H->R Runtime 治理）
+#### HOOK 層（H→R Runtime 治理）
 
 **現況優勢**：
 - `.claude/hooks/` 目錄存在
@@ -224,7 +224,7 @@ Layer 5: Settings（權限控制層）   — 已有，bypassPermissions 部分�
 
 **建議**：優先補充 PostToolUse hook（代碼修改後自動 linting）和 Stop hook（宣告完成前強制跑 healthcheck）。
 
-#### Rule 層（H->C Context / H->L Lifecycle）
+#### Rule 層（H→C Context / H→L Lifecycle）
 
 **現況優勢**：
 - 12-Rule Canon（Karpathy 4 + Mnilax 8）已實作
@@ -369,9 +369,9 @@ Do NOT load when: [排除場景，≤30 字]
 | Aider | 0.24x | 較弱 | 有限 | 預算受限、簡單編輯 |
 
 **混合工作流建議（MorphLLM）**：
-- Codex -> 快速原型
-- Claude Code -> 複雜重構 / 多代理協調 / review
-- Codex -> 快速修復（在 Claude review 後）
+- Codex → 快速原型
+- Claude Code → 複雜重構 / 多代理協調 / review
+- Codex → 快速修復（在 Claude review 後）
 
 ### 5.2 模型組合最佳化（AgentOpt）
 
@@ -401,17 +401,17 @@ Do NOT load when: [排除場景，≤30 字]
 
 ### 6.1 五大失敗模式（官方文件 2026-05-12）
 
-1. **Kitchen Sink**：把所有想到的規則都放進 CLAUDE.md -> 超過 200 行，compliance 掉到 52%
-2. **Over-correction**：模型犯錯後加太多規則 -> 規則之間衝突，行為更不可預測
-3. **Over-specified CLAUDE.md**：詳細到描述每一步驟 -> 剝奪模型的推理空間
-4. **Trust-then-verify gap**：宣告完成但沒有實際驗證 -> 靜默跳過成為常態
-5. **Infinite exploration**：沒有明確的成功條件 -> Agent 無限探索而不收斂
+1. **Kitchen Sink**：把所有想到的規則都放進 CLAUDE.md → 超過 200 行，compliance 掉到 52%
+2. **Over-correction**：模型犯錯後加太多規則 → 規則之間衝突，行為更不可預測
+3. **Over-specified CLAUDE.md**：詳細到描述每一步驟 → 剝奪模型的推理空間
+4. **Trust-then-verify gap**：宣告完成但沒有實際驗證 → 靜默跳過成為常態
+5. **Infinite exploration**：沒有明確的成功條件 → Agent 無限探索而不收斂
 
 ### 6.2 Skill 設計的三大陷阱
 
-1. **Overexploration Trap**：架構說明過多 / 30+ 警告項目 -> Agent 花過多 token 探索而不執行
-2. **模式不匹配**：Skill 設計假設 ReAct 但任務需要 Plan-Execute -> 效能急降
-3. **文件發現率差**：Skill 放在孤立 docs/ 而非 AGENTS.md 附近 -> 發現率 <10%（AGENTS.md 100%）
+1. **Overexploration Trap**：架構說明過多 / 30+ 警告項目 → Agent 花過多 token 探索而不執行
+2. **模式不匹配**：Skill 設計假設 ReAct 但任務需要 Plan-Execute → 效能急降
+3. **文件發現率差**：Skill 放在孤立 docs/ 而非 AGENTS.md 附近 → 發現率 <10%（AGENTS.md 100%）
 
 ### 6.3 Harness 改動的不對稱風險
 
@@ -419,7 +419,7 @@ Cobus Greyling（2026-05-02）的關鍵發現：
 - Agent 改善可預測性：33.7% 準確率
 - Agent 回歸可預測性：11.8%（**三倍難以預測**）
 
--> **「不破壞現有 harness」比「改善 harness」更重要**。每次改動前必須寫 falsifiable prediction，改後驗證是否產生意外回歸。
+→ **「不破壞現有 harness」比「改善 harness」更重要**。每次改動前必須寫 falsifiable prediction，改後驗證是否產生意外回歸。
 
 ### 6.4 模型升級的 HMF Drift
 
@@ -519,7 +519,7 @@ LangChain 的最新發現：推理預算非線性分配效果最好：
 ### 優先序 3：中影響 × 高成本（月 2-3）
 
 **G. 年度 Harness Audit 設計**
-- 每個 harness 元件標記：「補足的模型限制」-> 「對應的模型版本」
+- 每個 harness 元件標記：「補足的模型限制」→ 「對應的模型版本」
 - 模型升級時自動觸發 audit checklist
 
 **H. Falsifiable Prediction 工作流**
@@ -623,7 +623,7 @@ LangChain 的最新發現：推理預算非線性分配效果最好：
 - ⚠️ **Falsifiable Prediction 工作流**：改動前預測效果、改後驗證的閉環尚未制度化（報告優先序 3-H）。
 - ⚠️ **Rules 的 `[FF]/[FB]` 標記**：報告建議每條規則標記 Feedforward 或 Feedback 控制類型，目前 4 個 rules 均無此標記。
 - ⚠️ **CLAUDE.md 壓縮至 ≤ 150 行目標（報告週 1 行動）**：目前 CLAUDE.md 已達 36 行（大幅超越目標），但規則總 auto-load token 約 3,392 tok，已低於報告建議的 ≤ 150 行壓縮目標的精神，此建議實質已超額完成。
-- ⚠️ **年度 Harness Audit 設計**：每個 harness 元件標記「補足的模型限制」->「對應模型版本」的正式流程尚未建立（rules frontmatter 的 `hmf-review: 2027-01` 是雛型，但無完整 audit checklist）。
+- ⚠️ **年度 Harness Audit 設計**：每個 harness 元件標記「補足的模型限制」→「對應模型版本」的正式流程尚未建立（rules frontmatter 的 `hmf-review: 2027-01` 是雛型，但無完整 audit checklist）。
 - ⚠️ **Skill Known Gotchas section 完整填寫**：報告週 3 行動建議完整填寫各 skill 的 Known Gotchas，部分 skill 可能尚不完整（需逐一核查）。
 
 ### 過期資訊更新
@@ -654,7 +654,7 @@ LangChain 的最新發現：推理預算非線性分配效果最好：
 §5.2 已涵蓋 planner inversion（31.71% vs 74.27%）、13–32× 成本差。兩點增量：
 
 - **UCB-E 削減 62–76% eval budget**：相較暴力搜尋（$n^k$ 空間），UCB-E bandit 演算法削減 **62–76%** 評估預算且恢復近最優精度——使 §8 Priority 2-E「per-model eval 基線」從一次性任務變為可重複閉環。
-- **MathQA 角色量化背書**：Opus 4.6（answer）+ Haiku 4.5（critic）達 **98.84%**，強化角色表「驗證比生成輕量 -> critic 用輕量模型即可」的量化支撐。
+- **MathQA 角色量化背書**：Opus 4.6（answer）+ Haiku 4.5（critic）達 **98.84%**，強化角色表「驗證比生成輕量 → critic 用輕量模型即可」的量化支撐。
 
 **接地審計**：`62–76%` ← "UCB-E… achieves a 62–76% reduction in evaluation budget relative to brute-force search while recovering near-optimal accuracy" (2026-04-07-agentopt…md L22/L100)；`98.84%` ← "Best configuration: Opus 4.6 (answer) + Haiku 4.5 (critic) — 98.84%" (同檔 L147)；arXiv 號 ← "arXiv ID: 2604.06296" (L13)。
 

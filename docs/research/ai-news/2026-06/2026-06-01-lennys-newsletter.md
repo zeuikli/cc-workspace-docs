@@ -1,0 +1,477 @@
+# 📱 Lenny's Newsletter — 2026-06-01
+
+> Lenny Rachitsky 的產品 / 成長策略週報；AI 在 PM 工作流的第一手實踐
+> 來源：[Lenny's Newsletter](https://www.lennysnewsletter.com/feed)
+
+---
+
+## [A rational conversation on where AI is actually going | Benedict Evans](https://www.lennysnewsletter.com/p/a-rational-conversation-on-where)
+*📱 Lenny's Newsletter | 2026-05-31*
+
+[](https://youtu.be/BD3vLtWhT5A)
+
+**Benedict Evans** is an independent analyst and former partner at Andreessen Horowitz, where he spent years as their in-house "thinker" tracking the most important technology trends. For the past six years, he's been publishing deeply researched presentations on where tech is heading, most recently focused on AI's transformation of the economy. His work is read by founders, investors, and operators trying to make sense of a noisy field. His most controversial opinion: AI is as big a deal as the internet or mobile--and _only_ as big.
+
+**Listen on[YouTube](https://youtu.be/BD3vLtWhT5A), [Spotify](https://open.spotify.com/episode/5Vqp5z6WshxyfAMBGxHzoh), and [Apple Podcasts](https://podcasts.apple.com/us/podcast/a-rational-conversation-on-where-ai-is-actually/id1627920305?i=1000770425990)**
+
+### In our in-depth conversation, we discuss:
+
+  1. Why we're in "1997" for AI--early, exciting, and deeply uncertain about what comes next
+
+  2. Where value will actually accrue in the AI stack
+
+  3. The anti-AI backlash, and where it may lead
+
+  4. The surprising boom in consulting and professional services at AI companies
+
+  5. Why distribution is becoming the ultimate moat as software gets easier to build
+
+  6. Why the right question about your job isn't "What percent can AI do?" but "Is this a task or a job?"
+
+  7. Why things will probably be okay--and what you need to do to prepare
+
+
+
+
+* * *
+
+### Brought to you by:
+
+[](https://substackcdn.com/image/fetch/$s_!5HV4!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa427b9f9-7c95-4bd6-912f-16040e3676e8_1974x248.png)
+
+**[WorkOS](https://workos.com/lenny)** --Make your app enterprise-ready, with SSO, SCIM, RBAC, and more
+
+**[Vanta](https://vanta.com/lenny)** --Automate compliance, manage risk, and accelerate trust with AI
+
+### Where to find Benedict Evans:
+
+• LinkedIn: <https://www.linkedin.com/in/benedictevans>
+
+• Newsletter: <https://www.ben-evans.com/newsletter>
+
+• Website: <https://www.ben-evans.com>
+
+### Referenced:
+
+• Andreessen Horowitz: <https://a16z.com>
+
+• AI Eats the World: <https://youtu.be/niJpDnNtNp4>
+
+• VisiCalc: <https://en.wikipedia.org/wiki/VisiCalc>
+
+• McKinsey & Company: <https://www.mckinsey.com>
+
+• Bain & Company: <https://www.bain.com>
+
+• Accenture: <https://www.accenture.com>
+
+• Jevons paradox: <https://en.wikipedia.org/wiki/Jevons_paradox>
+
+• Benedict's post on LinkedIn about Excel: <https://www.linkedin.com/posts/benedictevans_younger-people-may-not-believe-this-but-activity-7303217994459938816-PNqu>
+
+• The AI-native startup: 5 products, 7-figure revenue, 100% AI-written code | Dan Shipper (co-founder/CEO of Every): <https://www.lennysnewsletter.com/p/inside-every-dan-shipper>
+
+• Dario Amodei on X: <https://x.com/DarioAmodei>
+
+• Marc Andreessen: The real AI boom hasn't even started yet: <https://www.lennysnewsletter.com/p/marc-andreessen-the-real-ai-boom>
+
+• Frame.io: <https://frame.io>
+
+• Food Marketing Institute: <https://en.wikipedia.org/wiki/Food_Marketing_Institute>
+
+• Llama: <https://www.llama.com>
+
+• Steven Sinofsky on X: <https://x.com/stevesi>
+
+• Drake meme: <https://imgflip.com/memegenerator/343699919/Drake-Hotline-Bling-Transparent-Background>
+
+• Ex-Google CEO Gets Booed While Discussing AI in Commencement Speech | WSJ News: <https://www.youtube.com/watch?v=tNH43a1EI7s>
+
+• Jonathan Swift's quote: <https://www.goodreads.com/quotes/9838985-you-cannot-reason-a-person-out-of-a-position-he>
+
+• George Carlin's quote: <https://www.brainyquote.com/quotes/george_carlin_391403>
+
+• Fujitsu: <https://global.fujitsu>
+
+• O*NET OnLine: <https://www.onetonline.org>
+
+• Pete Holmes's website: <https://peteholmes.com>
+
+• _The Seventh Seal_ : <https://www.imdb.com/title/tt0050976>
+
+• Ericsson R310s phone: <https://en.wikipedia.org/wiki/Ericsson_R310s>
+
+• i-mate phone: <https://en.wikipedia.org/wiki/I-mate>
+
+• J-Phone: <https://www.mobilephonemuseum.com/phone-detail/j-phone-j-t06>
+
+### Recommended books:
+
+• _Three Men in a Boat_ : <https://www.amazon.com/Three-Men-Boat-Jerome-K/dp/1512099899>
+
+• _Nature 's Metropolis: Chicago and the Great West_: <https://www.amazon.com/Natures-Metropolis-Chicago-Great-West/dp/0393308731>
+
+* * *
+
+Production and marketing by <https://penname.co/>. For inquiries about sponsoring the podcast, email [podcast@lennyrachitsky.com](mailto:podcast@lennyrachitsky.com).
+
+_Lenny may be an investor in the companies discussed._
+
+* * *
+
+## My biggest takeaways from this conversation:
+
+[ Read more ](https://www.lennysnewsletter.com/p/a-rational-conversation-on-where)
+
+---
+
+## [🧠 Community Wisdom: Catching people using AI during an interview, org design when everything lives in one person’s head,…](https://www.lennysnewsletter.com/p/community-wisdom-catching-people)
+*📱 Lenny's Newsletter | 2026-05-30*
+
+_👋 Hello and welcome to this week's edition of ✨ **Community Wisdom** ✨ a subscriber-only email, delivered every Saturday, highlighting the most helpful conversations in [our members-only Slack community](https://forms.gle/syq81QDwqbvL3Yn58)._
+
+[](https://substackcdn.com/image/fetch/$s_!KxHU!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa1ca8352-9571-4b81-b041-52374176f4fc_2912x1456.png)
+
+[ Read more ](https://www.lennysnewsletter.com/p/community-wisdom-catching-people)
+
+---
+
+## [Claude Opus 4.8 is here. Is it as good as they say?](https://www.lennysnewsletter.com/p/claude-opus-48-is-here-is-it-as-good)
+*📱 Lenny's Newsletter | 2026-05-28*
+
+I got a few hours of early-access testing with Anthropic's newly released model Opus 4.8. I walk through real coding, design, and strategy tasks across Claude Code and Claude Cowork, and give you my unfiltered view on what impressed me and what didn't.
+
+**Listen or watch on[YouTube](https://youtu.be/h0gZf1hL4D4), [Spotify](https://open.spotify.com/show/4aRP2XSavdtrLG5FZoonOK), or [Apple Podcasts](https://podcasts.apple.com/us/podcast/how-i-ai/id1809663079)**
+
+### What you'll learn:
+
+  1. Where Opus 4.8 excels: greenfield prototypes, one-shot features, and fast execution
+
+  2. Where it struggles: the last 10%, edge cases in existing codebases, and hallucinations
+
+  3. How Opus 4.8 compares to Opus 4.7 on business strategy work
+
+  4. Why I'm still reaching for Opus 4.7 on data-heavy strategy and roadmap work
+
+  5. The new features shipping alongside the model: dynamic workflows with parallel subagents and effort control in Claude.ai and Cowork
+
+  6. The prompting and harness strategy I'd use to get the most out of it
+
+
+
+
+* * *
+
+### In this episode, we cover:
+
+([00:00](https://www.youtube.com/watch?v=h0gZf1hL4D4)) Introduction to Opus 4.8
+
+([00:44](https://www.youtube.com/watch?v=h0gZf1hL4D4&t=44s)) Benchmark performance and pricing
+
+([01:53](https://www.youtube.com/watch?v=h0gZf1hL4D4&t=113s)) First coding test: Building a prototyping tool
+
+([03:00](https://www.youtube.com/watch?v=h0gZf1hL4D4&t=180s)) Where it failed: The last 10% problem
+
+([03:27](https://www.youtube.com/watch?v=h0gZf1hL4D4&t=207s)) The hallucination problem
+
+([04:23](https://www.youtube.com/watch?v=h0gZf1hL4D4&t=263s)) Testing Opus 4.8 on existing codebases
+
+([05:24](https://www.youtube.com/watch?v=h0gZf1hL4D4&t=324s)) The ambition test: Building games for a 9-year-old
+
+([07:03](https://www.youtube.com/watch?v=h0gZf1hL4D4&t=423s)) Business strategy test: 4.7 vs 4.8
+
+([08:23](https://www.youtube.com/watch?v=h0gZf1hL4D4&t=503s)) The roadmap test
+
+([09:17](https://www.youtube.com/watch?v=h0gZf1hL4D4&t=557s)) Final verdict
+
+### References:
+
+• System Card: Claude Opus 4.8: <https://cdn.sanity.io/files/4zrzovbb/website/c886650a2e96fc0925c805a1a7ca77314ccbf4a6.pdf>
+
+• Introducing Claude Opus 4.8 on X: 
+
+### Where to find Claire Vo:
+
+ChatPRD: <https://www.chatprd.ai/>
+
+Website: <https://clairevo.com/>
+
+LinkedIn: <https://www.linkedin.com/in/clairevo/>
+
+X: <https://x.com/clairevo>
+
+Production and marketing by <https://penname.co/>. For inquiries about sponsoring the podcast, email jordan@penname.co.
+
+---
+
+## [The Codex feature that works while you sleep](https://www.lennysnewsletter.com/p/the-codex-feature-that-works-while)
+*📱 Lenny's Newsletter | 2026-05-27*
+
+In this 30-minute episode, I walk through my favorite feature in Codex: the /goal command. I show how Goals transform AI from a turn-based assistant that needs constant 'what's next?' prompting into an autonomous agent that can work for hours on complex, multi-step tasks. I share three real examples: eliminating thousands of Sentry errors, cleaning 3,900 emails down to 68, and organizing hundreds of Linear tasks.
+
+**Listen or watch on[YouTube](https://youtu.be/2wLJl9A2CnA), [Spotify](https://open.spotify.com/episode/2FSKG3zqiiLzM4VTAygUYS), or [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-codex-feature-that-works-while-you-sleep/id1809663079?i=1000769814582)**
+
+### What you'll learn:
+
+  1. What Goals are and how they differ from standard prompts
+
+  2. How I used /goal to eliminate hundreds of error logs in my codebase over a five-hour autonomous run
+
+  3. The non-technical use cases that make Goals incredibly powerful: cleaning up 3,900 emails in under four hours and organizing hundreds of project management tasks in Linear
+
+  4. How to write effective /goal prompts with measurable outcomes, verification methods, and constraints
+
+  5. When not to use Goals and what makes a strong versus weak Goal
+
+  6. Why Goals represent a fundamental shift in how we work with AI, from babysitting the model to managing it
+
+
+
+
+* * *
+
+### Brought to you by:
+
+[](https://substackcdn.com/image/fetch/$s_!Jipq!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8404a7fa-0da5-46af-9273-c9290faf7e9d_718x166.png)
+
+**[Mercury](https://mercury.com/)** --Radically different banking loved by over 300K entrepreneurs
+
+### In this episode, we cover:
+
+([00:00](https://www.youtube.com/watch?v=2wLJl9A2CnA)) Introduction
+
+([01:50](https://www.youtube.com/watch?v=2wLJl9A2CnA&t=110s)) What is /goal and when should you use it?
+
+([02:45](https://www.youtube.com/watch?v=2wLJl9A2CnA&t=165s)) The difference between prompts and Goal-based loops
+
+([04:06](https://www.youtube.com/watch?v=2wLJl9A2CnA&t=246s)) Claire's first five-hour 45-minute autonomous coding task
+
+([05:05](https://www.youtube.com/watch?v=2wLJl9A2CnA&t=305s)) How to manage a Goal lifecycle: view, pause, resume, and clear
+
+([06:06](https://www.youtube.com/watch?v=2wLJl9A2CnA&t=366s)) How to write strong goals: outcomes vs. outputs
+
+([07:34](https://www.youtube.com/watch?v=2wLJl9A2CnA&t=454s)) The six components of effective Goals
+
+([08:57](https://www.youtube.com/watch?v=2wLJl9A2CnA&t=537s)) Example: Reducing P95 checkout latency with /goal
+
+([09:36](https://www.youtube.com/watch?v=2wLJl9A2CnA&t=576s)) Demo: Using /goal to eliminate Sentry errors in ChatPRD
+
+([13:18](https://www.youtube.com/watch?v=2wLJl9A2CnA&t=798s)) Demo: Burning down Vercel API errors
+
+([17:28](https://www.youtube.com/watch?v=2wLJl9A2CnA&t=1048s)) Non-technical use case: Cleaning 3,900 emails with /goal
+
+([21:24](https://www.youtube.com/watch?v=2wLJl9A2CnA&t=1284s)) Demo: Using /goal to clean up Linear project tasks
+
+([24:41](https://www.youtube.com/watch?v=2wLJl9A2CnA&t=1481s)) When _not_ to use /goal
+
+([26:10](https://www.youtube.com/watch?v=2wLJl9A2CnA&t=1570s)) Why /goal changes everything
+
+### Tools referenced:
+
+• Codex: <https://openai.com/codex/>
+
+• Sentry: <https://sentry.io/>
+
+• Vercel: <https://vercel.com/>
+
+• Linear: <https://linear.app/>
+
+### Other reference:
+
+• OpenAI blog post "Using Goals in Codex": <https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex>
+
+### Where to find Claire Vo:
+
+ChatPRD: <https://www.chatprd.ai/>
+
+Website: <https://clairevo.com/>
+
+LinkedIn: <https://www.linkedin.com/in/clairevo/>
+
+X: <https://x.com/clairevo>
+
+Production and marketing by <https://penname.co/>. For inquiries about sponsoring the podcast, email jordan@penname.co.
+
+---
+
+## [Essential books for product builders—part 1](https://www.lennysnewsletter.com/p/essential-books-for-product-builderspart)
+*📱 Lenny's Newsletter | 2026-05-26*
+
+_👋 Hey there, I'm Lenny. Each week, I write about building product, driving growth, and accelerating your career. For more: [Lenny's Podcast](https://www.lennysnewsletter.com/podcast) | [Lennybot](https://www.lennybot.com/) | [How I AI](https://www.youtube.com/@howiaipodcast) | My favorite [AI/PM courses](https://maven.com/lenny), [public speaking course](https://ultraspeaking.com/lennyslist?via=lenny), and [interview prep copilot](https://www.benerez.com/copilot/lenny)_
+
+[Subscribe now](https://www.lennysnewsletter.com/subscribe)
+
+ _P.S. Get a full free year of Cursor, Google AI, Lovable, Replit, Notion, Manus, Gamma, n8n, Canva, ElevenLabs, Factory, Wispr Flow, Fin, Supabase, Bolt, Linear, PostHog, Framer, Railway, Granola, Warp, Gumloop, Magic Patterns, Mobbin, Stripe Atlas, and ChatPRD, by becoming[an Insider subscriber](https://www.lennysproductpass.com/). Yes, this is for real._
+
+* * *
+
+[](https://substackcdn.com/image/fetch/$s_!DRWl!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2d51fe66-e3d5-47c9-a868-1c3777108dca_1456x970.png)
+
+I was a shy kid growing up, so I spent a lot of time reading books. I devoured sci-fi, nonfiction, and every programming book I could find. When the library didn't have the C++ book I wanted, I taught myself to code by buying book after book from our local Borders (RIP). I was tearing through so many coding books that my dad started returning the ones I'd finished to the bookstore so we could afford to buy more.
+
+I've always thought it was so cool that the smartest person in the world on a topic I care about spent years of their life distilling their best ideas into an enjoyable read, and I can get this for just $20. Amazing.
+
+There's endless free content flying at us now--newsletters, podcasts, tweets, oh my--but how many blog posts or tweets have had anywhere near the lasting impact on your life as a great book?
+
+To continue my essential-reads series (don't miss [part 1](https://www.lennysnewsletter.com/p/essential-reading-for-product-builderspart) and [part 2](https://www.lennysnewsletter.com/p/essential-reading-for-product-builderspart-1ac) of my favorite online essays), I've put together a collection of my all-time favorite books, organized by their jobs-to-be-done. When your manager tells you to work on a particular skill--or if you're just feeling the itch for self-improvement--these are the books I recommend.
+
+To keep this list extremely high signal-to-noise, I forced myself to pick only three books per category (so hard!), and only books I've completed. I included both classics and under-the-radar gems. I also agree with [Marc Andreessen's take](https://youtu.be/87Pm0SGTtN8?si=NsjVGWdFkfZ5cr_l&t=5425) that you should mostly read books that are over 10 years old (because those are the ones that have stood the test of time), so you'll notice very few newer books.
+
+There are so many great books that I didn't include, either because I haven't had a chance to read them or they just missed the cut. I probably forgot some important titles, too. That's why there'll be a part 2!
+
+_P.S. If you feel like you have no time to read, I was in the same boat.[Bryan Johnson's suggestion](https://youtu.be/Wk9p3dhMYdk?si=9_LMhHpjnG9H3kHQ&t=167) to read a book for 10 minutes before bed changed my life. I started reading more books, and I got better sleep! Try it out._
+
+## I want to improve my communication skills
+
+[](https://substackcdn.com/image/fetch/$s_!4UcX!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc5b3ee54-7f88-43cc-9a74-825dd1c61d7b_2912x1404.png)
+
+I had never written anything online before starting this newsletter, so once I realized this was going to be a thing, I decided I needed to learn something about writing. Friends recommended many different books, and I read them all. But these three had the most practical, impactful, and lasting advice, which is still lodged in my head even now.
+
+  1. _[Nobody Wants to Read Your Sh*t](https://www.amazon.com/Nobody-Wants-Read-Your-Tough-Love/dp/1936891492/ref=tmm_pap_swatch_0)_ by Steven Pressfield
+
+  2.  _[On Writing Well](https://www.amazon.com/Writing-Well-Classic-Guide-Nonfiction/dp/0060891548/ref=tmm_pap_swatch_0) _by William Zinsser
+
+  3.  _[Storyworthy](https://www.amazon.com/Storyworthy-Engage-Persuade-through-Storytelling/dp/1608685489/ref=tmm_pap_swatch_0)_ by Matthew Dicks
+
+
+
+
+ _Check out my conversation with[Matthew Dicks](https://www.youtube.com/watch?v=J4wguyJZI6A)._
+
+## I want to get better at executing
+
+[](https://substackcdn.com/image/fetch/$s_!3Tiv!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6b8e4180-37e8-41fa-a180-55fcd09b00d2_2912x1404.png)
+
+If you love this newsletter, you crave actionable, tactical advice and frameworks that you can put into practice immediately. The first two books will give you exactly that, and the third will give you a meta-framework that'll level up how you approach _everything_ at work.
+
+  1. _[The Great CEO Within](https://www.amazon.com/Great-CEO-Within-Tactical-Building/dp/0578599287/ref=tmm_pap_swatch_0)_ by Matt Mochary
+
+  2.  _[Scaling People](https://www.amazon.com/Scaling-People-Tactics-Management-Building/dp/1953953212/ref=tmm_hrd_swatch_0)_ by Claire Hughes Johnson
+
+  3.  _[The Goal](https://www.amazon.com/dp/0884271951?ref=cm_sw_r_ffobk_cp_ud_dp_V0Y2V3TKM88SW42VTT90&ref_=cm_sw_r_ffobk_cp_ud_dp_V0Y2V3TKM88SW42VTT90&social_share=cm_sw_r_ffobk_cp_ud_dp_V0Y2V3TKM88SW42VTT90&bestFormat=true)_ by Eliyahu Goldratt
+
+
+
+
+ _Check out my conversations with[Matt Mochary](https://www.youtube.com/watch?v=bCel0X2Ta7U) and [Claire Hughes Johnson](https://www.youtube.com/watch?v=Mv0o9o4MRh0)._
+
+## I want to get better at strategy
+
+[](https://substackcdn.com/image/fetch/$s_!yYo0!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa657e86d-39f7-4c4c-b07e-e4b64c89e390_2912x1404.png)
+
+I remember reading these books and feeling like, okay, I finally understand what "strategy" is.
+
+  1. _[Good Strategy/Bad Strategy](https://www.amazon.com/Good-Strategy-Bad-Difference-Matters/dp/0307886239/ref=tmm_hrd_swatch_0)_ by Richard Rumelt
+
+  2.  _[Playing to Win](https://www.amazon.com/Playing-Win-Strategy-Really-Works/dp/142218739X/ref=tmm_hrd_swatch_0)_ by Roger L. Martin 
+
+  3. _[Working Backwards](https://www.amazon.com/Working-Backwards-Insights-Stories-Secrets/dp/1250267595/ref=tmm_hrd_swatch_0)_ by Colin Bryar and Bill Carr
+
+
+
+
+ _Check out my conversations with[Richard Rumelt](https://www.youtube.com/watch?v=4uWKEG0s9Kc), [Roger Martin](https://www.youtube.com/watch?v=y7SN4FK8noY), and [Bill Carr](https://www.youtube.com/watch?v=S9WHQa_AJQo)._
+
+## I want to be inspired to build something great
+
+[](https://substackcdn.com/image/fetch/$s_!mOH7!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3cd13ebc-49b1-4d02-af3f-e3f455f464fa_2912x1404.png)
+
+This bucket of books might be my favorite of the bunch. They showed me how much a singular (relentless) mind can accomplish. Read them, and you'll be ready to run through walls.
+
+  1. _[The Making of Prince of Persia](https://press.stripe.com/the-making-of-prince-of-persia) by _Jordan Mechner
+
+  2.  _[Build](https://www.buildc.com/the-book)_ by Tony Fadell
+
+  3.  _[Shoe Dog](https://www.amazon.com/Shoe-Dog-Memoir-Creator-Nike/dp/1501135910)_ by Phil Knight
+
+
+
+
+## I want to become a better manager
+
+[](https://substackcdn.com/image/fetch/$s_!MUV1!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0da956ce-5849-4c28-99d2-62a19c496703_2912x1404.png)
+
+These books are among the most mentioned on my podcast. I remember reading _High Output Management_ when I was a baby manager, and it finally taught me what my job actually was. _The Making of a Manager_ is the modern version of that book. And _Radical Candor_ forever shifted how I think about hard feedback.
+
+  1. _[High Output Management](https://www.amazon.com/High-Output-Management-Andrew-Grove/dp/0679762884/ref=tmm_pap_swatch_0)_ by Andy Grove
+
+  2.  _[The Making of a Manager](https://www.amazon.com/Making-Manager-What-Everyone-Looks/dp/0735219567/ref=tmm_hrd_swatch_0)_ by Julie Zhuo
+
+  3.  _[Radical Candor](https://www.amazon.com/Radical-Candor-Revised-Kick-Ass-Humanity/dp/1250235375/ref=tmm_hrd_swatch_0)_ by Kim Scott
+
+
+
+
+ _Check out my conversations with[Kim Scott](https://www.youtube.com/watch?v=V7tnbx-6Ayc) and [Julie Zhuo](https://www.youtube.com/watch?v=c_w0LaFahxk)._
+
+## I want to become a better leader
+
+[](https://substackcdn.com/image/fetch/$s_!cr9z!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa20a084b-82d3-4344-baad-17ff2b38cef2_2912x1404.png)
+
+I love how the combination of these three books sums up great leadership: push people to do the best work of their lives, but be human about it, and, in the end, the score will take care of itself.
+
+  1. _[Amp It Up](https://www.amazon.com/Amp-Unlocking-Hypergrowth-Expectations-Intensity/dp/1119836115/ref=tmm_hrd_swatch_0) _by Frank Slootman
+
+  2.  _[The 15 Commitments of Conscious Leadership](https://www.amazon.com/15-Commitments-Conscious-Leadership-Sustainable/dp/0990976904/ref=tmm_pap_swatch_0) _by Jim Dethmer, Diana Chapman, and Kaley Klemp
+
+  3.  _[The Score Takes Care of Itself](https://www.amazon.com/Score-Takes-Care-Itself-Philosophy/dp/1591843472/ref=tmm_pap_swatch_0)_ by Bill Walsh
+
+
+
+
+## I want to increase my product success rate
+
+[](https://substackcdn.com/image/fetch/$s_!WvU0!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8c0f48e8-66d6-4756-9124-fbb143023c15_2912x1404.png)
+
+These classics taught me the fundamentals of product management: talking to customers, prioritizing roadmaps, and what it takes to build something valuable and impactful.
+
+  1. _[The Mom Test](https://www.amazon.com/Mom-Test-customers-business-everyone/dp/1492180742/ref=tmm_pap_swatch_0)_ by Rob Fitzpatrick
+
+  2.  _[Escaping the Build Trap](https://www.amazon.com/Escaping-Build-Trap-Effective-Management/dp/149197379X/ref=tmm_pap_swatch_0)_ by Melissa Perri
+
+  3.  _[Continuous Discovery Habits](https://www.amazon.com/Continuous-Discovery-Habits-Discover-Products/dp/1736633309/ref=tmm_pap_swatch_0)_ by Teresa Torres
+
+
+
+
+ _Check out my conversations with[Melissa Perri](https://www.youtube.com/watch?v=FCxkT8ULrVg) and [Teresa Torres](https://www.youtube.com/watch?v=9RFaz9ZBXpk&t=7s)._
+
+## I want to level up my product org
+
+[](https://substackcdn.com/image/fetch/$s_!c2RE!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F078c4c04-a277-4bf3-8184-f21558d93421_2912x1404.png)
+
+These books are also some of the most mentioned on my podcast, because they'll shift how you think about the role of product within your organization, and how to make decisions in uncertain environments.
+
+  1. _[Empowered](https://www.svpg.com/books/empowered-ordinary-people-extraordinary-products/) _by Marty Cagan
+
+  2.  _[Inspired](https://www.svpg.com/books/inspired-how-to-create-tech-products-customers-love-2nd-edition/) _by Marty Cagan
+
+  3.  _[Thinking in Bets](https://www.amazon.com/Thinking-Bets-Making-Smarter-Decisions/dp/0735216355/ref=tmm_hrd_swatch_0)_ by Annie Duke
+
+
+
+
+ _Check out my conversations with[Marty Cagan](https://www.youtube.com/watch?v=9N4ZgNaWvI0) (and, again, [Marty Cagan](https://www.youtube.com/watch?v=h-KVGHoQ_98)) and [Annie Duke](https://www.youtube.com/watch?v=svQMODvIGAE)._
+
+## I want to get better at sales and marketing
+
+[](https://substackcdn.com/image/fetch/$s_!DGkq!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7e120ae1-e171-422f-86a4-d30ff77cbf5c_2912x1404.png)
+
+With AI making it easier to build, distribution is becoming the bigger bottleneck. This is not a natural strength for most builders, which is why you need to develop your marketing and sales muscle. I learned more about marketing and sales from these three books than from anywhere else.
+
+  1. _[Purple Cow](https://www.amazon.com/Purple-Cow-New-Transform-Remarkable/dp/1591843170/ref=tmm_hrd_swatch_0)_ by Seth Godin
+
+  2.  _[Obviously Awesome](https://www.amazon.com/Obviously-Awesome-Product-Positioning-Customers/dp/1999023080/ref=tmm_hrd_swatch_0)_ by April Dunford
+
+  3.  _[Founding Sales](https://www.amazon.com/Founding-Sales-Go-Market-Handbook/dp/1734505117/ref=tmm_pap_swatch_0)_ by Peter Kazanjy
+
+
+
+
+ _Check out my conversations with[Seth Godin](https://www.youtube.com/watch?v=UyWTDmDjNy4), [April Dunford](https://www.youtube.com/watch?v=hdjlCLb9Hl8), and [Peter Kazanjy](https://www.youtube.com/watch?v=cZd5234Eem0)._
+
+## I want to be more productive
+
+[ Read more ](https://www.lennysnewsletter.com/p/essential-books-for-product-builderspart)
+
+---

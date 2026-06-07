@@ -2,7 +2,7 @@
 
 > **Type:** raw:blog — Anthropic 官方 blog / docs 外部歸檔（LLM 只讀不改）；~91 篇  
 > **Updated**: 2026-06-05  
-> **Query pattern**: BRAIN.md -> 本表（Category）-> `<category>/index.md` -> 具體文章
+> **Query pattern**: BRAIN.md → 本表（Category）→ `<category>/index.md` → 具體文章
 
 ---
 
@@ -29,5 +29,5 @@
 
 | Edge | From | To |
 |------|------|----|
-| `references` | `research/best-practices/INDEX.md` | `claude-blog/` (官方 blog -> best-practice 篩選) |
+| `references` | `research/best-practices/INDEX.md` | `claude-blog/` (官方 blog → best-practice 篩選) |
 | `cited-by` | `research/ai-articles/scored/` | `claude-blog/` (多篇 scored 文章引用官方 blog) |

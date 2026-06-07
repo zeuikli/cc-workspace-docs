@@ -40,8 +40,8 @@ Four rounds of human-guided harness enhancement on Terminal-Bench 2 (all-flags-o
 
 | Round | Result | Cause |
 |-------|--------|-------|
-| B | +2 passes (15->17) ✓ | Clean improvement |
-| C | -4 passes (17->13) ✗ | Low-capability self-evaluators |
+| B | +2 passes (15→17) ✓ | Clean improvement |
+| C | -4 passes (17→13) ✗ | Low-capability self-evaluators |
 | D | -5 passes (12/89) ✗ | ACON cache corruption + integration bugs |
 
 **Oracle (union of all flags)**: 81/89 — massive headroom unreachable via manual tuning.
@@ -123,14 +123,14 @@ Information-per-dollar efficiency over standard acquisition.
 ### 1. Integration Bugs as Signal
 
 Two silent failures invisible to pass rates, caught by telemetry:
-- `reflections_written=80, reflections_retrieved=0` -> container non-persistence
-- `PASTE_invocations=0` -> feature never activated
+- `reflections_written=80, reflections_retrieved=0` → container non-persistence
+- `PASTE_invocations=0` → feature never activated
 
 "Observability doubles as a bug-detector for the engineering loop."
 
 ### 2. ACON-Cache Coupling
 
-Observation-compression gate stored compressed summaries in cache instead of raw outputs -> corrupted downstream reads. An architectural invariant violation only visible via telemetry.
+Observation-compression gate stored compressed summaries in cache instead of raw outputs → corrupted downstream reads. An architectural invariant violation only visible via telemetry.
 
 ### 3. Model-Dependent Feature Interactions
 

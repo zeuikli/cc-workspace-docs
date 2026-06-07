@@ -46,7 +46,7 @@ We introduce HippoRAG, a novel retrieval framework inspired by the hippocampal i
 ### 索引階段（Offline Indexing）
 
 ```
-文檔 -> LLM 抽取三元組（主語, 謂語, 賓語）
+文檔 → LLM 抽取三元組（主語, 謂語, 賓語）
                     ↓
               知識圖譜（KG）
               節點：實體（entity）
@@ -64,7 +64,7 @@ We introduce HippoRAG, a novel retrieval framework inspired by the hippocampal i
      ↓
 LLM 從查詢中提取關鍵詞/實體
      ↓
-嵌入相似度搜索 -> 候選節點（seeds）
+嵌入相似度搜索 → 候選節點（seeds）
      ↓
 Personalized PageRank（PPR）傳播
      ↓
@@ -85,14 +85,14 @@ Personalized PageRank（PPR）傳播
 問題：「Barack Obama 的出生地位於哪個大洋的西岸？」
 
 需要：
-1. Obama 出生地 -> 夏威夷
-2. 夏威夷位於 -> 太平洋（Pacific Ocean）西岸
+1. Obama 出生地 → 夏威夷
+2. 夏威夷位於 → 太平洋（Pacific Ocean）西岸
 
-傳統 RAG：直接搜索「Obama 出生地+大洋」-> 找不到直接匹配
+傳統 RAG：直接搜索「Obama 出生地+大洋」→ 找不到直接匹配
 
 HippoRAG PPR：
 - Seed: {Obama, 出生地, 大洋}
-- PPR 從 Obama 節點沿「出生地->夏威夷->位於->太平洋」傳播
+- PPR 從 Obama 節點沿「出生地→夏威夷→位於→太平洋」傳播
 - 橋接節點「夏威夷」被高分命中
 - 返回含夏威夷地理信息的段落
 ```

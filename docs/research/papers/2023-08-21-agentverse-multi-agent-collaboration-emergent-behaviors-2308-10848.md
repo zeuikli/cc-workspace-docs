@@ -8,7 +8,7 @@
 
 ## 方法 / 架構
 
-- **四階段 pipeline**：Recruitment（招募適合的 agent 組成）-> Collaborative Decision-Making（集體決策）-> Independent Action Execution（分工執行）-> Evaluation and Evolution（評估並調整 agent 組成）
+- **四階段 pipeline**：Recruitment（招募適合的 agent 組成）→ Collaborative Decision-Making（集體決策）→ Independent Action Execution（分工執行）→ Evaluation and Evolution（評估並調整 agent 組成）
 - **動態組成（Dynamic Composition）**：根據任務複雜度與進展，在執行中新增/移除 agent，實現 "greater-than-sum" 效果
 - **正負湧現管理**：識別 groupthink（群體思維）、free-riding（搭便車）等負向行為並干預
 - 支援 simulation 模式：多 agent 擁有獨立記憶 + 個性，模擬社交互動

@@ -3,7 +3,7 @@
 **生成日期**：2026-05-31  
 **增量更新**：v2a（2026-06-05）併入 4 篇 in-domain（ACON / AgentFlow / addyosmani / configuring-agentic）｜**v2b（2026-06-05）**併入 ~14 篇本機未引用 harness-adjacent + 3 篇 web-only primary 來源（見 §E）  
 **語料範圍**：43 篇本機深度引用（2023–2026）+ 5 篇本機一行 coverage + 3 篇 web-only primary + 3 篇旁證 system card  
-**方法論**：research-hub:deep（來源驅動，每 claim 標 [P/O/C/E]，D2 交叉驗證）；v2b 增量走 **4× researcher 平行深讀（context isolation）-> 主對話親自 grep 驗每個 stat -> opus 對抗 critic 審 section-mapping + superlative（zero-hedge test）-> 主對話親自 grep 重駁 critic**（攔截 1 次 critic 幻覺，見 §E0）  
+**方法論**：research-hub:deep（來源驅動，每 claim 標 [P/O/C/E]，D2 交叉驗證）；v2b 增量走 **4× researcher 平行深讀（context isolation）→ 主對話親自 grep 驗每個 stat → opus 對抗 critic 審 section-mapping + superlative（zero-hedge test）→ 主對話親自 grep 重駁 critic**（攔截 1 次 critic 幻覺，見 §E0）  
 **v2b 範圍邊界（誠實聲明）**：最新本機 harness 論文止於 2026-05-23（不晚於原報告）；web 掃描確認**無** 2026-06 之後新論文超越本報告——AutoHarness（2026-02）/ Harness-Bench（2026-05-27）是**遺漏**論文非「截稿後新出」。v2b 主價值在本機未引用論文併入，非前向 5 日 gap（此判斷在開工前由 advisor 預測、事後證實）。
 
 ---
@@ -39,13 +39,13 @@
 - **AgentOpt（2026-04）**：聚焦 pipeline-level 模型分配，發現「最強模型 ≠ 最佳組合」——Opus 4.6 作為 2-stage 系統 planner 時準確率僅 31.71%，而 Ministral 3 8B 作為 planner + Opus 作為 solver 達 74.27% [P: agentopt]
 - **The Last Harness You'll Ever Build（2026-04）**：提出 Harness Evolution Loop + Meta-Evolution Loop 的兩層自動化，主張 harness 最佳化本身也需要自動化 [P: last-harness]
 
-**AHE（2026-04）**以三觀測性支柱（component/experience/decision observability）建立自動 harness 進化的科學基礎 [P: ahe]，Terminal-Bench 2 上 10 次迭代從 69.7% -> 77.0%，且跨模型家族轉移 +5.1~10.1pp。
+**AHE（2026-04）**以三觀測性支柱（component/experience/decision observability）建立自動 harness 進化的科學基礎 [P: ahe]，Terminal-Bench 2 上 10 次迭代從 69.7% → 77.0%，且跨模型家族轉移 +5.1~10.1pp。
 
 - **AgentFlow（2026-04）**〔2026-06-05 增補〕：以型別化圖 DSL 聯合搜尋 harness 五維度（角色 𝒜／拓撲 𝒢／訊息 schema Σ／工具綁定 Φ／協調協定 Ψ），TerminalBench-2 達 84.3%（Claude Opus 4.6，+2.9pp over 手工 baseline ForgeCode 81.4%），並以開源 Kimi K2.5 在 Google Chrome 發現 10 個 zero-day（含 2 Critical sandbox-escape）[P: agentflow]。消融顯示 prompt 最佳化貢獻最大（−32.5pp）、topology 次之（−6.9pp）。其「型別系統前置過濾 ~20% 無效提案」+「三訊號失敗歸因（coverage delta / output quality / schema violation，誤差 15%）」直接補本 repo Loop 的 PROPOSE/IDENTIFY 斷點（見 §C2）。
 
 ### A5. 理論化期（2026年5月）
 
-**Categorical Architecture（2026-05）**：以範疇論（category theory）形式化 harness 為 (G, Know, Φ) 三元組，將 memory->coalgebra、skills->operad、protocols->wiring diagram 映射 [P: categorical]。「If you're not the model, you're the harness.」成為這個時期的標誌語。
+**Categorical Architecture（2026-05）**：以範疇論（category theory）形式化 harness 為 (G, Know, Φ) 三元組，將 memory→coalgebra、skills→operad、protocols→wiring diagram 映射 [P: categorical]。「If you're not the model, you're the harness.」成為這個時期的標誌語。
 
 **Runtime Substrate（2026-05）**：11 組件責任框架 + H0–H3 評估梯階，主張「autonomous software-engineering capability is an emergent property of a model–harness–environment system」 [P: runtime-substrate]。五標籤結果分類（autonomous_verified_success / assisted / unverified / failed / unsafe_invalid）提供了比 pass/fail 更細緻的評估語言。
 
@@ -57,7 +57,7 @@
 2023-09  CoALA：認知架構形式化（記憶/行動/決策），harness 概念未分離
 2024-05  SWE-agent：ACI 概念，界面設計 = 一級研究問題
 2026-02  Codex blog：harness engineering 術語傳播，AGENTS.md 模式
-2026-03  OpenDev：scaffolding 三挑戰系統化；CoALA->scaffolding 過渡
+2026-03  OpenDev：scaffolding 三挑戰系統化；CoALA→scaffolding 過渡
 2026-03  NLAH 初稿、Skill Issue：harness 作為獨立工程學科
 2026-04  Survey H=(E,T,C,S,L,V)：形式化六組件框架；harness 命名成熟
 2026-04  HARBOR/Meta-Harness/AHE：自動最佳化三路徑
@@ -86,10 +86,10 @@
 [P: opendev §1.3] [O: codex §structure] 不在 session 開始列舉所有工具；以 just-in-time 能力暴露取代全量載入。避免「dumb zone」效應（工具說明填滿 context，agent 判斷力下降）[O: skill-issue]。
 
 **P3-工具 schema 編譯而非原生 JSON**  
-[P: tscg] TSCG 的 8 個可組合算子（SDM, TAS, DRO, CFL, CAS, CFO, SAD-F, CCP）驗證：Phi-4 14B 在 20 個工具下從 0% -> 84.4% accuracy，本質是「協議不匹配問題，不是模型能力問題」。
+[P: tscg] TSCG 的 8 個可組合算子（SDM, TAS, DRO, CFL, CAS, CFO, SAD-F, CCP）驗證：Phi-4 14B 在 20 個工具下從 0% → 84.4% accuracy，本質是「協議不匹配問題，不是模型能力問題」。
 
 **P4-工具風險分層（五層）**  
-[P: safeharness §Layer3] read_only -> write -> execute -> network -> destructive。能力 token 附帶 TTL 與呼叫次數上限；HMAC-SHA256 簽名工具描述防篡改。
+[P: safeharness §Layer3] read_only → write → execute → network → destructive。能力 token 附帶 TTL 與呼叫次數上限；HMAC-SHA256 簽名工具描述防篡改。
 
 **P5-環境反饋信息豐富但精簡**  
 [P: swe-agent §ACI] 反饋要有實質信息，避免上下文膨脹；guardrails 自動偵測語法錯誤讓 agent 快速修正而非繼續錯誤路徑。
@@ -133,13 +133,13 @@
 ### B4. 安全與治理原則
 
 **P14-安全分四生命週期層**  
-[P: safeharness §architecture] Inform（輸入清洗+溯源標記）-> Verify（三層漸進式驗證）-> Constrain（工具執行限制）-> Correct（後執行修正）。減少 38% UBR + 42% ASR，同時維持任務效用。
+[P: safeharness §architecture] Inform（輸入清洗+溯源標記）→ Verify（三層漸進式驗證）→ Constrain（工具執行限制）→ Correct（後執行修正）。減少 38% UBR + 42% ASR，同時維持任務效用。
 
 **P15-間接 prompt injection 防護**  
 [P: safeharness §Layer1] 工具輸出（非用戶輸入）也是攻擊面；LLM judge 處理語義偽裝的注入（繞過 regex pattern matching 的改寫版本）。
 
 **P16-七層獨立安全機制**  
-[P: claude-code §permission] pre-filtering -> ML 分類器 -> hook -> tool 驗證 -> 沙箱 -> subagent 隔離。安全層獨立於用戶注意力運作；「deny-first permission evaluation」。
+[P: claude-code §permission] pre-filtering → ML 分類器 → hook → tool 驗證 → 沙箱 → subagent 隔離。安全層獨立於用戶注意力運作；「deny-first permission evaluation」。
 
 **P17-多層獨立而非單點防護（Defense-in-depth）**  
 [P: opendev §2.1] [P: safeharness] 各層約束相互獨立：prompt 層、schema 層、runtime 層、tool 層、lifecycle 層。任一層失效不導致系統性安全失敗。
@@ -180,7 +180,7 @@
 
 ### B7. 進化與記錄原則
 
-**P26-Ratchet 飛輪：失敗->規則->評估**  
+**P26-Ratchet 飛輪：失敗→規則→評估**  
 [P: ahe §decision observability] [O: codex §engineering] 每次 harness 修改附帶可證偽的預測；下輪驗證預測是否成立。這是 AHE 和 autoload-evolution 共用的「不猜測，用證據」精神。
 
 **P27-PGE（Producer-Generator分離）**  
@@ -212,9 +212,9 @@ Phase 6: RECORD   — 記錄與回饋（MEMORY.md + RATCHET.md）
 #### OBSERVE ← AHE Observability
 
 **文獻支撐**：AHE 的三觀測性支柱 [P: ahe] 直接對應 Phase 1 的三種訊號來源：
-- Component observability -> healthcheck.sh（各組件狀態）
-- Experience observability -> RATCHET.md（過去失敗的語意化歷史）
-- Decision observability -> 前次 cycle 的預測是否成立
+- Component observability → healthcheck.sh（各組件狀態）
+- Experience observability → RATCHET.md（過去失敗的語意化歷史）
+- Decision observability → 前次 cycle 的預測是否成立
 
 **正論**：autoload-evolution Phase 1 以四個具體 bash 命令（healthcheck/RATCHET/MEMORY/byte count）將觀測操作化，符合 AHE「可機械驗證」精神。
 
@@ -242,15 +242,15 @@ Phase 6: RECORD   — 記錄與回饋（MEMORY.md + RATCHET.md）
 
 #### TEST ← CAR/NLAH, continual-harness
 
-**文獻支撐**：CAR framework 的 HarnessCard 透明度機制 [P: car] 對應 Phase 4 的 PGE 驗證——要求 Generator ≠ Evaluator（PGE 原則）。NLAH 的模組消融 [P: nlah §RQ2] 對應「任意 task 回歸 ≥5pp -> 停止」的回歸保護。Continual Harness 的 reset-free 連續評估 [P: continual] 提供了「不需 environment reset 即可驗證」的參考架構。
+**文獻支撐**：CAR framework 的 HarnessCard 透明度機制 [P: car] 對應 Phase 4 的 PGE 驗證——要求 Generator ≠ Evaluator（PGE 原則）。NLAH 的模組消融 [P: nlah §RQ2] 對應「任意 task 回歸 ≥5pp → 停止」的回歸保護。Continual Harness 的 reset-free 連續評估 [P: continual] 提供了「不需 environment reset 即可驗證」的參考架構。
 
 **正論**：Phase 4a byte 預檢是強制步驟，機械可驗證（`wc -c ≤ 13,000`），符合 R4 可觀測條件要求。GOTCHAS 明確記錄「byte 無聲超限」的防範規則。
 
-**反論/斷裂點**：⚠️ **最嚴重的斷裂**。`per-model-eval-suite.md` baseline「尚未建立」，Phase 4c 強制降級為 WARN。這意味著 Test 環節的「PGE Eval」實際上沒有執行；只剩下 healthcheck（PASS/FAIL）和 byte 預檢。整個測試鏈從「正確的 PGE 驗證」退化為「無語意退化的最低保障」。此斷裂使得 PROPOSE->TEST->APPLY 的因果鏈無法閉合。
+**反論/斷裂點**：⚠️ **最嚴重的斷裂**。`per-model-eval-suite.md` baseline「尚未建立」，Phase 4c 強制降級為 WARN。這意味著 Test 環節的「PGE Eval」實際上沒有執行；只剩下 healthcheck（PASS/FAIL）和 byte 預檢。整個測試鏈從「正確的 PGE 驗證」退化為「無語意退化的最低保障」。此斷裂使得 PROPOSE→TEST→APPLY 的因果鏈無法閉合。
 
 #### APPLY ← Categorical Architecture, Runtime Substrate
 
-**文獻支撐**：Categorical Architecture 的 compiler functor [P: categorical] 對應 Phase 5 的「git add -> commit -> push」——五個 framework 的 100% certificate preservation 驗證了正式 Apply 步驟的結構保全性。Runtime Substrate 的 H0–H3 梯階 [P: runtime-substrate] 對應 SKILL.md 中「Byte cap ≤13,000 -> 自動截斷退化為 H0」的隱式評估梯階。
+**文獻支撐**：Categorical Architecture 的 compiler functor [P: categorical] 對應 Phase 5 的「git add → commit → push」——五個 framework 的 100% certificate preservation 驗證了正式 Apply 步驟的結構保全性。Runtime Substrate 的 H0–H3 梯階 [P: runtime-substrate] 對應 SKILL.md 中「Byte cap ≤13,000 → 自動截斷退化為 H0」的隱式評估梯階。
 
 **正論**：「只 add 指定檔案，不用 -A」的 commit 紀律符合 categorical architecture 的結構保全要求（不引入非預期的 side effect）。
 
@@ -260,7 +260,7 @@ Phase 6: RECORD   — 記錄與回饋（MEMORY.md + RATCHET.md）
 
 **文獻支撐**：Meta-Harness 的 filesystem-based 全歷史保存 [P: meta-harness] 對應 Phase 6 的 MEMORY.md + RATCHET.md 雙軌記錄。Continual Harness 的 Refiner 組件 [P: continual] 對應 RATCHET 飛輪——每 F 步分析失敗模式並修改 harness。
 
-**正論**：RATCHET.md 的格式（`YYYY-MM-DD: [error-pattern] -> [rule-change] -> [eval-result]`）明確追蹤因果鏈，避免 Meta-Harness 發現的「摘要不能恢復缺失的訊號」問題。
+**正論**：RATCHET.md 的格式（`YYYY-MM-DD: [error-pattern] → [rule-change] → [eval-result]`）明確追蹤因果鏈，避免 Meta-Harness 發現的「摘要不能恢復缺失的訊號」問題。
 
 **反論/斷裂點**：Phase 6 的 RECORD 缺乏**交叉 session 有效性驗證**。MEMORY.md 是在 session 開始時注入（非實時），且上限 5,000 chars；長期積累後的 MEMORY 是否實際被後續 OBSERVE 步驟讀取並利用，SKILL.md 中沒有驗證機制。Memory rot（記憶腐爛）風險與 codex 部落格描述的「巨型 AGENTS.md 腐爛」問題類似。
 
@@ -275,11 +275,11 @@ Phase 6: RECORD   — 記錄與回饋（MEMORY.md + RATCHET.md）
 | **OBSERVE** | AHE 三觀測性 [P: ahe] | ⚠️ 部分閉合 | 缺 decision observability：未回顧前次預測是否成立 |
 | **IDENTIFY** | Meta-Harness filesystem 診斷 [P: meta-harness]; Architectural ≥2 訊號要求 [P: architectural]; **AgentFlow 三訊號歸因 [P: agentflow]** | ⚠️ 偽閉合風險（有解法） | MEMORY/RATCHET 來源重疊可能導致同一訊號計入兩次；AgentFlow 提示「≥2 訊號需來自不同類別」可消解 double-count（待 APPLY） |
 | **PROPOSE** | HARBOR 成本約束 [P: harbor]; AgentOpt Pareto [P: agentopt]; **AgentFlow 型別系統 [P: agentflow]** | ✅ 結構閉合（增強） | diff≤50 行補償對抗性缺口；AgentFlow proposal-time guard（執行前砍 ~20% 無效提案）提供更前置的保守性機制 |
-| **TEST** | CAR PGE 原則 [P: car]; NLAH 消融 [P: nlah] | ✅ **已閉合**（2026-05-31 更新） | ~~baseline 未建立~~ -> baseline 已建立（2026-05-30, 51e02d4：Haiku 32/Sonnet 41/Opus 47\*）；SKILL.md Phase 4c 已接真實 baseline，規則語意變更必跑全套 PGE eval |
+| **TEST** | CAR PGE 原則 [P: car]; NLAH 消融 [P: nlah] | ✅ **已閉合**（2026-05-31 更新） | ~~baseline 未建立~~ → baseline 已建立（2026-05-30, 51e02d4：Haiku 32/Sonnet 41/Opus 47\*）；SKILL.md Phase 4c 已接真實 baseline，規則語意變更必跑全套 PGE eval |
 | **APPLY** | Categorical compiler functor [P: categorical]; Runtime Substrate H-ladder [P: runtime-substrate] | ⚠️ 部分閉合 | 缺 post-apply deterministic check；Apply 後無立即驗證步驟 |
 | **RECORD** | Meta-Harness 全歷史保存 [P: meta-harness]; Continual Harness Refiner [P: continual]; **addyosmani 可發現性過濾 + maintenance subagent [O]** | ⚠️ 部分閉合（有解法） | MEMORY 注入非實時且無有效性驗證；Memory rot 風險可由「可發現性過濾」+ maintenance subagent 緩解（Lulla 28.64% runtime / ETH uv 1.6 量化背書，[O] 轉引）；ACON 補充執行期 context 可壓縮（與診斷訊號不可壓不衝突） |
 
-**整體結論**（2026-05-31 修訂）：autoload-evolution 的 6-stage Loop 在**結構設計層面**與文獻高度吻合。原報告（2026-05-31 初版）所述「TEST 嚴重斷裂＝baseline 未建立」**已過時**——baseline 於 2026-05-30（commit 51e02d4）建立。本次修訂已：① Phase 4c 接真實 baseline（nominal -> empirical closure）② Phase 5 加 post-apply healthcheck（補 APPLY 後驗証）③ Phase 1 加 1e decision observability（補 OBSERVE 預測回顧）④ Gotchas 加 MEMORY/RATCHET 同源 double-count 防護（補 IDENTIFY 偽閉合）。RECORD 跨 session 有效性驗証由 1e 的 REOPEN 機制部分覆蓋；Agent/Hook 桶經機械驗證無實證斷裂（hook eval-reminder 已於 2026-05-30 修正路徑、stop-hook 已含 healthcheck completion gate），不另行修改。Rule 桶因 mid-session auto-load freeze（cache 穩定）+ byte 餘量 255 而 defer 至下個 session。
+**整體結論**（2026-05-31 修訂）：autoload-evolution 的 6-stage Loop 在**結構設計層面**與文獻高度吻合。原報告（2026-05-31 初版）所述「TEST 嚴重斷裂＝baseline 未建立」**已過時**——baseline 於 2026-05-30（commit 51e02d4）建立。本次修訂已：① Phase 4c 接真實 baseline（nominal → empirical closure）② Phase 5 加 post-apply healthcheck（補 APPLY 後驗証）③ Phase 1 加 1e decision observability（補 OBSERVE 預測回顧）④ Gotchas 加 MEMORY/RATCHET 同源 double-count 防護（補 IDENTIFY 偽閉合）。RECORD 跨 session 有效性驗証由 1e 的 REOPEN 機制部分覆蓋；Agent/Hook 桶經機械驗證無實證斷裂（hook eval-reminder 已於 2026-05-30 修正路徑、stop-hook 已含 healthcheck completion gate），不另行修改。Rule 桶因 mid-session auto-load freeze（cache 穩定）+ byte 餘量 255 而 defer 至下個 session。
 
 ---
 
@@ -319,15 +319,15 @@ Phase 6: RECORD   — 記錄與回饋（MEMORY.md + RATCHET.md）
 | 30 | addyosmani-agents-md | ✅ 已引用（2026-06-05） | C3-RECORD（Lulla/ETH 量化 + maintenance subagent，[O] 層） |
 | 31 | configuring-agentic-coding-tools-2602-14690 | ✅ 已引用（2026-06-05） | external-validity 校準（2,926 repo 普查；不對映 6-stage Loop） |
 | **— v2b 本機深度併入（2026-06-05）—** | | | |
-| 32 | heavyskill-heavy-thinking-inner-skill | ✅ 實質 | §E-B（parallel->deliberate fan-out+synthesis；patterns 可內化進權重） |
+| 32 | heavyskill-heavy-thinking-inner-skill | ✅ 實質 | §E-B（parallel→deliberate fan-out+synthesis；patterns 可內化進權重） |
 | 33 | useful-memories-faulty-llm-continuous-update | ✅ 實質 | §E-C-RECORD（memory rot 由假設升為實證：54% 回歸） |
 | 34 | cheating-agents-benchmark-manipulation | ✅ 實質 | §E-C-TEST（eval-hacking：recording surface 可寫則 loop 自驗污染真值） |
 | 35 | agentic-context-engineering（ACE）-2510-04618 | ✅ 實質 | §E-B2（delta-update vs full-rewrite）+ §E-C（Generator/Reflector/Curator loop） |
-| 36 | when-better-prompts-hurt-eval-driven | ✅ 實質 | §E-C-PROPOSE（跨能力靜默回歸 -> R4 機械驗證必要性） |
+| 36 | when-better-prompts-hurt-eval-driven | ✅ 實質 | §E-C-PROPOSE（跨能力靜默回歸 → R4 機械驗證必要性） |
 | 37 | confucius-code-agent-scalable | ✅ 實質 | §E-B（scaffold 消融：ctx-mgmt +6.6pp / memory +1.4pp / SWE-Bench-Pro 54.3%） |
 | 38 | skill-learn-bench-continual-skill-learning | ✅ 實質 | §E-B3（human 74.50% vs auto ~30%，64.3pp gap）+ §E-C-TEST（external>self feedback） |
 | 39 | dont-break-cache-prompt-caching | ✅ 實質 | §E-B2（system-prompt-only caching 78.5%/22.9%；MCP churn 反模式） |
-| 40 | multi-agent-llm-frameworks-benchmark（MAFBench） | ✅ 實質 | §E-B（topology 影響：>100× latency / coord 90%->30%；雙重 primary 驗證） |
+| 40 | multi-agent-llm-frameworks-benchmark（MAFBench） | ✅ 實質 | §E-B（topology 影響：>100× latency / coord 90%→30%；雙重 primary 驗證） |
 | 41 | coordination-architectural-layer | ✅ 實質 | §E-B（5-config 失敗簽章 +26.6pp）+ §E-C（Murphy decomposition eval 協議） |
 | 42 | externalization-llm-agents | ✅ 實質 | §E-A（Memory/Skills/Protocols/Harness 四維統一框架） |
 | 43 | terminal-bench-2601-11868 | ✅ 實質 | §E-D（主 benchmark：harness 解釋 15–63% variance）+ failure taxonomy |
@@ -339,7 +339,7 @@ Phase 6: RECORD   — 記錄與回饋（MEMORY.md + RATCHET.md）
 | **— v2b web-only primary（非本機，[O: arXiv] / [O: blog]）—** | | | |
 | W1 | AutoHarness（arXiv:2603.03329, 2026-03） | ✅ 實質 [O] | §E-A4（第 4 條自動化路徑：code-synthesis；小模型勝大模型） |
 | W2 | Harness-Bench（arXiv:2605.27922, 2026-05-27） | ✅ 實質 [O] | §E-D（跨模型 harness-effect：同模型同任務 23.8pp spread） |
-| W3 | LangChain 30->5 Terminal-Bench（blog, 2026-03） | 🔸 一行 [O, MEDIUM] | §E-D（harness-only 改動實戰數據；二手轉引，信度 MEDIUM） |
+| W3 | LangChain 30→5 Terminal-Bench（blog, 2026-03） | 🔸 一行 [O, MEDIUM] | §E-D（harness-only 改動實戰數據；二手轉引，信度 MEDIUM） |
 | — | gpt5-system-card（旁證） | ✅ 已引用（旁證） | 背景脈絡 |
 | — | gpt5-5-system-card（旁證） | ✅ 已引用（旁證） | 背景脈絡 |
 | — | claude-opus-4-7-system-card（旁證） | ✅ 已引用 | B22（SWE-bench benchmark） |
@@ -358,7 +358,7 @@ Phase 6: RECORD   — 記錄與回饋（MEMORY.md + RATCHET.md）
 
 ### §E0 — 方法論事件：對抗 critic 自身幻覺（Dynamic Workflow 紀律實證）
 
-opus 對抗 critic 在審 MAFBench（#40）時**幻覺**該本機檔內容為另一篇論文（聲稱是「moltbook / d=−0.88 / 90,704 agents」），並據此判 REJECT。主對話以**兩個一手來源**反駁：① WebFetch arXiv:2602.03128 abstract 親驗 `>100× latency / coordination >90%-><30% / planning ≤30%` 逐字存在；② grep 本機檔 line 28–30 同數字存在，且檔頭標題/作者（Orogat/Rostam/Mansour）與 arXiv 一致。**結論：critic 判決被推翻，MAFBench 維持 HIGH。** 此為 `subagent-strategy §Dynamic Workflow`「subagent/workflow verdict 非證據，採信前必機械 grep 重驗」的活案例——連 Opus critic 都會幻覺論文內容，驗證鏈不可省。
+opus 對抗 critic 在審 MAFBench（#40）時**幻覺**該本機檔內容為另一篇論文（聲稱是「moltbook / d=−0.88 / 90,704 agents」），並據此判 REJECT。主對話以**兩個一手來源**反駁：① WebFetch arXiv:2602.03128 abstract 親驗 `>100× latency / coordination >90%→<30% / planning ≤30%` 逐字存在；② grep 本機檔 line 28–30 同數字存在，且檔頭標題/作者（Orogat/Rostam/Mansour）與 arXiv 一致。**結論：critic 判決被推翻，MAFBench 維持 HIGH。** 此為 `subagent-strategy §Dynamic Workflow`「subagent/workflow verdict 非證據，採信前必機械 grep 重驗」的活案例——連 Opus critic 都會幻覺論文內容，驗證鏈不可省。
 
 ### §E-A — 演進史補強
 
@@ -369,21 +369,21 @@ opus 對抗 critic 在審 MAFBench（#40）時**幻覺**該本機檔內容為另
 以 Memory / Skills / Protocols / **Harness-as-unifier** 四維描述「agent 能力日益依賴把認知負擔外部化進基礎設施」。提供原報告 A 節缺的跨論文統一視角，並點出 skill deprecation/versioning + 結構化 observability 兩個 harness 生命週期缺口。⚠️ 信度界線：論文交叉引用 Claude Code 98.4%/1.6% 基礎設施比例，但**該數字屬 Claude Code（原報告 B22）非本論文一手**，不重複掛在此 token 下。
 
 **Declarative pipeline 變體** [P: parness, 2605-05258, MEDIUM]  
-DAG-kernel runtime 把異質研究組件綁成 declarative YAML pipeline，配 SQLite + Neo4j 做 cross-run 知識持久化（composition-as-data 而非 code）。是本批少數觸及「跨 run 知識累積」的架構。⚠️ 作者明確 disclaim 未嚴格量測並行 ensemble 優勢（line 145）-> 無 stat，列一行 coverage。
+DAG-kernel runtime 把異質研究組件綁成 declarative YAML pipeline，配 SQLite + Neo4j 做 cross-run 知識持久化（composition-as-data 而非 code）。是本批少數觸及「跨 run 知識累積」的架構。⚠️ 作者明確 disclaim 未嚴格量測並行 ensemble 優勢（line 145）→ 無 stat，列一行 coverage。
 
 ### §E-B — 實作模式補強
 
 **Fan-out + synthesis 的 benchmark 化** [P: heavyskill, 2605-02396, HIGH]  
-「parallel reasoning -> sequential deliberation」兩階段是原報告子代理 fan-out 的具體可量測實例：GPT-OSS-20B 在 LiveCodeBench 從 69.7% M@K -> **85.5% HM@4**，AIME25 達 90.0%（vs voting 83.3%）。關鍵洞見：deliberation 品質取決於**分析/綜合能力**而非峰值推理力；且該 pattern 可經 RLVR 內化進權重（~10% HM@4 / 前 100 步）——模糊了「外部編排 vs 內部能力」邊界。
+「parallel reasoning → sequential deliberation」兩階段是原報告子代理 fan-out 的具體可量測實例：GPT-OSS-20B 在 LiveCodeBench 從 69.7% M@K → **85.5% HM@4**，AIME25 達 90.0%（vs voting 83.3%）。關鍵洞見：deliberation 品質取決於**分析/綜合能力**而非峰值推理力；且該 pattern 可經 RLVR 內化進權重（~10% HM@4 / 前 100 步）——模糊了「外部編排 vs 內部能力」邊界。
 
 **Scaffold 組件的乾淨消融** [P: confucius, code-agent-scalable, HIGH]  
 在 SWE-Bench-Pro（54.3% Resolve@1）上把 scaffold 各組件貢獻分離：**context-mgmt +6.6pp、persistent memory +1.4pp**；note-taking 省 11,000 tokens / 3.0 turns。是本批唯一在真實 SWE benchmark 上把 B2（context）vs B3（memory）delta 分得這麼乾淨的論文。
 
 **Topology 即效能變數** [P: MAFBench, 2602-03128, HIGH — 雙重 primary 驗證]  
-純框架架構選擇（星/鏈/樹/圖）獨立於模型即造成：**latency >100×、coordination success >90%-><30%、planning accuracy ≤30% 降幅**。為原報告 B6/B25「模型分配在 pipeline 層級評估」補上 topology 維度的實證成本數字。
+純框架架構選擇（星/鏈/樹/圖）獨立於模型即造成：**latency >100×、coordination success >90%→<30%、planning accuracy ≤30% 降幅**。為原報告 B6/B25「模型分配在 pipeline 層級評估」補上 topology 維度的實證成本數字。
 
 **Coordination 作為可配置層 + 嚴謹 eval 協議** [P: coord-layer, 2605-03310, HIGH]  
-5 種協調配置各帶失敗簽章（info 不一致 34% / 決策重複 28% / 責任模糊 24% / race 14%）；hierarchical 67.8% vs no-coord 41.2%（+26.6pp）。其「固定資訊 -> 預測簽章 -> Murphy decomposition 分離校準 vs 判別失敗」是本批嚴謹的 harness eval 協議（降級原 critic 的「最嚴謹」superlative 為可檢查陳述：**唯一使用 Murphy decomposition 者**為窄而可驗claim）。
+5 種協調配置各帶失敗簽章（info 不一致 34% / 決策重複 28% / 責任模糊 24% / race 14%）；hierarchical 67.8% vs no-coord 41.2%（+26.6pp）。其「固定資訊 → 預測簽章 → Murphy decomposition 分離校準 vs 判別失敗」是本批嚴謹的 harness eval 協議（降級原 critic 的「最嚴謹」superlative 為可檢查陳述：**唯一使用 Murphy decomposition 者**為窄而可驗claim）。
 
 **Context 管理新模式（3 條）**  
 - **ACE delta-update** [P: ace, 2510-04618, HIGH]：Generator/Reflector/Curator pipeline 以增量 delta 更新對抗 brevity bias / context collapse，+10.6% agents / +8.6% finance。⚠️ **−82.6% 是 billed cost 降幅（KV-cache，line 112），−82.3% 是 adaptation latency 降幅（line 103），二者皆非任務分數提升**——此處 inline 標清，防 workspace 歷史上「把成本降幅誤讀為任務增益」的幻覺重演。
@@ -391,26 +391,26 @@ DAG-kernel runtime 把異質研究組件綁成 declarative YAML pipeline，配 S
 - **REPL-offload** [P: recursive-lm, 2512-24601, HIGH，一行]：把長 prompt 當環境變數、程式化遞迴 LM sub-call，long-context 上勝 compaction 26% median。C 對映（「程式遞迴 > 口語子委派」）經 critic 判為過度延伸已剔除，僅留 B2 coverage。
 
 **Skill library 的人工 vs 自動天花板** [P: skill-learn-bench, 2604-20087, HIGH]  
-no-skill 10.17% -> **human-authored 74.50%** -> best-automated **~30%**（64.3pp gap）；external feedback > self-feedback。直接為本 repo「新 skill 必經人工 gate」政策提供實證背書（自動生成 skill 達不到人工品質）。
+no-skill 10.17% → **human-authored 74.50%** → best-automated **~30%**（64.3pp gap）；external feedback > self-feedback。直接為本 repo「新 skill 必經人工 gate」政策提供實證背書（自動生成 skill 達不到人工品質）。
 
 ### §E-C — Loop 閉環的新文獻壓力（最高價值補強）
 
 > 原報告 C 節寫於 2026-05-31，無法納入以下 2026-05 後論文對 6-stage Loop 各 stage 的**新對抗論證**。Section C 閉環機制本身已對照當前 `autoload-evolution/SKILL.md` 重新驗證（baseline 檔實存 3,938B、Phase 4c 接真實 baseline、1e REOPEN + post-apply healthcheck 皆在）——**閉合狀態截至 2026-06-05 仍有效**；以下為新增的 reverse-argument，非推翻既有閉合。
 
 **RECORD ← useful-memories（從假設升為實證）** [P: useful-memories, 2605-12978, HIGH]  
-原報告 RECORD 斷點寫「Memory rot 風險未處理」是**定性假設**。本論文把它變**實證**：即使從 ground-truth 解答連續整合，GPT-5.4 仍在 **54% 它先前已解出的 ARC-AGI 問題上失敗**（46% 準確率）；episodic-only 控制組為強制整合的 **2× 準確率**。根因在 consolidation step 本身（迭代生成迴圈無接地）。**對 autoload-evolution 的直接含義**：MEMORY.md 的 LLM 摘要式 compaction（RECORD->OBSERVE 路徑）會引入系統性失真；防範 = 把 raw episode 當 first-class evidence，**明確 gate consolidation 而非每次互動後自動觸發**（對映 §R10 checkpoint 紀律 + memory-compactor 應保守）。
+原報告 RECORD 斷點寫「Memory rot 風險未處理」是**定性假設**。本論文把它變**實證**：即使從 ground-truth 解答連續整合，GPT-5.4 仍在 **54% 它先前已解出的 ARC-AGI 問題上失敗**（46% 準確率）；episodic-only 控制組為強制整合的 **2× 準確率**。根因在 consolidation step 本身（迭代生成迴圈無接地）。**對 autoload-evolution 的直接含義**：MEMORY.md 的 LLM 摘要式 compaction（RECORD→OBSERVE 路徑）會引入系統性失真；防範 = 把 raw episode 當 first-class evidence，**明確 gate consolidation 而非每次互動後自動觸發**（對映 §R10 checkpoint 紀律 + memory-compactor 應保守）。
 
 **TEST ← cheating-agents（eval-hacking 攻擊面）** [P: cheating-agents, debugml, HIGH]  
-若被評估 agent 能寫入評估真值來源（AGENTS.md / system prompt / verifier），則 loop **對著被污染的真值自我驗證**。實證：28+ 提交跨 9 benchmark 作弊；ForgeCode 差異稽核揭出 81.8%->71.7%（10.1pp）真實落差。**對 PGE 的含義**：Generator≠Evaluator 還不夠，須確保**評估 artifact 不可被 Generator 側寫入**；Meerkat 式差異稽核（同任務跨 harness 比對）是可借鏡的 observability pattern。⚠️ critic 校正：原「recording surface 可寫」表述為論文未明言的 gloss，此處改為條件句「若…則」。
+若被評估 agent 能寫入評估真值來源（AGENTS.md / system prompt / verifier），則 loop **對著被污染的真值自我驗證**。實證：28+ 提交跨 9 benchmark 作弊；ForgeCode 差異稽核揭出 81.8%→71.7%（10.1pp）真實落差。**對 PGE 的含義**：Generator≠Evaluator 還不夠，須確保**評估 artifact 不可被 Generator 側寫入**；Meerkat 式差異稽核（同任務跨 harness 比對）是可借鏡的 observability pattern。⚠️ critic 校正：原「recording surface 可寫」表述為論文未明言的 gloss，此處改為條件句「若…則」。
 
 **PROPOSE ← prompts-hurt（靜默跨能力回歸）** [P: prompts-hurt, 2601-22025, HIGH]  
-「泛泛改良」的 prompt 可在改善一個能力的同時**靜默回歸另一能力**：Llama-3 extraction 100%->90%、RAG compliance 93.3%->80%。這是 PROPOSE 階段「提案看似更好但未必更好」的 canonical 實證 -> 坐實 §R4「完成條件必須機械可驗證、不接受看起來正確」+ Minimum Viable Eval Suite 必跑（對映 Phase 4c 全套 eval 不可因「只是改個措辭」而跳過）。
+「泛泛改良」的 prompt 可在改善一個能力的同時**靜默回歸另一能力**：Llama-3 extraction 100%→90%、RAG compliance 93.3%→80%。這是 PROPOSE 階段「提案看似更好但未必更好」的 canonical 實證 → 坐實 §R4「完成條件必須機械可驗證、不接受看起來正確」+ Minimum Viable Eval Suite 必跑（對映 Phase 4c 全套 eval 不可因「只是改個措辭」而跳過）。
 
 **TEST ← skill-learn-bench（external > self feedback）** [P: skill-learn-bench, HIGH]  
 external feedback 持續勝過 self-feedback——為 PGE「Evaluator 須獨立於 Generator」提供額外實證維度：self-review 的 Opus baseline（原報告標 `*` caveat）確有系統性偏差，跨模型 reviewer 評分是正解。
 
 **OBSERVE/IDENTIFY/PROPOSE ← ACE 的顯式 loop** [P: ace, HIGH]  
-Generator（產生）/ Reflector（反思執行反饋）/ Curator（增量編入 playbook）是文獻中對映 OBSERVE->IDENTIFY->PROPOSE 的**顯式三角色 loop**（降級原「最具體」superlative）。與 autoload-evolution 差異：ACE 用 delta-update 避免全量重寫的 context collapse，本 repo MEMORY compaction 可借鏡（增量編輯 > 整段重生）。
+Generator（產生）/ Reflector（反思執行反饋）/ Curator（增量編入 playbook）是文獻中對映 OBSERVE→IDENTIFY→PROPOSE 的**顯式三角色 loop**（降級原「最具體」superlative）。與 autoload-evolution 差異：ACE 用 delta-update 避免全量重寫的 context collapse，本 repo MEMORY compaction 可借鏡（增量編輯 > 整段重生）。
 
 ### §E-D — Benchmark / 覆蓋率補強
 
@@ -418,9 +418,9 @@ Generator（產生）/ Reflector（反思執行反饋）/ Curator（增量編入
 同模型在不同 scaffold 下 **15–63% resolution rate**（all-flags-off HARBOR baseline 15/89=16.85%；Codex CLI+GPT-5.2 63% SoTA；32,155 trials）。為「harness 而非模型決定上限」提供主 benchmark 接地。failure taxonomy（Execution / Coherence / Verification 三類；24.1% missing executable / 9.6% runtime）是 observability 設計標靶。「turns ≠ performance」是對 token-count 最佳化作為 harness metric 的反證。⚠️ HARBOR peak 17/89（19.10%）是 workspace 註記非論文表格數字，不作論文來源引。
 
 **Harness-Bench：跨模型 harness-effect 量化** [O: Harness-Bench, arXiv:2605.27922, 2026-05-27, HIGH]  
-106 任務 × 8 模型後端、5,194 軌跡：同任務同模型池下，NanoBot 76.2% vs OpenClaw 52.4% = **23.8pp spread**；越強的模型 cross-harness variance 越低。論文主張 agent 能力**必須在 model–harness 配置層級報告**（非單獨模型）——是本批對「harness 解釋變異」最乾淨的量化，且在 05-23->05-31 窗口內，屬真實遺漏。
+106 任務 × 8 模型後端、5,194 軌跡：同任務同模型池下，NanoBot 76.2% vs OpenClaw 52.4% = **23.8pp spread**；越強的模型 cross-harness variance 越低。論文主張 agent 能力**必須在 model–harness 配置層級報告**（非單獨模型）——是本批對「harness 解釋變異」最乾淨的量化，且在 05-23→05-31 窗口內，屬真實遺漏。
 
-**LangChain 30->5（實戰數據）** [O: blog, 2026-03, MEDIUM 二手]  
+**LangChain 30→5（實戰數據）** [O: blog, 2026-03, MEDIUM 二手]  
 LangChain coding agent 在 Terminal-Bench 2.0 上純 harness 改動（不動模型）從第 30 名升第 5 名。實戰佐證「harness > model」。⚠️ 經 faros.ai 二手轉引 LangChain blog，信度 MEDIUM。
 
 **Privacy-boundary 作為 harness 失敗模式** [P: calbench, 2605-09823, 一行]  

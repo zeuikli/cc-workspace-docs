@@ -82,7 +82,7 @@ Three components of the ArchAgents categorical triple:
 Single-stage code review task:
 - **Fast tier**: Phi-3 Mini (3.8B)
 - **Deep tier**: Gemma 4 (27B MoE)
-- **Result**: Quality-based escalation fires correctly when fast model scores below 0.60 threshold -> triggers deep-model re-execution
+- **Result**: Quality-based escalation fires correctly when fast model scores below 0.60 threshold → triggers deep-model re-execution
 
 **Demonstrates**: Control path is model-parametric (harness-level, not model-specific).
 

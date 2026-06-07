@@ -88,7 +88,7 @@ Life-Harness operates through four layers at different interaction stages:
 |--------|-------|
 | Settings improved | 116 out of 126 (model × environment) |
 | Average relative improvement | **88.5%** |
-| Transfer: Qwen3-4B-Instruct -> 17 other models | Successful |
+| Transfer: Qwen3-4B-Instruct → 17 other models | Successful |
 | Complementarity with specialized tool-use models | Further improved |
 
 ### Transfer Analysis

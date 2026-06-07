@@ -44,8 +44,8 @@ First, you'll need to install it using pip. Then you can use the code below...
 | **低自由度** | 操作脆弱、順序關鍵 | 精確腳本，禁止修改命令 |
 
 比喻：
-- **窄橋兩側有懸崖**（如 DB 遷移）-> 低自由度，精確步驟
-- **開闊平原無障礙**（如 code review）-> 高自由度，給方向即可
+- **窄橋兩側有懸崖**（如 DB 遷移）→ 低自由度，精確步驟
+- **開闊平原無障礙**（如 code review）→ 高自由度，給方向即可
 
 ### 跨模型測試
 
@@ -118,8 +118,8 @@ pdf/
 **Pattern 2：領域分組**（各領域獨立資料夾，避免載入不相關 context）
 ```markdown
 ## Available datasets
-**Finance**: -> See [reference/finance.md](reference/finance.md)
-**Sales**: -> See [reference/sales.md](reference/sales.md)
+**Finance**: → See [reference/finance.md](reference/finance.md)
+**Sales**: → See [reference/sales.md](reference/sales.md)
 ```
 
 **Pattern 3：條件展開**（基本內容內嵌，進階功能連結）
@@ -130,11 +130,11 @@ Claude 遇到多層 reference 可能只讀部分，用 `head -100` 預覽而非�
 
 ```
 # 差（太深）
-SKILL.md -> advanced.md -> details.md -> 實際資訊
+SKILL.md → advanced.md → details.md → 實際資訊
 
 # 好（一層）
-SKILL.md -> advanced.md（直接有資訊）
-SKILL.md -> reference.md（直接有資訊）
+SKILL.md → advanced.md（直接有資訊）
+SKILL.md → reference.md（直接有資訊）
 ```
 
 ### 長 Reference 檔案加 TOC
@@ -165,13 +165,13 @@ Task Progress:
 
 ### 實作回饋迴圈
 
-常見模式：執行 -> 驗證 -> 修錯 -> 重複
+常見模式：執行 → 驗證 → 修錯 → 重複
 
 ```markdown
 ## 文件編輯流程
 1. 修改 `word/document.xml`
 2. **立即驗證**：`python ooxml/scripts/validate.py unpacked_dir/`
-3. 驗證失敗 -> 修錯 -> 再次驗證
+3. 驗證失敗 → 修錯 → 再次驗證
 4. **只有通過驗證才繼續**
 5. 打包：`python ooxml/scripts/pack.py unpacked_dir/ output.docx`
 ```
@@ -239,8 +239,8 @@ Follow this style: type(scope): brief description, then detailed explanation.
 
 ```markdown
 1. 判斷類型：
-   **新建內容？** -> 走「Creation workflow」
-   **編輯現有？** -> 走「Editing workflow」
+   **新建內容？** → 走「Creation workflow」
+   **編輯現有？** → 走「Editing workflow」
 ```
 
 ---
@@ -286,10 +286,10 @@ Follow this style: type(scope): brief description, then detailed explanation.
 ### 觀察 Claude 如何導航 Skill
 
 注意：
-- 意外的探索路徑 -> 結構可能不直覺
-- 遺漏的 reference 連結 -> 連結不夠明顯
-- 重複讀某個檔案 -> 考慮移入主 SKILL.md
-- 從未被讀取的檔案 -> 可能不必要
+- 意外的探索路徑 → 結構可能不直覺
+- 遺漏的 reference 連結 → 連結不夠明顯
+- 重複讀某個檔案 → 考慮移入主 SKILL.md
+- 從未被讀取的檔案 → 可能不必要
 
 ---
 
@@ -349,7 +349,7 @@ TIMEOUT = 47  # Why 47?
 
 批量/高風險操作：
 
-1. Claude 分析任務 -> 建立 `changes.json` 計畫檔
+1. Claude 分析任務 → 建立 `changes.json` 計畫檔
 2. 驗證腳本驗證計畫（無副作用）
 3. 計畫通過才執行
 

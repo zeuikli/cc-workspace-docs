@@ -53,7 +53,7 @@ Three paradigms:
 A memory mechanism that keeps a **compact, dynamically updated** online state alongside a **frozen full-attention backbone**:
 - Compresses past info into an **Online State of Associative Memory (OSAM)** — a fixed-size matrix
 - State continuously updated via **delta-rule learning** as new tokens arrive
-- During generation: current input queries state -> extracts associative signals -> transformed into **low-rank corrections** to backbone attention
+- During generation: current input queries state → extracts associative signals → transformed into **low-rank corrections** to backbone attention
 - State further updated after each interaction, enabling δ-mem to evolve over time
 
 ---
@@ -327,6 +327,6 @@ Results suggest compact online states can serve as a scalable and efficient inte
 | Average score vs strongest non-δ-mem baseline | 1.15× |
 | MemoryAgentBench improvement | 1.31× |
 | LoCoMo improvement | 1.20× |
-| TTL subtask (MemoryAgentBench) | nearly 2× (35.30% -> 50.50%) |
-| Best backbone (SmolLM3-3B) gain | 26.08% -> 36.96% (+10.88pp) |
-| Context recovery HotpotQA EM | 0.08% -> 6.48% (no explicit context) |
+| TTL subtask (MemoryAgentBench) | nearly 2× (35.30% → 50.50%) |
+| Best backbone (SmolLM3-3B) gain | 26.08% → 36.96% (+10.88pp) |
+| Context recovery HotpotQA EM | 0.08% → 6.48% (no explicit context) |

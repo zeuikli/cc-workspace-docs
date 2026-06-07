@@ -213,8 +213,8 @@ The Prompting Inversion is real, replicable, and substantial.
 | Sculpting Δ vs. Zero Shot | +7.0% | +9.0% | 0.0% |
 
 Patterns:
-1. **Absolute capability growth**: Zero Shot 86% -> 88% -> 97%
-2. **Scaffolding stability**: consistent relative benefit (+5% -> +5% -> +2%)
+1. **Absolute capability growth**: Zero Shot 86% → 88% → 97%
+2. **Scaffolding stability**: consistent relative benefit (+5% → +5% → +2%)
 3. **Sculpting non-monotonicity**: inverted-U pattern, peaks at gpt-4o (+9%), collapses to 0% on gpt-5
 4. **Crossover point**: somewhere between gpt-4o and gpt-5, a capability threshold shifts Sculpting from beneficial to neutral/harmful
 

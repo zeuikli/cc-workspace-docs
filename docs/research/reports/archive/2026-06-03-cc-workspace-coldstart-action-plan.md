@@ -54,7 +54,7 @@
 block-dangerous.sh（17,292 bytes bash）53ms/call：dispatcher 模式或精簡 regex 路徑，目標降至 <20ms，保留全部阻擋規則。
 
 ### 2.4 P1 — cache pre-warm 習慣
-長閒置（>5min TTL）後 resume -> 接受 cache miss 或考慮 1hr TTL；CLAUDE.md 靜態前綴維持不動（已遵守 context-management.md）。
+長閒置（>5min TTL）後 resume → 接受 cache miss 或考慮 1hr TTL；CLAUDE.md 靜態前綴維持不動（已遵守 context-management.md）。
 
 ### 2.5 P2 — auto-load 微調（非首要，可選）
 16,927 bytes 在軟性區間內。若要回收餘裕，依 5/25 playbook 只壓 TYPE B/C/D，保留 R1–R12 行為。**非本計劃重點**（前作已最佳化至接近極限）。
@@ -100,8 +100,8 @@ bash scripts/healthcheck.sh >/dev/null 2>&1; echo "healthcheck exit=$?"  # FAIL>
 ## 4. 回滾計劃
 
 - 所有改動限 `.claude/settings.json` + `.claude/hooks/*.sh`，git 追蹤
-- 改前 `git stash` / 分支隔離；任一安全 invariant REFUTED -> `git revert`
-- healthcheck eval 回歸 ≥5pp（FAIL 數增）-> 立即回滾（依 core.md §Framework Integrity）
+- 改前 `git stash` / 分支隔離；任一安全 invariant REFUTED → `git revert`
+- healthcheck eval 回歸 ≥5pp（FAIL 數增）→ 立即回滾（依 core.md §Framework Integrity）
 
 ---
 

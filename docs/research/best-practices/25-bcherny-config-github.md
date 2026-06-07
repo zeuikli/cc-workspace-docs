@@ -32,7 +32,7 @@ Boris 的 CLAUDE.md 有一個核心規則：
 
 ```
 1. Development Workflow（驗證循環）
-   make changes -> typecheck -> test -> lint -> full suite -> PR
+   make changes → typecheck → test → lint → full suite → PR
 
 2. Code Style Guidelines
    - type 優先於 interface
@@ -68,7 +68,7 @@ Boris 的 CLAUDE.md 有一個核心規則：
 
 | 命令 | 功能 |
 |------|------|
-| `/commit-push-pr` | 完整 git 工作流自動化（add -> commit -> push -> PR） |
+| `/commit-push-pr` | 完整 git 工作流自動化（add → commit → push → PR） |
 | `/quick-commit` | 快速暫存並 commit（跳過 PR 流程） |
 | `/test-and-fix` | 執行測試，自動修復失敗測試 |
 | `/review-changes` | 分析變更，提出程式碼改善建議 |
@@ -79,7 +79,7 @@ Boris 的 CLAUDE.md 有一個核心規則：
 ### 使用模式
 
 ```
-開發流程：/worktree -> 平行 session -> /test-and-fix -> /review-changes -> /grill -> /commit-push-pr
+開發流程：/worktree → 平行 session → /test-and-fix → /review-changes → /grill → /commit-push-pr
 技術債清理：/techdebt + /grill 組合
 快速修補：/quick-commit（skip PR 流程）
 ```
@@ -107,11 +107,11 @@ Boris 的 CLAUDE.md 有一個核心規則：
 ### Boris 典型工作流
 
 ```
-實作 -> code-architect（設計評估）
-    -> verify-app + build-validator（驗證部署）
-    -> code-simplifier（精煉）
-    -> staff-reviewer（最終 review）
-    -> /commit-push-pr
+實作 → code-architect（設計評估）
+    → verify-app + build-validator（驗證部署）
+    → code-simplifier（精煉）
+    → staff-reviewer（最終 review）
+    → /commit-push-pr
 ```
 
 ---
@@ -142,7 +142,7 @@ Boris 的 CLAUDE.md 有一個核心規則：
 **核心設計決策：**
 - `npm`、`git`、`gh` 全部預授權（消除頻繁 permission prompt）
 - PostToolUse 自動格式化（每次 Edit/Write 後觸發），確保 style 一致性
-- 未設定更複雜的 PreToolUse 防守規則 -> 符合「surprisingly vanilla」哲學
+- 未設定更複雜的 PreToolUse 防守規則 → 符合「surprisingly vanilla」哲學
 
 ---
 
@@ -196,14 +196,14 @@ Boris 反覆強調的高槓桿投資（來自 2026-02-01 團隊 tips thread）�
 
 ```
 高優先（立即可用）：
-- PostToolUse 自動格式化 hook -> 加入 settings.json
+- PostToolUse 自動格式化 hook → 加入 settings.json
 - CLAUDE.md 自更新語言（「After corrections, update CLAUDE.md」）
 - /grill（adversarial review）作為 deep-review 的補充
 
 中優先（需要 Skill 設計）：
-- /babysit -> 參考 Boris 的 PR shepherd 語意設計
-- /techdebt -> dead code 清理 Skill
-- oncall-guide agent -> 生產事故診斷 Sub Agent
+- /babysit → 參考 Boris 的 PR shepherd 語意設計
+- /techdebt → dead code 清理 Skill
+- oncall-guide agent → 生產事故診斷 Sub Agent
 
 參考（理解 Boris 設計哲學）：
 - staff-reviewer：「staff engineer 懷疑態度」review persona
@@ -216,7 +216,7 @@ Boris 反覆強調的高槓桿投資（來自 2026-02-01 團隊 tips thread）�
 
 ### /goal 與 Boris 的「驗證回饋迴圈」哲學
 
-Boris 的 `/go` skill（讓 Claude 端對端測試自己 -> `/simplify` -> 開 PR）哲學現在有官方指令支援：
+Boris 的 `/go` skill（讓 Claude 端對端測試自己 → `/simplify` → 開 PR）哲學現在有官方指令支援：
 
 ```bash
 /goal CI 通過且無 type error

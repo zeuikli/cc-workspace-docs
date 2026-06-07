@@ -265,8 +265,8 @@ Rewind 移除失敗並用學到的資訊重新 prompt。「Summarize from here�
 Subagents 有自己的新鮮 context windows，只把最終報告回傳給 parent context。
 
 **Mental test**：「我需要這個工具輸出本身，還是只需要結論？」
-- 只需要結論 -> 委派 subagent
-- 需要反覆檢視中間產物 -> 主對話自己做
+- 只需要結論 → 委派 subagent
+- 需要反覆檢視中間產物 → 主對話自己做
 
 ---
 
@@ -309,7 +309,7 @@ Anthropic 的 frontend-design skill 就是這個哲學的體現：不是列出�
 
 Claude Code 團隊將 **Cache Hit Rate 視為關鍵指標，下降時觸發 incident**。不是優化項，是生產系統基本健康指標。
 
-### 分層結構（靜態 -> 動態）
+### 分層結構（靜態 → 動態）
 
 ```
 1. System prompt + Tools       ← 最穩定，全域快取
@@ -341,10 +341,10 @@ Claude Code 團隊將 **Cache Hit Rate 視為關鍵指標，下降時觸發 inci
 
 以下是已整合到本 workspace 規則中的 Thariq 觀點，供對照：
 
-- **Context rot 閾值**（300-400k tokens）-> `.claude/rules/context-management.md`
-- **Subagent mental test**（conclusion vs. tool output）-> `.claude/rules/subagent-strategy.md`
-- **Prompt caching 架構規則**（static first, dynamic last）-> `.claude/rules/context-management.md`
-- **1M context + compact 策略**（壓縮層級決策表）-> `.claude/rules/context-management.md`
-- **Session branching point**（每個 turn 的六個選擇）-> `.claude/rules/session-management.md`
-- **Forked Subagent / context 繼承**（v2.1.117）-> `.claude/rules/subagent-advanced.md`
-- **Prompt caching 五禁止事項**（2026-04-30）-> `28-thariq-prompt-caching-lessons.md`
+- **Context rot 閾值**（300-400k tokens）→ `.claude/rules/context-management.md`
+- **Subagent mental test**（conclusion vs. tool output）→ `.claude/rules/subagent-strategy.md`
+- **Prompt caching 架構規則**（static first, dynamic last）→ `.claude/rules/context-management.md`
+- **1M context + compact 策略**（壓縮層級決策表）→ `.claude/rules/context-management.md`
+- **Session branching point**（每個 turn 的六個選擇）→ `.claude/rules/session-management.md`
+- **Forked Subagent / context 繼承**（v2.1.117）→ `.claude/rules/subagent-advanced.md`
+- **Prompt caching 五禁止事項**（2026-04-30）→ `28-thariq-prompt-caching-lessons.md`

@@ -262,7 +262,7 @@ Routines（Research Preview）：三種自動化執行模式（排程/API/GitHub
 **Date:** 2026-04-09 | **URL:** https://claude.com/blog/the-advisor-strategy
 
 ### Summary
-Advisor Tool：Opus 作為智慧顧問，Sonnet/Haiku 作為執行者。Haiku + Opus Advisor 可達 BrowseComp 19.7%->41.2%，成本降 85%。一行 API 實作。
+Advisor Tool：Opus 作為智慧顧問，Sonnet/Haiku 作為執行者。Haiku + Opus Advisor 可達 BrowseComp 19.7%→41.2%，成本降 85%。一行 API 實作。
 
 ### Key Points
 - Sonnet + Opus Advisor：SWE-bench Multilingual 提升 2.7 個百分點，成本降 11.9%

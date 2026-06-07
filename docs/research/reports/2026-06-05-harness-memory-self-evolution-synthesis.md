@@ -2,7 +2,7 @@
 
 > **建立日期**: 2026-05-29 · **最後更新**: 2026-06-05（併入 2026-05 後新增 10 篇論文 + tweets/blog/best-practices 一手洞察）  
 > **類型**: 論文合成報告（活文件，持續併入新證據）  
-> **基礎論文**: 原 8 篇（2023–2026）-> 擴充至 18 篇（+ 原有 Continual Harness 篇補強）  
+> **基礎論文**: 原 8 篇（2023–2026）→ 擴充至 18 篇（+ 原有 Continual Harness 篇補強）  
 > **用途**: 為 cc-workspace GOTCHA/RATCHET/autoload-evolution 框架提供學術依據  
 > **關聯文件**: `docs/harness-guidelines-workspace.md` · `research/agent-harness/HARNESS-CARD.md` · `memory/RATCHET.md`
 
@@ -18,7 +18,7 @@
 
 **最重要的單一新證據**（直接補強原報告 §1「整合操作 LLM 偏差注入風險」）：
 > **Useful Memories Become Faulty**（arXiv 2605.12978）親驗摘要原文：GPT-5.4 即使**從完全正確的 ground-truth 軌跡**做連續整合，仍在 ARC-AGI 上從 100% 跌至 46%（失敗率 54%）。退化根源是 **consolidation step 本身**，非 experience 品質。論文建議：raw episode 作 first-class evidence，**顯式門控整合**，不要每次互動後自動觸發。
-> -> cc-workspace 啟示：`memory-compactor` 每次 session 全量壓縮 = 高頻強制整合，正是該論文警告的反模式（見下方「設計缺口」更新）。
+> → cc-workspace 啟示：`memory-compactor` 每次 session 全量壓縮 = 高頻強制整合，正是該論文警告的反模式（見下方「設計缺口」更新）。
 
 ---
 
@@ -27,7 +27,7 @@
 **8 篇論文共同收斂到同一個設計原則**：
 
 > Agent 能力的上限由「模型 + 記憶體 + 控制架構」三者決定，而非模型單獨決定。
-> 自我進化的關鍵在於：失敗偵測 -> 知識提煉 -> 架構修正 -> 效果驗證的閉環。
+> 自我進化的關鍵在於：失敗偵測 → 知識提煉 → 架構修正 → 效果驗證的閉環。
 
 ---
 
@@ -107,7 +107,7 @@
 
 **關鍵機制**:
 - 自我評判分叉：成功**與**失敗經驗都用於對比信號
-- 雙迴圈：檢索記憶 -> 執行任務 -> 整合學習 -> 改善記憶
+- 雙迴圈：檢索記憶 → 執行任務 → 整合學習 → 改善記憶
 - MaTTS（Memory-aware Test-Time Scaling）放大經驗多樣性
 
 **Workspace 對照**:
@@ -135,16 +135,16 @@
 
 **核心主張**: 語言 Agent 透過 episodic verbal reflection（非梯度更新）學習，在記憶體中保存反思以引導後續嘗試。
 
-**三元組迴圈**: Actor -> 失敗 -> 語言化錯誤 -> Episodic buffer -> 帶記憶重試
+**三元組迴圈**: Actor → 失敗 → 語言化錯誤 → Episodic buffer → 帶記憶重試
 
 **Workspace 對照**:
 
 | Reflexion 概念 | cc-workspace 實作 |
 |--------------|-----------------|
 | Episodic buffer | `memory/MEMORY.md` Lesson 條目 |
-| Verbal reflection | "Lesson YYYY-MM-DD: [失敗模式] -> [防範規則]" |
+| Verbal reflection | "Lesson YYYY-MM-DD: [失敗模式] → [防範規則]" |
 | No parameter update | 不需 fine-tune；僅更新 MEMORY.md + rules |
-| Causal diagnosis | GOTCHAS.md "[根因] -> [防範規則] -> [驗證方式]" |
+| Causal diagnosis | GOTCHAS.md "[根因] → [防範規則] → [驗證方式]" |
 
 **這是整個 cc-workspace 記憶設計的學術祖先**。
 
@@ -157,12 +157,12 @@
 **三元組**:
 - **G**（語法連線）：型別化資訊流圖
 - **Know**（知識結構）：可重放驗證的 certificates（優先門控、收斂檢查）
-- **Φ**（部署映射）：能力槽 -> 具體模型
+- **Φ**（部署映射）：能力槽 → 具體模型
 
 **Workspace 對照**:
 - `.claude/rules/*.md` = Know-layer 不變式
 - Skills 的 YAML frontmatter = operadic 組合的型別宣告
-- Hooks = trace 回饋迴圈（執行後稽核 -> 修正不變式）
+- Hooks = trace 回饋迴圈（執行後稽核 → 修正不變式）
 - **R4 驗證紀律 = certificate 保存**（修改前後 healthcheck 通過）
 
 ---
@@ -178,7 +178,7 @@
 **核心主張**: LLM 對**正確** ground-truth 軌跡做連續整合（consolidation），記憶效用先升後降，可低於 no-memory 基線。退化根源是 consolidation step，非 experience 品質。
 
 **親驗數字**（摘要原文）:
-- GPT-5.4 在 ARC-AGI：無記憶 100% -> 連續整合後 **46%**（失敗率 54%）
+- GPT-5.4 在 ARC-AGI：無記憶 100% → 連續整合後 **46%**（失敗率 54%）
 - ARC-AGI Stream 環境（Retain/Delete/Consolidate）：保留 raw episode 的 agent 準確率是**強制整合**版本的 2 倍
 - episodic-only 控制組（只保留軌跡不整合）與最佳 consolidator 相當
 
@@ -193,7 +193,7 @@
 
 ### 10. ACE — Agentic Context Engineering (arXiv 2510.04618, ICLR 2026)
 
-**核心主張**: 把 context 視為「演化 playbook」，用 Generator -> Reflector -> Curator 三模組做**增量 delta update**（非全量改寫），防止 brevity bias 與 **context collapse**（迭代改寫侵蝕細節）兩個失效模式。
+**核心主張**: 把 context 視為「演化 playbook」，用 Generator → Reflector → Curator 三模組做**增量 delta update**（非全量改寫），防止 brevity bias 與 **context collapse**（迭代改寫侵蝕細節）兩個失效模式。
 
 **親驗數字**: vs full-rewrite 基線 +10.6%（AppWorld）；vs GEPA latency −82.3%、cost −91.5%；cache hit 91.8%。
 
@@ -228,7 +228,7 @@
 
 ### 13. MemoryOS (arXiv 2506.06326, 2025-05-30)
 
-**核心主張**: 借鑒 OS 分段分頁，STM->MTM->LPM 三層 + heat-based eviction 統一記憶管理。
+**核心主張**: 借鑒 OS 分段分頁，STM→MTM→LPM 三層 + heat-based eviction 統一記憶管理。
 
 **親驗數字**: LoCoMo +49.11% F1 / +46.18% BLEU-1（GPT-4o-mini）；token 較 MemGPT −77.2%（§3.3 heat score = N_visit × 存取量 × 時間衰減）。
 
@@ -245,14 +245,14 @@
 - 外層 Refiner 對 4 元件（system prompt / sub-agents / skills / memory）做 CRUD，在真實環境（Pokémon Blue/Yellow/Crystal 全通關）驗證
 - **refinement 自然集中在瓶頸元件**（非均勻分佈）
 - **harness 是可繼承的遷移單元**；但拋棄繼承的 sub-agent 會觸發迴歸
-- **能力下限以下 refinement 無效**（Gemini Flash-Lite 全面衰退）-> 對應 workspace「Capability Floor」（subagent-strategy.md）
-- 對照：`autoresearch` skill 的 Modify->Verify->Keep/Discard 與 Refiner outer loop 同構
+- **能力下限以下 refinement 無效**（Gemini Flash-Lite 全面衰退）→ 對應 workspace「Capability Floor」（subagent-strategy.md）
+- 對照：`autoresearch` skill 的 Modify→Verify→Keep/Discard 與 Refiner outer loop 同構
 
 ---
 
 ### 15. AI Harness Engineering — Runtime Substrate (arXiv 2605.13357, 2026-05-13)
 
-**核心主張**: agent 失敗根因是 runtime substrate 缺失（11 元件責任），非模型能力不足。H0->H3 梯度量表區分支援層級的可驗證度。
+**核心主張**: agent 失敗根因是 runtime substrate 缺失（11 元件責任），非模型能力不足。H0→H3 梯度量表區分支援層級的可驗證度。
 
 **新增視角**（原報告未覆蓋）:
 - **Attribution-Before-Recovery**：失敗歸因必須先於修復動作，獨立為 harness 元件責任
@@ -269,7 +269,7 @@
 
 **親驗數字**: 88.5% 平均相對改進（126 model×environment settings 中 116 改善，§Main Results）。
 
-**新增視角**: 在 **Qwen3-4B 上演化的 harness 可遷移至 17 個更大模型** -> 證明失敗模式是**環境層級**而非模型特異。
+**新增視角**: 在 **Qwen3-4B 上演化的 harness 可遷移至 17 個更大模型** → 證明失敗模式是**環境層級**而非模型特異。
 
 **Workspace 對照**: 為「harness rules 應保持 model-agnostic」提供實證（呼應 R1–R12 通用化研究）；GOTCHAS.md 可依四失敗類別重新分類以提升覆蓋稽核。
 
@@ -291,7 +291,7 @@
 
 **核心主張**: 給 proposer 完整 filesystem 存取（trace + 過去程式碼 + 分數）自動搜尋更好的 harness。
 
-**親驗數字**: scores-only 降至 34.6 median；**full traces 達 50.0**（§Ablation）-> 壓縮 trace 會丟失關鍵改進信號。
+**親驗數字**: scores-only 降至 34.6 median；**full traces 達 50.0**（§Ablation）→ 壓縮 trace 會丟失關鍵改進信號。
 
 **Workspace 對照**: 直接支持 MEMORY.md「保存完整錯誤 string 原文，勿改寫」的設計（與 2605.12978 的 raw-episode-first 結論一致 — 兩篇從不同方向收斂到「別過早壓縮證據」）。
 
@@ -317,9 +317,9 @@
 | T2 | **Harness ROI > 模型升級**：同模型 GPT-5.5 在 Codex harness 61.5% vs Cursor harness 87.2% SWE-Bench = **+25.7pp**，超過一個模型世代（~20pp） | `tweets/2026-05-05-@mindstudio-harness-beats-model.md` | 業界(MED) |
 | T3 | **advisor 官方最佳時機**：① 探索性讀取後未開始實質工作 ② file writes/test outputs 完成後；system prompt 加一行（<100 字）可削減 35–45%；≥3 次呼叫才啟用 caching | `best-practices/07-advisor-tool-best-practices.md` | 官方 |
 | T4 | **Generator-Verifier 是最廣泛部署的協調模式**（PGE 的官方稱法）；Haiku+Opus advisor 降 85% 每任務成本 | `claude-blog/docs/synthesis.md` | 官方 |
-| T5 | **CLAUDE.md 具體性優先**：「Use 2-space indentation」優於「Format code properly」；>200 行->path-scoped rules；compact 後僅 project-root CLAUDE.md 存活 | `best-practices/21-memory-claudemd.md` | 官方 |
+| T5 | **CLAUDE.md 具體性優先**：「Use 2-space indentation」優於「Format code properly」；>200 行→path-scoped rules；compact 後僅 project-root CLAUDE.md 存活 | `best-practices/21-memory-claudemd.md` | 官方 |
 | T6 | **prompt caching = harness SLO**：static-first prefix，動態資訊用 `<system-reminder>` 插 user message；**mid-session 切 Haiku 比留 Opus 更貴**（需重建 cache） | `tweets/2026-02-19-@trq212-673516.md` | 官方(PM) |
-| T7 | **CLAUDE.md 是會腐爛的 cache**：dream->diff->apply->14–30 天->再 dream；一次性修正被永久化是主要腐化源 | `tweets/2026-05-14-@Mnilax-443903.md` | 業界(MED) |
+| T7 | **CLAUDE.md 是會腐爛的 cache**：dream→diff→apply→14–30 天→再 dream；一次性修正被永久化是主要腐化源 | `tweets/2026-05-14-@Mnilax-443903.md` | 業界(MED) |
 
 **T1+T7 對 workspace 的關鍵啟示**：Anthropic 官方 Dreaming（離線非同步學習）+ Mnilax dream-pass 維護迴圈，與 workspace 的 `autoload-evolution`（6-phase 閉環）和 MEMORY「自我改進觸發」是同一機制的不同實現。差異仍是原報告 §4 的結論：**論文/官方的 Refiner 偏自動，workspace 要求人類或獨立 agent 確認（R1 PGE）**。T1 的「不污染進行中 session」原則 = workspace「mid-session 禁止改 CLAUDE.md，等 session 結束」規則的學術對應。
 
@@ -342,7 +342,7 @@
     ↓ (CAR / Categorical)
 [驗證] healthcheck / eval / per-model-eval
     ↓ (RATCHET flywheel)
-[記錄] RATCHET.md -> 下次 cycle 的 baseline
+[記錄] RATCHET.md → 下次 cycle 的 baseline
     ↑___________________________|
 ```
 
@@ -352,7 +352,7 @@
 
 | 缺口 | 來源論文 | 嚴重度 | 建議行動 |
 |------|---------|-------|---------|
-| ~~GOTCHA 觸發 -> 既有 Lesson 未重審~~ ✅ 已建雙向連結 | A-MEM | — | 2026-06-05 APPLY：MEMORY ↔ GOTCHA 6 配對雙向連結（commit 611bf5bf）。後續可選：連結建立後觸發既有 Lesson 自動重審（A-MEM 進化語意，目前為靜態連結） |
+| ~~GOTCHA 觸發 → 既有 Lesson 未重審~~ ✅ 已建雙向連結 | A-MEM | — | 2026-06-05 APPLY：MEMORY ↔ GOTCHA 6 配對雙向連結（commit 611bf5bf）。後續可選：連結建立後觸發既有 Lesson 自動重審（A-MEM 進化語意，目前為靜態連結） |
 | Continual Harness 缺乏自動 Refiner | Continual Harness | 低 | 現有 advisor() + 人工確認已足夠（Rule 1 PGE）|
 | 記憶遺忘策略未明確 | Rethinking Memory | 低 | memory-compactor 已部分解決；可加優先度標記 |
 | 元進化層無跨領域遷移記錄 | Last Harness | 低 | RATCHET.md flywheel 是雛形；需跨 session 統計 |
@@ -362,7 +362,7 @@
 
 | 缺口 | 來源論文 | 嚴重度 | 建議行動 |
 |------|---------|-------|---------|
-| **compactor 高頻強制整合風險**（原列「低」應上調）| Useful Memories Faulty (2605.12978) | **中->高** | 從推測升為**實證**：全量壓縮 = forced-consolidation 反模式。建議近 N session 原始節作 first-class evidence 保留，compaction 顯式門控（非 200 行無條件觸發）|
+| **compactor 高頻強制整合風險**（原列「低」應上調）| Useful Memories Faulty (2605.12978) | **中→高** | 從推測升為**實證**：全量壓縮 = forced-consolidation 反模式。建議近 N session 原始節作 first-class evidence 保留，compaction 顯式門控（非 200 行無條件觸發）|
 | MEMORY 全量改寫易 context collapse | ACE (2510.04618) | 中 | 評估 delta-update 模式（新 insight 追加 + 頻率計數 + 去重）取代 monolithic session 節改寫 |
 | 證據層 vs 推理層未分離 | Hindsight (2512.12818) | 低 | MEMORY「決策/Lesson（beliefs）vs 原始 session（experiences）」可顯式分層，防 compactor 混淆 |
 | 遺忘無量化優先序 | MemoryOS (2506.06326) | 低 | heat score（visit×size×decay）可作 Lesson promote/壓縮的計算依據 |
@@ -410,8 +410,8 @@
 > **執行狀態（2026-06-05，commit 611bf5bf，feature/memory-gotcha-backlinks）**：6 項結算 **APPLY 1 / RECORD 2 / DEFER 2 / NO-OP 1**。計劃書 `research/reports/2026-06-05-next-steps-execution-plan.md`。
 
 1. ~~**per-model-eval 基準建立**~~ ✅ 已完成（2026-05-30，baseline 15 trials；見 `.claude/refs/per-model-eval-suite.md`）
-2. ~~**MEMORY.md 反向連結**~~ ✅ **已 APPLY**（2026-06-05）：A-MEM **雙向**連結（非僅單向）。tracked `memory/MEMORY.md` 6 處 Lesson 加 `[GOTCHA: skill/GOTCHAS.md「錨點」]` + 對應 6 個 GOTCHAS.md 加 `[Lesson: MEMORY 防範規則#date]`。6 唯一 Lesson 配對（researcher 提議->parent 逐條 grep 驗證錨點全存活；42/48 Lesson NO MATCH，符合「多數 session-workflow 教訓無 per-skill 對應」預期，不硬塞）。**邊界**：正確目標為 tracked `memory/MEMORY.md`（非 machine-local 未 tracked 版，避免 commit 斷鏈進 repo）。
-3. ~~**GOTCHA 3-session 回顧**~~ ✅ **已 RECORD**（2026-06-05）：`git log --oneline --all -- ".claude/skills/*/GOTCHAS.md" | wc -l` = **35**（基準=5，增量 30 ≫ 3）-> stop hook 維持（不升格 PreToolUse）。
-4. 🆕 **compactor 整合風險評估**（中優先，源 2605.12978）-> **ASSESS->DEFER**（2026-06-05）：評估確認過度整合風險**已由 Lesson 2026-06-04-G 的 `comm -23` 流失對比防範部分緩解**；論文建議「近 N session 原始保留」= 既有「零損失保留 Lesson」指令的結構強化。改 `memory-compactor` SKILL 屬行為變更 -> **DEFER 至獨立 gated session**。驗收條件：壓縮後 grep 確認最近 3 session 原始 Lesson 實質存活（非 stub）。
-5. 🆕 **R9 高能力模型 eval-hack 註記**（低優先，源 Vesper 2605.15221）-> **PROPOSE->DEFER**（2026-06-05）：R9 在 `core.md`（auto-load 18,455/19,000 bytes），變更**必走 `/autoload-evolution`** 閉環（≤1 規則/cycle + eval 回歸 gate），不可本 session inline 改。已寫成 PROPOSE 提案待 gated 執行。
-6. 🆕 **Dreaming 對齊查核**（低優先，源 tweets/2026-05-07 官方）-> **NO-OP**（2026-06-05）：確認 `autoload-evolution` 閉環 + context-management「mid-session 禁改 CLAUDE.md」已對應官方 Dreaming「離線非同步、不污染進行中 session」原則，**無需額外動作**，對應關係已記錄。
+2. ~~**MEMORY.md 反向連結**~~ ✅ **已 APPLY**（2026-06-05）：A-MEM **雙向**連結（非僅單向）。tracked `memory/MEMORY.md` 6 處 Lesson 加 `[GOTCHA: skill/GOTCHAS.md「錨點」]` + 對應 6 個 GOTCHAS.md 加 `[Lesson: MEMORY 防範規則#date]`。6 唯一 Lesson 配對（researcher 提議→parent 逐條 grep 驗證錨點全存活；42/48 Lesson NO MATCH，符合「多數 session-workflow 教訓無 per-skill 對應」預期，不硬塞）。**邊界**：正確目標為 tracked `memory/MEMORY.md`（非 machine-local 未 tracked 版，避免 commit 斷鏈進 repo）。
+3. ~~**GOTCHA 3-session 回顧**~~ ✅ **已 RECORD**（2026-06-05）：`git log --oneline --all -- ".claude/skills/*/GOTCHAS.md" | wc -l` = **35**（基準=5，增量 30 ≫ 3）→ stop hook 維持（不升格 PreToolUse）。
+4. 🆕 **compactor 整合風險評估**（中優先，源 2605.12978）→ **ASSESS→DEFER**（2026-06-05）：評估確認過度整合風險**已由 Lesson 2026-06-04-G 的 `comm -23` 流失對比防範部分緩解**；論文建議「近 N session 原始保留」= 既有「零損失保留 Lesson」指令的結構強化。改 `memory-compactor` SKILL 屬行為變更 → **DEFER 至獨立 gated session**。驗收條件：壓縮後 grep 確認最近 3 session 原始 Lesson 實質存活（非 stub）。
+5. 🆕 **R9 高能力模型 eval-hack 註記**（低優先，源 Vesper 2605.15221）→ **PROPOSE→DEFER**（2026-06-05）：R9 在 `core.md`（auto-load 18,455/19,000 bytes），變更**必走 `/autoload-evolution`** 閉環（≤1 規則/cycle + eval 回歸 gate），不可本 session inline 改。已寫成 PROPOSE 提案待 gated 執行。
+6. 🆕 **Dreaming 對齊查核**（低優先，源 tweets/2026-05-07 官方）→ **NO-OP**（2026-06-05）：確認 `autoload-evolution` 閉環 + context-management「mid-session 禁改 CLAUDE.md」已對應官方 Dreaming「離線非同步、不污染進行中 session」原則，**無需額外動作**，對應關係已記錄。

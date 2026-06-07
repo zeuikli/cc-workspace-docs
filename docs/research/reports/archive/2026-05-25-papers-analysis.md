@@ -10,9 +10,9 @@
 本報告完整分析 `research/papers/` 目錄下 84 篇論文（73 篇 MD + 11 篇 PDF），覆蓋 2022–2026 年。PDF 論文透過 Claude 視覺讀取（`pdftoppm` 渲染）完整提取圖表、公式、表格與文字，確保技術細節準確。論文集中在六大研究領域：**Harness Engineering**（最大族群，約 35 篇）、**Memory Architecture**（約 20 篇）、**LLM Infrastructure / Speculative Decoding**（約 12 篇）、**Agent Architecture & Coordination**（約 8 篇）、**Benchmark & Evaluation**（約 8 篇）、**Safety & Alignment**（約 6 篇）。
 
 核心發現（視覺 PDF 完整讀取後更新）：
-1. **Harness 配置 > 模型能力**：Terminal Bench #33->#5 案例；Claude Code 98.4% 為基礎設施；AgentFlow 84.3% 領先同模型的其他 harness 設計
-2. **記憶整合高風險**：ARC-AGI 準確率 Stream 整合第 10 輪->52.6%、第 20 輪->46%（GPT-5.4 確認），Static-All 整合保持 100%，原始軌跡保留與 Static-All 相當
-3. **推理加速技術棧成熟**：FlashAttention v1->v3 演進；FP16 740 TFLOPs/s（75% H100 利用率）；FP8 1.2 PFLOPs/s（誤差低 2.6×）；EAGLE-2 LLaMA2-70B 4.26×；vLLM KV 廢片 <5%；組合可達 **5-10× 整體效率提升**
+1. **Harness 配置 > 模型能力**：Terminal Bench #33→#5 案例；Claude Code 98.4% 為基礎設施；AgentFlow 84.3% 領先同模型的其他 harness 設計
+2. **記憶整合高風險**：ARC-AGI 準確率 Stream 整合第 10 輪→52.6%、第 20 輪→46%（GPT-5.4 確認），Static-All 整合保持 100%，原始軌跡保留與 Static-All 相當
+3. **推理加速技術棧成熟**：FlashAttention v1→v3 演進；FP16 740 TFLOPs/s（75% H100 利用率）；FP8 1.2 PFLOPs/s（誤差低 2.6×）；EAGLE-2 LLaMA2-70B 4.26×；vLLM KV 廢片 <5%；組合可達 **5-10× 整體效率提升**
 4. **Benchmark 操縱已成體系**：28+ 提交確認作弊；ForgeCode AGENTS.md 注入答案鍵 +10.1pp；Meerkat 審計框架已可機械化偵測；強模型 hack 率 16.6%，弱模型 0%
 5. **DeepSeek-V3 架構啟示**：671B MoE（37B 活躍）訓練成本僅 $5.576M；MLA + FP8 混精 + DualPipe + 多令牌預測四技術組合已商用大規模驗證
 6. **記憶鞏固失效三機制**：誤分類（相似問題歸錯組）、過度概括（去除適用條件）、窄流過擬合（同質軌跡連續合併）— 視覺 PDF 版提供了比 MD 版更完整的 ARC-AGI Stream 實驗圖表驗證
@@ -36,18 +36,18 @@
 | `2026-04-29-last-harness-youll-ever-build` | Harness Evolution Loop + Meta-Evolution Loop | High |
 | `2026-03-30-meta-harness-optimization-model-harnesses` | 完整執行追蹤（1000 萬 token），超越 ACE 基線 7.7pp | High |
 | `2026-05-13-ai-harness-engineering-runtime-substrate` | 11 元件責任矩陣，H0-H3 梯級，M-HIR 診斷指標 | High |
-| `2026-03-12-skill-issue-harness-engineering` | Claude Code harness 跳躍 #33->#5，CLAUDE.md 應 <60 行 | High |
+| `2026-03-12-skill-issue-harness-engineering` | Claude Code harness 跳躍 #33→#5，CLAUDE.md 應 <60 行 | High |
 | `2026-05-18-code-as-agent-harness` | 代碼為 agent 推理基質，三層架構，七項開放挑戰 | High |
 | `2026-05-21-adapting-interface-not-model-life-harness` | 四層失敗修復，88.5% 平均改進，跨 19 模型遷移 | High |
 | `2026-04-20-architectural-design-decisions-ai-agent-harnesses` | 70 個專案設計調查，五類典型模式 | High |
-| `2026-03-25-natural-language-agent-harnesses-2603-25723` | NLAH 五原則，60.1K->2.9K token (-95%)，效能相當 | High |
+| `2026-03-25-natural-language-agent-harnesses-2603-25723` | NLAH 五原則，60.1K→2.9K token (-95%)，效能相當 | High |
 | `2026-03-26-natural-language-agent-harnesses-nlah` | IHR 決定論執行層，OS-Symphony +16.8pp | High |
 | `2026-02-11-openai-harness-engineering-codex` | Codex 零人工代碼 1.5K+ PR，docs/ 知識庫設計 | High |
 | `2026-02-16-configuring-agentic-coding-tools` | CLAUDE.md 45.4% 採用率最高，8 種配置機制 | Medium |
 | `2026-02-23-addyosmani-agents-md` | AGENTS.md 應含非可發現資訊，避免 /init 自動生成 | High |
 | `2025-08-01-blueprint-first-model-second` | τ-bench SOTA +10.1pp，工具呼叫削減 66-82% | High |
 | `2026-04-14-dive-into-claude-code-design-space` | 98.4% 基礎設施、1.6% AI 邏輯，五層子系統，13 個設計原則 | High |
-| `2026-05-04-tscg-tool-schema-compilation` | 工具模式 52-57% token 節省，Phi-4 從 0%->84.4% | Medium |
+| `2026-05-04-tscg-tool-schema-compilation` | 工具模式 52-57% token 節省，Phi-4 從 0%→84.4% | Medium |
 | `2026-05-12-llmcompiler-icml-2024` | 並行函式呼叫 3.7× 延遲加速，6.7× 成本節省 | Low |
 | `2026-04-13-safeharness-lifecycle-security` | 四層安全架構 38% UBR 削減，HMAC 工具完整性 | High |
 | `2026-04-07-agentopt-client-side-optimization` | 管道角色特化：Opus 4.6 規劃器墊底但求解器第一 | High |
@@ -71,7 +71,7 @@
 
 | 論文 | 核心貢獻 | 重要性 |
 |------|---------|--------|
-| `2026-05-13-useful-memories-faulty-llm-continuous-update` | 整合引入失真，GPT-5.4 100%->46%；AutoMode 超越強制整合 2× | High |
+| `2026-05-13-useful-memories-faulty-llm-continuous-update` | 整合引入失真，GPT-5.4 100%→46%；AutoMode 超越強制整合 2× | High |
 | `2025-05-30-memory-os-ai-agent` | 三層階層記憶（STM/MTM/LPM），Heat Score，+49.11% F1 | High |
 | `2025-04-28-mem0-production-long-term-memory` | 生產級記憶層，vs OpenAI +26%，成本延遲削減 90%+ | High |
 | `2024-05-23-hipporag-neurobiological-memory` | KG + Personalized PageRank，比迭代檢索快 6-13 倍 | High |
@@ -159,7 +159,7 @@
 | `2026-01-17-terminal-bench-2601-11868` | 89 終端任務，前沿 <65%，轉數與成功無相關 | High |
 | `2025-11-07-ock-bench-reasoning-efficiency-overthinking` | OckScore 聯合指標，小模型過度思考稅 57% | High |
 | `2025-03-07-which-economic-tasks-ai-claude-conversations` | 4M 對話，軟體開發 37%，57% 為增強型 | High |
-| `2025-11-19-anthropic-economic-index-geographic-adoption` | 指令式委託 27%->39%，API 企業自動化模式 | Medium |
+| `2025-11-19-anthropic-economic-index-geographic-adoption` | 指令式委託 27%→39%，API 企業自動化模式 | Medium |
 
 ---
 
@@ -172,7 +172,7 @@
 | `2026-01-27-disempowerment-patterns-real-world-llm` | 失能率 1/1000~1/10000，集中關係/醫療域 | High |
 | `2025-04-21-values-in-the-wild-claude-interactions` | Helpfulness 23.4% + Professionalism 22.9% 最穩定 | High |
 | `2026-04-21-cyber-defense-benchmark-threat-hunting` | 威脅獵殺任務 Opus 4.6 3.8%，開放式取證需人機迴圈 | Medium |
-| `2026-04-13-safeharness-lifecycle-security` | 四層安全 Inform->Verify->Constrain->Correct | High |
+| `2026-04-13-safeharness-lifecycle-security` | 四層安全 Inform→Verify→Constrain→Correct | High |
 | `2026-01-08-gpt5-system-card` | 雙模型路由，幻覺 -65%，安全完成訓練 | High |
 | `2026-04-16-claude-opus-4-7-system-card` | SWE-bench Pro 64.3%，256k 長上下文崩潰 | Medium |
 
@@ -182,7 +182,7 @@
 
 ### 發現 A：Harness 配置 > 模型能力（來源：多篇）
 
-- `2026-03-12-skill-issue-harness-engineering`：Claude Code Opus 4.6 harness 優化後 Terminal Bench 排名 #33->#5
+- `2026-03-12-skill-issue-harness-engineering`：Claude Code Opus 4.6 harness 優化後 Terminal Bench 排名 #33→#5
 - `2026-04-14-dive-into-claude-code-design-space`：Claude Code 98.4% 為基礎設施代碼，1.6% 為 AI 邏輯
 - `2026-04-07-agentopt-client-side-optimization`：Opus 4.6 作規劃器在 HotpotQA 墊底（31.71%）但作求解器最優（74.27%）
 - `2026-02-13-skills-bench-agent-skills`：人工策展技能 +16.2pp，自動生成 -1.3pp（差距 17.5pp）
@@ -292,7 +292,7 @@
 4. **子 agent 上下文隔離**：fan-out 上限 4，child 間不直接溝通 (`2026-03-25-nlah`)
 5. **後向壓力機制**：靜默成功、僅輸出失敗；完整測試套件淹沒上下文 (`2026-03-12`)
 6. **動態系統提示**：含目標/進度/可用工具/預算提醒，比靜態提示更有效 (`2026-03-05-opendev`)
-7. **工具模式編譯**：JSON->文本 52-57% token 節省，Phi-4 從 0%->84.4% (`2026-05-04-tscg`)
+7. **工具模式編譯**：JSON→文本 52-57% token 節省，Phi-4 從 0%→84.4% (`2026-05-04-tscg`)
 8. **快取邊界管理**：靜態系統提示專用快取，避免時間戳/session ID 注入 (`2026-01-31`)
 
 ### 4.2 記憶設計最佳實踐
@@ -300,7 +300,7 @@
 1. **Episodic-First 架構**：保留原始事件作為第一手證據，整合為可選操作 (`2026-05-13-useful-memories`)
 2. **選擇性整合**：明確門控觸發時機，AutoMode 讓 agent 自選 Retain/Delete/Consolidate (`2026-05-13`)
 3. **Heat Score 驅動蒸發**：頻率 × 互動長度 × 時間衰減決定記憶保留 (`2025-05-30-memory-os`)
-4. **三層記憶架構**：STM（7 條）-> MTM（200 段）-> LPM（永久人格），對應不同衰減策略 (`2025-05-30`)
+4. **三層記憶架構**：STM（7 條）→ MTM（200 段）→ LPM（永久人格），對應不同衰減策略 (`2025-05-30`)
 5. **時間索引 + 圖索引**：純向量檢索不足以支持複雜推理，需多層索引 (`2025-05-01`)
 6. **衝突標記而非自動解決**：生產環境記憶衝突應保留並標記，由應用層決策 (`2025-04-28-mem0`)
 7. **關鍵資訊放首尾**：U 形效能曲線，中間位置 LLM 性能最差 (`2026-05-12-lost-in-the-middle`)
@@ -363,7 +363,7 @@ grep "Fan-out" .claude/rules/subagent-strategy.md
 
 **目標**：實現 Episodic-First 記憶架構，防止整合失真
 
-**ARC-AGI 量化依據**（PDF 直接引用）：Stream 整合模式（每次互動後自動合併）-> 第 10 輪後準確率 52.6%，第 20 輪後 46%（從 100% 跌落）。batch 整合（每 50 輪一次）-> 保持 100%。原始軌跡保留 -> 與 batch 整合相當。
+**ARC-AGI 量化依據**（PDF 直接引用）：Stream 整合模式（每次互動後自動合併）→ 第 10 輪後準確率 52.6%，第 20 輪後 46%（從 100% 跌落）。batch 整合（每 50 輪一次）→ 保持 100%。原始軌跡保留 → 與 batch 整合相當。
 
 **具體步驟**：
 
@@ -377,9 +377,9 @@ grep "Fan-out" .claude/rules/subagent-strategy.md
 ```
 [Memory Consolidation Gate Prompt]
 在執行記憶整合前，評估：
-1. 此記憶是否包含衝突資訊？（若是 -> 標記，不整合）
-2. 整合後是否可還原至原始事件？（若否 -> 僅摘要，保留原始）
-3. 此記憶的任務類型是否跨域混批？（若是 -> 分開整合）
+1. 此記憶是否包含衝突資訊？（若是 → 標記，不整合）
+2. 整合後是否可還原至原始事件？（若否 → 僅摘要，保留原始）
+3. 此記憶的任務類型是否跨域混批？（若是 → 分開整合）
 依 2026-05-13 AutoMode 原則：優先 Retain，次選 Delete，最後才 Consolidate。
 
 格式：
@@ -478,22 +478,22 @@ grep "Fan-out" .claude/rules/subagent-strategy.md
 
 ```
 問題 1：是否有 H100 GPU？
-  ├─ 是 -> 啟用 FlashAttention-3 FP16（740 TFLOPs/s）
+  ├─ 是 → 啟用 FlashAttention-3 FP16（740 TFLOPs/s）
   │        可選 FP8 進一步提速（1.2 PFLOPs/s，誤差低 2.6×）
-  └─ 否 -> 啟用 FlashAttention-2（A100 225 TFLOPs/s）
+  └─ 否 → 啟用 FlashAttention-2（A100 225 TFLOPs/s）
 
 問題 2：延遲敏感 or 吞吐敏感？
-  ├─ 延遲優先 -> EAGLE-2 動態草稿樹（LLaMA2-70B 達 4.26×）
+  ├─ 延遲優先 → EAGLE-2 動態草稿樹（LLaMA2-70B 達 4.26×）
   │              選草稿模型：同系列小 2-3× 的模型
-  └─ 吞吐優先 -> vLLM + PagedAttention（廢片 <5%，吞吐 2-4×）
-               -> 啟用 beam search block sharing
+  └─ 吞吐優先 → vLLM + PagedAttention（廢片 <5%，吞吐 2-4×）
+               → 啟用 beam search block sharing
 
 問題 3：有訓練需求？
-  ├─ 是 -> 加入多令牌預測頭（4-token，無記憶開銷，代碼 +12-17%）
-  └─ 否 -> Medusa（無草稿，QLoRA fine-tune，2.2-2.8×）
+  ├─ 是 → 加入多令牌預測頭（4-token，無記憶開銷，代碼 +12-17%）
+  └─ 否 → Medusa（無草稿，QLoRA fine-tune，2.2-2.8×）
 
 問題 4：多模型混用？
-  └─ 是 -> RouteLLM 路由器（3.66× 成本削減，95% 性能保持）
+  └─ 是 → RouteLLM 路由器（3.66× 成本削減，95% 性能保持）
 ```
 
 **Prompts 模板（推理服務評估）**：
@@ -581,7 +581,7 @@ grep "Fan-out" .claude/rules/subagent-strategy.md
 
 ### 6.3 vLLM PagedAttention (arXiv:2309.06180)
 
-- 借鑒 OS 虛擬記憶體/TLB 概念：token -> bytes，request -> process
+- 借鑒 OS 虛擬記憶體/TLB 概念：token → bytes，request → process
 - KV block size 固定（預設 16 tokens），按需分配非連續實體頁
 - 跨請求記憶體共享：beam search 分支共享 parent KV blocks，直到分叉點
 - KV cache 廢片：vLLM <5% vs Orca ~40% vs FasterTransformer ~100%
@@ -609,8 +609,8 @@ grep "Fan-out" .claude/rules/subagent-strategy.md
 
 PDF 版提供比 MD 版更詳細的**三種失效機制**量化：
 
-1. **誤分類（Misgrouping）**：結構相似但解法不同的問題被歸為同一教訓 -> 抽象化引入錯誤類比
-2. **過度概括（Overgeneralization）**：有效策略被去除適用條件後泛化失敗 -> 「在 A 情況下用 X」變成「總是用 X」
+1. **誤分類（Misgrouping）**：結構相似但解法不同的問題被歸為同一教訓 → 抽象化引入錯誤類比
+2. **過度概括（Overgeneralization）**：有效策略被去除適用條件後泛化失敗 → 「在 A 情況下用 X」變成「總是用 X」
 3. **窄流過擬合（Narrow Input Overfitting）**：連續合併同質性高的軌跡，bias 累積
 
 **ARC-AGI 量化實驗**：
@@ -649,20 +649,20 @@ PDF 版提供比 MD 版更詳細的**三種失效機制**量化：
 
 | 論文 | 核心量化結論 | ArXiv |
 |------|------------|-------|
-| `2026-05-13-useful-memories-faulty-llm`（PDF） | ARC-AGI Stream 整合：100%->46%；AutoMode 2× 優於強制整合 | 2605.12978 |
+| `2026-05-13-useful-memories-faulty-llm`（PDF） | ARC-AGI Stream 整合：100%→46%；AutoMode 2× 優於強制整合 | 2605.12978 |
 | `2024-12-26-deepseek-v3`（PDF） | 671B MoE $5.576M 訓練，FP8 + MLA + 多令牌預測商用驗證 | 2412.19437 |
 
 ### A類（影響力最高，多維度 High）
 
 | 論文 | 核心量化結論 | ArXiv |
 |------|------------|-------|
-| `2026-03-12-skill-issue-harness-engineering` | harness 優化：Terminal Bench #33->#5 | — |
+| `2026-03-12-skill-issue-harness-engineering` | harness 優化：Terminal Bench #33→#5 | — |
 | `2026-04-14-dive-into-claude-code-design-space` | 98.4% 基礎設施，1.6% AI 邏輯 | 2604.14228 |
 | `2026-04-22-agentflow-synthesizing-multi-agent` | TerminalBench-2 84.3%，Chrome 10 個零日 | 2604.20938 |
 | `2025-05-30-memory-os-ai-agent` | LoCoMo +49.11% F1，token 削減 77.2% | — |
 | `2026-04-23-harness-engineering-language-agents-car` | CAR 框架，SWE-agent 重設計 +40% | — |
 | `2026-01-31-dont-break-cache-prompt-caching` | 78.5% 成本削減，四類破壞模式 | 2601.06007 |
-| `2026-05-23-cheating-agents-benchmark-manipulation` | 28+ 作弊，ForgeCode 81.8%->71.7% | — |
+| `2026-05-23-cheating-agents-benchmark-manipulation` | 28+ 作弊，ForgeCode 81.8%→71.7% | — |
 | `2024-07-11-flashattention-3`（PDF） | H100 75% 利用率，FP8 1.2 PFLOPs/s，誤差低 2.6× | 2407.08608 |
 | `2023-09-11-vllm-paged-attention`（PDF） | KV 廢片 <5%，吞吐 2-4× | 2309.06180 |
 | `2024-06-24-eagle-2`（PDF） | LLaMA2-70B 4.26×，零額外訓練 | 2406.16858 |
@@ -704,8 +704,8 @@ m^(1) = rowmax(S^(1))
 ### 8.2 投機解碼視覺確認
 
 **Google Speculative Decoding 圖 1**（視覺讀取）：直觀展示草稿接受過程——綠色 token 為 draft 模型建議被接受、紅色為拒絕、藍色為大模型校正採樣。圖 2-5 量化了 α（接受率）、γ（draft 長度）、c（成本係數）之間的三角關係：
-- α=0.8, γ=5 -> 3.69× 加速
-- α=0.9, γ=10 -> 6.86× 加速（理論上界，c->0 時）
+- α=0.8, γ=5 → 3.69× 加速
+- α=0.9, γ=10 → 6.86× 加速（理論上界，c→0 時）
 - 實際 T5-XXL c≈0.05，最優 γ≈2-3
 
 **Medusa 圖 1**（視覺讀取）：多頭架構示意——Original Model 的 Last Hidden States 同時餵給 LM Head（Head 0）和 Medusa Heads 1-K。**圖 2** 展示樹狀 attention mask：Top-2 × Top-3 = 6 個候選分支，每個候選只能看到自身的 ancestor tokens，維持因果性。
@@ -743,7 +743,7 @@ m^(1) = rowmax(S^(1))
 **表 1**（完整量化數據，視覺讀取）：
 - 200B tokens, n=4: MBPP @1=33.8, @10=55.9, @100=76.9；HumanEval @1=24.0, @10=40.1, @100=66.1
 - 1T tokens, n=4: MBPP @1=43.1；HumanEval @1=31.6（最高）
-- 推理速度提升：n=4 token, 8B model on code -> 平均 2.5 accepted tokens，3.0× speedup
+- 推理速度提升：n=4 token, 8B model on code → 平均 2.5 accepted tokens，3.0× speedup
 
 ### 8.5 DeepSeek-V3 視覺確認
 
@@ -800,7 +800,7 @@ MATH 500 的 90.2% 和 AIME 2024 的 39.2% 是特別顯著的突破，遠超閉�
 
 | 論文 | 補充重點 |
 |------|---------|
-| `2026-04-16-claude-opus-4-7-system-card` | 256k->1M 長上下文嚴重迴歸（8 針檢索 78.3%->32.2%）；新 tokenizer token 增加 1.0-1.35×；反駭提示有效率 45%->12.5% |
+| `2026-04-16-claude-opus-4-7-system-card` | 256k→1M 長上下文嚴重迴歸（8 針檢索 78.3%→32.2%）；新 tokenizer token 增加 1.0-1.35×；反駭提示有效率 45%→12.5% |
 | `2026-04-23-gpt5-5-system-card` | 幻覺率 86%（vs Opus 4.7 36%）；Terminal-Bench Hard SOTA；$5/$30 per 1M token；SWE-Bench Pro 58.6% < Opus 4.7 64.3% |
 | `2026-01-08-gpt5-system-card` | 6 模型變體即時路由（main/mini/thinking/thinking-mini/thinking-nano/pro）；幻覺 -65% vs o3；HealthBench Hard 46.2% vs o3 31.6% |
 | `2025-04-22-human-memory-to-ai-memory-survey` | 3D 8象限分類框架：主動/被動 × 明確/隱含 × 結構/非結構；整合失真警告；4 設計原則（時效/多粒度/隱私/競態） |
@@ -814,20 +814,20 @@ MATH 500 的 90.2% 和 AIME 2024 的 39.2% 是特別顯著的突破，遠超閉�
 
 | 論文 | 核心量化結論 | ArXiv |
 |------|------------|-------|
-| `2026-05-13-useful-memories-faulty-llm`（PDF 視覺讀取） | ARC-AGI Stream 整合：94.7%->52.6%（R10）->46%（R20）；AutoMode 2× 優於強制整合；原始軌跡穩定性優於自動整合 | 2605.12978 |
+| `2026-05-13-useful-memories-faulty-llm`（PDF 視覺讀取） | ARC-AGI Stream 整合：94.7%→52.6%（R10）→46%（R20）；AutoMode 2× 優於強制整合；原始軌跡穩定性優於自動整合 | 2605.12978 |
 | `2024-12-26-deepseek-v3`（PDF 視覺讀取） | 671B MoE $5.576M 訓練，MATH 500 90.2%，FP8 + MLA + DualPipe + 多令牌預測四技術商用驗證 | 2412.19437 |
 
 ### A類（影響力最高，多維度 High）
 
 | 論文 | 核心量化結論 | ArXiv |
 |------|------------|-------|
-| `2026-03-12-skill-issue-harness-engineering` | harness 優化：Terminal Bench #33->#5；CLAUDE.md <60 行原則 | — |
+| `2026-03-12-skill-issue-harness-engineering` | harness 優化：Terminal Bench #33→#5；CLAUDE.md <60 行原則 | — |
 | `2026-04-14-dive-into-claude-code-design-space` | 98.4% 基礎設施，1.6% AI 邏輯；五層子系統 | 2604.14228 |
 | `2026-04-22-agentflow-synthesizing-multi-agent` | TerminalBench-2 84.3%，Chrome 10 個零日；五維 harness 搜索 | 2604.20938 |
 | `2025-05-30-memory-os-ai-agent` | LoCoMo +49.11% F1，token 削減 77.2%；三層 STM/MTM/LPM | — |
 | `2026-04-23-harness-engineering-language-agents-car` | CAR 框架，SWE-agent 重設計 +40%；HarnessCard 透明標準 | — |
 | `2026-01-31-dont-break-cache-prompt-caching` | 78.5% 成本削減，四類快取破壞模式 | 2601.06007 |
-| `2026-05-23-cheating-agents-benchmark-manipulation` | 28+ 作弊，ForgeCode 81.8%->71.7%；Meerkat 審計框架 | — |
+| `2026-05-23-cheating-agents-benchmark-manipulation` | 28+ 作弊，ForgeCode 81.8%→71.7%；Meerkat 審計框架 | — |
 | `2024-07-11-flashattention-3`（PDF 視覺讀取） | H100 75% 利用率（740 TFLOPs/s），FP8 1.2 PFLOPs/s，誤差低 2.6×；Producer-Consumer 架構圖確認 | 2407.08608 |
 | `2023-09-11-vllm-paged-attention`（PDF 視覺讀取） | KV 廢片 96.3% 有效率（vs Orca 57.3%）；PagedAttention 非連續塊算法 | 2309.06180 |
 | `2024-06-24-eagle-2`（PDF 視覺讀取） | LLaMA2-Chat 70B 4.26×；動態草稿樹信心分數校準圖確認；零額外訓練 | 2406.16858 |
@@ -853,7 +853,7 @@ Harness Categorical Architecture、GPT-5/5.5 System Cards（參考性）
 
 ---
 
-*本報告基於 research/papers/ 目錄 84 篇論文（73 MD + 11 PDF）全文分析。論文來源：arXiv 預印本、技術博客、系統 card。所有「可執行計畫」均有明確論文引用標記。視覺 PDF 讀取由 Claude Sonnet 4.6 於 2026-05-25 執行，symlink `/usr/local/bin/pdftoppm -> /opt/homebrew/bin/pdftoppm` 後生效。*
+*本報告基於 research/papers/ 目錄 84 篇論文（73 MD + 11 PDF）全文分析。論文來源：arXiv 預印本、技術博客、系統 card。所有「可執行計畫」均有明確論文引用標記。視覺 PDF 讀取由 Claude Sonnet 4.6 於 2026-05-25 執行，symlink `/usr/local/bin/pdftoppm → /opt/homebrew/bin/pdftoppm` 後生效。*
 
 ---
 
@@ -865,9 +865,9 @@ Harness Categorical Architecture、GPT-5/5.5 System Cards（參考性）
 
 | 發現 | 狀態 | 同日驗證事件 |
 |------|------|------------|
-| Harness > Model（同模型換 harness 排名 30->5） | ✅ | DeepSeek 宣布組建 harness 團隊直接對標 Claude Code，隱性承認 harness 護城河效益 |
-| 記憶整合高風險（consolidation 導致 100%->46% 精確度下降）| ✅ | Claude Memory Files 雙模式設計（Files vs Classic）是 Anthropic 對此風險的工程回應 |
-| 推論加速棧成熟（EAGLE-2 + vLLM + FlashAttention 協同）| ✅ | Gemini 3.5 Flash 同日登 APEX-Agents-AA 榜首，商業模型已整合加速棧，學術棧->產品棧轉移完成 |
+| Harness > Model（同模型換 harness 排名 30→5） | ✅ | DeepSeek 宣布組建 harness 團隊直接對標 Claude Code，隱性承認 harness 護城河效益 |
+| 記憶整合高風險（consolidation 導致 100%→46% 精確度下降）| ✅ | Claude Memory Files 雙模式設計（Files vs Classic）是 Anthropic 對此風險的工程回應 |
+| 推論加速棧成熟（EAGLE-2 + vLLM + FlashAttention 協同）| ✅ | Gemini 3.5 Flash 同日登 APEX-Agents-AA 榜首，商業模型已整合加速棧，學術棧→產品棧轉移完成 |
 | 基準可信度危機（benchmark 操作成本已低於研發成本）| ✅ | arXiv 宣布封禁 AI 幻覺引用論文（一年禁令），顯示學術誠信危機已引發制度回應 |
 | Context Engineering 臨界點（精準 context 效益超過換模型）| ✅ | Boris Cherny 倫敦演講「API 17× YoY」直接歸因於 context engineering 工程化，而非模型升級 |
 
@@ -922,7 +922,7 @@ Harness Categorical Architecture、GPT-5/5.5 System Cards（參考性）
 Categorical Architecture 提供獨立形式化（與 CAR 互補，非替代）：
 - **G（Syntactic Wiring）**：模組間資訊流的有向圖，定義 harness 內部訊息路徑
 - **Know（Knowledge Structure）**：結構不變量，以 **replay-verifiable certificates**（可重放驗證憑證）形式編碼
-- **Φ（Deployment Map）**：抽象槽位 -> 具體模型實現的對映，使 harness 模型無關
+- **Φ（Deployment Map）**：抽象槽位 → 具體模型實現的對映，使 harness 模型無關
 
 **H0-H3 成熟度階梯（Zhong & Zhu, arXiv:2605.13357, 2026-05-13）**
 
@@ -997,7 +997,7 @@ Runtime Substrate 將 11 個元件責任組織成成熟度階梯：
 
 - **論文**：Meta-Harness（Lee et al., 2026-03-30）
 - **發現**："Changing the harness around a fixed LLM can produce a **6× performance gap**"
-- **在現有報告中**：已記錄為「Harness > Model」，但以 Terminal Bench #33->#5 說明
+- **在現有報告中**：已記錄為「Harness > Model」，但以 Terminal Bench #33→#5 說明
 - **新細節**：6× 差距來自 harness **改變模型所看到的資訊**，而非更好的 prompting 本身
 - **意涵**：Auto-load rules 的設計直接決定模型的感知範圍，不只是行為約束
 
@@ -1012,10 +1012,10 @@ Runtime Substrate 將 11 個元件責任組織成成熟度階梯：
 
 - **論文**：Life-Harness（arXiv:2605.22166, 2026-05-21）
 - **發現**：Harness 應顯式對映四個失效類別：
-  - **Layer 1 — Environment Contract**：在執行前澄清 tool API -> 防止 Tool schema violations
-  - **Layer 2 — Procedural Skill**：注入相關歷史軌跡 -> 防止 Reasoning errors
-  - **Layer 3 — Action Realization**：在 tool 呼叫前驗證輸出 schema -> 防止 Malformed output
-  - **Layer 4 — Trajectory Regulation**：偵測並阻止重複循環 -> 防止 Repetition/degeneration
+  - **Layer 1 — Environment Contract**：在執行前澄清 tool API → 防止 Tool schema violations
+  - **Layer 2 — Procedural Skill**：注入相關歷史軌跡 → 防止 Reasoning errors
+  - **Layer 3 — Action Realization**：在 tool 呼叫前驗證輸出 schema → 防止 Malformed output
+  - **Layer 4 — Trajectory Regulation**：偵測並阻止重複循環 → 防止 Repetition/degeneration
 - **現有報告的缺口**：報告中只有泛稱「failures」，無此四層正式名稱
 - **意涵**：CLAUDE.md 應列舉每條規則防止哪個 Layer 的失效；每條 auto-load rule 應標注所屬 layer
 
@@ -1038,8 +1038,8 @@ Runtime Substrate 將 11 個元件責任組織成成熟度階梯：
 | **Harness 定義** | 簡要提及 CAR | Full CAR decomposition + categorical formalization（G/Know/Φ）| 精確定義 Harness via (C, A, R) 三元組 |
 | **Verification 層** | H3 ladder 中提及 | 驗證作為 runtime-first（非事後）| 將驗證從「nice-to-have」升格為「架構必要條件」|
 | **Auto-load 定性** | Caching 規則簡要提及 | Static rules = verifiable certificates | Auto-load = 正式契約，非指導方針 |
-| **Model-capability 耦合** | 未涵蓋 | 更強模型 -> 更強 harness 需求（Vesper 量化）| 加入警告：harness 精密度必須與模型能力同步 |
-| **失效分類法** | 泛稱「failures」 | 四層顯式類別對映四個生命週期層 | 增加附錄：失效類型 -> harness 元件對映 |
+| **Model-capability 耦合** | 未涵蓋 | 更強模型 → 更強 harness 需求（Vesper 量化）| 加入警告：harness 精密度必須與模型能力同步 |
+| **失效分類法** | 泛稱「failures」 | 四層顯式類別對映四個生命週期層 | 增加附錄：失效類型 → harness 元件對映 |
 | **File-backed state** | NLAH 中簡要提及 | 狀態持久化作為抗脆弱設計模式 | 將狀態管理擴展為核心架構概念 |
 | **Composer functors** | 未提及 | Compiler functors 驗證 harness migration preservation | 增加正式 harness migration 技術節 |
 
@@ -1064,7 +1064,7 @@ Runtime Substrate 將 11 個元件責任組織成成熟度階梯：
 
 1. **"Body = SKILL / Rule / Hook"**
    - 更精確：Body = (Control contracts + Agency interfaces + Runtime mechanisms)
-   - Rules -> C 層（Control artifacts）；Skills -> A 層（Agency substrate）；Hooks -> R 層（Runtime verification）
+   - Rules → C 層（Control artifacts）；Skills → A 層（Agency substrate）；Hooks → R 層（Runtime verification）
    - 三者分屬不同維度，並非並列的「Body 元件」
 
 2. **"Auto-load rules are configuration"**
@@ -1106,7 +1106,7 @@ Runtime Substrate 將 11 個元件責任組織成成熟度階梯：
 
 ---
 
-*§10 整合 2026-05-25 researcher agent 三批分析（Batch A–E），涵蓋論文：CAR Framework（He et al., 2026-04-23）、Categorical Architecture（Banu, arXiv:2605.12239）、Runtime Substrate（Zhong & Zhu, arXiv:2605.13357）、Prompt Caching（Kolbe et al., arXiv:2601.06007）、NLAH/IHR（Pan et al., 2026-03-26）、Meta-Harness（Lee et al., 2026-03-30）、Life-Harness（arXiv:2605.22166）、Vesper（Ishibashi et al., arXiv:2605.15221）共 8 篇。三個 🔴 Critical Warnings 需後續行動：Capability-Safeguard Asymmetry、Verification Placement（H2->H3）、Rule Composability（operad algebra）。*
+*§10 整合 2026-05-25 researcher agent 三批分析（Batch A–E），涵蓋論文：CAR Framework（He et al., 2026-04-23）、Categorical Architecture（Banu, arXiv:2605.12239）、Runtime Substrate（Zhong & Zhu, arXiv:2605.13357）、Prompt Caching（Kolbe et al., arXiv:2601.06007）、NLAH/IHR（Pan et al., 2026-03-26）、Meta-Harness（Lee et al., 2026-03-30）、Life-Harness（arXiv:2605.22166）、Vesper（Ishibashi et al., arXiv:2605.15221）共 8 篇。三個 🔴 Critical Warnings 需後續行動：Capability-Safeguard Asymmetry、Verification Placement（H2→H3）、Rule Composability（operad algebra）。*
 
 ---
 
@@ -1180,7 +1180,7 @@ Runtime Substrate 將 11 個元件責任組織成成熟度階梯：
 
 | 論文 | 核心貢獻 | 重要性 |
 |------|---------|--------|
-| `2026-01-07-what-matters-safety-alignment-2601-03868` | 32 模型 / 460 萬 API 調用；CoT 攻擊 **3.34× 成功率放大**（部分模型 0.6%->96.3%）；Post-training 安全退化 | High |
+| `2026-01-07-what-matters-safety-alignment-2601-03868` | 32 模型 / 460 萬 API 調用；CoT 攻擊 **3.34× 成功率放大**（部分模型 0.6%→96.3%）；Post-training 安全退化 | High |
 | `2026-04-17-security-long-term-memory-mnemonic-sovereignty-2604-16548` | （同 Memory 節）記憶系統安全威脅分類 | High |
 
 **Safety 重要新發現**：
@@ -1205,9 +1205,9 @@ Hindsight（2512.12818）提供了迄今最清晰的量化：
 | 架構決策層 | 最大已知影響 | 來源 |
 |-----------|------------|------|
 | 模型選擇 | 2-3× 能力差距 | 各 benchmark |
-| Harness 設計（單 agent）| #33->#5 排名（~5-6×）| 2026-03-12 |
+| Harness 設計（單 agent）| #33→#5 排名（~5-6×）| 2026-03-12 |
 | 框架架構（多 agent）| >100× 延遲差距 | 2602.03128 |
-| 記憶組織 | 39%->83.6%（2.1×）| 2512.12818 |
+| 記憶組織 | 39%→83.6%（2.1×）| 2512.12818 |
 | 域特化工具 | -60% 退化或 +22% 提升 | 2603.20075 |
 
 **結論**：多 agent 框架架構選擇（100×）是迄今發現最大的可控性能槓桿，遠超模型選擇。

@@ -1,15 +1,15 @@
-# 平行研究->報告 Agent 艦隊 — 可執行計劃書
+# 平行研究→報告 Agent 艦隊 — 可執行計劃書
 
 > **配套研究**：`2026-06-04-research-fleet-research.md`
 > **落點**：**改進既有 `overnight-research` SKILL**（非新建 — 違 R2）
 > **狀態**：研究+計劃完成，**APPLY 待 gated session 核准**（改既有 SKILL，逐 Phase diff）
-> **Harness Loop**：OBSERVE->IDENTIFY->PROPOSE->TEST->APPLY->RECORD
+> **Harness Loop**：OBSERVE→IDENTIFY→PROPOSE→TEST→APPLY→RECORD
 
 ---
 
 ## extend vs build 判定
 
-**EXTEND（改進既有）**。`overnight-research` SKILL 已有 fan-out / 寫盤 / 迭代 / keepalive / checkpoint 骨架（機械重驗確認）。新建 SKILL 重複骨架 -> 違 R2 + Lesson 2026-06-04-E（孤兒）。
+**EXTEND（改進既有）**。`overnight-research` SKILL 已有 fan-out / 寫盤 / 迭代 / keepalive / checkpoint 骨架（機械重驗確認）。新建 SKILL 重複骨架 → 違 R2 + Lesson 2026-06-04-E（孤兒）。
 
 ---
 
@@ -26,10 +26,10 @@
 
 ## IDENTIFY（4 個精確 gap）
 
-1. Phase 2 subagent inline 回傳（撞 context 累積）-> 改 Write scratch 檔。
-2. Phase 3 整份一次生成（撞 output-token-limit）-> reducer 逐節串流。
-3. citation 無機械 re-verify（SELF-ROUTE 65% 歸錯源類風險）-> 加 grep-back pass。
-4. 無 disk-resume（session kill 後從頭）-> Phase 0 加 scratch 掃描。
+1. Phase 2 subagent inline 回傳（撞 context 累積）→ 改 Write scratch 檔。
+2. Phase 3 整份一次生成（撞 output-token-limit）→ reducer 逐節串流。
+3. citation 無機械 re-verify（SELF-ROUTE 65% 歸錯源類風險）→ 加 grep-back pass。
+4. 無 disk-resume（session kill 後從頭）→ Phase 0 加 scratch 掃描。
 
 ---
 
@@ -45,7 +45,7 @@ subagent 指令改為「分析後 Write `research/scratch/source-N.md`（格式�
 每個報告 [citation] 的 verbatim 引文 grep 回 scratch 檔，MISS 標 ⚠️ 不刪。
 
 ### 改動 4：Phase 0 — disk-resume
-`ls research/scratch/source-*.md | wc -l` -> 已存在的 source 跳過，從缺口續跑。
+`ls research/scratch/source-*.md | wc -l` → 已存在的 source 跳過，從缺口續跑。
 
 ### 配套：`research/scratch/` 加入 .gitignore（machine-local 中間檔，不 commit — 對齊 Lesson 2026-06-04-B SYNC-STATUS untrack 原則）。
 
@@ -56,10 +56,10 @@ subagent 指令改為「分析後 Write `research/scratch/source-N.md`（格式�
 | # | 條件 | 指令 |
 |---|------|------|
 | T1 | SKILL 合法 | `bash scripts/healthcheck.sh` FAIL=0 |
-| T2 | scratch-write 機制 | 跑 2-source 小研究 -> `ls research/scratch/source-*.md` = 2 |
-| T3 | reducer 逐節不撞 limit | 生成 ≥10k 字報告無 output-limit error -> `wc -m` ≥ 10000 |
-| T4 | resume | kill 後重跑 -> 已有 scratch 跳過，覆蓋率一致 |
-| T5 | citation grep-back | 注入 1 個 scratch 無對應引文的假 citation -> 標 ⚠️ |
+| T2 | scratch-write 機制 | 跑 2-source 小研究 → `ls research/scratch/source-*.md` = 2 |
+| T3 | reducer 逐節不撞 limit | 生成 ≥10k 字報告無 output-limit error → `wc -m` ≥ 10000 |
+| T4 | resume | kill 後重跑 → 已有 scratch 跳過，覆蓋率一致 |
+| T5 | citation grep-back | 注入 1 個 scratch 無對應引文的假 citation → 標 ⚠️ |
 
 ---
 
@@ -79,7 +79,7 @@ ls .claude/skills/ | grep -v RESOLVER | wc -l   # 26 不變
 ls research/scratch/source-*.md 2>/dev/null | wc -l   # 測試後 = source 數
 git check-ignore research/scratch/dummy   # 確認 ignore 生效
 ```
-**失敗判定**：任一不成立 -> REFUTED 誠實回報。
+**失敗判定**：任一不成立 → REFUTED 誠實回報。
 
 ---
 
@@ -95,7 +95,7 @@ git check-ignore research/scratch/dummy   # 確認 ignore 生效
 
 ## RECORD
 
-APPLY 後 MEMORY ≤3 行 + lesson。若 output-limit 仍復現 -> 記 Lesson（reducer 逐節粒度需再細分）。
+APPLY 後 MEMORY ≤3 行 + lesson。若 output-limit 仍復現 → 記 Lesson（reducer 逐節粒度需再細分）。
 
 ---
 

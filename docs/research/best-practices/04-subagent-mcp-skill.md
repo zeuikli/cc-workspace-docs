@@ -22,8 +22,8 @@ type: best-practices
 
 **判斷心智模型：**
 > "Will I need this tool output again, or just the conclusion?"
-- 只需要結論 -> 委派 subagent（中間產物留在 child context）
-- 需要反覆檢視中間產物 -> 主對話自己做
+- 只需要結論 → 委派 subagent（中間產物留在 child context）
+- 需要反覆檢視中間產物 → 主對話自己做
 
 ### Sub-Agent vs Agent Teams vs 直接執行
 
@@ -72,7 +72,7 @@ claude agents    # 開啟 Agent View
 | 等待輸入 | 暫停等待用戶回覆的 session |
 | 已完成 | 結束的 session |
 
-- 選取 row -> attach 進入完整對話；`←` 返回列表
+- 選取 row → attach 進入完整對話；`←` 返回列表
 - Background session 在無 terminal 附加時持續執行
 
 **dispatch flags（啟動新 session 時附加）：**
@@ -318,7 +318,7 @@ or reading multiple files.
 2. **Hooks ≠ Prompts**：Hooks 強制執行，Prompts 只是建議
 3. **Skills 是 lazy-load**：description 始終載入，full content 僅在觸發時載入
 4. **Advisor 模式勝於直接使用 Opus**：讓 Sonnet 主執行，Opus 只在架構層諮詢
-5. **預期工具呼叫 > 20 次 -> 必須委派 Sub-Agent**
+5. **預期工具呼叫 > 20 次 → 必須委派 Sub-Agent**
 
 ---
 

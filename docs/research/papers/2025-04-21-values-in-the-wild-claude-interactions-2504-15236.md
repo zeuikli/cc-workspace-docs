@@ -143,7 +143,7 @@ Discovered values align with "helpful, harmless, honest" training framework:
 **Extraction targets**:
 - **AI values**: Normative considerations influencing responses (explicit statements + revealed preferences)
 - **Human values**: Only explicitly stated values (privacy preservation)
-- **Response type**: 7 classifications (strong support -> strong resistance)
+- **Response type**: 7 classifications (strong support → strong resistance)
 - **Task categorization**: Primary purpose/request type
 
 **Statistical method**: Chi-square testing + adjusted Pearson residuals + Bonferroni correction for multiple comparisons.

@@ -81,7 +81,7 @@ type: best-practices
 ## Skill 生命週期管理
 
 ```
-Plan -> Create & Review -> Test -> Deploy -> Monitor -> Iterate or Deprecate
+Plan → Create & Review → Test → Deploy → Monitor → Iterate or Deprecate
 ```
 
 | 階段 | 關鍵動作 |
@@ -91,7 +91,7 @@ Plan -> Create & Review -> Test -> Deploy -> Monitor -> Iterate or Deprecate
 | **Test** | 單獨測試 + 與現有 Skill 共存測試；驗證 triggering accuracy、output quality、無回歸 |
 | **Deploy** | 透過 Skills API 上傳（workspace 全員可用）；記錄到內部 registry（用途、擁有者、版本）|
 | **Monitor** | 追蹤使用模式、收集回饋；定期重跑評估偵測 drift；實作 application-level logging（API 目前不提供 analytics）|
-| **Iterate or Deprecate** | 新版本需通過完整評估套件；工作流程改變或評估分數下降 -> 更新；評估持續失敗 -> 廢棄 |
+| **Iterate or Deprecate** | 新版本需通過完整評估套件；工作流程改變或評估分數下降 → 更新；評估持續失敗 → 廢棄 |
 
 ---
 
@@ -99,7 +99,7 @@ Plan -> Create & Review -> Test -> Deploy -> Monitor -> Iterate or Deprecate
 
 ### 召回率限制
 
-同時載入的 Skills 數量過多 -> Claude 可能無法選到正確的 Skill。每個 Skill 的 metadata 在 system prompt 中競爭注意力。
+同時載入的 Skills 數量過多 → Claude 可能無法選到正確的 Skill。每個 Skill 的 metadata 在 system prompt 中競爭注意力。
 
 - 使用評估套件衡量 recall accuracy，加入 Skill 時追蹤變化，效能下降就停止新增
 - **API 請求最多支援 8 個 Skills**；若需更多，考慮合併或按任務類型路由不同 Skill 集
@@ -152,7 +152,7 @@ Skill 目錄存放在 Git（SKILL.md + 所有 bundle 檔案 = 一個 Git-tracked
 |------|------|
 | **Production** | 固定特定版本；升版前跑完整評估套件；每次更新都視為新部署並需完整安全審查 |
 | **Dev/Test** | 使用最新版驗證變更 |
-| **Rollback** | 保留前一版本備用；新版評估失敗 -> 立即回退 |
+| **Rollback** | 保留前一版本備用；新版評估失敗 → 立即回退 |
 
 **Integrity verification**：計算已審查 Skill 的 checksum 並在部署時驗證；使用 signed commits 確保來源可信。
 

@@ -17,7 +17,7 @@
 | auto-load 量級（數千 token）| ✅ 有效 |
 | **跨語言精確比較（TC vs EN 省幾%）** | ❌ 污染 1.7×，不可用 |
 
--> 本報告跨語言比較**改用 tiktoken o200k proxy**（明確標註），精確 Claude 數需 **cloud session `count_tokens`**（本機不可得）。
+→ 本報告跨語言比較**改用 tiktoken o200k proxy**（明確標註），精確 Claude 數需 **cloud session `count_tokens`**（本機不可得）。
 
 ---
 
@@ -46,7 +46,7 @@ implementer 產出語意 1:1 英文版（5 檔，條數逐一核對一致：bull
 
 **結論（o200k proxy）**：英文 1:1 直譯省 ~17% token，但**多 16.5% bytes**。
 
-> ⚠️ Claude 真實省幅未知且**可能與 17% 不同**。理論推斷（advisor）：英文 Claude≈o200k，中文 Claude≥o200k -> TC->EN 在 Claude 上**至少**省 o200k 的 17%，可能更多。但 `claude -p` 差分污染使本機無法定論。**精確值待 cloud session `count_tokens`**。
+> ⚠️ Claude 真實省幅未知且**可能與 17% 不同**。理論推斷（advisor）：英文 Claude≈o200k，中文 Claude≥o200k → TC→EN 在 Claude 上**至少**省 o200k 的 17%，可能更多。但 `claude -p` 差分污染使本機無法定論。**精確值待 cloud session `count_tokens`**。
 
 ---
 
@@ -55,18 +55,18 @@ implementer 產出語意 1:1 英文版（5 檔，條數逐一核對一致：bull
 | 排名 | 機制 | 省幅 | 語意風險 | 信度 |
 |------|------|------|---------|------|
 | **1** | **結構槓桿**（on-demand 下沉 / 去 repo-可推導 / 合併冗餘）| 30–85% | 極低 | [官方] |
-| **2** | **符號/markdown 壓縮**（`-> \| !!` 取代散文、表格取代段落）| 20–30% | 低 | [三方] |
+| **2** | **符號/markdown 壓縮**（`→ \| !!` 取代散文、表格取代段落）| 20–30% | 低 | [三方] |
 | **3** | **Prompt caching**（確保前綴穩定）| 成本 −90%（非 context）| 零 | [官方] |
 | **4** | **Caveman/電報式**（規則本身去冠詞/贅詞）| 30–50%(宣稱) | **高** | [軼事] |
 
 ### 3.1 結構槓桿（最高 ROI，[官方]）
 - Anthropic 工程部落格：progressive disclosure 是 Agent Skills 核心；17 skill 名+描述 ~1,700 token，全展開需 10–15×。
 - Karpathy「右邊 context > 更多 context」；移除「可從 repo 推導」內容（目錄/tech stack = 噪音）。
-- 你的 workspace **已有 Trigger-Index + refs/ 分層基建** -> 直接可用。風險極低（只搬低頻規則，高頻/安全紅線續內嵌）。
+- 你的 workspace **已有 Trigger-Index + refs/ 分層基建** → 直接可用。風險極低（只搬低頻規則，高頻/安全紅線續內嵌）。
 
 ### 3.2 符號/markdown 壓縮（[三方]）
 - markdown 格式佔 prompt 20–30% token；表格比散文緊湊，Claude 無理解衰退。
-- `->`（1–2 tok）< "leads to"（3 tok）；**emoji 反貴**（🎯 = 3–4 tok，比常見英文詞貴 3–10×）-> 勿當語意錨點。
+- `→`（1–2 tok）< "leads to"（3 tok）；**emoji 反貴**（🎯 = 3–4 tok，比常見英文詞貴 3–10×）→ 勿當語意錨點。
 
 ### 3.3 Prompt caching 攤銷（[官方]，親驗 break-even）
 [親驗] 用官方乘數驗算（write 1.25× / read 0.10× / base 1.0×）：
@@ -77,22 +77,22 @@ implementer 產出語意 1:1 英文版（5 檔，條數逐一核對一致：bull
 | **2** | 2.00 | 1.35 | **+32.5%（回本）** |
 | 10 | 10.00 | 2.15 | 78.5% |
 
-**break-even = 第 2 次請求**（推翻某來源「13 次」的錯誤）。**但 cache 命中只省成本軸，不省 context window 格位、不影響 compliance** -> 壓 auto-load token 在這兩軸仍不可替代。
+**break-even = 第 2 次請求**（推翻某來源「13 次」的錯誤）。**但 cache 命中只省成本軸，不省 context window 格位、不影響 compliance** → 壓 auto-load token 在這兩軸仍不可替代。
 
 ### 3.4 Caveman / 電報式（[軼事]，不建議用於規則）
 - 社群實測 45–75% 省幅**全是 output token**（限制輸出簡短），非輸入端規則壓縮。
 - arXiv 2604.00025 的準確度提升是「限制輸出」效果，**不能倒推**「輸入規則電報化不衰退」。
-- 安全紅線 / 多條件邏輯規則電報化 -> 高歧義風險，零 Claude 實測背書。
+- 安全紅線 / 多條件邏輯規則電報化 → 高歧義風險，零 Claude 實測背書。
 
 ---
 
 ## §4 給 Zeuik 的最終建議優先序
 
-1. **[P1 立即] 結構槓桿下沉**：低頻細節（control-flow 表 ~250B、跨節重複）-> refs/ on-demand。Trigger-Index 已有基建，**省 token 且零語意損失**，是唯一無風險增量手段。走 `/autoload-evolution` 閉環。
+1. **[P1 立即] 結構槓桿下沉**：低頻細節（control-flow 表 ~250B、跨節重複）→ refs/ on-demand。Trigger-Index 已有基建，**省 token 且零語意損失**，是唯一無風險增量手段。走 `/autoload-evolution` 閉環。
 
-2. **[P2] 散文->bullet/table**：core.md 數個散文段轉結構化。**維持繁中**，改版式不改語言，省 10–20% 且 compliance 不降。
+2. **[P2] 散文→bullet/table**：core.md 數個散文段轉結構化。**維持繁中**，改版式不改語言，省 10–20% 且 compliance 不降。
 
-3. **[P3 免費] 確保 cache 前綴穩定**：auto-load 不放動態內容（時間戳/session 狀態 -> 移至 user message / `<system-reminder>`）。CLAUDE.md §context-management 已寫對方向。
+3. **[P3 免費] 確保 cache 前綴穩定**：auto-load 不放動態內容（時間戳/session 狀態 → 移至 user message / `<system-reminder>`）。CLAUDE.md §context-management 已寫對方向。
 
 4. **不建議**：
    - **語言切換英文**：o200k proxy 省 17% 但多 16.5% bytes，且 Claude 真實省幅未定；**更重要——若 cache 穩定命中，省的 token 邊際成本趨近 0**（§3.3），語言切換的工程/合規成本不划算。守「繁中鐵律」更安全。

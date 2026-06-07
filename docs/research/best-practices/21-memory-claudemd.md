@@ -36,7 +36,7 @@ type: best-practices
 - 你輸入了上次 session 也輸入過的同樣修正或說明
 - 新團隊成員需要同樣的 context 才能有效工作
 
-**放什麼**：每次 session 都需要的事實：build 指令、慣例、專案結構、"always do X" 規則。多步驟流程或只在某個 codebase 部分重要的事項 -> 移到 skill 或 path-scoped rule。
+**放什麼**：每次 session 都需要的事實：build 指令、慣例、專案結構、"always do X" 規則。多步驟流程或只在某個 codebase 部分重要的事項 → 移到 skill 或 path-scoped rule。
 
 ### 放置位置與範圍
 
@@ -59,7 +59,7 @@ CLAUDE.md 和 CLAUDE.local.md 在工作目錄**以上**的目錄層級在啟動�
 
 ### 寫有效的指令
 
-**大小**：每個 CLAUDE.md 目標在 200 行以內。超過 -> 用 path-scoped rules（只在 Claude 處理符合路徑的檔案時載入）。可用 imports 分割，但匯入的檔案仍會載入並佔用 context。
+**大小**：每個 CLAUDE.md 目標在 200 行以內。超過 → 用 path-scoped rules（只在 Claude 處理符合路徑的檔案時載入）。可用 imports 分割，但匯入的檔案仍會載入並佔用 context。
 
 **結構**：用 markdown headers 和 bullets 分組相關指令。
 
@@ -225,7 +225,7 @@ Claude 在工作過程中自動累積知識：build 指令、debug insights、�
 ### 啟用/停用
 
 預設啟用。切換方式：
-- 在 session 中執行 `/memory` -> 使用 auto memory toggle
+- 在 session 中執行 `/memory` → 使用 auto memory toggle
 - 或在 settings 中設定：
 
 ```json
@@ -295,7 +295,7 @@ CLAUDE.md 內容作為 system prompt 後的 user 訊息傳遞，不是 system pr
 
 ### CLAUDE.md 太大
 
-超過 200 行 -> 使用 path-scoped rules（只在 Claude 處理符合檔案時載入），或修剪非每次 session 都需要的內容。用 `@path` imports 有助於組織，但不減少 context（匯入的檔案仍在啟動時載入）。
+超過 200 行 → 使用 path-scoped rules（只在 Claude 處理符合檔案時載入），或修剪非每次 session 都需要的內容。用 `@path` imports 有助於組織，但不減少 context（匯入的檔案仍在啟動時載入）。
 
 ### `/compact` 後指令消失
 

@@ -104,7 +104,7 @@ messages.append({"role": "assistant", "content": response.content})
 messages.append({"role": "user", "content": "Now add a max-in-flight limit of 10."})
 ```
 
-若下一輪省略 advisor tool 但 history 仍含 `advisor_tool_result` blocks -> `400 invalid_request_error`。
+若下一輪省略 advisor tool 但 history 仍含 `advisor_tool_result` blocks → `400 invalid_request_error`。
 
 ---
 
@@ -138,7 +138,7 @@ tools = [
 ]
 ```
 
-**使用時機**：advisor 呼叫次數 ≤ 2 次 -> 不划算（cache write 比 read 省的多）；≥ 3 次 -> 啟用划算，越多越省。
+**使用時機**：advisor 呼叫次數 ≤ 2 次 → 不划算（cache write 比 read 省的多）；≥ 3 次 → 啟用划算，越多越省。
 
 **保持一致**：整個對話不要切換 caching on/off（造成 cache miss）。
 

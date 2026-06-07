@@ -12,7 +12,7 @@ version: 2.0
 
 ### 相比 v1 的搜尋策略改進
 
-**v1 盲點** -> **v2 修正方式**：
+**v1 盲點** → **v2 修正方式**：
 
 | v1 盲點 | v2 做法 | 效果 |
 |---------|---------|------|
@@ -25,7 +25,7 @@ version: 2.0
 
 1. **安全 CVE 軌跡**：三個 CVE（2025-59536/2026-21852/2025-54794）揭示 pre-trust window 是架構性漏洞，不是配置問題
 2. **架構確定性比例**：98.4% 確定性基礎設施（arXiv 學術數據）——這個數字改變了對 CLAUDE.md 作為安全機制的認知
-3. **Self-evolving harness**：LobeHub L1->L4 演化梯度，75%->95% 成功率（生產級實測）
+3. **Self-evolving harness**：LobeHub L1→L4 演化梯度，75%→95% 成功率（生產級實測）
 4. **Effort 量化矩陣**：high vs xhigh 的具體 ROI（high=93/100 vs xhigh=95/100，成本差 4x）
 
 ---
@@ -43,7 +43,7 @@ version: 2.0
 ```bash
 # 稽核哪些規則在 CLAUDE.md vs hooks
 grep -n "MUST NOT\|never\|block\|禁止\|不得" .claude/rules/core.md
-# 安全關鍵的規則 -> 遷移到 hooks
+# 安全關鍵的規則 → 遷移到 hooks
 ```
 
 ### 發現 2：Skill 激活率問題（已有 hooks 的 Zeuik harness 可直接修復）
@@ -62,7 +62,7 @@ grep -c "Skill" ~/.claude/logs/*.jsonl 2>/dev/null || echo "需要其他方式�
 
 ### 發現 3：CVE-2025-59536 供應鏈攻擊向量（安全）
 
-**攻擊路徑**：惡意 repo clone -> .claude/settings.json 中的 hooks 在 trust dialog 前執行 -> RCE
+**攻擊路徑**：惡意 repo clone → .claude/settings.json 中的 hooks 在 trust dialog 前執行 → RCE
 
 **Zeuik harness 防護狀態**：
 - 是否稽核過 .claude/settings.json 的 hooks 來源？
@@ -74,7 +74,7 @@ grep -c "Skill" ~/.claude/logs/*.jsonl 2>/dev/null || echo "需要其他方式�
 cat .claude/settings.json | python3 -c "import json,sys; d=json.load(sys.stdin); print(json.dumps(d.get('hooks',{}), indent=2))"
 ```
 
-### 發現 4：Dynamic Workflows 三大失敗模式 -> Zeuik harness 的 unverified_success 閘門設計印證
+### 發現 4：Dynamic Workflows 三大失敗模式 → Zeuik harness 的 unverified_success 閘門設計印證
 
 **@trq212 記錄的三大失敗模式**：
 1. Agentic laziness（20/50 項就宣告完成）
@@ -86,7 +86,7 @@ cat .claude/settings.json | python3 -c "import json,sys; d=json.load(sys.stdin);
 - adjudicate 主對話親跑解決了 #2（絕不經 sub-agent 中介）
 - RECORD 階段的 checkpoint 解決了 #3
 
--> **結論**：Zeuik harness 的設計與社群最新研究高度一致，是獨立收斂的驗證。
+→ **結論**：Zeuik harness 的設計與社群最新研究高度一致，是獨立收斂的驗證。
 
 ---
 
@@ -136,7 +136,7 @@ cat .claude/settings.json | python3 -c "import json,sys; d=json.load(sys.stdin);
 原因：
 - 本次研究涉及 30+ 新文章收錄，commit 量大
 - 避免與 feature/claude-code-practices-research branch 的現有 32 篇衝突
-- 符合 core.md「多 session 並行 -> 用 worktree」規則
+- 符合 core.md「多 session 並行 → 用 worktree」規則
 
 ### 決策 2：為何不使用 overnight-research:full 20 輪迭代
 

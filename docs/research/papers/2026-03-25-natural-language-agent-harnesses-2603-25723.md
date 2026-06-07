@@ -21,7 +21,7 @@ source_tier: P
 
 ## Abstract
 
-The paper proposes separating agent harness logic into two components: **Natural-Language Agent Harnesses (NLAHs)** for policy specification and **Intelligent Harness Runtime (IHR)** for execution. This addresses the core problem that harness engineering typically buries control logic within tightly coupled code, making it impossible to inspect, compare, or ablate. NLAHs achieve comparable performance to code harnesses across SWE-bench Verified, Terminal-Bench 2.0, and OSWorld benchmarks while dramatically reducing policy token counts (60.1K -> 2.9K in one case).
+The paper proposes separating agent harness logic into two components: **Natural-Language Agent Harnesses (NLAHs)** for policy specification and **Intelligent Harness Runtime (IHR)** for execution. This addresses the core problem that harness engineering typically buries control logic within tightly coupled code, making it impossible to inspect, compare, or ablate. NLAHs achieve comparable performance to code harnesses across SWE-bench Verified, Terminal-Bench 2.0, and OSWorld benchmarks while dramatically reducing policy token counts (60.1K → 2.9K in one case).
 
 ---
 
@@ -80,7 +80,7 @@ The authors recommend NLAH composition following five principles derived from ab
 
 **Finding**: Yes. Across SWE-bench Verified, Terminal-Bench 2.0, and OSWorld:
 - NLAHs achieved **comparable performance** to code harnesses
-- Policy token counts reduced dramatically (e.g., Live-SWE: 60.1K code -> 2.9K NLAH tokens)
+- Policy token counts reduced dramatically (e.g., Live-SWE: 60.1K code → 2.9K NLAH tokens)
 
 **Implication**: Policy expressiveness is not proportional to policy length. Most code harness complexity is implementation detail, not policy.
 

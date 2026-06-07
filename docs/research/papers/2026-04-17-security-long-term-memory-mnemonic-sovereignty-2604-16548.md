@@ -19,7 +19,7 @@ source_tier: P
 
 六個操作階段 × 四個安全目標的矩陣：
 
-**操作階段**：Write -> Store -> Retrieve -> Execute -> Share -> Forget/Rollback
+**操作階段**：Write → Store → Retrieve → Execute → Share → Forget/Rollback
 
 **安全目標**：完整性（Integrity）、機密性（Confidentiality）、可用性（Availability）、治理（Governance）
 

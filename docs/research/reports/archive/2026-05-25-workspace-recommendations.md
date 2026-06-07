@@ -49,7 +49,7 @@ grep "Fan-out" .claude/rules/subagent-strategy.md
 
 **目標**：實現 Episodic-First 記憶架構，防止整合失真
 
-**ARC-AGI 量化依據**（PDF 直接引用）：Stream 整合模式（每次互動後自動合併）-> 第 10 輪後準確率 52.6%，第 20 輪後 46%（從 100% 跌落）。batch 整合（每 50 輪一次）-> 保持 100%。原始軌跡保留 -> 與 batch 整合相當。
+**ARC-AGI 量化依據**（PDF 直接引用）：Stream 整合模式（每次互動後自動合併）→ 第 10 輪後準確率 52.6%，第 20 輪後 46%（從 100% 跌落）。batch 整合（每 50 輪一次）→ 保持 100%。原始軌跡保留 → 與 batch 整合相當。
 
 **具體步驟**：
 
@@ -63,9 +63,9 @@ grep "Fan-out" .claude/rules/subagent-strategy.md
 ```
 [Memory Consolidation Gate Prompt]
 在執行記憶整合前，評估：
-1. 此記憶是否包含衝突資訊？（若是 -> 標記，不整合）
-2. 整合後是否可還原至原始事件？（若否 -> 僅摘要，保留原始）
-3. 此記憶的任務類型是否跨域混批？（若是 -> 分開整合）
+1. 此記憶是否包含衝突資訊？（若是 → 標記，不整合）
+2. 整合後是否可還原至原始事件？（若否 → 僅摘要，保留原始）
+3. 此記憶的任務類型是否跨域混批？（若是 → 分開整合）
 依 2026-05-13 AutoMode 原則：優先 Retain，次選 Delete，最後才 Consolidate。
 
 格式：
@@ -164,22 +164,22 @@ grep "Fan-out" .claude/rules/subagent-strategy.md
 
 ```
 問題 1：是否有 H100 GPU？
-  ├─ 是 -> 啟用 FlashAttention-3 FP16（740 TFLOPs/s）
+  ├─ 是 → 啟用 FlashAttention-3 FP16（740 TFLOPs/s）
   │        可選 FP8 進一步提速（1.2 PFLOPs/s，誤差低 2.6×）
-  └─ 否 -> 啟用 FlashAttention-2（A100 225 TFLOPs/s）
+  └─ 否 → 啟用 FlashAttention-2（A100 225 TFLOPs/s）
 
 問題 2：延遲敏感 or 吞吐敏感？
-  ├─ 延遲優先 -> EAGLE-2 動態草稿樹（LLaMA2-70B 達 4.26×）
+  ├─ 延遲優先 → EAGLE-2 動態草稿樹（LLaMA2-70B 達 4.26×）
   │              選草稿模型：同系列小 2-3× 的模型
-  └─ 吞吐優先 -> vLLM + PagedAttention（廢片 <5%，吞吐 2-4×）
-               -> 啟用 beam search block sharing
+  └─ 吞吐優先 → vLLM + PagedAttention（廢片 <5%，吞吐 2-4×）
+               → 啟用 beam search block sharing
 
 問題 3：有訓練需求？
-  ├─ 是 -> 加入多令牌預測頭（4-token，無記憶開銷，代碼 +12-17%）
-  └─ 否 -> Medusa（無草稿，QLoRA fine-tune，2.2-2.8×）
+  ├─ 是 → 加入多令牌預測頭（4-token，無記憶開銷，代碼 +12-17%）
+  └─ 否 → Medusa（無草稿，QLoRA fine-tune，2.2-2.8×）
 
 問題 4：多模型混用？
-  └─ 是 -> RouteLLM 路由器（3.66× 成本削減，95% 性能保持）
+  └─ 是 → RouteLLM 路由器（3.66× 成本削減，95% 性能保持）
 ```
 
 **Prompts 模板（推理服務評估）**：
@@ -213,7 +213,7 @@ grep "Fan-out" .claude/rules/subagent-strategy.md
 
 ---
 
-## §10.4 四層生命週期失效 -> Workspace 完整對映
+## §10.4 四層生命週期失效 → Workspace 完整對映
 
 | Life-Harness 正式層 | 失效類型 | Harness 防護機制 | Workspace 具體對應 |
 |--------------------|---------|----------------|-----------------|
@@ -233,8 +233,8 @@ grep "Fan-out" .claude/rules/subagent-strategy.md
 | **Harness 定義** | 簡要提及 CAR | Full CAR decomposition + categorical formalization（G/Know/Φ）| 精確定義 Harness via (C, A, R) 三元組 |
 | **Verification 層** | H3 ladder 中提及 | 驗證作為 runtime-first（非事後）| 將驗證從「nice-to-have」升格為「架構必要條件」|
 | **Auto-load 定性** | Caching 規則簡要提及 | Static rules = verifiable certificates | Auto-load = 正式契約，非指導方針 |
-| **Model-capability 耦合** | 未涵蓋 | 更強模型 -> 更強 harness 需求（Vesper 量化）| 加入警告：harness 精密度必須與模型能力同步 |
-| **失效分類法** | 泛稱「failures」 | 四層顯式類別對映四個生命週期層 | 增加附錄：失效類型 -> harness 元件對映 |
+| **Model-capability 耦合** | 未涵蓋 | 更強模型 → 更強 harness 需求（Vesper 量化）| 加入警告：harness 精密度必須與模型能力同步 |
+| **失效分類法** | 泛稱「failures」 | 四層顯式類別對映四個生命週期層 | 增加附錄：失效類型 → harness 元件對映 |
 | **File-backed state** | NLAH 中簡要提及 | 狀態持久化作為抗脆弱設計模式 | 將狀態管理擴展為核心架構概念 |
 | **Composer functors** | 未提及 | Compiler functors 驗證 harness migration preservation | 增加正式 harness migration 技術節 |
 
@@ -254,7 +254,7 @@ grep "Fan-out" .claude/rules/subagent-strategy.md
 
 **立即行動**：現有 CLAUDE.md 對 Haiku/Sonnet 匹配；若升至 Opus 作主模型，需補充 runtime verification gates。
 
-### Warning 2：Verification Placement（H2->H3 升級缺口）
+### Warning 2：Verification Placement（H2→H3 升級缺口）
 
 - 當前規則缺乏**執行路徑內的顯式 runtime verification**
 - 現狀：healthcheck.sh 在任務結束後執行（H2 成熟度）
@@ -285,13 +285,13 @@ grep "Fan-out" .claude/rules/subagent-strategy.md
 
 | 優先度 | 行動 | 預期效益 | 依據論文 |
 |--------|------|---------|---------|
-| P1 即刻 | CLAUDE.md 精簡 + MCP 工具精選 | Harness H1->H2；錨定效應消除 | `2026-03-12`, `2026-04-14` |
+| P1 即刻 | CLAUDE.md 精簡 + MCP 工具精選 | Harness H1→H2；錨定效應消除 | `2026-03-12`, `2026-04-14` |
 | P1 即刻 | docs/ 結構化知識庫 | 降低每次 session 初始化 token 成本 | `2026-02-11`, `2026-04-23-car` |
-| P2 本週 | MEMORY.md 整合頻率降低（5-10 session batch） | 防止整合失真（ARC-AGI 100%->46% 風險） | `2026-05-13-useful-memories` |
+| P2 本週 | MEMORY.md 整合頻率降低（5-10 session batch） | 防止整合失真（ARC-AGI 100%→46% 風險） | `2026-05-13-useful-memories` |
 | P2 本週 | 靜態 cache 前綴明確化 | 78.5% 成本削減 | `2026-01-31` |
 | P3 本月 | 技能庫審計（具體性/基礎性/正交性）| +16.2pp 平均性能 | `2026-02-13`, `2026-04-22` |
 | P3 本月 | AGENTS.md 隔離審查 | 防 benchmark 操縱 | `2026-05-23-cheating` |
-| P3 長期 | H2->H3：runtime verification gates | 消除 Verification Placement gap | `arXiv:2605.13357` |
+| P3 長期 | H2→H3：runtime verification gates | 消除 Verification Placement gap | `arXiv:2605.13357` |
 | P3 長期 | 能力-Safeguard 追蹤（模型升版時同步更新規則）| 防 Capability-Safeguard 非對稱性 | `arXiv:2605.15221` |
 
 ---

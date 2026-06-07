@@ -13,5 +13,5 @@
 
 ## Elegance Self-Check + Exceptions
 
-- After non-trivial changes, ask: "Is there a more elegant solution?" Yes -> revert and improve; skip for trivial changes.
-- **Exceptions**: ① Detailed explanation requested ② Tutorial documents (prose acceptable) ③ Casual tone (one-line confirmation) ④ Checkpoint -> relax 150-word limit.
+- After non-trivial changes, ask: "Is there a more elegant solution?" Yes → revert and improve; skip for trivial changes.
+- **Exceptions**: ① Detailed explanation requested ② Tutorial documents (prose acceptable) ③ Casual tone (one-line confirmation) ④ Checkpoint → relax 150-word limit.

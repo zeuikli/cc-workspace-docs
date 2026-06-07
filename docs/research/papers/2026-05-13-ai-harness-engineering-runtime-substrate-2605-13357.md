@@ -84,7 +84,7 @@ All four H-levels produced working patches, but evidence packages differed syste
 
 ## Key Metrics
 
-**Missing-Harness Human Intervention Rate (M-HIR)**: Treats human help as diagnostic signal. When a human interprets a test failure -> missing observability; when a human verifies final behavior -> missing verification support.
+**Missing-Harness Human Intervention Rate (M-HIR)**: Treats human help as diagnostic signal. When a human interprets a test failure → missing observability; when a human verifies final behavior → missing verification support.
 
 **Failure Taxonomy**: Eight failure types: context, tool, feedback, verification, recovery, entropy, model, and unknown.
 

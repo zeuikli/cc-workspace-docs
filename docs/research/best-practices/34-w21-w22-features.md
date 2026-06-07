@@ -1,7 +1,7 @@
 # Claude Code W21–W22 新功能（2026-05-18 ~ 2026-05-29）
 
 > 來源：官方 What's New  
-> 版本：v2.1.143 -> v2.1.157  
+> 版本：v2.1.143 → v2.1.157  
 > 整理日期：2026-06-05
 
 ---
@@ -25,7 +25,7 @@ claude update          # 更新至最新版
 | 功能 | 說明 |
 |------|------|
 | `/usage` 細分 | 顯示 skill、subagent、plugin、MCP server 各自消耗的方案配額 |
-| `extra-usage` -> `usage-credits` | 重命名，`/extra-usage` 舊名仍有效 |
+| `extra-usage` → `usage-credits` | 重命名，`/extra-usage` 舊名仍有效 |
 | `/code-review` 指令 | 報告正確性 bug，支援 effort 等級（`/code-review high`）；`--comment` 發布行內 GitHub PR 評論 |
 | Background sessions | 背景 session 出現在 `/resume`（標記 `bg`），`Ctrl+T` 固定後保持存活 |
 | `claude agents --json` | 以 JSON 列出活躍 session，適合 status bar、session picker 腳本 |
@@ -98,7 +98,7 @@ Opus 4.6 fast mode 已 deprecated。
 | Vim mode：`/` 反向歷史搜尋 | NORMAL mode 下 `/` 開啟反向歷史搜尋（Bash/Zsh vi-mode 對應） |
 | 串流工具執行 | 所有情境（含 telemetry 停用、Bedrock/Vertex/Foundry）皆啟用 |
 | `←←` agents view | 在 Bedrock/Vertex/Foundry 和 telemetry 停用時也可用 |
-| Claude in Chrome | `/chrome` -> "Select browser…" 選擇多個已連接瀏覽器 |
+| Claude in Chrome | `/chrome` → "Select browser…" 選擇多個已連接瀏覽器 |
 | MCP `mcp list` / `mcp get` | 顯示未批准的 `.mcp.json` server 為 pending，不再自動批准 |
 
 ---

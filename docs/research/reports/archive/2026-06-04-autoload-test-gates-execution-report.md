@@ -20,9 +20,9 @@ type: execution-report
 ### R1.1 + R1.2 — measure.sh 加 `--gate` CI 模式（G-A byte cap + G-B §R 存活）
 
 - **設計**：opt-in `--gate` flag。預設行為**完全不變**（exit 0，informational）——零破壞既有 caller（INDEX.md/settings 白名單；確認 measure.sh **不在任何 hook**）。
-- **G-A**：總 byte >19,000 -> `GATE_FAIL+1`。
-- **G-B**：core.md §R header != 11 或 context-management 無 §R6 -> `GATE_FAIL+1`（偵測規則檔截斷）。
-- `--gate` 且 `GATE_FAIL>0` -> exit 1 + "GATE FAIL"；否則 "GATE PASS"。
+- **G-A**：總 byte >19,000 → `GATE_FAIL+1`。
+- **G-B**：core.md §R header != 11 或 context-management 無 §R6 → `GATE_FAIL+1`（偵測規則檔截斷）。
+- `--gate` 且 `GATE_FAIL>0` → exit 1 + "GATE FAIL"；否則 "GATE PASS"。
 
 ### R1.3 — `scripts/measure-hook-timing.sh`（G-C 可重跑 hook 計時）
 
@@ -50,14 +50,14 @@ P5 auto-load byte: 18455 total（不變）✓
 
 ```
 測試 A（破壞 §R1 header）：
-  破壞後 §R count: 10 -> measure.sh --gate exit=1 + "GATE FAIL" ✓
+  破壞後 §R count: 10 → measure.sh --gate exit=1 + "GATE FAIL" ✓
   git checkout 還原後 §R count: 11 ✓
 測試 B（注入 >cap byte，19066）：
   measure.sh --gate exit=1 + "GATE FAIL" ✓
   git checkout 還原後總 byte: 18455 ✓
 ```
 
--> gate 是**真的**，非裝飾性。auto-load 檔乾淨還原。
+→ gate 是**真的**，非裝飾性。auto-load 檔乾淨還原。
 
 ---
 
@@ -69,14 +69,14 @@ P5 auto-load byte: 18455 total（不變）✓
 | **T2** 無待修事實錯誤 | auto-load κ 誤用 0 處 / cache 0.94 0 處 | ✅ 已修（#451 + 本 session）|
 | **T3** R1-R12 打包（非執行）| 計劃書 8,887 B 含 danger-table gate + before/after（PR #450）| ✅ 就緒，block 在 out-of-band eval + user gate |
 
-**三條件全綠 -> loop 達終止。** 不繼續硬塞 §R re-encode（「完畢」≠「§R 全 re-encode」，那是 hacked goal；使用者已選「先建測試再 gated 調整」defer §R）。
+**三條件全綠 → loop 達終止。** 不繼續硬塞 §R re-encode（「完畢」≠「§R 全 re-encode」，那是 hacked goal；使用者已選「先建測試再 gated 調整」defer §R）。
 
 ---
 
 ## 「不影響效能 / 功能」達成證明（btw 核心要求）
 
-- **效能**：① auto-load byte **18,455 不變**（只加測試腳本，不改 auto-load 內容）；② 新 gate/計時腳本**確認不在任何 hook**（`grep -rl .claude/hooks/` 零命中）-> pre-commit/session hot-path delta = 0；③ auto-load 本就非效能瓶頸（cold-start 既證 cache->0.1×）。
-- **功能**：① measure.sh 預設行為不變（opt-in `--gate`）-> 既有 caller 零影響；② healthcheck FAIL=0 == 基線；③ §R 條文 11/11 存活。
+- **效能**：① auto-load byte **18,455 不變**（只加測試腳本，不改 auto-load 內容）；② 新 gate/計時腳本**確認不在任何 hook**（`grep -rl .claude/hooks/` 零命中）→ pre-commit/session hot-path delta = 0；③ auto-load 本就非效能瓶頸（cold-start 既證 cache→0.1×）。
+- **功能**：① measure.sh 預設行為不變（opt-in `--gate`）→ 既有 caller 零影響；② healthcheck FAIL=0 == 基線；③ §R 條文 11/11 存活。
 
 ---
 
@@ -116,6 +116,6 @@ P5 auto-load byte: 18455 total（不變）✓
 - tokenizer 變更 ← "Same input produces **1.0–1.35× more tokens** vs Opus 4.6 (content-dependent)"（2026-04-16-claude-opus-4-7-system-card.md L86）
 - 遷移指引 ← "Migration note: retest token budgets and cost estimates before upgrading"（同檔 L87）
 
-**啟示**：若 G-A 以 token 門檻為 gate，模型升級換 tokenizer 時相同 auto-load 內容的 token 數會漂移（最壞 ×1.35），導致 gate 在無內容變更下誤觸或失效，且每次升級須 retest。**byte（`wc -c`）對 tokenizer 完全免疫**——auto-load 內容字元數不隨模型變。-> workspace「canonical 單位 = byte」（core.md §Framework Integrity）+ measure.sh byte gate 的設計，在模型升級韌性上優於 token-based gate。此為本 loop 既有設計的事後論文背書，**非新增測試**。
+**啟示**：若 G-A 以 token 門檻為 gate，模型升級換 tokenizer 時相同 auto-load 內容的 token 數會漂移（最壞 ×1.35），導致 gate 在無內容變更下誤觸或失效，且每次升級須 retest。**byte（`wc -c`）對 tokenizer 完全免疫**——auto-load 內容字元數不隨模型變。→ workspace「canonical 單位 = byte」（core.md §Framework Integrity）+ measure.sh byte gate 的設計，在模型升級韌性上優於 token-based gate。此為本 loop 既有設計的事後論文背書，**非新增測試**。
 
 *增量併入日期：2026-06-05 | gap-vote 1 真 gap（byte-cap tokenizer 免疫）| 主對話親自 grep 接地 | 不改本報告終態（T1/T2/T3 仍綠），僅補設計選擇接地*

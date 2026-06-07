@@ -38,15 +38,15 @@ With the growing adoption of large language model agents in persistent real-worl
 ### Key Concepts
 
 **ReasoningBank vs. prior memory approaches**:
-- Raw trajectory storage: Stores full interaction history -> context bloat, noise
+- Raw trajectory storage: Stores full interaction history → context bloat, noise
 - Success-only memory (e.g., EXPEL, Voyager): Misses failure lessons, incomplete signal
-- ReasoningBank: Distills strategies from both successes and failures via self-judgment -> higher-quality, generalizable memory
+- ReasoningBank: Distills strategies from both successes and failures via self-judgment → higher-quality, generalizable memory
 
 **Memory-aware Test-Time Scaling (MaTTS)**:
 - Allocates more compute per task to generate diverse interaction experiences
 - These diverse experiences provide richer contrastive signals for memory synthesis
 - Improved memory quality feeds back into better scaling effectiveness
-- Establishes a synergy loop: better memory -> better scaling -> better memory
+- Establishes a synergy loop: better memory → better scaling → better memory
 
 **Self-evolution mechanism**:
 1. Agent receives task, retrieves relevant memories from ReasoningBank
@@ -54,7 +54,7 @@ With the growing adoption of large language model agents in persistent real-worl
 3. Agent self-judges which experiences were successful vs. failed
 4. System distills generalizable reasoning strategies from the contrastive signal
 5. New strategies are integrated back into ReasoningBank
-6. Repeat -> agent capability improves over time
+6. Repeat → agent capability improves over time
 
 **Benchmarks**: Web browsing tasks + software engineering tasks (likely WebArena, SWE-bench or similar)
 

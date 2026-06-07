@@ -28,7 +28,7 @@ Large Language Models (LLMs) showcase impressive capabilities but encounter chal
 
 ## Core Thesis
 
-RAG is the most practical solution for grounding LLMs in current, verifiable knowledge without the cost of retraining. The paper organizes the field around three evolutionary paradigms (Naive -> Advanced -> Modular RAG), dissects retrieval/generation/augmentation as the tripartite technical foundation, and proposes a standardized evaluation framework covering 26 tasks and ~50 datasets.
+RAG is the most practical solution for grounding LLMs in current, verifiable knowledge without the cost of retraining. The paper organizes the field around three evolutionary paradigms (Naive → Advanced → Modular RAG), dissects retrieval/generation/augmentation as the tripartite technical foundation, and proposes a standardized evaluation framework covering 26 tasks and ~50 datasets.
 
 ---
 
@@ -127,7 +127,7 @@ Key finding: RAG consistently outperforms unsupervised fine-tuning for both exis
 - *Structured data* (Knowledge Graphs): More precise, verified information. KnowledGPT generates KB search queries. G-Retriever integrates GNNs + LLMs + RAG with PCST optimization for targeted graph retrieval.
 - *LLMs-Generated Content*: SKR classifies questions as known/unknown and applies retrieval selectively. GenRead replaces the retriever with an LLM generator. Selfmem iteratively creates an unbounded memory pool.
 
-**Retrieval Granularity** (fine to coarse): Token -> Phrase -> Sentence -> Proposition -> Chunks -> Document. DenseX proposed propositions as retrieval units—atomic expressions encapsulating unique factual segments in concise, self-contained format. For KGs: Entity -> Triplet -> Sub-Graph.
+**Retrieval Granularity** (fine to coarse): Token → Phrase → Sentence → Proposition → Chunks → Document. DenseX proposed propositions as retrieval units—atomic expressions encapsulating unique factual segments in concise, self-contained format. For KGs: Entity → Triplet → Sub-Graph.
 
 ### III-B. Indexing Optimization
 

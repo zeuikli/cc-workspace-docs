@@ -76,7 +76,7 @@ Claude Code defaults to `xhigh` for coding workloads. Diminishing returns beyond
 | CodeRabbit | Code review recall | +10% |
 | Rakuten | Production task resolution | 3× |
 | Databricks | Document reasoning errors | -21% |
-| XBOW | Visual acuity | 54.5% -> 98.5% |
+| XBOW | Visual acuity | 54.5% → 98.5% |
 
 ---
 
@@ -178,4 +178,4 @@ This is the primary reference for `opus-pilot` SKILL. Key workspace-specific cal
 3. **Long-context regression is real**: `autoresearch` and `research-hub` tasks using 256k+ context should prefer Opus 4.6 or validate before migrating
 4. **Tokenizer change**: Any harness with token budget calculations (task_budgets, cost tracking) needs recalibration after upgrade
 5. **Breaking API changes**: Extended thinking budgets removed; adaptive thinking now default — affects any skill using `budget_tokens` parameter
-6. **Anti-hack prompt**: The harness can suppress test-cheating from 45% -> 12.5% by including explicit anti-hack instructions (relevant for `autoresearch` verify gate)
+6. **Anti-hack prompt**: The harness can suppress test-cheating from 45% → 12.5% by including explicit anti-hack instructions (relevant for `autoresearch` verify gate)

@@ -89,11 +89,11 @@ Harness Engineering 是上層抽象，包含 Context Engineering 和 Prompt Engi
 
 ```
 餐廳廚房比喻
-├── 菜譜架（指令子系統）     -> AGENTS.md / CLAUDE.md
-├── 刀具架（工具子系統）     -> Shell、編輯器、瀏覽器、MCP Server
-├── 灶臺（環境子系統）       -> 依賴鎖檔、版本管理、容器配置
-├── 備菜臺（狀態子系統）     -> PROGRESS.md、feature_list.json
-└── 出菜檢查口（反饋子系統） -> 測試、type check、lint、E2E
+├── 菜譜架（指令子系統）     → AGENTS.md / CLAUDE.md
+├── 刀具架（工具子系統）     → Shell、編輯器、瀏覽器、MCP Server
+├── 灶臺（環境子系統）       → 依賴鎖檔、版本管理、容器配置
+├── 備菜臺（狀態子系統）     → PROGRESS.md、feature_list.json
+└── 出菜檢查口（反饋子系統） → 測試、type check、lint、E2E
 ```
 
 **子系統評估矩陣**（每項 1–5 分）：
@@ -104,7 +104,7 @@ Harness Engineering 是上層抽象，包含 Context Engineering 和 Prompt Engi
 | 工具 | 代理能否完成任務所需的每個操作？ | 工具缺失或過多 | 最小充分集合 |
 | 環境 | 環境是否自描述可重現？ | 「在我機器上可以」 | init.sh 一鍵啟動 |
 | 狀態 | 跨會話後代理能否從中斷點繼續？ | 每次重新開始 | 進度無損切換 |
-| 反饋 | 代理能否從錯誤中自我修正？ | 宣告完成即終止 | 驗證失敗->自我修復 |
+| 反饋 | 代理能否從錯誤中自我修正？ | 宣告完成即終止 | 驗證失敗→自我修復 |
 
 **關鍵原則**：逐個移除子系統進行「等模型對照實驗」，量化每個子系統的邊際貢獻。一個 TypeScript+React 團隊僅靠完善五個子系統（模型不變），成功率從 20% 升至近 100%。
 
@@ -200,7 +200,7 @@ pnpm test && pnpm typecheck && pnpm lint
 - 新功能必須有對應的 Vitest 測試
 
 ## 當前進度
--> 見 PROGRESS.md
+→ 見 PROGRESS.md
 ```
 
 **Mnilax 12 規則研究**：CLAUDE.md 超過 200 行時，合規率從 76% 跌至 52%；超過 14 條規則後出現顯著 compliance 下降。**保持精簡比追求完整更重要**。
@@ -220,7 +220,7 @@ Boris Cherny（Claude Code 主要開發者）明確說明：**驗證循環是單
 # 好的錯誤訊息
 ✗ API 錯誤類型錯誤
   使用 logger.error({ event: 'api_error', message, statusCode }) 取代直接 throw Error(message)
-  -> 見 /src/utils/errors.ts 第 23-45 行
+  → 見 /src/utils/errors.ts 第 23-45 行
 
 # 差的錯誤訊息  
 ✗ 違規偵測
@@ -254,7 +254,7 @@ PEV 循環
 │  VERIFY                                 │
 │  ├─ 執行所有驗證命令                      │
 │  ├─ 確認每個 acceptance criteria 通過     │
-│  └─ 有錯誤->返回 EXECUTE 修復              │
+│  └─ 有錯誤→返回 EXECUTE 修復              │
 └─────────────────────────────────────────┘
 ```
 
@@ -975,7 +975,7 @@ Claude Code 平台層的 harness 能力在 2026-03-23 至 2026-05-15 間大幅�
 #### Auto Mode：中間層權限 Harness
 
 ```
-Manual approval ← -> Auto Mode ← -> --dangerously-skip-permissions
+Manual approval ← → Auto Mode ← → --dangerously-skip-permissions
 ```
 
 - 分類器自動允許安全操作、阻擋高風險操作
@@ -1061,7 +1061,7 @@ claude agents --json    # 機器可讀，供 tmux/scripts 使用
 - ✅ **Init.sh 概念**：hooks `session-init.sh` 在 SessionStart 執行，對應初始化相位建議。
 - ✅ **狀態管理 / 長期記憶**：core.md Memory Loop 節定義了 `MEMORY.md` 雙層記憶，`memory-sync.sh` 及 `memory-archive.sh` hooks 確保跨 session 持久化。
 - ✅ **Plan-Execute-Verify 循環**：core.md R4 + R10（Checkpoint）已形成 PEV 循環骨架；R12 Fail Loud 確保驗證不可跳過。
-- ✅ **ACID 原則（Atomicity）**：core.md Git 工作流程要求每次 `git add -> commit -> push`，commit 顆粒度規則要求「fix X」+「refactor Y」分開 commit。
+- ✅ **ACID 原則（Atomicity）**：core.md Git 工作流程要求每次 `git add → commit → push`，commit 顆粒度規則要求「fix X」+「refactor Y」分開 commit。
 - ✅ **工具選擇框架（Skills / Hooks）**：settings.json 已配置 PreToolUse（block-dangerous.sh / protect-sensitive-files.sh）、PostToolUse（post-edit.sh / audit-log.sh）四類 hook，對應報告的工具選擇矩陣。
 - ✅ **子代理 Agent Input Security（Prompt Injection 防護）**：subagent-strategy.md 已有 `<untrusted_objective>` 包裹 YOU MUST 規則。
 - ✅ **Claude Code Hooks 體系**：設定檔中已有 SessionStart / UserPromptSubmit / PreToolUse / PostToolUse / PostToolUseFailure / PreCompact / PostCompact / Stop / Notification / PermissionRequest，共 10 個 hook 事件類型覆蓋完整。
@@ -1112,7 +1112,7 @@ claude agents --json    # 機器可讀，供 tmux/scripts 使用
 
 - **Life-Harness (2605.22166)** 4 類失敗：Action realization / Environment contract mismatch / Trajectory degeneration / Residual reasoning，每類對應一個 lifecycle layer，使改進可追溯。
 - **Runtime Substrate (2605.13357)** 五標籤結果分類：`autonomous_verified_success` vs `assisted_verified_success` vs `unverified_success`——當前 benchmark 把後兩類算成「成功」是**度量污染**。
-- **HARBOR** telemetry 讀寫不對稱偵測：`reflections_written=80, reflections_retrieved=0` -> 容器非持久化；`PASTE_invocations=0` -> 功能從未觸發。這類 bug 在 pass rate 中完全不可見。
+- **HARBOR** telemetry 讀寫不對稱偵測：`reflections_written=80, reflections_retrieved=0` → 容器非持久化；`PASTE_invocations=0` → 功能從未觸發。這類 bug 在 pass rate 中完全不可見。
 
 對 cc-workspace 的意義：R12 Fail Loud + PGE 已要求「驗證不可跳過」，但缺「失敗歸因到哪一層」的結構化分類。`unverified_success` 概念精準命中本 workspace 反覆出現的「subagent 報 clean 但實際殘留問題」（MEMORY Lesson 2026-06-05-B）。
 

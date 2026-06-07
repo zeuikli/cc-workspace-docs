@@ -54,7 +54,7 @@ Multi-agent LLM systems fail at rates of 41–87% in production. Coordination de
 | Failure Mode | Share | Root Cause |
 |-------------|-------|-----------|
 | Information inconsistency | 34% | Agents see different contexts |
-| Decision duplication | 28% | Lack of coordination -> redundant work |
+| Decision duplication | 28% | Lack of coordination → redundant work |
 | Responsibility ambiguity | 24% | No clear handoff protocol |
 | Race conditions | 14% | No synchronization mechanism |
 

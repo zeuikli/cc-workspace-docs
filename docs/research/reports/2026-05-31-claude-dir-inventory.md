@@ -1,14 +1,14 @@
 # .claude/ 目錄盤點報告 — 69 檔逐一交代
 
 > **日期**：2026-05-31 · **PR**：#398 · **分支**：feature/claude-dir-inventory
-> **方法**：harness loop（OBSERVE->IDENTIFY->TEST->APPLY->RECORD）+ 機械 grep load-path 分類
+> **方法**：harness loop（OBSERVE→IDENTIFY→TEST→APPLY→RECORD）+ 機械 grep load-path 分類
 > **範圍**：使用者指定 7 路徑 — `.claude/{hooks,prompts,refs,rules}` + `HANDOFF.md` + `REFERENCES.md` + `settings.json`
 
 ---
 
 ## 核心結論
 
-1. **「刪孤兒省浪費」基本是假命題**：`refs/`、`prompts/` 皆 on-demand（不 auto-load）-> 未被引用的檔從不載入 = **零 token 成本**。使用者擔心的「浪費」在這些檔上不存在。真正價值在模型 staleness 修正。
+1. **「刪孤兒省浪費」基本是假命題**：`refs/`、`prompts/` 皆 on-demand（不 auto-load）→ 未被引用的檔從不載入 = **零 token 成本**。使用者擔心的「浪費」在這些檔上不存在。真正價值在模型 staleness 修正。
 2. **模型 staleness 幾乎全是 false-positive / 史料 attribution**：初版 dynamic workflow 的 classify agent **大量幻覺**（標 core.md L16 有不存在的 "Opus 4.7" 內容、把當前模型名 Sonnet 4.6 / Haiku 4.5 當 stale、把史料 attribution 當該改）。逐一機械 grep 驗證後，**無「當前事實過時」需修**。
 3. **18 個 hooks 全部內容有效**：退場機制（`memory-archive.sh`、cosmetic monitor、#1/#2 auto-commit）都已正確標記或移除，無殘留 bug。
 4. **改動極小（3 改 + 1 刪）**：符合大道至簡——只動確定該動的。
@@ -51,7 +51,7 @@
 | `.claude/hooks/block-dangerous.sh` | LIVE | KEEP | PreToolUse Bash 危險指令攔截 |
 | `.claude/hooks/failure-log.sh` | LIVE | KEEP | PostToolUseFailure 日誌 |
 | `.claude/hooks/memory-sync.sh` | LIVE | KEEP | no-op（ADR L144 待決，刻意保留註冊） |
-| `.claude/hooks/monitor-reminder.sh` | LIVE | KEEP | 偵測 run_in_background->Monitor 提醒（**非** cosmetic monitor，早期懷疑已排除） |
+| `.claude/hooks/monitor-reminder.sh` | LIVE | KEEP | 偵測 run_in_background→Monitor 提醒（**非** cosmetic monitor，早期懷疑已排除） |
 | `.claude/hooks/notification-log.sh` | LIVE | KEEP | Notification 日誌 |
 | `.claude/hooks/post-compact.sh` | LIVE | KEEP | PostCompact 還原 |
 | `.claude/hooks/post-edit.sh` | LIVE | KEEP | Edit/Write 後處理 |
@@ -100,7 +100,7 @@
 | `.claude/refs/memory-layering.md` | INDEXED | KEEP | STANDALONE（Memory Fencing 規格 + Phase 1-3 DEFERRED 提案，已標 archive 退場，零成本留） |
 | `.claude/refs/model-selection-grid.md` | LIVE | KEEP | AGENTS.md + token-waste-audit 引用 |
 | `.claude/refs/opus-best-practices.md` | LIVE | KEEP | docs + research-hub 引用（4.7-era 標記為 attribution） |
-| `.claude/refs/opus-pilot-mode.md` | INDEXED->LIVE | **已接線** | 反向接線 opus-pilot SKILL Sub-Agent Inheritance；去重複 + 補 Gotchas |
+| `.claude/refs/opus-pilot-mode.md` | INDEXED→LIVE | **已接線** | 反向接線 opus-pilot SKILL Sub-Agent Inheritance；去重複 + 補 Gotchas |
 | `.claude/refs/output-by-model.md` | INDEXED | KEEP | STANDALONE 模型字數範例（零成本留） |
 | `.claude/refs/per-model-eval-suite.md` | LIVE | KEEP | autoload-evolution SKILL + session-start-eval-reminder hook 引用 |
 | `.claude/refs/pilot-shared-preflights.md` | LIVE | KEEP | 三 pilot SKILL 引用；L88-92 定價表 reconcile 後正確（已列 Opus 4.8） |
@@ -163,12 +163,12 @@ bash scripts/healthcheck.sh
 ======================================
 ```
 - 3 WARN = MCP transparency（預期）+ README frontmatter（既有），與本次改動無關
-- 「所有 @ 連結都指向存在的檔案」**PASS** -> 刪除/編輯無 dangling ref
+- 「所有 @ 連結都指向存在的檔案」**PASS** → 刪除/編輯無 dangling ref
 
 ## 方法論教訓（harness self-improvement）
 
 兩個複合失敗差點 ship 出錯誤盤點：
-1. **schema 設計缺陷**：dynamic workflow 的 `verdict` 與 `modelStale` 是分開欄位，actionable filter `verdict !== 'KEEP'` **靜默丟棄**所有「KEEP + STALE-FACT」項 -> 整類更新候選沒進對抗驗證。
+1. **schema 設計缺陷**：dynamic workflow 的 `verdict` 與 `modelStale` 是分開欄位，actionable filter `verdict !== 'KEEP'` **靜默丟棄**所有「KEEP + STALE-FACT」項 → 整類更新候選沒進對抗驗證。
 2. **classify agent 幻覺**：core.md L16 不存在內容、advisor-tool-api「被 healthcheck 消費」假宣稱。
 
 **防範**：結構化 subagent verdict **不是證據**，須機械 grep 重新驗證；單一 schema 欄位上的 actionable filter 可能藏掉整個類別。catch 來自機械 grep，不是再加一個 agent。

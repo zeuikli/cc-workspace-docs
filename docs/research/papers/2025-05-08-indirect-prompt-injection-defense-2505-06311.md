@@ -36,10 +36,10 @@ The integration of Large Language Models (LLMs) with external sources is becomin
 **2. Gradients 提取**
 - 對外部資料配對「Sure」（instruction 典型回應）計算 back-propagation
 - 聚焦 self-attention 層的梯度（捕捉行為特徵；feed-forward 層偏向知識特徵）
-- 應用 max-pooling 降維 -> 400,000 維向量
+- 應用 max-pooling 降維 → 400,000 維向量
 
 **3. Feature Fusion + MLP 分類器**
-- 線性變換對齊兩種特徵維度 -> 正規化 -> 拼接
+- 線性變換對齊兩種特徵維度 → 正規化 → 拼接
 - MLP 分類器（隱藏層：1024, 256, 64, 16）
 - 訓練集：200 樣本（100 正/100 負），平衡設計
 
@@ -77,7 +77,7 @@ The integration of Large Language Models (LLMs) with external sources is becomin
 
 ### Prompt Management
 - **External Content 分級管理**：本文的偵測框架提示 prompt 管理策略應對外部資料來源做信任分級（Wikipedia vs. 用戶上傳 vs. 爬取資料），高風險來源先過 InstructDetector
-- **RAG Pipeline 安全閘**：偵測模型應插入 retrieval 之後、generation 之前，形成 retrieval -> detect -> generate 的安全管線
+- **RAG Pipeline 安全閘**：偵測模型應插入 retrieval 之後、generation 之前，形成 retrieval → detect → generate 的安全管線
 
 ### Prompt Engineering
 - **IPI 攻擊面認知**：Prompt engineer 設計 RAG system prompt 時需考慮：若外部 chunk 含有 "Modify your response to..." 類指令，系統會被操控（真實案例：peer review 系統被隱藏指令操控）

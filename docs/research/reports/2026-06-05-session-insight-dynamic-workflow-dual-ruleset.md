@@ -3,7 +3,7 @@
 > **日期**：2026-06-05 · **原始分支**：`feature/dual-ruleset-12rule` · **模型**：Opus 4.8 (1M) · ultracode mode
 > **任務脈絡**：把 12-Rule Canon 改寫成「Claude Code 特化 + 通用」雙版本 × 三等級，後續再去 workspace 化 + 重構為可延展 Harness 框架。
 > **本報告性質**：第一人稱 session 復盤（agent 自身的執行軌跡），非外部研究。§1–§4.7/§5(1–7) 的踩坑與數字來自原始 session（`feature/dual-ruleset-12rule`）實際發生，非文獻。
-> **產出 commit**：原始 session `f014b703`（雙版三等級初版）-> `562631e0`（去 workspace 化 + 可延展重構）。**後續 append**：§3.5 + §5(8)（D4 verifier PoC 踩坑）由後續 session 於分支 `feature/ruleset-audit-fixes`（commit `fcc9e9ba`）補入。
+> **產出 commit**：原始 session `f014b703`（雙版三等級初版）→ `562631e0`（去 workspace 化 + 可延展重構）。**後續 append**：§3.5 + §5(8)（D4 verifier PoC 踩坑）由後續 session 於分支 `feature/ruleset-audit-fixes`（commit `fcc9e9ba`）補入。
 
 ---
 
@@ -14,7 +14,7 @@
 1. **最大踩坑 = CJK byte-grind 陷阱**：為把「完整版」壓進一個 **後來被使用者要求移除的 19K cap**，手動逐行刪了 ~20 輪、每輪只回收 6–40 byte，還因此削掉了 3 條規則的 mechanical check（製造出「vibe 非 rule」）。**根因：把一個 workspace 客製約束當成了普世硬約束。**
 2. **Dynamic Workflow 的真正價值 = 並行的確定性轉換 + 對抗式驗證**，不是「讓 agent 想內容」。本 session workflow 表現最好的時刻是「我給定已驗證的內容、agent 只做 de-workspace 轉換 + 獨立 grep 審計」；表現最差的風險是「讓 agent 重新推導論文數字」（會重新引入已修正的 3 個錯誤）。
 3. **advisor 是這個 session 的 MVP**：在 3 個關鍵轉折點（staged-not-overwrite / 19K-cap-是-workspace-think / 完整版自我描述矛盾）攔截了會毀掉交付物的決策。**advisor 看完整 transcript 的價值，遠高於任何 sub-agent 的 self-report。**
-4. **使用者的 3 次漸進指令重新定義了任務**：從「改寫」->「去 workspace 化」->「可延展框架」。每次都讓更多手工打磨白工。**學習：規格模糊度是工作量的天花板（R1.1），但使用者漸進澄清是常態，過早大量手工優化是賭注。**
+4. **使用者的 3 次漸進指令重新定義了任務**：從「改寫」→「去 workspace 化」→「可延展框架」。每次都讓更多手工打磨白工。**學習：規格模糊度是工作量的天花板（R1.1），但使用者漸進澄清是常態，過早大量手工優化是賭注。**
 
 ---
 
@@ -23,10 +23,10 @@
 | 階段 | 動作 | 結果 / 踩坑 |
 |------|------|-----------|
 | **Orientation** | 讀 5 份報告 + best-practices + deepened-ruleset；advisor 第一次諮詢 | advisor 鎖定 6 約束，最關鍵：**staged deliverable 非 in-place overwrite**（mid-session 改 live CLAUDE.md 破壞並行 session 共享 cache）。避開了第一個大坑。 |
-| **建 master** | 手寫完整版 5 檔（含全 Rn.x 子條） | 27,122 byte -> 遠超假想的 19K cap。**第一個錯誤判斷在此萌芽**。 |
+| **建 master** | 手寫完整版 5 檔（含全 Rn.x 子條） | 27,122 byte → 遠超假想的 19K cap。**第一個錯誤判斷在此萌芽**。 |
 | **byte-grind** | 為壓進 19K，手動逐行刪 ~20 輪 | 每輪回收 6–40 byte（CJK 密度高）；削掉 R2.1/R4.1/R8.1 的 check；引入過 `\|\|` 非標準 markdown table。**最大時間黑洞**。 |
-| **Workflow #1** | tier 收斂 + 對抗驗證（3 builders + 9 verifiers） | lite/standard 成功；**full builder 沒跑/卡住** -> 我手動接管 full 的壓縮。學習：workflow 部分失敗時主對話要能無縫接管。 |
-| **使用者指令 1** | 「Claude 版帶太多 workspace 東西，移除 19K cap/SKILL/script/hook」 | **19K cap 整個消失** -> byte-grind 全成白工。advisor 點明：cap 本就是 workspace-think。 |
+| **Workflow #1** | tier 收斂 + 對抗驗證（3 builders + 9 verifiers） | lite/standard 成功；**full builder 沒跑/卡住** → 我手動接管 full 的壓縮。學習：workflow 部分失敗時主對話要能無縫接管。 |
+| **使用者指令 1** | 「Claude 版帶太多 workspace 東西，移除 19K cap/SKILL/script/hook」 | **19K cap 整個消失** → byte-grind 全成白工。advisor 點明：cap 本就是 workspace-think。 |
 | **使用者指令 2** | 「通用版也去 workspace 化 + 全面改寫，12 準則只是參考」 | 從 patch 升級為 rewrite。 |
 | **使用者指令 3** | 「不受限 12 準則 + 可擴充 + 揉合論文與最佳實踐 = 可延展 Harness 雙版」 | 任務本質重定義為「**可延展框架**」非「固定規則集」。 |
 | **Workflow #2** | 去 workspace 化 + 加延展性（6 rewrites + ref 清理 + 2 audits） | **成功**：rule 檔全清、延展性 framing 全加、cap 移除後**順手修復了 advisor 指出的 Rn.x 缺 check 缺陷**（每子條補回獨立驗）。 |
@@ -38,11 +38,11 @@
 
 ### 踩坑 1 — CJK Byte-Grind 陷阱（最貴）
 
-**現象**：把完整版從 27K 手動壓到 18,994（≤19K）花了 ~20 個工具回合，每次 Edit 只回收 6–40 byte。中文 token 密度高 -> 每行刪減的 byte 報酬極低。
+**現象**：把完整版從 27K 手動壓到 18,994（≤19K）花了 ~20 個工具回合，每次 Edit 只回收 6–40 byte。中文 token 密度高 → 每行刪減的 byte 報酬極低。
 
 **根因**：① 把 **workspace 客製的 19K cap 當普世硬約束**；② 已經陷入逐行優化後，沒有退一步問「這個約束本身對嗎」。advisor 早就說過「cap 是 what you choose to run 的屬性」，但我在 grind 中沒回連這句話。
 
-**代價**：不只是時間。為省 byte 削掉了 R2.1/R4.1/R8.1 的 mechanical check -> 製造出「有 prevents、無 check」的 sub-clause = canon 自己禁止的「vibe 非 rule」。**用降低交付物品質換一個假約束。**
+**代價**：不只是時間。為省 byte 削掉了 R2.1/R4.1/R8.1 的 mechanical check → 製造出「有 prevents、無 check」的 sub-clause = canon 自己禁止的「vibe 非 rule」。**用降低交付物品質換一個假約束。**
 
 **防範**：
 - **質疑約束再優化**：逐行壓縮前先問「這個數字/限制是哪來的、對這個交付物適用嗎」。staged template 的 byte 數 ≠ live config 的 cap。
@@ -67,7 +67,7 @@
 
 ### 踩坑 4 — 過早大量手工優化（賭規格不變）
 
-**現象**：在 byte-grind 投入 ~20 回合後，使用者指令 1 直接移除了 19K cap -> 全部白工。
+**現象**：在 byte-grind 投入 ~20 回合後，使用者指令 1 直接移除了 19K cap → 全部白工。
 
 **根因**：規格在演進中（使用者 3 次漸進澄清），我在規格未定時就做了大量不可攤銷的手工打磨。
 
@@ -92,7 +92,7 @@
 | 維度 | Workflow #1（byte 收斂）| Workflow #2（去 workspace 化）|
 |------|----------------------|---------------------------|
 | 任務性質 | 壓到模糊的 byte 目標（規格在動）| 確定性轉換（移除 token list + 加固定段落）|
-| Agent 自由度 | 高（要自己決定砍哪裡）-> 易偏移 | 低（給定 removal list + 已驗證內容）-> 穩 |
+| Agent 自由度 | 高（要自己決定砍哪裡）→ 易偏移 | 低（給定 removal list + 已驗證內容）→ 穩 |
 | 結果 | 部分失敗（full builder 沒跑）| 全成功 |
 | **學習** | **workflow 不擅長「對著動態目標做判斷密集的優化」** | **workflow 擅長「對著固定 spec 做並行的機械轉換 + 獨立審計」** |
 
@@ -100,7 +100,7 @@
 
 ### 3.2 Workflow 的對抗式驗證 pattern（值得複用）
 
-第二個 workflow 用了 `Rewrite -> Audit` 兩階段：6 個 rewrite agents 各改自己的 tier，再 2 個 audit agents **各自獨立 grep** workspace token / number-regression / canon coverage，輸出 structured verdict。
+第二個 workflow 用了 `Rewrite → Audit` 兩階段：6 個 rewrite agents 各改自己的 tier，再 2 個 audit agents **各自獨立 grep** workspace token / number-regression / canon coverage，輸出 structured verdict。
 
 **但關鍵紀律**：我**沒有信** audit 的 `pass=true`，而是主對話自己再 grep 一次——並抓到 harness-loop.md 殘留。**對抗式驗證提升信心，但不取代主對話的最終親驗。**
 
@@ -125,9 +125,9 @@
 **這比 §3.2 更深的地方**：§3.2 的教訓是「不信 audit agent 的 `pass=true`，主對話再 grep」——針對的是 agent **判斷** verdict。踩坑 6 證明：**連「確定性層」經 agent 中介都會失真**。不是 agent 騙你，是**執行環境（hook gate / PATH / sandbox）污染了本應確定性的結果**。所以「我跑的是確定性 grep 啊」不足以信任——**重點是誰跑的**：主對話親自跑才是 ground truth，workflow sub-agent 跑的「確定性」結果一樣要被主對話親自驗。
 
 **防範（正確架構，PoC 已驗證）**：
-- **verify = workflow fan-out**（判斷密集、找 suspect、產**可機械複驗的 inspectable claim** -> agent 適任，本 PoC 6/6 成立）。
-- **adjudicate = 主對話 / 真實 hook / CI**（確定性裁決 -> **絕不**經 sub-agent）。
-- 判別：問「這個 stage 的輸出若被 hook 擋/缺工具/環境變了，會不會靜默變成假結果？」會 -> 那不是能交給 sub-agent 的「確定性」工作。
+- **verify = workflow fan-out**（判斷密集、找 suspect、產**可機械複驗的 inspectable claim** → agent 適任，本 PoC 6/6 成立）。
+- **adjudicate = 主對話 / 真實 hook / CI**（確定性裁決 → **絕不**經 sub-agent）。
+- 判別：問「這個 stage 的輸出若被 hook 擋/缺工具/環境變了，會不會靜默變成假結果？」會 → 那不是能交給 sub-agent 的「確定性」工作。
 
 **這 PoC 諷刺地自我示範了它要證明的紀律**：它本是為「強化 auto-load 規則遵循率驗證」而建，結果第一手撞上的就是「even mechanical verdict 經 agent 中介不可信」——正是 #439 + dynamic-workflow 紀律的最強佐證。**唯一可信的 mechanical verdict 是主對話親自跑的那個。**
 
@@ -139,7 +139,7 @@
 
 ### 4.1 CLAUDE.md / auto-load 規則
 
-- **認識**：CLAUDE.md 是 **advisory context 非 enforced config**（官方：no guarantee of strict compliance）。過長 -> reduce adherence（規則被噪音淹沒）。本 session 親身驗證：規則檔越想塞滿，越要靠 byte-grind 搶救，治標不治本。
+- **認識**：CLAUDE.md 是 **advisory context 非 enforced config**（官方：no guarantee of strict compliance）。過長 → reduce adherence（規則被噪音淹沒）。本 session 親身驗證：規則檔越想塞滿，越要靠 byte-grind 搶救，治標不治本。
 - **強化建議**：
   1. **分級載入策略 > 單一大檔**：把規則拆成「always-load 骨架 + on-demand refs 深度」。本 session 三等級的正解最終就是這個（lite 骨架 / full + refs）。
   2. **每條規則附 mechanical check**：無 check 的規則是 vibe，模型遵循率低。這是本交付物的核心設計，也適用於任何人的 CLAUDE.md。
@@ -192,7 +192,7 @@
 ## 5. 可遷移的 meta-learnings（跨 session 通用）
 
 1. **質疑約束再優化**：逐行優化前先確認約束本身成立。最痛的白工來自「對著一個假約束努力」。
-2. **結構槓桿 > 逐行槓桿**：超標就移結構（depth->ref），不要逐行刮。CJK 環境尤其——逐行刮的 byte 報酬極低。
+2. **結構槓桿 > 逐行槓桿**：超標就移結構（depth→ref），不要逐行刮。CJK 環境尤其——逐行刮的 byte 報酬極低。
 3. **規格未定時做可攤銷的、延後不可攤銷的**：骨架/結構可攤銷（規格變了還能用），逐行打磨不可攤銷（規格變了全廢）。使用者漸進澄清是常態。
 4. **Verdict 非證據，主對話必親驗**：sub-agent / workflow / 甚至自己上一輪的產物，都要 grep 重驗。
 5. **advisor 的『記一下然後繼續』是技術債**：被指出的缺陷要當場結算或明確排程，不要騎過去——它會在 done-check 回來。
@@ -211,7 +211,7 @@
 - byte-grind 回合數：~20（每輪 6–40 byte，最痛的反模式）。
 - advisor 諮詢：5 次，攔截 3 個毀滅性決策 + 1 個 done-check 缺陷。
 - 驗證 gate：workspace token 零殘留 · number-regression 零回歸 · 6 版本全有延展性 framing · healthcheck FAIL=0。
-- commit：f014b703（初版）-> 562631e0（去 workspace + 可延展）。
+- commit：f014b703（初版）→ 562631e0（去 workspace + 可延展）。
 
 ---
 

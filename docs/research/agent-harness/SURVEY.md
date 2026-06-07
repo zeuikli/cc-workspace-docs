@@ -18,7 +18,7 @@ type: documentation
 - **發表**: 2026-04
 - **摘要**: 提出 AHE 框架，透過三個可觀測性柱子（元件 / 經驗 / 決策）自動進化 agent harnesses。核心洞見：harness 改進應由工具、中介軟體、長期記憶主導，而非系統提示詞。
 - **關鍵成果**:
-  - Terminal-Bench 2: pass@1 69.7% -> 77.0%（10 次迭代）
+  - Terminal-Bench 2: pass@1 69.7% → 77.0%（10 次迭代）
   - SWE-bench-verified: 用 12% 更少 token 達最佳成績
   - 跨模型族遷移收益：+5.1 到 +10.1 pp
 - **與 FRAMEWORK.md 的連結**: 直接驗證「harness > model」命題；Ratchet 自動化演進的學術支撐
@@ -172,7 +172,7 @@ type: documentation
   2. Tools（schema + 執行 + 驗證 + 結果格式化）
   3. Memory（短期 + 長期）
   4. Context Management（壓縮、masking、即時檢索、子 agent）
-  5. Prompt Construction（系統提示 -> 工具定義 -> 記憶 -> 對話）
+  5. Prompt Construction（系統提示 → 工具定義 → 記憶 → 對話）
   6. Output Parsing（結構化物件，避免自由文本）
   7. State Management（類型化字典 + 邊界檢查點）
   8. Error Handling（暫時性/LLM 可恢復/用戶可修正/意外性）
@@ -187,7 +187,7 @@ type: documentation
 - **URL**: https://blog.langchain.com/agent-engineering-a-new-discipline/
 - **定位**: Agent Engineering 作為工程學科的宣言
 - **核心定義**: 「將非確定性 LLM 系統迭代精煉為可靠生產體驗的過程」
-- **工程循環**: Build -> Test -> Ship -> Observe -> Refine -> Repeat
+- **工程循環**: Build → Test → Ship → Observe → Refine → Repeat
 - **跨職能要求**: Product thinking + Engineering + Data Science
 - **關鍵轉變**: 放棄「發布前完美」，改為快速發行 + 生產學習
 
@@ -204,7 +204,7 @@ type: documentation
 ### 20. Terminal-Bench 2.0
 - **URL**: https://www.tbench.ai/leaderboard/terminal-bench/2.0
 - **特點**: 終端實務工作（編譯/訓練/部署）；39 個模型排行
-- **Harness 洞見**: 同一 Opus 4.6，不同 harness -> 13 pp 差距（66.9% -> 79.8%）
+- **Harness 洞見**: 同一 Opus 4.6，不同 harness → 13 pp 差距（66.9% → 79.8%）
 
 ### 21. AgentBench（ICLR 2024）
 - **arXiv**: [2308.03688](https://arxiv.org/abs/2308.03688)
@@ -212,7 +212,7 @@ type: documentation
 
 ### 22. WebArena
 - **URL**: https://webarena.dev/
-- **特點**: 812 個網頁自主操作任務；2 年間成績 14% -> 60%
+- **特點**: 812 個網頁自主操作任務；2 年間成績 14% → 60%
 
 ---
 

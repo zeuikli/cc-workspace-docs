@@ -19,7 +19,7 @@ type: documentation
 | Agent = Model + Harness（定義論） | 6+ | LangChain、HumanLayer、Osmani、Masood、RESEARCH.md | ⭐⭐⭐⭐⭐ |
 | Context Rot（性能衰退機制） | 5+ | Chroma、HumanLayer、Daily Dose DS、RESEARCH.md | ⭐⭐⭐⭐⭐ |
 | Sub-Agent 作為 Context Firewall | 5+ | HumanLayer、Trivedy、Daily Dose DS | ⭐⭐⭐⭐⭐ |
-| Ratchet 原則（失敗->永久規則） | 5+ | Hashimoto->HumanLayer->Osmani->FRAMEWORK.md | ⭐⭐⭐⭐⭐ |
+| Ratchet 原則（失敗→永久規則） | 5+ | Hashimoto→HumanLayer→Osmani→FRAMEWORK.md | ⭐⭐⭐⭐⭐ |
 | Planner-Generator-Evaluator 三層 | 4+ | Anthropic（Rajasekaran）、Daily Dose DS | ⭐⭐⭐⭐⭐ |
 | ReAct / Agentic Loop 基礎 | 4+ | Weng、ReAct 論文、Willison、Trivedy | ⭐⭐⭐⭐ |
 | Memory 架構（短期+長期+檢索） | 4+ | Weng、Memory Survey、Trivedy | ⭐⭐⭐⭐ |
@@ -40,10 +40,10 @@ type: documentation
 ### 共識 #1：Harness 優化效果等同於模型升級
 
 **量化數據**:
-- Terminal-Bench：同 Opus 4.6，不同 harness -> 13 pp 差距（66.9% vs 79.8%）
-- Stanford Meta-Harness：59.6% -> 76.4%（16.8 pp）
-- 實地案例（Ewan Mak）：58% -> 81%（23 pp）
-- AHE 論文：69.7% -> 77.0%（7.3 pp，10 次自動迭代）
+- Terminal-Bench：同 Opus 4.6，不同 harness → 13 pp 差距（66.9% vs 79.8%）
+- Stanford Meta-Harness：59.6% → 76.4%（16.8 pp）
+- 實地案例（Ewan Mak）：58% → 81%（23 pp）
+- AHE 論文：69.7% → 77.0%（7.3 pp，10 次自動迭代）
 
 **各來源的表述**:
 - Osmani：「decent model + great harness beats great model + bad harness」
@@ -87,7 +87,7 @@ type: documentation
 ### 共識 #4：每行 CLAUDE.md / AGENTS.md 都應追蹤到具體失敗
 
 **各來源的共識**:
-- Hashimoto -> HumanLayer -> Osmani：Ratchet 原則的完整傳遞
+- Hashimoto → HumanLayer → Osmani：Ratchet 原則的完整傳遞
 - FRAMEWORK.md：本 workspace 的規則淵源追蹤實踐
 - April 23 Postmortem：三個 harness 改動各自造成 3-13 pp 品質下降
 
@@ -131,7 +131,7 @@ type: documentation
 - Meta-Harness（2603.28052, Stanford/Chelsea Finn）：聯合優化 harness + 模型的收益 15-22%，harness 作為可學習參數
 
 **各來源的共識**:
-- AHE 論文：10 次自動迭代即可從 69.7% -> 77.0%（7.3 pp），無需人工介入
+- AHE 論文：10 次自動迭代即可從 69.7% → 77.0%（7.3 pp），無需人工介入
 
 **實踐結論**: Harness 演化是持續過程；應設計為「可參數化 + 可測試」而非「靜態規則」。
 
@@ -160,8 +160,8 @@ type: documentation
 | Permanence（校準型 harness 永遠留著） | RESEARCH.md | Harness 解的是 non-determinism，不是 model 弱點 |
 
 **深層分析**:
-- 補弱點的 harness（early-stop、subagent for isolation）-> 隨模型進步消失
-- 校準 non-determinism 的 harness（hooks、verification、planner-evaluator）-> 永遠留著
+- 補弱點的 harness（early-stop、subagent for isolation）→ 隨模型進步消失
+- 校準 non-determinism 的 harness（hooks、verification、planner-evaluator）→ 永遠留著
 
 ---
 
@@ -243,11 +243,11 @@ type: documentation
 
 **現狀**: 「每個失敗要變成規則」的哲學清楚，但「何時升格為 hook vs 留在 CLAUDE.md」無明確指引。  
 **案例**:
-- Commit 前 deep-review -> 已升格為 hook（正確）
-- Context 70% compact 規則 -> 留在 rules（應升格為自動 hook 嗎？）
-- No-commit 紅線 -> security-hygiene.md（應升格為 git hook 嗎？）
+- Commit 前 deep-review → 已升格為 hook（正確）
+- Context 70% compact 規則 → 留在 rules（應升格為自動 hook 嗎？）
+- No-commit 紅線 → security-hygiene.md（應升格為 git hook 嗎？）
 
-**建議**: 建立決策樹：人工遵守率 × 違反成本 -> 決定是否升格為 code 層 hook。
+**建議**: 建立決策樹：人工遵守率 × 違反成本 → 決定是否升格為 code 層 hook。
 
 ---
 
@@ -256,7 +256,7 @@ type: documentation
 **現狀**: 「≥10 檔案」「>20 工具呼叫」是啟發式規則，無量化驗證。  
 **問題**:
 - Sub-agent 的「收支平衡點」（開銷 token vs 救回的 context rot token）尚未測量
-- 遞歸委派（main -> sub1 -> sub2）的邊際效益未知
+- 遞歸委派（main → sub1 → sub2）的邊際效益未知
 - Chroma 研究未測試多層 sub-agent 的遞歸效果
 
 ---
@@ -328,7 +328,7 @@ type: documentation
 - **行動意義**: 任何長於 5 步的任務必須有獨立的 Evaluator
 
 ### #5：Ratchet 原則：每個失敗都沉澱成永久規則
-- 來源：Hashimoto -> HumanLayer -> Osmani -> FRAMEWORK.md（貫穿所有文獻）
+- 來源：Hashimoto → HumanLayer → Osmani → FRAMEWORK.md（貫穿所有文獻）
 - **行動意義**: Known Gotchas 是 Skill 中最有價值的 section；應持續維護
 
 ### #6：April 23 Postmortem：Harness 改一行可以讓整個系統分布跑掉

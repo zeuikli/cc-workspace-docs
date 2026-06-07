@@ -60,13 +60,13 @@ A task **t = (I, S)** consists of:
 
 The Worker Agent **W_ℋ** is the agent under optimization, parameterized by harness ℋ.
 
-Interface: `W_ℋ.execute(t)` -> given task t, worker receives instructions I, interacts with target environment through tools, produces execution trace τ containing observations, action logs, and timing data.
+Interface: `W_ℋ.execute(t)` → given task t, worker receives instructions I, interacts with target environment through tools, produces execution trace τ containing observations, action logs, and timing data.
 
 ### 2.4 Evaluator Agent
 
 The Evaluator Agent **V** is an adversarial reviewer.
 
-Interface: `V.evaluate(τ, t)` -> (report, score)
+Interface: `V.evaluate(τ, t)` → (report, score)
 
 Four functions:
 1. **State verification** — cross-references worker observations against ground-truth environment state, detecting hallucinated or misinterpreted states
@@ -78,7 +78,7 @@ Four functions:
 
 The Evolution Agent **E** operates as senior engineer.
 
-Interface: `E.evolve(history, ℋ^(best))` -> ℋ'
+Interface: `E.evolve(history, ℋ^(best))` → ℋ'
 
 1. **Aggregates diagnostics** — reads full evolution history including tried variants, reports, scores, improvements/regressions
 2. **Identifies failure patterns** — classifies failures into categories (incorrect tool usage, reasoning loops, misinterpreted state, latency)
@@ -234,7 +234,7 @@ Where harness engineering traditionally required "deep human expertise applied t
 |---------------|---------------------------|-------------|
 | Adversarial evaluation | Manual `/deep-review` | Add adversarial test case generation step |
 | Meta-Evolution blueprint | session-learner skill | Integrate cross-session pattern learning |
-| Targeted modification | Known Gotchas -> rule upgrade | Quantify upgrade threshold decisions |
+| Targeted modification | Known Gotchas → rule upgrade | Quantify upgrade threshold decisions |
 | Generator ≠ Evaluator | PGE principle in core.md | ✅ Already aligned |
 
 **Manual vs Automated Ratchet Comparison:**
@@ -242,7 +242,7 @@ Where harness engineering traditionally required "deep human expertise applied t
 | Manual Ratchet (cc-workspace) | Automated Meta-Evolution (this paper) |
 |-------------------------------|--------------------------------------|
 | Record Known Gotchas manually after incidents | Adversarial evaluator auto-discovers weaknesses |
-| Human decides rule -> hook escalation | Meta-learner auto-learns escalation patterns |
+| Human decides rule → hook escalation | Meta-learner auto-learns escalation patterns |
 | Each change requires manual verification | Evolution Loop auto-verifies |
 | Cross-task experience via session notes | Meta-Blueprint auto-transfers cross-task |
 

@@ -2,7 +2,7 @@
 
 > **Type:** raw:video — 7 影片逐字稿/摘要；Podcast · YouTube  
 > **Updated**: 2026-06-02  
-> **Query pattern**: BRAIN.md -> 本表 -> `<date>-<handle>-<id>.md`
+> **Query pattern**: BRAIN.md → 本表 → `<date>-<handle>-<id>.md`
 
 ---
 

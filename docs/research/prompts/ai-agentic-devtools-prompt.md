@@ -110,7 +110,7 @@ type: prompt
 
 | 指標 | 當前基線 | 更新頻率 |
 |------|---------|---------|
-| Claude Code 週活用戶 | 520 萬（Q1）-> 持續增長中 | 月度 |
+| Claude Code 週活用戶 | 520 萬（Q1）→ 持續增長中 | 月度 |
 | Harness 瓶頸研究論文 | 6 大瓶頸（TheSequence 4/16）| 季度 |
 | Cognitive Surrender 研究 | 73% 工程師受影響 | 半年 |
 | 工具計費模式 | GitHub Copilot 已轉 token 計費 | 隨發布 |

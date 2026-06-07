@@ -2,7 +2,7 @@
 
 > **Type:** wiki:compiled — Harness 評估框架 + 深度研究；consumer: `harness-meta` skill  
 > **Updated**: 2026-06-03 | **Files**: 16 docs  
-> **Query pattern**: BRAIN.md -> 本表 -> 具體文件
+> **Query pattern**: BRAIN.md → 本表 → 具體文件
 
 ---
 
@@ -13,7 +13,7 @@
 | [HARNESS-CARD.md](HARNESS-CARD.md) | CAR 14-component scorecard（當前 13.0/14 = 92.9%）| 想知道 harness 健康度 |
 | [KNOWLEDGE-MAP.md](KNOWLEDGE-MAP.md) | GBrain typed-edge 跨源知識地圖；共識萃取 | 想知道 harness 理論共識 |
 | [RESEARCH.md](RESEARCH.md) | 22 資源合成；PGE 架構學理 | 想找 harness 設計依據 |
-| [RATCHET.md](RATCHET.md) | Rule->Hook 升格決策手冊；before/after 紀錄 | 想把經驗固化成規則 |
+| [RATCHET.md](RATCHET.md) | Rule→Hook 升格決策手冊；before/after 紀錄 | 想把經驗固化成規則 |
 | [BENCHMARK.md](BENCHMARK.md) | Harness eval 數據彙整 | 想比較 harness 版本效能 |
 | [SURVEY.md](SURVEY.md) | Agent harness 工具生態調查 | 想了解業界工具選型 |
 | [dynamic-workflows-harness-2026-06-03.md](dynamic-workflows-harness-2026-06-03.md) | Dynamic workflows harness 三層拆解（控制/agent/協調平面）+ 六大 pattern + runtime API 簽章 | 想懂 workflow 帶來的 harness 是什麼 |

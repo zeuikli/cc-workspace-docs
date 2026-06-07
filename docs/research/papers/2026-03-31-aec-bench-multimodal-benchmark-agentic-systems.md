@@ -149,7 +149,7 @@ We evaluate agent performance using baseline harness configurations designed to 
 | | drawing-navigation | 66.7 | 100.0 | 83.3 | 83.3 | 75.0 | 100.0 | 75.0 | 91.7 |
 | | submittal-review | 15.0 | 19.0 | 11.8 | 19.0 | 17.1 | 16.7 | 6.5 | 23.1 |
 
-**Key numbers by task (H -> H+ average gain across all models)**:
+**Key numbers by task (H → H+ average gain across all models)**:
 - detail-technical-review: **+32.2%** (retrieval-sensitive, largest gain)
 - spec-drawing-sync: **+20.8%**
 - drawing-navigation: **+18.75%**

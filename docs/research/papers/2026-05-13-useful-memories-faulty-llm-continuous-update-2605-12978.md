@@ -96,7 +96,7 @@ Learning from past experience benefits from two complementary forms of memory: e
 
 - **環境**：ARC-AGI、ALFWorld、ScienceWorld、WebShop、AppWorld、Mind2Web
 - **ARC-AGI Stream**：新增 Retain、Delete、Consolidate 三個顯式記憶管理動作
-- **整合策略對比**：Static-Group > Static-All > Stream（同一份 trajectories，schedule 不同->品質差異巨大）
+- **整合策略對比**：Static-Group > Static-All > Stream（同一份 trajectories，schedule 不同→品質差異巨大）
 - **基線**：no-memory、episodic-only、forced-consolidation
 - **模型**：GPT-5.4（及其他）
 

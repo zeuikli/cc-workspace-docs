@@ -1,6 +1,6 @@
 # AI Agent 工程通用研究報告：Harness 工程、Context 最佳化、委派、記憶與自我進化
 
-> **類型**：consolidated:deep-research — 整併 35 份前置研究報告（2026-05-12 -> 2026-05-31）重寫成通用知識
+> **類型**：consolidated:deep-research — 整併 35 份前置研究報告（2026-05-12 → 2026-05-31）重寫成通用知識
 > **日期**：2026-05-31 ｜ **語言**：繁體中文（技術術語保留英文）
 > **定位**：去除工作區內部代號、可供任何讀者閱讀的 AI Agent 工程通用研究報告
 > **引用原則**：所有數據與論文均源自前置報告語料；未經來源支持的主張一律標注 `[unverified]`
@@ -14,10 +14,10 @@
 本報告整併 35 份前置深度研究，收斂出五條主幹：
 
 1. **Harness 工程**是新護城河——`Harness ⊇ Context Engineering ⊇ Prompt Engineering` 三層嵌套，框架貢獻往往 ≥ 模型選擇。
-2. **Context 是稀缺資源**而非說明文件——「精確的少量 context > 大量 context」已獲論文級量化驗證（policy token 60.1K -> 2.9K，-95%，效能相當）。
+2. **Context 是稀缺資源**而非說明文件——「精確的少量 context > 大量 context」已獲論文級量化驗證（policy token 60.1K → 2.9K，-95%，效能相當）。
 3. **Sub-agent 是資訊蒐集者，不是平行實作者**——錯置委派會因 context 隔離產生決策衝突；fan-out 有硬上限。
 4. **記憶整合是高風險操作**——連續無節制整合會讓模型在 ARC-AGI 上從 100% 崩跌至 46%；顯式、可治理的記憶控制是關鍵。
-5. **自我進化需要閉環**——失敗信號 -> 記錄 -> 提煉規則 -> 修正架構 -> 驗證 -> 成為下次 baseline，且生成者不可自評（Generator ≠ Evaluator）。
+5. **自我進化需要閉環**——失敗信號 → 記錄 → 提煉規則 → 修正架構 → 驗證 → 成為下次 baseline，且生成者不可自評（Generator ≠ Evaluator）。
 
 以下逐節展開，附完整論文索引、量化數據總表與術語對照。
 
@@ -75,9 +75,9 @@ CAR 並衍生出 **HarnessCard** 概念——類比 Model Card 的透明揭露�
 
 ```
 PLAN（寫出可機械驗證的完成標準）
-  -> EXECUTE（在約束下執行）
-  -> VERIFY（執行所有驗證命令）
-  -> 失敗則回到 EXECUTE
+  → EXECUTE（在約束下執行）
+  → VERIFY（執行所有驗證命令）
+  → 失敗則回到 EXECUTE
 ```
 
 PEV 的關鍵在於 **PLAN 階段必須先寫出可驗證條件**（例如「測試通過」「healthcheck 輸出 PASS」「特定指令輸出特定字串」），而非寫出「步驟清單」。目標導向（iterate to a target）勝過步驟導向（follow steps），因為後者容易卡在「下一步是什麼」而失去方向。
@@ -135,10 +135,10 @@ context 預算管理的核心架構是三層分級載入：
 
 在壓縮 auto-load 內容時，並非所有文字等價。一套經 50 輪優化驗證的分類框架（2026-05-18 報告）：
 
-- **TYPE A — 強制行為動詞**（YOU MUST / 禁止 / IMPORTANT + 具體數字）-> **禁止移除**。
-- **TYPE B — 規則 + 解釋** -> 可移除「解釋」部分，保留規則本身。
-- **TYPE C — 背景脈絡 meta** -> 可安全移除。
-- **TYPE D — 參考連結**（「詳見 X.md」）-> 可安全移除。
+- **TYPE A — 強制行為動詞**（YOU MUST / 禁止 / IMPORTANT + 具體數字）→ **禁止移除**。
+- **TYPE B — 規則 + 解釋** → 可移除「解釋」部分，保留規則本身。
+- **TYPE C — 背景脈絡 meta** → 可安全移除。
+- **TYPE D — 參考連結**（「詳見 X.md」）→ 可安全移除。
 
 任何壓縮都應從 C/D 開始，最後才動 B 的解釋，絕不碰 A。
 
@@ -152,11 +152,11 @@ context 預算管理的核心架構是三層分級載入：
 
 | 手段 | 效果 | 來源 |
 |------|------|------|
-| 工具延遲載入（Tool Search） | MCP token 51,000 -> 8,500（-83.3%） | 2026-05-18 |
+| 工具延遲載入（Tool Search） | MCP token 51,000 → 8,500（-83.3%） | 2026-05-18 |
 | 路徑範圍規則 | 規則 token 省 70–80% | 2026-05-18 |
-| 記憶檔案重構 | 35.5KB -> 3.5KB（-90%），每 session 省 ~8,000 tokens | 2026-05-18 |
+| 記憶檔案重構 | 35.5KB → 3.5KB（-90%），每 session 省 ~8,000 tokens | 2026-05-18 |
 | 輸出紀律（無開場白、精簡句式） | 英文輸出 -80.6%，繁中 -86.2%，品質無衰退 | 2026-05-12、2026-05-16 |
-| 50 輪 framework-first 優化 | auto-load ~4,459 -> ~3,392 tokens（-23.9%） | 2026-05-18 |
+| 50 輪 framework-first 優化 | auto-load ~4,459 → ~3,392 tokens（-23.9%） | 2026-05-18 |
 
 兩個系統性事實值得記住：(1) AI agent 的 token 消耗比純對話高約 **50 倍**（LeanOps 2026）；(2) Claude Code 的 auto-compact buffer 固定佔 **33,000 tokens**（200K window 的 16.5%，不可調整）——這意味著實際可用 context 比帳面少。
 
@@ -204,7 +204,7 @@ context 預算管理的核心架構是三層分級載入：
 
 ### 4.5 四層失敗恢復
 
-`Retry（指數退避）-> Rollback（git revert）-> Decompose（拆更小子任務）-> Escalate（升模型或人工介入）`。重點是**逐層升級**，而不是一遇到失敗就跳到「換模型」。
+`Retry（指數退避）→ Rollback（git revert）→ Decompose（拆更小子任務）→ Escalate（升模型或人工介入）`。重點是**逐層升級**，而不是一遇到失敗就跳到「換模型」。
 
 ---
 
@@ -236,9 +236,9 @@ Prompt cache 命中可把輸入成本降到原本的約 10%（$0.30/MTok vs $3/M
 
 按「需要獨立認知的檔案數」分配模型：
 
-- **0–1 個檔案** -> 用最便宜的小模型（如 Haiku）。
-- **2–9 個檔案** -> 用中階模型（如 Sonnet）。
-- **10+ 個檔案 / 架構決策** -> 用旗艦模型（如 Opus）。
+- **0–1 個檔案** → 用最便宜的小模型（如 Haiku）。
+- **2–9 個檔案** → 用中階模型（如 Sonnet）。
+- **10+ 個檔案 / 架構決策** → 用旗艦模型（如 Opus）。
 
 一個反直覺的研究發現（AgentOpt，`[C]` 未本地驗證）：**讓強模型當 Planner 反而最差**——強模型作 2-stage planner 僅 31.71%，而小模型作 planner + 強模型作 solver 達 74.27%；正確的模型組合比錯誤組合省 13–32 倍成本。教訓是：懂得委派的弱 planner，勝過什麼都自己扛的強 planner。
 
@@ -253,7 +253,7 @@ Prompt cache 命中可把輸入成本降到原本的約 10%（$0.30/MTok vs $3/M
 
 依 context window 使用率調整行為：
 
-`0–40% 無限制 -> 40–70% 聚焦 -> 70–85% 主動壓縮（compact）-> 85–95% 停止接新任務 -> 95%+ 立即清空重開`。
+`0–40% 無限制 → 40–70% 聚焦 → 70–85% 主動壓縮（compact）→ 85–95% 停止接新任務 → 95%+ 立即清空重開`。
 
 ---
 
@@ -289,7 +289,7 @@ Du et al.（arXiv:2505.00675）把記憶系統的操作收斂為六種：**整�
 ### 6.3 關鍵記憶架構
 
 - **MemGPT**（Packer et al., arXiv:2310.08560）：把 LLM 類比成作業系統——主記憶（Context Window）↔ 回憶儲存 ↔ 歸檔儲存，用 Interrupts 機制讓模型主動「換頁」。
-- **MemoryOS**（arXiv:2506.06326）：STM -> MTM -> LTM 三層；Heat Score = 頻率 × 互動長度 × 時間衰減；LoCoMo 上 F1 +49.11%。
+- **MemoryOS**（arXiv:2506.06326）：STM → MTM → LTM 三層；Heat Score = 頻率 × 互動長度 × 時間衰減；LoCoMo 上 F1 +49.11%。
 - **Mem0**（arXiv:2504.19413）：生產級記憶 API，ADD/UPDATE/DELETE/NONE 四動作增量寫入；LOCOMO 上比 OpenAI +26%，p95 延遲 -91%，token 成本 -90%。
 - **HippoRAG**（Gutiérrez et al., arXiv:2405.14831, NeurIPS 2024）：用知識圖譜 + Personalized PageRank 模擬海馬體索引；多跳 QA +20%，比基線快 6–13 倍、便宜 10–30 倍。
 - **A-MEM**（Xu et al., arXiv:2502.12110, NeurIPS 2025）：Zettelkasten 式互連記憶——新記憶會「觸發既有記憶的修訂」而非單純追加。
@@ -315,9 +315,9 @@ Du et al.（arXiv:2505.00675）把記憶系統的操作收斂為六種：**整�
 8 篇論文共同收斂出一個自我進化的閉環（harness-memory-self-evolution 合成報告）：
 
 ```
-失敗信號 -> [記憶層] 記錄 -> [提煉] 可泛化規則 -> [整合] 更新規則
-  -> [架構修正] 調整 harness / hooks -> [驗證] healthcheck / eval
-  -> [記錄] 成為下次 baseline ↺
+失敗信號 → [記憶層] 記錄 → [提煉] 可泛化規則 → [整合] 更新規則
+  → [架構修正] 調整 harness / hooks → [驗證] healthcheck / eval
+  → [記錄] 成為下次 baseline ↺
 ```
 
 ### 7.2 語言反思強化學習
@@ -327,8 +327,8 @@ Du et al.（arXiv:2505.00675）把記憶系統的操作收斂為六種：**整�
 
 ### 7.3 推理策略蒸餾
 
-- **ReasoningBank**（arXiv:2509.25140）：從成功/失敗經驗中提煉「可泛化的推理策略」（而非原始軌跡）；搭配 MaTTS（Memory-aware Test-Time Scaling）形成「更好記憶 -> 更有效 scaling -> 更好記憶」的正向循環。
-- **ACE / Agentic Context Engineering**（arXiv:2510.04618, ICLR 2026）：Generator -> Reflector -> Curator 三模組，用增量 delta 更新對抗「brevity bias」和「context collapse」；讓小型開源模型在 AppWorld 上匹敵 GPT-4.1 級別的頂尖 agent。
+- **ReasoningBank**（arXiv:2509.25140）：從成功/失敗經驗中提煉「可泛化的推理策略」（而非原始軌跡）；搭配 MaTTS（Memory-aware Test-Time Scaling）形成「更好記憶 → 更有效 scaling → 更好記憶」的正向循環。
+- **ACE / Agentic Context Engineering**（arXiv:2510.04618, ICLR 2026）：Generator → Reflector → Curator 三模組，用增量 delta 更新對抗「brevity bias」和「context collapse」；讓小型開源模型在 AppWorld 上匹敵 GPT-4.1 級別的頂尖 agent。
 
 ### 7.4 技能即程序記憶
 
@@ -361,11 +361,11 @@ Du et al.（arXiv:2505.00675）把記憶系統的操作收斂為六種：**整�
 
 ### 8.3 Hook 反饋速度層次（越早越便宜）
 
-`PostToolUse（毫秒）-> PreToolUse（毫秒）-> pre-commit（秒）-> Stop（秒~分）-> CI/CD（分鐘）-> 人工審查（小時）`。一個關鍵數字：**PostToolUse hook 的成本比 PR review 低約 1000 倍**——盡量把錯誤攔在最早、最便宜的層次。Hook 的 exit code 語義：`0 = 繼續`、`1 = 警告但繼續`、`2 = 阻斷`。
+`PostToolUse（毫秒）→ PreToolUse（毫秒）→ pre-commit（秒）→ Stop（秒~分）→ CI/CD（分鐘）→ 人工審查（小時）`。一個關鍵數字：**PostToolUse hook 的成本比 PR review 低約 1000 倍**——盡量把錯誤攔在最早、最便宜的層次。Hook 的 exit code 語義：`0 = 繼續`、`1 = 警告但繼續`、`2 = 阻斷`。
 
 ### 8.4 Ratchet 升格機制
 
-把「每次失敗」轉化為「永久防護」的六階段閉環：`OBSERVE -> IDENTIFY -> PROPOSE -> TEST -> APPLY -> RECORD`。當某類失敗頻率 > 3 次/月，就把對應規則「升格」成 PreToolUse Hook（從靠模型自律變成機械強制），升格後再從指令文件移除該條規則以保持精簡——這呼應了 Mitchell Hashimoto 的原則：「一旦代理犯了錯，花時間設計解決方案，使代理永遠不再犯同樣的錯誤。」
+把「每次失敗」轉化為「永久防護」的六階段閉環：`OBSERVE → IDENTIFY → PROPOSE → TEST → APPLY → RECORD`。當某類失敗頻率 > 3 次/月，就把對應規則「升格」成 PreToolUse Hook（從靠模型自律變成機械強制），升格後再從指令文件移除該條規則以保持精簡——這呼應了 Mitchell Hashimoto 的原則：「一旦代理犯了錯，花時間設計解決方案，使代理永遠不再犯同樣的錯誤。」
 
 ### 8.5 冷啟動測試與知識可見性
 
@@ -378,7 +378,7 @@ Du et al.（arXiv:2505.00675）把記憶系統的操作收斂為六種：**整�
 
 當需要高可信度的判斷（例如「某個改進建議該不該採納」），單一 agent 容易自我強化偏誤。**多代理共識投票**提供了一個對抗機制：
 
-- 三個「不同方法論」的 agent 各自獨立投票（例如：分層信度來源 / 無人值守綜合 / 對抗式精煉），決策規則為「**≥ 2/3 同意 -> GO**」。
+- 三個「不同方法論」的 agent 各自獨立投票（例如：分層信度來源 / 無人值守綜合 / 對抗式精煉），決策規則為「**≥ 2/3 同意 → GO**」。
 - **強制 Vote Matrix**：必須給出「每個 agent × 每個選項」的數字分數表，禁止只給敘述性自評。
 - **證據門檻**：每個 agent 必須 `讀檔 ≥ 3` 且 `grep 命令 ≥ 2`；parent 必須親自抽驗至少一條 grep 命令重跑。
 
@@ -396,11 +396,11 @@ Du et al.（arXiv:2505.00675）把記憶系統的操作收斂為六種：**整�
 
 ### 10.2 代表性外部框架（通用化）
 
-- **多角色技能框架（如 gstack）**：把完整開發生命週期（Think -> Plan -> Build -> Review -> Test -> Ship -> Reflect）封裝成 40+ 個 slash-command 技能，核心模式是「**Thin Harness + Fat Skills**」——框架本身輕量，業務邏輯全在技能裡。GitHub 星數約 101,000 `[unverified — 來源報告自身標注該數字無法即時驗證；正文另記 ~20,000，同步更新節修正為 ~101,000]`。
+- **多角色技能框架（如 gstack）**：把完整開發生命週期（Think → Plan → Build → Review → Test → Ship → Reflect）封裝成 40+ 個 slash-command 技能，核心模式是「**Thin Harness + Fat Skills**」——框架本身輕量，業務邏輯全在技能裡。GitHub 星數約 101,000 `[unverified — 來源報告自身標注該數字無法即時驗證；正文另記 ~20,000，同步更新節修正為 ~101,000]`。
 - **個人持久知識圖（如 gbrain）**：用 hybrid scoring（vector + BM25 + RRF + reranker）搭配 typed graph edges（`works_at` / `invested_in` 等），比純向量搜尋在 rank@5 上 +31.4pp 精準度。一句話總結它的價值主張：「搜尋給你原始頁面，知識圖給你答案。」
-- **背景記憶整合引擎（如未發布的 autoDream）**：四階段（Orient -> Gather -> Consolidate -> Prune），在使用者長時間閒置時由 forked subagent 執行，輸出上限 25KB——這正是第 6.4 節「記憶整合須顯式、有上限」原則的產品化體現。
+- **背景記憶整合引擎（如未發布的 autoDream）**：四階段（Orient → Gather → Consolidate → Prune），在使用者長時間閒置時由 forked subagent 執行，輸出上限 25KB——這正是第 6.4 節「記憶整合須顯式、有上限」原則的產品化體現。
 - **持久背景 daemon（如未發布的 KAIROS）**：always-on，週期性 tick，單次工具執行設 15 秒 blocking budget，並有推送通知 / 檔案投遞 / PR 訂閱三種主動能力。
-- **自我演化 agent 框架（如 Hermes）**：三階段——Experience Capture（複雜任務後自動生成技能）-> Active Learning（使用中迭代改良）-> Persistence（跨 session 全文搜尋記憶），並以 `usage_count` / `quality_score` / `evolution_stage`（draft/tested/stable/mature）做品質 telemetry。
+- **自我演化 agent 框架（如 Hermes）**：三階段——Experience Capture（複雜任務後自動生成技能）→ Active Learning（使用中迭代改良）→ Persistence（跨 session 全文搜尋記憶），並以 `usage_count` / `quality_score` / `evolution_stage`（draft/tested/stable/mature）做品質 telemetry。
 
 ### 10.3 供應鏈安全成為生產事故
 
@@ -421,7 +421,7 @@ agent 生態的開放性帶來了新的攻擊面，已從理論變成實際生�
 ## 11. 前沿趨勢與預測
 
 1. **Harness 標準化與透明化**：HarnessCard / HarnessCard 類的揭露標準會像 Model Card 一樣普及，讓 harness 設計可比較、可審計。
-2. **自動 Harness 進化（AHE）走向實用**：透過觀測 agent 行為自動調整 harness 組件的機制（如 HARBOR 的貝葉斯最佳化，Terminal-Bench 10 輪迭代 69.7% -> 77.0%，跨模型轉移 +5.1–10.1pp）會逐步落地——但人類策展閘門仍不可或缺（見 §7.6）。
+2. **自動 Harness 進化（AHE）走向實用**：透過觀測 agent 行為自動調整 harness 組件的機制（如 HARBOR 的貝葉斯最佳化，Terminal-Bench 10 輪迭代 69.7% → 77.0%，跨模型轉移 +5.1–10.1pp）會逐步落地——但人類策展閘門仍不可或缺（見 §7.6）。
 3. **記憶治理（Mnemonic Sovereignty）成為一級議題**：對「寫入 / 讀取 / 更新 / 遺忘」的可驗證治理，會與安全合規綁定（記憶安全調查 arXiv:2604.16548）。
 4. **Agent teams 取代 single-agent**：「Single-agent workflows are dead」的宣言指向多 agent 編排，但要避免 §5.1 的協調錯誤放大陷阱——數量不是答案，編排才是。
 5. **精簡 harness 勝出**：實證顯示精簡 harness（~11.4K tokens）可超越冗長 harness（~50.8K tokens）——「少即是多」會持續被數據驗證。
@@ -478,7 +478,7 @@ agent 生態的開放性帶來了新的攻擊面，已從理論變成實際生�
 - ReasoningBank — arXiv:2509.25140
 - Agent Harness Survey（六維 H=(E,T,C,S,L,V)） — 2026-04
 - 記憶安全調查（Mnemonic Sovereignty） — arXiv:2604.16548
-- Skill-Issue Harness Engineering（Terminal-Bench #33->#5） — 2026-03-12
+- Skill-Issue Harness Engineering（Terminal-Bench #33→#5） — 2026-03-12
 - SWE-agent（ACI 概念） — 2024
 - ReasoningBank / HARBOR / AHE / Vesper 等 — 詳見前置深度研究
 
@@ -490,38 +490,38 @@ agent 生態的開放性帶來了新的攻擊面，已從理論變成實際生�
 
 | 主題 | 數據 | 來源 |
 |------|------|------|
-| 工具格式調整對準確率 | 6.7% -> 68.3%（10×） | 2026-05-16/19 |
-| 純 harness 改善（Terminal-Bench 2.0） | 52.8% -> 66.5%（+13.7pp） | 2026-05-16 |
-| 五子系統補齊（模型不變） | 成功率 20% -> ~100% | 2026-05-17 |
-| Harness 巡檢 | 成功率 75% -> 95%+ | 2026-05-28 |
+| 工具格式調整對準確率 | 6.7% → 68.3%（10×） | 2026-05-16/19 |
+| 純 harness 改善（Terminal-Bench 2.0） | 52.8% → 66.5%（+13.7pp） | 2026-05-16 |
+| 五子系統補齊（模型不變） | 成功率 20% → ~100% | 2026-05-17 |
+| Harness 巡檢 | 成功率 75% → 95%+ | 2026-05-28 |
 | AI agent 專案無法上線 | 88% | 2026-05-19 |
-| 指令文件 > 200 行合規率 | 76% -> 52% | 2026-05-16/18 |
+| 指令文件 > 200 行合規率 | 76% → 52% | 2026-05-16/18 |
 | 12 條規則錯誤率（甜蜜點） | 3% | 2026-05-18/25 |
 | 路徑範圍規則 session token | -82% | 2026-05-18 |
-| 工具延遲載入 MCP token | 51,000 -> 8,500（-83.3%） | 2026-05-18 |
-| 記憶檔案重構 | 35.5KB -> 3.5KB（-90%） | 2026-05-18 |
+| 工具延遲載入 MCP token | 51,000 → 8,500（-83.3%） | 2026-05-18 |
+| 記憶檔案重構 | 35.5KB → 3.5KB（-90%） | 2026-05-18 |
 | 輸出紀律 token 節省（英/繁中） | -80.6% / -86.2% | 2026-05-12/16 |
-| NLAH policy token | 60.1K -> 2.9K（-95%） | 2026-05-25 |
+| NLAH policy token | 60.1K → 2.9K（-95%） | 2026-05-25 |
 | 跨模型移植損失（好/壞 harness） | < 5% / > 40% | 2026-05-16 |
 | 強 Planner vs 弱 Planner（AgentOpt） | 31.71% vs 74.27% `[C]` | 2026-05-16 |
 | Advisor 模式（Haiku+Opus）成本 | -85% | 2026-05-16 |
 | 多代理錯誤放大（Bag-of-Agents） | 17.2× | 2026-05-12 |
 | Prompt cache 命中費率 | $0.30/MTok（一般 $3） | 2026-05-16 |
-| 記憶整合崩潰（GPT-5.4 ARC-AGI） | 100% -> 46% | 2026-05-22 |
+| 記憶整合崩潰（GPT-5.4 ARC-AGI） | 100% → 46% | 2026-05-22 |
 | MemoryOS（LoCoMo F1） | +49.11% | llm-memory-deep-research |
 | Mem0 vs OpenAI（LOCOMO） | +26%，成本 -90% | llm-memory-deep-research |
-| Reflexion（HumanEval GPT-3.5） | 65.8% -> 91% | 2026-05-22 |
+| Reflexion（HumanEval GPT-3.5） | 65.8% → 91% | 2026-05-22 |
 | Voyager 技術樹加速 | 15.3× | 2026-05-22 |
 | Chronos（LongMemEvalS） | 95.60% | llm-memory-deep-research |
 | 人工 vs 自動技能 | +16.2pp vs -1.3pp | 2026-05-25 |
 | PostToolUse hook vs PR review 成本 | 1/1000 | 2026-05-19 |
 | 公開技能倉庫惡意率 | 12% | tweets-synthesis |
-| 社群技能篩選通過率 | 247 -> 23（9.3%） | tweets-synthesis |
+| 社群技能篩選通過率 | 247 → 23（9.3%） | tweets-synthesis |
 | 論文分析總數 | 84–97 篇 / 6 領域 | 2026-05-25 |
 
 ---
 
-## 附錄 C：術語對照表（內部代號 -> 通用意義）
+## 附錄 C：術語對照表（內部代號 → 通用意義）
 
 | 術語 | 通用意義 |
 |------|---------|
@@ -549,7 +549,7 @@ agent 生態的開放性帶來了新的攻擊面，已從理論變成實際生�
 
 ## 附錄 D：本報告整併的前置報告清單
 
-本報告整併並重寫自 `research/reports/` 下前置研究（2026-05-12 -> 2026-05-31），原檔多數保留作為一級證據（Episodic-First）。**2026-06-05 清理**：其中 8 份已執行過的過程產物（cross-validation / auto-load-50round / nlah-audit / gap-analysis-consensus / third-round-consensus / harness-full-audit / memory-control-architecture / refs-genericization）已移除，其結論已內化進 workspace 規則或本整併報告。主要來源分群（已移除者標 ~~刪除線~~）：
+本報告整併並重寫自 `research/reports/` 下前置研究（2026-05-12 → 2026-05-31），原檔多數保留作為一級證據（Episodic-First）。**2026-06-05 清理**：其中 8 份已執行過的過程產物（cross-validation / auto-load-50round / nlah-audit / gap-analysis-consensus / third-round-consensus / harness-full-audit / memory-control-architecture / refs-genericization）已移除，其結論已內化進 workspace 規則或本整併報告。主要來源分群（已移除者標 ~~刪除線~~）：
 
 - **Harness 工程 / Auto-load**：`2026-05-17-harness-engineering`、`2026-05-16-harness-engineering-model-fit`、`2026-05-19-harness-verification-methods`、~~`2026-05-18-auto-load-50round-optimization`~~、`2026-05-18-auto-load-token-best-practices`、`2026-05-25-reduce-auto-load-token`、`harness-engineering-deep-research`、`2026-05-28-harness-evolution-plan`、~~`2026-05-26-nlah-audit-review`~~
 - **Claude Code 最佳實踐 / 委派**：`2026-05-16-claude-code-best-practices`、`2026-05-17-claude-code-subagent-delegation-gotchas`、`2026-05-18-karpathy-mnilax-best-solution`、`2026-05-12-best-practices-simplicity`、~~`2026-05-15-cross-validation-report`~~、`2026-05-23-implementation-research-garry-tan-claude-code`

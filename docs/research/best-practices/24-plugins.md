@@ -24,7 +24,7 @@ Claude Code 支援兩種擴展方式：
 | 版本控制 | 手動管理 | 內建版本策略 |
 | 跨專案安裝 | 手動複製 | `/plugin install` |
 
-**決策建議**：先用 standalone 快速迭代 -> 準備分享時轉換為 plugin。
+**決策建議**：先用 standalone 快速迭代 → 準備分享時轉換為 plugin。
 
 ---
 
@@ -354,7 +354,7 @@ claude --plugin-dir ./my-plugin
 - 為 `bin/` 目錄封裝 helper scripts（現有 `scripts/` 可遷移）
 - 透過 `monitors/` 實作自動化背景監控
 
-**遷移優先序**：`/deep-review` skill -> 最具分享價值，適合率先打包。
+**遷移優先序**：`/deep-review` skill → 最具分享價值，適合率先打包。
 
 ---
 

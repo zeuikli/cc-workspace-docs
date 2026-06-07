@@ -18,7 +18,7 @@
 | P5 | Context-rot 自檢清單（on-demand ref） | 新增 ref | 低 | 0（on-demand） | ⭐⭐ |
 | P6 | AGENTS.md sub-agent context 隔離 SOP | 文件補強 | 低 | 0（非 auto-load） | ⭐ |
 
-> 預估 auto-load 淨增 ~350 bytes -> 17,277 bytes，仍 < 18K 上限。**P2+P3+P4 三項合併前須先跑 P1 釋出餘裕觀測**；若逼近上限，依 core.md §Framework Integrity 先砍 TYPE C/D。
+> 預估 auto-load 淨增 ~350 bytes → 17,277 bytes，仍 < 18K 上限。**P2+P3+P4 三項合併前須先跑 P1 釋出餘裕觀測**；若逼近上限，依 core.md §Framework Integrity 先砍 TYPE C/D。
 
 ---
 
@@ -78,7 +78,7 @@ wc -c CLAUDE.md .claude/rules/{core,context-management,output-discipline,subagen
 **具體編輯**：新增 `.claude/refs/post-compact-checklist.md`（on-demand），context-management.md 加 1 行指標：
 
 ```markdown
-- **Compact 後自檢**（見 refs/post-compact-checklist.md）：① 任務目標仍在？② 安全紅線仍在？③ 最近工具結果未失真？任一失 -> `/rewind`。
+- **Compact 後自檢**（見 refs/post-compact-checklist.md）：① 任務目標仍在？② 安全紅線仍在？③ 最近工具結果未失真？任一失 → `/rewind`。
 ```
 
 **Verify command**：
@@ -95,7 +95,7 @@ grep -q "Compact 後自檢" .claude/rules/context-management.md && echo OK
 
 **Gap**：現有 compact hint 只列「保留/捨棄」，未利用研究證實的 Compact Instructions 模式。
 
-**研究接地**：報告 §3.1 / §4.1——CLAUDE.md 加 Compact Instructions -> **49% 品質改善**【LOW，但成本零、無副作用，值得試】。
+**研究接地**：報告 §3.1 / §4.1——CLAUDE.md 加 Compact Instructions → **49% 品質改善**【LOW，但成本零、無副作用，值得試】。
 
 **具體編輯**：強化 context-management.md 第 11 行的 compact hint，加入 file path / error string 保留指示（呼應 morphllm「rewritten error messages 摧毀 debugging value」）：
 
@@ -124,7 +124,7 @@ grep -q "勿改寫" .claude/rules/context-management.md && echo "compact instruc
 # Context Rot 識別與處置
 症狀：① 忽略已建立約束 ② 重複被拒絕的解法 ③ 需不斷重述指令 ④ 推理前後矛盾
 四模式（Anthropic）：Poisoning（錯誤資訊污染）/ Distraction（無關內容稀釋）/ Confusion（衝突指令）/ Clash（新舊矛盾）
-處置：prompt anchoring（關鍵規則放 prompt 邊緣）-> 自然 checkpoint 後 compact -> 嚴重則 /clear
+處置：prompt anchoring（關鍵規則放 prompt 邊緣）→ 自然 checkpoint 後 compact → 嚴重則 /clear
 ```
 
 **Verify command**：
@@ -155,7 +155,7 @@ grep -q "Context 隔離自檢\|不繼承 parent" AGENTS.md && echo OK
 
 ## 執行順序建議
 
-1. **先 P1**（純觀測，建立 cache 命中率 baseline 數據）-> 為後續 cache 規則提供實證。
+1. **先 P1**（純觀測，建立 cache 命中率 baseline 數據）→ 為後續 cache 規則提供實證。
 2. **P5 + P6**（零/低 auto-load 成本，on-demand + 非 auto-load）。
 3. **P2 + P3 + P4**（auto-load 微調，合併一次量測 byte，確保 < 18K）。
 

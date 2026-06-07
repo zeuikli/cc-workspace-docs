@@ -52,10 +52,10 @@ Claude 根據任務動態撰寫並執行 JavaScript 協調腳本，可在同一 
 | 模式 | 說明 | 適用場景 |
 |------|------|---------|
 | **Classify-and-act** | 依任務類型路由到不同 agent | Issue triage、文件分類 |
-| **Fan-out-and-synthesize** | 並行分散 -> 合併結果 | 大型 codebase 搜尋、研究報告 |
+| **Fan-out-and-synthesize** | 並行分散 → 合併結果 | 大型 codebase 搜尋、研究報告 |
 | **Adversarial verification** | 獨立 agent 驗證輸出 | 事實核查、安全審查 |
-| **Generate-and-filter** | 生成候選 -> 依品質篩選 | 程式碼生成、創意工作 |
-| **Tournament** | 競爭 agent 解題 -> 兩兩評判 | 排序、最佳解尋找 |
+| **Generate-and-filter** | 生成候選 → 依品質篩選 | 程式碼生成、創意工作 |
+| **Tournament** | 競爭 agent 解題 → 兩兩評判 | 排序、最佳解尋找 |
 | **Loop until done** | 持續生成直到停止條件 | 遷移、批次處理 |
 
 ---
@@ -83,7 +83,7 @@ Bun 用 dynamic workflows 將 ~750,000 行從 Zig porting 到 Rust，11 天完�
 
 ### 大型 Codebase 審查
 
-全 codebase 安全 audit：並行搜尋 -> 獨立驗證 -> 整合報告。
+全 codebase 安全 audit：並行搜尋 → 獨立驗證 → 整合報告。
 
 ---
 

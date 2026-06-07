@@ -459,10 +459,10 @@ For compact reporting, the chapter foregrounds co-occurrences that satisfied two
 
 | Relationship | Support | Confidence | Lift | Compact evidence statement |
 |--------------|---------|------------|------|---------------------------|
-| Subagent complexity -> memory sophistication | 0.73 | High | 1.8 | E/F-pattern projects average 4.1–4.2 memory score versus 2.8 for A-pattern projects. |
-| MCP-first tooling -> stronger discovery | 0.62 | High | 2.8 | MCP-first projects score 4.62 on discovery versus 3.86 for registry-centered projects. |
-| Container isolation -> policy-structured security | 0.89 | High | 3.4 | 100% of container-isolated projects implement policy engines versus 23% without container isolation. |
-| Project scale -> broader architectural complexity | 0.68 | Medium | 1.5 | Large projects average 6.2 focal design choices versus 2.3 for small projects. |
+| Subagent complexity → memory sophistication | 0.73 | High | 1.8 | E/F-pattern projects average 4.1–4.2 memory score versus 2.8 for A-pattern projects. |
+| MCP-first tooling → stronger discovery | 0.62 | High | 2.8 | MCP-first projects score 4.62 on discovery versus 3.86 for registry-centered projects. |
+| Container isolation → policy-structured security | 0.89 | High | 3.4 | 100% of container-isolated projects implement policy engines versus 23% without container isolation. |
+| Project scale → broader architectural complexity | 0.68 | Medium | 1.5 | Large projects average 6.2 focal design choices versus 2.3 for small projects. |
 
 To make the transition from Section 4 to the present section explicit, Table 11 shows a small set of illustrative rows from the same project-level coding records used throughout the analysis. The table is not a separate sample and is not intended as an exhaustive project matrix. Its purpose is simply to show how the dimension-wise options reported in Section 4 reappear at the level of cross-dimension bundles when we analyze project configurations relationally.
 

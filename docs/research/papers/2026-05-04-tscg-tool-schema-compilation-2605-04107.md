@@ -42,7 +42,7 @@ Effective context available for actual reasoning shrinks dramatically.
 
 Many open-source models (e.g., Phi-4) were not trained on production-grade JSON tool schemas:
 
-- Encounter long JSON schemas -> accuracy drops to 0% (Phi-4 baseline at 20 tools)
+- Encounter long JSON schemas → accuracy drops to 0% (Phi-4 baseline at 20 tools)
 - This is not a model capability problem—it is a **protocol representation problem**
 
 ---
@@ -131,7 +131,7 @@ The framework connects operators to three transformer properties:
 
 ### R² Analysis: Format vs Compression
 
-Format translation (JSON -> text) explains **88% of improvement for small models**; genuine compression persists only for frontier models.
+Format translation (JSON → text) explains **88% of improvement for small models**; genuine compression persists only for frontier models.
 
 This decomposition reveals two distinct improvement mechanisms:
 - **Small models**: primarily benefit from format translation (removing JSON structure confusion)

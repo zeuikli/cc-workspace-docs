@@ -434,7 +434,7 @@ As the AI development ecosystem moves toward more sophisticated autonomous agent
 - **洩漏事件本身（2026-03-31）**：已由多家獨立媒體確認，Anthropic 官方聲明（「human error, not a security breach」）仍是官方說法，無撤回或修正。
 - **KAIROS 仍未正式發布**：Claude Code v2.1.128 至 v2.1.150 的 changelog 中均無 KAIROS 正式啟用的記錄，截至 2026-05-25 仍未釋出。
 - **autoDream 仍未正式發布**：同上，v2.1.150 changelog 無相關項目；Auto Memory（append-only）+ memory-compactor 仍是現行記憶架構。
-- **四階段整合循環**（autoDream Orient -> Gather -> Consolidate -> Prune）的技術說明仍準確，且已被 workspace `memory-compactor` agent 手動模擬（見 `implementation-research` 報告）。
+- **四階段整合循環**（autoDream Orient → Gather → Consolidate → Prune）的技術說明仍準確，且已被 workspace `memory-compactor` agent 手動模擬（見 `implementation-research` 報告）。
 - **15 秒 blocking budget 與 periodic tick 設計**：KAIROS 架構描述仍與已知洩漏代碼一致；無新的官方資料推翻此設計。
 - **三層記憶系統**（Session context / Auto Memory / autoDream output）描述仍準確，反映 Claude Code 的設計意圖。
 - **axios 供應鏈攻擊**（1.14.1、0.30.4）事件已確認，建議改用 Native Installer 仍是有效的安全建議。

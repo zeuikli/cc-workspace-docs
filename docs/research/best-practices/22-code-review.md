@@ -20,7 +20,7 @@ type: best-practices
 
 官方統計數字（Anthropic 內部驗證）：
 - 工程師程式碼產出成長 **200%**
-- 獲得實質性 review comment 的 PR 比例：**16% -> 54%**
+- 獲得實質性 review comment 的 PR 比例：**16% → 54%**
 - 誤報率（false positive rate）：**< 1%**
 
 Zero Data Retention 組織不可用。
@@ -31,10 +31,10 @@ Zero Data Retention 組織不可用。
 
 ### 2.1 審查流程
 
-1. PR 開啟 / push / 手動觸發 -> 啟動多個平行 agent
+1. PR 開啟 / push / 手動觸發 → 啟動多個平行 agent
 2. 每個 agent 分析 diff + 周邊程式碼（各負責不同類別的問題）
 3. Verification pass：對候選問題驗證對實際程式碼行為，過濾誤報
-4. 去重 + 按 severity 排序 -> 發佈為 PR inline comments
+4. 去重 + 按 severity 排序 → 發佈為 PR inline comments
 5. 若無問題：發佈簡短確認 comment
 6. 平均完成時間：**20 分鐘**
 
@@ -72,7 +72,7 @@ gh api repos/OWNER/REPO/check-runs/CHECK_RUN_ID \
 ### 2.4 Rating 機制
 
 每則 review comment 附帶 👍 / 👎。
-Anthropic 收集 PR merge 後的 reaction 統計 -> 用於調整 reviewer 品質。
+Anthropic 收集 PR merge 後的 reaction 統計 → 用於調整 reviewer 品質。
 回覆 inline comment **不會**觸發 Claude 重新回應或更新 PR。
 
 ---
@@ -81,7 +81,7 @@ Anthropic 收集 PR merge 後的 reaction 統計 -> 用於調整 reviewer 品質
 
 > 前提：需要 Claude 組織 admin 權限 + GitHub 組織 GitHub App 安裝權限。
 
-1. 前往 `claude.ai/admin-settings/claude-code` -> Code Review 區塊 -> **Setup**
+1. 前往 `claude.ai/admin-settings/claude-code` → Code Review 區塊 → **Setup**
 2. 安裝 **Claude GitHub App** 到 GitHub 組織（需要 Contents read/write、Issues read/write、Pull requests read/write）
 3. 選擇要啟用 Code Review 的 **repositories**
 4. 為每個 repo 設定 **Review Behavior**：
@@ -89,7 +89,7 @@ Anthropic 收集 PR merge 後的 reaction 統計 -> 用於調整 reviewer 品質
    - **After every push**：每次 push 觸發（成本最高，自動解析已修復的 thread）
    - **Manual**：僅在 `@claude review` comment 時執行
 
-驗證：開一個測試 PR -> 數分鐘內出現「Claude Code Review」check run。
+驗證：開一個測試 PR → 數分鐘內出現「Claude Code Review」check run。
 
 ---
 
@@ -187,7 +187,7 @@ everything you found is a Nit, lead the summary with "No blocking issues."
 
 - 按 token 用量計費，**不計入**訂閱內含用量（extra usage 計費）
 - 平均每次 review：**$15–25**（依 PR 大小、codebase 複雜度、需驗證的問題數而異）
-- 設定月費上限：`claude.ai/admin-settings/usage` -> Claude Code Review service 的 limit
+- 設定月費上限：`claude.ai/admin-settings/usage` → Claude Code Review service 的 limit
 
 | 觸發模式 | 費用影響 |
 |---------|---------|
@@ -207,7 +207,7 @@ Check run 標題顯示「Code review encountered an error」或「Code review ti
 
 ### 8.2 超過月費上限
 
-PR 上出現 spend-cap message -> 下個計費週期自動恢復，或 admin 在 `claude.ai/admin-settings/usage` 調高上限。
+PR 上出現 spend-cap message → 下個計費週期自動恢復，或 admin 在 `claude.ai/admin-settings/usage` 調高上限。
 
 ### 8.3 找不到 inline comments
 
@@ -232,7 +232,7 @@ PR 上出現 spend-cap message -> 下個計費週期自動恢復，或 admin 在
 
 ### PR Auto-Fix（Web，W13）
 
-開啟 PR -> CI panel 中開啟 **Auto fix** toggle -> Claude 監控 CI，自動修復失敗，處理 review nit，持續 push 直到 green。
+開啟 PR → CI panel 中開啟 **Auto fix** toggle → Claude 監控 CI，自動修復失敗，處理 review nit，持續 push 直到 green。
 
 ### `/autofix-pr`（CLI，W15）
 
@@ -279,5 +279,5 @@ PR 完成後對已變更程式碼進行 review for reuse / quality / efficiency�
 
 - `@claude review` 在 **draft PR** 不觸發（除非在 Manual 模式下手動指定）
 - `REVIEW.md` 的 `@import` 語法無效，規則必須直接寫入
-- check run 結論永遠 neutral，無法直接用作 branch protection rule -> 需用 `gh` + jq 解析 severity JSON 自建 gate
+- check run 結論永遠 neutral，無法直接用作 branch protection rule → 需用 `gh` + jq 解析 severity JSON 自建 gate
 - Re-run 按鈕無法重觸 Code Review，務必用 comment 指令

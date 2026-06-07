@@ -172,14 +172,14 @@ Same design questions yield different answers under different contexts. Neither 
 The paper traces "Fix the failing test in auth.test.ts" through all major subsystems:
 
 ```
-User input -> Surface layer (CLI)
-    -> Core layer (reactive loop, context pipeline)
-        -> Safety/action layer (permission check, ML classifier)
-            -> Tool execution (bash, read, edit)
-                -> State layer (transcript append, memory update)
-                    -> Backend layer (filesystem ops)
-                        -> Model call (1.6% of system)
-                            -> Response rendering
+User input → Surface layer (CLI)
+    → Core layer (reactive loop, context pipeline)
+        → Safety/action layer (permission check, ML classifier)
+            → Tool execution (bash, read, edit)
+                → State layer (transcript append, memory update)
+                    → Backend layer (filesystem ops)
+                        → Model call (1.6% of system)
+                            → Response rendering
 ```
 
 ---

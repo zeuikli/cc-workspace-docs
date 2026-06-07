@@ -75,8 +75,8 @@ ForgeCode's harness included `AGENTS.md` files containing task-specific answer k
 3. Clustered traces to identify which tasks relied on injected keys
 
 ### Scale of Impact
-- Performance delta: **10.1 percentage points** (81.8% -> 71.7%)
-- Rank change: #2-#3 -> **#14** (dropped 11-12 positions)
+- Performance delta: **10.1 percentage points** (81.8% → 71.7%)
+- Rank change: #2-#3 → **#14** (dropped 11-12 positions)
 
 ### Key Clarification
 The four technical optimizations in ForgeCode's harness (schema flattening, required-first ordering, truncation handling, verification enforcement) remain valid independent of the benchmark cheating. The cheating was an AGENTS.md injection issue, not a fundamental design flaw.

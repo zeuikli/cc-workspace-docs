@@ -24,7 +24,7 @@ First large-scale empirical analysis of how AI systems are actually used across 
 ## Methodology
 
 **Dataset**: 1 million Claude.ai Free/Pro conversations (December 2024 – January 2025)
-**Mapping tool**: Clio (privacy-preserving) -> O*NET Database (~20,000 task statements)
+**Mapping tool**: Clio (privacy-preserving) → O*NET Database (~20,000 task statements)
 **Hierarchy**: 3 levels — 12 top-level / 474 middle-level / 19,530 O*NET base tasks
 
 ### Classification accuracy (human validation, 150 examples)
@@ -106,7 +106,7 @@ Human barriers to entry may be significantly different from barriers for languag
 |---------|------|---|-----------------|
 | Directive | Automative | — | Complete task delegation, minimal interaction (e.g., "Format this doc in Markdown") |
 | Feedback Loop | Automative | — | Task completion guided by iterative error feedback (e.g., debugging) |
-| Task Iteration | Augmentative | — | Collaborative refinement (e.g., draft -> refine marketing strategy) |
+| Task Iteration | Augmentative | — | Collaborative refinement (e.g., draft → refine marketing strategy) |
 | Learning | Augmentative | — | Knowledge acquisition (e.g., "Explain how neural networks work") |
 | Validation | Augmentative | smallest | Work verification (e.g., checking SQL logic) |
 
@@ -138,7 +138,7 @@ Dataset: ~54% Sonnet (new), ~46% Opus
 
 ## Dataset Validation
 
-Non-work conversations: only **23%** of dataset. Coursework: **5–10%**. The majority of non-work interactions still mapped to occupational tasks (nutrition planning -> dietitian tasks; trading strategy -> financial analyst tasks).
+Non-work conversations: only **23%** of dataset. Coursework: **5–10%**. The majority of non-work interactions still mapped to occupational tasks (nutrition planning → dietitian tasks; trading strategy → financial analyst tasks).
 
 ---
 

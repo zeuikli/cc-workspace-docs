@@ -39,7 +39,7 @@ type: tweet
 
 ### 關鍵結論
 
-1. **Harness 影響 > 模型升級影響**：25.7 pp 差距超過 GPT-4 -> GPT-5 的提升（~20 pp）
+1. **Harness 影響 > 模型升級影響**：25.7 pp 差距超過 GPT-4 → GPT-5 的提升（~20 pp）
 2. **最小 harness 提升**：即使最保守的 harness 優化也帶來 12+ pp 提升
 3. **飽和閾值**：在已有強 harness 的基準上（AHE-evolved），模型升級仍有 8-15 pp 效果
 

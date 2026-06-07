@@ -58,6 +58,6 @@ LLaVA exhibits emergent multimodal chat behaviors on unseen images, including de
 
 ## Why This Matters for AI Practitioners
 
-LLaVA established that **high-quality synthetic instruction data can bootstrap competitive multimodal models** without expensive human annotation pipelines. The architecture (vision encoder -> lightweight connector -> frozen/fine-tuned LLM) became the dominant paradigm for open-source multimodal models. The open release directly enabled a wave of follow-on work (LLaVA-1.5, InstructBLIP, MiniGPT-4) and established reproducible baselines the community could build on.
+LLaVA established that **high-quality synthetic instruction data can bootstrap competitive multimodal models** without expensive human annotation pipelines. The architecture (vision encoder → lightweight connector → frozen/fine-tuned LLM) became the dominant paradigm for open-source multimodal models. The open release directly enabled a wave of follow-on work (LLaVA-1.5, InstructBLIP, MiniGPT-4) and established reproducible baselines the community could build on.
 
 For practitioners, LLaVA demonstrates: (1) GPT-4 as a scalable data labeler for domains where annotation is expensive, (2) the power of instruction tuning over simple captioning objectives, and (3) that simple connector modules between strong frozen backbones are a practical and efficient path to multimodal capability.

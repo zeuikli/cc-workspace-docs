@@ -21,7 +21,7 @@
 
 ## 2. 規則工程：CLAUDE.md 的精煉之道
 
-Rule 分類的核心共識是 **200 行硬上限**：超過 14 條規則後 compliance 從 76% 跌至 52%（@Mnilax，@vincemask 實測）。@Mnilax（8.95）的 Dreaming Framework 是最高獨特貢獻：80 行 Python 分析 100 sessions/6M tokens，發現 73% 的 CLAUDE.md 規則已過時。三類刪除原因：一次性修正固化為永久規則、context 過期、自我矛盾。正確心智模型是 **維護週期**（dream -> diff -> apply -> 14-30 天 -> 再 dream），而非「一次設定永久有效」。
+Rule 分類的核心共識是 **200 行硬上限**：超過 14 條規則後 compliance 從 76% 跌至 52%（@Mnilax，@vincemask 實測）。@Mnilax（8.95）的 Dreaming Framework 是最高獨特貢獻：80 行 Python 分析 100 sessions/6M tokens，發現 73% 的 CLAUDE.md 規則已過時。三類刪除原因：一次性修正固化為永久規則、context 過期、自我矛盾。正確心智模型是 **維護週期**（dream → diff → apply → 14-30 天 → 再 dream），而非「一次設定永久有效」。
 
 @trq212（8.60）的 Prompt Caching 五原則建立了技術基礎：static-first prefix 排列、動態資訊用 `<system-reminder>` 傳遞、mid-session 禁止切換模型或增刪工具、compaction 必須沿用完全相同的 system prompt + tools。Cache hit rate 的監控應如同監控 uptime 一樣常態化。
 
@@ -61,7 +61,7 @@ Frozen Snapshot 設計原則（@BTCqzy1，7.00）：記憶在 session 開始注�
 
 三位高影響力作者的核心交集集中在兩個命題：
 
-**命題 A — Context Engineering 優先**：Karpathy（7.35）定義術語「context engineering」，強調精準 context 是工業級 LLM app 的核心；Mnilax 量化 overhead（27%->65% productive tokens）；Garry Tan（8.8）提供架構實現（Thin Harness + Fat Skills）。三者共同建立「攻擊 context overhead」的系統性方法。
+**命題 A — Context Engineering 優先**：Karpathy（7.35）定義術語「context engineering」，強調精準 context 是工業級 LLM app 的核心；Mnilax 量化 overhead（27%→65% productive tokens）；Garry Tan（8.8）提供架構實現（Thin Harness + Fat Skills）。三者共同建立「攻擊 context overhead」的系統性方法。
 
 **命題 B — 系統設計師角色**：Karpathy（7.15）指出人的角色從「prompt 保姆」升級為「系統設計師」；bcherny（7.65）以 /simplify + /batch 技能示範「技能化」工作流；Mnilax 以 Dreaming Framework 將 CLAUDE.md 維護系統化。三者共識：人的價值在系統設計，不在單次 prompt 撰寫。
 
@@ -72,8 +72,8 @@ Frozen Snapshot 設計原則（@BTCqzy1，7.00）：記憶在 session 開始注�
 ## 7. 跨分類綜合：12 條可立即實作的原則
 
 1. CLAUDE.md 保持 ≤200 行；超過 14 條後每新增一條同步刪一條
-2. 每 14-30 天執行一次 CLAUDE.md Dreaming 稽核（dream -> diff -> apply）
-3. Active Skills 上限 7 個；30 天未觸發 -> 停用
+2. 每 14-30 天執行一次 CLAUDE.md Dreaming 稽核（dream → diff → apply）
+3. Active Skills 上限 7 個；30 天未觸發 → 停用
 4. Capability vs Discipline 分類每個 Skill；優先滿足 Discipline 缺口
 5. Prompt Caching：系統提示靜態化，動態資訊走 messages
 6. Hook 衝突：多插件環境必須設 mutex；PostToolUse cascade 是最常見問題
@@ -97,10 +97,10 @@ Frozen Snapshot 設計原則（@BTCqzy1，7.00）：記憶在 session 開始注�
 | 8.50 | Sequoia 2026 演講 | @karpathy | agent-native economy；.md skills 哲學 |
 | 8.10 | /goal 工業級 prompt | @MinLiBuilds | 停≠完成；`<untrusted_objective>` |
 | 8.05 | Model-Harness-Fit | @nicbstme | byte-level 耦合；跨 harness 換模型崩塌 |
-| 8.05 | Agent Harness 12 元件 | @akshay_pachaar | 同模型換 harness 排名 30->5 |
+| 8.05 | Agent Harness 12 元件 | @akshay_pachaar | 同模型換 harness 排名 30→5 |
 | 8.00 | Meta-Meta-Prompting | @garrytan | Thin Harness + Fat Skills 三層架構 |
 
-高分規律：具備量化數據（如 27%->65%、9.3% pass rate）+ 提供可直接操作的原則（非泛論）+ 來自第一手實測（非轉述）的文章評分最高。
+高分規律：具備量化數據（如 27%→65%、9.3% pass rate）+ 提供可直接操作的原則（非泛論）+ 來自第一手實測（非轉述）的文章評分最高。
 
 ---
 
@@ -108,7 +108,7 @@ Frozen Snapshot 設計原則（@BTCqzy1，7.00）：記憶在 session 開始注�
 
 | 分類 | 篇數 | 評分範圍 | 代表文章 |
 |------|------|---------|---------|
-| SKILL | 9 | 6.30–7.95 | Mnilax 247->23 篩選哲學（7.95） |
+| SKILL | 9 | 6.30–7.95 | Mnilax 247→23 篩選哲學（7.95） |
 | Hook | 1 | 7.90 | MinLiBuilds 8個實戰腳本（7.90） |
 | Rule | 40 | 5.00–8.95 | Mnilax Dreaming Framework（8.95）；trq212 Prompt Caching（8.60） |
 | Agent | 7 | 5.00–8.10 | MinLiBuilds /goal prompt（8.10）；lxfater 記憶架構（6.80） |

@@ -1,9 +1,9 @@
 # reports/INDEX.md
 
 > **Type:** wiki:generated — autoresearch / overnight-research 輸出
-> **Updated**: 2026-06-07（整併歸檔：39 份前置研究/已落地計劃書 -> `archive/`；active 47 份）
-> **Query pattern**: BRAIN.md -> 本表（Topic 欄位）-> 具體報告
-> **歸檔慣例**：已被母報告整合的前置研究 + 已執行落地的計劃書 -> `archive/`（內容不變、可逆；見文末 Archive 列）
+> **Updated**: 2026-06-07（整併歸檔：39 份前置研究/已落地計劃書 → `archive/`；active 47 份）
+> **Query pattern**: BRAIN.md → 本表（Topic 欄位）→ 具體報告
+> **歸檔慣例**：已被母報告整合的前置研究 + 已執行落地的計劃書 → `archive/`（內容不變、可逆；見文末 Archive 列）
 
 ---
 
@@ -169,4 +169,4 @@ karpathy-mnilax-best-solution · 12-rule-canon-CLAUDE-slim · 12-rule-canon-PORT
 cc-workspace-coldstart-action-plan · context-window-management-action-plan · prompt-harness-action-plan · subagent-agent-team-execution-plan · action-plans-execution-report · autoload-test-gates-execution-report · memory-audit-and-r1r12-defer-execution-report · r12-unverified-success-proposal（commit b5715db8 已 APPLY）· zeuik-workspace-canon-execution-plan
 
 ### 重疊 session-insights（1 份）
-session-insights（-> 由 session-insights-v2 涵蓋）
+session-insights（→ 由 session-insights-v2 涵蓋）

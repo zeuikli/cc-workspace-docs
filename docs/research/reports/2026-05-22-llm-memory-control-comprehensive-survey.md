@@ -173,7 +173,7 @@ Internal Actions                External Actions
 
 Rethinking Memory（arXiv:2505.00675）補充了更細粒度的操作分類：
 
-1. **整合（Consolidation）**：多條目 -> 一條目（合并語義）
+1. **整合（Consolidation）**：多條目 → 一條目（合并語義）
 2. **更新（Updating）**：修改現有記憶以反映新信息
 3. **索引（Indexing）**：建立檢索結構（向量/稀疏/圖）
 4. **遺忘（Forgetting）**：刪除或降低記憶的可訪問性
@@ -352,10 +352,10 @@ MemGPT 的核心創新之一是**中斷（Interrupts）機制**，讓 LLM 主動
 
 ```
 LLM 在回應中嵌入特殊中斷信號：
-  LOAD_FROM_RECALL -> 從回憶數據庫加載特定記憶
-  SEARCH_ARCHIVAL  -> 搜索長期知識庫
-  PUSH_TO_ARCHIVAL -> 將重要信息存入長期存儲
-  PAUSE_HEARTBEAT  -> 告知系統需要更多處理時間
+  LOAD_FROM_RECALL → 從回憶數據庫加載特定記憶
+  SEARCH_ARCHIVAL  → 搜索長期知識庫
+  PUSH_TO_ARCHIVAL → 將重要信息存入長期存儲
+  PAUSE_HEARTBEAT  → 告知系統需要更多處理時間
 ```
 
 這種設計讓 LLM 對記憶有更主動的控制權，而不是完全依賴外部系統決定何時載入記憶。
@@ -382,11 +382,11 @@ Shinn et al.（arXiv:2303.11366，NeurIPS 2023）的 Reflexion 解決了一個�
 **三組件架構**：
 
 ```
-Evaluator ←-> Task Environment
+Evaluator ←→ Task Environment
      ↑              ↓
    Outcome      Trajectory
      ↓
-Self-Reflection -> Reflection Text -> Episodic Memory Buffer
+Self-Reflection → Reflection Text → Episodic Memory Buffer
                                            ↓
 Actor ←──────────────────────── Memory Retrieval
 ```
@@ -426,8 +426,8 @@ Zhao et al.（arXiv:2308.10144，AAAI 2024）的 ExpeL 進一步擴展了從經�
 ExpeL 的洞見提取通過對比成功和失敗軌跡實現：
 
 ```
-失敗軌跡：Step 3 -> 搜索 "Python tutorial" -> 找到基礎資料 -> 解題失敗
-成功軌跡：Step 3 -> 搜索 "Python filter() negative index" -> 找到精確解 -> 成功
+失敗軌跡：Step 3 → 搜索 "Python tutorial" → 找到基礎資料 → 解題失敗
+成功軌跡：Step 3 → 搜索 "Python filter() negative index" → 找到精確解 → 成功
 
 提取洞見："When solving Python problems, include specific function names 
           and exact constraints in search queries rather than general terms."
@@ -450,15 +450,15 @@ Gutiérrez et al.（arXiv:2405.14831，NeurIPS 2024）的 HippoRAG 代表了記�
 海馬體在人類記憶中不儲存記憶本身，而是作為**索引器（Indexer）**，建立新皮質中不同記憶片段之間的連接。HippoRAG 模擬這一機制：
 
 ```
-新皮質（Neocortex）-> LLM（儲存語義知識）
-海馬體（Hippocampus）-> 知識圖譜（儲存關係索引）
+新皮質（Neocortex）→ LLM（儲存語義知識）
+海馬體（Hippocampus）→ 知識圖譜（儲存關係索引）
 ```
 
 **技術實現**
 
 離線索引階段：
 ```
-文檔 -> LLM 提取三元組（主語, 謂語, 賓語）
+文檔 → LLM 提取三元組（主語, 謂語, 賓語）
                 ↓
         知識圖譜（KG）
         節點：實體（entity）
@@ -467,10 +467,10 @@ Gutiérrez et al.（arXiv:2405.14831，NeurIPS 2024）的 HippoRAG 代表了記�
 
 在線檢索階段：
 ```
-查詢 -> LLM 提取實體作為 seeds
-      -> Personalized PageRank（PPR）沿圖傳播
-      -> 找到所有 seeds 共同「到達」的橋接節點
-      -> 返回相應文檔段落
+查詢 → LLM 提取實體作為 seeds
+      → Personalized PageRank（PPR）沿圖傳播
+      → 找到所有 seeds 共同「到達」的橋接節點
+      → 返回相應文檔段落
 ```
 
 **多跳推理的關鍵優勢**
@@ -479,11 +479,11 @@ HippoRAG 最顯著的優勢是多跳問答（Multi-hop QA）：
 
 傳統 RAG 失敗案例：
 - 問題：「Obama 的出生地位於哪個大洋的西岸？」
-- 需要：Obama -> 夏威夷 -> 太平洋（Pacific Ocean）
+- 需要：Obama → 夏威夷 → 太平洋（Pacific Ocean）
 
 HippoRAG 的 PPR 傳播：
 - Seed: {Obama, 出生地, 大洋}
-- PPR 沿 Obama -> born_in -> Hawaii -> located_in -> Pacific Ocean 傳播
+- PPR 沿 Obama → born_in → Hawaii → located_in → Pacific Ocean 傳播
 - 橋接節點「Hawaii」被高分命中
 
 **實驗結果**：在 MuSiQue、2WikiMHQA、HotpotQA 等多跳 QA 任務上平均提升 **+20%**（vs SOTA），同時比迭代式 IRCoT 快 **6-13 倍**，便宜 **10-30 倍**。
@@ -558,8 +558,8 @@ skill_library = {
 1. 自動課程（Automatic Curriculum）提出任務
 2. GPT-4 生成 Python 技能代碼
 3. 在 Minecraft 環境中執行並驗證
-4. 失敗 -> GPT-4 根據錯誤消息重新生成（最多 3 次）
-5. 成功 -> 存入技能庫
+4. 失敗 → GPT-4 根據錯誤消息重新生成（最多 3 次）
+5. 成功 → 存入技能庫
 
 **關鍵量化結果**
 
@@ -612,7 +612,7 @@ Zhang et al.（arXiv:2605.12978，2026 年 5 月）的「Useful Memories Become 
      |  ╯     ╲___________  ← 跌破無記憶基線
 no-memory ─────────────────────────────────
      |
-     0   5   10  15  20  整合輪次 ->
+     0   5   10  15  20  整合輪次 →
 ```
 
 - 初期：整合提取規律，效用**上升**
@@ -626,7 +626,7 @@ no-memory ───────────────────────�
 Zhang et al. 通過控制實驗精確定位了退化根源：
 
 **實驗 1：控制輸入質量**
-- 從完全正確的解答輸入整合 -> 仍然退化
+- 從完全正確的解答輸入整合 → 仍然退化
 - 結論：問題**不在輸入質量**，而在整合過程本身
 
 **實驗 2：控制更新計劃**
@@ -787,10 +787,10 @@ Luo et al.（arXiv:2603.04814，2026 年 3 月）提供了一個重要的實用�
 **決策框架**
 
 ```
-對話輪次 ≤ 10 -> 長上下文（更準確，成本相當）
-對話輪次 11-30，準確性優先 -> 長上下文
-對話輪次 11-30，成本受限 -> 記憶壓縮（節省 26%，接受 25-35pp 準確率損失）
-超長（200K+ tokens）-> 混合：舊上下文用記憶，近期上下文保留原文
+對話輪次 ≤ 10 → 長上下文（更準確，成本相當）
+對話輪次 11-30，準確性優先 → 長上下文
+對話輪次 11-30，成本受限 → 記憶壓縮（節省 26%，接受 25-35pp 準確率損失）
+超長（200K+ tokens）→ 混合：舊上下文用記憶，近期上下文保留原文
 ```
 
 ---
@@ -871,9 +871,9 @@ context = mem0.get_context(user_id="user_123")
 Mem0 的圖記憶變體維護實體關係圖，支持跨實體的推理：
 
 ```
-user_123 -> works_at -> TechCorp
-user_123 -> prefers -> Python
-TechCorp -> located_in -> San Francisco
+user_123 → works_at → TechCorp
+user_123 → prefers → Python
+TechCorp → located_in → San Francisco
 ```
 
 這讓系統能回答需要跨邊推理的問題，比基礎向量搜索高約 2%。
@@ -1002,9 +1002,9 @@ Zhang et al. 的貢獻之一是設計了一個**能明確測量整合退化**的
 | 參數（矩陣）| 中（隱式壓縮）| **高**（固定大小）| 低 | 低 |
 
 **建議**：根據任務性質選擇：
-- 複雜推理 -> 知識圖譜（HippoRAG 風格）
-- 個性化對話 -> 向量 + 少量結構化（Mem0 風格）
-- 技能積累 -> 代碼庫（Voyager 風格）
+- 複雜推理 → 知識圖譜（HippoRAG 風格）
+- 個性化對話 → 向量 + 少量結構化（Mem0 風格）
+- 技能積累 → 代碼庫（Voyager 風格）
 
 #### 選擇三：記憶遺忘策略
 
@@ -1593,15 +1593,15 @@ ARC 任務測試人工通用智能，需要識別輸入輸出的對應規律。
 ```
 2026-02-14 [Session 12]：
 用戶：「我不吃辛辣食物，胃不好。」
--> 記憶存入：用戶不吃辛辣食物（胃部問題）
+→ 記憶存入：用戶不吃辛辣食物（胃部問題）
 
 2026-03-20 [Session 45]：
 用戶：「你知道嗎，我最近開始挑戰自己，嘗試一些辛辣的食物！」
--> 記憶存入：用戶最近開始嘗試辛辣食物
+→ 記憶存入：用戶最近開始嘗試辛辣食物
 
 2026-04-10 [Session 68]：
 用戶：「那道四川火鍋真的很辣，但我還是吃完了！感覺自己厲害了哈哈」
--> 記憶存入：用戶吃了四川火鍋，感覺良好
+→ 記憶存入：用戶吃了四川火鍋，感覺良好
 ```
 
 **整合方案 A（過度泛化整合）**：
@@ -1633,9 +1633,9 @@ ARC 任務測試人工通用智能，需要識別輸入輸出的對應規律。
 **Reflexion（不整合，只追加反思）**：
 
 ```
-嘗試 1 失敗 -> 反思：「邊界情況：空列表應返回空列表，而非拋出異常」
-嘗試 2 失敗 -> 反思：「負數索引在 Python 中是合法的，不需要特殊處理」
-嘗試 3 成功 -> 存入技能記憶庫
+嘗試 1 失敗 → 反思：「邊界情況：空列表應返回空列表，而非拋出異常」
+嘗試 2 失敗 → 反思：「負數索引在 Python 中是合法的，不需要特殊處理」
+嘗試 3 成功 → 存入技能記憶庫
 
 記憶狀態（追加）：
 [反思 1]：處理空列表邊界情況
@@ -1645,13 +1645,13 @@ ARC 任務測試人工通用智能，需要識別輸入輸出的對應規律。
 **持續整合方式**：
 
 ```
-嘗試 1 失敗 -> 整合反思：「需要注意邊界情況」
-嘗試 2 失敗 -> 整合反思（基於上次整合）：「邊界情況和索引處理都要注意」
-嘗試 3 -> 整合記憶：「編寫 Python 函數時注意邊界情況和索引」
+嘗試 1 失敗 → 整合反思：「需要注意邊界情況」
+嘗試 2 失敗 → 整合反思（基於上次整合）：「邊界情況和索引處理都要注意」
+嘗試 3 → 整合記憶：「編寫 Python 函數時注意邊界情況和索引」
 
 記憶狀態（整合後）：
 [整合記憶]：「編寫 Python 函數時注意邊界情況和索引」
-（具體的「空列表->空列表」和「負數索引」細節已消失）
+（具體的「空列表→空列表」和「負數索引」細節已消失）
 ```
 
 結果：Reflexion（追加）在嘗試 3 時，仍然能從反思 1 和 2 中精確提取「空列表邊界情況」和「負數索引」，成功解決問題。而整合後的記憶只有模糊的「邊界情況和索引」提示，可能無法覆蓋特定的測試用例。
@@ -2170,8 +2170,8 @@ class MemoryHealthReport:
 
 | 結論 | 狀態 | 新依據（2026-05-23~05-25） |
 |------|------|--------------------------|
-| 記憶整合（consolidation）高風險：100%->46% 精確度下降 | ✅ 持續有效 | 無反例；Claude Memory Files 雙模式（Files vs Classic）的設計選擇本身反映了對整合風險的工程回應 |
-| 符號短期記憶 + 多層長期記憶是主流架構方向 | ✅ 強化 | 🆕 TencentDB-Agent-Memory（L0 raw -> L3 persona 4 層架構）開源發布，提供生產級實現參考 |
+| 記憶整合（consolidation）高風險：100%→46% 精確度下降 | ✅ 持續有效 | 無反例；Claude Memory Files 雙模式（Files vs Classic）的設計選擇本身反映了對整合風險的工程回應 |
+| 符號短期記憶 + 多層長期記憶是主流架構方向 | ✅ 強化 | 🆕 TencentDB-Agent-Memory（L0 raw → L3 persona 4 層架構）開源發布，提供生產級實現參考 |
 | 記憶安全威脅（注入、竊取、幻覺）已由理論風險升為現實 | ✅ 超預期確認 | 🆕 2026-05-24：agent skill 下載確認為最大攻擊向量；公開 skill 倉庫惡意率 12%（@Mnilax 實測） |
 | Frozen Snapshot 設計（session 開始注入，非實時更新）保護 KV Cache | ✅ 持續有效 | 🆕 Claude Code 2.1.36 cch bug 提供反面教材：動態注入欄位導致快取命中率歸零 |
 | LoCoMo（93.05%）vs Zep（85.22%）基準數據 | ✅ 仍為最新基準 | EvoMemBench（arXiv:2605.18421，v1.2 已納入）正在重新定義基準標準，LoCoMo 數據相對性需注意 |
@@ -2180,7 +2180,7 @@ class MemoryHealthReport:
 ### 新工具與實現（2026-05-23~05-25）
 
 - 🆕 **Claude Memory Files 升級**（2026-05-25）：Anthropic 推出 Memory Files vs Classic Memory 雙模式。Memory Files 為結構化持久記憶（類似 EverOS 情景/語義分層），Classic 為傳統對話摘要注入。用戶可自選模式，標誌記憶控制權下放至用戶層
-- 🆕 **TencentDB-Agent-Memory**（開源）：4 層長期記憶架構（L0 原始資料 -> L1 事件 -> L2 知識 -> L3 persona），符號 STM + 向量/圖 LTM，為調查第 §4 章「分層 LTM 設計模式」提供生產級實現
+- 🆕 **TencentDB-Agent-Memory**（開源）：4 層長期記憶架構（L0 原始資料 → L1 事件 → L2 知識 → L3 persona），符號 STM + 向量/圖 LTM，為調查第 §4 章「分層 LTM 設計模式」提供生產級實現
 - 🆕 **Routines 原語**（Claude Code）：Claude 在用戶離開時根據任務狀態自我提示繼續，是 EverOS Foresight（帶有效時間的未來記）的工程落地，首次在主流開發者工具中實現前瞻性記憶
 
 ### 安全威脅面更新

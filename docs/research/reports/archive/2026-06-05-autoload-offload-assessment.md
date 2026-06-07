@@ -3,7 +3,7 @@ title: "Auto-load 下沉評估 — 5 源逐段 TYPE 分類 + on-demand 下沉執
 date: 2026-06-05
 branch: feature/autoload-research-merge-2026-06-05
 method: 逐段 byte 量測（wc -c / awk）+ TYPE 分類（判準 core.md §Framework Integrity）+ 主對話親自驗指針 anchor
-result: "回收 405 byte（18,999 -> 18,594），餘裕 1 -> 406"
+result: "回收 405 byte（18,999 → 18,594），餘裕 1 → 406"
 trigger: 使用者要求「12 原則下哪些 auto-load 內容可下沉到 on-demand ref」
 type: assessment + execution report
 ---
@@ -17,7 +17,7 @@ type: assessment + execution report
 ## 0. TL;DR
 
 - **判準**：core.md §Framework Integrity「移除後 Claude 在哪犯錯？」——移除**不即時致錯**者（純參考表 / 低頻細節 / 已在 ref 重複 / rationale）可下沉；12-Rule 強制條文 + 安全紅線 + 語言鐵律 + 核心輸出紀律 = TYPE A 不可下沉。
-- **執行（保守方案，零行為風險）**：下沉 2 段 -> 回收 **405 byte**，18,999 -> **18,594**（餘裕 1 -> 406），重回「12-Rule Canon 完整正當化區間」舒適帶。
+- **執行（保守方案，零行為風險）**：下沉 2 段 → 回收 **405 byte**，18,999 → **18,594**（餘裕 1 → 406），重回「12-Rule Canon 完整正當化區間」舒適帶。
 - **守紀律關鍵**：Dynamic Workflow 段**不整段下沉**——其中「subagent/workflow verdict 非證據，必 grep 重驗」是 R12.1 延伸鐵律（TYPE A），保留於 auto-load；僅下沉六大 pattern / token guardrail 細節。
 - **無新增 byte 預算**：下沉的 ref 落點全部**事前親 grep 確認內容實存**（無死鏈），control-semantics 表更是 error-handling.md 已 100% 重複。
 
@@ -73,7 +73,7 @@ type: assessment + execution report
 | **C** | rationale / 低頻參考 / 純對照表 / 已在 ref 重複 | ✅ 下沉 refs | 控制語義表、workflow pattern 細節、cache 監控公式 |
 | **D** | 與他段 / ref 重複 | ✅ 刪 | model-drift（已在 prompt-lifecycle）|
 
-> **混合段處理**：一段內可同時含 A 鐵律 + C 細節（如 Dynamic Workflow）-> **拆**：鐵律句留 auto-load，細節下沉，留指針。不整段下沉。
+> **混合段處理**：一段內可同時含 A 鐵律 + C 細節（如 Dynamic Workflow）→ **拆**：鐵律句留 auto-load，細節下沉，留指針。不整段下沉。
 
 ---
 
@@ -82,19 +82,19 @@ type: assessment + execution report
 ### 下沉 1：Agent 控制語義表（零損）
 
 - **前**：638 byte 完整三語義對照表（interrupt/steer/gate）+ pause_turn 說明
-- **後**：1 行指針 -> `refs/error-handling.md §Agent 控制語義`
+- **後**：1 行指針 → `refs/error-handling.md §Agent 控制語義`
 - **零損依據**：error-handling.md L48-58 已 100% 含相同表（親 grep 確認）
 - **回收**：~425 byte
 
 ### 下沉 2：Dynamic Workflow 紀律（拆 A/C）
 
 - **保留（TYPE A 鐵律）**：「subagent/workflow verdict 非證據，採信前必機械 grep 重驗（連 agent 轉述的確定性結果亦不可信，見 §R12.1）」
-- **下沉（TYPE C）**：六大 pattern / 「when not to use」token guardrail / 全紀錄 -> `harness-meta-GOTCHAS.md §Dynamic Workflow` + research 檔
+- **下沉（TYPE C）**：六大 pattern / 「when not to use」token guardrail / 全紀錄 → `harness-meta-GOTCHAS.md §Dynamic Workflow` + research 檔
 - **回收淨額**：併下沉 1 後總回收 405 byte
 
 ### 死鏈防範（過程修正）
 
-- 執行中一度把 Dynamic Workflow 指針誤改指向 `refs/harness-design.md`（grep = 0 hits，內容不存在）-> 立即修回確實存在的 `harness-meta-GOTCHAS.md`（2 hits）。
+- 執行中一度把 Dynamic Workflow 指針誤改指向 `refs/harness-design.md`（grep = 0 hits，內容不存在）→ 立即修回確實存在的 `harness-meta-GOTCHAS.md`（2 hits）。
 - **教訓**：下沉留指針前，必親 grep 確認 ref 落點 anchor 實存，否則造成死鏈（R12 Fail Loud 攔截）。
 
 ---
@@ -120,13 +120,13 @@ type: assessment + execution report
 | Git 工作流程 worktree/PR 衝突細節 | ~500 | 新 ref 或 harness-loop | 需拆「紅線句保留」vs「rationale 下沉」，多一層判斷 |
 | context-management 監控 cache 公式 | ~450 | cache-health-metrics.md（已存在）| 需確認公式不在高頻路徑 |
 
--> 兩者合計可再回收 ~950 byte，降到 ~17,650。建議走 `/autoload-evolution` 獨立 cycle 執行。
+→ 兩者合計可再回收 ~950 byte，降到 ~17,650。建議走 `/autoload-evolution` 獨立 cycle 執行。
 
 ---
 
-## 5b. 反向稽核發現（refs -> auto-load，2026-06-05 追加）
+## 5b. 反向稽核發現（refs → auto-load，2026-06-05 追加）
 
-> **方法（反向思考）**：不從 auto-load 往外查死鏈，而是從 refs/ 回看 auto-load 鏈健康度。建「ref ↔ auto-load 引用矩陣」（grep -F 反查，注意 `.md` 的 `.` 會被正則吃掉 -> 必用 `-F` 固定字串 + 陣列展開檔列表，否則全 0 假陰性）。委派 researcher 機械掃描，主對話親自 grep 重驗每條 verdict。
+> **方法（反向思考）**：不從 auto-load 往外查死鏈，而是從 refs/ 回看 auto-load 鏈健康度。建「ref ↔ auto-load 引用矩陣」（grep -F 反查，注意 `.md` 的 `.` 會被正則吃掉 → 必用 `-F` 固定字串 + 陣列展開檔列表，否則全 0 假陰性）。委派 researcher 機械掃描，主對話親自 grep 重驗每條 verdict。
 
 ### 矩陣結論
 - **死鏈 0**：auto-load 所有 `refs/xxx.md §anchor` 指針的目標檔 + anchor 全實存。
@@ -145,10 +145,10 @@ type: assessment + execution report
 
 ### 關鍵判斷（researcher 未分辨、主對話拍板）
 **同樣的「18,000」，一個該改一個不該改**：
-- `harness-loop.md` = harness loop **canonical 定義**（CLAUDE.md 直接引用）-> 必須現值 -> **改 19,000**
-- `model-upgrade-harness-tuning.md` = **歷史提案快照**（記錄 2026-05 當時 cap）-> 竄改會破壞紀錄真實性 -> **加註不改數字**
+- `harness-loop.md` = harness loop **canonical 定義**（CLAUDE.md 直接引用）→ 必須現值 → **改 19,000**
+- `model-upgrade-harness-tuning.md` = **歷史提案快照**（記錄 2026-05 當時 cap）→ 竄改會破壞紀錄真實性 → **加註不改數字**
 
--> 反向稽核的最高價值：抓到「ref 內 stale 閾值會誤導 harness 預檢」這類**正向稽核（從 auto-load 出發）看不到**的缺陷——因為這些 ref 不被 auto-load 直接引用，只在跑 harness loop / model-upgrade 時才載入，正向掃不到。
+→ 反向稽核的最高價值：抓到「ref 內 stale 閾值會誤導 harness 預檢」這類**正向稽核（從 auto-load 出發）看不到**的缺陷——因為這些 ref 不被 auto-load 直接引用，只在跑 harness loop / model-upgrade 時才載入，正向掃不到。
 
 ---
 

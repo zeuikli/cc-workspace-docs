@@ -31,7 +31,7 @@ source_tier: P
 | 2 | **Tools** | 帶名稱、描述、參數類型的 schema；執行、驗證、結果格式化 |
 | 3 | **Memory** | 短期（對話歷史）+ 長期（跨 session 檔案/資料庫） |
 | 4 | **Context Management** | Context rot 對策：壓縮、觀察 masking、即時檢索、子 agent 委派 |
-| 5 | **Prompt Construction** | 系統提示 -> 工具定義 -> 記憶檔案 -> 對話歷史的組裝順序 |
+| 5 | **Prompt Construction** | 系統提示 → 工具定義 → 記憶檔案 → 對話歷史的組裝順序 |
 | 6 | **Output Parsing** | 原生工具呼叫回傳結構化物件，避免自由文本解析 |
 | 7 | **State Management** | 類型化字典追蹤進度；邊界檢查點支援恢復 |
 | 8 | **Error Handling** | 四種錯誤類型：暫時性、LLM 可恢復、用戶可修正、意外性 |
@@ -56,7 +56,7 @@ source_tier: P
 ## Component 執行循環
 
 ```
-Context 組裝 -> LLM 推理 -> 輸出分類 -> 工具執行 -> 結果包裝 -> Context 更新 -> 迴圈
+Context 組裝 → LLM 推理 → 輸出分類 → 工具執行 → 結果包裝 → Context 更新 → 迴圈
 ```
 
 ---

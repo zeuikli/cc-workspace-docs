@@ -32,12 +32,12 @@ ExpeL 的核心問題：**如何讓 LLM 代理人「學習」，卻不更新模�
 
 ```
 訓練階段：
-任務 1 -> 嘗試（成功/失敗）-> 提取洞見 -> 知識庫
-任務 2 -> 嘗試 -> 提取洞見 -> 知識庫（持續積累）
+任務 1 → 嘗試（成功/失敗）→ 提取洞見 → 知識庫
+任務 2 → 嘗試 → 提取洞見 → 知識庫（持續積累）
 ...
 
 推理階段：
-新任務 -> 從知識庫檢索相關洞見 -> 注入上下文 -> 決策
+新任務 → 從知識庫檢索相關洞見 → 注入上下文 → 決策
 ```
 
 ---
@@ -79,7 +79,7 @@ for task in training_tasks:
 步驟3：搜索 "Python filter() function negative index"
 成功：找到精確解法
 
--> 提取洞見：
+→ 提取洞見：
 "When solving Python coding problems, search for specific function names 
 rather than general tutorials. Include the exact error or constraint 
 in the search query."

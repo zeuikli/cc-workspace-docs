@@ -93,7 +93,7 @@ Overhead tokens:    73%  ← 分解如下：
   Plugin SessionStart:        ~3%
 ```
 
-優化後（CLAUDE.md 4,800->900 tokens）：
+優化後（CLAUDE.md 4,800→900 tokens）：
 - 成本降低 81%
 - Productive token 比例提升至 65%
 - 單月 session token 節省約 100 萬 tokens
@@ -106,7 +106,7 @@ Overhead tokens:    73%  ← 分解如下：
 
 **核心原則（官方 code.claude.com）**：
 
-> 每一行測試：「移除這行，Claude 會出錯嗎？」不會 -> 刪除。
+> 每一行測試：「移除這行，Claude 會出錯嗎？」不會 → 刪除。
 
 **應包含 vs. 應排除**：
 
@@ -148,7 +148,7 @@ Layer 3: 顯式觸發載入（技能關鍵詞）
 **關鍵數字**：
 - 使用路徑範圍規則（path-scoped）可讓 session 開始時節省 70–80% 的規則 token
 - ClaudeFast Code Kit 案例：透過 progressive disclosure 跨 20+ skills，每 session 節省 **~15,000 tokens**（82% improvement vs. 全載入）
-- Tool Search 延遲載入：MCP token 從 **51,000 -> 8,500 tokens**（46.9% 總 context 降低）
+- Tool Search 延遲載入：MCP token 從 **51,000 → 8,500 tokens**（46.9% 總 context 降低）
 
 ### 3.3 MEMORY.md 管理
 
@@ -158,9 +158,9 @@ Layer 3: 顯式觸發載入（技能關鍵詞）
 - 截斷從**檔案起始**算（最新內容最先被截掉！）
 
 **GitHub issue #57574 實測案例**：
-- MEMORY.md 成長至 34.3KB -> 8KB 靜默消失
+- MEMORY.md 成長至 34.3KB → 8KB 靜默消失
 - 60+ session 項目最脆弱
-- **解法**：重構後 35.5KB -> 3.5KB（90% 縮減），每 session 節省 8,000 tokens
+- **解法**：重構後 35.5KB → 3.5KB（90% 縮減），每 session 節省 8,000 tokens
 
 **MEMORY.md 最佳結構**：
 ```markdown
@@ -270,8 +270,8 @@ Layer 3: 顯式觸發載入（技能關鍵詞）
 ### 5.3 Hook 注入衝突
 
 **反模式**：多個 plugin 各自在 UserPromptSubmit hook 注入 context
-**數據**：3+ hook 注入 -> 每次 prompt 前置 8KB+，CLAUDE.md 規則合規率從 76% 跌至 41%
-**數據**：單次 Edit 觸發 formatter cascade -> token cost 7× 乘數（200 行 edit：3,200 -> 9,600 tokens）
+**數據**：3+ hook 注入 → 每次 prompt 前置 8KB+，CLAUDE.md 規則合規率從 76% 跌至 41%
+**數據**：單次 Edit 觸發 formatter cascade → token cost 7× 乘數（200 行 edit：3,200 → 9,600 tokens）
 
 **解法**：使用 lock-file mutex 防止 cascade：
 ```bash
@@ -305,7 +305,7 @@ Layer 3: 顯式觸發載入（技能關鍵詞）
 
 **來源：GitHub issues #44536（Feature Request）, #19105**
 
-社群正積極推動「延遲載入架構」——將 Tool Search 已驗證的模式（51K->8.5K）擴展到所有 context 元件：
+社群正積極推動「延遲載入架構」——將 Tool Search 已驗證的模式（51K→8.5K）擴展到所有 context 元件：
 - Rules lazy loading：只在相關文件被讀取時載入規則
 - Skills auto-discovery：基於任務語義自動選擇 skill，而非預先全載
 - 預測：2026 H2 可能有官方 lazy loading API
@@ -321,7 +321,7 @@ Anthropic 已宣布 1M token beta。但「更大的 context ≠ 問題解決」�
 **來源：DEV Community, 2026**
 
 Anthropic 在 2026 年初將 prompt cache TTL 從 60 分鐘縮短至 **5 分鐘**。對 auto-load token 的影響：
-- Resume session 時，超過 5 分鐘即 cache miss -> 有效成本增加 30–60%
+- Resume session 時，超過 5 分鐘即 cache miss → 有效成本增加 30–60%
 - **因應策略**：CLAUDE.md 的靜態前綴設計更重要，確保每次都能命中 cache；減少 auto-load 的總 token 數，降低 cache miss 的成本影響
 
 ### 6.4 Auto Memory + Dream Pass 機制
@@ -331,7 +331,7 @@ Anthropic 在 2026 年初將 prompt cache TTL 從 60 分鐘縮短至 **5 分鐘*
 自動記憶（auto memory）系統讓 Claude 在 session 結束後自動寫入學到的知識，但需要主動管理：
 - **Dream Pass**（離線壓縮）：定期（建議每 14–30 天）觸發 Claude 重新整理並壓縮 MEMORY.md
 - 目的：防止 MEMORY.md 超過 25KB 截斷點，同時保持最新知識
-- 效果：案例中 35.5KB -> 3.5KB（90% 縮減），每 session 節省 8,000 tokens
+- 效果：案例中 35.5KB → 3.5KB（90% 縮減），每 session 節省 8,000 tokens
 
 ---
 
@@ -350,7 +350,7 @@ Anthropic 在 2026 年初將 prompt cache TTL 從 60 分鐘縮短至 **5 分鐘*
    ```bash
    wc -l CLAUDE.md .claude/rules/*.md
    ```
-   任何單一文件超過 200 行 -> 立即精簡
+   任何單一文件超過 200 行 → 立即精簡
 
 3. **啟用 @-import HTML 注釋過濾**：
    在 CLAUDE.md 中，maintainer 注解改為 HTML 注釋格式：
@@ -407,10 +407,10 @@ Anthropic 在 2026 年初將 prompt cache TTL 從 60 分鐘縮短至 **5 分鐘*
 
 | 來源 | 核心數字 | 評分 |
 |------|---------|------|
-| [KuCoin 12-rule CLAUDE.md 研究](https://www.kucoin.com/news/flash/12-claude-md-rules-cut-ai-code-error-rate-to-3) | 76% -> 52% 合規率，12 rules = 3% error rate | B/A/A/A/A |
+| [KuCoin 12-rule CLAUDE.md 研究](https://www.kucoin.com/news/flash/12-claude-md-rules-cut-ai-code-error-rate-to-3) | 76% → 52% 合規率，12 rules = 3% error rate | B/A/A/A/A |
 | Mnilax 90-day 6M token 研究（research/tweets/2026-05-11-@Mnilax-256983.md） | 73% overhead，9 categories breakdown，productive 27% | B/A/B/A/A |
-| [GitHub Gist johnlindquist 54% 初始 token 縮減](https://gist.github.com/johnlindquist/849b813e76039a908d962b2f0923dc9a) | 7,584 -> 3,434 tokens，lazy loading 方法論 | B/A/B/A/B |
-| [GitHub issue #57574 MEMORY.md truncation](https://github.com/anthropics/claude-code/issues/57574) | 靜默截斷機制，35.5KB->3.5KB 優化案例 | B/A/A/A/B |
+| [GitHub Gist johnlindquist 54% 初始 token 縮減](https://gist.github.com/johnlindquist/849b813e76039a908d962b2f0923dc9a) | 7,584 → 3,434 tokens，lazy loading 方法論 | B/A/B/A/B |
+| [GitHub issue #57574 MEMORY.md truncation](https://github.com/anthropics/claude-code/issues/57574) | 靜默截斷機制，35.5KB→3.5KB 優化案例 | B/A/A/A/B |
 | Workspace CLAUDE-OPTIMIZATION-AUDIT-2026-05-13 | 5,243 tokens 分解，官方 ≤3,500 guideline，Phase A/B/C 優化路線 | A/A/A/A/A |
 
 ### C. 技術分析（評分 B/B/B/A/B）
@@ -418,10 +418,10 @@ Anthropic 在 2026 年初將 prompt cache TTL 從 60 分鐘縮短至 **5 分鐘*
 | 來源 | 核心數字 | 評分 |
 |------|---------|------|
 | [morphllm.com Claude Code context window](https://www.morphllm.com/claude-code-context-window) | 完整 context 分解表，auto-compact buffer 33K | B/B/B/A/B |
-| [claudefa.st context buffer management](https://claudefa.st/blog/guide/mechanics/context-buffer-management) | Auto-compact 83.5% trigger，33K->45K 歷史 | B/B/B/A/B |
-| [Medium: 46.9% MCP reduction with Tool Search](https://medium.com/@joe.njenga/claude-code-just-cut-mcp-context-bloat-by-46-9-51k-tokens-down-to-8-5k-with-new-tool-search-ddf9e905f734) | 51K->8.5K tokens，deferred loading 機制 | B/B/B/A/B |
+| [claudefa.st context buffer management](https://claudefa.st/blog/guide/mechanics/context-buffer-management) | Auto-compact 83.5% trigger，33K→45K 歷史 | B/B/B/A/B |
+| [Medium: 46.9% MCP reduction with Tool Search](https://medium.com/@joe.njenga/claude-code-just-cut-mcp-context-bloat-by-46-9-51k-tokens-down-to-8-5k-with-new-tool-search-ddf9e905f734) | 51K→8.5K tokens，deferred loading 機制 | B/B/B/A/B |
 | [DEV Community token trace](https://dev.to/slima4/where-do-your-claude-code-tokens-actually-go-we-traced-every-single-one-423e) | 實際 session 644.8K tokens 追蹤，system prompt 14,328 tokens | B/A/B/A/B |
-| [acdigest.substack.com token overhead](https://acdigest.substack.com/p/most-of-your-claude-code-tokens-are) | CLAUDE.md 4,800->900 tokens，81% 成本降低 | B/A/B/A/B |
+| [acdigest.substack.com token overhead](https://acdigest.substack.com/p/most-of-your-claude-code-tokens-are) | CLAUDE.md 4,800→900 tokens，81% 成本降低 | B/A/B/A/B |
 
 ### D. 社群分享（評分 C/B/B/A/B）
 
@@ -478,7 +478,7 @@ Claude Code v2.1.92 重建的 `/cost` 指令提供每個模型成本分解、cac
 4. **MCP servers**：任務相關才連接；啟用 Tool Search 可從 51K 降至 8.5K
 5. **路徑範圍規則**：最大化使用 path-scoped rules 替代全域規則，節省 70–80%
 
-**判斷標準**：超過 3,500 tokens -> 合規率低於 76%；超過 200 行 -> 合規率跌至 52%；超過 4,000 tokens -> 合規率僅 30%；每多 1K tokens auto-load 約增加 14% overhead 成本（Mnilax baseline）。
+**判斷標準**：超過 3,500 tokens → 合規率低於 76%；超過 200 行 → 合規率跌至 52%；超過 4,000 tokens → 合規率僅 30%；每多 1K tokens auto-load 約增加 14% overhead 成本（Mnilax baseline）。
 
 ---
 
@@ -565,7 +565,7 @@ Claude Code v2.1.92 重建的 `/cost` 指令提供每個模型成本分解、cac
 62. `research/tweets/2026-05-01-@Mnilax-556522.md` — 9 overhead categories 完整分解，6M tokens 樣本
 63. `research/tweets/2026-05-05-@Mnilax-897712.md` — Dream Pass 機制，CLAUDE.md decay 防範
 64. `research/tweets/2026-05-09-@Mnilax-155938.md` — 12-rule compliance data
-65. `research/agent-harness/CLAUDE-OPTIMIZATION-AUDIT-2026-05-13.md` — Workspace 5,243->3,500 token 路線圖
+65. `research/agent-harness/CLAUDE-OPTIMIZATION-AUDIT-2026-05-13.md` — Workspace 5,243→3,500 token 路線圖
 66. `research/best-practices/21-memory-claudemd.md` — 官方 CLAUDE.md 指南整合
 67. `research/best-practices/28-thariq-prompt-caching-lessons.md` — prompt caching static-first 原則
 68. `.claude/refs/prompt-caching-rules.md` — Mid-session 切換禁止清單
@@ -590,12 +590,12 @@ Claude Code v2.1.92 重建的 `/cost` 指令提供每個模型成本分解、cac
 - ✅ **MEMORY.md ≤ 2,200 字元限制**：subagent-strategy.md 明確規定 `MEMORY.md ≤ 2,200 字元`，與報告「MEMORY.md 最佳結構」建議一致。
 - ✅ **Path-scoped 規則**：`security-hygiene.md` 已設 paths: 觸發，只在編輯敏感檔案時載入，符合「路徑觸發載入節省 70-80% 規則 token」建議。
 - ✅ **Skills 顯式觸發（Layer 3）**：18 個 skills 均為按需載入，避免一次性全載入 overhead，符合 ClaudeFast 案例的 progressive disclosure 策略。
-- ✅ **Tool Search 延遲載入（Deferred Tools）**：system-reminder 中 WebFetch / Google Drive MCP 等工具使用 ToolSearch 模式，對應報告「MCP token 從 51,000 -> 8,500 tokens」節省方案。
+- ✅ **Tool Search 延遲載入（Deferred Tools）**：system-reminder 中 WebFetch / Google Drive MCP 等工具使用 ToolSearch 模式，對應報告「MCP token 從 51,000 → 8,500 tokens」節省方案。
 - ✅ **@-import 正確用法**：4 個 rules 透過 CLAUDE.md `@.claude/rules/xxx.md` 格式 auto-load，而非在 CLAUDE.md 主體直接展開，frontmatter 區隔 Claude context 不膨脹。
 - ✅ **TYPE D（ref pointer）移除**：2026-05-18 優化已移除 `（見 subagent-strategy.md）`、`（見 schemas/progress.schema.json）` 等所有純導航行。
 - ✅ **TYPE C（背景說明）移除**：PreCompact hook 行、動態資訊 system-reminder 行、Compaction forking 行、HarnessCard 設計說明等均已移除。
 - ✅ **cost 監控工具**：settings.json 中 hooks 的 `audit-log.sh` 提供 Bash 工具呼叫可觀測性；`/usage` 和 `/cost` 等 built-in 指令存在（報告第 7.4 節）。
-- ✅ **Dream Pass / Memory Compactor**：`.claude/skills/` 中存在 `memory-compactor` skill，且 core.md 規定 `總行 >150 -> 委派 memory-compactor`，對應報告「Dream Pass 壓縮」建議。
+- ✅ **Dream Pass / Memory Compactor**：`.claude/skills/` 中存在 `memory-compactor` skill，且 core.md 規定 `總行 >150 → 委派 memory-compactor`，對應報告「Dream Pass 壓縮」建議。
 - ✅ **每月 CLAUDE.md 審計機制（制度性）**：`harness-meta` skill 已落地，提供 `harness-meta:token`（prompt-token-opt）功能，對應報告第 7.3 節長期維護建議。
 
 ### 尚未落地的建議
@@ -621,7 +621,7 @@ Claude Code v2.1.92 重建的 `/cost` 指令提供每個模型成本分解、cac
 
 ### 補充 1：cache-breaking pattern 清單（dont-break-cache，arXiv:2601.06007）— 對應 §6.3 / §7.3
 
-§6.3 / §7.3 已點出「TTL 5 分鐘 -> 靜態前綴設計更重要」的策略，本節補上具體破快取 pattern 清單。
+§6.3 / §7.3 已點出「TTL 5 分鐘 → 靜態前綴設計更重要」的策略，本節補上具體破快取 pattern 清單。
 
 **Anthropic TTL 完整資訊**：TTL 預設 5 分鐘，可延伸至最長 1 小時（`cache_control` extended TTL）。§6.3 原文「縮短至 5 分鐘」未提延伸選項，補全如下。
 
@@ -630,29 +630,29 @@ Claude Code v2.1.92 重建的 `/cost` 指令提供每個模型成本分解、cac
 | 破快取模式 | 說明 |
 |-----------|------|
 | 動態工具結果在 cache marker 前 | 每次 tool call 後快取全失效 |
-| Timestamp / UUID 進 system prompt | `datetime.now()`/session UUID -> cache miss 率 100% |
-| MCP server 重啟 | tool 定義清單異動 -> tool block 改變，快取邊界失效 |
-| 中途插入 turn | cached conversation 中段插入 -> 後續全失效 |
+| Timestamp / UUID 進 system prompt | `datetime.now()`/session UUID → cache miss 率 100% |
+| MCP server 重啟 | tool 定義清單異動 → tool block 改變，快取邊界失效 |
+| 中途插入 turn | cached conversation 中段插入 → 後續全失效 |
 
 **量化收益**（Claude Sonnet 4.5，system-prompt-only 策略）：cost reduction **78.5%**、TTFT 改善 **22.9%**。
 
-**Auto-load 設計推論**：CLAUDE.md / auto-load rules 是靜態前綴，天然適合 system-prompt-only 快取；反模式是把 `currentDate` 或 session-specific 內容寫進 auto-load 規則（一旦含動態值 -> 每 session cache miss）——直接呼應 context-management.md「動態資訊經 system-reminder 注入，不寫進 CLAUDE.md 前綴」。
+**Auto-load 設計推論**：CLAUDE.md / auto-load rules 是靜態前綴，天然適合 system-prompt-only 快取；反模式是把 `currentDate` 或 session-specific 內容寫進 auto-load 規則（一旦含動態值 → 每 session cache miss）——直接呼應 context-management.md「動態資訊經 system-reminder 注入，不寫進 CLAUDE.md 前綴」。
 
 **接地審計**：
 - `41–80%` ← "Prompt caching can reduce LLM API costs by 41–80% in agentic workflows" (2026-01-31-dont-break-cache…md L20)
 - `78.5%` / `22.9%` ← "System-Prompt-Only | 78.5% | 22.9% | Highest" (同檔 L59) + "(78.5% cost reduction, 22.9% TTFT improvement with Claude Sonnet 4.5)" (L20)
 - `5 min (extendable to 1 hr)` ← "Anthropic | … | 5 min (extendable to 1 hr)" (同檔 L30)
-- MCP 破快取 ← "If MCP tool lists change between calls (e.g., server restarts…) -> MCP breaks cache boundaries" (同檔 L78)
+- MCP 破快取 ← "If MCP tool lists change between calls (e.g., server restarts…) → MCP breaks cache boundaries" (同檔 L78)
 
 ### 補充 2：tool schema token 壓縮（TSCG，arXiv:2605.04107）— 對應 §3.4
 
-**ToolSearch（延遲載入）與 TSCG（schema 壓縮）正交互補**：報告已涵蓋 ToolSearch（51K->8.5K），TSCG 是**已載入工具 schema 本身**的 token 效率，兩機制不互斥（原文：「The two mechanisms are orthogonal and complementary」）。
+**ToolSearch（延遲載入）與 TSCG（schema 壓縮）正交互補**：報告已涵蓋 ToolSearch（51K→8.5K），TSCG 是**已載入工具 schema 本身**的 token 效率，兩機制不互斥（原文：「The two mechanisms are orthogonal and complementary」）。
 
 | Tools 數量 | schema token 佔 context 比例 |
 |-----------|---------------------------|
 | 50 工具 | 40%+ |
 
-Claude Sonnet 在 TSCG 優化後：20 tools，93% -> **94.1% accuracy**，token 節省 **52%**；Phi-4 14B 從 **0% -> 84.4%**。
+Claude Sonnet 在 TSCG 優化後：20 tools，93% → **94.1% accuracy**，token 節省 **52%**；Phi-4 14B 從 **0% → 84.4%**。
 
 **適用情境**：MCP tools 擴增 >10 且 ToolSearch 未完全覆蓋時的次階段選項（現行 cc-workspace MCP 工具數量少，優先級中等）。
 
@@ -687,7 +687,7 @@ Claude Sonnet 在 TSCG 優化後：20 tools，93% -> **94.1% accuracy**，token 
 - `1.0–1.35×` ← "Same input produces **1.0–1.35× more tokens** vs Opus 4.6 (content-dependent)"（2026-04-16-claude-opus-4-7-system-card.md L86）
 - 遷移指引 ← "Migration note: retest token budgets and cost estimates before upgrading"（同檔 L87）
 
-**Auto-load 推論**：byte cap（measure.sh `wc -c`）對 tokenizer 變更**免疫**（byte 不隨 tokenizer 變），但「token 門檻」會。-> workspace canonical 單位採 byte 是正確選擇；若引用 token 門檻（3,500）須標注「依當前 tokenizer」。⚠️ 1.35× 是**最壞情況上界**（content-dependent），非固定倍率，不可當「所有內容 ×1.35」。
+**Auto-load 推論**：byte cap（measure.sh `wc -c`）對 tokenizer 變更**免疫**（byte 不隨 tokenizer 變），但「token 門檻」會。→ workspace canonical 單位採 byte 是正確選擇；若引用 token 門檻（3,500）須標注「依當前 tokenizer」。⚠️ 1.35× 是**最壞情況上界**（content-dependent），非固定倍率，不可當「所有內容 ×1.35」。
 
 ### 補充 5：Skills 載入有最佳數量上限 + 自生成 Skill 反傷（SkillsBench，arXiv:2602.12670）— 對應 §3.2 / §5.4
 
@@ -750,9 +750,9 @@ Claude Sonnet 在 TSCG 優化後：20 tools，93% -> **94.1% accuracy**，token 
 
 **接地審計**：
 - 現象 ← "prompts are highly model-sensitive: reusing a prompt engineered for one model on another often yields substantially worse performance … We term this phenomenon *Model Drifting*."（2025-12-01-promptbridge-cross-model-prompt-transfer-2512-01420.md L22）
-- 嚴重性例證 ← "GPT-5 -> Llama-3.1-70B-Instruct | 68.70% | 79.47% | **-10.77pp**"（同檔 L65，HumanEval）
+- 嚴重性例證 ← "GPT-5 → Llama-3.1-70B-Instruct | 68.70% | 79.47% | **-10.77pp**"（同檔 L65，HumanEval）
 
-**Auto-load 推論**：與「補充 4 tokenizer 重校」+ prompting-inversion（既已併入）形成一致主軸——**auto-load 規則需隨模型升級重評，不可累加沿用**。呼應 core.md §Framework Integrity「移除後 Claude 在哪犯錯？」應加上「換模型後此規則是否仍最佳？」。⚠️ −10.77pp 是 GPT-5->Llama 的跨家族最壞案例，同模型家族小版本升級 drift 通常較小。
+**Auto-load 推論**：與「補充 4 tokenizer 重校」+ prompting-inversion（既已併入）形成一致主軸——**auto-load 規則需隨模型升級重評，不可累加沿用**。呼應 core.md §Framework Integrity「移除後 Claude 在哪犯錯？」應加上「換模型後此規則是否仍最佳？」。⚠️ −10.77pp 是 GPT-5→Llama 的跨家族最壞案例，同模型家族小版本升級 drift 通常較小。
 
 *增量併入日期：2026-06-05 | gap-vote 7 真 gap（Opus4.7-tokenizer / SkillsBench / 5-stage-shaper / back-pressure / ETH-138 / faulty-memory-gate / Model-Drifting）| 全數主對話親自 grep 原文 + verbatim 接地 | ETH-138 標同源去重*
 

@@ -2,18 +2,18 @@
 
 > **產出日期**：2026-06-06
 > **承接**：`2026-06-06-zeuik-workspace-canon.md`（#484，The Loop 六階段重構 + §Rn 保留為 tag 階段）
-> **涵蓋 commit**：#484 -> #485（徹底退役 §Rn）-> 2 次稽核收尾（9f715b70 / 0f06cb79）-> pilot 死鏈修復（623c99c1）
+> **涵蓋 commit**：#484 → #485（徹底退役 §Rn）→ 2 次稽核收尾（9f715b70 / 0f06cb79）→ pilot 死鏈修復（623c99c1）
 > **定位**：本報告記錄「**§Rn 從保留-as-tag 到徹底退役**」的完整決策反轉 + 全 workspace 一致性稽核的方法論教訓 + cold start 歸因 + SKILL 可執行性稽核。聚焦**會重演的失敗模式**，非流水帳。前作記「重構怎麼設計」，本作記「徹底化怎麼安全執行 + 稽核怎麼不漏」。
 
 ---
 
 ## 0. 一句話總結
 
-#484 把 The Loop 設為主敘事但**保留 §Rn 為 inline tag**（保守，怕破 1,788 處引用）；使用者隨後要求**徹底退役 §Rn**（維護負擔）-> 本 session 完成反轉，並在過程中發現「徹底化」比「保留」更危險的盲點：**移除 tag 會把上次刻意保留的引用全部變成真死指針**——這是與前一階段策略完全相反的 cascade。
+#484 把 The Loop 設為主敘事但**保留 §Rn 為 inline tag**（保守，怕破 1,788 處引用）；使用者隨後要求**徹底退役 §Rn**（維護負擔）→ 本 session 完成反轉，並在過程中發現「徹底化」比「保留」更危險的盲點：**移除 tag 會把上次刻意保留的引用全部變成真死指針**——這是與前一階段策略完全相反的 cascade。
 
 ---
 
-## 1. 核心決策反轉：保留-as-tag -> 徹底退役
+## 1. 核心決策反轉：保留-as-tag → 徹底退役
 
 ### 1.1 為何反轉是對的
 
@@ -46,11 +46,11 @@
 **根因 A — grep pattern 不涵蓋變體**：
 - 前幾輪只 grep `§R[0-9]` + 英文 `12-Rule`。
 - 漏掉：`R5-R12` / `R13` / `R14` / `14 條` / `14-rule` / `Rule 5` / 中文 `12 條準則` / `core.md § "<概念名>"`（措辭引用非 section 名）。
-- -> 每輪都「在自己定義的窄 pattern 內掃乾淨」，但 pattern 本身漏。
+- → 每輪都「在自己定義的窄 pattern 內掃乾淨」，但 pattern 本身漏。
 
 **根因 B — `grep -v 'research/'` 子字串過濾脆弱**：
 - chained `grep -v` 對大輸出（87KB）行為不穩，substring 匹配非 path-anchor，第 1-2 次過濾失效，第 3 次才對。
-- -> 大輸出時改「寫小檔再讀」或 `awk -F:` path-field 過濾，不靠 chained grep -v。
+- → 大輸出時改「寫小檔再讀」或 `awk -F:` path-field 過濾，不靠 chained grep -v。
 
 ### 2.2 正解：canonical sweep + eyeball（不 drive-to-0）
 
@@ -72,7 +72,7 @@ grep -rnE '§R[0-9]|〔§R|R1[-–]R12|R5[-–]R12|R1[34]|1[24][ -]?[Rr]ule|1[24
 
 ### 2.3 sub-agent worktree 隔離再次應驗
 
-委派 implementer 改 §Rn 引用時，agent 在隔離 worktree 工作，**產物不在主 tree**（Lesson 2026-06-04-C 應驗）。主對話 grep 主 tree 發現 18 處 §Rn 仍在 -> 從 worktree cp 回 8 檔 -> 移除 worktree。
+委派 implementer 改 §Rn 引用時，agent 在隔離 worktree 工作，**產物不在主 tree**（Lesson 2026-06-04-C 應驗）。主對話 grep 主 tree 發現 18 處 §Rn 仍在 → 從 worktree cp 回 8 檔 → 移除 worktree。
 
 > **防範（已知 lesson 再確認）**：委派建檔/改檔後必 grep 主 tree；不在則從 `worktreePath` 取回。agent 回報「完成」是 unverified_success，主對話親驗才算。
 
@@ -96,14 +96,14 @@ A 類誤改成「動態推斷輸出路徑」會破壞 overnight-research 的 sou
 
 ### 3.2 prompt 降級的正確措辭
 
-死連結 `理論基礎：research/X.md` -> 改成：
+死連結 `理論基礎：research/X.md` → 改成：
 ```
 理論基礎：若 workspace 有研究歸檔則搜尋參照（grep research/...）；
 脫離 workspace 時依本檔摘要 + 一般原則
 ```
-zeuik-senior-architect（整個 agent 靠 career-wiki 運作）-> 加「脫離 workspace 降級：基於 CLAUDE.md 職涯背景 + 一般經驗，明確標註『無 career-wiki 細節』，不杜撰」。
+zeuik-senior-architect（整個 agent 靠 career-wiki 運作）→ 加「脫離 workspace 降級：基於 CLAUDE.md 職涯背景 + 一般經驗，明確標註『無 career-wiki 細節』，不杜撰」。
 
--> 這讓 SKILL「有 workspace 用 workspace，沒有也能降級運作 + 誠實標註」，而非留死指針。
+→ 這讓 SKILL「有 workspace 用 workspace，沒有也能降級運作 + 誠實標註」，而非留死指針。
 
 ---
 
@@ -115,9 +115,9 @@ zeuik-senior-architect（整個 agent 靠 career-wiki 運作）-> 加「脫離 w
 
 | 數字 | 含義 |
 |------|------|
-| 16,927（06-03 baseline）-> 18,987（#484 後）= +2,060 | ❌ 我差點說「The Loop 重寫造成」|
-| 18,597（本 session 起始，已含 #483）-> 18,987 = **+390** | ✅ The Loop 重寫**實際貢獻** |
-| 16,927 -> 18,597 的 +1,670 | #483 等**本 session 前**的 commit，與重寫無關 |
+| 16,927（06-03 baseline）→ 18,987（#484 後）= +2,060 | ❌ 我差點說「The Loop 重寫造成」|
+| 18,597（本 session 起始，已含 #483）→ 18,987 = **+390** | ✅ The Loop 重寫**實際貢獻** |
+| 16,927 → 18,597 的 +1,670 | #483 等**本 session 前**的 commit，與重寫無關 |
 
 > **Lesson — 量測「我的改動造成的 delta」要用 session 起始值，不是 N 天前的 baseline。** 拿 3 天前 baseline 比，會把中間所有 commit 的累積都算到我頭上，5× 高估。
 
@@ -146,11 +146,11 @@ zeuik-senior-architect（整個 agent 靠 career-wiki 運作）-> 加「脫離 w
 > **Lesson — 大重構後，SKILL 內「指向 core.md 具名 section 的 citation」是隱性死鏈，grep `§Rn` 抓不到。**
 
 3 個 pilot SKILL 引用 `core.md § "Think-Before-Coding"` / `"Surgical Changes"` / `commit atomicity`——core.md 改六階段後這些**具名子節不存在**（折進 IDENTIFY/PROPOSE）。這類死鏈：
-- 不含 `§Rn`，純概念名引用 -> R-form sweep 抓不到。
+- 不含 `§Rn`，純概念名引用 → R-form sweep 抓不到。
 - 不影響執行（敘述性 citation 非 bash），但讀者/sub-agent 按引用找原文會失敗。
-- 修法：`§ "Think-Before-Coding"` -> `IDENTIFY 段`、`§ "Surgical Changes"` -> `PROPOSE 段`。
+- 修法：`§ "Think-Before-Coding"` → `IDENTIFY 段`、`§ "Surgical Changes"` → `PROPOSE 段`。
 
--> 稽核大重構的死鏈，除了 `§Rn` 還要掃 `core.md § "<概念名>"` 變體。
+→ 稽核大重構的死鏈，除了 `§Rn` 還要掃 `core.md § "<概念名>"` 變體。
 
 ---
 

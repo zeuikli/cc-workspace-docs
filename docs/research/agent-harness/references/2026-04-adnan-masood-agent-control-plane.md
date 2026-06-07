@@ -41,7 +41,7 @@ source_tier: P
 ## 核心洞見
 
 ### 成本優化視角
-正確的 cache 管理能將 token 成本降低十倍（$3.00/MTok -> $0.30/MTok），無需改變模型。
+正確的 cache 管理能將 token 成本降低十倍（$3.00/MTok → $0.30/MTok），無需改變模型。
 
 ### 確定性優先於自主性
 「混亂的 swarms」被邊界清晰的 workflow 和人類檢查點取代。

@@ -68,8 +68,8 @@ type: video
 ### 六大原理
 
 **原理一：Prompt 路徑決定推理深度**
-- 命令式 -> 淺層 pattern match
-- 描述式（不帶預設答案）-> 觸發 chain-of-thought
+- 命令式 → 淺層 pattern match
+- 描述式（不帶預設答案）→ 觸發 chain-of-thought
 - prompt 中預設的答案越少，激活的推理空間越大
 
 **原理二：60% compact 是對抗 lost-in-the-middle，非省 token**
@@ -117,21 +117,21 @@ type: video
 
 ### 新發現（影片獨有，workspace 未覆蓋）
 
-1. **認知步驟數選模型判準** -> 加入 `subagent-strategy.md`
-2. **MCP vs API endpoint token 效率說明** -> 現有 `defer_loading: true` 設計已覆蓋此原則，可補充引用來源
-3. **Context7 MCP** -> 可考慮加入 workspace MCP 設定（解決文件截止問題）
-4. **`/status line` + `/context`** -> 未在規則中明確提及，可加入 `context-management.md` 工具清單
+1. **認知步驟數選模型判準** → 加入 `subagent-strategy.md`
+2. **MCP vs API endpoint token 效率說明** → 現有 `defer_loading: true` 設計已覆蓋此原則，可補充引用來源
+3. **Context7 MCP** → 可考慮加入 workspace MCP 設定（解決文件截止問題）
+4. **`/status line` + `/context`** → 未在規則中明確提及，可加入 `context-management.md` 工具清單
 
 ### 已有對應（無需重複）
 
-- Sub agent isolation > parallelism -> `subagent-strategy.md` + `subagent-advanced.md`
-- Fail fast / rewind -> `session-management.md`
-- /loop 異步同事 -> `routines.md`
-- Hooks for notifications -> `auto-sync.md` + `opus47-best-practices.md`
-- Git worktrees -> `subagent-advanced.md`
-- Descriptive prompts -> `core.md` Think Before Coding
-- Plan Mode -> `quality.md`
-- Permissions allow/deny -> `settings.json` 已有完整配置
+- Sub agent isolation > parallelism → `subagent-strategy.md` + `subagent-advanced.md`
+- Fail fast / rewind → `session-management.md`
+- /loop 異步同事 → `routines.md`
+- Hooks for notifications → `auto-sync.md` + `opus47-best-practices.md`
+- Git worktrees → `subagent-advanced.md`
+- Descriptive prompts → `core.md` Think Before Coding
+- Plan Mode → `quality.md`
+- Permissions allow/deny → `settings.json` 已有完整配置
 
 ### 不需採納
 

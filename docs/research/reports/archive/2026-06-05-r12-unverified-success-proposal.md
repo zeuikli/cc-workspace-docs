@@ -3,7 +3,7 @@
 > **來源**：`research/reports/2026-05-17-harness-engineering.md` §「2026-06-05 深度更新」5 補充主題的「對 cc-workspace 的意義」。
 > **接地**：5 標籤分類 / H0–H3 ladder / 8 trace types 經主對話親自 grep `research/papers/2026-05-13-ai-harness-engineering-runtime-substrate-2605-13357.md`（行 46–73）原文確認。
 > **狀態**：APPLY 完成（commit b5715db8）。Landing 經 AskUserQuestion 核准（R12.1 進條文 + R12.2/3 進 GOTCHA）。
-> **Falsifiable Prediction（prompt-lifecycle 慣例）**：R12.1 添加**不削弱 R1–R11 compliance**——eval 條件 = ① healthcheck FAIL=0（實測 110/0/3 ✅）② auto-load byte ≤ 19,000（實測 18,993，餘 7 ✅）③ 既有 §R1–§R11 anchor 不變（measure.sh --gate PASS ✅）。回歸 ≥5pp -> `git revert`（R11 / autoload-evolution 閉環）。
+> **Falsifiable Prediction（prompt-lifecycle 慣例）**：R12.1 添加**不削弱 R1–R11 compliance**——eval 條件 = ① healthcheck FAIL=0（實測 110/0/3 ✅）② auto-load byte ≤ 19,000（實測 18,993，餘 7 ✅）③ 既有 §R1–§R11 anchor 不變（measure.sh --gate PASS ✅）。回歸 ≥5pp → `git revert`（R11 / autoload-evolution 閉環）。
 > **接地審計（R12.1 dogfood）**：5 標籤 / H0–H3（Runtime Substrate `2605.13357` 行 46–73）+ Categorical 8B 全 0（`2605.12239` 行 92–93）+ Vesper 16.6%/0%（`2605.15221` 行 107–110）**全經主對話親自 grep**，非報告轉述。
 
 ---
@@ -12,7 +12,7 @@
 
 來源報告審計表（行 1156）標 Runtime Substrate「✅ 原文命中」，且本次更新聲明「每數字親 grep」（行 1091）——**卻 ship 了一個錯誤 cross-ref**：報告行 1117 引用「MEMORY Lesson 2026-06-05-B」指稱「subagent 報 clean 但實際殘留問題」，但 MEMORY 實際的 2026-06-05-B 是「provenance header 過度宣稱」。真正命中 `unverified_success` 的是：
 
-- **Lesson 2026-06-05-A**：sub-agent 自稱「親驗」的數字直接寫進產物 -> advisor 攔截 3 處誤植（ACE −82.6% / TTFT 13–31% / MetaGPT −40%）。
+- **Lesson 2026-06-05-A**：sub-agent 自稱「親驗」的數字直接寫進產物 → advisor 攔截 3 處誤植（ACE −82.6% / TTFT 13–31% / MetaGPT −40%）。
 - **Lesson 2026-06-04-G**：memory-compactor 自報「32 保留」實際流失 12 個 Lesson。
 - **Lesson 2026-06-05-D**：同一 adjudicate.sh 主對話跑 6/6、經 sub-agent 中介 4/6（block-dangerous hook 污染）。
 
@@ -79,7 +79,7 @@
 
 byte 預算：auto-load 現 **18,455 / 19,000，餘 545 B**。
 
-- **R12.1 條文**（≈ 350–400 B）放 core.md §R12 -> 餘裕剩 ~150 B，逼近上限。
+- **R12.1 條文**（≈ 350–400 B）放 core.md §R12 → 餘裕剩 ~150 B，逼近上限。
 - **R12.2 / R12.3** 全文放 GOTCHA（零 byte 成本）+ R12 一行指針（≈ 80 B/條）。
 
 三種 landing 形狀見 AskUserQuestion。所有 auto-load 修改走 `/autoload-evolution`（≤1 規則/cycle、≤50 行 diff、eval 回歸 ≥5pp 則 revert）—— R11 convention-first。

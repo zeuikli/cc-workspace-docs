@@ -18,7 +18,7 @@ type: execution-plan
 
 ### 1.1 三類判定（套用對稱懷疑）
 
-對報告建議套用 workspace 既有紀律：不只剔除**幻覺 key**（技術上不存在），也剔除**撞既有設計的有效建議**（技術上有效，但與 workspace 刻意設計衝突 -> 屬 tradeoff 非 fix，需 AskUserQuestion 不自動執行）。
+對報告建議套用 workspace 既有紀律：不只剔除**幻覺 key**（技術上不存在），也剔除**撞既有設計的有效建議**（技術上有效，但與 workspace 刻意設計衝突 → 屬 tradeoff 非 fix，需 AskUserQuestion 不自動執行）。
 
 | 判定類別 | 數量 | 處置 |
 |---------|------|------|
@@ -33,7 +33,7 @@ type: execution-plan
 | 項目 | 子代理 verdict | 親驗結果 | 修正 |
 |------|---------------|---------|------|
 | P0-1 `memory-sync.sh:44 exit 1` | 「誤用，應改 exit 0」 | remote-mismatch 中止路徑，exit 1=sync 失敗但不阻斷 session（exit 2 才 block，見 `branch-isolation-guard.sh:14` 註解） | **語義正確，已滿足**（子代理誤判） |
-| P0-4 subagent model env | 「未設定，建議加」 | env 確無 `CLAUDE_CODE_SUBAGENT_MODEL`（已驗 settings.json）| verdict 屬實，但釘定會破壞檔數路由 -> 改列 ⚠️ tradeoff |
+| P0-4 subagent model env | 「未設定，建議加」 | env 確無 `CLAUDE_CODE_SUBAGENT_MODEL`（已驗 settings.json）| verdict 屬實，但釘定會破壞檔數路由 → 改列 ⚠️ tradeoff |
 | skill body 字數 | 「25/27 超標」 | 抽驗 opus-pilot=2986 / diagram-gen=298 / spec-implement=331 屬實 | 數字屬實，但**詮釋錯**：pilot/hub skill 多命令本不適用 450 上限 |
 
 ---
@@ -50,14 +50,14 @@ type: execution-plan
 - 🟡 description 偏短：實測 17–71 words，無一達 150 words「pushy 門檻」
 - ⚠️ body「超標」25/27：**此為 tradeoff 非 fix**——opus-pilot(2986)/sre(1513)/research-hub(1531) 是多命令 pilot/hub skill，450 words 上限只適用單一指令 skill（diagram-gen 298 ✓ / spec-implement 331 ✓ 證明單指令 skill 本就達標）。盲目壓縮會砍真實操作內容，違反「不破壞 working」+「不為湊數反推」。
 
-**正確行動**：不做 batch 壓縮。改用 `skill-evolution:audit` 對逐 skill 跑四缺陷自檢（bloated/copy-paste/brittle/awkward），由 audit 判定哪些是真冗餘、哪些是必要操作內容。-> 列 P1。
+**正確行動**：不做 batch 壓縮。改用 `skill-evolution:audit` 對逐 skill 跑四缺陷自檢（bloated/copy-paste/brittle/awkward），由 audit 判定哪些是真冗餘、哪些是必要操作內容。→ 列 P1。
 
 ### 主題 2 — §8.1 LobeHub L1-L4 演化梯度
 
 **基準**：L1 手動 / L2 agent 輔助人工確認 / L3 agent 主導人類關鍵判斷 / L4 agent 自主優化。
 
 **workspace 定位 ≈ L2–L3（非從零起步）**：
-- `autoload-evolution` skill：閉環掃描->提案->eval gate->human-gated 整合->記錄；≤1 rule/cycle + ≤50 行 diff + eval 回歸 ≥5pp 自動 revert。-> 具備 L3 的「agent 主導 + 人類保留關鍵判斷」+ 退化可觀測。
+- `autoload-evolution` skill：閉環掃描→提案→eval gate→human-gated 整合→記錄；≤1 rule/cycle + ≤50 行 diff + eval 回歸 ≥5pp 自動 revert。→ 具備 L3 的「agent 主導 + 人類保留關鍵判斷」+ 退化可觀測。
 - `skill-evolution` skill：scan/apply/audit 對照最佳實踐自我改進。
 - **缺 L4 要件**：tracing-first（per-step Execution Snapshot）+ error pattern 自動 bucket 化。
 
@@ -73,7 +73,7 @@ type: execution-plan
 | 4 Model Routing | ✅ 完整 | haiku/sonnet/opus-pilot 三 skill + subagent-strategy 檔數路由表 |
 | 5 Scoped Context References | ✅ 完整 | 下沉原則 + path-scoped on-demand + NLAH |
 
-**真實 gap**：0（層 1 無效、層 2–5 已完整）。`CLAUDE_AUTOCOMPACT_PCT_OVERRIDE` env 雖為真實機制但 MEMORY 標「has bug」-> 不建議設定。
+**真實 gap**：0（層 1 無效、層 2–5 已完整）。`CLAUDE_AUTOCOMPACT_PCT_OVERRIDE` env 雖為真實機制但 MEMORY 標「has bug」→ 不建議設定。
 
 ### 主題 4–6 — §9 P0/P1/P2 行動（13 項）
 
@@ -81,15 +81,15 @@ type: execution-plan
 |---|------|------------|
 | P0-1 Hook exit code 稽核 | ✅ 已滿足 | 親驗：exit 2 阻斷用對（block-dangerous/pre-compact/pre-commit-review）；memory-sync exit 1 語義正確 |
 | P0-2 autoCompactAt+thinkingTokenLimit | ⚫ 無效 | 幻覺 key |
-| P0-3 釘定 Claude Code 版本 | 🔴 未做 | 當前 2.1.168，無 onboarding 最低版本標注 -> **quick-win** |
-| P0-4 Subagent 模型驗證 | ⚠️ tradeoff | env 確無 `CLAUDE_CODE_SUBAGENT_MODEL`；但釘定破壞「0–1檔 Haiku / 2–9 Sonnet」檔數路由 -> AskUserQuestion |
+| P0-3 釘定 Claude Code 版本 | 🔴 未做 | 當前 2.1.168，無 onboarding 最低版本標注 → **quick-win** |
+| P0-4 Subagent 模型驗證 | ⚠️ tradeoff | env 確無 `CLAUDE_CODE_SUBAGENT_MODEL`；但釘定破壞「0–1檔 Haiku / 2–9 Sonnet」檔數路由 → AskUserQuestion |
 | P1-1 Hook Narrowness 重構 | 🟡 部分 | block-dangerous 有 13-case fixture pair；其他 hook 缺 fixture。jq 替換屬工具偏好非強制 |
 | P1-2 Skill 激活率提升 | ✅ 已滿足 | `user-prompt-submit.sh` 已注入 skill routing（Twitter/YT/GH/實作關鍵字） |
 | P1-3 Effort Routing | ✅ 已滿足 | CLAUDE.md:32 effort 矩陣完整，/effort high 為 daily 預設 |
 | P1-4 CLAUDE.md 精確度 | ✅ 已滿足 | 32 行 ≪ 200 上限 |
 | P1-5 STATUS.md handoff | ✅ 已滿足 | `schemas/progress.schema.json` + core.md 長期記憶回路要求建 claude-progress.json |
-| P2-1 Multi-Agent TDD 試點 | 🔴 未做 | 無 tdd 三件組 agent；現有 test-writer/test-engineer 部分覆蓋 -> 季度級 |
-| P2-2 Agent Teams 評估 | 🔴 未做 | 無 `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS` flag -> **低成本試跑可即評估** |
+| P2-1 Multi-Agent TDD 試點 | 🔴 未做 | 無 tdd 三件組 agent；現有 test-writer/test-engineer 部分覆蓋 → 季度級 |
+| P2-2 Agent Teams 評估 | 🔴 未做 | 無 `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS` flag → **低成本試跑可即評估** |
 | P2-3 Self-Evolving 試點 | 🟡 部分 | autoload/skill-evolution 已達 L2–L3（見主題 2）；缺 tracing bucket |
 | P2-4 Spec-Driven 三文件 | 🟡 部分 | `spec-implement` skill 已存在；無 product/tech/structure.md 範本目錄 |
 
@@ -134,9 +134,9 @@ type: execution-plan
 官方文件關鍵事實：
 - Agent Teams 是**互動式 CLI session 級編排**：lead session 在使用者確認後 spawn teammates，透過 tmux/in-process pane + 共享 task list（`~/.claude/tasks/`）+ mailbox 協調。
 - **「No nested teams：teammates cannot spawn their own teams or teammates. Only the lead can manage the team.」**
-- 當前 runtime 是被 spawn 的 agent，**無法在此 session 內程式化啟動 Agent Team**。真正啟用須使用者在終端：① settings.json 加 flag -> ② 重啟 CLI -> ③ 自然語言要求建 team。
+- 當前 runtime 是被 spawn 的 agent，**無法在此 session 內程式化啟動 Agent Team**。真正啟用須使用者在終端：① settings.json 加 flag → ② 重啟 CLI → ③ 自然語言要求建 team。
 
--> 不假裝跑了（unverified_success 紀律）。評估改為「啟用指南 + workspace 適配性 + 對照決策」。
+→ 不假裝跑了（unverified_success 紀律）。評估改為「啟用指南 + workspace 適配性 + 對照決策」。
 
 ### Subagents（現況）vs Agent Teams 決策表
 
@@ -181,5 +181,5 @@ type: execution-plan
 ## 附錄：盤點方法
 
 - 3 個並行 researcher 子代理盤點（skill 設計 / 成本 settings / P0-P1-P2 逐項）
-- 主對話親驗關鍵 verdict（P0-1 exit code、P0-4 env、skill 字數抽驗）-> 修正 2 個子代理誤判
-- advisor 諮詢 -> 對稱懷疑原則（剔除幻覺 key + tradeoff 建議）、LobeHub L 定位、誠實 gap 主軸
+- 主對話親驗關鍵 verdict（P0-1 exit code、P0-4 env、skill 字數抽驗）→ 修正 2 個子代理誤判
+- advisor 諮詢 → 對稱懷疑原則（剔除幻覺 key + tradeoff 建議）、LobeHub L 定位、誠實 gap 主軸

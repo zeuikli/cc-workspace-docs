@@ -130,7 +130,7 @@ Data Infrastructure 團隊特別強調，把既有 pattern 寫進 CLAUDE.md 後�
 
 > "Run /init to generate a starting CLAUDE.md automatically. Claude analyzes your codebase and creates a file with build commands, test instructions, and project conventions it discovers."
 
-`/init` 偵測 build system / test framework / code pattern 生成基礎；若已存在 CLAUDE.md 則建議改進而非覆寫。進階：`CLAUDE_CODE_NEW_INIT=1` 啟用互動式多階段流程（subagent 探索 -> 問題補充 -> 可審閱提案），且會讀取既有 `AGENTS.md` / `.cursorrules` / `.windsurfrules` 整合。
+`/init` 偵測 build system / test framework / code pattern 生成基礎；若已存在 CLAUDE.md 則建議改進而非覆寫。進階：`CLAUDE_CODE_NEW_INIT=1` 啟用互動式多階段流程（subagent 探索 → 問題補充 → 可審閱提案），且會讀取既有 `AGENTS.md` / `.cursorrules` / `.windsurfrules` 整合。
 
 ### 3.6 當作程式碼維護
 
@@ -184,8 +184,8 @@ Data Infrastructure 團隊特別強調，把既有 pattern 寫進 CLAUDE.md 後�
 ### 4.3 內容覆蓋率（雙軌校準 — 重要方法學說明）
 
 ⚠️ **校準警示**：覆蓋率有兩種測法，差異巨大，必須雙軌呈現：
-- **關鍵詞提及率（上界）**：全文含相關關鍵詞（如含 "build"/"building"）-> 高估，把「順帶提到」算進去。
-- **Header 結構化率（下界）**：有專屬 section header（如 `## Build`）-> 更接近「刻意文件化」的真實率。
+- **關鍵詞提及率（上界）**：全文含相關關鍵詞（如含 "build"/"building"）→ 高估，把「順帶提到」算進去。
+- **Header 結構化率（下界）**：有專屬 section header（如 `## Build`）→ 更接近「刻意文件化」的真實率。
 - ⚠️ 兩軌的關鍵詞集**不完全相同**（header build 多納 `install|setup|getting started`、header arch 多納 `overview|project`），故 header 非 keyword 的嚴格子集，兩者僅示意「提及 vs 結構化」的量級差，非精確上下界。
 
 | 主題 | 關鍵詞提及率（上界） | Header 結構化率（下界） |
@@ -225,7 +225,7 @@ build/test 的觀察則較穩健：結構化率（42%/34%）遠低於關鍵詞�
 注意：架構本身不是反模式——官方推薦寫「架構決策」。反模式是把**可從 code 推斷的細節**（資料夾清單、標準語言慣例、Claude 一個 session 就學會的東西）當成內容。社群一針見血：「Do not waste CLAUDE.md lines on things Claude will learn after one session.」（本研究的 grep 無法量化這個落差的規模——architecture header 75% 含了高價值的決策說明，不能一概視為反模式。）**修法**：寫「為什麼這樣設計、團隊特殊約定」這類決策性資訊，刪除純粹複述 code 結構的部分。
 
 ### 5.3 把 CLAUDE.md 當強制執行層
-誤以為寫了 "NEVER push to main" Claude 就一定不會。但 CLAUDE.md 是 advisory context，「no guarantee of strict compliance」。**修法**：確定性需求（commit 前必跑測試、禁止某操作）用 **PreToolUse hook**，hook 是 deterministic 且 guarantee the action happens。官方表格明確區分：技術強制 -> managed settings / hooks；行為引導 -> CLAUDE.md。
+誤以為寫了 "NEVER push to main" Claude 就一定不會。但 CLAUDE.md 是 advisory context，「no guarantee of strict compliance」。**修法**：確定性需求（commit 前必跑測試、禁止某操作）用 **PreToolUse hook**，hook 是 deterministic 且 guarantee the action happens。官方表格明確區分：技術強制 → managed settings / hooks；行為引導 → CLAUDE.md。
 
 ### 5.4 互相矛盾的規則
 多個 CLAUDE.md（root / 子目錄 / rules）給出衝突指引。官方：「if two rules contradict each other, Claude may pick one arbitrarily.」結果是不可預測行為。**修法**：定期 review root + nested + `.claude/rules/`，用 `/memory` 檢查實際載入了什麼。

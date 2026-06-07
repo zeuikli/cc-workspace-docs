@@ -59,7 +59,7 @@ dynamic workflow 的 harness 由三個平面組成。下表函數簽章來自 **
 > 對應 R5:**確定性程式碼做「決定」**(路由 / 重試 / 計數 / 分支),**LLM 做「判斷」**(分類 / 摘要 / 生成)。Workflow 把這條規則變成執行結構。
 
 例外限制(官方文件「行為和限制」):
-- 無中途使用者輸入(只有權限提示能暫停);階段間要簽核 -> 拆成各自獨立 workflow
+- 無中途使用者輸入(只有權限提示能暫停);階段間要簽核 → 拆成各自獨立 workflow
 - 最多 16 並行 agent(核心少的機器更少)
 - 每次執行上限 1,000 agent(防失控迴圈)
 
@@ -69,16 +69,16 @@ dynamic workflow 的 harness 由三個平面組成。下表函數簽章來自 **
 agent(prompt: string, opts?: {
   label?: string,        // 進度顯示用標籤
   phase?: string,        // 明確指派到某 progress group(避免 race)
-  schema?: object,       // 給 JSON Schema -> 強制 StructuredOutput,回傳已驗證物件
+  schema?: object,       // 給 JSON Schema → 強制 StructuredOutput,回傳已驗證物件
   model?: string,        // 'sonnet'|'opus'|'haiku' — 不給則繼承 session model
   isolation?: 'worktree',// 各自 git worktree(僅在 agent 並行改檔會衝突時用,昂貴)
   agentType?: string,    // 自訂 subagent type(如 'Explore'、'code-reviewer')
 }): Promise<any>
 ```
 
-- 無 schema -> 回傳 agent 最終文字(string)
-- 有 schema -> runtime 層強制結構化輸出,model 不符會重試,回傳已驗證物件(免解析)
-- 使用者中途 skip 該 agent -> 回傳 `null`(用 `.filter(Boolean)` 過濾)
+- 無 schema → 回傳 agent 最終文字(string)
+- 有 schema → runtime 層強制結構化輸出,model 不符會重試,回傳已驗證物件(免解析)
+- 使用者中途 skip 該 agent → 回傳 `null`(用 `.filter(Boolean)` 過濾)
 - 每個 agent = **獨立 context window**,可挑模型智能等級與隔離程度(呼應官方文章「workflow 可決定每個 agent 用什麼模型、是否在 worktree」)
 
 ### 3.3 協調原語平面
@@ -95,7 +95,7 @@ agent(prompt: string, opts?: {
 - **`args`**:呼叫時傳入的結構化輸入(已儲存 workflow 的參數化入口;省略則 `undefined`)
 - **`budget`**:`{total, spent(), remaining()}` token 硬上限;`total` 為 null 表未設;達 `total` 後 `agent()` 拋錯。可做動態迴圈 `while (budget.total && budget.remaining() > 50_000)`
 
-> **pipeline vs parallel 是 harness 設計的關鍵抉擇**:barrier 會浪費快 agent 的等待時間(5 個 finder,最慢是最快 3 倍 -> barrier 浪費 2/3 idle)。預設 pipeline,只有「stage N 真需要 stage N-1 全部結果」(dedup/早退/跨項比較)才用 barrier。
+> **pipeline vs parallel 是 harness 設計的關鍵抉擇**:barrier 會浪費快 agent 的等待時間(5 個 finder,最慢是最快 3 倍 → barrier 浪費 2/3 idle)。預設 pipeline,只有「stage N 真需要 stage N-1 全部結果」(dedup/早退/跨項比較)才用 barrier。
 
 ---
 
@@ -105,12 +105,12 @@ agent(prompt: string, opts?: {
 
 | Pattern | 機制 | 原語映射 | workspace 既有對應 |
 |---|---|---|---|
-| **Classify-and-act** | 分類 agent 決定任務類型 -> 路由到不同 agent/行為 | `agent`(schema)+ JS 分支 | model routing、`/effort` 分流 |
-| **Fan-out-and-synthesize** | 拆多步 -> 各 agent 跑 -> synthesize 合併(**synthesize 是 barrier**) | `parallel` + 合併 | `deep-research`、`gap-vote` |
+| **Classify-and-act** | 分類 agent 決定任務類型 → 路由到不同 agent/行為 | `agent`(schema)+ JS 分支 | model routing、`/effort` 分流 |
+| **Fan-out-and-synthesize** | 拆多步 → 各 agent 跑 → synthesize 合併(**synthesize 是 barrier**) | `parallel` + 合併 | `deep-research`、`gap-vote` |
 | **Adversarial verification** | 每個產出 agent 配一個對抗驗證 agent | `pipeline`(stage2 驗證) | subagent-strategy 對抗驗證 |
-| **Generate-and-filter** | 生點子 -> 依 rubric/驗證過濾 -> dedup -> 只回最高品質 | `parallel` + `.filter` | autoresearch |
-| **Tournament** | N agent 用不同approach競賽 -> pairwise judge 到出贏家(**pairwise 比絕對評分可靠**) | 巢狀 `parallel` + 確定性 bracket | (新)排序/命名/taste 任務 |
-| **Loop-until-done** | 未知工作量 -> 循環 spawn 到 stop 條件(無新發現/無 error) | `while` + `agent` | loop-until-dry |
+| **Generate-and-filter** | 生點子 → 依 rubric/驗證過濾 → dedup → 只回最高品質 | `parallel` + `.filter` | autoresearch |
+| **Tournament** | N agent 用不同approach競賽 → pairwise judge 到出贏家(**pairwise 比絕對評分可靠**) | 巢狀 `parallel` + 確定性 bracket | (新)排序/命名/taste 任務 |
+| **Loop-until-done** | 未知工作量 → 循環 spawn 到 stop 條件(無新發現/無 error) | `while` + `agent` | loop-until-dry |
 
 > 重點:**這些 pattern 不是 prompt 技巧,而是 harness 結構**。`parallel` 的 barrier 語義使 synthesize 成立;確定性 `while` 使 loop-until-done 不會 drift;`pipeline` 使 adversarial verification 邊產邊驗不浪費 wall-clock。
 
@@ -126,7 +126,7 @@ agent(prompt: string, opts?: {
 | 監控 | `/workflows` 看階段/agent 數/token/耗時;`p` 暫停、`x` 停、`r` 重啟 agent、`s` 儲存 | 文件 |
 | 權限 | 啟動提示受 permission mode 控制;但**生成的 subagent 一律 acceptEdits**,繼承工具 allowlist;shell/網路/未允許 MCP 仍會提示 | 文件 |
 | 恢復 | 同 session 內可恢復:已完成 agent 回快取結果,其餘實時跑;退出 CC 則下個 session 重啟 | 文件 + runtime(resumeFromRunId) |
-| 儲存 | workflow menu 按 `s` -> `.claude/workflows/`(repo 共享)或 `~/.claude/workflows/`(個人);未來以 `/<name>` 執行 | 文件 |
+| 儲存 | workflow menu 按 `s` → `.claude/workflows/`(repo 共享)或 `~/.claude/workflows/`(個人);未來以 `/<name>` 執行 | 文件 |
 | Token budget | prompt「use 10k tokens」設上限;runtime 以 `budget` 全域強制 | 文件 + runtime |
 | 成本警語 | 單次執行可能比對話完成同任務用**顯著更多** token;大任務前先在小片段試跑 | 文件 + 文章 |
 | 關閉 | `/config` 切換、`disableWorkflows: true`、`CLAUDE_CODE_DISABLE_WORKFLOWS=1` | 文件 |
@@ -143,7 +143,7 @@ agent(prompt: string, opts?: {
 - **代理團隊**:主導代理監督對等 session,共享 task list
 - **工作流程**:**計畫在指令碼**,中間結果在變數,協調可重複、可大規模(數十～數百 agent)
 
-選型口訣:需要 Claude 即興判斷下一步 -> subagent/skill;需要把「協調本身」固化成可重跑、可大規模 fan-out 的結構 -> workflow。
+選型口訣:需要 Claude 即興判斷下一步 → subagent/skill;需要把「協調本身」固化成可重跑、可大規模 fan-out 的結構 → workflow。
 
 ---
 
@@ -151,13 +151,13 @@ agent(prompt: string, opts?: {
 
 1. **R5 升格為結構**:workspace 一直主張「確定性程式碼做決定、LLM 做判斷」。Workflow 把這條從 CLAUDE.md 規則變成 runtime 強制——路由/重試/計數在 JS,分類/生成在 agent。可在 `subagent-strategy.md` 明示此對應。
 
-2. **三大失敗模式 ↔ 既有規則**:agentic laziness->R4/R12、self-preferential bias->對抗驗證紀律、goal drift->R6。可作為官方權威背書,強化既有條文敘事。
+2. **三大失敗模式 ↔ 既有規則**:agentic laziness→R4/R12、self-preferential bias→對抗驗證紀律、goal drift→R6。可作為官方權威背書,強化既有條文敘事。
 
 3. **Fan-out 上限衝突點**:subagent-strategy 現定「Fan-out 上限 4」;workflow runtime 為「16 並行 / 1000 總量」。兩者層級不同(主對話手動委派 vs workflow 自動協調),**不應混用**——建議在 subagent-strategy 標註:手動 fan-out ≤4 維持;workflow 內並行交由 runtime cap(16),勿用 4 的人工上限去限制 workflow。(R7 浮現衝突,待 `/autoload-evolution` 決議)
 
 4. **pipeline 預設原則可固化**:多階段 subagent 任務預設 pipeline(無 barrier),只有跨項依賴才 barrier——這是可寫進 skill 的高價值判準。
 
-5. **dynamic workflow 幻覺風險**:subagent-strategy 已記「dynamic workflow(Opus 4.8)會幻覺 -> verdict 非證據,須機械 grep 重驗」。本文 §3.2 的 `schema` 強制結構化輸出可降低解析錯誤,但**不降低內容幻覺**;對抗驗證 + 機械重驗仍必要。
+5. **dynamic workflow 幻覺風險**:subagent-strategy 已記「dynamic workflow(Opus 4.8)會幻覺 → verdict 非證據,須機械 grep 重驗」。本文 §3.2 的 `schema` 強制結構化輸出可降低解析錯誤,但**不降低內容幻覺**;對抗驗證 + 機械重驗仍必要。
 
 ---
 
