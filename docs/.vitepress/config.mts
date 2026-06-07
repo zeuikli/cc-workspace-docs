@@ -57,7 +57,7 @@ const researchItems = [
       { text: "SURVEY — 論文總覽", link: "/research/agent-harness/SURVEY" },
       { text: "KNOWLEDGE-MAP", link: "/research/agent-harness/KNOWLEDGE-MAP" },
       { text: "RESEARCH — 架構研究", link: "/research/agent-harness/RESEARCH" },
-      { text: "References 索引（64 篇）", link: "/research/agent-harness/references/" },
+      { text: "References 索引（63 篇）", link: "/research/agent-harness/references/" },
     ],
   },
   {
@@ -71,13 +71,102 @@ const researchItems = [
     text: "研究報告",
     collapsed: true,
     items: [
-      { text: "報告索引", link: "/research/reports/" },
-      { text: "Harness Engineering 深度研究", link: "/research/reports/2026-05-17-harness-engineering" },
-      { text: "驗證方法論", link: "/research/reports/2026-05-19-harness-verification-methods" },
-      { text: "Model-Harness Fit 分析", link: "/research/reports/2026-05-16-harness-engineering-model-fit" },
-      { text: "Sub-Agent Delegation Gotchas", link: "/research/reports/2026-05-17-claude-code-subagent-delegation-gotchas" },
-      { text: "Auto-Load Token 優化", link: "/research/reports/2026-05-18-auto-load-token-best-practices" },
-      { text: "Karpathy×Mnilax 最佳解", link: "/research/reports/2026-05-18-karpathy-mnilax-best-solution" },
+      { text: "報告索引（全覽）", link: "/research/reports/" },
+      {
+        text: "⭐ Canonical 母報告",
+        collapsed: false,
+        items: [
+          { text: "Agent 工程研究合成", link: "/research/reports/2026-05-31-consolidated-agent-engineering-research" },
+          { text: "Auto-Load Token SSoT", link: "/research/reports/2026-06-05-autoload-token-best-practices-consensus" },
+          { text: "12 條準則論文接地深化", link: "/research/reports/2026-06-05-12-rule-deepened-research" },
+        ],
+      },
+      {
+        text: "Harness Engineering",
+        collapsed: true,
+        items: [
+          { text: "Harness 工程深度研究", link: "/research/reports/2026-05-31-harness-engineering-deep-research" },
+          { text: "Harness 自演化合成", link: "/research/reports/2026-06-05-harness-memory-self-evolution-synthesis" },
+          { text: "Harness 演化計劃", link: "/research/reports/2026-05-28-harness-evolution-plan" },
+        ],
+      },
+      {
+        text: "LLM Memory",
+        collapsed: true,
+        items: [
+          { text: "LLM 記憶控制全調查", link: "/research/reports/2026-05-22-llm-memory-control-comprehensive-survey" },
+        ],
+      },
+      {
+        text: "Context Window / Caching",
+        collapsed: true,
+        items: [
+          { text: "Context Window 深度研究", link: "/research/reports/2026-06-03-context-window-management-deep-research" },
+          { text: "Prompt Caching 工程", link: "/research/reports/2026-06-03-prompt-caching-management-engineering" },
+          { text: "冷啟動 Latency 研究", link: "/research/reports/2026-06-03-claude-code-cold-start-latency-deep-research" },
+        ],
+      },
+      {
+        text: "Auto-Load / Token",
+        collapsed: true,
+        items: [
+          { text: "CJK Token 稅研究", link: "/research/reports/2026-06-06-cjk-token-tax-research" },
+          { text: "Auto-Load Token 優化", link: "/research/reports/2026-06-06-autoload-token-optimization" },
+        ],
+      },
+      {
+        text: "12-Rule / Best Practices",
+        collapsed: true,
+        items: [
+          { text: "12 條準則深化全文", link: "/research/reports/2026-06-05-12-rule-deepened-ruleset" },
+          { text: "12 條準則 Universal 版", link: "/research/reports/2026-06-04-12-rule-universal-ruleset" },
+        ],
+      },
+      {
+        text: "Sub-Agent / Agent Team",
+        collapsed: true,
+        items: [
+          { text: "研究艦隊", link: "/research/reports/2026-06-04-research-fleet-research" },
+          { text: "Merge Pipeline", link: "/research/reports/2026-06-04-merge-pipeline-research" },
+        ],
+      },
+      {
+        text: "Skill / Workspace Canon",
+        collapsed: true,
+        items: [
+          { text: "Skill 整併規格", link: "/research/reports/2026-06-07-skill-consolidation-spec" },
+          { text: "Workspace Canon", link: "/research/reports/2026-06-06-zeuik-workspace-canon" },
+          { text: "CLAUDE.md 最佳實踐", link: "/research/reports/2026-06-05-claudemd-best-practices" },
+        ],
+      },
+      {
+        text: "前沿 AI 領域研究（6/07）",
+        collapsed: true,
+        items: [
+          { text: "AI Alignment / CAI", link: "/research/reports/2026-06-07-ai-alignment-constitutional-ai" },
+          { text: "AI Safety Red-Teaming", link: "/research/reports/2026-06-07-ai-safety-red-teaming" },
+          { text: "Diffusion Language Models", link: "/research/reports/2026-06-07-diffusion-language-models" },
+          { text: "Mechanistic Interpretability", link: "/research/reports/2026-06-07-mechanistic-interpretability" },
+          { text: "Multimodal VLM", link: "/research/reports/2026-06-07-multimodal-vision-language-models" },
+          { text: "Test-Time Compute Scaling", link: "/research/reports/2026-06-07-test-time-compute-scaling" },
+        ],
+      },
+      {
+        text: "Claude Code 社群實踐",
+        collapsed: true,
+        items: [
+          { text: "社群實踐基礎研究", link: "/research/reports/2026-06-07-claude-code-community-practices-report" },
+          { text: "深度實踐 v2", link: "/research/reports/2026-06-07-claude-code-deep-practices-v2" },
+        ],
+      },
+      {
+        text: "Session Insights",
+        collapsed: true,
+        items: [
+          { text: "對稱懷疑原則", link: "/research/reports/2026-06-07-session-insights-symmetric-skepticism" },
+          { text: "六領域 Meta-Reflection", link: "/research/reports/2026-06-07-session-insights-multi-domain-ai-research" },
+        ],
+      },
     ],
   },
   {
