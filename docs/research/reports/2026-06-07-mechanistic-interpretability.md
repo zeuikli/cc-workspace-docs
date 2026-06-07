@@ -46,7 +46,7 @@ MI 的核心假設是 **Circuits Hypothesis**：LLM 的計算可被分解為由�
 
 ### 2.2 稀疏自動編碼器（SAE）：超疊加的解碼工具
 
-**問題設置**：給定模型中間層激活向量 $h \in \mathbb{R}^{d}$，目標是找到過完備字典 $W \in \mathbb{R}^{d \times n}$（其中 $n \gg d$）和稀疏係數 $f \in \mathbb{R}^{n}$，使得 $h \approx W f$ 且 $f$ 稀疏（大多數係數為零）。
+**問題設置**：給定模型中間層激活向量 $h \in \mathbb{R}^{d}$，目標是找到過完備字典 $W \in \mathbb{R}^`{d \times n}`$（其中 $n \gg d$）和稀疏係數 $f \in \mathbb{R}^{n}$，使得 $h \approx W f$ 且 $f$ 稀疏（大多數係數為零）。
 
 **架構**：SAE 包含一個編碼器（將激活投射到高維稀疏空間）和解碼器（重建原始激活）。訓練目標是最小化重建損失 + L1 稀疏懲罰：
 $$\mathcal{L} = \|h - \hat{h}\|^2 + \lambda \|f\|_1$$

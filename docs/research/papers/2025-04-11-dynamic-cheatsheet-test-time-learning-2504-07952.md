@@ -80,7 +80,7 @@ During memory curation, Cur mainly considers: (i) the usefulness and generalizab
 
 DC-RS modifies the sequence of memory updates and introduces a retrieval mechanism, Retr, into the curation process. Retr allows the model to retrieve the most relevant past input-output pairs from its knowledge base. The steps are:
 
-1. Retrieve top-k most similar inputs: R_i = Retr(x_i, {(x_j, ỹ_j)}_{j<i}, k)
+1. Retrieve top-k most similar inputs: R_i = Retr(x_i, {(x_j, ỹ_j)}_`{j<i}`, k)
 2. Update memory: M_i = Cur(M_{i-1}, x_i, R_i)
 3. Generate: ỹ_i = Gen(x_i, M_i)
 

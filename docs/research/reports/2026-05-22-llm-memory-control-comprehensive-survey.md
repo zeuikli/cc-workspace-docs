@@ -1397,7 +1397,7 @@ Zhang et al. 的第一篇大型調查，整理了 2022–2024 的記憶機制文
 $$m_1 = C(m_0) = m_0 + \delta_1, \quad \|\delta_1\| \leq \epsilon$$
 
 **多次連續整合**（每次基於上一次的輸出）：
-$$m_k = C(m_{k-1}) = m_0 + \sum_{i=1}^{k} \delta_i$$
+$$m_k = C(m_{k-1}) = m_0 + \sum_`{i=1}`^{k} \delta_i$$
 
 如果失真是獨立的（$\delta_i$ 相互獨立），均值為 0，方差為 $\sigma^2$，則：
 $$E[\|m_k - m_0\|^2] = k \cdot \sigma^2$$
@@ -1406,9 +1406,9 @@ $$E[\|m_k - m_0\|^2] = k \cdot \sigma^2$$
 
 **但現實情況更糟**：失真往往不是均值為 0 的隨機誤差，而是**系統性偏差**（例如 LLM 傾向於生成更抽象的描述），因此：
 
-$$m_k = m_0 + k \cdot \bar{\delta} + \text{noise}$$
+$$m_k = m_0 + k \cdot \bar`{\delta}` + \text{noise}$$
 
-系統性偏差 $\bar{\delta}$ 隨整合次數線性積累，導致記憶向 LLM 的先驗偏好漂移，遠離原始事實。
+系統性偏差 $\bar`{\delta}`$ 隨整合次數線性積累，導致記憶向 LLM 的先驗偏好漂移，遠離原始事實。
 
 ### B.2 整合退化曲線的解釋
 
@@ -1416,9 +1416,9 @@ Zhang et al. 觀察到的效用先升後降的曲線可以用以下框架解釋�
 
 **上升階段（整合次數較少）**：
 整合提取了原始記憶中的有用模式（規律、反例等），並以更緊湊的形式呈現給 LLM。這相當於：
-$$\text{utility}_k = \text{signal}(m_0) - k \cdot |\bar{\delta}| + k \cdot \text{pattern\_benefit}$$
+$$\text{utility}_k = \text{signal}(m_0) - k \cdot |\bar`{\delta}`| + k \cdot \text`{pattern\_benefit}`$$
 
-當 $\text{pattern\_benefit} > |\bar{\delta}|$ 時，效用上升。
+當 $\text`{pattern\_benefit}` > |\bar`{\delta}`|$ 時，效用上升。
 
 **峰值**：
 $$k^* = \text{argmax}_k \text{utility}_k$$
@@ -1434,9 +1434,9 @@ $$k \to \infty: \text{utility}_k \to -\infty$$（記憶完全被 LLM 偏見填�
 
 設 $m_0^{(i)}$ 為第 i 個原始情節，共 n 個情節。Episodic-only 檢索的效用：
 
-$$\text{utility}_{episodic} = \text{retrieval\_quality}(m_0^{(i^*)}), \quad i^* = \text{argmax}_i \text{relevance}(m_0^{(i)}, \text{query})$$
+$$\text{utility}_{episodic} = \text`{retrieval\_quality}`(m_0^{(i^*)}), \quad i^* = \text{argmax}_i \text{relevance}(m_0^{(i)}, \text{query})$$
 
-這個效用不受整合次數 k 的影響——原始記憶的質量是固定的。只要檢索機制足夠好（$\text{retrieval\_quality}$ 足夠高），episodic-only 就能與甚至超越整合方法。
+這個效用不受整合次數 k 的影響——原始記憶的質量是固定的。只要檢索機制足夠好（$\text`{retrieval\_quality}`$ 足夠高），episodic-only 就能與甚至超越整合方法。
 
 **關鍵洞見**：LLM 記憶領域過去十年隱含假設「整合 > 原始記憶」，但這個假設在 LLM 作為整合執行者時並不成立——因為 LLM 的整合不像人類大腦的鞏固那樣選擇性且保真。
 

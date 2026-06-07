@@ -3,8 +3,8 @@
 # 輸出 JSONL：每列一 repo。Fail Loud：印出 fetch 失敗數。
 set -u
 cd /Users/zeuik/cc-workspace
-REPOS_FILE="${1:-research/scratch/repos-unique.txt}"
-OUT="${2:-research/scratch/claudemd-stats.jsonl}"
+REPOS_FILE="$`{1:-research/scratch/repos-unique.txt}`"
+OUT="$`{2:-research/scratch/claudemd-stats.jsonl}`"
 CONTENT_DIR="research/scratch/claudemd-content"
 mkdir -p "$CONTENT_DIR"
 > "$OUT"
@@ -21,14 +21,14 @@ while IFS= read -r REPO; do
     FAIL=$((FAIL+1)); rm -f "$CFILE"; continue
   fi
   OK=$((OK+1))
-  cnt(){ local n; n=$(grep -cE "$1" "$CFILE" 2>/dev/null); echo "${n:-0}"; }
-  BYTES=$(wc -c < "$CFILE" | tr -d ' '); BYTES=${BYTES:-0}
-  LINES=$(wc -l < "$CFILE" | tr -d ' '); LINES=${LINES:-0}
+  cnt(){ local n; n=$(grep -cE "$1" "$CFILE" 2>/dev/null); echo "$`{n:-0}`"; }
+  BYTES=$(wc -c < "$CFILE" | tr -d ' '); BYTES=$`{BYTES:-0}`
+  LINES=$(wc -l < "$CFILE" | tr -d ' '); LINES=$`{LINES:-0}`
   HEADERS=$(cnt '^#{1,3} ')
   FENCE=$(cnt '^```'); CODEBLK=$(( FENCE / 2 ))
   BULLETS=$(cnt '^[[:space:]]*[-*] ')
   # has_* flags（case-insensitive 關鍵詞）
-  f(){ grep -qiE "$1" "$CFILE" 2>/dev/null && echo true || echo false; }
+  f()`{ grep -qiE "$1" "$CFILE" 2>/dev/null && echo true || echo false; }`
   HAS_BUILD=$(f 'build|compile|npm run|make |cargo |go build|mvn ')
   HAS_TEST=$(f 'test|pytest|jest|npm test|go test|cargo test')
   HAS_STYLE=$(f 'style|convention|formatt|lint|prettier|eslint|naming')

@@ -41,7 +41,7 @@ A(M_t, T, p*_{M_s,T}) < max_{p_{M_t,T}} A(M_t, T, p_{M_t,T})
 - 輸出：一組 (p*_{M_s,S_i}, p*_{M_t,S_i}) calibrated prompt pairs
 
 **Phase 2：Cross-Model Prompt Mapping 學習**
-- 從 calibration pairs 學習映射函數 T_{M_s→M_t}
+- 從 calibration pairs 學習映射函數 T_`{M_s→M_t}`
 - 測試時：給定 unseen task 的 source prompt → 直接產出 target model 最佳 prompt
 - **Zero-shot 適應**：不需要 unseen task 的評估資料
 

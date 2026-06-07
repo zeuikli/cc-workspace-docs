@@ -48,7 +48,7 @@ $$\mathcal{L}_{\text{SUBS}} = \mathbb{E}_{t, x_t} \left[ w(t) \cdot \text{CE}(\h
 
 SEDD [Lou et al., 2023] 提出了一條不同的理論路線。其核心貢獻是將連續分數匹配（score matching）的概念延伸至離散空間，引入「分數熵」（score entropy）作為離散數據的訓練目標：
 
-$$\mathcal{L}_{\text{SEDD}} = \mathbb{E} \left[ \sum_{y \neq x_t} q(y | x_t) \left( \frac{p(x_t | y)}{p(x_t)} - \log \frac{p(x_t | y)}{p(x_t)} - 1 \right) \right]$$
+$$\mathcal{L}_{\text{SEDD}} = \mathbb{E} \left[ \sum_`{y \neq x_t}` q(y | x_t) \left( \frac{p(x_t | y)}{p(x_t)} - \log \frac{p(x_t | y)}{p(x_t)} - 1 \right) \right]$$
 
 此目標函數在理論上比早期 D3PM 的變分下界（ELBO）更緊，使得採樣效率大幅提升：SEDD 可以用 **32× 更少的網路前向傳播**達到與完整採樣步驟可比的生成品質。
 

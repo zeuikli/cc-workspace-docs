@@ -52,7 +52,7 @@ Here, we bring hybrid parametric and non-parametric memory to the "workhorse of 
 RAG models use the input sequence x to retrieve text documents z and use them as additional context when generating the target sequence y. Our models leverage two components:
 
 1. **Retriever** p_η(z|x): Parameters η that return (top-K truncated) distributions over text passages given a query x
-2. **Generator** p_θ(y_i|x,z,y_{1:i-1}): Generates current token based on context of previous tokens, original input x, and retrieved passage z
+2. **Generator** p_θ(y_i|x,z,y_`{1:i-1}`): Generates current token based on context of previous tokens, original input x, and retrieved passage z
 
 #### 2.1 RAG-Sequence Model
 

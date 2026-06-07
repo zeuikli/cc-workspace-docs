@@ -89,7 +89,7 @@
 落地：1 ref（MAST 對映矩陣）+ GOTCHAS 補強。**零 auto-load 增量。**
 
 **行動 3.1 — MAST 14 失敗模式對映矩陣**
-- 落地：`.claude/refs/mast-failure-mapping.md`（≤90 行）：14 模式 × {是否已防護 / 防護機制 / 缺口}。
+- 落地：`.claude/refs/mast-failure-mapping.md`（≤90 行）：14 模式 × `{是否已防護 / 防護機制 / 缺口}`。
 - 預期已防護：specification 品質（`autoresearch` Setup Gate）、agent 幻覺自報完成（`gap-vote` evidence audit + dynamic-workflow grep 重驗）、echo chamber（blind judge + external signal）。
 - 驗收：`grep -c "^| " .claude/refs/mast-failure-mapping.md` → ≥14（14 模式全列）。
 - 風險：把「已有防護」誤標缺口而過度補（違 R2）→ 每格引用既有機制檔案路徑為證。回滾：`rm`。
