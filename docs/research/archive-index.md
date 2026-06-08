@@ -1,13 +1,16 @@
 # 研究歸檔索引
 
-> 更新時間：2026-06-07 21:26 UTC+8
-> 保留期限：最近 **30 天**（2026-05-08 之後）
+> 更新時間：2026-06-08 08:06 UTC+8
+> 保留期限：最近 **30 天**（2026-05-09 之後）
 > 清理舊檔：每次 Actions 執行後自動移除過期資料
 
 ## 📡 每日 DevOps/DeepSRT/Combined 摘要
 
 ### 2026-06
 
+- [2026-06-08 — 2026-06-08-devops.md](ai-news/digests/2026-06-08-devops.md)
+- [2026-06-08 — 2026-06-08-deepsrt.md](ai-news/digests/2026-06-08-deepsrt.md)
+- [2026-06-08 — 2026-06-08-combined.md](ai-news/digests/2026-06-08-combined.md)
 - [2026-06-07 — 2026-06-07-devops.md](ai-news/digests/2026-06-07-devops.md)
 - [2026-06-07 — 2026-06-07-deepsrt.md](ai-news/digests/2026-06-07-deepsrt.md)
 - [2026-06-07 — 2026-06-07-combined.md](ai-news/digests/2026-06-07-combined.md)
@@ -101,9 +104,6 @@
 - [2026-05-09 — 2026-05-09-devops.md](ai-news/digests/2026-05-09-devops.md)
 - [2026-05-09 — 2026-05-09-deepsrt.md](ai-news/digests/2026-05-09-deepsrt.md)
 - [2026-05-09 — 2026-05-09-combined.md](ai-news/digests/2026-05-09-combined.md)
-- [2026-05-08 — 2026-05-08-devops.md](ai-news/digests/2026-05-08-devops.md)
-- [2026-05-08 — 2026-05-08-deepsrt.md](ai-news/digests/2026-05-08-deepsrt.md)
-- [2026-05-08 — 2026-05-08-combined.md](ai-news/digests/2026-05-08-combined.md)
 
 ## 🤖 AI/LLM 週報
 
