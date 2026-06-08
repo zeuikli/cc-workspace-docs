@@ -25,7 +25,7 @@ type: documentation
 | `papers/` | 183 | arXiv / 學術論文（PDF + Markdown）| [→ INDEX.md](papers/INDEX.md) |
 | `agent-harness/` | 80 | Harness 深度研究 + eval + benchmark | [→ INDEX.md](agent-harness/INDEX.md) |
 | `career-wiki/` | 53 | 8 段職涯 × 36 pages（供 zeuik-senior-architect）| [→ INDEX.md](career-wiki/INDEX.md) |
-| `reports/` | 95 | 合成報告 / Gap analysis / Deep research 輸出 | [→ INDEX.md](reports/INDEX.md) |
+| `reports/` | 96 | 合成報告 / Gap analysis / Deep research 輸出 | [→ INDEX.md](reports/INDEX.md) |
 | `best-practices/` | 32 | Claude Code 最佳實踐研究 | [→ INDEX.md](best-practices/INDEX.md) |
 | `claude-blog/` | 14 | Anthropic 官方 blog / docs 歸檔 | [→ INDEX.md](claude-blog/INDEX.md) |
 | `evals/` | 13 | Harness eval runs + baseline | [→ INDEX.md](evals/INDEX.md) |
