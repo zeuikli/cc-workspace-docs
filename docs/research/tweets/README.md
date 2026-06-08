@@ -1,6 +1,6 @@
 # Tweet Archive Index
 
-> 共 **190 篇** · *最後更新：2026-06-05*
+> 共 **190 篇** · *最後更新：2026-06-08*
 
 ---
 
@@ -8,6 +8,7 @@
 
 | 檔案 | 作者 | 日期 | 評分 | 摘要 |
 |------|------|------|------|------|
+| 2026-06-08 | @mvanhorn | WTF Is a Loop? Peter Steinberger vs. Boris Cherny | 9.0/10 | [2026-06-08-@mvanhorn-903149.md](2026-06-08-@mvanhorn-903149.md) |
 | [2026-06-04-@freeman1266-804890.md](2026-06-04-@freeman1266-804890.md) | @freeman1266 | 2026-06-04 | 7.3 | Agent 四層工程每層皆有隱藏帳單，YAGNI 才是實踐準則 |
 | [2026-06-05-@Khazix0918-763796.md](2026-06-05-@Khazix0918-763796.md) | @Khazix0918 | 2026-06-05 | 8.5 | Anthropic 首次公開 AI 驅動開發數據：Claude 撰寫 >80% 代碼，工程師產出 8× |
 
@@ -20,6 +21,7 @@
 
 | 檔案 | 作者 | 日期 | 評分 | 摘要 |
 |------|------|------|------|------|
+| 2026-06-07 | @mvanhorn | Remotion Was My First Agentic Video Love. Then HyperFrames Stole Me. | 8.1/10 | [2026-06-07-@mvanhorn-501832.md](2026-06-07-@mvanhorn-501832.md) |
 
 ## Others
 
