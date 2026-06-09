@@ -1,7 +1,7 @@
 # tweets/INDEX.md
 
-> **Type:** raw:tweet — 193 tweets + 5 daily-digest；Claude Code / AI Engineering 技術 thread 歸檔  
-> **Updated**: 2026-06-09 | **Authors**: 93 | **Files**: 198 .md（193 tweet + 5 digest）  
+> **Type:** raw:tweet — 193 tweets；Claude Code / AI Engineering 技術 thread 歸檔  
+> **Updated**: 2026-06-09 | **Authors**: 93 | **Files**: 193 .md  
 > **Query pattern**: BRAIN.md → 本表（Author / Topic）→ `<date>-@<handle>-<id>.md`  
 > **Frontmatter**: canonical YAML（`url`/`author`/`handle`/`published`/`archived`/`type`/`stats`）；`type` ∈ {tweet, twitter-article, note-tweet, thread, twitter-video, daily-digest}
 
