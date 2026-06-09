@@ -34,7 +34,7 @@
 | `best-practices/` | wiki:compiled | 32 docs | Official + community Claude Code best practices |
 | `papers/` | raw:indexed | 184 papers | Academic LLM/agent papers 2022–2026 (PDF + MD) |
 | `reports/` | wiki:generated | 45 active + 39 archived | autoresearch / overnight-research deep reports（archived 見 `reports/archive/`）|
-| `tweets/` | raw:indexed | 198 files | Twitter/X research archive |
+| `tweets/` | raw:indexed | 193 files | Twitter/X research archive |
 | `videos/` | raw:indexed | 7 transcripts | Podcast / YouTube research summaries |
 | `substack-thestevekoh/` | raw:indexed | 171 articles | Steve Koh 繁中 Substack archive |
 | `prompts/` | schema | 9 files | Research task prompt templates |
