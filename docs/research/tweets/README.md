@@ -1,6 +1,8 @@
 # Tweet Archive Index
 
-> 共 **192 篇** · *最後更新：2026-06-08*
+> 共 **198 篇**（193 tweet + 5 daily-digest）· *最後更新：2026-06-09*
+> 全量 Author / Topic 索引見 [INDEX.md](INDEX.md)；本表為**整合決策分類精選**（依 5 維評分 + 整合方向）。
+> Frontmatter 已統一為 canonical YAML（`url`/`author`/`handle`/`published`/`archived`/`type`/`stats`）。
 
 ---
 

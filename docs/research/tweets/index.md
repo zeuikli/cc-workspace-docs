@@ -1,26 +1,28 @@
 # tweets/INDEX.md
 
-> **Type:** raw:tweet — 186 tweets；Claude Code / AI Engineering 技術 thread 歸檔  
-> **Updated**: 2026-06-04 | **Authors**: 50+ | **Files**: 186 .md  
-> **Query pattern**: BRAIN.md → 本表（Author / Topic）→ `<date>-@<handle>-<id>.md`
+> **Type:** raw:tweet — 193 tweets + 5 daily-digest；Claude Code / AI Engineering 技術 thread 歸檔  
+> **Updated**: 2026-06-09 | **Authors**: 93 | **Files**: 198 .md（193 tweet + 5 digest）  
+> **Query pattern**: BRAIN.md → 本表（Author / Topic）→ `<date>-@<handle>-<id>.md`  
+> **Frontmatter**: canonical YAML（`url`/`author`/`handle`/`published`/`archived`/`type`/`stats`）；`type` ∈ {tweet, twitter-article, note-tweet, thread, twitter-video, daily-digest}
 
 ---
 
-## Author 索引（快速定位）
+## Author 索引（快速定位 · 篇數為實際檔案統計）
 
 | Author | 篇數 | 主要主題 |
 |--------|------|---------|
-| [@trq212](#trq212-thariq) | 22 | Skill 設計·Session 管理·Prompt Caching·工具哲學·Dynamic Workflows |
-| [@Mnilax](#mnilax) | 10 | 12-Rule Canon·Token 優化·CLAUDE.md 分析 |
-| [@zodchiii](#zodchiii) | 10 | CLAUDE.md 框架·Hooks·Opus 4.8 配置 |
-| [@eng_khairallah1](#eng_khairallah1) | 10 | 實戰技巧合集·Prompt 架構·Slash Commands |
+| [@trq212](#trq212-thariq) | 18 | Skill 設計·Session 管理·Prompt Caching·工具哲學·Dynamic Workflows |
+| [@Mnilax](#mnilax) | 9 | 12-Rule Canon·Token 優化·CLAUDE.md 分析 |
+| [@zodchiii](#zodchiii) | 8 | CLAUDE.md 框架·Hooks·Opus 4.8 配置 |
 | [@stephzhan](#stephzhan-sequoia) | 8 | Agentic Engineering·Jaggedness·Software 3.0 |
+| [@eng_khairallah1](#eng_khairallah1) | 8 | 實戰技巧合集·Prompt 架構·Slash Commands |
 | [@bcherny](#bcherny-boris-cherny) | 8 | 官方技巧·Skill·隱藏功能·工作流自動化 |
-| [@karpathy](#karpathy-andrej) | 5 | Context Engineering·Goal-Driven·Agent Economy |
-| [@sairahul1](#sairahul1) | 6 | Token 浪費·AI 工作流·Opus 4.8 |
 | [@0x_kaize](#0x_kaize) | 6 | Skill 生態索引·Repo 精選 |
-| [@Suryanshti777](#suryanshti777) | 5 | 最佳實踐·Opus 4.7·AI 系統架構 |
-| [其他作者](#others)（各 1–4 篇）| 95 | 多主題 |
+| [@karpathy](#karpathy-andrej) | 5 | Context Engineering·Goal-Driven·Agent Economy |
+| [@sairahul1](#sairahul1) | 4 | Token 浪費·AI 工作流·Opus 4.8 |
+| [@berryxia](#others)（各 1–4 篇）| 4 | Skills 2.0·中文解析 |
+| [@Suryanshti777](#others) | 4 | 最佳實踐·Opus 4.7·AI 系統架構 |
+| [其他作者](#others--生態資源)（各 1–3 篇）| 111 | 多主題 |
 
 ---
 
