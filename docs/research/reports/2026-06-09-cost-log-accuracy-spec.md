@@ -76,10 +76,92 @@ cost-log（`evolution/cost-log.jsonl`）記錄跨平台（Desktop / iOS / CLI）
 - 讀 `service_tier` / `inference_geo`（修 #5）
 - 代表 model = 成本佔比最高者（報告分類用），cost 已按各組精算
 
+**核心實作**（`scan_jsonl`，完整見 source）：
+
+```python
+# 各 (model, fast, tier, geo) 組別獨立累加 token，分別計價避免單一定價套全 session
+groups = {}  # key=(model, fast, tier, geo) → token dict
+
+def grp(key):
+    return groups.setdefault(key, {
+        "input": 0, "output": 0, "cache_read": 0, "cache_5m": 0, "cache_1h": 0,
+        "web_search": 0,
+    })
+
+# ── 逐行掃描 assistant message ──
+if rec.get("type") == "assistant":
+    msg = rec.get("message") or {}
+    usage = msg.get("usage") or {}
+    if not usage:
+        continue
+    m = normalize_model_id(msg.get("model") or "unknown")
+    fast = False  # transcript 未帶 fast flag → 預設 False（保守）
+    tier = usage.get("service_tier") or "standard"
+    geo_raw = usage.get("inference_geo") or "global"
+    geo = "us" if geo_raw == "us" else "global"
+    g = grp((m, fast, tier, geo))
+
+    inp = int(usage.get("input_tokens") or 0)
+    out = int(usage.get("output_tokens") or 0)
+    cr  = int(usage.get("cache_read_input_tokens") or 0)
+    # cache write 1h/5m 分離（缺則退化：全當 5m）— 修缺陷 #1
+    cc_obj = usage.get("cache_creation") or {}
+    c5m = int(cc_obj.get("ephemeral_5m_input_tokens") or 0)
+    c1h = int(cc_obj.get("ephemeral_1h_input_tokens") or 0)
+    cc_total = int(usage.get("cache_creation_input_tokens") or 0)
+    if not c5m and not c1h and cc_total:
+        c5m = cc_total  # 無細分 → 保守當 5m
+    ws = int((usage.get("server_tool_use") or {}).get("web_search_requests") or 0)  # 修 #3
+
+    g["input"] += inp; g["output"] += out; g["cache_read"] += cr
+    g["cache_5m"] += c5m; g["cache_1h"] += c1h; g["web_search"] += ws
+
+# ── 各組精算 cost 再加總（修缺陷 #4）──
+total_cost = 0.0
+model_cost = {}
+for (m, fast, tier, geo), g in groups.items():
+    c = estimate_cost(
+        m, input_tokens=g["input"], output_tokens=g["output"],
+        cache_read_tokens=g["cache_read"], cache_5m_tokens=g["cache_5m"],
+        cache_1h_tokens=g["cache_1h"], web_search_requests=g["web_search"],
+        fast_mode=fast, service_tier=tier, inference_geo=geo,
+    )
+    total_cost += c
+    model_cost[m] = model_cost.get(m, 0.0) + c
+rep_model = max(model_cost, key=model_cost.get) if model_cost else "unknown"  # 成本佔比最高
+```
+
+輸出列新增 `web_search_requests` 欄位；`cost_usd` 為各組精算加總（`round(total_cost, 6)`）。
+
 ### 4.3 改 `scripts/usage-report.py`
 
 - `import pricing`（移除重複 PRICING 表）
 - `estimate_cost(row)`：既有 cost_usd 優先；否則用共用模組（舊列無細分→保守當 5m，新列帶 web_search 也納入）
+
+**核心實作**：
+
+```python
+from pricing import estimate_cost as _estimate_cost, normalize_model_id  # 單一定價真相源
+
+def estimate_cost(row: dict) -> float:
+    """列已有 cost_usd 用之；否則用共用 pricing 模組估算。
+
+    舊列只有總 cache_creation_tokens（無 1h/5m 細分）→ 保守全當 5m。
+    新列若帶 web_search_requests 也納入。
+    """
+    if row.get("cost_usd") is not None:
+        return float(row["cost_usd"])
+    return _estimate_cost(
+        row.get("model") or "",
+        input_tokens=int(row.get("input_tokens") or 0),
+        output_tokens=int(row.get("output_tokens") or 0),
+        cache_read_tokens=int(row.get("cache_read_tokens") or 0),
+        cache_5m_tokens=int(row.get("cache_creation_tokens") or 0),  # 舊列無細分 → 5m
+        web_search_requests=int(row.get("web_search_requests") or 0),
+    )
+```
+
+model 聚合用 `normalize_model_id()`（剝除日期後綴）對齊 pricing 表 key；`--json` / `--daily` / 預設三模式皆走此 `estimate_cost`。
 
 ### 4.4 改 `.claude/hooks/pre-push-cost.sh`（缺陷 2）
 
