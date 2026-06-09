@@ -1,3 +1,12 @@
+---
+url: "https://arxiv.org/abs/2305.20050"
+title: "Let's Verify Step by Step"
+archived_date: 2026-06-09
+arxiv_id: 2305.2005
+authors: ["Hunter Lightman", "Vineet Kosaraju", "Yura Burda", "Harri Edwards", "Bowen Baker", "Teddy Lee", "Jan Leike", "John Schulman", "Ilya Sutskever", "Karl Cobbe"]
+published_date: 2023-05-31
+---
+
 # Let's Verify Step by Step
 
 **Authors:** Hunter Lightman, Vineet Kosaraju, Yura Burda, Harri Edwards, Bowen Baker, Teddy Lee, Jan Leike, John Schulman, Ilya Sutskever, Karl Cobbe

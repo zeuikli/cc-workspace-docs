@@ -1,3 +1,11 @@
+---
+url: "https://transformer-circuits.pub/2025/attribution-graphs/methods.html"
+title: "Circuit Tracing: Revealing Computational Graphs in Language Models"
+archived_date: 2026-06-09
+authors: ["Emmanuel Ameisen", "Jack Lindsey", "Adam Pearce", "Wes Gurnee", "Nicholas L. Turner", "Brian Chen", "Craig Citro", "David Abrahams", "Shan Carter", "Basil Hosmer", "Jonathan Marcus", "Michael Sklar", "Adly Templeton", "Trenton Bricken", "Callum McDougall", "Hoagy Cunningham", "Thomas Henighan", "Adam Jermyn", "Andy Jones", "Andrew Persic", "Zhenyi Qi", "T. Ben Thompson", "Sam Zimmerman", "Kelley Rivoire", "Thomas Conerly", "Chris Olah", "Joshua Batson"]
+published_date: 2025-03-27
+---
+
 # Circuit Tracing: Revealing Computational Graphs in Language Models
 
 **Authors:** Emmanuel Ameisen, Jack Lindsey, Adam Pearce, Wes Gurnee, Nicholas L. Turner, Brian Chen, Craig Citro, David Abrahams, Shan Carter, Basil Hosmer, Jonathan Marcus, Michael Sklar, Adly Templeton, Trenton Bricken, Callum McDougall, Hoagy Cunningham, Thomas Henighan, Adam Jermyn, Andy Jones, Andrew Persic, Zhenyi Qi, T. Ben Thompson, Sam Zimmerman, Kelley Rivoire, Thomas Conerly, Chris Olah, Joshua Batson

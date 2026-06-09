@@ -1,8 +1,10 @@
 ---
+url: "https://arxiv.org/abs/2305.10250"
 title: "MemoryBank: Enhancing Large Language Models with Long-Term Memory"
-authors: "Wanjun Zhong, Lianghong Guo, Qiqi Gao, He Ye, Yanlin Wang"
-published: 2023-05-17
-source: "https://arxiv.org/abs/2305.10250"
+archived_date: 2026-06-09
+arxiv_id: 2305.1025
+authors: ["Wanjun Zhong", "Lianghong Guo", "Qiqi Gao", "He Ye", "Yanlin Wang"]
+published_date: 2023-05-17
 venue: AAAI 2024
 ---
 

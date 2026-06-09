@@ -1,8 +1,9 @@
 ---
+url: "https://www.humanlayer.dev/blog/skill-issue-harness-engineering-for-coding-agents"
 title: "Skill Issue: Harness Engineering for Coding Agents"
-authors: Kyle (HumanLayer)
-published: 2026-03-12
-source: "https://www.humanlayer.dev/blog/skill-issue-harness-engineering-for-coding-agents"
+archived_date: 2026-06-09
+authors: ["Kyle (HumanLayer)"]
+published_date: 2026-03-12
 ---
 
 # Skill Issue: Harness Engineering for Coding Agents

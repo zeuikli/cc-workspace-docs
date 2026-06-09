@@ -1,8 +1,10 @@
 ---
+url: "https://arxiv.org/abs/2504.15236"
 title: "Values in the Wild: Discovering and Analyzing Values in Real-World Language Model Interactions"
-authors: "Saffron Huang, Esin Durmus, Miles McCain, Kunal Handa, Alex Tamkin, Jerry Hong, Michael Stern, Arushi Somani, Xiuruo Zhang, Deep Ganguli"
-published: 2025-04-21
-source: "https://arxiv.org/abs/2504.15236"
+archived_date: 2026-06-09
+arxiv_id: 2504.15236
+authors: ["Saffron Huang", "Esin Durmus", "Miles McCain", "Kunal Handa", "Alex Tamkin", "Jerry Hong", "Michael Stern", "Arushi Somani", "Xiuruo Zhang", "Deep Ganguli"]
+published_date: 2025-04-21
 ---
 
 # Values in the Wild: Discovering and Analyzing Values in Real-World Language Model Interactions

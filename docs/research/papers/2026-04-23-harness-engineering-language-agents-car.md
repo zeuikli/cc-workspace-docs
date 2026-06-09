@@ -1,8 +1,9 @@
 ---
+url: "https://www.preprints.org/manuscript/202603.1756.v2"
 title: "Harness Engineering for Language Agents: The Harness Layer as Control, Agency, and Runtime"
-authors: "Chaoyue He, Xin Zhou, Di Wang, Hong Xu, Wei Liu, Chunyan Miao"
-published: 2026-04-23
-source: "https://www.preprints.org/manuscript/202603.1756.v2"
+archived_date: 2026-06-09
+authors: ["Chaoyue He", "Xin Zhou", "Di Wang", "Hong Xu", "Wei Liu", "Chunyan Miao"]
+published_date: 2026-04-23
 ---
 
 # Harness Engineering for Language Agents: The Harness Layer as Control, Agency, and Runtime

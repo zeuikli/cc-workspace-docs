@@ -1,3 +1,12 @@
+---
+url: "https://arxiv.org/abs/2406.07524"
+title: "Simple and Effective Masked Diffusion Language Models"
+archived_date: 2026-06-09
+arxiv_id: 2406.07524
+authors: ["Subham Sekhar Sahoo", "Marianne Arriola", "Yair Schiff", "Aaron Gokaslan", "Edgar Marroquin", "Justin T Chiu", "Alexander Rush", "Volodymyr Kuleshov"]
+published_date: 2024-01-01
+---
+
 # Simple and Effective Masked Diffusion Language Models
 
 **Authors:** Subham Sekhar Sahoo, Marianne Arriola, Yair Schiff, Aaron Gokaslan, Edgar Marroquin, Justin T Chiu, Alexander Rush, Volodymyr Kuleshov

@@ -1,3 +1,15 @@
+---
+url: "https://www.youtube.com/watch?v=4D3hDmGhFhA"
+title: "The AI paradox: More automation, more humans, more work | Dan Shipper"
+author: "Dan Shipper（Every CEO）"
+archived: 2026-05-28
+channel: "Lenny's Podcast"
+duration: "1:34:06"
+published: 2026-05-24
+subtitle_lang: 英文（自動字幕 en-orig）
+type: video
+---
+
 # The AI paradox: More automation, more humans, more work | Dan Shipper
 
 **來源**: https://www.youtube.com/watch?v=4D3hDmGhFhA

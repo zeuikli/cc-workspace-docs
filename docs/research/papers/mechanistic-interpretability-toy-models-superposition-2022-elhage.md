@@ -1,3 +1,12 @@
+---
+url: "https://arxiv.org/abs/2209.10652"
+title: "Toy Models of Superposition"
+archived_date: 2026-06-09
+arxiv_id: 2209.10652
+authors: ["Nelson Elhage", "Tristan Hume", "Catherine Olsson", "Nicholas Schiefer", "Tom Henighan", "Shauna Kravec", "Zac Hatfield-Dodds", "Robert Lasenby", "Dawn Drain", "Carol Chen", "Roger Grosse", "Sam McCandlish", "Jared Kaplan", "Dario Amodei", "Martin Wattenberg", "Christopher Olah"]
+published_date: 2022-01-01
+---
+
 # Toy Models of Superposition
 
 **Authors:** Nelson Elhage, Tristan Hume, Catherine Olsson, Nicholas Schiefer, Tom Henighan, Shauna Kravec, Zac Hatfield-Dodds, Robert Lasenby, Dawn Drain, Carol Chen, Roger Grosse, Sam McCandlish, Jared Kaplan, Dario Amodei, Martin Wattenberg, Christopher Olah

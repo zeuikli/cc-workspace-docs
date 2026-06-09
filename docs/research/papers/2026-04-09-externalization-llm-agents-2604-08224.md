@@ -1,8 +1,10 @@
 ---
+url: "https://arxiv.org/abs/2604.08224"
 title: "Externalization in LLM Agents: A Unified Review of Memory, Skills, Protocols and Harness Engineering"
-authors: "Chenyu Zhou, Huacan Chai, Wenteng Chen, et al. (20 authors)"
-published: 2026-04-09
-source: "https://arxiv.org/abs/2604.08224"
+archived_date: 2026-06-09
+arxiv_id: 2604.08224
+authors: ["Chenyu Zhou", "Huacan Chai", "Wenteng Chen", "et al. (20 authors)"]
+published_date: 2026-04-09
 ---
 
 # Externalization in LLM Agents: A Unified Review of Memory, Skills, Protocols and Harness Engineering

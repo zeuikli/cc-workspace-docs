@@ -1,10 +1,11 @@
 ---
+url: "https://arxiv.org/abs/2601.03868"
 title: "What Matters For Safety Alignment?"
+archived_date: 2026-06-09
 arxiv_id: 2601.03868
-authors: "Xing Li, Hui-Ling Zhen, Lihao Yin, et al."
-published: 2026-01-07
-source: "https://arxiv.org/abs/2601.03868"
-source_tier: P
+authors: ["Xing Li", "Hui-Ling Zhen", "Lihao Yin", "et al."]
+domains: [cs.CL]
+published_date: 2026-01-07
 ---
 
 # What Matters For Safety Alignment?

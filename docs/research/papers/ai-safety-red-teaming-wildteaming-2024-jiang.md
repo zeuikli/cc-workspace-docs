@@ -1,3 +1,12 @@
+---
+url: "https://arxiv.org/abs/2406.18510"
+title: "WildTeaming at Scale: From In-the-Wild Jailbreaks to (Adversarially) Safer Language Models"
+archived_date: 2026-06-09
+arxiv_id: 2406.1851
+authors: ["Liwei Jiang", "Kavel Rao", "Seungju Han", "Allyson Ettinger", "Faeze Brahman", "Sachin Kumar", "Niloofar Mireshghallah", "Ximing Lu", "Maarten Sap", "Yejin Choi", "Nouha Dziri"]
+published_date: 2024-01-01
+---
+
 # WildTeaming at Scale: From In-the-Wild Jailbreaks to (Adversarially) Safer Language Models
 
 **Authors:** Liwei Jiang, Kavel Rao, Seungju Han, Allyson Ettinger, Faeze Brahman, Sachin Kumar, Niloofar Mireshghallah, Ximing Lu, Maarten Sap, Yejin Choi, Nouha Dziri

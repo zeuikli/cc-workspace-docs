@@ -1,8 +1,9 @@
 ---
+url: "https://www.anthropic.com/research/claude-opus-4-7"
 title: "Claude Opus 4.7 System Card"
-authors: Anthropic
-published: 2026-04-16
-source: "https://www.anthropic.com/research/claude-opus-4-7"
+archived_date: 2026-06-09
+authors: [Anthropic]
+published_date: 2026-04-16
 ---
 
 # Claude Opus 4.7 System Card

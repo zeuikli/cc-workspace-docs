@@ -1,3 +1,12 @@
+---
+url: "https://arxiv.org/abs/2304.08485"
+title: "Visual Instruction Tuning"
+archived_date: 2026-06-09
+arxiv_id: 2304.08485
+authors: ["Haotian Liu", "Chunyuan Li", "Qingyang Wu", "Yong Jae Lee"]
+published_date: 2023-01-01
+---
+
 # Visual Instruction Tuning
 
 **Authors:** Haotian Liu, Chunyuan Li, Qingyang Wu, Yong Jae Lee

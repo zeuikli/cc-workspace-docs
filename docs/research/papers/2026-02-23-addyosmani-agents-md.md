@@ -1,7 +1,9 @@
 ---
+url: "https://addyosmani.com/blog/agents-md/"
 title: "Stop Using /init for AGENTS.md"
-published: 2026-02-23
-source_tier: P
+archived_date: 2026-06-09
+authors: ["Addy Osmani"]
+published_date: 2026-02-23
 ---
 
 # Stop Using /init for AGENTS.md

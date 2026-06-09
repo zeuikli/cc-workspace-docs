@@ -1,8 +1,10 @@
 ---
+url: "https://arxiv.org/abs/2504.19413"
 title: "Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory"
-authors: "Prateek Chhikara, Dev Khant, Saket Aryan, Taranjeet Singh, Deshraj Yadav"
-published: 2025-04-28
-source: "https://arxiv.org/abs/2504.19413"
+archived_date: 2026-06-09
+arxiv_id: 2504.19413
+authors: ["Prateek Chhikara", "Dev Khant", "Saket Aryan", "Taranjeet Singh", "Deshraj Yadav"]
+published_date: 2025-04-28
 ---
 
 # Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory

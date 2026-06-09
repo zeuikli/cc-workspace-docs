@@ -1,8 +1,9 @@
 ---
+url: "https://arxiv.org/abs/2512.10398"
 title: "Confucius Code Agent: Scalable Agent Scaffolding for Real-World Codebases"
-authors: "Sherman Wong, Zhenting Qi, Zhaodong Wang, Nathan Hu, Samuel Lin, Jun Ge, Erwin Gao, Wenlin Chen, Yilun Du, Minlan Yu, Ying Zhang"
-published: 2025-12-11
-source: "https://arxiv.org/abs/2512.10398"
+archived_date: 2026-06-09
+authors: ["Sherman Wong", "Zhenting Qi", "Zhaodong Wang", "Nathan Hu", "Samuel Lin", "Jun Ge", "Erwin Gao", "Wenlin Chen", "Yilun Du", "Minlan Yu", "Ying Zhang"]
+published_date: 2025-12-11
 ---
 
 # Confucius Code Agent: Scalable Agent Scaffolding for Real-World Codebases

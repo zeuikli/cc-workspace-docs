@@ -1,3 +1,12 @@
+---
+url: "https://arxiv.org/abs/2310.16834"
+title: "Discrete Diffusion Modeling by Estimating the Ratios of the Data Distribution"
+archived_date: 2026-06-09
+arxiv_id: 2310.16834
+authors: ["Aaron Lou", "Chenlin Meng", "Stefano Ermon"]
+published_date: 2023-01-01
+---
+
 # Discrete Diffusion Modeling by Estimating the Ratios of the Data Distribution
 
 **Authors:** Aaron Lou, Chenlin Meng, Stefano Ermon

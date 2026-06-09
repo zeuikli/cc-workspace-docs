@@ -1,8 +1,10 @@
 ---
-title: "Harness Beats Model Upgrades: 5 Benchmark Analysis — @MindStudio"
+url: "https://www.mindstudio.ai/blog/agent-harnesses-beat-model-upgrades-5-benchmarks"
+title: "Harness Beats Model Upgrades: 5 Benchmark Analysis"
 author: "MindStudio Engineering"
-date: 2026-05-05
-source: "https://www.mindstudio.ai/blog/agent-harnesses-beat-model-upgrades-5-benchmarks"
+archived: 2026-05-10
+handle: "@mindstudio"
+published: 2026-05-05
 type: tweet
 ---
 

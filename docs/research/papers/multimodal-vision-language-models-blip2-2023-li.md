@@ -1,3 +1,12 @@
+---
+url: "https://arxiv.org/abs/2301.12597"
+title: "BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models"
+archived_date: 2026-06-09
+arxiv_id: 2301.12597
+authors: ["Junnan Li", "Dongxu Li", "Silvio Savarese", "Steven Hoi"]
+published_date: 2023-01-01
+---
+
 # BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models
 
 **Authors:** Junnan Li, Dongxu Li, Silvio Savarese, Steven Hoi

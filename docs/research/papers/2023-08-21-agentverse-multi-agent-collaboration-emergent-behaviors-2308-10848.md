@@ -1,3 +1,15 @@
+---
+url: "https://arxiv.org/abs/2308.10848"
+title: "AgentVerse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors"
+archived_date: 2026-06-09
+arxiv_id: 2308.10848
+authors: ["Weize Chen", "Yusheng Su", "Jingwei Zuo", "Cheng Yang", "Chenfei Yuan", "Chi-Min Chan", "Heyang Yu", "Yaxi Lu", "Yi-Hsin Hung", "Chen Qian", "Yujia Qin", "Xin Cong", "Ruobing Xie", "Zhiyuan Liu", "Maosong Sun", "Jie Zhou"]
+domains: [cs.CL, cs.AI, cs.MA]
+published_date: 2023-08-21
+tags: [multi-agent, collaboration, emergent-behavior, simulation, llm]
+venue: ICLR 2024
+---
+
 # AgentVerse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors
 
 **arXiv**: 2308.10848 | **發表**: 2023-08-21 | **PDF**: 2023-08-21-agentverse-multi-agent-collaboration-emergent-behaviors-2308-10848.pdf

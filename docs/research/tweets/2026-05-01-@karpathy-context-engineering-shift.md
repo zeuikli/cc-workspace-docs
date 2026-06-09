@@ -1,8 +1,10 @@
 ---
-title: "Context Engineering: Filling the window with just the right information — @karpathy"
-author: "Andrej Karpathy（@karpathy）"
-date: 2026-05-01
-source: "https://x.com/karpathy/status/1937902205765607626"
+url: "https://x.com/karpathy/status/1937902205765607626"
+title: "Context Engineering: Filling the window with just the right information"
+author: "Andrej Karpathy"
+archived: 2026-05-10
+handle: "@karpathy"
+published: 2026-05-01
 type: tweet
 ---
 

@@ -1,8 +1,9 @@
 ---
+url: "https://arxiv.org/html/2603.05344v1"
 title: "Building AI Coding Agents for the Terminal: Scaffolding, Harness, Context Engineering, and Lessons Learned"
-authors: Nghi D. Q. Bui
-published: 2026-03-05
-source: "https://arxiv.org/html/2603.05344v1"
+archived_date: 2026-06-09
+authors: ["Nghi D. Q. Bui"]
+published_date: 2026-03-05
 ---
 
 # Building AI Coding Agents for the Terminal: Scaffolding, Harness, Context Engineering, and Lessons Learned

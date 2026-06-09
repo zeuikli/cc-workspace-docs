@@ -1,8 +1,10 @@
 ---
-title: "When \"Better\" Prompts Hurt: Evaluation-Driven Iteration for LLM Applications"
-authors: Daniel Commey
-published: "2026-01-29"
-source: "https://arxiv.org/abs/2601.22025"
+url: "https://arxiv.org/abs/2601.22025"
+title: "When \\\\\\\"Better\\\\\\\" Prompts Hurt: Evaluation-Driven Iteration for LLM Applications"
+archived_date: 2026-06-09
+arxiv_id: 2601.22025
+authors: ["Daniel Commey"]
+published_date: 2026-01-29
 ---
 
 # When "Better" Prompts Hurt: Evaluation-Driven Iteration for LLM Applications

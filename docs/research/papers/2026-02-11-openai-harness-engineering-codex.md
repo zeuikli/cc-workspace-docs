@@ -1,7 +1,9 @@
 ---
+url: "https://openai.com/index/harness-engineering/"
 title: "Harness engineering: leveraging Codex in an agent-first world"
-published: 2026-02-11
-source_tier: P
+archived_date: 2026-06-09
+authors: ["Ryan Lopopolo", "Member of the Technical Staff"]
+published_date: 2026-02-11
 ---
 
 # Harness engineering: leveraging Codex in an agent-first world

@@ -1,8 +1,10 @@
 ---
+url: "https://arxiv.org/abs/2604.20938"
 title: "HARBOR: Automated Harness Optimization"
-authors: "Biswa Sengupta, Jinhua Wang"
-published: 2026-04-22
-source: "https://arxiv.org/abs/2604.20938"
+archived_date: 2026-06-09
+arxiv_id: 2604.20938
+authors: ["Biswa Sengupta", "Jinhua Wang"]
+published_date: 2026-04-22
 ---
 
 # HARBOR: Automated Harness Optimization

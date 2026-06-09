@@ -1,3 +1,12 @@
+---
+url: "https://arxiv.org/abs/2501.19393"
+title: "s1: Simple Test-Time Scaling"
+archived_date: 2026-06-09
+arxiv_id: 2501.19393
+authors: ["Niklas Muennighoff", "Zitong Yang", "Weijia Shi", "Xiang Lisa Li", "Li Fei-Fei", "Hannaneh Hajishirzi", "Luke Zettlemoyer", "Percy Liang", "Emmanuel Candès", "Tatsunori Hashimoto"]
+published_date: 2025-01-31
+---
+
 # s1: Simple Test-Time Scaling
 
 **Authors:** Niklas Muennighoff, Zitong Yang, Weijia Shi, Xiang Lisa Li, Li Fei-Fei, Hannaneh Hajishirzi, Luke Zettlemoyer, Percy Liang, Emmanuel Candès, Tatsunori Hashimoto

@@ -1,11 +1,10 @@
 ---
+url: "https://arxiv.org/abs/2604.13630"
 title: "SafeHarness: Lifecycle-Integrated Security Architecture for LLM-based Agent Deployment"
-arxiv_id: "2604.13630"
-authors: "Xixun Lin, Yang Liu, Yancheng Chen, Yongxuan Wu, Yucheng Ning, Yilong Liu, Nan Sun, Shun Zhang, Bin Chong, Chuan Zhou, Yanan Cao"
-fetched: "2026-05-23"
-published: "2026-04-13"
-source: "https://arxiv.org/abs/2604.13630"
-source_tier: P
+archived_date: 2026-05-23
+arxiv_id: 2604.1363
+authors: ["Xixun Lin", "Yang Liu", "Yancheng Chen", "Yongxuan Wu", "Yucheng Ning", "Yilong Liu", "Nan Sun", "Shun Zhang", "Bin Chong", "Chuan Zhou", "Yanan Cao"]
+published_date: 2026-04-13
 ---
 
 # SafeHarness: Lifecycle-Integrated Security Architecture for LLM-based Agent Deployment

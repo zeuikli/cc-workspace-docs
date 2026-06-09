@@ -1,3 +1,15 @@
+---
+url: "https://arxiv.org/abs/2308.00352"
+title: "MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework"
+archived_date: 2026-06-09
+arxiv_id: 2308.00352
+authors: ["Sirui Hong", "Mingchen Zhuge", "Jonathan Chen", "Xiawu Zheng", "Yuheng Cheng", "Ceyao Zhang", "Jinlin Wang", "Zili Wang", "Steven Ka Shing Yau", "Zijuan Lin", "Liyang Zhou", "Chenyu Ran", "Lingfeng Xiao", "Chenglin Wu", "Jürgen Schmidhuber"]
+domains: [cs.AI, cs.MA]
+published_date: 2023-08-01
+tags: [multi-agent, sop, software-development, meta-programming, role-based, llm]
+venue: ICLR 2024
+---
+
 # MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework
 
 **arXiv**: 2308.00352 | **發表**: 2023-08-01 | **PDF**: 2023-08-01-metagpt-multi-agent-collaborative-framework-2308-00352.pdf

@@ -1,8 +1,9 @@
 ---
+url: "https://arxiv.org/abs/2604.06296"
 title: "AgentOpt v0.1 Technical Report: Client-Side Optimization for LLM-Based Agent"
-authors: "Wenyue Hua, Sripad Karne, Qian Xie, Armaan Agrawal, Nikos Pagonas, Kostis Kaffes, Tianyi Peng"
-published: 2026-04-07
-source: "https://arxiv.org/abs/2604.06296"
+archived_date: 2026-06-09
+authors: ["Wenyue Hua", "Sripad Karne", "Qian Xie", "Armaan Agrawal", "Nikos Pagonas", "Kostis Kaffes", "Tianyi Peng"]
+published_date: 2026-04-07
 ---
 
 # AgentOpt v0.1 Technical Report: Client-Side Optimization for LLM-Based Agent

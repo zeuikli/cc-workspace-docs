@@ -1,8 +1,10 @@
 ---
+url: "https://arxiv.org/abs/2509.16941"
 title: "SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?"
-authors: "Xiang Deng, Jeff Da, Edwin Pan, Yannis Yiming He, Charles Ide, Kanak Garg, Niklas Lauffer, Andrew Park, Nitin Pasari, Chetan Rane, Karmini Sampath, Maya Krishnan, Srivatsa Kundurthy, Sean Hendryx, Zifan Wang, Vijay Bharadwaj, Jeff Holm, Raja Aluri, Chen Bo Calvin Zhang, Noah Jacobson, Bing Liu, Brad Kenstler"
-published: 2025-09-21
-source: "https://arxiv.org/abs/2509.16941"
+archived_date: 2026-06-09
+arxiv_id: 2509.16941
+authors: ["Xiang Deng", "Jeff Da", "Edwin Pan", "Yannis Yiming He", "Charles Ide", "Kanak Garg", "Niklas Lauffer", "Andrew Park", "Nitin Pasari", "Chetan Rane", "Karmini Sampath", "Maya Krishnan", "Srivatsa Kundurthy", "Sean Hendryx", "Zifan Wang", "Vijay Bharadwaj", "Jeff Holm", "Raja Aluri", "Chen Bo Calvin Zhang", "Noah Jacobson", "Bing Liu", "Brad Kenstler"]
+published_date: 2025-09-21
 ---
 
 # SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?

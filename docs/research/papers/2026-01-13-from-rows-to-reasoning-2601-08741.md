@@ -1,11 +1,10 @@
 ---
+url: "https://arxiv.org/abs/2601.08741"
 title: "From Rows to Reasoning: A Retrieval-Augmented Multimodal Framework for Spreadsheet Understanding"
+archived_date: 2026-05-26
 arxiv_id: 2601.08741
-authors: "Anmol Gulati, Sahil Sen, Waqar Sarguroh, Kevin Paul"
-fetched: 2026-05-26
-published: 2026-01-13
-source: "https://arxiv.org/abs/2601.08741"
-source_tier: P
+authors: ["Anmol Gulati", "Sahil Sen", "Waqar Sarguroh", "Kevin Paul"]
+published_date: 2026-01-13
 ---
 
 # From Rows to Reasoning: A Retrieval-Augmented Multimodal Framework for Spreadsheet Understanding

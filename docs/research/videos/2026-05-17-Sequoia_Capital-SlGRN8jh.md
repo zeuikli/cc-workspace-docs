@@ -1,10 +1,11 @@
 ---
+url: "https://www.youtube.com/watch?v=SlGRN8jh2RI"
 title: "Boris Cherny: Claude Code 創始人的 Agentic 工作流與軟體未來 — Sequoia Capital"
-date: 2026-05-17
-creator: Sequoia Capital
+archived: 2026-05-17
+channel: Sequoia Capital
 duration: "約 24:35"
-platform: youtube
-source: "https://www.youtube.com/watch?v=SlGRN8jh2RI"
+published: 2026-01-01
+subtitle_lang: 英文 English（自動生成）
 type: video
 ---
 

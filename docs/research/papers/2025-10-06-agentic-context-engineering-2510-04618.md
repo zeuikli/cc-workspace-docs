@@ -1,13 +1,10 @@
 ---
+url: "https://arxiv.org/abs/2510.04618"
 title: "Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models"
-arxiv_id: "2510.04618"
-authors: "Qizheng Zhang, Changran Hu, Shubhangi Upasani, Boyuan Ma, Fenglu Hong, Vamsidhar Kamanuru, Jay Rainton, Chen Wu, Mengmeng Ji, Hanchen Li, Urmish Thakker, James Zou, Kunle Olukotun"
-categories: "cs.LG, cs.AI, cs.CL"
-fetched: "2026-05-28"
-published: "2025-10-06"
-revised: "2026-03-29"
-source: "https://arxiv.org/abs/2510.04618"
-source_tier: P
+archived_date: 2026-05-28
+arxiv_id: 2510.04618
+authors: ["Qizheng Zhang", "Changran Hu", "Shubhangi Upasani", "Boyuan Ma", "Fenglu Hong", "Vamsidhar Kamanuru", "Jay Rainton", "Chen Wu", "Mengmeng Ji", "Hanchen Li", "Urmish Thakker", "James Zou", "Kunle Olukotun"]
+published_date: 2025-10-06
 venue: ICLR 2026
 ---
 

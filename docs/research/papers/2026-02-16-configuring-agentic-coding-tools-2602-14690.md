@@ -1,8 +1,10 @@
 ---
+url: "https://arxiv.org/abs/2602.14690"
 title: "How Developers Configure AI Coding Agents: An Empirical Study of Agentic AI Tool Configuration"
-authors: "John Yang, Carlos E. Jimenez, Swetha Regunathan, Sanmi Koyejo, Ofir Press"
-published: 2026-02-16
-source: "https://arxiv.org/abs/2602.14690"
+archived_date: 2026-06-09
+arxiv_id: 2602.1469
+authors: ["John Yang", "Carlos E. Jimenez", "Swetha Regunathan", "Sanmi Koyejo", "Ofir Press"]
+published_date: 2026-02-16
 ---
 
 # How Developers Configure AI Coding Agents: An Empirical Study of Agentic AI Tool Configuration

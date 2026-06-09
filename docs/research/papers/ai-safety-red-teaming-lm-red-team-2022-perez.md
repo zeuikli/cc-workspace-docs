@@ -1,3 +1,12 @@
+---
+url: "https://arxiv.org/abs/2202.03286"
+title: "Red Teaming Language Models with Language Models"
+archived_date: 2026-06-09
+arxiv_id: 2202.03286
+authors: ["Ethan Perez", "Saffron Huang", "Francis Song", "Trevor Cai", "Roman Ring", "John Aslanides", "Amelia Glaese", "Nat McAleese", "Geoffrey Irving"]
+published_date: 2022-01-01
+---
+
 # Red Teaming Language Models with Language Models
 
 **Authors:** Ethan Perez, Saffron Huang, Francis Song, Trevor Cai, Roman Ring, John Aslanides, Amelia Glaese, Nat McAleese, Geoffrey Irving

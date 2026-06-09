@@ -1,8 +1,10 @@
 ---
+url: "https://arxiv.org/abs/2605.05258"
 title: "PARNESS: A Paper Harness for End-to-End Automated Scientific Research with Dynamic Workflows, Full-Text Indexing, and Cross-Run Knowledge Accumulation"
-authors: "Yuchen Wang, Zhongzhi Luan"
-published: 2026-05-06
-source: "https://arxiv.org/abs/2605.05258"
+archived_date: 2026-06-09
+arxiv_id: 2605.05258
+authors: ["Yuchen Wang", "Zhongzhi Luan"]
+published_date: 2026-05-06
 ---
 
 # PARNESS: A Paper Harness for End-to-End Automated Scientific Research

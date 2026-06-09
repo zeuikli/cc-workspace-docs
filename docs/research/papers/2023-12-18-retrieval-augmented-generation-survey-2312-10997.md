@@ -1,11 +1,10 @@
 ---
+url: "https://arxiv.org/abs/2312.10997"
 title: "Retrieval-Augmented Generation for Large Language Models: A Survey"
+archived_date: 2026-05-26
 arxiv_id: 2312.10997
-authors: "Yunfan Gao, Yun Xiong, Xinyu Gao, Kangxiang Jia, Jinliu Pan, Yuxi Bi, Yi Dai, Jiawei Sun, Meng Wang, Haofen Wang"
-fetched: 2026-05-26
-published: 2023-12-18
-source: "https://arxiv.org/abs/2312.10997"
-source_tier: P
+authors: ["Yunfan Gao", "Yun Xiong", "Xinyu Gao", "Kangxiang Jia", "Jinliu Pan", "Yuxi Bi", "Yi Dai", "Jiawei Sun", "Meng Wang", "Haofen Wang"]
+published_date: 2023-12-18
 ---
 
 # Retrieval-Augmented Generation for Large Language Models: A Survey

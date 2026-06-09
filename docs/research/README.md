@@ -32,7 +32,7 @@
 | `ai-news/` | wiki:auto | 600+ files | Newsletter 90-day rolling archive (16 sources, daily auto-ingest) |
 | `ai-articles/` | raw:indexed | 50 scored | Karpathy×Mnilax scored; `scored/`（50）/ `inbox/low-score/`（20）|
 | `best-practices/` | wiki:compiled | 32 docs | Official + community Claude Code best practices |
-| `papers/` | raw:indexed | 183 papers | Academic LLM/agent papers 2022–2026 (PDF + MD) |
+| `papers/` | raw:indexed | 184 papers | Academic LLM/agent papers 2022–2026 (PDF + MD) |
 | `reports/` | wiki:generated | 45 active + 39 archived | autoresearch / overnight-research deep reports（archived 見 `reports/archive/`）|
 | `tweets/` | raw:indexed | 198 files | Twitter/X research archive |
 | `videos/` | raw:indexed | 7 transcripts | Podcast / YouTube research summaries |

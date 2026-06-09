@@ -22,7 +22,7 @@ type: documentation
 | `ai-articles/` | 220 | scored（50）/ inbox 已清空 / low-score（20）| [→ INDEX.md](ai-articles/INDEX.md) |
 | `tweets/` | 198 | Twitter 重要技術 thread 歸檔 | [→ INDEX.md](tweets/INDEX.md) |
 | `substack-thestevekoh/` | 171 | Steve Koh Substack 全文歸檔 | [→ INDEX.md](substack-thestevekoh/INDEX.md) |
-| `papers/` | 183 | arXiv / 學術論文（PDF + Markdown）| [→ INDEX.md](papers/INDEX.md) |
+| `papers/` | 184 | arXiv / 學術論文（PDF + Markdown）| [→ INDEX.md](papers/INDEX.md) |
 | `agent-harness/` | 80 | Harness 深度研究 + eval + benchmark | [→ INDEX.md](agent-harness/INDEX.md) |
 | `career-wiki/` | 53 | 8 段職涯 × 36 pages（供 zeuik-senior-architect）| [→ INDEX.md](career-wiki/INDEX.md) |
 | `reports/` | 96 | 合成報告 / Gap analysis / Deep research 輸出 | [→ INDEX.md](reports/INDEX.md) |

@@ -1,11 +1,10 @@
 ---
 url: "https://arxiv.org/abs/2210.03629"
 title: "ReAct: Synergizing Reasoning and Acting in Language Models"
-date: 2022-10-06
+archived_date: 2026-06-09
 arxiv_id: 2210.03629
-authors: "Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik Narasimhan, Yuan Cao"
-referenced_by: warmwater.dev
-source: arxiv
+authors: ["Shunyu Yao", "Jeffrey Zhao", "Dian Yu", "Nan Du", "Izhak Shafran", "Karthik Narasimhan", "Yuan Cao"]
+published_date: 2022-10-06
 ---
 
 ## Abstract

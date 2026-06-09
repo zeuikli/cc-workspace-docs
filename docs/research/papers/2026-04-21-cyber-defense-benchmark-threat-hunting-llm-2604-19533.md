@@ -1,8 +1,10 @@
 ---
+url: "https://arxiv.org/abs/2604.19533"
 title: "Cyber Defense Benchmark: Agentic Threat Hunting Evaluation for LLMs in SecOps"
-authors: "Alankrit Chona, Igor Kozlov, Ambuj Kumar"
-published: 2026-04-21
-source: "https://arxiv.org/abs/2604.19533"
+archived_date: 2026-06-09
+arxiv_id: 2604.19533
+authors: ["Alankrit Chona", "Igor Kozlov", "Ambuj Kumar"]
+published_date: 2026-04-21
 ---
 
 # Cyber Defense Benchmark: Agentic Threat Hunting Evaluation for LLMs in SecOps

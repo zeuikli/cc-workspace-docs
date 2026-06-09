@@ -1,8 +1,10 @@
 ---
+url: "https://arxiv.org/abs/2503.04761"
 title: "Which Economic Tasks are Performed with AI? Evidence from Millions of Claude Conversations"
-authors: "Kunal Handa, Alex Tamkin, Miles McCain, Saffron Huang, Esin Durmus, et al."
-published: 2025-03-07
-source: "https://arxiv.org/abs/2503.04761"
+archived_date: 2026-06-09
+arxiv_id: 2503.04761
+authors: ["Kunal Handa", "Alex Tamkin", "Miles McCain", "Saffron Huang", "Esin Durmus", "et al."]
+published_date: 2025-03-07
 ---
 
 # Which Economic Tasks are Performed with AI? Evidence from Millions of Claude Conversations

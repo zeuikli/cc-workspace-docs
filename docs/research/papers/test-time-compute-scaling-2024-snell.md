@@ -1,3 +1,12 @@
+---
+url: "https://arxiv.org/abs/2408.03314"
+title: "Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters"
+archived_date: 2026-06-09
+arxiv_id: 2408.03314
+authors: ["Charlie Snell", "Jaehoon Lee", "Kelvin Xu", "Aviral Kumar"]
+published_date: 2024-08-06
+---
+
 # Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters
 
 **Authors:** Charlie Snell, Jaehoon Lee, Kelvin Xu, Aviral Kumar

@@ -1,3 +1,12 @@
+---
+url: "https://arxiv.org/abs/2402.06782"
+title: "Debating with More Persuasive LLMs Leads to More Truthful Answers"
+archived_date: 2026-06-09
+arxiv_id: 2402.06782
+authors: ["Akbir Khan", "John Hughes", "Dan Valentine", "Laura Ruis", "Kshitij Sachan", "Ansh Radhakrishnan", "Edward Grefenstette", "Samuel R. Bowman", "Tim Rocktäschel", "Ethan Perez"]
+published_date: 2024-01-01
+---
+
 # Debating with More Persuasive LLMs Leads to More Truthful Answers
 
 **Authors:** Akbir Khan, John Hughes, Dan Valentine, Laura Ruis, Kshitij Sachan, Ansh Radhakrishnan, Edward Grefenstette, Samuel R. Bowman, Tim Rocktäschel, Ethan Perez

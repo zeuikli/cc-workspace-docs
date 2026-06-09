@@ -1,3 +1,15 @@
+---
+url: "https://arxiv.org/abs/2503.13657"
+title: "Why Do Multi-Agent LLM Systems Fail?"
+archived_date: 2026-06-09
+arxiv_id: 2503.13657
+authors: ["Mert Cemri", "Melissa Z. Pan", "Shuyi Yang", "Lakshya A. Agrawal", "Bhavya Chopra", "Rishabh Tiwari", "Kurt Keutzer", "Aditya Parameswaran", "Dan Klein", "Kannan Ramchandran", "Matei Zaharia", "Joseph E. Gonzalez", "Ion Stoica"]
+domains: [cs.AI, cs.MA, cs.CL]
+published_date: 2025-03-17
+tags: [multi-agent, failure-taxonomy, mast, benchmark, reliability, llm]
+venue: "NeurIPS 2025 Datasets & Benchmarks"
+---
+
 # Why Do Multi-Agent LLM Systems Fail?
 
 **arXiv**: 2503.13657 | **發表**: 2025-03-17 | **PDF**: 2025-03-17-mast-why-multi-agent-llm-systems-fail-2503-13657.pdf

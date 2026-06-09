@@ -1,11 +1,10 @@
 ---
 url: "https://arxiv.org/abs/2504.07952"
 title: "Dynamic Cheatsheet: Test-Time Learning with Adaptive Memory"
-date: 2025-04-10
+archived_date: 2026-06-09
 arxiv_id: 2504.07952
-authors: "Mirac Suzgun, Mert Yuksekgonul, Federico Bianchi, Dan Jurafsky, James Zou"
-referenced_by: warmwater.dev
-source: arxiv
+authors: ["Mirac Suzgun", "Mert Yuksekgonul", "Federico Bianchi", "Dan Jurafsky", "James Zou"]
+published_date: 2025-04-10
 ---
 
 ## Abstract

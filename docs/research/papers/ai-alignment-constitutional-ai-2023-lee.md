@@ -1,3 +1,12 @@
+---
+url: "https://arxiv.org/abs/2309.00267"
+title: "RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback"
+archived_date: 2026-06-09
+arxiv_id: 2309.00267
+authors: ["Harrison Lee", "Samrat Phatale", "Hassan Mansoor", "Thomas Mesnard", "Johan Ferret", "Kellie Lu", "Colton Bishop", "Ethan Hall", "Victor Carbune", "Abhinav Rastogi", "Sushant Prakash (Google DeepMind)"]
+published_date: 2023-01-01
+---
+
 # RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback
 
 **Authors:** Harrison Lee, Samrat Phatale, Hassan Mansoor, Thomas Mesnard, Johan Ferret, Kellie Lu, Colton Bishop, Ethan Hall, Victor Carbune, Abhinav Rastogi, Sushant Prakash (Google DeepMind)

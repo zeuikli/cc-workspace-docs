@@ -1,3 +1,12 @@
+---
+url: "https://arxiv.org/abs/2410.14157"
+title: "Beyond Autoregression: Discrete Diffusion for Complex Reasoning and Planning"
+archived_date: 2026-06-09
+arxiv_id: 2410.14157
+authors: ["Jiacheng Ye", "Jiahui Gao", "Shansan Gong", "Lin Zheng", "Xin Jiang", "Zhenguo Li", "Lingpeng Kong"]
+published_date: 2024-01-01
+---
+
 # Beyond Autoregression: Discrete Diffusion for Complex Reasoning and Planning
 
 **Authors:** Jiacheng Ye, Jiahui Gao, Shansan Gong, Lin Zheng, Xin Jiang, Zhenguo Li, Lingpeng Kong

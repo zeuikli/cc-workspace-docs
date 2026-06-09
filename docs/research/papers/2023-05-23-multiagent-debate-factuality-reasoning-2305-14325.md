@@ -1,3 +1,14 @@
+---
+url: "https://arxiv.org/abs/2305.14325"
+title: "Improving Factuality and Reasoning in Language Models through Multiagent Debate"
+archived_date: 2026-06-09
+arxiv_id: 2305.14325
+authors: ["Yilun Du", "Shuang Li", "Antonio Torralba", "Joshua B. Tenenbaum", "Igor Mordatch"]
+domains: [cs.CL, cs.AI]
+published_date: 2023-05-23
+tags: [multi-agent, debate, reasoning, factuality, hallucination, llm]
+---
+
 # Improving Factuality and Reasoning in Language Models through Multiagent Debate
 
 **arXiv**: 2305.14325 | **發表**: 2023-05-23 | **PDF**: 2023-05-23-multiagent-debate-factuality-reasoning-2305-14325.pdf

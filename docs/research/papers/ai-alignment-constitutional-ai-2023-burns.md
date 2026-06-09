@@ -1,3 +1,12 @@
+---
+url: "https://arxiv.org/abs/2312.09390"
+title: "Weak-to-Strong Generalization: Eliciting Strong Capabilities With Weak Supervision"
+archived_date: 2026-06-09
+arxiv_id: 2312.0939
+authors: ["Collin Burns", "Pavel Izmailov", "Jan Hendrik Kirchner", "Bowen Baker", "Leo Gao", "Leopold Aschenbrenner", "Yining Chen", "Adrien Ecoffet", "Manas Joglekar", "Jan Leike", "Ilya Sutskever", "Jeff Wu (OpenAI)"]
+published_date: 2023-01-01
+---
+
 # Weak-to-Strong Generalization: Eliciting Strong Capabilities With Weak Supervision
 
 **Authors:** Collin Burns, Pavel Izmailov, Jan Hendrik Kirchner, Bowen Baker, Leo Gao, Leopold Aschenbrenner, Yining Chen, Adrien Ecoffet, Manas Joglekar, Jan Leike, Ilya Sutskever, Jeff Wu (OpenAI)

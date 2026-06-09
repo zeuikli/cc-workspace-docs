@@ -1,10 +1,11 @@
 ---
+url: "https://arxiv.org/abs/2603.10062"
 title: "Multi-Agent Memory from a Computer Architecture Perspective: Visions and Challenges Ahead"
+archived_date: 2026-06-09
 arxiv_id: 2603.10062
-authors: "Zhongming Yu, Naicheng Yu, Hejia Zhang, et al."
-published: 2026-03-09
-source: "https://arxiv.org/abs/2603.10062"
-source_tier: P
+authors: ["Zhongming Yu", "Naicheng Yu", "Hejia Zhang", "et al."]
+domains: [cs.AR, cs.AI, cs.MA]
+published_date: 2026-03-09
 ---
 
 # Multi-Agent Memory from a Computer Architecture Perspective: Visions and Challenges Ahead

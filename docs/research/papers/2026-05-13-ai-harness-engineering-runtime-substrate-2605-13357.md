@@ -1,8 +1,10 @@
 ---
+url: "https://arxiv.org/abs/2605.13357"
 title: "AI Harness Engineering: A Runtime Substrate for Foundation-Model Software Agents"
-authors: "Hailin Zhong, Shengxin Zhu"
-published: 2026-05-13
-source: "https://arxiv.org/abs/2605.13357"
+archived_date: 2026-06-09
+arxiv_id: 2605.13357
+authors: ["Hailin Zhong", "Shengxin Zhu"]
+published_date: 2026-05-13
 ---
 
 # AI Harness Engineering: A Runtime Substrate for Foundation-Model Software Agents

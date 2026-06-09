@@ -1,8 +1,9 @@
 ---
+url: "https://deploymentsafety.openai.com/gpt-5-5"
 title: "GPT-5.5 System Card"
-authors: OpenAI
-published: 2026-04-23
-source: "https://deploymentsafety.openai.com/gpt-5-5"
+archived_date: 2026-06-09
+authors: [OpenAI]
+published_date: 2026-04-23
 ---
 
 # GPT-5.5 System Card

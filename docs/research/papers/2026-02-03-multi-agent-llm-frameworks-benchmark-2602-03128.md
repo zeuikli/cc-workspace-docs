@@ -1,10 +1,11 @@
 ---
+url: "https://arxiv.org/abs/2602.03128"
 title: "Understanding Multi-Agent LLM Frameworks: A Unified Benchmark and Experimental Analysis"
+archived_date: 2026-06-09
 arxiv_id: 2602.03128
-authors: "Abdelghny Orogat, Ana Rostam, Essam Mansour"
-published: 2026-02-03
-source: "https://arxiv.org/abs/2602.03128"
-source_tier: P
+authors: ["Abdelghny Orogat", "Ana Rostam", "Essam Mansour"]
+domains: [cs.AI]
+published_date: 2026-02-03
 ---
 
 # Understanding Multi-Agent LLM Frameworks: A Unified Benchmark and Experimental Analysis

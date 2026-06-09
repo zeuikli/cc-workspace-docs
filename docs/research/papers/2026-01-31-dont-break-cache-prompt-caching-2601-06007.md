@@ -1,8 +1,10 @@
 ---
+url: "https://arxiv.org/abs/2601.06007"
 title: "Don't Break the Cache: Efficient Prompt Caching for Agentic AI"
-authors: "Benedikt Kolbe, Rania Mokhtar, David Müller, Barna Szabó"
-published: 2026-01-31
-source: "https://arxiv.org/abs/2601.06007"
+archived_date: 2026-06-09
+arxiv_id: 2601.06007
+authors: ["Benedikt Kolbe", "Rania Mokhtar", "David Müller", "Barna Szabó"]
+published_date: 2026-01-31
 ---
 
 # Don't Break the Cache: Efficient Prompt Caching for Agentic AI

@@ -1,8 +1,10 @@
 ---
+url: "https://arxiv.org/abs/2605.02396"
 title: "HeavySkill: Heavy Thinking as the Inner Skill in Agentic Harness"
-authors: "Jianing Wang, Linsen Guo, Zhengyu Chen, Qi Guo, Hongyu Zang, Wenjie Shi, Haoxiang Ma, Xiangyu Xi, Xiaoyu Li, Wei Wang, Xunliang Cai"
-published: 2026-05-04
-source: "https://arxiv.org/abs/2605.02396"
+archived_date: 2026-06-09
+arxiv_id: 2605.02396
+authors: ["Jianing Wang", "Linsen Guo", "Zhengyu Chen", "Qi Guo", "Hongyu Zang", "Wenjie Shi", "Haoxiang Ma", "Xiangyu Xi", "Xiaoyu Li", "Wei Wang", "Xunliang Cai"]
+published_date: 2026-05-04
 ---
 
 # HeavySkill: Heavy Thinking as the Inner Skill in Agentic Harness

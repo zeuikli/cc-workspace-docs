@@ -1,3 +1,12 @@
+---
+url: "https://arxiv.org/abs/2307.15043"
+title: "Universal and Transferable Adversarial Attacks on Aligned Language Models"
+archived_date: 2026-06-09
+arxiv_id: 2307.15043
+authors: ["Andy Zou", "Zifan Wang", "Nicholas Carlini", "Milad Nasr", "J. Zico Kolter", "Matt Fredrikson"]
+published_date: 2023-01-01
+---
+
 # Universal and Transferable Adversarial Attacks on Aligned Language Models
 
 **Authors:** Andy Zou, Zifan Wang, Nicholas Carlini, Milad Nasr, J. Zico Kolter, Matt Fredrikson

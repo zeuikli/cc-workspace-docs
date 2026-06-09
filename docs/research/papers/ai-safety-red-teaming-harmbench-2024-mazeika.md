@@ -1,3 +1,12 @@
+---
+url: "https://arxiv.org/abs/2402.04249"
+title: "HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal"
+archived_date: 2026-06-09
+arxiv_id: 2402.04249
+authors: ["Mantas Mazeika", "Long Phan", "Xuwang Yin", "Andy Zou", "Zifan Wang", "Norman Mu", "Elham Sakhaee", "Nathaniel Li", "Steven Basart", "Bo Li", "David Forsyth", "Dan Hendrycks"]
+published_date: 2024-01-01
+---
+
 # HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal
 
 **Authors:** Mantas Mazeika, Long Phan, Xuwang Yin, Andy Zou, Zifan Wang, Norman Mu, Elham Sakhaee, Nathaniel Li, Steven Basart, Bo Li, David Forsyth, Dan Hendrycks

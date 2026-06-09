@@ -1,3 +1,12 @@
+---
+url: "https://arxiv.org/abs/2502.09992"
+title: "Large Language Diffusion Models"
+archived_date: 2026-06-09
+arxiv_id: 2502.09992
+authors: ["Shen Nie", "Fengqi Zhu", "Zebin You", "Xiaolu Zhang", "Jingyang Ou", "Jun Hu", "Jun Zhou", "Yankai Lin", "Ji-Rong Wen", "Chongxuan Li"]
+published_date: 2025-01-01
+---
+
 # Large Language Diffusion Models
 
 **Authors:** Shen Nie, Fengqi Zhu, Zebin You, Xiaolu Zhang, Jingyang Ou, Jun Hu, Jun Zhou, Yankai Lin, Ji-Rong Wen, Chongxuan Li

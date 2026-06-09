@@ -1,11 +1,10 @@
 ---
+url: "https://arxiv.org/abs/2310.08560"
 title: "MemGPT: Towards LLMs as Operating Systems"
-arxiv_id: "2310.08560"
-authors: "Charles Packer, Sarah Wooders, Kevin Lin, Vivian Fang, Shishir G. Patil, Ion Stoica, Joseph E. Gonzalez"
-fetched: "2026-05-26"
-published: "2023-10-12"
-source: "https://arxiv.org/abs/2310.08560"
-source_tier: P
+archived_date: 2026-05-26
+arxiv_id: 2310.0856
+authors: ["Charles Packer", "Sarah Wooders", "Kevin Lin", "Vivian Fang", "Shishir G. Patil", "Ion Stoica", "Joseph E. Gonzalez"]
+published_date: 2023-10-12
 ---
 
 # MemGPT: Towards LLMs as Operating Systems

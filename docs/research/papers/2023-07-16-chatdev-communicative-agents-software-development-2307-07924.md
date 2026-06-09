@@ -1,3 +1,15 @@
+---
+url: "https://arxiv.org/abs/2307.07924"
+title: "ChatDev: Communicative Agents for Software Development"
+archived_date: 2026-06-09
+arxiv_id: 2307.07924
+authors: ["Chen Qian", "Wei Liu", "Hongzhang Liu", "Nuo Chen", "Yufan Dang", "Jiahao Li", "Cheng Yang", "Weize Chen", "Yusheng Su", "Xin Cong", "Juyuan Xu", "Dahai Li", "Zhiyuan Liu", "Maosong Sun"]
+domains: [cs.SE, cs.CL, cs.AI]
+published_date: 2023-07-16
+tags: [multi-agent, software-development, communicative-agents, chat-chain, llm]
+venue: ACL 2024
+---
+
 # ChatDev: Communicative Agents for Software Development
 
 **arXiv**: 2307.07924 | **發表**: 2023-07-16 | **PDF**: 2023-07-16-chatdev-communicative-agents-software-development-2307-07924.pdf

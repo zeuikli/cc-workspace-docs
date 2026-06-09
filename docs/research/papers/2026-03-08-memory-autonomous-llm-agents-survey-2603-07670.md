@@ -1,9 +1,11 @@
 ---
+url: "https://arxiv.org/abs/2603.07670"
 title: "Memory for Autonomous LLM Agents: Mechanisms, Evaluation, and Emerging Frontiers"
+archived_date: 2026-06-09
 arxiv_id: 2603.0767
-published: 2026-03-08
-source: "https://arxiv.org/abs/2603.07670"
-source_tier: P
+authors: ["{'Pengfei Du | **Category**': 'cs.AI'}"]
+domains: [cs.AI]
+published_date: 2026-03-08
 ---
 
 # Memory for Autonomous LLM Agents: Mechanisms, Evaluation, and Emerging Frontiers

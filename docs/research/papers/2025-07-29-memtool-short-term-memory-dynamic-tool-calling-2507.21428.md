@@ -1,11 +1,10 @@
 ---
+url: "https://arxiv.org/abs/2507.21428"
 title: "MemTool: Optimizing Short-Term Memory Management for Dynamic Tool Calling in LLM Agent Multi-Turn Conversations"
+archived_date: 2026-05-26
 arxiv_id: 2507.21428
-authors: "Elias Lumer, Anmol Gulati, Vamse Kumar Subbiah, Pradeep Honaganahalli Basavaraju, James A. Burke"
-fetched: 2026-05-26
-published: 2025-07-29
-source: "https://arxiv.org/abs/2507.21428"
-source_tier: P
+authors: ["Elias Lumer", "Anmol Gulati", "Vamse Kumar Subbiah", "Pradeep Honaganahalli Basavaraju", "James A. Burke"]
+published_date: 2025-07-29
 ---
 
 # MemTool: Optimizing Short-Term Memory Management for Dynamic Tool Calling in LLM Agent Multi-Turn Conversations

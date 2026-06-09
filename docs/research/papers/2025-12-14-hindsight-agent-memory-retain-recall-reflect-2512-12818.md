@@ -1,10 +1,11 @@
 ---
+url: "https://arxiv.org/abs/2512.12818"
 title: "Hindsight is 20/20: Building Agent Memory that Retains, Recalls, and Reflects"
+archived_date: 2026-06-09
 arxiv_id: 2512.12818
-authors: "Chris Latimer, Nicoló Boschi, Andrew Neeser, Chris Bartholomew, Gaurav Srivastava, Xuan Wang, Naren Ramakrishnan"
-published: 2025-12-14
-source: "https://arxiv.org/abs/2512.12818"
-source_tier: P
+authors: ["Chris Latimer", "Nicoló Boschi", "Andrew Neeser", "Chris Bartholomew", "Gaurav Srivastava", "Xuan Wang", "Naren Ramakrishnan"]
+domains: [cs.CL]
+published_date: 2025-12-14
 ---
 
 # Hindsight is 20/20: Building Agent Memory that Retains, Recalls, and Reflects

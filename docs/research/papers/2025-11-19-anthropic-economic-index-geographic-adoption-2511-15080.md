@@ -1,8 +1,10 @@
 ---
+url: "https://arxiv.org/abs/2511.15080"
 title: "Anthropic Economic Index Report: Uneven Geographic and Enterprise AI Adoption"
-authors: "Ruth Appel, Peter McCrory, Alex Tamkin, Miles McCain, Tyler Neylon, Michael Stern"
-published: 2025-11-19
-source: "https://arxiv.org/abs/2511.15080"
+archived_date: 2026-06-09
+arxiv_id: 2511.1508
+authors: ["Ruth Appel", "Peter McCrory", "Alex Tamkin", "Miles McCain", "Tyler Neylon", "Michael Stern"]
+published_date: 2025-11-19
 ---
 
 # Anthropic Economic Index Report: Uneven Geographic and Enterprise AI Adoption

@@ -1,10 +1,12 @@
 ---
+url: "https://www.youtube.com/watch?v=kwSVtQ7dziU"
 title: "Skill Issue: Andrej Karpathy on Code Agents, AutoResearch, and the Loopy Era of AI — No Priors: AI, Machine Learning, Tech, & Startups"
-date: 2026-03-20
-creator: "No Priors: AI, Machine Learning, Tech, & Startups"
+archived: 2026-05-17
+channel: "No Priors: AI, Machine Learning, Tech, & Startups"
 duration: "1:06:31"
-platform: youtube
-source: "https://www.youtube.com/watch?v=kwSVtQ7dziU"
+published: 2026-03-20
+stats: "818,848 views · 15,302 likes"
+subtitle_lang: 英文 (English)（字幕）
 type: video
 ---
 

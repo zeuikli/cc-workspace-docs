@@ -1,3 +1,12 @@
+---
+url: "https://arxiv.org/abs/2212.08073"
+title: "Constitutional AI: Harmlessness from AI Feedback"
+archived_date: 2026-06-09
+arxiv_id: 2212.08073
+authors: ["Yuntao Bai", "Saurav Kadavath", "Sandipan Kundu", "Amanda Askell", "et al. (51 authors", Anthropic)]
+published_date: 2022-01-01
+---
+
 # Constitutional AI: Harmlessness from AI Feedback
 
 **Authors:** Yuntao Bai, Saurav Kadavath, Sandipan Kundu, Amanda Askell, et al. (51 authors, Anthropic)

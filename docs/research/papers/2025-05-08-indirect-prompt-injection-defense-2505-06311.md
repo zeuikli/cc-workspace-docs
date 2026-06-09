@@ -1,8 +1,10 @@
 ---
+url: "https://arxiv.org/abs/2505.06311"
 title: "Defending against Indirect Prompt Injection by Instruction Detection"
-authors: "Tongyu Wen, Chenglong Wang, Xiyuan Yang, Haoyu Tang, Yueqi Xie, Lingjuan Lyu, Zhicheng Dou, Fangzhao Wu"
-published: "2025-05-08"
-source: "https://arxiv.org/abs/2505.06311"
+archived_date: 2026-06-09
+arxiv_id: 2505.06311
+authors: ["Tongyu Wen", "Chenglong Wang", "Xiyuan Yang", "Haoyu Tang", "Yueqi Xie", "Lingjuan Lyu", "Zhicheng Dou", "Fangzhao Wu"]
+published_date: 2025-05-08
 ---
 
 # Defending against Indirect Prompt Injection by Instruction Detection

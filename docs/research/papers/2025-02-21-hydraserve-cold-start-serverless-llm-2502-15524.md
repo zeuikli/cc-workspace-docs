@@ -1,12 +1,10 @@
 ---
 url: "https://arxiv.org/abs/2502.15524"
 title: "HydraServe: Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds"
-date: 2025-09-25
-arxiv: 2502.15524
-authors: "Chiheng Lou, Sheng Qi, Chao Jin, Dapeng Nie, Haoran Yang, Yu Ding, Xuanzhe Liu, Xin Jin (Peking University + Alibaba Group)"
-pdf: 2025-02-21-hydraserve-cold-start-serverless-llm-2502-15524.pdf
-relevance: 間接（serverless GPU 層）— 概念類比 Claude Code session init 並行化 / overlap stages
-topic: cold-start / serverless LLM / startup latency
+archived_date: 2026-06-09
+arxiv_id: 2502.15524
+authors: ["Chiheng Lou", "Sheng Qi", "Chao Jin", "Dapeng Nie", "Haoran Yang", "Yu Ding", "Xuanzhe Liu", "Xin Jin (Peking University + Alibaba Group)"]
+published_date: 2025-09-25
 ---
 
 # HydraServe — Minimizing Cold Start Latency for Serverless LLM Serving

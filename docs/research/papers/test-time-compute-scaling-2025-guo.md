@@ -1,3 +1,12 @@
+---
+url: "https://arxiv.org/abs/2501.12948"
+title: "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning"
+archived_date: 2026-06-09
+arxiv_id: 2501.12948
+authors: ["DeepSeek-AI — Daya Guo", "Dejian Yang", "Haowei Zhang", "et al. (200 co-authors)"]
+published_date: 2025-01-22
+---
+
 # DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning
 
 **Authors:** DeepSeek-AI — Daya Guo, Dejian Yang, Haowei Zhang, et al. (200 co-authors)

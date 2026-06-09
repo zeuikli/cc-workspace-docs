@@ -1,8 +1,10 @@
 ---
+url: "https://arxiv.org/abs/2512.24601"
 title: "Recursive Language Models"
-authors: "Alex L. Zhang, Tim Kraska, Omar Khattab"
-published: 2025-12-31
-source: "https://arxiv.org/abs/2512.24601"
+archived_date: 2026-06-09
+arxiv_id: 2512.24601
+authors: ["Alex L. Zhang", "Tim Kraska", "Omar Khattab"]
+published_date: 2025-12-31
 ---
 
 # Recursive Language Models

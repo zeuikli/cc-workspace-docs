@@ -1,11 +1,10 @@
 ---
+url: "https://arxiv.org/abs/2605.15184"
 title: "Is Grep All You Need? How Agent Harnesses Reshape Agentic Search"
+archived_date: 2026-05-26
 arxiv_id: 2605.15184
-authors: "Sahil Sen, Akhil Kasturi, Elias Lumer, Anmol Gulati, Vamse Kumar Subbiah"
-fetched: 2026-05-26
-published: 2026-05-14
-source: "https://arxiv.org/abs/2605.15184"
-source_tier: P
+authors: ["Sahil Sen", "Akhil Kasturi", "Elias Lumer", "Anmol Gulati", "Vamse Kumar Subbiah"]
+published_date: 2026-05-14
 ---
 
 # Is Grep All You Need? How Agent Harnesses Reshape Agentic Search

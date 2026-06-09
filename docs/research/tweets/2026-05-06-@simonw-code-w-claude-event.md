@@ -1,8 +1,10 @@
 ---
-title: "Anthropic Code w/ Claude 2026 Live Blog — @simonw"
-author: "Simon Willison（@simonw）"
-date: 2026-05-06
-source: "https://simonwillison.net/2026/May/6/code-w-claude-2026/"
+url: "https://simonwillison.net/2026/May/6/code-w-claude-2026/"
+title: "Anthropic Code w/ Claude 2026 Live Blog"
+author: "Simon Willison"
+archived: 2026-05-10
+handle: "@simonw"
+published: 2026-05-06
 type: tweet
 ---
 

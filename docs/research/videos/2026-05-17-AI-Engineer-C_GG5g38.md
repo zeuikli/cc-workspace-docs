@@ -1,10 +1,12 @@
 ---
+url: "https://www.youtube.com/watch?v=C_GG5g38vLU"
 title: "Harnesses in AI: A Deep Dive — Tejas Kumar, IBM"
-date: 2026-05-17
-creator: Tejas Kumar
+author: "Tejas Kumar（IBM AI Developer Advocate）"
+archived: 2026-05-19
+channel: AI Engineer
 duration: "20:26"
-platform: youtube
-source: "https://www.youtube.com/watch?v=C_GG5g38vLU"
+published: 2026-05-17
+subtitle_lang: 英文（自動字幕）
 type: video
 ---
 

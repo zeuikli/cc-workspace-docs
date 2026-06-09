@@ -1,10 +1,12 @@
 ---
+url: "https://www.youtube.com/watch?v=lXUZvyajciY"
 title: "Andrej Karpathy — \"We're summoning ghosts, not building animals\" — Dwarkesh Patel"
-date: 2025-10-17
-creator: Dwarkesh Patel
+archived: 2026-05-17
+channel: Dwarkesh Patel
 duration: "2:26:08"
-platform: youtube
-source: "https://www.youtube.com/watch?v=lXUZvyajciY"
+published: 2025-10-17
+stats: "1,285,062 views · 27,466 likes"
+subtitle_lang: en（手動字幕）
 type: video
 ---
 

@@ -1,3 +1,11 @@
+---
+url: "https://transformer-circuits.pub/2023/monosemantic-features/index.html"
+title: "Towards Monosemanticity: Decomposing Language Models With Dictionary Learning"
+archived_date: 2026-06-09
+authors: ["Trenton Bricken", "Adly Templeton", "Joshua Batson", "Brian Chen", "Adam Jermyn", "Tom Conerly", "Nick Turner", "Cem Anil", "Carson Denison", "Amanda Askell", "Robert Lasenby", "Yifan Wu", "Shauna Kravec", "Nicholas Schiefer", "Tim Maxwell", "Nicholas Joseph", "Zac Hatfield-Dodds", "Alex Tamkin", "Karina Nguyen", "Brayden McLean", "Josiah E Burke", "Tristan Hume", "Shan Carter", "Tom Henighan", "Chris Olah"]
+published_date: 2023-01-01
+---
+
 # Towards Monosemanticity: Decomposing Language Models With Dictionary Learning
 
 **Authors:** Trenton Bricken, Adly Templeton, Joshua Batson, Brian Chen, Adam Jermyn, Tom Conerly, Nick Turner, Cem Anil, Carson Denison, Amanda Askell, Robert Lasenby, Yifan Wu, Shauna Kravec, Nicholas Schiefer, Tim Maxwell, Nicholas Joseph, Zac Hatfield-Dodds, Alex Tamkin, Karina Nguyen, Brayden McLean, Josiah E Burke, Tristan Hume, Shan Carter, Tom Henighan, Chris Olah

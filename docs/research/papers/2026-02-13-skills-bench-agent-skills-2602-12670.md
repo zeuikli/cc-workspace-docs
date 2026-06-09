@@ -1,8 +1,10 @@
 ---
+url: "https://arxiv.org/abs/2602.12670"
 title: "SkillsBench: Benchmarking How Well Agent Skills Work Across Diverse Tasks"
-authors: "Samuel Schmidgall, Michael Moor, Hamed Nilforoshan, Jure Leskovec"
-published: 2026-02-13
-source: "https://arxiv.org/abs/2602.12670"
+archived_date: 2026-06-09
+arxiv_id: 2602.1267
+authors: ["Samuel Schmidgall", "Michael Moor", "Hamed Nilforoshan", "Jure Leskovec"]
+published_date: 2026-02-13
 ---
 
 # SkillsBench: Benchmarking How Well Agent Skills Work Across Diverse Tasks

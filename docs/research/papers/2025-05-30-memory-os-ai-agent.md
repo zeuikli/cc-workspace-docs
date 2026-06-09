@@ -1,8 +1,9 @@
 ---
+url: "https://arxiv.org/abs/2506.06326"
 title: "Memory OS of AI Agent"
-authors: "Jiazheng Kang, Mingming Ji, Zhe Zhao, Ting Bai"
-published: 2025-05-30
-source: "https://arxiv.org/abs/2506.06326"
+archived_date: 2026-06-09
+authors: ["Jiazheng Kang", "Mingming Ji", "Zhe Zhao", "Ting Bai"]
+published_date: 2025-05-30
 ---
 
 # Memory OS of AI Agent

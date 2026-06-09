@@ -1,3 +1,14 @@
+---
+url: "https://arxiv.org/abs/2308.08155"
+title: "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation"
+archived_date: 2026-06-09
+arxiv_id: 2308.08155
+authors: ["Qingyun Wu", "Gagan Bansal", "Jieyu Zhang", "Yiran Wu", "Beibin Li", "Erkang Zhu", "Li Jiang", "Xiaoyun Zhang", "Shaokun Zhang", "Jiale Liu", "Ahmed Hassan Awadallah", "Ryen W. White", "Doug Burger", "Chi Wang"]
+domains: [cs.AI, cs.CL]
+published_date: 2023-08-16
+tags: [multi-agent, conversation-framework, conversable-agent, microsoft, llm]
+---
+
 # AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation
 
 **arXiv**: 2308.08155 | **發表**: 2023-08-16 | **PDF**: 2023-08-16-autogen-multi-agent-conversation-framework-2308-08155.pdf

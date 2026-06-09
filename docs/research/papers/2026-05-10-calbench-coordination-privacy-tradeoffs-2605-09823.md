@@ -1,10 +1,11 @@
 ---
+url: "https://arxiv.org/abs/2605.09823"
 title: "CalBench: Evaluating Coordination-Privacy Trade-offs in Multi-Agent LLMs"
+archived_date: 2026-06-09
 arxiv_id: 2605.09823
-authors: "Chelsea Zou, Yiheng Yao, Selena She, Robert D. Hawkins"
-published: 2026-05-10
-source: "https://arxiv.org/abs/2605.09823"
-source_tier: P
+authors: ["Chelsea Zou", "Yiheng Yao", "Selena She", "Robert D. Hawkins"]
+domains: [cs.MA]
+published_date: 2026-05-10
 ---
 
 # CalBench: Evaluating Coordination-Privacy Trade-offs in Multi-Agent LLMs

@@ -1,12 +1,10 @@
 ---
 url: "https://arxiv.org/abs/2512.16066"
 title: "Cold-Start Anti-Patterns and Refactorings in Serverless Systems: An Empirical Study"
-date: 2025-12-18
-arxiv: 2512.16066
-authors: "Syed Salauddin Mohammad Tariq, Foyzul Hassan, Amiangshu Bosu, Probir Roy (University of Michigan–Dearborn, Wayne State)"
-pdf: 2025-12-19-cold-start-antipatterns-serverless-2512-16066.pdf
-relevance: 間接但概念強相關 — 把 cold-start 當 developer-visible 設計問題（非黑盒），直接對應 hook spawn 反模式
-topic: cold-start anti-patterns / developer-visible design problem
+archived_date: 2026-06-09
+arxiv_id: 2512.16066
+authors: ["Syed Salauddin Mohammad Tariq", "Foyzul Hassan", "Amiangshu Bosu", "Probir Roy (University of Michigan–Dearborn", "Wayne State)"]
+published_date: 2025-12-18
 venue: "IEEE SANER 2026 (accepted, preprint)"
 ---
 

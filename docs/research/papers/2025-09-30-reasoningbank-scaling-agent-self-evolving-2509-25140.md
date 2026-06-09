@@ -1,11 +1,10 @@
 ---
 url: "https://arxiv.org/abs/2509.25140"
 title: "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory"
-date: 2025-09-29
+archived_date: 2026-06-09
 arxiv_id: 2509.2514
-authors: "Siru Ouyang, Jun Yan, I-Hung Hsu, Yanfei Chen, Ke Jiang"
-referenced_by: warmwater.dev
-source: arxiv
+authors: ["Siru Ouyang", "Jun Yan", "I-Hung Hsu", "Yanfei Chen", "Ke Jiang"]
+published_date: 2025-09-29
 ---
 
 ## Abstract

@@ -1,8 +1,10 @@
 ---
+url: "https://arxiv.org/abs/2504.15965"
 title: "From Human Memory to AI Memory: A Survey on Memory Mechanisms in the Era of LLMs"
-authors: "Yaxiong Wu, Sheng Liang, Chen Zhang, Yichao Wang, Yongyue Zhang, Huifeng Guo, Ruiming Tang, Yong Liu"
-published: 2025-04-22
-source: "https://arxiv.org/abs/2504.15965"
+archived_date: 2026-06-09
+arxiv_id: 2504.15965
+authors: ["Yaxiong Wu", "Sheng Liang", "Chen Zhang", "Yichao Wang", "Yongyue Zhang", "Huifeng Guo", "Ruiming Tang", "Yong Liu"]
+published_date: 2025-04-22
 ---
 
 # From Human Memory to AI Memory: A Survey on Memory Mechanisms in the Era of LLMs

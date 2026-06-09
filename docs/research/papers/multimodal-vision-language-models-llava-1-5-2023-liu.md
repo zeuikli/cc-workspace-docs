@@ -1,3 +1,12 @@
+---
+url: "https://arxiv.org/abs/2310.03744"
+title: "Improved Baselines with Visual Instruction Tuning"
+archived_date: 2026-06-09
+arxiv_id: 2310.03744
+authors: ["Haotian Liu", "Chunyuan Li", "Yuheng Li", "Yong Jae Lee"]
+published_date: 2023-01-01
+---
+
 # Improved Baselines with Visual Instruction Tuning
 
 **Authors:** Haotian Liu, Chunyuan Li, Yuheng Li, Yong Jae Lee
