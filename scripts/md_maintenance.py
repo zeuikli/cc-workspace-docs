@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 """
-md_maintenance.py — Markdown 維護工具（frontmatter 補齊 + HTML tag 修正）
+md_maintenance.py — Markdown 維護工具（frontmatter 補齊 + HTML tag 修正 + 站內連結修正）
 
 用法：
-  python scripts/md_maintenance.py [--dry] [--frontmatter-only] [--html-only]
+  python scripts/md_maintenance.py [--dry] [--frontmatter-only|--html-only|--links-only]
 
 選項：
   --dry              只印出將會變更的檔案，不實際寫入
   --frontmatter-only 只執行 YAML frontmatter 補齊
   --html-only        只執行非標準 HTML tag 轉義修正
-  （預設同時執行兩項）
+  --links-only       只執行站內 404 連結修正
+  （預設三項全跑；每次 sync 後應重跑，見 run_link_fix 說明）
 """
 
 import os
@@ -456,6 +457,143 @@ def run_html_fix(dry_run=False):
 
 
 # ===========================================================================
+# ③ 站內連結修正（原 docs site 404 修補）
+# ===========================================================================
+#
+# docs/research/ 是 cc-workspace/research/ 的鏡像，人工修正會被下次 sync 覆蓋，
+# 因此連結修正必須是「可重複執行的機械規則」，在每次 sync 後 / build 前重跑。
+
+# Claude Code 官方文件在原文中是站內相對連結（/en/<slug>），到本站會變成 404
+CLAUDE_DOCS_SLUGS = {
+    'memory', 'skills', 'settings', 'sub-agents', 'hooks-guide', 'mcp', 'plugins',
+    'common-workflows', 'features-overview', 'how-claude-code-works', 'best-practices',
+    'routines', 'desktop-scheduled-tasks', 'github-actions', 'scheduled-tasks',
+    'debug-your-config',
+}
+CLAUDE_DOCS_BASE = 'https://code.claude.com/docs/en/'
+
+# 私有 workspace 的本機絕對路徑
+LOCAL_ABS_PREFIX = '/home/user/cc-workspace/research/'
+
+# papers/pdfs/ 不同步進 docs（體積），改指 arXiv
+ARXIV_ID_RE = re.compile(r'^pdfs/(\d{4}\.\d{4,5}(?:v\d+)?)\.pdf$')
+
+MD_LINK_RE = re.compile(r'(?<!\!)\[([^\]\n]*)\]\(([^)\s]+)\)')
+
+
+def _target_exists(md_path, href):
+    """href 是否能在 docs/ 內找到對應檔案（比照 VitePress 解析規則）。"""
+    base = href.split('#')[0].split('?')[0]
+    if not base:
+        return True
+    if base.startswith('/'):
+        root = DOCS_DIR / base.lstrip('/')
+    else:
+        root = (md_path.parent / base).resolve()
+    if root.suffix == '.md':
+        return root.exists()
+    cands = [root, root.with_suffix('.md'), root / 'index.md']
+    if base.endswith('/'):
+        cands = [root / 'index.md']
+    return any(c.exists() for c in cands)
+
+
+def fix_links_file(path, dry_run=False, report=None):
+    """回傳 True 表示檔案有變更。report 收集無法自動修復的連結。"""
+    content = path.read_text(encoding='utf-8', errors='replace')
+    lines = content.split('\n')
+    out = []
+    in_fence = False
+    changed = False
+
+    for line in lines:
+        if re.match(r'^(`{3,}|~{3,})', line):
+            in_fence = not in_fence
+            out.append(line)
+            continue
+        if in_fence:
+            out.append(line)
+            continue
+
+        def repl(m):
+            nonlocal changed
+            text, href = m.group(1), m.group(2)
+
+            if href.startswith(('http', 'mailto:', '#', 'data:')):
+                return m.group(0)
+
+            # a) Claude Code 官方文件相對連結 → 絕對網址
+            if href.startswith('/en/'):
+                slug = href[4:].split('#')[0]
+                if slug in CLAUDE_DOCS_SLUGS:
+                    changed = True
+                    frag = href[4 + len(slug):]
+                    return f'[{text}]({CLAUDE_DOCS_BASE}{slug}{frag})'
+
+            # b) 私有 workspace 本機絕對路徑 → docs 內相對路徑
+            if href.startswith(LOCAL_ABS_PREFIX):
+                rel = href[len(LOCAL_ABS_PREFIX):]
+                cand = (DOCS_DIR / 'research' / rel)
+                if cand.exists():
+                    new = os.path.relpath(cand.with_suffix(''), path.parent)
+                    changed = True
+                    return f'[{text}]({new})'
+
+            # c) papers/pdfs/<arxiv-id>.pdf → arXiv（PDF 不同步進 docs）
+            am = ARXIV_ID_RE.match(href)
+            if am:
+                changed = True
+                return f'[{text}](https://arxiv.org/abs/{am.group(1)})'
+
+            if _target_exists(path, href):
+                return m.group(0)
+
+            # d) 相對連結多了 research/ 前綴（WEEKLY-REPORT 類，以 repo root 視角寫成）
+            for prefix in ('./research/', 'research/'):
+                if href.startswith(prefix):
+                    stripped = './' + href[len(prefix):]
+                    if _target_exists(path, stripped):
+                        changed = True
+                        return f'[{text}]({stripped})'
+
+            # e) 目標不存在（指向未同步到本站的私有檔案）→ 去連結，保留文字
+            changed = True
+            if report is not None:
+                report.append((str(path.relative_to(DOCS_DIR)), href))
+            return f'`{text}`'
+
+        out.append(MD_LINK_RE.sub(repl, line))
+
+    if changed and not dry_run:
+        path.write_text('\n'.join(out), encoding='utf-8')
+    return changed
+
+
+def run_link_fix(dry_run=False):
+    """修正同步進來的內容中會 404 的站內連結。"""
+    changed = total = 0
+    report = []
+    for md in sorted(DOCS_DIR.rglob('*.md')):
+        if 'node_modules' in md.parts:
+            continue
+        total += 1
+        if fix_links_file(md, dry_run=dry_run, report=report):
+            changed += 1
+            mode = '[DRY-LINK]' if dry_run else '[LINK]'
+            print(f'{mode} {md.relative_to(DOCS_DIR)}')
+
+    if report:
+        print(f'\n去連結（目標未同步到本站）共 {len(report)} 處：')
+        for src, href in report[:20]:
+            print(f'  {src}  →  {href}')
+        if len(report) > 20:
+            print(f'  …另有 {len(report) - 20} 處')
+
+    mode = 'DRY RUN' if dry_run else 'DONE'
+    print(f'\nLink-fix {mode}: {changed}/{total} 檔案修正')
+
+
+# ===========================================================================
 # Entry point
 # ===========================================================================
 
@@ -464,19 +602,25 @@ def main():
     dry = '--dry' in args
     fm_only = '--frontmatter-only' in args
     html_only = '--html-only' in args
+    links_only = '--links-only' in args
 
-    if fm_only and html_only:
-        print('錯誤：--frontmatter-only 與 --html-only 不能同時使用', file=sys.stderr)
+    if sum([fm_only, html_only, links_only]) > 1:
+        print('錯誤：--frontmatter-only / --html-only / --links-only 只能擇一',
+              file=sys.stderr)
         sys.exit(1)
 
-    run_fm = not html_only
-    run_html = not fm_only
+    only = fm_only or html_only or links_only
+    run_fm = fm_only or not only
+    run_html = html_only or not only
+    run_links = links_only or not only
 
     errors = []
     if run_fm:
         errors += run_frontmatter(dry_run=dry)
     if run_html:
         run_html_fix(dry_run=dry)
+    if run_links:
+        run_link_fix(dry_run=dry)
 
     sys.exit(1 if errors else 0)
 
