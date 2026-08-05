@@ -38,8 +38,11 @@ jobs:
       - name: Build with VitePress
         run: npm run docs:build
 
+      # 只回報、不擋部署：連結失效多半來自 sync 進來的內容，
+      # 讓它擋掉部署會使整站停更，代價高於失效連結本身。
       - name: Check links
         run: python3 scripts/check_links.py
+        continue-on-error: true
 
       - name: Deploy to gh-pages branch
         env:
