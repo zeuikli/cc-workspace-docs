@@ -407,4 +407,4 @@ A：
 - [Project 02：設計你的 Harness](/projects/project-02-harness-design/) — 實作安全 hooks
 - [官方文件：Claude Code Sandboxing](https://code.claude.com/docs/en/sandboxing)
 - [官方文件：Claude Code Permissions](https://code.claude.com/docs/en/permissions)
-- [Anthropic: Securely Deploying AI Agents](https://www.anthropic.com/engineering/secure-deployment)
+- [Anthropic: Securely Deploying AI Agents](https://code.claude.com/docs/en/agent-sdk/secure-deployment)

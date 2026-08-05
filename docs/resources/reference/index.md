@@ -16,7 +16,7 @@
 |------|---------|
 | [LangChain: Improving Deep Agents with harness engineering](https://www.langchain.com/blog/improving-deep-agents-with-harness-engineering) | 只改 harness（system prompt、tools、middleware、tracing、self-verification），讓 coding agent 從 Top 30 進到 Top 5 |
 | [Thoughtworks / Martin Fowler: Harness engineering for coding agent users](https://martinfowler.com/articles/harness-engineering.html) | 把 harness 拆成 feedforward guides 和 feedback sensors；deterministic vs inferential controls |
-| [HumanLayer: Skill Issue — Harness Engineering for Coding Agents](https://humanlayer.dev/articles/harness-engineering-for-coding-agents/) | CLAUDE.md + hooks 的具體實踐；Ratchet 原則 |
+| [HumanLayer: Skill Issue — Harness Engineering for Coding Agents](https://www.humanlayer.dev/blog/skill-issue-harness-engineering-for-coding-agents) | CLAUDE.md + hooks 的具體實踐；Ratchet 原則 |
 | [Cursor: Continually improving our agent harness](https://cursor.com/blog/continually-improving-agent-harness) | 把 harness 當成持續迭代的產品系統；離線評估 + 線上指標 |
 
 ## Context 管理
@@ -24,7 +24,7 @@
 | 文章 | 核心貢獻 |
 |------|---------|
 | [LangChain: Context Management for Deep Agents](https://www.langchain.com/blog/context-management-for-deepagents) | filesystem offloading、tool-call truncation、summarization、targeted evals |
-| [Chroma: Context Rot Research](https://www.trychroma.com/blog/context-rot) | 18 個模型的量化衰退數據；NIAH benchmark；1M context window 的虛假安全感 |
+| [Chroma: Context Rot Research](https://www.trychroma.com/research/context-rot) | 18 個模型的量化衰退數據；NIAH benchmark；1M context window 的虛假安全感 |
 
 ## Agent Loop 機制
 
@@ -62,7 +62,7 @@ Andrej Karpathy 的 CLAUDE.md（Skills file）對 AI 輔助開發的影響深遠
 | 文章 | 核心貢獻 |
 |------|---------|
 | [Agentpedia: Karpathy's CLAUDE.md Skills File — The Complete Guide](https://agentpedia.io/karpathy-skills-file-complete-guide) | 完整分析 Karpathy 的四條核心規則 |
-| [Andrej Karpathy: LLM Wiki — A Knowledge Management Pattern](https://gist.github.com/karpathy/2c4ece47fbd90eb066b8e0d756f7cd00) | LLM wiki 的 knowledge management 模式 |
+| [Andrej Karpathy: LLM Wiki — A Knowledge Management Pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) | LLM wiki 的 knowledge management 模式 |
 
 **Karpathy 的四條核心原則**：
 1. **不讓 AI 刪程式碼**：除非有明確理由，否則刪除是破壞性的

@@ -202,5 +202,5 @@ fi
 
 - [Hooks 設計模式](/resources/best-practices/hooks)
 - [Model-Harness Fit](/resources/research/model-harness-fit)
-- [Harness Engineering 研究全景](/resources/research/harness-engineering/)
+- [Harness Engineering 研究全景](/resources/research/harness-engineering)
 - [Lecture 04：Harness 三層架構](/lectures/lecture-04-harness-architecture/)

@@ -166,6 +166,6 @@
 
 ## 延伸閱讀
 
-- [跨源知識地圖](/resources/research/knowledge-map/)
+- [跨源知識地圖](/resources/research/knowledge-map)
 - [延伸閱讀與參考資料](/resources/reference/)
 - [Lecture 01：Claude Code 與 Harness 基礎](/lectures/lecture-01-foundations/)

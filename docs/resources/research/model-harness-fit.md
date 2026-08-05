@@ -158,7 +158,7 @@ Claude Code 的品質回歸不是模型退化，而是三項 harness 改動的�
 
 ## 延伸閱讀
 
-- [Harness Engineering 研究全景](/resources/research/harness-engineering/)
-- [跨源知識地圖](/resources/research/knowledge-map/)
+- [Harness Engineering 研究全景](/resources/research/harness-engineering)
+- [跨源知識地圖](/resources/research/knowledge-map)
 - [Lecture 01：Claude Code 與 Harness 基礎](/lectures/lecture-01-foundations/)
 - [Lecture 04：Harness 三層架構](/lectures/lecture-04-harness-architecture/)

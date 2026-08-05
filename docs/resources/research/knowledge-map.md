@@ -214,6 +214,6 @@
 
 ## 延伸閱讀
 
-- [Harness Engineering 研究全景](/resources/research/harness-engineering/)
+- [Harness Engineering 研究全景](/resources/research/harness-engineering)
 - [延伸閱讀與參考資料](/resources/reference/)
 - [Lecture 04：Harness 三層架構](/lectures/lecture-04-harness-architecture/)

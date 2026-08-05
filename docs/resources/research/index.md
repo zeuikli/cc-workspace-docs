@@ -6,8 +6,8 @@
 
 | 主題 | 說明 |
 |------|------|
-| [Harness Engineering 研究全景](/resources/research/harness-engineering/) | 13 篇核心論文摘要、工業案例量化數據、跨來源共識點整理 |
-| [跨源知識地圖](/resources/research/knowledge-map/) | 16 個主題的覆蓋度評估、5 大跨來源共識、分歧點分析、未解問題 |
+| [Harness Engineering 研究全景](/resources/research/harness-engineering) | 13 篇核心論文摘要、工業案例量化數據、跨來源共識點整理 |
+| [跨源知識地圖](/resources/research/knowledge-map) | 16 個主題的覆蓋度評估、5 大跨來源共識、分歧點分析、未解問題 |
 
 ## 核心數字
 
