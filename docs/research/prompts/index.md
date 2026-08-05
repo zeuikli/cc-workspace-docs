@@ -15,7 +15,7 @@
 | [ai-business-finops-prompt.md](ai-business-finops-prompt.md) | AI 產品經濟學 + 物理 AI 研究 | `finops` · `research-hub` |
 | [ai-frontier-models-prompt.md](ai-frontier-models-prompt.md) | 前沿模型競逐 + 開源生態研究 | `overnight-research` |
 | [ai-safety-geopolitics-prompt.md](ai-safety-geopolitics-prompt.md) | AI 地緣政治 + 對齊安全研究 | `research-hub:deep` |
-| [optimize-auto-load-tokens.md](optimize-auto-load-tokens.md) | Auto-load token 優化可執行 prompt | `harness-meta:token` |
+| `optimize-auto-load-tokens.md` | Auto-load token 優化可執行 prompt | `harness-meta:token` |
 | [rule-engineering-prompt.md](rule-engineering-prompt.md) | CLAUDE.md 規則工程與 Hook 設計 | `harness-meta:audit` · `autoload-evolution` |
 | [skill-design-prompt.md](skill-design-prompt.md) | Claude Code SKILL 設計最佳實踐 | `skill-evolution` · `harness-meta:add` |
 | [strategic-insights-prompt.md](strategic-insights-prompt.md) | 策略洞察：Karpathy × Mnilax × bcherny | `autoresearch:reason` |

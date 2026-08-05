@@ -3,6 +3,9 @@ url: "https://arxiv.org/abs/2604.18071"
 title: "Architectural Design Decisions in AI Agent Harnesses"
 archived_date: 2026-06-09
 authors: ["Hu Wei"]
+content_quality: full-text-archive
+domain: Harness Engineering
+pdf_path: pdfs/2604.18071.pdf
 published_date: 2026-04-20
 ---
 
@@ -1035,3 +1038,31 @@ The project list was frozen on 23 March 2026 to provide a stable cross-sectional
 ### C.6 Why This Is Not PRISMA
 
 The present study is an empirical analysis of a rapidly changing implementation ecosystem rather than a formal systematic literature review. For that reason, the protocol privileges cross-project architectural coverage, repeatable screening logic, and auditable project records over exhaustive reconstruction of every possible eligible repository. The tradeoff is explicit: the study aims to characterize recurrent architectural structure in a broad corpus, not to claim a complete census of all Agent frameworks ever released.
+
+
+---
+
+## 與 Harness 的關聯
+
+> 2026-08-02 深讀 PDF 原檔（45 頁）後補寫；本檔正文為全文存檔，本節為對齊 v5.1 的分析。
+
+本篇是 corpus 中**唯一以 70 個真實開源 agent 專案為樣本**的架構決策實證研究（語料凍結於 2026-03-23，錨點含 Claude Code CLI、OpenHands、CrewAI、LangChain、AutoGPT 等），因此是評估 v5.1 裁決「是否偏離生態常態」的最佳外部基準。
+
+**① 對 v5.1 最強的支持證據：`intermediate isolation is common but high-assurance audit is rare`。**
+在 70 個專案中，中度隔離是主流，而高保證稽核**罕見**。v5.1 最大的結構性刪除正是「管理 harness 的 harness」——enforcement-manifest、clause-body-map、`[E*]` 缺口清單、hook liveness 稽核。本文顯示：真實生態幾乎沒有人建這一層。這把 v5.1 的裁決從「單人 workspace 的主觀取捨」提升為「與生態常態一致」，是該決策目前最有力的外部背書。
+
+**② 五個反覆出現的設計維度**，可直接當作 workspace 架構自檢的座標系：
+
+| 論文維度 | 本 workspace v5.1 現況 |
+|---|---|
+| Subagent architecture | 10 個 agent + `core.md §PROPOSE` 委派紀律（fan-out 上限等細則已於 v5.1 刪除） |
+| Context management | `context-management.md` + compact hooks；屬論文所稱 **file-persistent + hybrid** 主流策略 |
+| Tool systems | **registry-oriented**（`.claude/skills/RESOLVER.md`）＋ MCP 擴充——正是論文指出的主流 + 新興組合 |
+| Safety mechanisms | 13 支 hook，核心為 `block-dangerous` / `test-integrity-guard` |
+| Orchestration | `multi-mode-skill` / `fusion` / Workflow |
+
+五維全部有對應構件，無空缺——這本身是一個值得記錄的稽核結果。
+
+**③ ⚠️ 共現分析指出的一條與 v5.1 反向的規律**：`stronger execution environments pair with more structured governance`（執行環境越強，治理越結構化）。本 workspace 的執行環境相當強（Bash、Edit/Write、遠端容器、可 push 的 git、MCP 外連），但 v5.1 主動**降低**了治理結構化程度。本文的共現規律不是因果宣稱，卻指出 workspace 目前落在「強執行環境 × 低結構化治理」這個在 70 專案語料中相對稀疏的象限——與 §① 的支持證據構成一組必須並讀的張力，不宜只引用其中一邊。
+
+⚠️ 方法論限制（作者自陳）：本研究非 PRISMA 系統性回顧，語料為橫斷面快照而非完整普查；共現分析僅描述關聯，不支持因果推論。引用 §③ 時不得升級為「治理不足會導致失效」的因果主張。

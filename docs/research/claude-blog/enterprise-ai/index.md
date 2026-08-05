@@ -5,10 +5,338 @@ type: index
 
 # Enterprise AI — claude.com/blog
 
-> 收錄自 [claude.com/blog/category/enterprise-ai](https://claude.com/blog/category/enterprise-ai) · 24 篇文章 · 2025-11-17 ~ 2026-06-03
-> 最後更新：2026-06-05
+> 收錄自 [claude.com/blog/category/enterprise-ai](https://claude.com/blog/category/enterprise-ai) · 45 篇文章 · 2025-11-17 ~ 2026-07-24
+> 最後更新：2026-08-04
 
 > 注：2026-04-09 起的產品公告（Managed Agents、Advisor Strategy、Cowork Enterprise）收錄於 [announcements/index.md](../announcements/index.md)，本分類專注於企業採用案例與功能深度報導。
+
+---
+
+## How the product designer who built Claude Design uses it to explore ideas before building them
+
+**Date:** 2026-07-24 | **URL:** https://claude.com/blog/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them
+
+### Summary
+打造 Claude Design 的產品設計師說明其用法：把 HTML 當成豐富的互動視覺媒材，讓設計師不靠傳統設計軟體就能產出互動原型、簡報、landing page 與動畫。定位在早期發想與溝通，與負責生產軟體的 Claude Code 分工。
+
+### Key Points
+- 以 HTML 為輸出媒材，產出可互動、可分享的視覺設計
+- 可上傳品牌素材、字體、色彩與設計規範，讓產出自動符合品牌，不靠人工自律
+- 協作式迭代：一次要十個版本再 remix，快速探索變體而非等一個完成品
+- 明確不用於生產工程——那是 Claude Code 的範圍
+- 可接 GitHub repo、web search 與 MCP 取得既有元件與畫面，讓設計從真實專案脈絡長出來
+
+---
+
+## Claude models explained: choosing the best model for your use case
+
+**Date:** 2026-07-24 | **URL:** https://claude.com/blog/claude-models-explained-choosing-the-best-model-for-your-use-case
+
+### Summary
+官方選型指南：從一般可用的最強模型起步再依延遲與成本往下調；依據是任務難度與單位經濟，不是產業別。
+
+### Key Points
+- 四 class 定位：Mythos/Fable、Opus、Sonnet、Haiku
+- Effort 等級讓「高 class 低 effort」在 per-task 成本上可能勝過低 class 模型
+- Advisor 策略：Sonnet + Fable 監督 = Fable-only 效能 90%、成本 63%
+- 高量任務在品質達標時通常偏向低 class 模型
+- 企業實務：以策展問題集與團隊自訂成功標準做自建 eval，勝過看公開 benchmark
+
+---
+
+## Four role-based certifications for the people who put Claude to work for customers
+
+**Date:** 2026-07-23 | **URL:** https://claude.com/blog/four-role-based-claude-certifications
+
+### Summary
+Anthropic 新增三張角色型認證，與既有的 Claude Certified Architect: Foundations 合為四張，供企業驗證合作夥伴的實作能力。自三月以來已有 1,300+ 組織、36,000 名顧問取得認證。
+
+### Key Points
+- 四張認證：Associate: Foundations（日常實務）、Developer: Foundations（API 與 agent 開發）、Architect: Professional（進階企業整合）、Architect: Foundations（agent 系統設計）
+- 對象從非技術顧問與專案負責人，到建應用的工程師與設計系統的架構師
+- 全部為監考、身分驗證的考試，由 Pearson Professional Assessments 施測，通過者取得 Credly 數位徽章
+- 大型顧問公司大規模投入：Accenture 5 萬人、PwC 3 萬人、Capgemini 2 萬人；認證影響 Claude Partner Network 分級
+
+---
+
+## How Anthropic secures its AI-native software development lifecycle
+
+**Date:** 2026-07-21 | **URL:** https://claude.com/blog/how-anthropic-secures-its-ai-native-software-development-lifecycle
+
+### Summary
+Anthropic 副 CISO 說明 AI 撰寫 80% 合併程式碼下的 SDLC 安全設計：審查左移、硬性存取邊界、自動與人工審查分工，並把 agent 行為視為新型內部威脅監控。
+
+### Key Points
+- 工程師每季出貨量為 2021–2025 的 8 倍；超過一半合併由 Claude Tag 處理，人類定意圖與最終核可
+- 規劃階段自動對照 MITRE ATT&CK 並接組織知識庫，低風險上線可自助核准
+- CLAUDE.md 把安全實踐編碼進生成過程，安全 review plugin 即時給建議
+- 多個窄焦點 agent 各持獨立 context 與偏誤審同一 PR，加 SAST 與對自動核可的人工抽樣
+- 圍堵：allowlist 出口的遠端 coding VM、agent 權限分離、獨立系統帳號
+- 治理：agent 動作全進 SIEM；漏洞發現自動回寫 CLAUDE.md 防止再生成
+
+---
+
+## How Datadog built a "universal machine tool" for Claude Code
+
+**Date:** 2026-07-21 | **URL:** https://claude.com/blog/how-datadog-built-a-universal-machine-tool-for-claude-code
+
+### Summary
+Datadog 的 Temper 讓 agent 產出精確規格而非應用程式碼，由確定性 kernel 以四層分析驗證後執行，補上「agent 生成」與「可安全部署」之間的落差。
+
+### Key Points
+- 任務愈複雜，工程師被迫升級成管理者——要管 agent 的可見資訊、工具、成功標準與失敗偵測
+- 前三代嘗試（Courier / BitsEvolve / Helix）之後才定位出真正瓶頸
+- Kernel 用符號推理、窮舉狀態探索、確定性模擬與 property testing 驗證，小規格一秒內完成
+- 三段式契約：行為契約、資料契約、授權政策（預設拒絕 + scope 核准 + 人工覆寫）
+- 機床哲學：可重複、可檢驗的產出讓軟體「工廠」靠回饋成長而非一次性即興
+
+---
+
+## Working at the frontier: How Rakuten builds agents overnight with Claude Fable 5
+
+**Date:** 2026-07-20 | **URL:** https://claude.com/blog/working-at-the-frontier-rakuten
+
+### Summary
+Rakuten 的 AI 總經理 Yusuke Kaji 說明 Fable 5 如何讓 agent 無人監督連跑數小時：模型自我驗證並在執行中修正路線，把工作單位從「任務」上移到「決策」。
+
+### Key Points
+- Fable 5 自查頻率遠高於任何前代模型，能在錯誤假設滾大成失敗前抓住
+- 會在未被要求的情況下回頭對照原始意圖重新驗證，不再需要凌晨兩三點的人工校正
+- 在模糊決策上與團隊偏好的「品味對齊」更順，降低監督摩擦
+- 委派模型改變：從「切好定義明確的區塊給 agent 執行」變成整包交付、人類只在決策點介入
+- 成本策略：只在額外能力真正改變結果的地方用 Fable 5，例行工作路由到較小模型
+
+---
+
+## Working at the frontier: How Cursor knew Claude Fable 5 was ready for the hardest 1% of problems
+
+**Date:** 2026-07-17 | **URL:** https://claude.com/blog/working-at-the-frontier-cursor
+
+### Summary
+Cursor 工程師 Nate Schmidt 用內部基準測試 CursorBench 評估 Claude Fable 5：模型在困難任務中達到 72.9% 成功率，展現「全局推理」能力，能理解複雜工程問題的整體背景，不需頻繁提示即可完成長期運行的實際工作。
+
+### Key Points
+- Fable 5 在 CursorBench Max effort 評估創新高 72.9%，超越其他模型表現
+- 展現「全局推理」而非 Opus 的「局部推理」，思考整個任務流程更高效
+- 月球著陸實驗：Fable 5 數小時完成 Opus 需 12+ 小時卻未成功的任務
+- 適合目標路徑不確定的問題，能降低複雜重構等工作的啟動成本
+- Cursor 團隊將 Fable 5 與輕量級模型配對使用，平衡成本與性能
+
+---
+
+## Zero risk isn't the job: a CISO's guide to agentic AI
+
+**Date:** 2026-07-17 | **URL:** https://claude.com/blog/ciso-guide-to-agentic-ai
+
+### Summary
+Anthropic 副首席資安官 Jason Clinton 分享公司採納代理式 AI 的經驗與風險評估框架。核心論點：安全領導者的職責不是追求零風險，而是「讓代理風險可見且有界」。透過四個核心問題與七項控制措施，組織可在管理風險同時加速業務創新。
+
+### Key Points
+- 四個評估問題：代理處理哪些不可信內容？能採取什麼行動？失控爆炸半徑多大？可觀測性程度如何？
+- 身份認證頻譜：系統服務帳戶（單一目的、最小權限）到人工憑證，模糊問責制最危險
+- 七項核心控制：身份整合、連接器白名單、細粒度工具批准、沙箱執行、出站限制清單、OpenTelemetry 遙測、組織級「斷電開關」
+- Claude Cowork 架構：遠端沙箱執行環境從不持有生產憑證，流量必須經過無法繞過的代理
+- 治理無需成為瓶頸：合規團隊本身可運行代理，自動化風險登記與供應商審查流程
+
+---
+
+## How Anthropic runs large-scale code migrations with Claude Code
+
+**Date:** 2026-07-16 | **URL:** https://claude.com/blog/ai-code-migration
+
+### Summary
+Anthropic 說明如何用 Claude Code 執行大規模程式碼遷移：Bun 共同創辦人兩週內將百萬行 Zig 代碼遷移至 Rust，100% 通過既有測試套件。文章提出六步驟框架（規則手冊、依賴映射、壓力測試、翻譯、編譯、行為驗證），核心理念是「修復流程而非代碼」。
+
+### Key Points
+- 遷移成本從過去的 300–400 萬美元降至數十萬美元，讓長期延遲的專案變得可行
+- Fable 5 / Opus 4.8 擅長委派工作、指導平行工作流並驗證結果
+- 必須預先建立「評判機制」（如測試套件），提供客觀的成功衡量標準
+- 建立可移植性規則手冊與詳細依賴映射是最耗時的前期工作
+- 用較小模型處理實作、保留大型模型做審查與規則制定
+- 工作隊列應機械化且可恢復，讓編譯器/測試自動生成下一項任務
+
+---
+
+## Working with Claude Fable 5 in Claude Cowork
+
+**Date:** 2026-07-16 | **URL:** https://claude.com/blog/working-with-claude-fable-5-in-claude-cowork
+
+### Summary
+Claude Fable 5 是 Anthropic 最強大的通用模型，專為長期複雜工作設計。在 Claude Cowork 中，使用者可從簡單想法開始，透過提供上下文與約束條件，委派多步驟任務給模型執行；模型能追蹤長期工作細節、自動檢查結果，並在過程中維持對使用者目標的理解。
+
+### Key Points
+- 適用時機：複雜、模糊或多工具的重要工作，成本較高但處理複雜任務的準確性更佳
+- 靈活起點：可從模糊想法開始，同一對話中腦力激盪與執行工作
+- 上下文優先：提供具體背景資訊比詳細步驟指示更有效
+- 全面委派：可完全委派大型任務，包括方法選擇、程序執行、排程設置
+- 監督與驗證：Cowork 介面顯示模型計畫與推理過程，可及早發現問題並修正
+- 基礎設施投資（連接日常工具、調整寫作風格、審查舊設定）能充分發揮 Fable 5 能力
+
+---
+
+## Working at the frontier: Why Base44 trusts Claude Fable 5 with their most challenging engineering work
+
+**Date:** 2026-07-15 | **URL:** https://claude.com/blog/working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging-engineering-work
+
+### Summary
+低代碼平台 Base44 發現 Claude Fable 5 是首個能像資深工程師一樣推理軟體的模型，可處理過去只能交給最資深工程師的複雜工作，使團隊得以加快產品開發速度並更有信心做出大膽的業務決策。
+
+### Key Points
+- 推理能力突破：能識別代碼中已存在的解決方案而非重複處理同一問題
+- 效率提升：更少輪次完成任務，首次生成的應用更完整、包含邊界情況考慮
+- 複雜工作自動化：系統提示詞重建等關鍵任務約 4 小時交付 90–95% 所需內容
+- 跨團隊應用：產品經理 2.5 小時內建立行動應用開發環境
+- 風險發現：模型識別出 Base44 自身測試盲點（未測試快取命中）並提出改進方案
+- 組織信心提升，團隊得以推進過去因風險顧慮擱置的計畫
+
+---
+
+## Working at the frontier: How Hebbia builds AI for financial diligence that can't miss a detail
+
+**Date:** 2026-07-13 | **URL:** https://claude.com/blog/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail
+
+### Summary
+機構金融 AI 平台 Hebbia 以專有金融基準測試評估每個新模型，Claude Fable 5 創下最高準確度提升記錄（相對準確度約提高 20%），能更好追蹤複雜查詢並在多步驟分析中保持完整背景，使金融專業人士能自動化複雜盡職調查工作流程。
+
+### Key Points
+- Matrix 平台用 meta-prompting 將自然語言請求轉為提示，在數百份文件中運行分析並提供完整可追蹤性
+- Fable 5 在財務文件問答與引文匹配測試表現突出，能找到正確資訊並正確合成
+- 能同時保持多部分請求，回答所有問題並引用對應來源
+- 正使用 Claude Agent SDK 將複雜交易分析工作分解成可重複的檢查步驟
+- 信貸審查工作從外部專家手工製作加速至自動生成初稿
+- 銀行客戶關注焦點從風險擔憂轉向如何自動化更多工作流程
+
+---
+
+## Working at the frontier: How Cognition trusts Claude Fable 5 to work through the night
+
+**Date:** 2026-07-10 | **URL:** https://claude.com/blog/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night
+
+### Summary
+Cognition 的 AI 軟體工程師 Devin 採用 Claude Fable 5 後能持續運行 8 小時以上而不失焦點。Fable 5 在 Cognition 自建的「Frontier Code」基準測試得分約 30%，遠高於先前 Opus 模型的 10%，是軟體工程 AI 領域近一年最重大的進步。
+
+### Key Points
+- 在複雜上下文中保持清晰思路，正確使用內部除錯工具並追蹤日誌
+- Frontier Code 基準測試從 10% 提升至 30%，代表真實工程工作的實質進步
+- 可在無人監督下持續工作 8 小時，完成代碼遷移及問題根因分析
+- Cognition 過去一年所見最大的性能躍進
+- 使主動式代理（監控 Slack 頻道、自主處理生產問題）成為可行
+- 團隊預期未來 1–2 年內 90% 的代理任務將為主動發現問題並提供修復方案
+
+---
+
+## Working at the frontier: How Thomson Reuters builds AI for high-stakes professional work
+
+**Date:** 2026-07-08 | **URL:** https://claude.com/blog/working-at-the-frontier-how-thomson-reuters-builds-ai-for-high--stakes-professional-work
+
+### Summary
+Thomson Reuters 與 Anthropic 合作，用 Claude Fable 5 為律師、會計師等專業人士開發可信賴的 AI 工具，採「受信責任級 AI」方法結合權威內容、領域專業知識與工作流程整合。CoCounsel Legal 等產品現能同時協調數百種工具，讓原本需時數小時的法律研究在數分鐘內完成。
+
+### Key Points
+- 評估標準：模型是否能通過律師實際工作應用前的專業審查，驗證優於流暢度
+- 代理優先方法：原有獨立軟體工具整合為單一代理，可即時規劃、委派並協調跨系統任務
+- 四項核心能力：檢查引文、長工具鏈中保持穩定、納入人工參與、執行足以節省數週時間的複雜起草工作
+- CTO Joel Hron：先實現文化轉變而非過度優化成本效率；內部工具將生產問題解決時間從 3 小時縮至 4 分鐘
+- 信任基礎：Anthropic 對企業 AI 透明、安全的開發方式
+- 未來方向：更長期任務、改進上下文管理、在高風險環境中運用更可靠的工具調用
+
+---
+
+## How Anthropic's marketing operations team uses Claude Cowork to automate reporting and campaign builds
+
+**Date:** 2026-07-08 | **URL:** https://claude.com/blog/how-anthropics-marketing-operations-team-uses-claude-cowork-to-automate-reporting-and-campaign-builds
+
+### Summary
+Anthropic 行銷營運團隊用 Claude Cowork 自動化原本耗時的手動工作：每週行銷指標報告準備時間從 1–2 天縮短至約 2 小時，活動設置流程全面自動化。透過建立可重複使用的技能與連接器整合，繁瑣的系統管理工作轉變為策略性活動。
+
+### Key Points
+- 每週報告自動化：Claude 每週日晚間自動收集數據、驗證指標，生成帶建議重點的初步報告
+- 多平台整合：連接行銷平台、數據倉庫、Slack，解決傳統工具整合不完整的問題
+- 品質驗證機制：校對技能確保報告每個數字追蹤到已驗證來源，不匹配時標記問題
+- 活動建置工作流程：自動調度系統每小時讀取請求通道，五個專業技能分別處理不同類型工作
+- 獨立審核流程：單獨 Claude 實例執行測試註冊與驗證，確保發布前符合標準
+- 持續改進迴圈：團隊定期更新技能反映新的邊界情況與業務需求
+
+---
+
+## How people are using Claude Cowork
+
+**Date:** 2026-07-07 | **URL:** https://claude.com/blog/how-people-are-using-claude-cowork
+
+### Summary
+Anthropic 分析 126 萬個 Claude Cowork 工作階段的使用情況，發現知識工作者主要用它處理「工作周圍的工作」——支撐性任務而非核心職責。商業流程和內容創作佔用途近一半，幫助用戶組織資訊並與團隊溝通。
+
+### Key Points
+- 商業流程和營運（33.4%）為最大使用類別，包括撰寫狀態報告、建立檢查清單、協調試算表
+- 內容創作和文案（16.4%）居第二，用戶用它「克服空白頁面障礙」草擬各類文件
+- 知識工作支持：軟體開發、DevOps、研究、數據分析等專業工作各佔 4–9%
+- 差異化使用模式：Cowork 用於連結性工作，Claude Code 主要用於程式編寫核心工作
+- 隱私方法：研究使用自動分類系統處理匿名化資料，無人類分析師審閱個別工作階段
+- 對所有 Claude 使用者開放，Anthropic 提供介紹課程協助入門
+
+---
+
+## Building effective human-agent teams
+
+**Date:** 2026-06-24 | **URL:** https://claude.com/blog/building-effective-human-agent-teams
+
+### Summary
+文章闡述 Anthropic 如何將工作場域協作從單人 AI 互動轉型為「multiplayer」人機協作團隊——具備持久記憶、獨立憑證與廣泛組織存取權的 Agent，與多位人類成員在如 Slack 等環境中共同工作。
+
+### Key Points
+- 四大心法：公開透明分享脈絡（Agent 的理解完全建立於團隊可搜尋的文字：Slack、程式碼、文件、會議記錄）
+- 明確角色分工：每位人類與 Agent 有清楚職責與對應工具存取權，避免重複工作與脈絡破碎
+- 設定 North Star：具企圖心的長期目標引導 Agent 主動提案而非被動等待指令
+- 漸進建立信任：自主權隨可靠度證明逐步擴大，透過驗證機制與定期反思循環
+- 實作範例：Doer-Verifier agent harness（一個執行、一個驗證）；每週「lessons & missteps」報告供持續改進；某工程團隊建立信任後讓 Agent 獨立處理 500 個 bug 修復
+- 高風險決策仍保留人工判斷
+
+---
+
+## The full Claude Desktop experience on AWS, Google Cloud, and Microsoft Foundry
+
+**Date:** 2026-06-22 | **URL:** https://claude.com/blog/the-full-claude-desktop-experience-on-aws-google-cloud-and-microsoft-foundry
+
+### Summary
+Anthropic 擴大 Claude Desktop 在主要雲端平台的可用性，企業可透過既有 AWS、Google Cloud、Microsoft Foundry 基礎設施，於單一應用程式中完整使用 chat、Claude Cowork、Claude Code 三種介面。
+
+### Key Points
+- 統一平台：三種介面整合於單一應用，消除跨部署的碎片化問題
+- 資料落地與控管：推論留在客戶自控雲端環境、對話紀錄本地儲存，組織可自訂 connector 可存取的端點
+- 企業部署功能：整合 IAM Identity Center、Entra ID、OIDC（Okta）SSO；policy 範本可匯出至 Intune、GPO、Jamf；支援離線安裝（air-gapped）與 pre-rollout 驗證工具；各介面可分別設定存取權限
+- Microsoft 365 原生整合：透過 Entra 驗證存取郵件與文件，支援 GCC High/DoD 端點與純本地連線選項
+- 案例：Hanwha Solutions 透過自有 LLM Gateway 為全球數百名使用者部署 Claude Desktop，無需另立供應商合約
+
+---
+
+## Secure access to the Claude Platform with Workload Identity Federation
+
+**Date:** 2026-06-17 | **URL:** https://claude.com/blog/workload-identity-federation
+
+### Summary
+Workload Identity Federation（WIF）正式 GA，以短期 OIDC 憑證取代靜態 API key，支援 AWS IAM、GCP、Azure、GitHub Actions、Okta 等主流身份提供者。
+
+### Key Points
+- 每個 workload 可分配獨立 Service Account，具備獨立角色與稽核軌跡
+- 支援 Admin API 大規模程式化配置，適合多工作負載企業環境
+- 與既有 API key 並存，可逐步遷移，不中斷現有操作
+- 消除靜態 long-lived API key 的安全風險（key rotation、洩漏風險）
+- 與 Enterprise Managed Auth（IdP-managed MCP connector 授權）互補
+
+---
+
+## Centrally manage authorization for MCP connectors
+
+**Date:** 2026-06-18 | **URL:** https://claude.com/blog/enterprise-managed-auth
+
+### Summary
+企業版 MCP connector 集中授權管理（Team/Enterprise Beta），透過 Okta 等 IdP 統一配置，消除逐個 OAuth 審批流程，員工登入即自動取得 connector 存取權。適合有大量員工需要存取相同 MCP connectors 的組織。
+
+### Key Points
+- Zero-touch 設定：依 IdP 群組成員資格自動配置，跨 Claude chat、Claude Code、Cowork 生效
+- 支援 Asana、Atlassian、Canva、Figma、Linear、Supabase 作為 MCP provider；Okta 負責身份管理
+- 可強制 IdP-only 連線，支援 token 生命週期控制，加速撤銷存取
+- IT 管理員可在一個地方撤銷員工所有 connector 存取（離職 offboarding 場景）
 
 ---
 
@@ -375,3 +703,15 @@ Anthropic 法律團隊使用 Claude 自動化合約審閱和行銷內容審查�
 - 多模型委派：Opus 4.1 負責研究/規劃，Sonnet 4.5 負責實作（更高品質）
 - 非技術創辦人可以競爭：清晰思維和結構化問題分解比傳統工程背景更重要
 - 早期中斷防止浪費：仔細審視 chain-of-thought 並提早停止無效方向
+
+## How we contain Claude across products
+
+**Date:** 2026-05-25 | **URL:** https://www.anthropic.com/engineering/how-we-contain-claude
+
+### Summary
+Anthropic 跨產品隔離 Claude 的工程實務（2026-07-17 稽核補收——corpus 覆蓋期內遺漏篇）。環境層優先於模型層、三類風險分層隔離、自製隔離元件的實際事故記錄。
+
+### Key Points
+- 「環境層優先於模型層」：模型層防禦永遠無法達 100% 有效（對應本 workspace「判斷 vs 決定」公理——安全靠確定性邊界非模型自律）
+- 針對使用者誤用/模型失誤/外部攻擊三類風險分層隔離，隔離強度配合使用者監督能力
+- 自製隔離元件比 gVisor/seccomp 等成熟技術更易出漏洞；記錄信任邊界前執行代碼、approval fatigue 導致安全降級等實際事故

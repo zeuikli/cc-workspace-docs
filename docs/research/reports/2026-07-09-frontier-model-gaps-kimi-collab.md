@@ -1,0 +1,161 @@
+---
+date: 2026-07-09
+status: complete
+sources: ["https://cognition.com/blog/swe-1-7", "https://officechai.com/ai/cognition-releases-swe-1-7-says-it-is-close-to-fron", "https://www.cerebras.ai/blog/cerebras-kimi-k2-Enterprise", "https://www.beri.net/article/2026-05-31-cerebras-981-tokens-kimi-k2-6-gpu-inf...", "https://x.ai/news/grok-4-5", "https://agentpedia.codes/blog/grok-4-5-cursor-spacexai-launch", "https://roo.beehiiv.com/p/grok-4-5", "https://the-decoder.com/grok-4-5-is-so-cheap-compared-to-fable-5-and-gpt-5-5-that-benchmark-gaps-may-not-matter-much/", "https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-descr...", "https://openai.com/index/introducing-gpt-live/", "https://venturebeat.com/technology/openai-launches-gpt-live-a-full-duplex-voi...", "https://techcrunch.com/2026/07/08/openai-releases-new-voice-models-for-more-n...", "https://www.marktechpost.com/2026/07/08/openai-releases-gpt-live-and-gpt-live...", "https://openai.com/index/previewing-gpt-5-6-sol/", "https://www.cnbc.com/2026/07/08/openai-expanding-gpt-5point6-ai-model-release..."]
+topics_covered: [cognition-swe-1-7-kimi-k2-7-rl-frontier-1000tps, xai-grok-4-5-terminal-bench-opus-class-1-5-pricing, openai-gpt-live-1-full-duplex-voice-gpt-5-6-sol]
+---
+
+# Frontier Model Gap Research 2026-07-09 — Kimi 協作產出
+
+> **協作模式**：GLM×Kimi 交叉協作（fresh-context 獨立審查精神，參考 `research/reports/2026-07-08-glm-kimi-cross-review-fable5-final.md`）
+> **目的**：補完 cc-workspace Routine A/C 每日選題未覆蓋的 frontier 信號，直接指向 `.claude/refs/model-profiles.md` 檔位假設與 `.claude/refs/delegation-protocol.md` 委派判斷
+> **研究日期**：2026-07-09
+
+## 執行摘要
+
+07-09 DeepSRT digest 揭露三條 frontier 信號——Cognition SWE-1.7、xAI Grok 4.5、OpenAI GPT-Live-1——均為當日發布且直接衝擊 model-profiles.md 的「cost 檔 = 弱模型」與 delegation-protocol.md 的「ceiling 檔位獨佔深推理」假設。Cognition SWE-1.7 以 Kimi K2.7 開源底座 + 自研 RL pipeline 達到 FrontierCode 42.3%（Opus 4.8 = 46.5%），並透過 Cerebras 實現 1000 tok/s，是「RL 推動小模型逼近 frontier」最具體的可稽核案例。xAI Grok 4.5 在 Terminal-Bench 2.1 以 83.3% 擊敗 Opus 4.8 的 78.9%（xAI 自報數字，未經第三方獨立驗證），定價 $2/$6 約為 Opus 4.8 的 1/2.5 至 1/4（視 token 效率差距可達 ~1/5 等效成本），CursorBench 已被 Cursor 自承有訓練資料污染。OpenAI GPT-Live-1 採全雙工語音架構（同時聽與說），並可將深度推理委派至背景 frontier 模型（GPT-5.5），API 即將開放——這是 agent 互動範式從「turn-based 文字」轉向「continuous 多模態」的架構級拐點。三者共同指向：frontier 模型市場正從「誰更聰明」轉向「誰更快、更便宜、更易整合」，且非 Anthropic 供應商已能在部分基準逼近或超越 Anthropic ceiling 檔位。
+
+---
+
+## Gap 1: Cognition SWE-1.7（Kimi K2.7 基礎, 1000 tok/s）
+**狀態**: filled · 信號強度 4/5 · 來源交叉確認：3 個獨立來源（Cognition 官方 + OfficeChai + Cerebras）
+
+### 核心發現
+Cognition（Devin 背後的公司）於 2026/7/8 發布 SWE-1.7，這是該公司目前最強的自研編程模型，以 Moonshot AI 的 Kimi K2.7 開源底座為基礎進行二次 RL 訓練。關鍵技術論述是：Kimi K2.7 本身已經歷過 Moonshot 的大量 RL post-training，Cognition 在此之上再疊加自己的 RL pipeline 仍產生「大規模能力提升」——直接挑戰「post-training ceiling」假設（即認為 RL 在已訓練過的模型上收益遞減的觀點），提供 RL 可持續推動小模型逼近 frontier 的具體實證。
+
+效能定位方面，SWE-1.7 在 Cognition 自建 FrontierCode 1.1 Main 得分 42.3%，與 GPT-5.5（43.0%）差距僅 0.7pp、與 Opus 4.8（46.5%）差距 4.2pp，但顯著超越其底座 Kimi K2.7 Code（30.1%，+12.2pp 提升）。在 Terminal-Bench 2.1 得分 81.5%（Opus 4.8 = 86.9%、GPT-5.5 = 84.2%），SWE-Bench Multilingual 得分 77.8%（Opus 4.8 = 84.4%）。Cognition 強調的並非原始分數領先，而是成本/性能 Pareto 前沿：SWE-1.7 在 FrontierCode 每任務成本約 $1.97，落在更貴模型無法占據的 Pareto 曲線位置。推論速度透過 Cerebras 達到 1000 tok/s，已在 Devin Web/Desktop/CLI 上線。
+
+RL pipeline 四個技術支柱：(1) top-p sampling + sampling distribution replay 防止 entropy collapse（低機率 token 來自偏離軌跡，採樣會 sharpen 分佈降低 entropy）；(2) 跨三大洲四資料中心的多集群訓練，權重 delta 壓縮 >99% 後透過雲端物件儲存同步，1T 參數模型跨洲更新僅需 1-2 分鐘；(3) self-compaction 讓模型學會摘要自身工作狀態並從摘要恢復，訓練 rollout 最長達 6 小時；(4) alternating length penalty 在「無約束階段」（純任務成功）與「預算階段」（懲罰超額 token/turn/時間）間交替，讓簡單任務壓縮回應、困難任務保留長推理。行為差異上，SWE-1.7 相比 Kimi K2.7 Code 有更精簡的 chain-of-thought（更短句子、更低 function-word ratio）且在行動前執行更多 tool calls/file reads/searches（更徹底的 codebase 探索），但代價是變更範圍擴大（touch 更多檔案、寫更多測試）。
+
+### 關鍵數據 / 細節
+- FrontierCode 1.1 Main：SWE-1.7 = 42.3%（Opus 4.8 = 46.5%，GPT-5.5 = 43.0%，Kimi K2.7 = 30.1%，GLM-5.2 = 24.5%）
+- Terminal-Bench 2.1：SWE-1.7 = 81.5%（Opus 4.8 = 86.9%，GPT-5.5 = 84.2%）
+- SWE-Bench Multilingual：SWE-1.7 = 77.8%（Opus 4.8 = 84.4%，GPT-5.5 = 76.8%）
+- 成本：~$1.97/task（FrontierCode Main），位於 Pareto 前沿無更貴模型占據的位置
+- 推論速度：1000 tok/s（Cerebras），已在 Devin 全平台上線
+- 訓練規模：4 資料中心 / 3 大洲 / 權重 delta 壓縮 >99% / 跨洲更新 1-2 分鐘
+- RL 關鍵技術：top-p sampling + sampling distribution replay（防 entropy collapse）、self-compaction（rollout 最長 6 小時）、alternating length penalty
+- 底座：Kimi K2.7（Moonshot AI 開源，1T 參數等級，已經歷 Moonshot 自身大量 RL post-training）
+- 行為差異：更精簡 CoT + 更多行動前探索（tool calls/file reads/greps），但變更範圍擴大
+
+### 對本 workspace 的影響
+直接衝擊 `.claude/refs/model-profiles.md` §0 的「cost 檔 = 弱模型」假設與 §5 O9（檔位 ≠ 成本單調）觀察。SWE-1.7 以開源底座 + RL 達到接近 Opus 4.8（ceiling 檔位）的效能，且成本僅 ~$1.97/task——這是「cost 檔位模型經過针对性 RL 可逼近 ceiling」的具體外部證據，支持 model-profiles.md §5 O9 已記錄的「cost 檔位跑機械編輯 token 消耗可能 > quality」觀察的延伸：成本/能力不再單調對應，RL pipeline 品質成為獨立變數。同時印證 §0 已記錄的「Single-vendor 風險」條目中 GLM-5.2 作為開源 fallback 候選的判斷方向——SWE-1.7 證明開源底座（Kimi K2.7）經 RL 可逼近 frontier，強化了非 Anthropic 模型作為緊急 fallback 的可行性證據基礎。對 `.claude/refs/delegation-protocol.md` §2 的四檔位定義，此案例提示未來 cost/quality 檔位的「能力天花板」可能因 RL pipeline 進步而上移，但本 workspace 目前不使用 SWE-1.7（僅在 Devin 內可用），屬外部市場訊號非立即路由層變更。
+
+**來源**: [SWE-1.7: Frontier Intelligence at a Fraction of the Cost (Cognition 官方)](https://cognition.com/blog/swe-1-7) · [Cognition Releases SWE-1.7 (OfficeChai)](https://officechai.com/ai/cognition-releases-swe-1-7-says-it-is-close-to-fron) · [Cerebras Brings Kimi K2.6 Inference to Enterprises (Cerebras)](https://www.cerebras.ai/blog/cerebras-kimi-k2-Enterprise)
+
+---
+
+## Gap 2: xAI Grok 4.5（Terminal-Bench 擊敗 Opus 4.8, 1/5 定價）
+**狀態**: partial · 信號強度 4/5 · 來源交叉確認：4 個獨立來源（xAI 官方 + Cursor + Roo's Newsletter + The Decoder）
+
+### 核心發現
+SpaceXAI（xAI 於 2026/2 被 SpaceX 收購後的改名實體）於 2026/7/8 發布 Grok 4.5，這是首個由 xAI 與 Cursor 共同訓練的模型，基於 1.5T 參數的 V9 架構（較早期 Grok 4 的 V8-small 規模約 3 倍），訓練使用數萬張 NVIDIA GB300 GPU 並融入 Cursor 的真實開發者 session 資料（debug traces、multi-file diffs、user corrections）。Musk 定調為「Opus-class model, but faster, more token-efficient and lower cost」。
+
+基準成績對比呈現「混合」圖像而非全面超越。在 xAI 自報的四項基準中，Grok 4.5 在 Terminal-Bench 2.1 得分 83.3%，確實擊敗 Opus 4.8 的 78.9%（差距 4.4pp），也在 DeepSWE 1.0 以 62.0% 超越 Opus 4.8 的 55.8%。但在 DeepSWE 1.1（53% vs Opus 59%）與 SWE-Bench Pro（64.7% vs Opus 69.2%）上落後 Opus 4.8。Claude Fable 5 在四項基準中均領先全部對手。須特別注意：effort 設定不對等——Grok 4.5 測於 `high`，Opus 4.8 與 Fable 5 測於 `max`，這是「intelligence per unit compute」的展示而非 ceiling 對 ceiling 比較。Cursor 已自承 Grok 4.5 在 CursorBench 有訓練資料污染（早期 Cursor codebase 快照意外納入訓練），CursorBench 數字應打折。所有數字均為 xAI/Cursor 自報，截至 7/9 尚無第三方獨立驗證。
+
+定價策略是真正的市場衝擊點：Grok 4.5 定價 $2/$6（per 1M input/output tokens），對比 Opus 4.8 的 $5/$25，input 價格為 1/2.5、output 為 ~1/4。疊加 token 效率優勢——SWE-Bench Pro 上 Grok 4.5 平均僅用 15,954 output tokens vs Opus 4.8 max 的 67,020 tokens（4.2× 差距）——等效每任務成本可達 Opus 4.8 的約 1/5 至 1/8 區間。已在 Cursor（全方案）、Grok Build CLI（預設模型）、SpaceXAI API 上線，首週 Cursor 雙倍用量。EU 尚未開放（預計 7 月中）。CursorBench 排名第三（66.7%），每任務成本 $1.5 vs Fable 5 Max 的 $17.32。
+
+### 關鍵數據 / 細節
+- Terminal-Bench 2.1：Grok 4.5 = 83.3% vs Opus 4.8 = 78.9%（Grok 贏 4.4pp；Fable 5 = 84.3% 領先全部）
+- DeepSWE 1.0：Grok 4.5 = 62.0% vs Opus 4.8 = 55.8%（Grok 贏 6.2pp）
+- DeepSWE 1.1：Grok 4.5 = 53% vs Opus 4.8 = 59%（Grok 輸 6pp）
+- SWE-Bench Pro：Grok 4.5 = 64.7% vs Opus 4.8 = 69.2%（Grok 輸 4.5pp；Fable 5 = 80.3% 領先）
+- SWE-Bench Multilingual：Grok 4.5 = 78.0% vs Opus 4.8 = 84.4%（Grok 輸 6.4pp）
+- effort 不對等：Grok 4.5 = `high`，Opus 4.8 = `max`，Fable 5 = `max`，GPT-5.5 = `xhigh`
+- 定價：$2/$6 per 1M tokens（Opus 4.8 = $5/$25）→ input 1/2.5、output ~1/4
+- Token 效率：SWE-Bench Pro Grok 4.5 = 15,954 output tokens vs Opus 4.8 max = 67,020 tokens（4.2× 差距）
+- 等效每任務成本：約 Opus 4.8 的 1/5 至 1/8（單價 × token 數雙重優勢）
+- CursorBench：66.7%（排名第三），每任務 $1.5 vs Fable 5 Max $17.32
+- 速度：~80 tok/s（xAI「fast-model」層級）
+- CursorBench 污染：Cursor 自承早期 codebase 快照意外納入訓練，CursorBench 數字應打折
+- Harvey's Legal Agent Benchmark：Grok 4.5 排名 #1（超越編程用途的知識工作能力）
+- 獨立驗證狀態：全部數字為 xAI/Cursor 自報，截至 2026-07-09 無第三方獨立驗證
+
+### 對本 workspace 的影響
+直接衝擊 `.claude/refs/delegation-protocol.md` §2 的「ceiling 檔位獨佔深推理/架構」假設與 `.claude/refs/model-profiles.md` §0 的「ceiling = claude-opus-4-8」單一供應商對應。Grok 4.5 在 Terminal-Bench 2.1 與 DeepSWE 1.0 擊敗 Opus 4.8（雖 effort 不對等且為自報數字），顯示非 Anthropic 供應商已能在部分 agentic coding 基準逼近或超越 Anthropic ceiling 檔位——ceiling 檔位的「獨佔深推理」定位不再絕對，開始出現具體外部競爭者。但須強調三項限制：(1) 數字未經第三方獨立驗證，與 model-profiles.md §2.7「eval-hack 風險：檔位越高 eval-hack 率越高」的警示一致，自報基準須當「vendor's number」而非 settled result；(2) effort 不對等（high vs max），非 like-for-like ceiling 比較；(3) CursorBench 有訓練污染自承。對 model-profiles.md §0「Single-vendor 風險」條目，Grok 4.5 提供了另一個非 Anthropic 的潛在 fallback 候選（與既有 GLM-5.2 候選並列），但其 EU 不可用性與 OpenAI-compatible API 特性需在未來 fallback 路由設計中納入考量。本 workspace 目前不路由至 Grok 4.5（純 Claude Code 場域），屬市場訊號層影響，非立即路由變更。
+
+**來源**: [Introducing Grok 4.5 (xAI/SpaceXAI 官方)](https://x.ai/news/grok-4-5) · [Grok 4.5: Benchmarks, Pricing & Cursor Integration (AgentPedia)](https://agentpedia.codes/blog/grok-4-5-cursor-spacexai-launch) · [Grok 4.5 Launched Today (Roo's Newsletter)](https://roo.beehiiv.com/p/grok-4-5) · [Grok 4.5 is so cheap (The Decoder)](https://the-decoder.com/grok-4-5-is-so-cheap-compared-to-fable-5-and-gpt-5-5-that-benchmark-gaps-may-not-matter-much/)
+
+---
+
+## Gap 3: OpenAI GPT-Live-1 + GPT-5.6 Sol（全雙工語音 + 即時多模態）
+**狀態**: filled · 信號強度 4/5 · 來源交叉確認：4 個獨立來源（OpenAI 官方 + VentureBeat + TechCrunch + MarkTechPost）
+
+### 核心發現
+OpenAI 於 2026/7/8 發布 GPT-Live-1 與 GPT-Live-1 mini，這是新一代全雙工（full-duplex）語音模型，核心架構突破是「同時聽與說」——不同於 Advanced Voice Mode 的 turn-based 模式（必須等使用者停止說話才能回應）或更早期的 cascaded 系統（STT→LLM→TTS 三模型串接），GPT-Live 持續處理輸入同時生成輸出，每秒可多次做出互動決策（是否說話、繼續聽、暫停、插話、呼叫工具）。這讓語音 AI 首次具備「自然對話感」——可用「mhmm」「yeah」等回應詞表示正在聆聽、支援快速 back-and-forth、甚至能在使用者需要思考時間時保持安靜，並支援即時翻譯。
+
+第二項架構創新是「delegation for deeper work」：GPT-Live-1 處理 continuous interaction，當問題需要 web search、深度推理或更 agentic 能力時，可將任務委派至背景 frontier 模型（上線時用 GPT-5.5），結果準備好後帶回對話——這讓語音互動與深度思考無縫銜接，且 GPT-Live 可持續與使用者對話不中斷。OpenAI 表示隨新 frontier 模型發布會持續更新 GPT-Live 背後的委派目標。API 即將開放，開發者與企業可透過表單登記候補。
+
+GPT-Live-1 在多項評估顯著超越 Advanced Voice Mode：pairwise preference 75.7%（GPT-Live-1 mini = 69.2%）；GPQA 科學推理 84.2%（high effort）vs AVM 45.3%；BrowseComp agentic search 75.2%（high）vs AVM 0.7%；τ³-Voice Telecom 電信支援任務成功率顯著提升。每週超過 1.5 億人使用 ChatGPT Voice/Dictation 功能。GPT-Live-1 成為 Go/Plus/Pro 用戶預設，mini 成為 Free 用戶預設。安全設計方面，OpenAI 擴展音訊原生評估、加入即時安全護欄（偵測到不安全輸出時可即時導向更安全回應）、青少年專屬保護、長期情感依賴監測。GPT-Live 使用預定義語音且有防冒充真實人聲的護欄。
+
+GPT-5.6 Sol 同日確認將於週四（7/9）公開發布（此前因美國政府要求延遲，商務部批准後由 Center for AI Standards and Innovation 完成額外測試）。GPT-5.6 系列包含 Sol（旗艦）、Terra（中階）、Luna（最快最省）。Terminal-Bench 2.1：Sol = 88.8%、Sol Ultra = 91.9%、Claude Mythos 5 = 88.0%。Sol 定價 $5/$30，網安任務與 Mythos 5 平手但僅用 1/3 token。OpenAI 批評政府延遲「讓最好的工具遠離開發者與公司」。
+
+### 關鍵數據 / 細節
+- 架構：全雙工（full-duplex），持續處理輸入同時生成輸出，每秒多次互動決策
+- Delegation：GPT-Live-1 處理 continuous interaction，深度推理委派至背景 GPT-5.5，結果帶回對話
+- Pairwise preference vs AVM：GPT-Live-1 = 75.7%，GPT-Live-1 mini = 69.2%
+- GPQA：GPT-Live-1 high = 84.2% vs AVM = 45.3%（+38.9pp）
+- BrowseComp：GPT-Live-1 high = 75.2% vs AVM = 0.7%（+74.5pp）
+- 用戶規模：每週 1.5 億+ ChatGPT Voice/Dictation 用戶
+- 可用性：GPT-Live-1 = Go/Plus/Pro 預設，mini = Free 預設；iOS/Android/ChatGPT.com 全球滾動推出
+- API：即將開放，開發者可填表候補
+- 限制：launch 時不支援 voice + video/screen sharing；部分語言可能有非母語口音
+- GPT-5.6 Sol Terminal-Bench 2.1：88.8%（Sol Ultra = 91.9%，Mythos 5 = 88.0%）
+- GPT-5.6 Sol 定價：$5/$30（Mythos 5 = $10/$50 的約 1/2 至 1/1.67）
+- GPT-5.6 政府延遲背景：商務部批准 + Center for AI Standards and Innovation 額外測試後放行
+
+### 對本 workspace 的影響
+對 `.claude/rules/core.md` 的「Ask-rate：scope 變更/破壞性動作必問」人因確認介面設計方向具長期參考價值。GPT-Live-1 的「delegation for deeper work」架構（語音互動層委派深度推理至背景 frontier 模型）與本 workspace delegation-protocol.md §1「指揮官不下場」的「主對話 = 調度者 + 總稽核」精神異曲同工——兩者都是「輕量互動層 + 重量推理層」分離，差異在 GPT-Live 是語音 vs 文字、OpenAI 是模型內部委派 vs 本 workspace 是跨 sub-agent 委派。全雙工語音 + 即時多模態若未來 API 開放且本 workspace 需設計語音/非同步人因確認介面（目前無此需求），GPT-Live 的「持續聆聽 + 背景委派 + 結果帶回」可作為架構參考。對 `.claude/refs/model-profiles.md` §0 的四檔位對應表，GPT-5.6 Sol 的 Terminal-Bench 91.9%（Sol Ultra）與定價 $5/$30 顯示 OpenAI frontier 模型已與 Anthropic Fable 5（$10/$50）形成直接價格競爭——強化 §0「Single-vendor 風險」條目中非 Anthropic fallback 候選的市場基礎，但本 workspace 目前純 Claude Code 場域，屬監測層訊號非立即路由變更。
+
+**來源**: [Introducing GPT-Live (OpenAI 官方)](https://openai.com/index/introducing-gpt-live/) · [OpenAI launches GPT-Live (VentureBeat)](https://venturebeat.com/technology/openai-launches-gpt-live-a-full-duplex-voi...) · [OpenAI releases new voice models (TechCrunch)](https://techcrunch.com/2026/07/08/openai-releases-new-voice-models-for-more-n...) · [OpenAI Releases GPT-Live and GPT-Live-1 mini (MarkTechPost)](https://www.marktechpost.com/2026/07/08/openai-releases-gpt-live-and-gpt-live...)
+
+---
+
+## 跨缺口洞見合成
+
+### 收斂信號
+
+1. **Frontier 模型市場從「誰更聰明」轉向「誰更快、更便宜、更易整合」**：三者（SWE-1.7 的 cost-performance Pareto、Grok 4.5 的 4.2× token 效率 + $2/$6 定價、GPT-5.6 Sol 的 $5/$30 vs Fable 5 $10/$50）共同指向 frontier 競爭軸正從純能力分數轉向成本/速度/效率三角。model-profiles.md §2.3 的 effort×mode 定價矩陣與 §5 O9（檔位 ≠ 成本單調）觀察需在此趨勢下持續校準。
+
+2. **非 Anthropic 供應商已能在部分基準逼近或超越 Anthropic ceiling 檔位**：SWE-1.7 開源底座 RL 達 FrontierCode 42.3%（Opus 4.8 = 46.5%，差距 4.2pp）、Grok 4.5 Terminal-Bench 83.3% 擊敗 Opus 4.8 78.9%（雖 effort 不對等 + 自報）、GPT-5.6 Sol Terminal-Bench 88.8% 接近 Mythos 5 88.0%。delegation-protocol.md §2「ceiling 檔位獨佔深推理」的單一供應商假設正面臨具體外部競爭證據，但所有非 Anthropic 數字均未經第三方獗立驗證，與 model-profiles.md §2.7 eval-hack 風險警示一致。
+
+3. **RL pipeline 品質成為獨立於模型規模的能力變數**：SWE-1.7 以 Kimi K2.7 開源底座 + Cognition 自研 RL 達到超越底座 12.2pp 的提升，直接挑戰「post-training ceiling」假設。這與 model-profiles.md §6「非 Claude 模型接入程序」的「跑 5-10 任務校準」邏輯互相強化——RL pipeline 品質可能讓「較弱底座 + 強 RL」逼近「強底座 + 弱 RL」，未來非 Claude 模型校準不應只看底座規模。
+
+### 三條 actionable 洞見
+
+1. **model-profiles.md §0「Single-vendor 風險」條目可考慮擴充 fallback 候選清單**：目前僅列 GLM-5.2 一個非 Anthropic 候選，SWE-1.7（開源底座 RL 逼近 frontier）與 Grok 4.5（Terminal-Bench 擊敗 Opus 4.8 + $2/$6 定價）提供了額外的候選證據基礎。但三者均有限制（SWE-1.7 僅在 Devin 內可用、Grok 4.5 EU 不可用且數字未獗立驗證、GLM-5.2 有中國伺服器合規風險），擴充應標注各候選的限制條件而非直接加入路由表。建議標為 P2 觀察項，待第三方獨立驗證後再評估。
+
+2. **delegation-protocol.md §2 ceiling 檔位定義可加註「獨佔性正在鬆動」的市場觀察**：Grok 4.5 在 Terminal-Bench 擊敗 Opus 4.8（雖 effort 不對等）是首個非 Anthropic 模型在 agentic coding 基準超越 Anthropic ceiling 檔位的具體案例（即使有自報 + effort 不對等 caveat）。建議在 §2 或 model-profiles.md §0 加註「ceiling 檔位的深推理獨佔性假設面臨外部競爭證據，但截至 2026-07-09 所有超越宣稱均為自報且未經第三方驗證」的觀察記錄，非立即修改路由邏輯。
+
+3. **「delegation for deeper work」架構模式值得追蹤**：GPT-Live-1 的「輕量互動層委派深度推理至背景 frontier 模型」與本 workspace「主對話 = 調度者 + 總稽核」精神同源。若未來本 workspace 需設計語音/非同步/跨裝置人因確認介面（目前無此需求，core.md Ask-rate 仍以文字 CLI 為主），此架構可作為參考。目前僅記錄，非行動項。
+
+---
+
+## 缺口狀態總結
+
+| 缺口 | 狀態 | 來源數 | 獨立驗證 | 對 workspace 影響層級 |
+|------|------|--------|----------|----------------------|
+| 1. Cognition SWE-1.7 | filled | 3 | Cognition 官方 + OfficeChai + Cerebras（Cerebras 1000 tok/s 獨立佐證） | model-profiles.md §0/§5 O9 + delegation-protocol.md §2（觀察層） |
+| 2. xAI Grok 4.5 | partial | 4 | xAI 官方 + Cursor + Roo's Newsletter + The Decoder（基準數字全部為自報，無第三方獨立驗證；CursorBench 有訓練污染自承） | delegation-protocol.md §2 + model-profiles.md §0（觀察層，須待獨立驗證） |
+| 3. OpenAI GPT-Live-1 + GPT-5.6 Sol | filled | 4 | OpenAI 官方 + VentureBeat + TechCrunch + MarkTechPost（GPT-5.6 Sol Terminal-Bench 數字來自 The Decoder 引用 OpenAI） | core.md Ask-rate + model-profiles.md §0（長期觀察層，目前無語音介面需求） |
+
+---
+
+## 是否需要立即更新 model-profiles.md？
+
+**結論：否，但建議標記三項 P2 觀察項供下次維護 cycle 評估。**
+
+理由：
+1. 三個缺口的非 Anthropic 模型基準數字均未經第三方獨立驗證（SWE-1.7 為 Cognition 自建 FrontierCode 基準、Grok 4.5 為 xAI/Cursor 自報、GPT-5.6 Sol 為 OpenAI 自報），與 model-profiles.md §2.7「eval-hack 風險：檔位越高 eval-hack 率越高」的警示一致，不應在無獨立驗證下直接修改 §0 對應表。
+2. 本 workspace 目前為純 Claude Code 場域，SWE-1.7 僅在 Devin 內可用、Grok 4.5 需透過 SpaceXAI API/Cursor/Grok Build（非 Claude Code 原生）、GPT-Live-1/GPT-5.6 Sol 需透過 OpenAI API——三者均非 Claude Code sub-agent alias 可路由的模型，不影響現有 §0 四檔位 ↔ Claude 模型對應表的操作層。
+3. 但 §0「Single-vendor 風險」條目的 fallback 候選清單（目前僅 GLM-5.2）可考慮在下次維護 cycle 擴充觀察記錄（非路由層），標注 SWE-1.7 與 Grok 4.5 作為候選證據基礎及其限制條件。
+
+**建議下次維護 cycle（maintenance-protocol.md §5）納入的三項 P2 觀察項**：
+- P2-a：model-profiles.md §0「Single-vendor 風險」條目擴充 fallback 候選觀察清單（SWE-1.7、Grok 4.5 加入，標注限制條件）
+- P2-b：model-profiles.md §0 或 delegation-protocol.md §2 加註「ceiling 檔位獨佔性假設面臨外部競爭證據（截至 2026-07-09 均為自報未獗立驗證）」觀察記錄
+- P2-c：追蹤 Grok 4.5 與 SWE-1.7 的第三方獨立基準驗證進展（Artificial Analysis、Terminal-Bench 官方等），待獨立驗證後再評估是否升級為路由層變更候選
+
+---
+
+*Report generated by GLM-5.2 (Droid Core) · 2026-07-09 · Kimi 協作模式 frontier gap research*
+*協作精神參考：research/reports/2026-07-08-glm-kimi-cross-review-fable5-final.md*

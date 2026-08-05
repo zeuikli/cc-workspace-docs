@@ -91,7 +91,7 @@ claude agents --add-dir <path> --model opus --effort xhigh --permission-mode aut
 |-------|---------|---------|
 | **Haiku 4.5** | 搜尋、探索、重複性工作 | Subagent 預設；成本/速度優先 |
 | **Sonnet 4.6** | 實作、測試、日常編碼 | 主線執行者；品質與成本平衡 |
-| **Opus 4.7** | 架構設計、複雜審查、疑難雜症 | Advisor 模式；按需諮詢（xhigh effort）|
+| **Opus 4.8** | 架構設計、複雜審查、疑難雜症 | Advisor 模式；按需諮詢（xhigh effort）|
 
 ### Advisor 模式（核心策略）
 
@@ -299,9 +299,9 @@ CLAUDE_CODE_FORK_SUBAGENT=1 claude
 先啟動 researcher，等它完成再啟動 test-writer...
 ```
 
-### Opus 4.7 需要明確的平行指示
+### 強模型需要明確的平行指示
 
-Opus 4.7 預設較少自動開 subagent，需在 prompt 中明確指示：
+Opus / Fable 等強模型預設較少自動開 subagent，需在 prompt 中明確指示：
 
 ```
 Do not spawn a subagent for work you can complete directly in a single response
@@ -309,6 +309,18 @@ Do not spawn a subagent for work you can complete directly in a single response
 Spawn multiple subagents in the same turn when fanning out across items
 or reading multiple files.
 ```
+
+---
+
+## Nested Subagent（depth-5）
+
+> 來源：ofox.ai 2026-06-11；bcherny Jun 10 2026 公告；v2.1.172 實測
+
+- **Server-side hard limit = depth 5**（v2.1.172）；無 API 欄位可讀取當前 depth，由 Claude Code runtime 強制
+- **Context 傳遞**：parent 只送 instruction 給 child；child 返回 final summary（中間工作記憶體不上傳）— parent 拿不到完整 trace
+- **成本警告**：最壞情況 ~7× vs depth-1；實務建議控制在 depth 2–3
+- **設計動機 = context isolation**（非 parallelism）：深層 debug、multi-step research 才使用 nesting；平行化用 flat fan-out
+- **已知 bug（v2.1.172）**：`Agent()` 的 `allowed_tools` allowlist 在 sub-agent 中可能被靜默忽略 → 深層 sub-agent 需在 prompt 層顯式說明工具限制
 
 ---
 

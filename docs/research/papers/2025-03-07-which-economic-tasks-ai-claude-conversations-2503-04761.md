@@ -4,6 +4,7 @@ title: "Which Economic Tasks are Performed with AI? Evidence from Millions of Cl
 archived_date: 2026-06-09
 arxiv_id: 2503.04761
 authors: ["Kunal Handa", "Alex Tamkin", "Miles McCain", "Saffron Huang", "Esin Durmus", "et al."]
+pdf_path: pdfs/2503.04761.pdf
 published_date: 2025-03-07
 ---
 
@@ -165,7 +166,7 @@ Current AI usage peaks in software development and technical writing. Deep integ
 This is the primary empirical data on **how Claude is actually used in practice**. Key calibrations for workspace:
 
 1. **Software development = 37% of Claude usage**: validates focus on `implementer`, `test-writer`, `review-hub` as primary workflow skills
-2. **Opus preferred for creative/educational; Sonnet for coding**: aligns with `sonnet-pilot`'s coding-heavy design and `opus-pilot`'s architecture/creative use cases
+2. **Opus preferred for creative/educational; Sonnet for coding**: aligns with `pilot`（tier=quality，原 `sonnet-pilot`）'s coding-heavy design and `pilot`（tier=ceiling，原 `opus-pilot`）'s architecture/creative use cases
 3. **57% augmentative**: `autoresearch` and `research-hub` are augmentation tools — consistent with design
 4. **4% deep integration**: AI is not yet replacing whole jobs — workspace skill design (individual task-level) is correct granularity
 5. **36% occupations at 25% task threshold**: broad adoption, but still task-selective — task-level harness design remains correct approach

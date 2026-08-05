@@ -4,6 +4,7 @@ title: "Natural-Language Agent Harnesses"
 archived_date: 2026-05-23
 arxiv_id: 2603.25723
 authors: ["Linyue Pan", "Lexiao Zou", "Shuo Guo", "Jingchen Ni", "Hai-Tao Zheng"]
+pdf_path: pdfs/2603.25723.pdf
 published_date: 2026-03-25
 ---
 

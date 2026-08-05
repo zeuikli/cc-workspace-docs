@@ -1,0 +1,18 @@
+---
+url: "https://arxiv.org/abs/2606.22138"
+title: "BioMatrix: Towards a Comprehensive Biological Foundation Model Spanning the Modality Matrix of Sequences, Structures, and Language"
+archived_date: 2026-07-23
+arxiv_id: 2606.22138
+authors: ["Qizhi Pei", "Zhimeng Zhou", "Yi Duan", "Yiyang Zhao", "Wei Li", "Han Guo", "Liang He", "Chengping Li", "Chang-Yu Hsieh", "Conghui He", "Rui Yan", "Lijun Wu"]
+domain: genomic-biological-foundation-models
+published_date: 2026-06-20
+source_routine: routine-e
+---
+
+# BioMatrix: Towards a Comprehensive Biological Foundation Model Spanning the Modality Matrix of Sequences, Structures, and Language
+
+## 摘要 / 核心貢獻
+BioMatrix 提出首個以 decoder-only 架構原生整合「序列、結構、自然語言」三個模態、同時涵蓋分子（molecules）與蛋白質（proteins）的生物基礎模型。過去生物 AI 模型多半是單模態專用（例如只做蛋白質序列、只做分子結構、或只做文獻文字），BioMatrix 的核心貢獻是把這些模態放進同一個 decoder-only 架構的訓練矩陣中，讓模型能在跨模態任務（如「給定分子結構生成自然語言描述」或「給定文字描述生成候選序列」）上做統一推理，而非依賴多個獨立模型拼接。論文報告在跨模態理解與生成任務上相較單模態基線的提升，並討論了訓練資料的模態不平衡（結構資料遠少於序列資料）對模型能力的限制。
+
+## 為何屬「新領域」
+生物多模態基礎模型的架構整合議題，在 workspace 既有的 harness/LLM 工程研究脈絡中未曾出現；關鍵詞（biomatrix/biological-foundation/multi-omics 等）於既有覆蓋集合與 NEW-DOMAINS 既探勘領域紀錄命中皆為 0。

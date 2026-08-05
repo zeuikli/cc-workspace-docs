@@ -63,7 +63,7 @@
 | protect-sensitive-files.sh | PreToolUse `Edit\|Write` | 每次寫檔 | 56ms | 安全 gate，**不可 async** |
 | pre-compact.sh | PreCompact | 偶發 | 73ms | side-effect |
 | memory-sync.sh | (依設定) | 偶發 | 26ms | side-effect |
-| sdd-cache-pre.sh | PreToolUse `WebFetch` | WebFetch 時 | 33ms | cache |
+| ~~sdd-cache-pre.sh~~ | PreToolUse `WebFetch` | （已於 PR #743 刪除）| 33ms | cache |
 
 **關鍵洞察**：
 - 延遲不來自 auto-load token（16,927 bytes ≈ 4.2K tokens，cache 命中後 0.1× 成本，且不重複載入）

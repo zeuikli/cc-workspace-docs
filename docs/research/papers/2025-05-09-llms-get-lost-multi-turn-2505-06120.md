@@ -4,6 +4,7 @@ title: "LLMs Get Lost In Multi-Turn Conversation"
 archived_date: 2026-05-27
 arxiv_id: 2505.0612
 authors: ["Philippe Laban", "Hiroaki Hayashi", "Yingbo Zhou", "Jennifer Neville"]
+pdf_path: pdfs/2505.06120.pdf
 published_date: 2025-05-09
 ---
 

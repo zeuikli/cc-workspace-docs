@@ -4,6 +4,7 @@ title: "You Don't Need Prompt Engineering Anymore: The Prompting Inversion"
 archived_date: 2026-05-27
 arxiv_id: 2510.22251
 authors: ["Imran Khan"]
+pdf_path: pdfs/2510.22251.pdf
 published_date: 2025-10-25
 ---
 

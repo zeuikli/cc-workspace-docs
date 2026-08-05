@@ -350,7 +350,7 @@ claude --plugin-dir ./my-plugin
 
 本 workspace 目前使用 **standalone** 模式（`.claude/skills/`、`.claude/agents/`）。Plugin 模式適合：
 
-- 將現有 skills（如 `deep-review`、`harness-eval`、`score-article`）打包為可分享的 plugin
+- 將現有 skills（如 `deep-review`、`harness-eval`、`research-hub:score`）打包為可分享的 plugin
 - 為 `bin/` 目錄封裝 helper scripts（現有 `scripts/` 可遷移）
 - 透過 `monitors/` 實作自動化背景監控
 

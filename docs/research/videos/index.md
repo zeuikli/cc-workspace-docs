@@ -1,7 +1,9 @@
 # videos/INDEX.md
 
-> **Type:** raw:video — 7 影片逐字稿/摘要；Podcast · YouTube  
-> **Updated**: 2026-06-02  
+> Type: raw:corpus
+> Harness-Layer: L4-knowledge
+> **Type:** raw:video — 8 影片逐字稿/摘要；Podcast · YouTube  
+> **Updated**: 2026-08-04  
 > **Query pattern**: BRAIN.md → 本表 → `<date>-<handle>-<id>.md`
 
 ---
@@ -17,3 +19,4 @@
 | 2026-05-17 | AI Engineer | Harnesses in AI: A Deep Dive — Tejas Kumar, IBM | Harness 深度解析；IBM 實戰 | 🔵 |
 | 2026-05-17 | Sequoia Capital | Boris Cherny: Claude Code 創始人的 Agentic 工作流 | Boris 官方 agentic 工作流 | 🔵 |
 | 2026-05-24 | Lenny's Podcast | The AI paradox: More automation, more humans, more work — Dan Shipper | AI 自動化悖論；工作本質 | 🔵 |
+| 2026-07-14 | Greg Kamradt | Thariq (Claude Code) @ Anthropic | Capability overhang／unhobbling；unknown unknowns 磨除法 | 🔵 |

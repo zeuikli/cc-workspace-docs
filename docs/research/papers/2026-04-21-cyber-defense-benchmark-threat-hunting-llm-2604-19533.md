@@ -4,6 +4,7 @@ title: "Cyber Defense Benchmark: Agentic Threat Hunting Evaluation for LLMs in S
 archived_date: 2026-06-09
 arxiv_id: 2604.19533
 authors: ["Alankrit Chona", "Igor Kozlov", "Ambuj Kumar"]
+pdf_path: pdfs/2604.19533.pdf
 published_date: 2026-04-21
 ---
 
@@ -99,7 +100,7 @@ This differs fundamentally from:
 
 ## Workspace Relevance
 
-Critical calibration for `sre`, `security-reviewer`, and `opus-pilot` in security contexts:
+Critical calibration for `sre`（v5.1 前已刪，無後繼 skill）, `security-reviewer`, and `pilot`（tier=ceiling，原 `opus-pilot`） in security contexts:
 
 1. **3.8% Claude Opus 4.6 flag rate**: Frontier models cannot autonomously perform threat hunting on raw logs — **do not design harnesses that delegate open-ended forensic investigation to the model alone**
 2. **5/13 tactics cleared**: Even best runs cover less than half the tactic space — security coverage is structurally incomplete with current models

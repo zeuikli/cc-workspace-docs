@@ -4,6 +4,7 @@ title: "Dive into Claude Code: The Design Space of Today's and Future AI Agent S
 archived_date: 2026-06-09
 arxiv_id: 2604.14228
 authors: ["Jiacheng Liu", "Xiaohan Zhao", "Xinyi Shang", "Zhiqiang Shen"]
+pdf_path: pdfs/2604.14228.pdf
 published_date: 2026-04-14
 ---
 

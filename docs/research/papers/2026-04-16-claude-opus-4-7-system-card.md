@@ -172,9 +172,9 @@ Opus 4.7 is "the most steerable model" for this behavior — responds strongly t
 
 ## Workspace Relevance
 
-This is the primary reference for `opus-pilot` SKILL. Key workspace-specific calibrations:
+This is the primary reference for `pilot`（tier=ceiling，原 `opus-pilot`） SKILL. Key workspace-specific calibrations:
 
-1. **xhigh is default in Claude Code**: The `opus-pilot` SKILL already notes "xhigh = default effort level with adaptive thinking" — confirmed here
+1. **xhigh is default in Claude Code**: The `pilot`（tier=ceiling，原 `opus-pilot`） SKILL already notes "xhigh = default effort level with adaptive thinking" — confirmed here
 2. **SWE-bench Pro 64.3%**: Opus 4.7 resolves ~2 in 3 enterprise-scale coding tasks; calibrate expectations for long-horizon work
 3. **Long-context regression is real**: `autoresearch` and `research-hub` tasks using 256k+ context should prefer Opus 4.6 or validate before migrating
 4. **Tokenizer change**: Any harness with token budget calculations (task_budgets, cost tracking) needs recalibration after upgrade

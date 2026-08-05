@@ -151,6 +151,6 @@ GPT-5.5 is the primary OpenAI competitor reference for May 2026:
 
 1. **Benchmark calibration**: GPT-5.5 leads on Terminal-Bench Hard and GDPval-AA; Claude Opus 4.7 leads on SWE-bench Pro (64.3% vs 58.6%)
 2. **Hallucination gap**: GPT-5.5 at 86% vs Claude Opus 4.7 at 36% — significant reliability difference for factual tasks in `research-hub` and `autoresearch`
-3. **Cost-efficiency**: GPT-5.5 (medium) ≈ Opus 4.7 at ¼ the cost — relevant for `finops` when choosing provider
+3. **Cost-efficiency**: GPT-5.5 (medium) ≈ Opus 4.7 at ¼ the cost — relevant for `finops`（v5.1 前已刪，無後繼 skill） when choosing provider
 4. **Terminal-Bench SoTA**: GPT-5.5 is the current best agent on Terminal-Bench Hard, above Claude Code + Opus 4.5 (58% in the Terminal-Bench paper from January 2026)
 5. **CoT stability**: Lower CoT controllability = more predictable reasoning chains — favorable for monitoring in `harness-meta` observability design

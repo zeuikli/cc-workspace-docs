@@ -34,13 +34,13 @@ Skills 是最靈活的 extension。可用 `/deploy` 呼叫，也可讓 Claude �
 
 | 觸發情況 | 加入什麼 |
 |---------|---------|
-| Claude 同一慣例或指令犯兩次錯 | 加入 [CLAUDE.md](/en/memory) |
-| 你一直輸入同樣的 prompt 開始某個任務 | 存成可呼叫的 [skill](/en/skills) |
-| 你第三次把同樣的 playbook 或多步流程貼進對話 | 捕捉為 [skill](/en/skills) |
-| 你一直要複製 Claude 看不到的 tab 資料 | 把該系統連接為 [MCP server](/en/mcp) |
-| 某個側邊任務把你的對話淹沒在你不會再看的輸出 | 用 [subagent](/en/sub-agents) 路由 |
-| 你希望某件事每次都自動發生，不需要詢問 | 寫 [hook](/en/hooks-guide) |
-| 第二個 repo 需要相同的設定 | 打包成 [plugin](/en/plugins) |
+| Claude 同一慣例或指令犯兩次錯 | 加入 [CLAUDE.md](https://code.claude.com/docs/en/memory) |
+| 你一直輸入同樣的 prompt 開始某個任務 | 存成可呼叫的 [skill](https://code.claude.com/docs/en/skills) |
+| 你第三次把同樣的 playbook 或多步流程貼進對話 | 捕捉為 [skill](https://code.claude.com/docs/en/skills) |
+| 你一直要複製 Claude 看不到的 tab 資料 | 把該系統連接為 [MCP server](https://code.claude.com/docs/en/mcp) |
+| 某個側邊任務把你的對話淹沒在你不會再看的輸出 | 用 [subagent](https://code.claude.com/docs/en/sub-agents) 路由 |
+| 你希望某件事每次都自動發生，不需要詢問 | 寫 [hook](https://code.claude.com/docs/en/hooks-guide) |
+| 第二個 repo 需要相同的設定 | 打包成 [plugin](https://code.claude.com/docs/en/plugins) |
 
 同樣的觸發點告訴你何時更新已有的功能。重複的錯誤或 code review 評論 = CLAUDE.md 的更新（不是臨時修正）。你一直手動調整的 workflow = 需要再次修改的 skill。
 

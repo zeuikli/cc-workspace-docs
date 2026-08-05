@@ -4,6 +4,7 @@ title: "Externalization in LLM Agents: A Unified Review of Memory, Skills, Proto
 archived_date: 2026-06-09
 arxiv_id: 2604.08224
 authors: ["Chenyu Zhou", "Huacan Chai", "Wenteng Chen", "et al. (20 authors)"]
+pdf_path: pdfs/2604.08224.pdf
 published_date: 2026-04-09
 ---
 
@@ -87,7 +88,7 @@ Harness is the runtime layer that unifies Memory, Skills, and Protocols:
 
 | Function | Description | Example |
 |----------|-------------|---------|
-| **Orchestration** | Coordinates agent subcomponents and tool dispatch | subagent-strategy.md dispatch table |
+| **Orchestration** | Coordinates agent subcomponents and tool dispatch | `core.md §PROPOSE 委派`（原 subagent-strategy.md） dispatch table |
 | **Sandboxing** | Isolates execution from environment damage | Docker integration, path restrictions |
 | **Observability** | Tracks component performance and execution traces | healthcheck.sh, session retros |
 | **Governance** | Enforces permission policies and safety constraints | PreToolUse hooks, CLAUDE.md rules |
@@ -158,7 +159,7 @@ Three governance challenges identified across all four dimensions:
 | Memory externalization | `schemas/progress.schema.json` + Auto Memory | ✅ |
 | Skills externalization | `.claude/skills/` + SKILL.md pattern | ✅ |
 | Protocol externalization | MCP servers + `settings.json` permissions | ✅ |
-| Harness as unification | `subagent-strategy.md` + harness-design rules | ✅ |
+| Harness as unification | `core.md §PROPOSE 委派`（原 `subagent-strategy.md`） + harness-design rules | ✅ |
 | Context budget management | compact triggers + tool output limits | ✅ |
 | Skill lifecycle management | Missing deprecation/versioning mechanism | ⚠️ Gap |
 | Observability (structured) | healthcheck.sh = static, not semantic trace | ⚠️ Gap |

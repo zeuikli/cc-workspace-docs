@@ -1,0 +1,426 @@
+---
+url: "https://www.youtube.com/watch?v=IHbsfvbfAto"
+title: "Thariq (Claude Code) @ Anthropic"
+author: "Thariq（Anthropic Claude Code 團隊）"
+archived: 2026-08-04
+channel: Greg Kamradt
+duration: "28:57"
+published: 2026-07-14
+subtitle_lang: 英文（自動字幕 en-orig）
+type: video
+---
+
+# Thariq (Claude Code) @ Anthropic
+
+**來源**: https://www.youtube.com/watch?v=IHbsfvbfAto
+**作者/頻道**: Thariq（Anthropic Claude Code 團隊）/ Greg Kamradt
+**發布日期**: 2026-07-14
+**收錄日期**: 2026-08-04
+**時長**: 28:57
+**語言**: 英文（自動字幕 en-orig）
+
+> 逐字稿為 YouTube 自動字幕（ASR），專有名詞有系統性誤植：講者自報姓名被辨識為 "Stark"（實為 Thariq）、"Claude" → "cloud"/"clawed"、"Claude Code" → "cloud code"、"Sonnet 3.5" → "Sonic 3.5"、"Remotion" → "reotion"、"unhobbling" → "unhobling"。整理版已修正，原始時間戳逐字稿保留未改。
+
+---
+
+## 核心摘要
+
+> 我們不是缺更好的 prompt，是缺「把自己的 unknown unknowns 磨掉」的能力——模型早就比我們用它的方式更強，瓶頸在人這端（capability overhang / unhobbling）。
+
+### 主張一：價值還沒被創造出來
+
+軟體與知識工作正在變便宜，但「創造價值」本身沒有變簡單。講者直言 AI 產業「還沒賺到自己的估值」，成長沒有兌現到 GDP 層級。他把 Anthropic 的一條內部價值觀拿來對照：**不要跟自己談判**（don't negotiate against ourselves）——與其自己先把優先序互相打折，不如全都要，讓現實來告訴你真正的取捨在哪。放到模型上：「好、快、便宜」是否仍是三選二，其實已不確定。
+
+### 主張二：模型是「長出來的」，不是設計出來的
+
+模型能力以尖刺（spiky）方式浮現，不是直線變聰明。舉例：如果回到 Sonnet 3.5 時代預測「模型怎麼學會寫程式」，直覺答案是 context window 變成一億 token、整個 codebase 塞進去；實際發生的卻是 tool calling + bash + grep。這條路徑事前無法推導，只能實測。
+
+### 主張三：Capability overhang — 我們在綁住 Claude 的手腳
+
+**Pokémon 案例**：「哪些寶可夢名字以 -aw 結尾？」千餘隻中只有兩隻（Croconaw／Drednaw），純靠權重回憶或網搜都答不好；但給任何有 code exec 的 agent，它會抓全表 grep 一行解掉，再往前一步還能生一個支援任意 regex 查詢的 web app。差別不在模型智力，在使用者有沒有「幫它解開手銬」的技能。
+
+**Human–Agent Interaction**：2010 年代的科技公司建立在 HCI 之上，這一代要建立的是 HAI。跟 LLM 講話是一種像寫作或公開演講的技能，練得好的人產出差距會非常大，而且會長期保持高槓桿。
+
+**把自己放進 Claude 的處境**：常見框架是「模型 + harness」，實際是模型／harness／世界／你四方關係。以 "explain how the auth module works" 為例，模型需要知道：你是誰（技術程度、對這個 codebase 熟不熟）、世界多大（legacy 巨庫要花大量 compute 開 sub-agent，小庫直接讀完就好）、能不能拿到 git／Slack 等旁證、以及**你為什麼問**——人類被老闆這樣問會先反問「要拿來幹嘛」，Claude 拿不到這個 for-what。改良版 prompt 因此長成：「我是資深 TypeScript 工程師、對這個模組零基礎、這題值得花 compute，請用 sub-agents。」
+
+### 主張四：unknown unknowns 是真正的瓶頸（影片剪輯案例）
+
+講者現在的影片端到端由 Claude Code 剪：拍攝素材 + 逐字稿丟進去，Claude 轉錄所有片段、比對他要講的稿子挑選 cut、拼接、再依團隊 Figma design system 生成 React overlay UI 編譯進成片。他的定性是——**知識工作正在變成「一個由 agent 操控的、裝著 code / script / data 的資料夾」**。
+
+第一版與第二版的差距在調色（color grading）。他懂 ffmpeg、懂轉錄、懂 Remotion，這些 known knowns 讓他走到能剪片；但調色是他的 unknown unknown，於是成品是過曝的原始感。修法不是換 prompt，是**把未知磨掉**：要求 Claude 解釋調色，第一份報告他看完仍然不懂（他稱這種現象為 education porn——看起來很酷、實際沒學到），於是持續追問「vector scope 是什麼」、要求補外部文獻、要求生成前後對照範例，最後讓 Claude 做出一個可以逐像素觀察數值變化的視覺化工具。到這步他建立起可用的心智模型（調色≈shader：吃一個像素、吐另一個像素），也拿到具體洞見：**膚色要與背景分開調，因為人眼對膚色的容錯範圍窄，背景偏紫可以、臉偏紫不行**——而他這支片的膚色與背景色恰好很接近。
+
+結論：把 agentic engineering 簡化成「不就是 prompt、不就是 loop」是誤判；要做出有價值的產出，你得真的多懂一點。Johari 四象限被明確點名（known knowns／known unknowns／unknown knowns／unknown unknowns），unknown knowns 被描述為「看到才認得出來」的那類。留給聽眾的一句話：**你很可能有一大堆 unknown unknowns，而且因此不夠有野心。**
+
+### Q&A 重點
+
+- **Claude Tag vs Claude Code**：探索、思考、產 artifact 用手機看，用 Claude Tag；in-the-loop coding 仍在 Claude Code。Claude Tag 擅長「起頭、管理任務、多人協作」，且在 Anthropic 內部預設就是 multiplayer。
+- **模型怎麼變強的？** ask_user_question 工具（講者自己做的）從 Opus 4 勉強能呼叫一次，演進到能串接、能一次問 30–40 題「面試你」、到現在能生 HTML 報告讓你在報告裡選答案。同理 markdown → HTML：一開始 markdown 是模型自我對齊的手段，後來是溝通媒介，現在得換成 HTML 才解得開新能力。**格式要跟著能力換**，但怎麼事先知道要換——他直說沒有科學方法，這是「兆元問題」。
+- **agentic 開發是不是退回瀑布式（spec → 實作 → QA）？** 他的實務是大量便宜原型先行（HTML mockup，不要求 agent 真的實作），因為「我通常不知道自己要什麼」，而發現要什麼的過程常常發生在實作的 80% 處——那正是拖慢一切的地方。做法是 spec → interview → prototype →（可能是 prototype PR）→ 看喜不喜歡 → **reset 重來一次帶著學到的東西**。
+- **plan mode 還用嗎？** 不用了（現場笑點，Claude Code 團隊的 Daisy 也在場）。
+- **怎麼決定該花時間跟 Claude 學什麼？** 沒有簡單答案。agentic engineering 很好玩，容易變成沒有驅動任何成果的娛樂；該回頭問「我的產出哪裡不對、怎麼變好」，答案通常是某個你講不清楚的 unknown unknown。不必什麼都學，但有些東西你非學不可。
+
+---
+
+## 整理版（可讀逐字稿）
+
+### 開場與定位（00:00–01:44）
+
+講者為 Anthropic Claude Code 團隊成員（YouTube 標題為 Thariq；自動字幕誤植為 "Stark"），加入約一年，此前是 YC 創辦人、經營公司五年，轉進 AI 前曾在 Goodfire 做 interpretability。他自陳原以為只有七個人來、內容尚在成形（下週要在 AI Engineer 做 keynote），所以會在幾條線之間跳。
+
+### 我們還沒兌現 AI 的承諾（01:44–03:51）
+
+「你到底把 token 花在哪？成長在哪？」——他認同這個質問。軟體與知識工作變便宜是明顯的，不明顯的是創造價值依然極難，而軟體與知識工作只是其中一部分。AI 產業還沒賺到自己的估值。對策是 Anthropic 的「不跟自己談判」：不要先自己把優先序折衷掉，全都要，讓現實來揭露真正的取捨。以前當 CEO 會列優先序再互相 trade off，很合理——但如果不那麼「合理」呢？在 AI 上，「好、快、便宜」是否還互斥，其實已不確定。
+
+### 模型是長出來的，能力呈尖刺浮現（04:12–06:41）
+
+LLM 很怪，是新東西。2010 年代的公司建立在 human–computer interaction 上，這一代要發展的是 human–agent interaction；跟模型講話是像寫作、公開演講一樣的技能，會長期高槓桿。模型是「養」出來的不是設計出來的：資料、RL 環境、pre/mid/post training 都是細心培育，但在拿到模型前不知道它會擅長什麼。因此模型不是沿直線變聰明，而是以意料之外的方式變聰明。範例：Sonnet 3.5 時代若預測模型怎麼解決 coding，直覺是 context window 擴到一億 token 把整個 codebase 塞進去；實際的解法卻是 tool calling、bash、grep。
+
+### Capability overhang：Pokémon 案例（06:41–09:34）
+
+網路上有「連 ChatGPT 都答不出哪些寶可夢以 -aw 結尾」的嘲諷推文。事實：一千多隻寶可夢裡剛好兩隻符合，連資深玩家也不會先驗知道。可能的解法裡，「全靠權重記憶」與「上網搜」實測都給不出答案；有效的是丟給任何有 code exec 的 agent——Claude Code 會抓出全表、grep 一次解決，一行搞定。再往前一步，可以請它生一個支援任意 regex 查詢寶可夢的 web app。一般使用者問一次沒得到答案就停在那裡，因為缺的是「怎麼問得更好、怎麼給它需要的工具」這項技能。模型能做到的事與我們實際用它做的事之間的落差，就是 capability overhang。
+
+### 把自己放進 Claude 的處境（09:34–11:39）
+
+慣常框架是「模型放進 harness、配好工具」；實際上是模型、harness、世界與你之間更複雜的關係。以 "explain how the auth module works" 這個看似不錯的 prompt 為例，Claude 需要知道：你是誰（懂不懂這個 codebase、技術程度、要多深）、世界長怎樣（大型 legacy 庫要花大量 compute、開 sub-agent；小庫直接做完）、還能從哪裡取得脈絡（git、Slack）、以及使用者為什麼要問。人被老闆這樣問會反問「要拿來做什麼」，Claude 拿不到這個資訊。harness 可以補一部分（記憶、逐漸認識你），但仍有缺口。更明確的寫法：「我是資深 TypeScript 工程師，對這個模組零基礎，但這是高 compute 問題，請用 sub-agents。」
+
+### 意料之外的能力：Claude 剪影片（12:00–15:46）
+
+近期讓他意外的是影片剪輯。影片由影像團隊拍攝，之後端到端由 Claude Code 完成，他不碰剪輯軟體。成品包含跨多段素材的選 cut、去掉語助詞、生成 overlay UI。多數人不會認為 Claude 會剪片，而且直接問 Claude，它也答不上來——它不知道怎麼替自己解開手銬。做法本質是 code generation：給它一資料夾的原始片段，外加他要講的逐字稿，讓它轉錄所有素材、挑出與稿子最匹配的片段、剪接，並依團隊 Figma 與 design system 生成 React UI 元件，最後編譯成片。他的定性是：知識工作正在變成一個由 agent 操控的、裝著 code、script 與 data 的資料夾。（連這段用來解說流程的 artifact 也是請 Claude 生的。）
+
+### 調色：一個 unknown unknown 的完整處理過程（15:46–19:57）
+
+第一支與第二支影片最大的差別是色彩。原始素材是偏過曝的 raw 格式，如何把顏色帶出來其實有很多門道，而他當時完全不知道自己不知道這件事。四象限：known knowns（你要什麼）、known unknowns（還沒搞定的）、unknown knowns（看到才認得出來的）、unknown unknowns。他懂 ffmpeg、懂影片轉錄、懂 Remotion，所以能走到剪出成片；但調色是純粹的 unknown unknown。
+
+修法：請 Claude 講解調色。第一份報告看起來很漂亮但他其實沒學到東西——他稱之為 education porn，很多人到這步就滑過去了。他選擇硬啃：要求做更多視覺化、逐項追問（vector scope 是什麼？各參數在做什麼？）、要求引入外部文獻、要求生成新舊版本對照範例。關鍵突破是一個能逐像素觀察數值如何變化的視覺化，讓他建立起心智模型：調色本質接近 shader——吃進一個像素、吐出另一個顏色的像素。有了模型，他才能對 Claude 說出「我要的是這種感覺」，並得到具體洞見：膚色與背景要分開調，因為人眼對膚色的可接受範圍比背景窄（背景偏紫可以，臉偏紫就怪），而他這支片的膚色與背景又非常接近。
+
+### 結語（19:57–21:01）
+
+把 agentic engineering 說成「不就是 prompt、不就是 loop」是過度簡化；實際上你得知道自己在幹嘛、得去學、才能把 prompt 寫好、才能產出有價值的東西。這支影片如果他不能自己剪就不會存在——外包根本來不及。保持在迴圈裡的技巧他另有寫作（與 Claude 探索、腦力激盪、讓它面試你、建技術計畫、寫實作筆記與 explainer），但他不逐項展開，因為高層次的想法就一句：你很可能有一大堆 unknown unknowns，也因此不夠有野心；把這些磨掉，才能解開 Claude 的手銬去做更有用的事。
+
+### Q&A（21:01–28:42）
+
+**Claude Tag 佔多少工作流？** 相當多，但仍分工：探索與思考（生 artifact、在手機上看）用 Claude Tag；in-the-loop coding 留在 Claude Code。Claude Tag 強在起頭、管理任務、多人協作。內部預設 multiplayer，也確實以團隊方式在 feedback channel 使用。
+
+**如何「同理模型」並設計它的環境？** 他坦言目前仍是一門手藝。補充了跳過的段落：ask_user_question 是他做進 Claude Code 的工具，用法一路演進——起初模型只能呼叫一次，接著能串接、能一次丟 30–40 題面試你，現在能生成 HTML 報告、讓你在報告裡挑答案；而 Opus 4 當時連呼叫這個工具都很勉強。同樣的曲線也發生在 markdown → HTML：markdown 起初是模型維持自我對齊的手段，後來變成對人溝通的媒介，現在要換成 HTML 才能解鎖新能力。模型變強是尖刺式的，格式要跟著換；至於怎麼事先知道該換——他直說沒有科學，「大概是兆元問題」。（提問者追問兩條路線：一是放寬環境、靠 bash 這種極寬鬆介面讓推理湧現能力，二是靠更多訊號與工具供給資訊；他認為聽起來對，但需要再想是不是正確的框架。）
+
+**agentic 工作是不是退回瀑布式？** 提問者的觀察是：interview 就是需求規格、iterate 就是 QA。他反問目標是什麼，得到的答案是「東西做得出來，只是比我想要的慢」。他的做法：先做大量便宜原型（例如 HTML mockup，不必讓 agent 真的實作），藉此摸清自己要什麼。他強調「我常常不知道自己要什麼」，而這個發現往往深埋在實作過程中——通常走到八成才發現方向錯了，那正是最拖慢速度的地方；所以要想辦法把這個發現往前推。他的循環是 spec → interview → prototype →（有時做成 prototype PR）→ 看喜不喜歡 → 帶著學到的東西 reset 重來。
+
+**還用 plan mode 嗎？** 不用了；他說這件事得處理一下（Claude Code 團隊的 Daisy 也在現場）。
+
+**怎麼決定花時間跟 Claude 學什麼？** 提問者形容自己的 brain rot 是聽 Claude 解釋東西，一小時後發現「我需要先補線性代數」。他承認沒有簡單答案：agentic engineering 本身很好玩，有時只是好玩而沒有在推動任何成果——這不必然是壞事，但該定期回頭問「我的產出哪裡不對、怎麼變好」，答案通常是你有講不清楚的 unknown unknown，或對使用者了解不夠。Claude 可以幫你回答；你不需要什麼都學，但有些東西你非學不可。
+
+---
+
+## 逐字稿（含時間戳）
+
+**[00:00]** I I think it's just [music] more like the highle idea of like you probably have a lot of unknown unknowns, right? And you're probably not being ambitious enough. [music] I think we sometimes oversimplify
+
+**[00:10]** agentic engineering where we're like it's just [music] prompts, it's just loops or whatever. And I think it's more like no, we need to know what we're doing. We need to like learn more and then like be better at prompting [music] and and make sure we're creating like
+
+**[00:20]** valuable work. >> [music]
+
+**[00:31]** >> All right. Okay. [music] Cool. Hey guys, uh my name is Stark. Is is the mic working fine? Yeah, it's good. Uh cool. Okay. Yeah. Um [applause] thank you.
+
+**[00:41]** Thank you. Yeah. Um yeah, I uh work on the cloud code team and uh yeah, I um I I've been working on it for about a year now. Before this, I was a a YC founder uh and
+
+**[00:54]** ran that company for about five years. Um decided to get into AI. Actually, Eric is here from Goodfire. Eric was like my first sort of like AI gig, you know. So, like I did some interpretability work with with with
+
+**[01:05]** Goodfire. Uh eventually ended up on the cloud code team. Um and uh yeah, so I Okay, I I thought there were like going to be seven people at this event. And so I I was sort of like, you know, you have
+
+**[01:17]** to sort of like shape your content on on on the audience. I I'm super excited to talk about this. I I have a bunch of ideas I want to talk about. Um and I have a Yeah, I've had giving an AI engineer keynote next week, but this is
+
+**[01:30]** sort of like mid formation of these ideas. So there are like a few different like things I'll I'll jump between. So like please like, you know, bear with me a little bit. I I think there's like a
+
+**[01:40]** good thread of thought, but you know, like maybe everything won't be like the decks won't be color aligned or something, you know. So, um and I'm not sure if this is the title I'll go with. I'm I'm not sure, but okay, the the
+
+**[01:53]** primary thing I want to talk about is um like we need to be better, you know? I mean, like I I think like you know, people tag me on Twitter sometimes, they're like, "What are you spending all
+
+**[02:03]** the tokens on?" You know, like what what what's happening? Where's the like where's the growth? And I'm like, you're right. You know what I mean? Like like we like I think the goal for AI is to like really meaningfully improve, you
+
+**[02:15]** know, like how uh like humanity, you know, like like our GDP, right? And I think that we haven't shown this yet. Uh and so how why right I I think the thing
+
+**[02:25]** that we all obviously see is like software is becoming super cheap, right? Knowledge work is becoming cheap, right? Um and this is like you know like
+
+**[02:36]** obvious to us but I think maybe less obvious is that like generating value is still really hard you know and like uh building startups as I'm sure many of you are doing here is extremely hard and
+
+**[02:47]** bu software and knowledge work are parts of this right um but it's like not all of it right and we haven't honestly earned like our valuations we haven't
+
+**[02:58]** earned the like you know the amount of money we're putting into AI yet I think you know um because there's still more value to create, right? And so, uh, why, you know, and I I think like the the
+
+**[03:09]** thing I come back to that I've really appreciated at Anthropic is like we have this value that's like we don't negotiate against ourselves, you know, and so I remember being a CEO of a
+
+**[03:19]** company and being like, okay, what are our priorities? Let's write down the priorities and then let's figure out how they trade off against each other. Um, and it was very reasonable, but like, uh, what if you were less reasonable,
+
+**[03:30]** you know? I mean, like what if you ask reality to kind of show you what the trade-offs are? And I feel like what I really appreciate at Anthropic is we're like, let's just do the thing, you know, let's just do all of it. Force us to be
+
+**[03:40]** shown what the the trade-offs are, right? And um I think with AI and Claude more than more than anything, I think it's like, you know, what are the trade-offs really? It's harder to tell,
+
+**[03:51]** right? Like is good, fast, and cheap still a trade-off? uh maybe not right and so I think that this like the qu like you know like how do we free ourselves from the mental models of like
+
+**[04:03]** you know what our trade-offs are what our ambitions are things like that um so that we can ultimately deliver the promise right of of AI so um this is something that I've been thinking a lot
+
+**[04:14]** about and and you know I'm kind of like okay why why you know why is this so hard I think one of the reasons is that like LMS are just really weird and they're like a new thing and we need to
+
+**[04:25]** like figure this out, right? So, okay, whatever. Um, yeah, I think it's like uh I think this is like roughly the art of like human agent interaction, you know, and like it's a very I I think a lot of
+
+**[04:38]** the, you know, tech companies in like the 2010s were built off human computer interaction, right? Like UIs, like UX, like incredible like patterns and like now we have to have develop this like
+
+**[04:48]** new like technique, right? Human agent interaction. Um, and I think like talking to LLMs is like is a new skill, right? It's like prompting or public, sorry, it's like public speaking or writing or any of these things. Uh, if
+
+**[05:00]** you're good at it, you can drive like a ton more value than, you know, someone who's not good at it, right? And and so it's something that I think will continue to be like high leverage for a
+
+**[05:10]** very long time. Um, and I think it's important for us to I I think acknowledge that, right? Like I don't think the end goal is like uh you know, you just put a sentence into cloud and it like does the thing for you. I think
+
+**[05:21]** there's a lot of like depth here. Um and uh it's because the models are like grown not designed right so um you we like are cultivating the data the RL
+
+**[05:33]** environments the like you know etc etc like all of the things that like go into pre-post mid training um but we don't know what the end outcome will be until
+
+**[05:43]** we get the model right like it's like you don't just decide like hey this model is going to be you know 95% on bench you grow it right and uh we you grow with a lot of care. Uh but they're
+
+**[05:55]** organic things and like we don't exactly know what they will be good at until like we really try them, right? Uh we have some guesses. Uh but these things emerge like in spiky ways. And so I I
+
+**[06:08]** say that like models don't get smarter in a straight line, right? They get smarter in unexpected ways. Um I think one of the like best examples is that like uh you know if you were to go back
+
+**[06:20]** to like maybe Sonic 3.5 and you look at cursor and you're like okay how does the model like solve coding you're like okay obviously the context window get really really large like a 100 million token
+
+**[06:30]** context window and then like we just fit the entire codebase in and just solves it right like that's how you think the model would get faster but but it didn't happen like that right it like got better by doing tool calling and by bash
+
+**[06:41]** and GP and and like how do you figure that I don't know. You just have to you have to do it, right? So, um I think they're smarter than they think and we're hobbling clawed is what I think a lot about is that like part of the
+
+**[06:52]** reason that you know we haven't achieved as much growth as we could is that we like you know wow we are hobbling clawed. Um so I'll give a case study here uh that that I like. Uh Pokemon
+
+**[07:04]** ending in awe. There was this tweet about like, you know, this font may be too small, but basically like there was like an AI hate tweet going on where I was like, I can't believe chat GPD can't
+
+**[07:16]** answer Pokemon ending with AW. You know, Cloud could answer it, but like we let's not get into that. Um, [laughter] but but well, it's uh why, right? So, uh
+
+**[07:27]** there are over a thousand Pokemon. Um, exactly two of them end in awe. It's Crocana and Dreadnaugh. I didn't know that. I'm a big Pokemon fan, but like you know most Pokemon people would not
+
+**[07:39]** know that a priority, right? Um and so chatt found one. Um and so like how would you solve this? Like like let's say we obviously think the models are smart enough. Why why couldn't it? And
+
+**[07:50]** how would it solve it? One idea is like it's all in the weights. You just remember the weights like you know like obviously it knows every Pokemon. It should just think fast enough or like it should just remember or it should like
+
+**[08:00]** think you know and just think out all the words. um or it searches the web, right? And like all of these things like it it will not give you the answer, right? This is kind of empirical like is
+
+**[08:12]** there a version of like the architecture that does just remember uh maybe you know but like empirically this does not happen but the models are obviously smart enough. So what works is like you
+
+**[08:23]** ask cloud code you ask any like coding any agent with a code exec tool right um and cloud code will like get the list of
+
+**[08:33]** all Pokemon and GP for once that ended aw right and so this is like one line it'll just do it um and like if you were you know like if if you're an average
+
+**[08:44]** user you just don't you're like this you ask you know a model why what the Pokemon ending in aw you are and it doesn't and like you you just stop there, right? Like you just don't have
+
+**[08:55]** the ability or you don't have the skill of understanding claude well enough to be like, oh, like how do I prompt it better? You know, how do I like give it the tools needed? Right? Um unhobling it. So, but you can go further. You can
+
+**[09:06]** generate a web app that like you know uh searches any like combination of reg x for Pokemon, right? And like like there's so much more abundance than than
+
+**[09:17]** you than you think or like than the problem implies. Um so yeah we call this capability overhang right like we call like the idea that like what the models can do
+
+**[09:28]** and like what we like you know are utilizing them for are mismatched right and I think definitely like you know open 4.8 data has like incredible capability overhang to me like fable
+
+**[09:38]** like you know just I feel bad about it right so um I I think like uh yeah the but but why is it hard I I think like um
+
+**[09:49]** one of the things to do is like let's try and put ourselves in Claude's shoes right and so the usual framing is like it's just the model in the harness like you just you figure out like you know what the tools are and you put it in um
+
+**[10:01]** but like let's say you're claude like it's more of a complicated relationship between like the model, the harness, the world and and you, right? So, um yeah,
+
+**[10:11]** it's like putting ourselves in its shoes. So, let's say that you wanted to like explain how the odds module works, right? This is like a very this is maybe even a good prompt that someone might
+
+**[10:22]** put in, right? Uh but in order to do this, like it needs to know who you are, right? Like do you know anything about the codebase? Are you technical or not? You know, like how technical are you? Uh what level of depth do you want? Uh the
+
+**[10:34]** world, right? like how big is this codebase? This actually has a big implication, right? Like if you're doing this in like a large legacy codebase, you need to spend a lot of compute. If you're doing it in a small codebase,
+
+**[10:45]** maybe you have no sub agents, you just you just do it, right? And so this is something that cloud needs to figure out too. Um and then like what other context can it get, right? So can it look in git or
+
+**[10:58]** slack or like you know like is there like more nuance around around the O module? Why is the user asking me this? Right? And like if like your boss came
+
+**[11:08]** up to you to like, hey, explain me what the O module is. You might be like, well, what for what, you know, I mean like how how do I get more context so I can answer this question in the way you want, right? Uh but claude doesn't
+
+**[11:19]** really like get the for what, you know? Um and so yeah, and of course like the harness can help with some of this, right? Like it can do memory, it can like learn a little bit more about you. Um, but there's still like a lot here
+
+**[11:30]** that like Claude, you know, like we have some work to do. Uh, and and so like, you know, one example of making this prompt more explicit is like, uh, hey, like I'm an experienced TypeScript
+
+**[11:41]** engineer. I have zero familiarity with this module, but like it's kind of a high compute problem, so use sub aents, right? So, uh, this is one way that you might get like a little bit more precise. Um,
+
+**[11:52]** now, okay, let's see. I think like I kind of want to switch tracks a little bit here right now and I want to talk about
+
+**[12:03]** um sorry this is one of those things where I haven't figured exactly okay cool yeah um yeah so another thing like unhobbling claude putting thing putting
+
+**[12:14]** ourselves in claude shoes uh what are like you know how do we discover what claude can do right I think one of my like uh I I think there's a lot of room for surprise here. And so one of the
+
+**[12:26]** things I've been recently well surprised about is video editing, right? So um Claude like just edits videos that we now, you know, like I shoot them with the like a video agency and then uh it
+
+**[12:39]** end to end I don't use a video editor. I just use cloud code and it generates videos that you know look like uh look like this, right? So it's um you know
+
+**[12:49]** showing me like it's generating the UI as well. It's generated this across many different cuts and so it's decided like you know which are the best cuts of the data. Um it's like cut out ums and
+
+**[13:01]** things like that, right? Um and it's, you know, done some pretty like impressive like UI, you know, like it's uh done these overlays and things like that. And uh yeah, I'd say like if you were ask people, you know, hey, can
+
+**[13:12]** Claude edit videos like you know, they they they wouldn't think it could, right? Um and like how do you even like like what does the process or if you were to
+
+**[13:23]** ask Claude to edit a video, it probably wouldn't be able to answer you in this way, right? because it it just doesn't you know know how to unhobble itself. So um yeah how does that look like right
+
+**[13:33]** and how do you get to this? Um I will so uh the high level is that it's code generation right and so uh this is
+
+**[13:44]** like a representation of the folder I got here and uh uh some of the previews. Yeah. I mean like the the idea I want to
+
+**[13:55]** leave you with is like there's a bunch of clips here. Oh, maybe I have it here. Okay. Yeah. Uh there's a bunch of clips that I'm given. Um, and this is essentially the raw material of the like
+
+**[14:07]** video, you know, and then what I ask cloud to do is I I give it a transcript as well. This is the transcript I was working from. Uh, so it has an idea of like, you know, what I'm trying to say.
+
+**[14:17]** Um, and I ask it to transcribe it, right? And so it does, uh, let's see, it does a bunch of transcriptions. Um
+
+**[14:28]** there's so much stuff here, but this is like essentially what knowledge work is increasingly becoming. It's like just a folder of code and scripts and data, you know, that is like
+
+**[14:39]** uh like controlled by an agent, right? And so, um, yeah, roughly what it does is, and the funny thing is I I asked it to make this,
+
+**[14:51]** uh, artifact as well to show you guys to sort of simplify the the process. Um, but yeah, it makes a bunch of, uh, transcriptions of the uh of the of each
+
+**[15:04]** video. It decides then which clips to do, which map up to my transcript the best, and then starts editing them, clipping them together, and then making UI to go along with it as well. So, it's
+
+**[15:16]** generated a bunch of UI here in using React that will then compile compile together into like the end video, right? And uh it's also deciding which UI
+
+**[15:26]** elements to make given the like Figma and you know, design system from our team. Um, more than that. So, I did all of this
+
+**[15:36]** the first pass. This was the first video I did. Um, and this was the second. And I think there's like a big difference here is like the color. So, like one of the things I had no idea about is color
+
+**[15:46]** grading, right? Color grading is I still I know more about it now. Um, but like you know when you get a video like turns out they give you in in this like raw format which is like sort of overexposed
+
+**[15:58]** and and there's actually a lot of art in like oh how do you bring out the color of a video right? Um and this was something where uh this was a place
+
+**[16:08]** where I realized I had a lot of unknown unknowns and uh okay let me come back now I'm like sort of deciding how how I want to like so yeah what does it mean
+
+**[16:20]** to be good at agentic engineering right like I I think like how do you like sort of uh how do you solve these problems like how do you like uh yeah what's the skill like and I think it comes down to
+
+**[16:32]** a lot of like unknown known, right? And like with like there are known known like what do you want? There are known unknowns, what you haven't figured out yet. Unknown unknowns, things like that
+
+**[16:43]** are obvious that you don't know yet. And sorry, unknown knowns that are things that are obvious but you haven't uh you only recognize it when you see it. And then unknown unknowns. And so in this
+
+**[16:53]** case, this was me being like, wait, I have so many unknowns about color grading, right? This is one of those things where um in order for me to be an better agentic engineer, I know a lot about how ffmpeg works, how video
+
+**[17:05]** transcription works, how reotion works. I know all these things and that's what let me get far enough to edit this video. Um but I didn't know enough about unknown unknowns, right? Um or about
+
+**[17:16]** color grading in particular was like a big unknown unknown for me. And so the question is like how do you fix that, right? And I think this is like a big problem overall. Like we if our goal is
+
+**[17:27]** to ship better things faster to like, you know, drive GDP, to make better products, we have to get really good at grounding down our unknown unknowns. Um, and so what I did was I ended up asking
+
+**[17:39]** Claude to tell me about color grading. And there is a version of this where like sometimes you just ask Claude and then you like sort of glaze over the like the report, you know? This happens
+
+**[17:50]** a lot. I I think it's kind of like education porn sort of. You're like, "Oh, like yeah, this is, you know, it looks cool." But I I I it generated this and I honestly had no idea really what color grading was from this. I couldn't
+
+**[18:01]** prompt it better. I couldn't like figure out better. But I really tried to stick through it. So I asked it to like sort of show me create more visualizations. I kept asking questions like, "Oh, like
+
+**[18:12]** hey, why you know like like what do these different things do? Like what is a vector scope?" like um uh yeah ask giving me like some sort of like it
+
+**[18:22]** pulled literature elsewhere from you know uh from color grading and put it in here and then finally it made showed me a bunch of examples of like okay this is
+
+**[18:33]** you know your old version this is a new version uh ultimately color grading is kind of like a shader it's like you know you take in a pixel you output a different pixel color um and this is like a good mental model for me to build
+
+**[18:44]** I knew what a shader was Um, and the thing that really got me here was like I was able to build a visualization where I could go over every pixel and see how the value would change over time, you
+
+**[18:55]** know? And so like I think through this like visualization, I was able to figure out, okay, what does color grading do? And then I could ultimately tell Claude like, hey, I want something like this.
+
+**[19:05]** And like the insight I got here is that you want to grade your skin differently than uh the background because humans have a larger lower dynamic range for a
+
+**[19:16]** skin color. Like it'll look weird if you're like kind of purple, but the background can be kind of purple. You know what I mean? [laughter] Yeah. Yeah. Yeah. And and in this particular case, um my skin color and
+
+**[19:28]** the background were very close together. And so there was like some, you know, more interesting work for Claude to do, but like I was able to like express this problem and sort of figure out, okay, what what is wrong with it, you know,
+
+**[19:39]** like what could be better? Um, and then like fix it, right, through this like process of like grounding down my unknown unknowns. And uh, yeah, I think that like there is so much work to do in
+
+**[19:51]** that case, right? And I think like some of what we, you know, I think we sometimes oversimplify agentic engineering where we're like it's just prompts, it's just loops or whatever. And I think it's more like no, we need
+
+**[20:02]** to know what we're doing. We need to like learn more and then like be better at prompting and and make sure we're creating like you know valuable work, right? And in this case it this video and would not have happened if I hadn't
+
+**[20:14]** been able to um you know to to edit it myself. it would have like we actually couldn't pay it someone to edit it fast enough like we just couldn't. Um so yeah
+
+**[20:25]** there are some techniques on like how to stay in the loop. Um these are like you know I I'm writing more on this like I think exploring with Claude and brainstorming asking them to
+
+**[20:36]** interview like um we talked about in the last talk building technical plans explanation implementation notes explainers um I'm not sure if I don't think I want to go one by one over these
+
+**[20:47]** things. I think it's just more like the highle idea of like you probably have a lot of unknown unknowns, right? And you're probably not being ambitious enough uh kind of as a result almost and like how do you sort of uh free
+
+**[20:59]** ourselves of this so that we can now like unhobble Claude to do more more useful work. Um so yeah that's uh that's that's my talk. Yeah. [applause]
+
+**[21:14]** >> A question here. Yeah. >> Claude tag. >> Yes. >> How much of your workflow has shifted over to cloud tag? >> Um quite a lot. Uh but I think like I
+
+**[21:24]** still do a lot of like exploration with cloud tag for example. Um I like sort of do a lot of thinking through it. So I might ask it to generate like an artifact or something and view it on my
+
+**[21:35]** phone. Um but most of the like in the loop coding still happens with cloud code. Um and uh it's more like you know cloud tag is great at getting work
+
+**[21:45]** started. It's great at managing jobs and things like that. Great at being multiplayer. Yeah. >> Is cloud tag still single player mode within the organization or did it is it multiplayer now? >> Oh no, it's multiplayer by default for
+
+**[21:56]** everyone >> by default but has it been adopted as multiplayer like organizationally? >> Um yeah I think so. Yeah. Yeah. We have it in feedback channels and things like that. people do together. Yeah.
+
+**[22:07]** >> Cool. >> Yeah. >> Uh could I get to know a little bit more about your process for like empathizing with the model and then designing the environment around it because it's not like pure in a human sense like >> if you're leveraging pure reasoning then
+
+**[22:17]** you want like more composability or like >> you know some level of common denominator across every tool rather than like adding on more and more. >> So is there any other like intuitions that you kind of learn through like
+
+**[22:27]** >> iterating with different tools? Yeah, I I'm trying to figure out uh yeah, I I think there's like I I overall think this is an art kind of right now. Like I I think that um one of the things uh
+
+**[22:41]** Okay, I do need to Oh, actually actually no, I I skipped this part of the talk. Maybe I can actually go back to this. Um yeah, some some examples of how Claude gets better over time. Um I do need to
+
+**[22:52]** take credit for this actually. Uh I did the interview grill me thing like um I you know I think Matt later made it into a skill but I was the first one to like sort of identify that. Um but ask user
+
+**[23:03]** question is a tool that I built in cloud code. It helps cloud code ask you questions and th this how you I've used it has changed a lot over time where like you know initially the model could
+
+**[23:14]** just call it once and then I tried being like oh can you chain it together? Can you interview me? um and then you know would like put like 30 or 40 questions together. Now I ask you to build HTML
+
+**[23:25]** reports you know and and sort of like uh get much more in depth and then uh select the answers from the HTML report. Um and so the how you get through this progression like Opus 4 could barely
+
+**[23:37]** call the ask user question tool. It was like actually kind of hard. Um and now it's like there's so much capability overhang on top of it. Um, similarly with like markdown and HTML like this is
+
+**[23:48]** something that you know I've talked about a bunch before where you know originally markdown uh was a way that like maybe you know the model kept itself on track and now then it became a
+
+**[23:58]** way of communicating to you and now like it can create you know really rich HTML reports and this is like the like the model is getting smarter but in these spiky ways right you need to switch
+
+**[24:09]** formats from markdown to HTML um in order to unlock its capabilities. How do you figure that out? I I don't have like a science for you. You know what I mean? Like I think that's like I think the maybe trillion dollar question.
+
+**[24:20]** >> So just to clarify, there's like two different ways. There's one versus environment where like ideally it's just like bash or super lenient where it's like you have all these emerging properties that come out of just like more reasoning. Yeah. >> And then the other is like it could only
+
+**[24:31]** work with the information it has. So that's like more signal and like having these or necessity these tools in the first place. >> Yeah. Like the context and things like that. Yeah. I I mean um I I that seems
+
+**[24:42]** right but I need to think on it more kind of if that's the right uh paradigm. Yeah. >> Yeah. >> Um question. So to me a lot of agentic work seems a little bit like the old
+
+**[24:54]** school unsexy waterfall like software development right where you have specifications then you have implementation QA all of that right? >> Yeah. So how would you say
+
+**[25:07]** one could go beyond that specifically for agents because right now it's like interview me that's basically requirements and specifications right like iterate that's QA >> sure
+
+**[25:17]** >> so how do you think one can make it better for agents >> um what's the end goal you think like is there like a problem you're seeing >> build software right like um like for example like I've been using it a lot
+
+**[25:28]** for software building >> so a lot of times I have an idea of what I wanted to build and I iterate, you know, via different ways. >> Sure. >> So, but I still have somewhat of a
+
+**[25:39]** product in mind. >> Yeah. >> That I want to build. So, I kind of follow this process, but I'm trying to figure out how to do it in a better way. So, that maybe because like to your point, there's a capability overhead.
+
+**[25:49]** Like, what am I missing? What am I not thinking? How should I think about interacting with agents in a more sophisticated way? >> Yeah. So the the problem is that the agent is not building exactly what you
+
+**[26:00]** want and like there's some mismatch between you and the agent. Is that right? >> It's building what I want. It's just it takes longer than I would want. >> Um
+
+**[26:10]** yeah, I mean uh I think there is it kind of depends on your particular flow. Like I I think like one of the things I do a lot is I build a lot of prototypes first. And so these prototypes can be
+
+**[26:20]** really cheap. like you know you can sort of like build a mockup in HTML so the agent doesn't need to fully implement it and so then you can sort of get a sense of what you want. I often find that I
+
+**[26:31]** don't know what I want when I'm building something and there's like a iterative process of finding out what I want that can happen like quite deep in the implementation process and that's usually what slows me down is like I'm
+
+**[26:42]** like 80% of the way there I'm like ah no that's that's wrong you know so like how do you like get that earlier and earlier um and like what I like to do is I I have this like iterative like spec
+
+**[26:54]** interview prototype uh see if I like the prototype maybe even like make a prototype PR are kind of all in along the way. Um then I might reset and take those learnings and and start again, you
+
+**[27:05]** know. Um because uh yeah, I just like I want to build the most valuable thing I can, you know. Yeah. >> Yeah. Daisy. >> Yes. >> Do you still use plan mode?
+
+**[27:16]** >> No. Yeah. We need to do something about this. Yeah. Yeah. Yeah. Daisy also works on cloud code, so um Yeah. Yeah. Yeah. Uh [laughter]
+
+**[27:28]** >> yes. >> All right. Last question, Robbie. >> Uh, how do you decide what to like have Claude spend like take time to learn from Claude? I feel like my primary form of brain rot these days is like Claude explaining stuff to me and like an hour
+
+**[27:39]** later I'm like, "Oh, I need remedial matrix algebra to understand this." Like just go home. I don't know. >> Yeah. Yeah, I know what you mean. Like, let's see. This is a good question.
+
+**[27:50]** Honestly, like I don't think there's like an easy answer. I I think that like um you know, like Yeah. Like ultimately it's like what is the goal that you're doing? I I do think one thing about
+
+**[28:00]** agentic engineering is that it's so fun. Like sometimes you can just be like just do this and it's just fun and you're not actually driving an outcome. I I'm not saying that's bad but I'm saying like you know like sometimes you do want to
+
+**[28:10]** be like okay what what is wrong about my output? How do I get better? And and probably the answer is that there are unknown unknowns you have, you know, like there's something that you're like not able to express well enough, you
+
+**[28:22]** know, um or maybe you don't know enough about the user or or whatever, right? And like how do you like answer that? And hopefully Claude can help you answer. Um but yeah, you know, it's uh
+
+**[28:34]** yeah, you know, Claude, you can learn about everything. Not you don't need to learn about everything, but there are particular things that you need to. Yeah. >> Cool. Thank you. >> Thanks. [applause]
+
+**[28:47]** >> [music]

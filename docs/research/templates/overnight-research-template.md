@@ -176,7 +176,7 @@ git push -u origin HEAD
 |------|------|------|
 | `[TOPIC]` | 研究主題 | Claude Code hooks 最佳實踐 |
 | `[SCOPE]` | 搜尋關鍵字 | "Claude Code hooks" site:github.com |
-| `[REPORT_PATH]` | 報告儲存路徑 | research/reports/<YYYY-MM-DD>-claude-hooks.md |
+| `[REPORT_PATH]` | 報告儲存路徑 | research/reports/&lt;YYYY-MM-DD>-claude-hooks.md |
 | `[MIN_CHARS]` | 最低字元數 | 5000 |
 | `[ITERATIONS]` | autoresearch 上限 | 20（整夜）/ 5（快速測試） |
 | `[DATE]` | 今天日期 | 2026-05-15 |

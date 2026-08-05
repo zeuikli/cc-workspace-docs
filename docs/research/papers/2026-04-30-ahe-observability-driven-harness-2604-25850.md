@@ -4,6 +4,7 @@ title: "Agentic Harness Engineering: Observability-Driven Automatic Evolution of
 archived_date: 2026-06-09
 arxiv_id: 2604.2585
 authors: ["Jiahang Lin", "Shichun Liu", "Chengjun Pan", "Lizhi Lin", "Shihan Dou", "Xuanjing Huang", "Hang Yan", "Zhenhua Han", "Tao Gui"]
+pdf_path: pdfs/2604.25850.pdf
 published_date: 2026-04-30
 ---
 

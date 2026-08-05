@@ -4,6 +4,7 @@ title: "SCM: Enhancing Large Language Model with Self-Controlled Memory Framewor
 archived_date: 2026-06-09
 arxiv_id: 2304.13343
 authors: ["Bing Wang", "Xinnian Liang", "Jian Yang", "Hui Huang", "Shuangzhi Wu", "Peihao Wu", "Lu Lu", "Zejun Ma", "Zhoujun Li"]
+pdf_path: pdfs/2304.13343.pdf
 published_date: 2023-04-26
 venue: DASFAA 2025
 ---

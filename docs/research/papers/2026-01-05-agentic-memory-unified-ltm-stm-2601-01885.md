@@ -5,6 +5,7 @@ archived_date: 2026-06-09
 arxiv_id: 2601.01885
 authors: ["Yi Yu", "Liuyi Yao", "Yuexiang Xie", "et al."]
 domains: [cs.CL]
+pdf_path: pdfs/2601.01885.pdf
 published_date: 2026-01-05
 ---
 

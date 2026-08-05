@@ -5,6 +5,7 @@ archived_date: 2026-06-09
 arxiv_id: 2305.14325
 authors: ["Yilun Du", "Shuang Li", "Antonio Torralba", "Joshua B. Tenenbaum", "Igor Mordatch"]
 domains: [cs.CL, cs.AI]
+pdf_path: pdfs/2305.14325.pdf
 published_date: 2023-05-23
 tags: [multi-agent, debate, reasoning, factuality, hallucination, llm]
 ---

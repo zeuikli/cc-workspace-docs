@@ -50,17 +50,6 @@ const resourceItems = [
 const researchItems = [
   { text: "研究資料庫總覽", link: "/research/" },
   {
-    text: "Agent Harness 核心",
-    collapsed: true,
-    items: [
-      { text: "分類索引", link: "/research/agent-harness/" },
-      { text: "SURVEY — 論文總覽", link: "/research/agent-harness/SURVEY" },
-      { text: "KNOWLEDGE-MAP", link: "/research/agent-harness/KNOWLEDGE-MAP" },
-      { text: "RESEARCH — 架構研究", link: "/research/agent-harness/RESEARCH" },
-      { text: "References 索引（63 篇）", link: "/research/agent-harness/references/" },
-    ],
-  },
-  {
     text: "學術論文",
     collapsed: true,
     items: [

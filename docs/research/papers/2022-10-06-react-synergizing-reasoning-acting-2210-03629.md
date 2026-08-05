@@ -4,6 +4,7 @@ title: "ReAct: Synergizing Reasoning and Acting in Language Models"
 archived_date: 2026-06-09
 arxiv_id: 2210.03629
 authors: ["Shunyu Yao", "Jeffrey Zhao", "Dian Yu", "Nan Du", "Izhak Shafran", "Karthik Narasimhan", "Yuan Cao"]
+pdf_path: pdfs/2210.03629.pdf
 published_date: 2022-10-06
 ---
 

@@ -4,6 +4,7 @@ title: "Reflexion: Language Agents with Verbal Reinforcement Learning"
 archived_date: 2026-06-09
 arxiv_id: 2303.11366
 authors: ["Noah Shinn", "Federico Cassano", "Edward Berman", "Ashwin Gopinath", "Karthik Narasimhan", "Shunyu Yao"]
+pdf_path: pdfs/2303.11366.pdf
 published_date: 2023-03-20
 venue: NeurIPS 2023
 ---

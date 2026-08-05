@@ -5,6 +5,7 @@ archived_date: 2026-06-09
 arxiv_id: 2603.0767
 authors: ["{'Pengfei Du | **Category**': 'cs.AI'}"]
 domains: [cs.AI]
+pdf_path: pdfs/2603.07670.pdf
 published_date: 2026-03-08
 ---
 

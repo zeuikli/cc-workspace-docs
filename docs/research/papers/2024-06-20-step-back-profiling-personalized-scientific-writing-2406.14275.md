@@ -4,6 +4,7 @@ title: "Step-Back Profiling: Distilling User History for Personalized Scientific
 archived_date: 2026-06-09
 arxiv_id: 2406.14275
 authors: ["Xiangru Tang", "Xingyao Zhang", "Yanjun Shao", "Jie Wu", "Yilun Zhao", "Arman Cohan", "Ming Gong", "Dongmei Zhang", "Mark Gerstein"]
+pdf_path: pdfs/2406.14275.pdf
 published_date: 2024-06-20
 venue: arXiv
 ---

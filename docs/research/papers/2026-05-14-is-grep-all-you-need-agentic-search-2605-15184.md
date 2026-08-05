@@ -4,6 +4,7 @@ title: "Is Grep All You Need? How Agent Harnesses Reshape Agentic Search"
 archived_date: 2026-05-26
 arxiv_id: 2605.15184
 authors: ["Sahil Sen", "Akhil Kasturi", "Elias Lumer", "Anmol Gulati", "Vamse Kumar Subbiah"]
+pdf_path: pdfs/2605.15184.pdf
 published_date: 2026-05-14
 ---
 

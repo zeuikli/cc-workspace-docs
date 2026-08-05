@@ -4,6 +4,7 @@ title: "Blueprint First, Model Second: A Framework for Deterministic LLM Workflo
 archived_date: 2026-06-09
 arxiv_id: 2508.02721
 authors: ["Libin Qiu", "Yuhang Ye", "Zhirong Gao", "Xide Zou", "Junfu Chen", "Ziming Gui", "Weizhi Huang", "Xiaobo Xue", "Wenkai Qiu", "Kun Zhao"]
+pdf_path: pdfs/2508.02721.pdf
 published_date: 2025-08-01
 venue: arXiv
 ---

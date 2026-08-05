@@ -4,6 +4,7 @@ title: "PARNESS: A Paper Harness for End-to-End Automated Scientific Research wi
 archived_date: 2026-06-09
 arxiv_id: 2605.05258
 authors: ["Yuchen Wang", "Zhongzhi Luan"]
+pdf_path: pdfs/2605.05258.pdf
 published_date: 2026-05-06
 ---
 
@@ -155,7 +156,7 @@ OpenAI, Anthropic, GLM (Zhipu), MiniMax, Local, MockLLM (4,444 rule-based canned
 
 | PARNESS Design Move | cc-workspace Relevance | Priority |
 |--------------------|----------------------|---------|
-| DAG kernel for agent orchestration | Parallels hierarchical sub-agent topology in `subagent-strategy.md` | Medium |
+| DAG kernel for agent orchestration | Parallels hierarchical sub-agent topology in `core.md §PROPOSE 委派`（原 `subagent-strategy.md`） | Medium |
 | YAML-defined pipelines as data | Aligns with declarative config preference over code | Low (already implicit) |
 | Full-text PDF indexing across papers | Useful if `research/papers/` corpus grows to 50+ files | Medium-term |
 | Cross-run knowledge via SQLite/Neo4j | Heavy infrastructure; overkill for current workspace scale | Low |

@@ -3,6 +3,7 @@ url: "https://arxiv.org/abs/2506.06326"
 title: "Memory OS of AI Agent"
 archived_date: 2026-06-09
 authors: ["Jiazheng Kang", "Mingming Ji", "Zhe Zhao", "Ting Bai"]
+pdf_path: pdfs/2506.06326.pdf
 published_date: 2025-05-30
 ---
 

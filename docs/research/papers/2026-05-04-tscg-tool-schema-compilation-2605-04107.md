@@ -4,6 +4,7 @@ title: "TSCG: Deterministic Tool-Schema Compilation for Agentic LLM Deployments"
 archived_date: 2026-06-09
 arxiv_id: 2605.04107
 authors: ["Furkan Sakizli"]
+pdf_path: pdfs/2605.04107.pdf
 published_date: 2026-05-04
 ---
 

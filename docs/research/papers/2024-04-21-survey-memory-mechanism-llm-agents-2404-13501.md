@@ -4,6 +4,7 @@ title: "A Survey on the Memory Mechanism of Large Language Model based Agents"
 archived_date: 2026-06-09
 arxiv_id: 2404.13501
 authors: ["Zeyu Zhang", "Xiaohe Bo", "Chen Ma", "Rui Li", "Xu Chen", "Quanyu Dai", "Jieming Zhu", "Zhenhua Dong", "Ji-Rong Wen"]
+pdf_path: pdfs/2404.13501.pdf
 published_date: 2024-04-21
 ---
 

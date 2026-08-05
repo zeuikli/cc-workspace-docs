@@ -4,6 +4,7 @@ title: "When \\\\\\\"Better\\\\\\\" Prompts Hurt: Evaluation-Driven Iteration fo
 archived_date: 2026-06-09
 arxiv_id: 2601.22025
 authors: ["Daniel Commey"]
+pdf_path: pdfs/2601.22025.pdf
 published_date: 2026-01-29
 ---
 

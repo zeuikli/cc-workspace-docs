@@ -5,6 +5,7 @@ archived_date: 2026-06-09
 arxiv_id: 2308.00352
 authors: ["Sirui Hong", "Mingchen Zhuge", "Jonathan Chen", "Xiawu Zheng", "Yuheng Cheng", "Ceyao Zhang", "Jinlin Wang", "Zili Wang", "Steven Ka Shing Yau", "Zijuan Lin", "Liyang Zhou", "Chenyu Ran", "Lingfeng Xiao", "Chenglin Wu", "Jürgen Schmidhuber"]
 domains: [cs.AI, cs.MA]
+pdf_path: pdfs/2308.00352.pdf
 published_date: 2023-08-01
 tags: [multi-agent, sop, software-development, meta-programming, role-based, llm]
 venue: ICLR 2024

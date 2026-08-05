@@ -4,6 +4,7 @@ title: "How Developers Configure AI Coding Agents: An Empirical Study of Agentic
 archived_date: 2026-06-09
 arxiv_id: 2602.1469
 authors: ["John Yang", "Carlos E. Jimenez", "Swetha Regunathan", "Sanmi Koyejo", "Ofir Press"]
+pdf_path: pdfs/2602.14690.pdf
 published_date: 2026-02-16
 ---
 

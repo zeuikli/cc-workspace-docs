@@ -4,6 +4,7 @@ title: "Anthropic Economic Index Report: Uneven Geographic and Enterprise AI Ado
 archived_date: 2026-06-09
 arxiv_id: 2511.1508
 authors: ["Ruth Appel", "Peter McCrory", "Alex Tamkin", "Miles McCain", "Tyler Neylon", "Michael Stern"]
+pdf_path: pdfs/2511.15080.pdf
 published_date: 2025-11-19
 ---
 

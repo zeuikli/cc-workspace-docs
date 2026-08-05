@@ -4,6 +4,7 @@ title: "Coordination as an Architectural Layer for LLM-Based Multi-Agent Systems
 archived_date: 2026-06-09
 arxiv_id: 2605.0331
 authors: ["Maksym Nechepurenko", "Pavel Shuvalov"]
+pdf_path: pdfs/2605.03310.pdf
 published_date: 2026-05-05
 ---
 
@@ -174,7 +175,7 @@ This enables falsifiable architectural claims—distinguishing what coordination
 
 **Production implication**: The 41–87% production failure rate finding suggests current cc-workspace coordination design is sound; the risk is in failing to maintain explicit coordination as the system scales.
 
-**Integration targets**: `subagent-strategy.md` §Current Topology Configuration empirical basis section
+**Integration targets**: `core.md §PROPOSE 委派`（原 `subagent-strategy.md`） §Current Topology Configuration empirical basis section
 
 ---
 
@@ -184,4 +185,4 @@ This enables falsifiable architectural claims—distinguishing what coordination
 
 > "The separation moves coordination from implicit implementation detail to explicit architectural design object, enabling decision provenance, failure-mode signatures, cross-system comparability, and agent heterogeneity management."
 
-**Related research**: `subagent-strategy.md` §多代理啟用決策 (45% rule + Coordination Tax)
+**Related research**: `core.md §PROPOSE 委派`（原 `subagent-strategy.md`） §多代理啟用決策 (45% rule + Coordination Tax) 〔v5.1：所引 workspace 細則已退役 → 見 `INDEX.md` §v5.1 規則退役對照〕

@@ -4,6 +4,7 @@ title: "Recursive Language Models"
 archived_date: 2026-06-09
 arxiv_id: 2512.24601
 authors: ["Alex L. Zhang", "Tim Kraska", "Omar Khattab"]
+pdf_path: pdfs/2512.24601.pdf
 published_date: 2025-12-31
 ---
 

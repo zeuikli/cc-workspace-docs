@@ -1,0 +1,38 @@
+---
+url: "https://arxiv.org/abs/2607.14159"
+title: "MemoHarness: Agent Harnesses That Learn from Experience"
+archived_date: 2026-07-20
+arxiv_id: 2607.14159
+pdf_path: pdfs/2607.14159.pdf
+source_routine: routine-c
+topic: memoharness-six-control-surfaces-modular-decomposition
+---
+
+# MemoHarness: Agent Harnesses That Learn from Experience
+
+**Source**: https://arxiv.org/abs/2607.14159
+**arXiv ID**: 2607.14159
+**PDF**: [research/papers/pdfs/2607.14159.pdf](https://arxiv.org/abs/2607.14159)（原始 push 因 relay 一次性 413 延遲，已於同日補推，見 git 歷史 `e17b029`）
+
+---
+
+## 摘要 / 核心貢獻
+
+MemoHarness 是一個讓 agent harness 從自身執行歷史中學習的自適應框架，取代靜態固定配置。核心設計把 harness 沿推論的時間流拆解成六個可獨立編輯的控制介面（control surfaces）：
+
+1. **Context assembly**（context — call 前輸入組裝）
+2. **Tool interaction**（tool — 外部工具與檢索使用）
+3. **Generation control**（generation — decoding 設定）
+4. **Orchestration**（orchestration — 工作流拓撲）
+5. **Memory management**（memory — 跨呼叫狀態持久化）
+6. **Output processing**（output — call 後輸出處理）
+
+將 harness search 從對單一不透明 prompt 的搜尋，轉為對六個可分離維度的結構化編輯。訓練期在此六維空間做 search，把逐案例診斷與蒸餾後的全域模式存入雙層 experience bank（case-level + distilled global pattern）；測試時不需 label/回饋/額外搜尋，僅靠檢索相似案例與相關模式，把選定的全域 harness 適配到每個未見測試案例。
+
+**量化結果**（Terminal-Bench shell-agent 主要基準）：MemoHarness 達 0.806，較最強基準 Codex 的 0.722 提升 +0.084（約 11.6% 相對提升）；同時成本從 Codex 基準 $10.28 降至 $6.89（約 33% 降低，即使因檢索 experience bank 而使用更多原始 input token，多數已被快取）。learned harness 對部分未見評測套件展現選擇性遷移能力（無需重新訓練）。
+
+## 對本 workspace 的影響
+
+- 六控制介面拆解與 core.md 公理「判斷 vs 決定」呼應：本論文把 harness 優化本身也拆成「LLM 提案 patch」+「確定性測量認證」的模式（雙層 experience bank 的認證機制），與 2607.13683（07-15 已歸檔的 Self-Evolving Agent Harnesses）方法論高度相近，可交叉引用。
+- 六維分類法（context/tool/generation/orchestration/memory/output）可作為本 workspace `.claude/rules/` 拆分現狀的一個外部參照框架——例如 core.md 目前混合了 orchestration（委派拓撲）與 output（展示紀律）等維度，未來若要進一步模組化可參考此分類。
+- 成本降低（33%）同時提升成功率的組合，對 `finops`（v5.1 前已刪，無後繼 skill） skill 或 `core.md §PROPOSE 委派`（原 delegation-protocol.md）的「委派效益」計算提供一個可引用的外部基準數字。

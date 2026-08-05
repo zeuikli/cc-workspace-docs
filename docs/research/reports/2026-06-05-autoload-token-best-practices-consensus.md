@@ -30,11 +30,11 @@ type: consensus + index (SSoT)
 
 | 報告 | 主題 | 核心結論 | 本次新增 gap |
 |------|------|---------|------------|
-| [2026-05-18-auto-load-token-best-practices](2026-05-18-auto-load-token-best-practices.md) | auto-load token 上限與控制 | ≤3,500 token / 三層載入 / cache 穩定 | 7（補充 4–10）|
-| [2026-05-12-best-practices-simplicity](2026-05-12-best-practices-simplicity.md) | 大道至簡 / 成本效率 | 加法思維是效率陷阱；簡潔有下限 | 5（補充 A–D + ACE 佐證）|
-| [2026-06-04-autoload-slimming-feasibility-research](2026-06-04-autoload-slimming-feasibility-research.md) | 精簡可行性 | 機械可行、低優先、機會性執行 | 2（補充 8.1–8.2）|
-| [2026-06-04-autoload-test-framework-blueprint](2026-06-04-autoload-test-framework-blueprint.md) | 測試框架藍圖 | 只 stage protection；§R re-encode 須 user gate | 3（補充 G-F/G-G/G-H）|
-| [2026-06-04-autoload-test-gates-execution-report](2026-06-04-autoload-test-gates-execution-report.md) | 測試 gate 執行 | T1/T2/T3 全綠，loop 終止 | 1（byte-cap tokenizer 免疫）|
+| `2026-05-18-auto-load-token-best-practices` | auto-load token 上限與控制 | ≤3,500 token / 三層載入 / cache 穩定 | 7（補充 4–10）|
+| `2026-05-12-best-practices-simplicity` | 大道至簡 / 成本效率 | 加法思維是效率陷阱；簡潔有下限 | 5（補充 A–D + ACE 佐證）|
+| `2026-06-04-autoload-slimming-feasibility-research` | 精簡可行性 | 機械可行、低優先、機會性執行 | 2（補充 8.1–8.2）|
+| `2026-06-04-autoload-test-framework-blueprint` | 測試框架藍圖 | 只 stage protection；§R re-encode 須 user gate | 3（補充 G-F/G-G/G-H）|
+| `2026-06-04-autoload-test-gates-execution-report` | 測試 gate 執行 | T1/T2/T3 全綠，loop 終止 | 1（byte-cap tokenizer 免疫）|
 
 ---
 

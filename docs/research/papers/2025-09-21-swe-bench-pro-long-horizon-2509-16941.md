@@ -4,6 +4,7 @@ title: "SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tas
 archived_date: 2026-06-09
 arxiv_id: 2509.16941
 authors: ["Xiang Deng", "Jeff Da", "Edwin Pan", "Yannis Yiming He", "Charles Ide", "Kanak Garg", "Niklas Lauffer", "Andrew Park", "Nitin Pasari", "Chetan Rane", "Karmini Sampath", "Maya Krishnan", "Srivatsa Kundurthy", "Sean Hendryx", "Zifan Wang", "Vijay Bharadwaj", "Jeff Holm", "Raja Aluri", "Chen Bo Calvin Zhang", "Noah Jacobson", "Bing Liu", "Brad Kenstler"]
+pdf_path: pdfs/2509.16941.pdf
 published_date: 2025-09-21
 ---
 
@@ -126,6 +127,6 @@ SWE-Bench Pro is the **successor benchmark to SWE-Bench Verified** and the prima
 - GPT-5.5 (April 2026): **58.6%** on SWE-Bench Pro (per OpenAI announcement)
 - These rates are ~3× harder than SWE-Bench Verified (Opus 4.7: 87.6%)
 
-For `opus-pilot`: SWE-Bench Pro is the relevant benchmark when using Opus for long-horizon software tasks. The 64.3% rate means ~1 in 3 enterprise-scale tasks still fails — set expectations accordingly.
+For `pilot`（tier=ceiling，原 `opus-pilot`）: SWE-Bench Pro is the relevant benchmark when using Opus for long-horizon software tasks. The 64.3% rate means ~1 in 3 enterprise-scale tasks still fails — set expectations accordingly.
 
 Complements `harness-meta` CAR framework: the 4.1-file, 107.4-line average change scope is exactly the range where harness-level verification protocols (H3 from `2605.13357`) matter most.

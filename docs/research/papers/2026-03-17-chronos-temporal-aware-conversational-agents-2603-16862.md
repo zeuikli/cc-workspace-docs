@@ -4,6 +4,7 @@ title: "Chronos: Temporal-Aware Conversational Agents with Structured Event Retr
 archived_date: 2026-05-26
 arxiv_id: 2603.16862
 authors: ["Sahil Sen", "Elias Lumer", "Anmol Gulati", "Vamse Kumar Subbiah"]
+pdf_path: pdfs/2603.16862.pdf
 published_date: 2026-03-17
 ---
 

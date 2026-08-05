@@ -4,6 +4,7 @@ title: "RouteLLM: Learning to Route LLMs with Preference Data"
 archived_date: 2026-06-09
 arxiv_id: 2406.18665
 authors: ["Isaac Sim", "Shuwen Sun", "and others"]
+pdf_path: pdfs/2406.18665.pdf
 published_date: 2024-06-20
 venue: arXiv
 ---

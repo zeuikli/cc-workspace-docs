@@ -4,6 +4,7 @@ title: "RCR-Router: Role-Aware Context Routing for Multi-Agent Systems"
 archived_date: 2026-06-09
 arxiv_id: 2508.04903
 authors: ["Research team"]
+pdf_path: pdfs/2508.04903.pdf
 published_date: 2025-08-01
 venue: arXiv
 ---

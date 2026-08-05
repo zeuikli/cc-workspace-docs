@@ -1,117 +1,137 @@
 # 研究歸檔索引
 
-> 更新時間：2026-06-09 18:55 UTC+8
-> 保留期限：最近 **30 天**（2026-05-10 之後）
+> 更新時間：2026-08-05 08:02 UTC+8
+> 保留期限：最近 **30 天**（2026-07-06 之後）
 > 清理舊檔：每次 Actions 執行後自動移除過期資料
 
 ## 📡 每日 DevOps/DeepSRT/Combined 摘要
 
-### 2026-06
+### 2026-08
 
-- [2026-06-09 — 2026-06-09-devops.md](ai-news/digests/2026-06-09-devops.md)
-- [2026-06-09 — 2026-06-09-deepsrt.md](ai-news/digests/2026-06-09-deepsrt.md)
-- [2026-06-09 — 2026-06-09-combined.md](ai-news/digests/2026-06-09-combined.md)
-- [2026-06-08 — 2026-06-08-devops.md](ai-news/digests/2026-06-08-devops.md)
-- [2026-06-08 — 2026-06-08-deepsrt.md](ai-news/digests/2026-06-08-deepsrt.md)
-- [2026-06-08 — 2026-06-08-combined.md](ai-news/digests/2026-06-08-combined.md)
-- [2026-06-07 — 2026-06-07-devops.md](ai-news/digests/2026-06-07-devops.md)
-- [2026-06-07 — 2026-06-07-deepsrt.md](ai-news/digests/2026-06-07-deepsrt.md)
-- [2026-06-07 — 2026-06-07-combined.md](ai-news/digests/2026-06-07-combined.md)
-- [2026-06-06 — 2026-06-06-devops.md](ai-news/digests/2026-06-06-devops.md)
-- [2026-06-06 — 2026-06-06-deepsrt.md](ai-news/digests/2026-06-06-deepsrt.md)
-- [2026-06-06 — 2026-06-06-combined.md](ai-news/digests/2026-06-06-combined.md)
-- [2026-06-05 — 2026-06-05-devops.md](ai-news/digests/2026-06-05-devops.md)
-- [2026-06-05 — 2026-06-05-deepsrt.md](ai-news/digests/2026-06-05-deepsrt.md)
-- [2026-06-05 — 2026-06-05-combined.md](ai-news/digests/2026-06-05-combined.md)
-- [2026-06-04 — 2026-06-04-devops.md](ai-news/digests/2026-06-04-devops.md)
-- [2026-06-04 — 2026-06-04-deepsrt.md](ai-news/digests/2026-06-04-deepsrt.md)
-- [2026-06-04 — 2026-06-04-combined.md](ai-news/digests/2026-06-04-combined.md)
-- [2026-06-03 — 2026-06-03-devops.md](ai-news/digests/2026-06-03-devops.md)
-- [2026-06-03 — 2026-06-03-deepsrt.md](ai-news/digests/2026-06-03-deepsrt.md)
-- [2026-06-03 — 2026-06-03-combined.md](ai-news/digests/2026-06-03-combined.md)
-- [2026-06-02 — 2026-06-02-devops.md](ai-news/digests/2026-06-02-devops.md)
-- [2026-06-02 — 2026-06-02-deepsrt.md](ai-news/digests/2026-06-02-deepsrt.md)
-- [2026-06-02 — 2026-06-02-combined.md](ai-news/digests/2026-06-02-combined.md)
-- [2026-06-01 — 2026-06-01-devops.md](ai-news/digests/2026-06-01-devops.md)
-- [2026-06-01 — 2026-06-01-deepsrt.md](ai-news/digests/2026-06-01-deepsrt.md)
-- [2026-06-01 — 2026-06-01-combined.md](ai-news/digests/2026-06-01-combined.md)
+- `2026-08-05 — 2026-08-05-devops.md`
+- `2026-08-05 — 2026-08-05-deepsrt.md`
+- `2026-08-05 — 2026-08-05-combined.md`
+- `2026-08-04 — 2026-08-04-devops.md`
+- `2026-08-04 — 2026-08-04-deepsrt.md`
+- `2026-08-04 — 2026-08-04-combined.md`
+- `2026-08-03 — 2026-08-03-devops.md`
+- `2026-08-03 — 2026-08-03-deepsrt.md`
+- `2026-08-03 — 2026-08-03-combined.md`
+- `2026-08-02 — 2026-08-02-devops.md`
+- `2026-08-02 — 2026-08-02-deepsrt.md`
+- `2026-08-02 — 2026-08-02-combined.md`
+- `2026-08-01 — 2026-08-01-devops.md`
+- `2026-08-01 — 2026-08-01-deepsrt.md`
+- `2026-08-01 — 2026-08-01-combined.md`
 
-### 2026-05
+### 2026-07
 
-- [2026-05-31 — 2026-05-31-devops.md](ai-news/digests/2026-05-31-devops.md)
-- [2026-05-31 — 2026-05-31-deepsrt.md](ai-news/digests/2026-05-31-deepsrt.md)
-- [2026-05-31 — 2026-05-31-combined.md](ai-news/digests/2026-05-31-combined.md)
-- [2026-05-30 — 2026-05-30-devops.md](ai-news/digests/2026-05-30-devops.md)
-- [2026-05-30 — 2026-05-30-deepsrt.md](ai-news/digests/2026-05-30-deepsrt.md)
-- [2026-05-30 — 2026-05-30-combined.md](ai-news/digests/2026-05-30-combined.md)
-- [2026-05-29 — 2026-05-29-devops.md](ai-news/digests/2026-05-29-devops.md)
-- [2026-05-29 — 2026-05-29-deepsrt.md](ai-news/digests/2026-05-29-deepsrt.md)
-- [2026-05-29 — 2026-05-29-combined.md](ai-news/digests/2026-05-29-combined.md)
-- [2026-05-28 — 2026-05-28-devops.md](ai-news/digests/2026-05-28-devops.md)
-- [2026-05-28 — 2026-05-28-deepsrt.md](ai-news/digests/2026-05-28-deepsrt.md)
-- [2026-05-28 — 2026-05-28-combined.md](ai-news/digests/2026-05-28-combined.md)
-- [2026-05-27 — 2026-05-27-devops.md](ai-news/digests/2026-05-27-devops.md)
-- [2026-05-27 — 2026-05-27-deepsrt.md](ai-news/digests/2026-05-27-deepsrt.md)
-- [2026-05-27 — 2026-05-27-combined.md](ai-news/digests/2026-05-27-combined.md)
-- [2026-05-26 — 2026-05-26-devops.md](ai-news/digests/2026-05-26-devops.md)
-- [2026-05-26 — 2026-05-26-deepsrt.md](ai-news/digests/2026-05-26-deepsrt.md)
-- [2026-05-26 — 2026-05-26-combined.md](ai-news/digests/2026-05-26-combined.md)
-- [2026-05-25 — 2026-05-25-devops.md](ai-news/digests/2026-05-25-devops.md)
-- [2026-05-25 — 2026-05-25-deepsrt.md](ai-news/digests/2026-05-25-deepsrt.md)
-- [2026-05-25 — 2026-05-25-combined.md](ai-news/digests/2026-05-25-combined.md)
-- [2026-05-24 — 2026-05-24-devops.md](ai-news/digests/2026-05-24-devops.md)
-- [2026-05-24 — 2026-05-24-deepsrt.md](ai-news/digests/2026-05-24-deepsrt.md)
-- [2026-05-24 — 2026-05-24-combined.md](ai-news/digests/2026-05-24-combined.md)
-- [2026-05-23 — 2026-05-23-devops.md](ai-news/digests/2026-05-23-devops.md)
-- [2026-05-23 — 2026-05-23-deepsrt.md](ai-news/digests/2026-05-23-deepsrt.md)
-- [2026-05-23 — 2026-05-23-combined.md](ai-news/digests/2026-05-23-combined.md)
-- [2026-05-22 — 2026-05-22-devops.md](ai-news/digests/2026-05-22-devops.md)
-- [2026-05-22 — 2026-05-22-deepsrt.md](ai-news/digests/2026-05-22-deepsrt.md)
-- [2026-05-22 — 2026-05-22-combined.md](ai-news/digests/2026-05-22-combined.md)
-- [2026-05-21 — 2026-05-21-devops.md](ai-news/digests/2026-05-21-devops.md)
-- [2026-05-21 — 2026-05-21-deepsrt.md](ai-news/digests/2026-05-21-deepsrt.md)
-- [2026-05-21 — 2026-05-21-combined.md](ai-news/digests/2026-05-21-combined.md)
-- [2026-05-20 — 2026-05-20-devops.md](ai-news/digests/2026-05-20-devops.md)
-- [2026-05-20 — 2026-05-20-deepsrt.md](ai-news/digests/2026-05-20-deepsrt.md)
-- [2026-05-20 — 2026-05-20-combined.md](ai-news/digests/2026-05-20-combined.md)
-- [2026-05-19 — 2026-05-19-devops.md](ai-news/digests/2026-05-19-devops.md)
-- [2026-05-19 — 2026-05-19-deepsrt.md](ai-news/digests/2026-05-19-deepsrt.md)
-- [2026-05-19 — 2026-05-19-combined.md](ai-news/digests/2026-05-19-combined.md)
-- [2026-05-18 — 2026-05-18-devops.md](ai-news/digests/2026-05-18-devops.md)
-- [2026-05-18 — 2026-05-18-deepsrt.md](ai-news/digests/2026-05-18-deepsrt.md)
-- [2026-05-18 — 2026-05-18-combined.md](ai-news/digests/2026-05-18-combined.md)
-- [2026-05-17 — 2026-05-17-devops.md](ai-news/digests/2026-05-17-devops.md)
-- [2026-05-17 — 2026-05-17-deepsrt.md](ai-news/digests/2026-05-17-deepsrt.md)
-- [2026-05-17 — 2026-05-17-combined.md](ai-news/digests/2026-05-17-combined.md)
-- [2026-05-16 — 2026-05-16-devops.md](ai-news/digests/2026-05-16-devops.md)
-- [2026-05-16 — 2026-05-16-deepsrt.md](ai-news/digests/2026-05-16-deepsrt.md)
-- [2026-05-16 — 2026-05-16-combined.md](ai-news/digests/2026-05-16-combined.md)
-- [2026-05-15 — 2026-05-15-devops.md](ai-news/digests/2026-05-15-devops.md)
-- [2026-05-15 — 2026-05-15-deepsrt.md](ai-news/digests/2026-05-15-deepsrt.md)
-- [2026-05-15 — 2026-05-15-combined.md](ai-news/digests/2026-05-15-combined.md)
-- [2026-05-14 — 2026-05-14-devops.md](ai-news/digests/2026-05-14-devops.md)
-- [2026-05-14 — 2026-05-14-deepsrt.md](ai-news/digests/2026-05-14-deepsrt.md)
-- [2026-05-14 — 2026-05-14-combined.md](ai-news/digests/2026-05-14-combined.md)
-- [2026-05-13 — 2026-05-13-devops.md](ai-news/digests/2026-05-13-devops.md)
-- [2026-05-13 — 2026-05-13-deepsrt.md](ai-news/digests/2026-05-13-deepsrt.md)
-- [2026-05-13 — 2026-05-13-combined.md](ai-news/digests/2026-05-13-combined.md)
-- [2026-05-12 — 2026-05-12-devops.md](ai-news/digests/2026-05-12-devops.md)
-- [2026-05-12 — 2026-05-12-deepsrt.md](ai-news/digests/2026-05-12-deepsrt.md)
-- [2026-05-12 — 2026-05-12-combined.md](ai-news/digests/2026-05-12-combined.md)
-- [2026-05-11 — 2026-05-11-devops.md](ai-news/digests/2026-05-11-devops.md)
-- [2026-05-11 — 2026-05-11-deepsrt.md](ai-news/digests/2026-05-11-deepsrt.md)
-- [2026-05-11 — 2026-05-11-combined.md](ai-news/digests/2026-05-11-combined.md)
-- [2026-05-10 — 2026-05-10-devops.md](ai-news/digests/2026-05-10-devops.md)
-- [2026-05-10 — 2026-05-10-deepsrt.md](ai-news/digests/2026-05-10-deepsrt.md)
-- [2026-05-10 — 2026-05-10-combined.md](ai-news/digests/2026-05-10-combined.md)
+- `2026-07-31 — 2026-07-31-devops.md`
+- `2026-07-31 — 2026-07-31-deepsrt.md`
+- `2026-07-31 — 2026-07-31-combined.md`
+- `2026-07-30 — 2026-07-30-devops.md`
+- `2026-07-30 — 2026-07-30-deepsrt.md`
+- `2026-07-30 — 2026-07-30-combined.md`
+- `2026-07-29 — 2026-07-29-devops.md`
+- `2026-07-29 — 2026-07-29-deepsrt.md`
+- `2026-07-29 — 2026-07-29-combined.md`
+- `2026-07-28 — 2026-07-28-devops.md`
+- `2026-07-28 — 2026-07-28-deepsrt.md`
+- `2026-07-28 — 2026-07-28-combined.md`
+- `2026-07-27 — 2026-07-27-devops.md`
+- `2026-07-27 — 2026-07-27-deepsrt.md`
+- `2026-07-27 — 2026-07-27-combined.md`
+- `2026-07-26 — 2026-07-26-devops.md`
+- `2026-07-26 — 2026-07-26-deepsrt.md`
+- `2026-07-26 — 2026-07-26-combined.md`
+- `2026-07-25 — 2026-07-25-devops.md`
+- `2026-07-25 — 2026-07-25-deepsrt.md`
+- `2026-07-25 — 2026-07-25-combined.md`
+- `2026-07-24 — 2026-07-24-devops.md`
+- `2026-07-24 — 2026-07-24-deepsrt.md`
+- `2026-07-24 — 2026-07-24-combined.md`
+- `2026-07-23 — 2026-07-23-devops.md`
+- `2026-07-23 — 2026-07-23-deepsrt.md`
+- `2026-07-23 — 2026-07-23-combined.md`
+- `2026-07-22 — 2026-07-22-devops.md`
+- `2026-07-22 — 2026-07-22-deepsrt.md`
+- `2026-07-22 — 2026-07-22-combined.md`
+- `2026-07-21 — 2026-07-21-devops.md`
+- `2026-07-21 — 2026-07-21-deepsrt.md`
+- `2026-07-21 — 2026-07-21-combined.md`
+- `2026-07-20 — 2026-07-20-devops.md`
+- `2026-07-20 — 2026-07-20-deepsrt.md`
+- `2026-07-20 — 2026-07-20-combined.md`
+- `2026-07-19 — 2026-07-19-devops.md`
+- `2026-07-19 — 2026-07-19-deepsrt.md`
+- `2026-07-19 — 2026-07-19-combined.md`
+- `2026-07-18 — 2026-07-18-devops.md`
+- `2026-07-18 — 2026-07-18-deepsrt.md`
+- `2026-07-18 — 2026-07-18-combined.md`
+- `2026-07-17 — 2026-07-17-devops.md`
+- `2026-07-17 — 2026-07-17-deepsrt.md`
+- `2026-07-17 — 2026-07-17-combined.md`
+- `2026-07-14 — 2026-07-14-devops.md`
+- `2026-07-14 — 2026-07-14-deepsrt.md`
+- `2026-07-14 — 2026-07-14-combined.md`
+- `2026-07-13 — 2026-07-13-devops.md`
+- `2026-07-13 — 2026-07-13-deepsrt.md`
+- `2026-07-13 — 2026-07-13-combined.md`
+- `2026-07-12 — 2026-07-12-devops.md`
+- `2026-07-12 — 2026-07-12-deepsrt.md`
+- `2026-07-12 — 2026-07-12-combined.md`
+- `2026-07-11 — 2026-07-11-devops.md`
+- `2026-07-11 — 2026-07-11-deepsrt.md`
+- `2026-07-11 — 2026-07-11-combined.md`
+- `2026-07-10 — 2026-07-10-devops.md`
+- `2026-07-10 — 2026-07-10-deepsrt.md`
+- `2026-07-10 — 2026-07-10-combined.md`
+- `2026-07-09 — 2026-07-09-devops.md`
+- `2026-07-09 — 2026-07-09-deepsrt.md`
+- `2026-07-09 — 2026-07-09-combined.md`
+- `2026-07-08 — 2026-07-08-devops.md`
+- `2026-07-08 — 2026-07-08-deepsrt.md`
+- `2026-07-08 — 2026-07-08-combined.md`
+- `2026-07-07 — 2026-07-07-devops.md`
+- `2026-07-07 — 2026-07-07-deepsrt.md`
+- `2026-07-07 — 2026-07-07-combined.md`
+- `2026-07-06 — 2026-07-06-devops.md`
+- `2026-07-06 — 2026-07-06-deepsrt.md`
+- `2026-07-06 — 2026-07-06-combined.md`
 
 ## 🤖 AI/LLM 週報
 
-### 2026-06
+### 2026-08
 
-- [2026-06-09 — 2026-06-09-ai.md](ai-news/digests/2026-06-09-ai.md)
-- [2026-06-08 — 2026-06-08-ai.md](ai-news/digests/2026-06-08-ai.md)
-- [2026-06-07 — 2026-06-07-ai.md](ai-news/digests/2026-06-07-ai.md)
+- `2026-08-04 — 2026-08-04-ai.md`
+- `2026-08-03 — 2026-08-03-ai.md`
+- `2026-08-02 — 2026-08-02-ai.md`
+- `2026-08-01 — 2026-08-01-ai.md`
+
+### 2026-07
+
+- `2026-07-30 — 2026-07-30-ai.md`
+- `2026-07-29 — 2026-07-29-ai.md`
+- `2026-07-28 — 2026-07-28-ai.md`
+- `2026-07-27 — 2026-07-27-ai.md`
+- `2026-07-26 — 2026-07-26-ai.md`
+- `2026-07-25 — 2026-07-25-ai.md`
+- `2026-07-24 — 2026-07-24-ai.md`
+- `2026-07-23 — 2026-07-23-ai.md`
+- `2026-07-22 — 2026-07-22-ai.md`
+- `2026-07-21 — 2026-07-21-ai.md`
+- `2026-07-20 — 2026-07-20-ai.md`
+- `2026-07-19 — 2026-07-19-ai.md`
+- `2026-07-18 — 2026-07-18-ai.md`
+- `2026-07-17 — 2026-07-17-ai.md`
+- `2026-07-13 — 2026-07-13-ai.md`
+- `2026-07-12 — 2026-07-12-ai.md`
+- `2026-07-11 — 2026-07-11-ai.md`
+- `2026-07-10 — 2026-07-10-ai.md`
+- `2026-07-09 — 2026-07-09-ai.md`
+- `2026-07-08 — 2026-07-08-ai.md`
+- `2026-07-07 — 2026-07-07-ai.md`
+- `2026-07-06 — 2026-07-06-ai.md`
 
 ---
 *由 `scripts/archive.py` 自動維護*

@@ -5,8 +5,236 @@ type: index
 
 # Announcements — claude.com/blog
 
-> 收錄自 [claude.com/blog/category/announcements](https://claude.com/blog/category/announcements) · 23 篇文章 · 2026-02-17 ~ 2026-06-03
-> 最後更新：2026-06-05
+> 收錄自 [claude.com/blog/category/announcements](https://claude.com/blog/category/announcements) · 37 篇文章 · 2026-02-17 ~ 2026-07-28
+> 最後更新：2026-08-04
+
+---
+
+## Bringing MCP 2026-07-28 to Claude
+
+**Date:** 2026-07-28 | **URL:** https://claude.com/blog/bringing-mcp-2026-07-28-to-claude
+
+### Summary
+MCP 第五個規格版本發布：核心改為 stateless，可部署於 serverless 與 edge；互動 UI 與長時工作以版本化 extension 標準化；授權對齊 OAuth 2.0 與 OIDC。Claude 產品線同步支援，可用 MCP server 超過 950 個。
+
+### Key Points
+- Stateless core：從雙向有狀態協定改為 request/response，server 部署與擴展大幅簡化
+- Extensions 框架：MCP Apps 與 Tasks 以版本化 extension 出貨，不必動核心協定
+- 授權對齊生產級 OAuth 2.0 / OIDC，可直接接 Entra、Okta，不需 workaround
+- MCP Apps 讓 server 在對話中直接算繪互動元件，免切分頁
+- 企業託管：管理員經 IdP 佈建 connector，群組繼承存取權，終端使用者零設定
+- 已發布 connector 取得 dashboard，可看效能、採用、錯誤與使用量
+
+---
+
+## Introducing Claude Opus 5
+
+**Date:** 2026-07-24 | **URL:** https://www.anthropic.com/news/claude-opus-5
+
+### Summary
+Anthropic 發布 Claude Opus 5（`claude-opus-5`），多數任務逼近 Fable 5 而價格只有一半，且與 Opus 4.8 同價（$5/$25）。成為 Claude Max 的預設模型與 Claude Pro 可用的最強模型；是 Claude 5 世代不到兩個月內的第四個模型。
+
+### Key Points
+- 定價維持 $5/MTok 輸入、$25/MTok 輸出；fast mode 約 2.5× 速度、2× 價格
+- 1M context window（Claude Code v2.1.219 公告）；effort 可調 low/medium/high
+- Frontier-Bench v0.1 為 Opus 4.8 的 2 倍；CursorBench 3.2 與 Fable 5 差距 < 0.5% 而成本減半
+- ARC-AGI 3 為次佳模型 3 倍；OSWorld 2.0 優於 Fable 5 而成本為其 1/3
+- 能力重點：更常自我驗證與迭代修正、agentic 推理提升、視覺輸出與科學研究（有機化學/蛋白質）改善
+- 安全：近期模型中欺騙性行為比率最低；攻擊性 cyber 能力仍低於 Mythos 5
+- 供應：Claude API / Code / Cowork / Platform / claude.ai，AWS、Google Cloud、Microsoft 同步
+
+---
+
+## Think through hard problems in voice mode
+
+**Date:** 2026-07-23 | **URL:** https://claude.com/blog/think-through-hard-problems-in-voice-mode
+
+### Summary
+語音模式開放使用 Opus 與 Sonnet（原本僅 Haiku），並支援連接工具執行動作，語言擴充至 11 種。
+
+### Key Points
+- 語音對話可跑 Opus 與 Sonnet，適合深入推敲複雜問題
+- 可連接 Google Calendar、Gmail、Slack、Canva 等服務，動作前需授權
+- 11 種語言，全方案可用，對話中可直接用口說切換
+- Free 方案為 Haiku + 一個連接工具；付費方案解鎖更多模型與全部工具；語音對話計入一般使用額度
+
+---
+
+## Bringing Claude Code and Claude Cowork to government
+
+**Date:** 2026-07-07 | **URL:** https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government
+
+### Summary
+Anthropic 推出 Claude Code 與 Claude Cowork 桌面應用在聯邦政府環境的公測版，運行於 FedRAMP High 授權環境，讓公部門團隊能建構軟體系統與處理文件工作，同時提供強化治理功能。
+
+### Key Points
+- FedRAMP High 授權環境提供，對話歷史存放於機構管理設備
+- 適應撥款預算的計費選項：標準座位或自訂支出/模型限制層級
+- 部門管理員可將預付用量分配至子機構，SCIM 群組映射設定費率限制與允許模型
+- 所有管理操作記錄於防篡改雜湊鏈審計日誌，敏感操作需雙人核准
+- 發布 FedRAMP 安全配置指南與滲透測試摘要供安全團隊評估
+- 新客戶可於 claude.com/solutions/government 申請存取權限
+
+---
+
+## Claude Cowork is coming to mobile and web
+
+**Date:** 2026-07-07 | **URL:** https://claude.com/blog/cowork-web-mobile
+
+### Summary
+Claude Cowork 推出網頁版與行動版，使用者可在任何裝置上存取工作進度；任務委派給 Claude 後在背景持續進行，裝置離線也能繼續執行。超過 90% 的 Cowork 使用並非軟體開發，而是業務營運與內容創作等日常知識工作。
+
+### Key Points
+- 跨裝置工作連續性：桌機開始任務、手機查看進度、任何地點取得成果
+- 背景工作執行：可排定任務於特定時間運行（如早上 6 點準備客戶簡報），完成後留待審核
+- 人工決策控制：Claude 遇到需人工判斷的決定會提醒使用者，確保最終輸出經核准
+- 多平台支援：網頁版、行動版（iOS/Android）與桌面應用整合，共享專案與工件
+- 使用案例廣泛：約 50% 使用來自業務營運與內容創作，包括支出對帳、合約追蹤、客戶簡報準備
+- 推廣期（至 8/5）提供雙倍 Cowork 使用額度
+
+---
+
+## Giving admins more visibility and control over Claude spend
+
+**Date:** 2026-07-02 | **URL:** https://claude.com/blog/giving-admins-more-visibility-and-control-over-claude-usage-and-spend
+
+### Summary
+Anthropic 為企業版推出強化的管理分析與成本控管工具，因應 agentic workflow 使用型態日趨複雜，讓管理員可依團隊/個人追蹤用量與成本。
+
+### Key Points
+- Claude Code 專屬分頁顯示活躍開發者數、session 數與生產力估計指標
+- Analytics Chat 支援自然語言查詢（如「哪些團隊本月用量翻倍？」）；Analytics API 可整合 Datadog、CloudZero 等既有工具
+- Model defaults/entitlements 可設定預設啟動模型，避免不必要的高階模型用量
+- 用量門檻警示：75%／90% 觸發管理員預警，75%／95% 觸發使用者內建通知並可直接聯繫管理員
+- Admin API 支援大規模自動化 usage 監控與加量審核流程
+- 追蹤指標涵蓋 Artifacts 建立數、檔案編輯數、skills/connector 使用率，並依團隊/使用者/產品/模型拆分成本
+
+---
+
+## Introducing the Claude apps gateway for Amazon Bedrock and Google Cloud
+
+**Date:** 2026-06-29 | **URL:** https://claude.com/blog/introducing-the-claude-apps-gateway
+
+### Summary
+Anthropic 推出 Claude apps gateway，一個自架控制平面，讓企業能以統一治理機制在 Amazon Bedrock 與 Google Cloud 上安全執行 Claude Code，取代過去逐開發者配置雲端憑證的作法。
+
+### Key Points
+- 身份管理：作為 OpenID Connect relying party，支援 Google Workspace、Microsoft Entra ID、Okta 等標準 OIDC 供應商
+- 集中定義並強制套用 managed settings 至所有 client；透過 OTLP 上報用量遙測至自架 collector
+- 路由層可將推論導向 Claude API、Amazon Bedrock 或 Google Cloud，並支援 failover
+- 支援組織/群組/使用者層級的日/週/月用量上限控管
+- 技術架構：單一無狀態容器執行於 Linux，搭配 PostgreSQL，隨既有 Claude binary 一併發布；透過 `gateway.yaml` 設定 OIDC 與上游憑證、`managed-settings.json` 控制 client 連線
+- 除非設定使用 Claude API，否則 gateway 不會將推論流量或用量資料傳回 Anthropic
+
+---
+
+## Claude in Microsoft Foundry is now generally available
+
+**Date:** 2026-06-29 | **URL:** https://claude.com/blog/claude-in-microsoft-foundry
+
+### Summary
+Claude 模型在 Microsoft Foundry（Azure 託管）正式 GA，企業可透過既有 Azure 基礎設施運行 Claude，整合身份驗證、計費與治理機制。
+
+### Key Points
+- 部署選項：Azure 託管（提供美國資料落地選項）或 Anthropic 基礎設施託管（初期 API 功能較完整）
+- 上線模型：Claude Opus 4.8、Claude Haiku 4.5，支援 Messages API、prompt caching、extended thinking
+- 整合 Azure 身份、網路與治理控制；符合資格的 Microsoft Enterprise Agreement 客戶可將 Claude 用量計入 Azure 承諾額度
+- 客戶案例：NVIDIA 用自主 agent 處理 GB300 GPU 技術工作；Bolt 達到 Fortune 500 等級可靠度；Everstar 將核能安全分析從 200 人天壓縮至 1 天；Momentic 用於自動化測試，每分鐘處理數百萬 token
+- Anthropic 負責該 Azure 託管部署的推論運算與資料處理者角色
+
+---
+
+## Claude Code now supports artifacts
+
+**Date:** 2026-06-18 | **URL:** https://claude.com/blog/artifacts-in-claude-code
+
+### Summary
+Claude Code 新增 Artifacts 功能，可將工作 session 轉換為互動式、可分享的網頁，整合 codebase、工具執行結果與對話歷史，供團隊成員即時查看。頁面隨 Claude Code 變更自動更新，支援版本歷史與還原。目前限 Team/Enterprise beta。
+
+### Key Points
+- 頁面隨 Claude Code 每次變更自動同步，支援版本歷史回溯與還原
+- 預設私有，僅限組織內認證成員存取；管理員可透過 org-level 開關和角色權限控管
+- 適用場景：PR walkthrough（Reviewer 看到完整思路）、事故調查、安全稽核、基礎架構地圖、前端 UX 設計、週報摘要
+- 詳細解析見 [best-practices/39-artifacts.md](../../best-practices/39-artifacts.md)
+
+---
+
+## Claude Design now stays on brand for daily work
+
+**Date:** 2026-06-17 | **URL:** https://claude.com/blog/claude-design-stays-on-brand-for-daily-work
+
+### Summary
+Claude Design 新增設計系統整合、`/design-sync` 雙向同步 Claude Code，並大幅重設計編輯器與效能改善，連接 Adobe、Canva、Figma 等多個設計平台。
+
+### Key Points
+- 可從 GitHub repo、設計檔案或原始上傳匯入設計系統，自動驗證輸出是否符合品牌規範
+- `/design-sync` 指令將設計系統拉進 Claude Code；反向亦可從 Code 端以 `/design` 指令啟動
+- 使用量限制與 chat 共享以提升容量；每輪平均 token 用量下降、錯誤率大幅降低
+- 連接 Adobe、Canva、Figma 等多個設計平台
+
+---
+
+## Anthropic opens Seoul office and announces new partnerships across the Korean AI ecosystem
+
+**Date:** 2026-06-17 | **URL:** https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem
+
+### Summary
+Anthropic 在首爾設立辦公室，與韓國科技部簽署 AI 安全 MOU，多家韓國大型企業已全面部署 Claude Code。
+
+### Key Points
+- **NAVER**：全工程組織導入 Claude Code
+- **Nexon**：工程師用於遊戲開發
+- **LG CNS**：推廣至整個 LG 集團數千名員工
+- **Samsung SDS**：部署至三星電子員工
+- 與 NAIRL 國家 AI 研究所合作，為 60 位研究人員提供 Claude 存取
+- 與科技部 MOU 聚焦韓語 AI 安全評估與 AI 網路威脅應對
+
+---
+
+## Centrally manage authorization for MCP connectors
+
+**Date:** 2026-06-18 | **URL:** https://claude.com/blog/enterprise-managed-auth
+
+### Summary
+企業版 MCP connector 集中授權管理（Team/Enterprise Beta），透過 Okta 等 IdP 統一配置，消除逐個 OAuth 審批流程，員工登入即自動取得 connector 存取權。
+
+### Key Points
+- Zero-touch 設定：依 IdP 群組成員資格自動配置，跨 Claude chat、Claude Code、Cowork 生效
+- 支援 Asana、Atlassian、Canva、Figma、Linear、Supabase 作為 MCP provider；Okta 負責身份管理
+- 可強制 IdP-only 連線，支援 token 生命週期控制，加速撤銷存取
+- 與 Workload Identity Federation 互補：WIF 適合 workload-to-API 身份；IdP 管控適合員工 connector 授權
+
+---
+
+## Claude Fable 5 and Claude Mythos 5
+
+**Date:** 2026-06-09 | **URL:** https://www.anthropic.com/news/claude-fable-5-mythos-5
+
+### Summary
+Anthropic 發布 Fable 5（Mythos-class 公開版）和 Mythos 5（Project Glasswing 受邀版）。Fable 5 是迄今公開可用能力最強的模型，在幾乎所有評測上達 SOTA。訂閱方案用戶 6/9–6/22 免費試用，6/23 起需 Usage Credits。
+
+### Key Points
+- Context 1M token；輸出上限 128k；定價 $10/$50 per MTok
+- ViBench（vibe-coding）和 FrontierBench（Cognition coding eval）最高分
+- Analytics benchmark 首次突破 90%（比 Opus 4.8 +10 分）
+- 安全分類器：cyber/bio-chem/distillation 請求自動路由至 Opus 4.8（< 5% sessions）
+- Mythos 5：無分類器限制，僅限 Project Glasswing 合作夥伴
+- 平台支援：Claude API / Bedrock / Vertex AI / Foundry / Claude Platform on AWS
+
+---
+
+## New in Claude Managed Agents: run agents on a schedule and store environment variables in vaults
+
+**Date:** 2026-06-09 | **URL:** https://claude.com/blog/whats-new-in-claude-managed-agents
+
+### Summary
+Managed Agents 新增兩項 Public Beta 功能：Scheduled Deployments（cron 觸發自動 session）和 Vaults with Environment Variables（API Key 在網路邊界安全替換，Agent 永遠看不到真實 Key）。
+
+### Key Points
+- 排程部署：設定 cron schedule，每次觸發自動啟動新 session，無需自建排程基礎設施
+- Vault 金鑰管理：安全儲存 API Key（GITHUB_TOKEN 等 env vars），只在允許的網域邊界替換，非沙盒內替換
+- 典型場景：夜間資料同步、每週合規掃描、每日 digest、CI/CD 自動化
+- 與 MCP OAuth 互補：Vault 適合靜態 API Key；OAuth 適合 interactive 授權流程
 
 ---
 

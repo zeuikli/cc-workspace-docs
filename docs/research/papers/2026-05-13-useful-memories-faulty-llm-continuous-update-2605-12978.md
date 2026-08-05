@@ -4,6 +4,7 @@ title: "Useful Memories Become Faulty When Continuously Updated by LLMs"
 archived_date: 2026-06-09
 arxiv_id: 2605.12978
 authors: ["Dylan Zhang", "Yanshan Lin", "Zhengkun Wu", "Yihang Sun", "Bingxuan Li", "Dianqi Li", "Hao Peng"]
+pdf_path: pdfs/2605.12978.pdf
 published_date: 2026-05-13
 ---
 

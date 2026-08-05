@@ -5,6 +5,7 @@ archived_date: 2026-06-09
 arxiv_id: 2502.1211
 authors: ["Wujiang Xu", "Zujie Liang", "Kai Mei", "et al."]
 domains: [cs.CL]
+pdf_path: pdfs/2502.12110.pdf
 published_date: 2025-02-17
 ---
 

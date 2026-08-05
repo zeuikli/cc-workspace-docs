@@ -20,7 +20,7 @@ Prompt caching 讓你在 prompt 的特定前綴上繼續執行，顯著降低重
 
 | 模型 | 基礎輸入 | 5m 寫入 | 1h 寫入 | 快取命中 | 輸出 |
 |------|---------|--------|--------|---------|------|
-| Opus 4.7 | $5/MTok | $6.25 | $10 | **$0.50** | $25 |
+| Opus 4.8 | $5/MTok | $6.25 | $10 | **$0.50** | $25 |
 | Sonnet 4.6 | $3/MTok | $3.75 | $6 | **$0.30** | $15 |
 | Haiku 4.5 | $1/MTok | $1.25 | $2 | **$0.10** | $5 |
 
@@ -36,7 +36,7 @@ Prompt caching 讓你在 prompt 的特定前綴上繼續執行，顯著降低重
 
 ```python
 response = client.messages.create(
-    model="claude-opus-4-7",
+    model="claude-opus-4-8",
     max_tokens=1024,
     cache_control={"type": "ephemeral"},  # 頂層自動快取
     system="You are a helpful assistant...",
@@ -62,7 +62,7 @@ response = client.messages.create(
 
 ```python
 response = client.messages.create(
-    model="claude-opus-4-7",
+    model="claude-opus-4-8",
     max_tokens=1024,
     system=[
         {"type": "text", "text": "You are an AI assistant..."},
@@ -180,7 +180,7 @@ usage = response.usage
 ```python
 # 預熱請求（max_tokens=0，不產生輸出）
 prewarm = client.messages.create(
-    model="claude-opus-4-7",
+    model="claude-opus-4-8",
     max_tokens=0,
     system=[{"type": "text", "text": "...", "cache_control": {"type": "ephemeral"}}],
     messages=[{"role": "user", "content": "warmup"}],

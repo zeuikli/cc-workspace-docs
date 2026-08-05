@@ -5,6 +5,7 @@ archived_date: 2026-06-09
 arxiv_id: 2601.03868
 authors: ["Xing Li", "Hui-Ling Zhen", "Lihao Yin", "et al."]
 domains: [cs.CL]
+pdf_path: pdfs/2601.03868.pdf
 published_date: 2026-01-07
 ---
 

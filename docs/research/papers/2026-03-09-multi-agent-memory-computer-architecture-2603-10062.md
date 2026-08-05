@@ -5,6 +5,7 @@ archived_date: 2026-06-09
 arxiv_id: 2603.10062
 authors: ["Zhongming Yu", "Naicheng Yu", "Hejia Zhang", "et al."]
 domains: [cs.AR, cs.AI, cs.MA]
+pdf_path: pdfs/2603.10062.pdf
 published_date: 2026-03-09
 ---
 
@@ -56,7 +57,7 @@ Position paper，將多 agent 記憶管理重新框架為**計算機架構問題
 - 前者從「協調」視角（agent 間通訊協議）
 - 本文從「記憶」視角（共享狀態一致性）
 
-多 agent fan-out 設計中「child 間不直接溝通」的規則，部分原因正是為了避免共享記憶一致性問題。
+多 agent fan-out 設計中「child 間不直接溝通」的規則，部分原因正是為了避免共享記憶一致性問題。 〔v5.1：所引 workspace 細則已退役 → 見 `INDEX.md` §v5.1 規則退役對照〕
 
 ## 分類
 

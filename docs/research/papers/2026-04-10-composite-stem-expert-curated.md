@@ -3,6 +3,7 @@ url: "https://arxiv.org/abs/2604.09836"
 title: "COMPOSITE-STEM: Expert-Curated STEM Benchmark"
 archived_date: 2026-06-09
 authors: ["Kyle Waters", "Lucas Nuzzi", "Tadhg Looram", "Alessandro Tomasiello", "Ariel Ghislain Kemogne Kamdoum", "Bikun Li", "Damien Sileo", "Egor Kretov", "Francesco Fournier-Facio", "Georgios Soloupis", "Haile Kassahun", "Hew Wolff", "Jiaqi Cai", "Lianghui Li", "Marc Roth", "Mohinder Naiya", "Naixu Guo", "Qicheng Tang", "Richard Wheeler", "Samuele Sala", "Serguei Popov", "Steven Dillmann", "Yuqi Li"]
+pdf_path: pdfs/2604.09836.pdf
 published_date: 2026-04-10
 ---
 

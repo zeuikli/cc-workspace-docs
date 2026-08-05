@@ -4,6 +4,7 @@ title: "Values in the Wild: Discovering and Analyzing Values in Real-World Langu
 archived_date: 2026-06-09
 arxiv_id: 2504.15236
 authors: ["Saffron Huang", "Esin Durmus", "Miles McCain", "Kunal Handa", "Alex Tamkin", "Jerry Hong", "Michael Stern", "Arushi Somani", "Xiuruo Zhang", "Deep Ganguli"]
+pdf_path: pdfs/2504.15236.pdf
 published_date: 2025-04-21
 ---
 
@@ -177,7 +178,7 @@ Discovered values align with "helpful, harmless, honest" training framework:
 Empirical foundation for understanding Claude's actual value expression in practice:
 
 1. **Helpfulness 23.4%, Professionalism 22.9%**: Top expressed values confirm `core.md` "helpful, harmless, honest" training works as intended at scale
-2. **Values become explicit during resistance**: Boundary-setting interactions are where Claude's values are most legible — relevant to `harness-meta` safety audit and `opus-pilot` adversarial testing
+2. **Values become explicit during resistance**: Boundary-setting interactions are where Claude's values are most legible — relevant to `harness-meta` safety audit and `pilot`（tier=ceiling，原 `opus-pilot`） adversarial testing
 3. **0.16% problematic value rate**: Low but non-zero — `autoresearch` verify gate and `harness-meta` CAR framework should include value-expression spot checks for sensitive domains
 4. **20.1% value mirroring in supportive vs. 1.2% in resistance**: Strong asymmetry — Claude is more reflective (mirrors user) when agreeing and more principled (expresses own values) when resisting
-5. **Sonnet vs. Opus value differences**: `sonnet-pilot` and `opus-pilot` may produce different value expression profiles — empirically confirmed, not just theoretical
+5. **Sonnet vs. Opus value differences**: `pilot`（tier=quality，原 `sonnet-pilot`） and `pilot`（tier=ceiling，原 `opus-pilot`） may produce different value expression profiles — empirically confirmed, not just theoretical

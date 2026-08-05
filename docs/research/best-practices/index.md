@@ -1,7 +1,9 @@
 # best-practices/INDEX.md
 
-> **Type:** wiki:compiled — 32 docs covering hooks, agents, skills, permissions, MCP, sandbox, dynamic workflows  
-> **Updated**: 2026-06-05  
+> Type: wiki:synthesis
+> Harness-Layer: L4-knowledge
+> **Type:** wiki:compiled — 46 docs covering hooks, agents, skills, permissions, MCP, sandbox, dynamic workflows, Opus 5, Fable 5, Sonnet 5, Managed Agents, Artifacts, W25–W31 features  
+> **Updated**: 2026-08-04（新增 44–49：Opus 5、模型選型、Claude 5 context engineering、verification loops、W28–W31、MCP 2026-07-28）  
 > **Query pattern**: BRAIN.md → 本表（序號 / 主題）→ `<NN>-<topic>.md`
 
 本目錄收錄從官方文件與社群來源抓取的 Claude/Claude Code 最佳實踐，涵蓋 Agent、Skill、Rules、Hooks 四個面向。
@@ -44,6 +46,20 @@
 | [33-skills-nine-categories.md](./33-skills-nine-categories.md) | Skills 九大類別與 Analytics Agent 設計指南 | Anthropic 內部九類 Skill、design 核心原則、Analytics Stack 四層架構、skills 準確率 21%→95%（2026-06-03）|
 | [34-w21-w22-features.md](./34-w21-w22-features.md) | Claude Code W21–W22 新功能（v2.1.143–v2.1.157）| Auto mode on Pro、/code-review 指令、claude agents --json、Opus 4.8 新預設、Dynamic Workflows、Security Guidance Plugin、Fast Mode 定價（2026-05-18–29）|
 | [35-ai-native-engineering.md](./35-ai-native-engineering.md) | AI 原生工程組織管理指南 | JIT Planning、Code Review 重新定義、三大指標（Onboarding/PR cycle time/Claude-assisted commits）、消滅過時流程（2026-06-03）|
+| [36-claude-fable-5.md](./36-claude-fable-5.md) | Claude Fable 5 與 Mythos 5 完整指南 | Model ID / 規格 / 定價、訂閱方案免費期（6/9–6/22）、安全分類器路由、Prompt 差異（稽核/Subagent/記憶）、與 Opus 4.8 選型對照（2026-06-09）|
+| [37-managed-agents-schedule-vaults.md](./37-managed-agents-schedule-vaults.md) | Managed Agents 排程部署與 Vault 金鑰管理 | Scheduled Deployments（cron 觸發）、Vaults with Env Vars（網路邊界替換 API Key）、post-session lifecycle hook（2026-06-09）|
+| [38-steering-claude-code.md](./38-steering-claude-code.md) | 自訂 Claude Code 行為的七種機制 | CLAUDE.md / Rules / Skills / Subagents / Hooks / Output Styles / System Prompt Appending 選擇框架（2026-06-18）|
+| [39-artifacts.md](./39-artifacts.md) | Claude Code Artifacts — 工作 Session 轉互動網頁 | 自動更新頁面、版本歷史、存取控制、PR walkthrough / 事故調查 / 安全稽核使用場景（2026-06-18，Team/Enterprise Beta）|
+| [40-w25-features.md](./40-w25-features.md) | Claude Code W25 新功能（v2.1.178–v2.1.183）| Agent Teams 簡化（Implicit Teams）、`Tool(param:value)` permission 語法、Nested Skills 目錄、Auto mode 破壞性指令攔截、`/config key=value`、Subagent 5 層深度上限、`attribution.sessionUrl`（2026-06-15–19）|
+| [41-claude-sonnet-5.md](./41-claude-sonnet-5.md) | Claude Sonnet 5 完整指南 | 新預設模型、1M context window、促銷定價 $2/$10（至 2026-08-31）、Agentic 能力躍進、與 Opus 4.8/Fable 5 選型對照（2026-06-30）|
+| [42-w26-27-features.md](./42-w26-27-features.md) | Claude Code W26–W27 新功能（v2.1.185–v2.1.201）| 預設 permission mode 改為 Manual、Subagent 預設背景執行 + 自動 commit/push/開 draft PR、Claude in Chrome GA、Org 層級預設模型、`sandbox.credentials`、Streaming idle watchdog、`CLAUDE_CODE_MAX_RETRIES` 上限反覆調整（2026-06-20–07-03）|
+| [43-claude-in-chrome.md](./43-claude-in-chrome.md) | Claude in Chrome — 瀏覽器操作正式 GA | Ask-before-acting 權限模型、16 項擴充功能權限、Team/Enterprise allowlist/blocklist、Prompt Injection 安全注意事項、與 Computer Use（Desktop/CLI）比較（2026-07-01 GA）|
+| [44-claude-opus-5.md](./44-claude-opus-5.md) | Claude Opus 5 完整指南 | `claude-opus-5`、1M context、$5/$25（與 Opus 4.8 同價）、low/medium/high effort、Frontier-Bench 為 4.8 的 2 倍、CursorBench 與 Fable 5 差 < 0.5%、Claude Max 新預設（2026-07-24）|
+| [45-model-selection-guide.md](./45-model-selection-guide.md) | Claude 模型選型官方指南 | 從最強模型起步再往下調、四 class 定位、effort 改變 per-task 經濟性、Advisor（Sonnet+Fable = 90% 效能 / 63% 成本）、自建 eval > benchmark（2026-07-24）|
+| [46-context-engineering-claude5.md](./46-context-engineering-claude5.md) | Claude 5 世代 Context Engineering 新規則 | system prompt 刪 80%+ 無退化、六條 Then→Now（judgment/tool design/progressive disclosure/去重/auto-memory/rich references）、Context Assembly 四層；workspace canonical = `.claude/refs/context-engineering-claude5.md`（2026-07-24）|
+| [47-verification-loops-skills.md](./47-verification-loops-skills.md) | 用 Skill 建構驗證迴圈 | 驗證迴圈定義、內建 `/verify` 與 Code Review、Skill 寫法、四種部署形態（standalone/embedded/chained/PR-wide）、專案特定確定性規則即素材（2026-07-22）|
+| [48-w28-w31-features.md](./48-w28-w31-features.md) | Claude Code W28–W31 新功能（v2.1.202–221）| Opus 5 上線、subagent 上限與巢狀關閉、`/fork` 改語義 + `/subtask`、`/verify`/`/code-review`/`/deep-research` 不再自動觸發、單段 `dir/**` allow 語義變更、sandbox credential mask、大量權限繞過修正（2026-07-05–08-03）|
+| [49-mcp-2026-07-28.md](./49-mcp-2026-07-28.md) | MCP 2026-07-28 規格更新 | Stateless core（serverless/edge 可部署）、Extensions 版本化（MCP Apps / Tasks）、OAuth 2.0 + OIDC 對齊、企業 IdP 佈建、950+ servers、connector dashboard（2026-07-28）|
 
 ---
 
@@ -74,7 +90,7 @@
 ### Sub-Agent
 - 預期工具呼叫 > 20 次 → 必須委派
 - 判斷心智模型：只需結論 → subagent；需反覆檢視 → 主對話
-- Opus 4.7 需要明確的平行指示
+- 強模型（Opus/Fable）需要明確的平行指示
 
 ### MCP
 - 工具數量建議 3–6 個 MCP servers
@@ -105,6 +121,43 @@
 - **`claude agents --json`**：以 JSON 列出活躍 session，適合 status bar 腳本（W21）
 - **`!` 前綴背景 job**：`claude agents` 中 `!cmd` 執行可 attach/detach 的背景工作（W22）
 
+### W25 新功能（v2.1.178–183，2026-06-15 起）
+- **Agent Teams 簡化**：移除 `TeamCreate`/`TeamDelete`，每個 session 自動有隱含 team；設 `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` 啟用
+- **`Tool(param:value)` permission 語法**：deny/ask 規則支援工具輸入參數精細控制，如 `Agent(model:opus)` 阻止 Opus-level subagent spawn
+- **Nested `.claude/skills/`**：子目錄 skills 現在可被載入，名稱衝突以 `<dir>:<name>` 格式顯示
+- **Auto mode 破壞性指令攔截**：`git reset --hard`、`git clean -fd`、`git commit --amend`（非本 session 建立的 commit）、`terraform/pulumi/cdk destroy` 在未明確要求時一律封鎖
+- **`/config key=value`**：runtime 直接設定，無需編輯 settings.json；`/config --help` 列出所有 shorthand
+- **Subagent 5 層深度上限**：修正嵌套無限制 bug，防止 OOM 和成本失控
+- **`attribution.sessionUrl`**：設定可從 commit/PR 省略 claude.ai session URL
+- **Prompt cache 修復**：自訂 `ANTHROPIC_BASE_URL` / Foundry 環境現在能正確利用 cache（v2.1.181）
+- **Artifacts**：session 轉互動網頁，自動更新，Team/Enterprise Beta（詳見 39-artifacts.md）
+
+### W26–W27 新功能（v2.1.185–201，2026-06-20 起，詳見 42-w26-27-features.md）
+- **⚠️ 預設 permission mode 改為 "Manual"**（v2.1.200）：CLI/VS Code/JetBrains 一致；自動化腳本/CI 需明確指定 `--permission-mode`
+- **Claude Sonnet 5 發布**（v2.1.197）：新預設模型，1M context，促銷價 $2/$10（至 2026-08-31），詳見 41-claude-sonnet-5.md
+- **Claude in Chrome 正式 GA**（v2.1.198）：詳見 43-claude-in-chrome.md
+- **Subagent 預設背景執行 + 完成後自動 commit/push/開 draft PR**（v2.1.198）：稽核時機需提前到 PR review 階段
+- **`sandbox.credentials`**（v2.1.187）：封鎖 sandboxed 指令讀取憑證檔案/secret 環境變數
+- **`autoMode.classifyAllShell`**（v2.1.193）：auto mode 分類器擴及所有 Bash/PowerShell 指令
+- **`claude_code.assistant_response` OTel 事件**（v2.1.193）：⚠️ 未設 `OTEL_LOG_ASSISTANT_RESPONSES` 時跟隨 `OTEL_LOG_USER_PROMPTS`，已記錄 prompt 的部署升級後會一併記錄 response
+- **`/rewind` 支援跨越 `/clear` 恢復**（v2.1.191）
+- **`CLAUDE_CODE_MAX_RETRIES` 上限**：v2.1.186 訂為 15，v2.1.199 對非容量類 transient error 解除上限並提高至 300
+- **`/dataviz` skill**、**Org 層級預設模型**（v2.1.196）、移除 `/agents` wizard（v2.1.198）
+
+### W28–W31 新功能（v2.1.202–221，2026-07-05 起，詳見 48-w28-w31-features.md）
+- **Claude Opus 5 上線**（v2.1.219）：`claude-opus-5`，1M context，詳見 44-claude-opus-5.md
+- **⚠️ 單段 `dir/**` allow 規則語義變更**（v2.1.214）：`Edit(src/**)` 與 hook `if:` 現在只匹配 `<cwd>/dir`，任意深度需寫 `**/dir/**`；`deny`/`ask` 維持任意深度
+- **Subagent 扇出上限**：每 session 200（`CLAUDE_CODE_MAX_SUBAGENTS_PER_SESSION`）、同時 20（`CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS`）、**預設不再巢狀 spawn**（v2.1.212/217）
+- **Task 工具 `mode` 參數廢除**（v2.1.212）：subagent 繼承 parent permission mode
+- **`/fork` 改為建立獨立背景 session（自有 worktree）**，原 in-session subagent 改名 **`/subtask`**（v2.1.212/213）
+- **驗證與研究不再自動觸發**：`/verify`、`/code-review`（v2.1.215）、`/deep-research`（v2.1.218）改為手動呼叫
+- **背景 session 收尾語義**（v2.1.213）：commit + push，只在需要時開 draft PR，遵守 CLAUDE.md git 指示，結束一定回報工作落點
+- **權限繞過密集修正**（v2.1.213/214/216）：zsh `[[ ]]` 隱藏命令、fd 重導向 fail closed、> 10,000 字元命令一律提示、`docker` daemon 重導向旗標需授權
+- **沙箱**：`sandbox.credentials` 新增 `mode: "mask"`（Linux/WSL，v2.1.213）、`sandbox.network.strictAllowlist`（v2.1.219）、`sandbox.filesystem.disabled`（v2.1.216）
+- **`claude-api` skill 新增 `prompt-audit`**（v2.1.213）：稽核為舊世代寫的 prompt / tool description
+- **WebSearch 每 session 上限 200**、**MCP 呼叫 > 2 分鐘自動轉背景**（v2.1.212）
+- **`--max-budget-usd` 現在會中止執行中的背景 agent**（v2.1.217）
+
 ### Dynamic Workflows（W22 新）
 - 啟動：直接請求 "create a workflow that..."，或 `/effort ultracode`
 - 管理：`/workflows` 查看執行中 workflows
@@ -118,9 +171,24 @@
 - `/reload-skills`：重新掃描 skill 目錄，不需重啟（W22）
 - `/workflows`：管理動態 workflows（W22）
 
-### 模型（最新）
-- **Claude Opus 4.8**：W22 新預設（Max/Team Premium/Enterprise PAYG/API），v2.1.154+
-- Fast mode on Opus 4.8：$10/$50 per MTok（2× 標準費率，約 2.5× 速度）
+### 模型（最新，截至 2026-08-04）
+
+| Model | ID | 輸入 | 輸出 | 備註 |
+|-------|-----|------|------|------|
+| **Claude Fable 5** | `claude-fable-5` | $10/MTok | $50/MTok | 最強公開模型；1M ctx；128k 輸出；2026-06-09 GA |
+| **Claude Mythos 5** | `claude-mythos-5` | $10/MTok | $50/MTok | Project Glasswing 受邀限定；無安全分類器 |
+| **Claude Opus 5** | `claude-opus-5` | $5/MTok | $25/MTok | **2026-07-24 發布**；1M ctx；low/medium/high effort；Claude Max 預設、Pro 最強；多數任務逼近 Fable 5 而價格減半；詳見 44-claude-opus-5.md |
+| **Claude Opus 4.8** | `claude-opus-4-8` | $5/MTok | $25/MTok | 前代深推理檔位；Fable 5 安全路由的備援模型；已被 Opus 5 取代 |
+| **Claude Sonnet 5** | `claude-sonnet-5` | $2/MTok（促銷至 08-31，之後 $3）| $10/MTok（促銷，之後 $15）| CLI 預設模型（v2.1.197，2026-06-30）；1M ctx；取代 Sonnet 4.6；詳見 41-claude-sonnet-5.md |
+| **Claude Haiku 4.5** | `claude-haiku-4-5-20251001` | $0.25/MTok | $1.25/MTok | 速度/成本最優 |
+
+- Sonnet 4.6 已被 Sonnet 5 取代為預設模型（仍可手動選用）
+- **Opus 5 fast mode**：約 2.5× 速度、2× 價格（$10/$50）
+- **選型框架**：從一般可用的最強模型起步再依延遲/成本往下調；class × effort 決定 per-task 經濟性 → 45-model-selection-guide.md
+
+- **Fable 5 訂閱方案**：Pro/Max/Team/Enterprise 免費用至 2026-06-22；2026-06-23 起需 Usage Credits（API 費率）
+- **Fable 5 安全分類器**：cyber / bio-chem / distillation 請求自動路由至 Opus 4.8（< 5% sessions）；Fable 5 prompt cache 與 Opus 4.8 不相容
+- **Fast mode on Opus 4.8**：$10/$50 per MTok（標準費率 2×，速度 2.5×）；Fable 5 standard 同價，勿混淆
 - Opus 4.6 fast mode 已 deprecated
 
 ### Security Guidance Plugin（W22 新）

@@ -4,6 +4,7 @@ title: "Cold-Start Anti-Patterns and Refactorings in Serverless Systems: An Empi
 archived_date: 2026-06-09
 arxiv_id: 2512.16066
 authors: ["Syed Salauddin Mohammad Tariq", "Foyzul Hassan", "Amiangshu Bosu", "Probir Roy (University of Michigan–Dearborn", "Wayne State)"]
+pdf_path: pdfs/2512.16066.pdf
 published_date: 2025-12-18
 venue: "IEEE SANER 2026 (accepted, preprint)"
 ---

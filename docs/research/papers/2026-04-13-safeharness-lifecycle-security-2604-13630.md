@@ -4,6 +4,7 @@ title: "SafeHarness: Lifecycle-Integrated Security Architecture for LLM-based Ag
 archived_date: 2026-05-23
 arxiv_id: 2604.1363
 authors: ["Xixun Lin", "Yang Liu", "Yancheng Chen", "Yongxuan Wu", "Yucheng Ning", "Yilong Liu", "Nan Sun", "Shun Zhang", "Bin Chong", "Chuan Zhou", "Yanan Cao"]
+pdf_path: pdfs/2604.13630.pdf
 published_date: 2026-04-13
 ---
 
@@ -221,7 +222,7 @@ Attack scenarios tested:
 
 | Paper Concept | cc-workspace Current State | Opportunity |
 |---------------|---------------------------|-------------|
-| Provenance tagging | No source tracking on tool outputs | Tag external content in `<untrusted_external_data>` (already in subagent-strategy.md) ✅ |
+| Provenance tagging | No source tracking on tool outputs | Tag external content in `<untrusted_external_data>` (already in `core.md §PROPOSE 委派`（原 subagent-strategy.md）) ✅ |
 | HMAC tool integrity | No tool description signing | Low priority for local harness |
 | Entropy monitor (violation rate) | Manual observation only | Add violation counter to GOTCHAS.md tracking |
 | Progressive degradation (5 levels) | Binary: proceed or stop | Model as: normal → warn → require confirmation → read-only → halt |

@@ -1,0 +1,21 @@
+---
+url: "https://arxiv.org/abs/2607.07663"
+title: "Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops"
+archived_date: 2026-07-21
+arxiv_id: 2607.07663
+pdf_path: pdfs/2607.07663.pdf
+source_routine: routine-c
+topic: recursive-self-improvement-anthropic-weco-aide2
+---
+
+# Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops
+
+## 摘要 / 核心貢獻
+
+本文為橫跨 2024–2026 年 1,250 篇 arXiv 論文的分類調查，釐清「自我改進」研究領域用詞混雜的問題——區分**有界自我精煉**（bounded self-refinement，收斂、可評估、已工業部署）與**開放式遞迴自我改進**（open-ended RSI，受接地限制/崩潰動態/算力上限約束仍未解決）。作者指出「self-refine」「self-reward」「self-play」等既有詞彙混淆了根本不同的目標。
+
+分類法沿兩軸展開：① 系統改進的對象（行為 / 策略 / 評估器 / 研究流程本身）；② 迴圈閉合程度（human-in-the-loop 到全自主）。核心洞見：每個改進迴圈本質上是一個「某訊號可替代人類判斷」的主張，因此**評估器設計**是理解 RSI 局限的關鍵。論文提出評估器驗證層級（formal verifiers 最強 → intrinsic self-assessment 最弱），並觀察到「已展示的自我改進強度與此層級一致」，失敗模式（self-confirming loops、model collapse、diversity collapse）與層級違反相關。
+
+「研究方向設定」被指出為瓶頸所在——即使前沿系統中人類仍須留在迴圈內做此決策。作者將「governance-grade 自我改進量測」列為該領域目前最欠缺的一塊，意味技術進展雖快，政策層級的評估框架仍未成熟。
+
+**與 workspace 對應**：此文的評估器層級（formal verifier > intrinsic self-assessment）與 core.md 公理「判斷 vs 決定」「Oracle 資格先於 loop」高度收斂——為外部學術文獻對本 workspace 既有設計原則的獨立驗證，非缺口。與同日研究的 AIDE2（Weco 自我改進系統）互為理論/實務對照：AIDE2 三層 reward-hacking 防護（prompt 警告/硬編碼 guard/統計過濾）可對應本文的「驗證層級」框架，AIDE2 的 34% 殘留作弊率印證本文「intrinsic self-assessment 最弱」的判斷。

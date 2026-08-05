@@ -4,6 +4,7 @@ title: "Code as Agent Harness"
 archived_date: 2026-06-09
 arxiv_id: 2605.18747
 authors: ["Xuying Ning", "Katherine Tieu", "Dongqi Fu", "Tianxin Wei", "Zihao Li", "Yuanchen Bei", "et al."]
+pdf_path: pdfs/2605.18747.pdf
 published_date: 2026-05-18
 ---
 

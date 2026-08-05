@@ -4,6 +4,7 @@ title: "Adapting the Interface, Not the Model: Runtime Harness Adaptation for De
 archived_date: 2026-05-23
 arxiv_id: 2605.22166
 authors: ["Tianshi Xu", "Huifeng Wen", "Meng Li"]
+pdf_path: pdfs/2605.22166.pdf
 published_date: 2026-05-21
 ---
 

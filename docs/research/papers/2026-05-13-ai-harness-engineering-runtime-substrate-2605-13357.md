@@ -4,6 +4,7 @@ title: "AI Harness Engineering: A Runtime Substrate for Foundation-Model Softwar
 archived_date: 2026-06-09
 arxiv_id: 2605.13357
 authors: ["Hailin Zhong", "Shengxin Zhu"]
+pdf_path: pdfs/2605.13357.pdf
 published_date: 2026-05-13
 ---
 

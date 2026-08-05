@@ -4,6 +4,7 @@ title: "Who's in Charge? Disempowerment Patterns in Real-World LLM Usage"
 archived_date: 2026-06-09
 arxiv_id: 2601.19062
 authors: ["Mrinank Sharma", "Miles McCain", "Raymond Douglas", "David Duvenaud"]
+pdf_path: pdfs/2601.19062.pdf
 published_date: 2026-01-27
 ---
 

@@ -4,6 +4,7 @@ title: "HydraServe: Minimizing Cold Start Latency for Serverless LLM Serving in 
 archived_date: 2026-06-09
 arxiv_id: 2502.15524
 authors: ["Chiheng Lou", "Sheng Qi", "Chao Jin", "Dapeng Nie", "Haoran Yang", "Yu Ding", "Xuanzhe Liu", "Xin Jin (Peking University + Alibaba Group)"]
+pdf_path: pdfs/2502.15524.pdf
 published_date: 2025-09-25
 ---
 

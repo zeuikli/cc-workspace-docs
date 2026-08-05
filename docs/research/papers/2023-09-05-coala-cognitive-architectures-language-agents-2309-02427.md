@@ -4,6 +4,7 @@ title: "Cognitive Architectures for Language Agents"
 archived_date: 2026-06-09
 arxiv_id: 2309.02427
 authors: ["Theodore R. Sumers", "Shunyu Yao", "Karthik Narasimhan", "Thomas L. Griffiths"]
+pdf_path: pdfs/2309.02427.pdf
 published_date: 2023-09-05
 venue: TMLR 2024
 ---

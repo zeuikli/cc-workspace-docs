@@ -8,7 +8,8 @@ type: best-practices
 
 > 來源：https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices  
 > 收錄日期：2026-05-01  
-> 涵蓋：Claude Opus 4.7、Opus 4.6、Sonnet 4.6、Haiku 4.5
+> ⚠️ **歷史快照**（Opus 4.7 / 4.6 era）：現役模型為 Opus 4.8 / Fable 5；Opus 4.7/4.6 特定行為節的描述可能不適用於新版。通用 prompting 原則仍有效。  
+> 涵蓋：Claude Opus 4.7、Opus 4.6、Sonnet 4.6、Haiku 4.5（撰寫時版本）
 
 ---
 

@@ -4,6 +4,7 @@ title: "HeavySkill: Heavy Thinking as the Inner Skill in Agentic Harness"
 archived_date: 2026-06-09
 arxiv_id: 2605.02396
 authors: ["Jianing Wang", "Linsen Guo", "Zhengyu Chen", "Qi Guo", "Hongyu Zang", "Wenjie Shi", "Haoxiang Ma", "Xiangyu Xi", "Xiaoyu Li", "Wei Wang", "Xunliang Cai"]
+pdf_path: pdfs/2605.02396.pdf
 published_date: 2026-05-04
 ---
 
@@ -132,6 +133,6 @@ Counter-intuitive finding: Qwen2.5-32B-Instruct (weaker independent reasoner) yi
 
 ## Workspace Relevance
 
-Directly validates `opus-pilot` **Mechanism #2 (Parallel Hypotheses + Synthesis)**: N=3 parallel candidates → synthesis is the same two-stage pattern. Paper confirms this is superior to Best-of-N selection.
+Directly validates `pilot`（tier=ceiling，原 `opus-pilot`） **Mechanism #2 (Parallel Hypotheses + Synthesis)**: N=3 parallel candidates → synthesis is the same two-stage pattern. Paper confirms this is superior to Best-of-N selection.
 
-For `haiku-pilot` / escalation gates: if the model has internalized heavy thinking (via RL training), the "escalate to Opus for deep reasoning" gate should account for whether the base model has this capability built in.
+For `pilot`（tier=cost，原 `haiku-pilot`） / escalation gates: if the model has internalized heavy thinking (via RL training), the "escalate to Opus for deep reasoning" gate should account for whether the base model has this capability built in.

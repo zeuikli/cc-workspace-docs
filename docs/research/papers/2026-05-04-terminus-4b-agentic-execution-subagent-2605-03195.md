@@ -6,6 +6,7 @@ arxiv_id: 2605.03195
 authors: ["Spandan Garg", "Vikram Nitin", "Yufan Huang"]
 domains: [cs.AI, cs.SE]
 license: CC BY-NC-ND 4.0
+pdf_path: pdfs/2605.03195.pdf
 published_date: 2026-05-04
 tags: [agent, subagent, fine-tuning, SFT, RL, GRPO, token-efficiency, coding-agent, SWE-Bench]
 ---
@@ -153,6 +154,6 @@ Terminus-4B achieved comparable quality scores to frontier models across 5 dimen
 
 ## Workspace 相關性
 
-- **Sub-agent 策略**：印證 `subagent-strategy.md` 的「任務分類先於委派」——終端執行是典型 on-rails 任務，委派給專門小模型合理
+- **Sub-agent 策略**：印證 `core.md §PROPOSE 委派`（原 `subagent-strategy.md`）的「任務分類先於委派」——終端執行是典型 on-rails 任務，委派給專門小模型合理
 - **Token 預算**：30% 主代理 token 節省與 `context-management.md` 的 per-task budget 直接相關
 - **訓練方法**：GRPO + LLM-as-judge 可作為 workspace eval 設計參考（對照 `refs/harness-meta`）

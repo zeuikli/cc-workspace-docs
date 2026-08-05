@@ -5,8 +5,48 @@ type: blog-index
 
 # Claude Blog 公告時間軸
 
-> 涵蓋期間：2025-11-13 ~ 2026-04-22 | 資料來源：[claude.com/blog](https://claude.com/blog)  
-> 共 52 篇文章，4 個分類
+> 涵蓋期間：2025-11-13 ~ 2026-06-12 | 資料來源：[claude.com/blog](https://claude.com/blog)  
+> 共 59 篇文章，4 個分類 | 最後更新：2026-06-15
+
+---
+
+## 2026 年六月第二週（Jun 9–15）
+
+### 2026-06-12 — Claude Code
+**[How Anthropic teams use Claude Code](https://claude.com/blog/how-anthropic-teams-use-claude-code)**  
+Anthropic 內部多部門（GTM、法務、行銷、資安、資料分析）的 Claude Code 實際應用案例。95% 商業查詢自動化；新員工第一天即可用 20+ skills 插件。
+
+### 2026-06-10 — Agents
+**[The evolution of agentic surfaces: building with Claude Managed Agents](https://claude.com/blog/building-with-claude-managed-agents)**  
+Managed Agents 定位為 composable production-grade agent APIs 套件，從原型到生產數天完成。整合 Dreaming、Outcomes、排程、Vault、Sandbox、MCP Tunnel 等全套功能。
+
+### 2026-06-09 — Announcements（Major）
+**[Claude Fable 5 and Claude Mythos 5](https://www.anthropic.com/news/claude-fable-5-mythos-5)**  
+Anthropic 最強公開模型 Fable 5（Mythos-class + 安全分類器）發布。ViBench / FrontierBench 最高分，Analytics benchmark 首破 90%。$10/$50 per MTok，1M context，128k 輸出。訂閱免費至 6/22，6/23 起需 Credits。
+
+### 2026-06-09 — Announcements
+**[New in Claude Managed Agents: schedule and vaults](https://claude.com/blog/whats-new-in-claude-managed-agents)**  
+Scheduled Deployments（cron 觸發 session）和 Vaults with Environment Variables（API Key 網路邊界替換，Agent 不見明文）Public Beta。
+
+### 2026-06-05 — Claude Code
+**[How one Anthropic seller rebuilt his team's workflows with Claude Code](https://claude.com/blog/how-anthropic-uses-claude-gtm-engineering)**  
+非技術背景業務主任建立 Gmail AI 草稿工具，衍生成 20+ skills Cowork 插件。
+
+---
+
+## 2026 年六月第一週（Jun 2–8）
+
+### 2026-06-03 — Claude Code
+**[Running an AI-native engineering org](https://claude.com/blog/running-an-ai-native-engineering-org)**  
+JIT Planning 取代季度 Roadmap；Claude Code 團隊連續四個月無非 Claude 協助 commit。
+
+### 2026-06-03 — Claude Code
+**[Lessons from building Claude Code: How we use skills](https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills)**  
+Anthropic 內部 Skill 九大類別分類法與進階技術（on-demand hooks、assets 資料夾、持久記憶）。
+
+### 2026-06-02 — Claude Code
+**[A harness for every task: dynamic workflows in Claude Code](https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code)**  
+Dynamic Workflows 六大模式深度解析（Adversarial verification / Tournament / Loop until done 等）。
 
 ---
 
@@ -261,6 +301,13 @@ Apr 08–09:    平台化宣告（Managed Agents、Cowork Enterprise、Advisor T
 Apr 14:        開發者體驗（桌面重設計、Routines）
 Apr 15–16:    使用指南（1M Context 管理、Opus 4.7 實踐）
 Apr 20–22:    社群成果 + MCP 里程碑（黑客松、300M 下載）
+Apr 30:        Claude Security Public Beta（漏洞利用等級 Mythos Preview 開放）
+May 06:        Managed Agents：Dreaming / Outcomes / Multiagent Orchestration
+May 09–26:    三城市 Code w/ Claude（SF → London → Tokyo）
+May 19–28:    Dynamic Workflows Research Preview；HTML-First 策略
+Jun 02–03:    技術深潛系列（Dynamic Workflow 六模式、Skills 九大類、AI 原生工程）
+Jun 09:        Fable 5 / Mythos 5 發布 ← 最強公開模型；Managed Agents Schedule + Vaults
+Jun 10:        Managed Agents 演進全貌（agentic surfaces overview）
 ```
 
-*由 `/autoresearch:learn` 生成 · 2026-04-23*
+*更新至 2026-06-15 by autoresearch*

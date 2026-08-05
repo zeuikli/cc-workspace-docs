@@ -1,0 +1,29 @@
+---
+url: "https://arxiv.org/abs/2606.03108"
+title: "EvoTrainer: Co-Evolving LLM Policies and Training Harnesses for Autonomous Agentic Reinforcement Learning"
+archived_date: 2026-07-30
+arxiv_id: 2606.03108
+authors: ["Guhong Chen", "Yingcheng Shi", "Yongbin Li", "Binhua Li", "Xander Xu", "Hu Wei", "Shiwen Ni", "Min Yang", "Jieping Ye"]
+collected_at: 2026-07-30
+collected_by: routine-d
+domain: harness-engineering
+pdf_path: pdfs/2606.03108.pdf
+published_date: 2026-06-02
+---
+
+# EvoTrainer: Co-Evolving LLM Policies and Training Harnesses for Autonomous Agentic Reinforcement Learning
+
+## 摘要 / 核心貢獻
+主張自主 LLM RL 訓練應「從 recipe search 走向 policy 與詮釋該 policy 的 training harness 聯合演化」，而非固定靜態訓練設定。EvoTrainer 不斷分析表現證據、精煉自身診斷方法、測試介入手段、累積可重用策略。在數學推理、競賽程式設計、軟體工程三個領域評測，表現與人工設計的 RL baseline 相當或更優，長視野軟體工程任務提升尤其明顯。分析顯示不同 domain 保留下來的策略不同（domain-specific 適應真實發生），演化中的診斷過程能過濾掉無效的高分分支（避免假陽性），累積技能會影響後續搜尋階段。
+
+## 與 Harness 的關聯
+
+> 2026-08-02 深讀 PDF 原檔（19 頁）後重寫，對齊 v5.1。
+
+把「訓練用診斷 harness」本身當作演化對象，呼應 corpus 既有的 self-harness / RHO 等「harness 自我改善」家族；與 `skill-evolution` / `autoload-evolution` 互為訓練期／推論期對照組。
+
+**最值得記錄的一條機制**：EvoTrainer 演化出來的診斷器，其作用是**阻止無效但高分的分支被晉級**（*evolving diagnostics prevent invalid high-scoring branches from being promoted*）。這正是 core.md §TEST「裝完成捷徑」與「能力悖論」防的東西——高分不等於有效，而本文顯示**診斷器本身必須隨任務演化**，否則會被繞過。對 workspace 的意涵是具體的：`unverified_success` 閘門的效力取決於 oracle 的鑑別力，而 v5.1 把 oracle 資格驗證從 `qualify-oracle.sh` 儀式降級為一句行為約定（「採信前先餵一組已知好＋一組已知壞」）。本文支持該降級的方向（儀式化 mutation testing 成本過高），但也指出被降級掉的東西是真實的——**靜態 oracle 會隨任務漂移而失效**。
+
+**⚠️ 但不可過度外推**：本文的統計結果比摘要語氣保守得多。相對人工設計 RL baseline，只有 SWE-9B（+4.39，p<0.001）與 Math（+2.88，p<0.001）顯著；**SWE-4B（+0.32，p=0.797）與 Coding（+0.57，p=0.142）落在信賴區間內，作者自陳為「匹敵」而非「超越」**。也就是說「自動演化 harness 勝過人工設計」目前只在部分域成立。引用本文支持 workspace 自我進化框架（`skill-evolution` / `autoload-evolution`）時，應引「匹敵人工設計且免去人工調校」而非「優於人工設計」。
+
+**檔位／規模對照**：相對無 RL 基線的增益在所有域都顯著（+4.57 ~ +7.95），即「有迴圈 > 無迴圈」遠比「自動迴圈 > 人工迴圈」穩健——與 `refs/model-profiles.md` effort-first 原則同向。

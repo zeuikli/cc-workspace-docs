@@ -5,6 +5,7 @@ archived_date: 2026-06-09
 arxiv_id: 2605.09823
 authors: ["Chelsea Zou", "Yiheng Yao", "Selena She", "Robert D. Hawkins"]
 domains: [cs.MA]
+pdf_path: pdfs/2605.09823.pdf
 published_date: 2026-05-10
 ---
 

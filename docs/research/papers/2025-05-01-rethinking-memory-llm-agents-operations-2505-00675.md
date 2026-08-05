@@ -4,6 +4,7 @@ title: "Rethinking Memory in LLM based Agents: Representations, Operations, and 
 archived_date: 2026-06-09
 arxiv_id: 2505.00675
 authors: ["Yiming Du", "Wenyu Huang", "Danna Zheng", "Zhaowei Wang", "Sebastien Montella", "Mirella Lapata", "Kam-Fai Wong", "Jeff Z. Pan"]
+pdf_path: pdfs/2505.00675.pdf
 published_date: 2025-05-01
 ---
 

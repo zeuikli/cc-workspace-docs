@@ -4,6 +4,7 @@ title: "MemGPT: Towards LLMs as Operating Systems"
 archived_date: 2026-05-26
 arxiv_id: 2310.0856
 authors: ["Charles Packer", "Sarah Wooders", "Kevin Lin", "Vivian Fang", "Shishir G. Patil", "Ion Stoica", "Joseph E. Gonzalez"]
+pdf_path: pdfs/2310.08560.pdf
 published_date: 2023-10-12
 ---
 

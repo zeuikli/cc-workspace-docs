@@ -4,6 +4,7 @@ title: "Retrieval-Augmented Generation for Large Language Models: A Survey"
 archived_date: 2026-05-26
 arxiv_id: 2312.10997
 authors: ["Yunfan Gao", "Yun Xiong", "Xinyu Gao", "Kangxiang Jia", "Jinliu Pan", "Yuxi Bi", "Yi Dai", "Jiawei Sun", "Meng Wang", "Haofen Wang"]
+pdf_path: pdfs/2312.10997.pdf
 published_date: 2023-12-18
 ---
 

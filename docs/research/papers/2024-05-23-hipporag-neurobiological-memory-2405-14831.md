@@ -4,6 +4,7 @@ title: "HippoRAG: Neurobiologically Inspired Long-Term Memory for Large Language
 archived_date: 2026-06-09
 arxiv_id: 2405.14831
 authors: ["Bernal Jiménez Gutiérrez", "Yiheng Shu", "Yu Gu", "Michihiro Yasunaga", "Yu Su"]
+pdf_path: pdfs/2405.14831.pdf
 published_date: 2024-05-23
 venue: NeurIPS 2024
 ---

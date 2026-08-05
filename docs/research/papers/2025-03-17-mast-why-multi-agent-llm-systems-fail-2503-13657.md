@@ -5,6 +5,7 @@ archived_date: 2026-06-09
 arxiv_id: 2503.13657
 authors: ["Mert Cemri", "Melissa Z. Pan", "Shuyi Yang", "Lakshya A. Agrawal", "Bhavya Chopra", "Rishabh Tiwari", "Kurt Keutzer", "Aditya Parameswaran", "Dan Klein", "Kannan Ramchandran", "Matei Zaharia", "Joseph E. Gonzalez", "Ion Stoica"]
 domains: [cs.AI, cs.MA, cs.CL]
+pdf_path: pdfs/2503.13657.pdf
 published_date: 2025-03-17
 tags: [multi-agent, failure-taxonomy, mast, benchmark, reliability, llm]
 venue: "NeurIPS 2025 Datasets & Benchmarks"

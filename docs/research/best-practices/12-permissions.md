@@ -71,7 +71,7 @@ Auto mode 讓 permissions classifier 自動核准安全的 edit/command，並阻
 
 `Shift+Tab` 可在 session 中循環切換模式。
 
-**W16 起**：Max 訂閱者可在 Opus 4.7 上使用 auto mode，不再需要 `--enable-auto-mode` flag。
+**W16 起**：Max 訂閱者可在 Opus（4.7+ 含現役 4.8）上使用 auto mode，不再需要 `--enable-auto-mode` flag。
 
 ### `autoMode` 細粒度設定
 

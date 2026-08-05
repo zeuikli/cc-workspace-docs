@@ -4,6 +4,7 @@ title: "PromptBridge: Cross-Model Prompt Transfer for Large Language Models"
 archived_date: 2026-06-09
 arxiv_id: 2512.0142
 authors: ["Yaxuan Wang", "Quan Liu", "Zhenting Wang", "Zichao Li", "Wei Wei", "Yang Liu", "Yujia Bao"]
+pdf_path: pdfs/2512.01420.pdf
 published_date: 2025-12-01
 ---
 

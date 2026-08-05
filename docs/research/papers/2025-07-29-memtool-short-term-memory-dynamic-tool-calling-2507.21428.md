@@ -4,6 +4,7 @@ title: "MemTool: Optimizing Short-Term Memory Management for Dynamic Tool Callin
 archived_date: 2026-05-26
 arxiv_id: 2507.21428
 authors: ["Elias Lumer", "Anmol Gulati", "Vamse Kumar Subbiah", "Pradeep Honaganahalli Basavaraju", "James A. Burke"]
+pdf_path: pdfs/2507.21428.pdf
 published_date: 2025-07-29
 ---
 

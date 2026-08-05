@@ -4,6 +4,7 @@ title: "SkillLearnBench: Benchmarking Continual Skill Learning for Language Mode
 archived_date: 2026-06-09
 arxiv_id: 2604.20087
 authors: ["Yiwei Qin", "Weiran Xu", "Yifei Li", "Zhiqiang Hu", "Xuefeng Li", "Pengfei Liu"]
+pdf_path: pdfs/2604.20087.pdf
 published_date: 2026-04-22
 ---
 

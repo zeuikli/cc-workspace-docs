@@ -4,6 +4,7 @@ title: "OckBench: Measuring the Efficiency of LLM Reasoning"
 archived_date: 2026-06-09
 arxiv_id: 2511.05722
 authors: ["Minyang Liu", "Weijia Shi", "Qiantong Xu", "Luke Zettlemoyer", "Wen-tau Yih", "Sewon Min"]
+pdf_path: pdfs/2511.05722.pdf
 published_date: 2025-11-07
 ---
 

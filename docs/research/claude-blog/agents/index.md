@@ -5,8 +5,89 @@ type: index
 
 # Agents — claude.com/blog
 
-> 收錄自 [claude.com/blog/category/agents](https://claude.com/blog/category/agents) · 19 篇文章 · 2025-11-13 ~ 2026-05-13
-> 最後更新：2026-05-16
+> 收錄自 [claude.com/blog/category/agents](https://claude.com/blog/category/agents) · 25 篇文章 · 2025-11-13 ~ 2026-07-24
+> 最後更新：2026-08-04
+
+---
+
+## The new rules of context engineering for Claude 5 generation models
+
+**Date:** 2026-07-24 | **URL:** https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models
+
+### Summary
+Anthropic 為 Opus 5 / Fable 5 刪掉 Claude Code system prompt 的 80% 以上而無可量測退化。六條規則從「硬性條文」改寫為「信任模型判斷」：互相衝突的指令會讓新世代模型花推理預算去調解，因此多加一條保險條文不是零成本。
+
+### Key Points
+- Judgment over rules：用「寫得像周遭程式碼」取代硬性禁令
+- Tool design over examples：表達力強的參數與清楚 enumeration 勝過使用範例
+- Progressive disclosure：驗證與 review 指導下沉為按需呼叫的 Skill；工具走 deferred loading（先 ToolSearch 取 schema）
+- Simplified descriptions：指令的正確歸宿是 tool description，不要在 system prompt 重覆
+- Auto-memory 取代手動寫 CLAUDE.md；rich references（HTML artifact / test suite / rubric）取代純 markdown 規格
+- Context Assembly 四層：system prompt / CLAUDE.md / Skills / References
+
+---
+
+## Claude models explained: choosing the best model for your use case
+
+**Date:** 2026-07-24 | **URL:** https://claude.com/blog/claude-models-explained-choosing-the-best-model-for-your-use-case
+
+### Summary
+官方選型指南：從一般可用的最強模型起步，再依延遲、成本與任務難度往下調；依據是任務難度與單位經濟，不是產業別。
+
+### Key Points
+- 四 class：Mythos/Fable（前沿）、Opus（推理密集）、Sonnet（日常與高量 sub-agent）、Haiku（成本敏感高頻）
+- Effort 讓「高 class 低 effort」在 per-task 經濟性上可能勝過低 class 模型
+- Advisor 策略：Sonnet + Fable 監督 = Fable-only 效能 90%、成本 63%
+- 每 token 價格 ≠ 每任務價格
+- 自建 eval 比公開 benchmark 更能區辨強模型，也能分辨能力不足 vs 整合沒接好
+
+---
+
+## How Outtake built a cyber investigator on Claude
+
+**Date:** 2026-07-22 | **URL:** https://claude.com/blog/how-outtake-built-a-cyber-investigator-on-claude
+
+### Summary
+Outtake 的 Recon Agent 可連續數小時自主調查完整攻擊網路。團隊在 Claude Code 原型驗證後轉進 Agent SDK，取得對記憶與 session 的生產級控制。
+
+### Key Points
+- 追完整條攻擊鏈（資料蒐集 → 冒名誘餌 → 基礎設施測繪），產出威脅行為者剖繪與時間線
+- 受限 orchestration + 不受限判斷：硬編碼必做步驟，「怎麼做」留給 agent 用開放工具即興
+- 用自動 eval 取代人工審 30 分鐘以上的 transcript，讓模型升級不卡開發者
+- 敵意環境的安全：假設 agent 會被挾持而建 blastbox；接觸外部站點前設檢查點
+- 開發路徑：先自己成為領域專家，再讓 agent 承接判斷
+
+---
+
+## How Anthropic secures its AI-native software development lifecycle
+
+**Date:** 2026-07-21 | **URL:** https://claude.com/blog/how-anthropic-secures-its-ai-native-software-development-lifecycle
+
+### Summary
+在 AI 撰寫 80% 合併程式碼的環境下，Anthropic 把安全審查左移、設硬性存取邊界、自動與人工審查分工，並把 agent 行為當成新型內部威脅監控。
+
+### Key Points
+- 每季出貨量為 2021–2025 的 8 倍；超過一半的合併由 Claude Tag 處理
+- 規劃階段對照 MITRE ATT&CK 自動審查，低風險可自助核准
+- CLAUDE.md 把安全實踐編碼進生成過程，安全 plugin 即時給建議
+- 多個窄焦點 agent 各持獨立 context 審同一 PR，加 SAST 與人工抽樣
+- 圍堵：allowlist 出口的遠端 VM、agent 權限分離、獨立系統帳號
+- 所有 agent 動作進 SIEM；漏洞發現自動回寫 CLAUDE.md
+
+---
+
+## The evolution of agentic surfaces: building with Claude Managed Agents
+
+**Date:** 2026-06-10 | **URL:** https://claude.com/blog/building-with-claude-managed-agents
+
+### Summary
+Claude Managed Agents 定位為「composable APIs for building and deploying production-grade agents」的完整套件。解決 Agent 上線的核心難題：程式碼執行環境、憑證管理、可觀測 sessions、可擴展基礎設施。從原型到生產只需數天而非數月。
+
+### Key Points
+- 核心定義：Agent harness（效能調校）+ 生產基礎設施 = Managed Agents
+- 解決問題：好的 prompt 只是起點，還需要 sandbox 執行、credentials 管理、session 追蹤、scaling
+- 組合元件：Dreaming（自主改進）、Outcomes（成功標準）、Multiagent Orchestration（主/子 Agent 協調）、Scheduled Deployments（cron 觸發）、Vaults（金鑰管理）、Self-hosted Sandboxes、MCP Tunnels
+- 定價：$0.08/session-hour + 標準 token 費率
 
 ---
 
@@ -296,3 +377,15 @@ Skill 在 Claude 更廣泛的 Agent 生態系中的定位，以及何時使用 S
 - 每個 Agent 組件有不同用途：Skill 負責知識、MCP 負責連接、subagent 負責任務委派
 - Skill 最適合領域知識和程序知識；Projects 用於共享 context；MCP 用於工具存取
 - 結合生態系統實現複雜的 Agent 工作流
+
+## Harness design for long-running application development
+
+**Date:** 2026-03-24 | **URL:** https://www.anthropic.com/engineering/harness-design-long-running-apps
+
+### Summary
+長時程應用開發的 harness 設計模式（2026-07-17 稽核補收——corpus 覆蓋期內遺漏篇）。Generator-evaluator 架構、獨立評估 agent、harness 複雜度隨模型能力動態調整。
+
+### Key Points
+- Generator-evaluator 架構顯著提升輸出品質，成本高但效果遠超單一 agent
+- 獨立評估 agent 優於自評：模型系統性高估自身主觀任務品質（對應本 workspace PGE 原則）
+- Harness 複雜度須隨模型能力調整，定期質疑每個組件背後對模型限制的假設，避免過度工程化（對應 core.md 雙軸伸縮「規則 = decaying cache」）

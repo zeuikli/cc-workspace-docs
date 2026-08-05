@@ -4,6 +4,7 @@ title: "SPLADE v2: Sparse Lexical and Expansion Model for Information Retrieval"
 archived_date: 2026-05-26
 arxiv_id: 2109.10086
 authors: ["Thibault Formal", "Carlos Lassance", "Benjamin Piwowarski", "Stéphane Clinchant"]
+pdf_path: pdfs/2109.10086.pdf
 published_date: 2021-09-21
 ---
 

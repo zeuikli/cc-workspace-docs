@@ -4,6 +4,7 @@ title: "δ-mem: Efficient Online Memory for Large Language Models"
 archived_date: 2026-06-09
 arxiv_id: 2605.12357
 authors: ["Jingdi Lei", "Di Zhang", "Junxian Li", "Weida Wang", "Kaixuan Fan", "Xiang Liu", "Qihan Liu", "Xiaoteng Ma", "Baian Chen", "Soujanya Poria"]
+pdf_path: pdfs/2605.12357.pdf
 published_date: 2026-05-12
 ---
 

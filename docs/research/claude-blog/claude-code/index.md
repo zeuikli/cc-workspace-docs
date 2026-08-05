@@ -5,8 +5,300 @@ type: index
 
 # Claude Code — claude.com/blog
 
-> 收錄自 [claude.com/blog/category/claude-code](https://claude.com/blog/category/claude-code) · 26 篇文章 · 2026-01-29 ~ 2026-06-03
-> 最後更新：2026-06-05
+> 收錄自 [claude.com/blog/category/claude-code](https://claude.com/blog/category/claude-code) · 45 篇文章 · 2026-01-29 ~ 2026-07-24
+> 最後更新：2026-08-04
+
+---
+
+## The new rules of context engineering for Claude 5 generation models
+
+**Date:** 2026-07-24 | **URL:** https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models
+
+### Summary
+Anthropic 為 Opus 5 / Fable 5 刪掉 Claude Code system prompt 的 80% 以上，在既有 coding evals 上無可量測退化。文章把 context engineering 的六條規則從「硬性條文」改寫為「信任模型判斷」，並主張舊做法在 over-constrain 模型——互相衝突的指令會消耗推理預算。
+
+### Key Points
+- 刪除 system prompt 80%+，advanced 檔位無可量測退化
+- 衝突指令實例：「leave documentation as appropriate」與「DO NOT add comments」同時存在
+- Progressive disclosure：驗證與 code review 指導移出 system prompt，改為 Claude 需要時才呼叫的 Skill
+- Deferred tool loading：部分工具需先經 ToolSearch 取得完整定義才可呼叫，降低初始 context
+- 用表達力強的參數與清楚 enumeration（`status: pending/in_progress/completed`）取代使用範例
+- Auto-memory 取代手動 `#` 熱鍵寫入 CLAUDE.md
+- Context Assembly 四層：system prompt / CLAUDE.md（gotchas）/ Skills / References
+
+---
+
+## Claude models explained: choosing the best model for your use case
+
+**Date:** 2026-07-24 | **URL:** https://claude.com/blog/claude-models-explained-choosing-the-best-model-for-your-use-case
+
+### Summary
+官方選型指南：從「目前一般可用的最聰明模型」起步，再依延遲、成本與任務難度往下調。選型依據是任務難度與單位經濟，不是產業別——每個 Claude 模型都受訓於 coding、agentic 與知識工作。
+
+### Key Points
+- 四 class 定位：Mythos/Fable（前沿）、Opus（推理密集）、Sonnet（日常與高量 sub-agent）、Haiku（成本敏感高頻）
+- Effort 等級製造「品質×速度×成本」連續取捨面；高 class 低 effort 的 per-task 經濟性有時優於低 class 模型
+- 每 token 價格 ≠ 每任務價格，選型應以後者為準
+- Advisor 策略實測：Sonnet 搭配 Fable 監督 = Fable-only 效能的 90%、成本 63%
+- 對強模型而言自建 eval 比公開 benchmark 更有區辨力
+- 自建 eval 的另一價值：分辨「模型能力不足」與「整合／context 沒接好」
+
+---
+
+## Building verification loops in Claude Code with skills
+
+**Date:** 2026-07-22 | **URL:** https://claude.com/blog/building-verification-loops-in-claude-code-with-skills
+
+### Summary
+說明如何把手動驗證檢查編碼成 Skill，讓 agent 自己閉環：跑測試、linter 或自訂檢查，失敗就修完再往下走。涵蓋內建驗證能力、自訂驗證 Skill 寫法，以及四種部署形態。
+
+### Key Points
+- 驗證迴圈定義：agent 檢查自己的產出並在往下走之前修好失敗項的重複循環
+- 內建能力：`/verify` skill、toolchain（linter/type checker）、Code Review、GitHub Actions、spec validation、managed agents 的 rubric
+- 寫法：`skill-creator` plugin 產生骨架，或手寫 `.claude/skills/` markdown（frontmatter: name/description/allowed-tools + 白話程序）
+- 四種部署形態：standalone（跨切面、刻意呼叫）、embedded（內嵌產出型 Skill）、chained（Skill 觸發 Skill）、PR-wide（團隊基礎建設）
+- 專案特定確定性規則即素材，例如「拒絕沒有 backfill 的 drop column migration」
+- 演進路徑：個人生產力工具 → 鏈式自動化 → PR gate，讓標準不依賴個人自律
+
+---
+
+## How Outtake built a cyber investigator on Claude
+
+**Date:** 2026-07-22 | **URL:** https://claude.com/blog/how-outtake-built-a-cyber-investigator-on-claude
+
+### Summary
+Outtake 用 Claude 打造可連續執行數小時的自主網路調查員 Recon Agent，追蹤完整攻擊網路。團隊先在 Claude Code 原型驗證假設，再轉進 Agent SDK 取得對記憶與 session 的生產級控制。
+
+### Key Points
+- 不處理單一威脅，而是跟著對手走完整條攻擊鏈（資料蒐集 → 冒名誘餌 → 基礎設施測繪），產出威脅行為者剖繪與時間線
+- 開發路徑：團隊先自己成為調查專家 → Claude Code 原型 → Agent SDK 生產
+- 受限的 orchestration + 不受限的判斷：硬編碼「一定要做的調查步驟」，把「怎麼做」留給 agent 即興發揮（可用 filesystem/bash 等開放工具）
+- 用自動 eval 取代人工看 30 分鐘以上的 transcript，讓模型升級與迭代不卡在開發者身上
+- 敵意環境下的安全：假設 agent 會被挾持而建 blastbox 沙箱，並在接觸外部站點前設檢查點
+
+---
+
+## How Anthropic secures its AI-native software development lifecycle
+
+**Date:** 2026-07-21 | **URL:** https://claude.com/blog/how-anthropic-secures-its-ai-native-software-development-lifecycle
+
+### Summary
+Anthropic 副 CISO Jason Clinton 說明在「AI 撰寫 80% 合併程式碼」的環境下如何保安全：把審查左移、設硬性存取邊界、自動與人工審查分工、並把 agent 行為視為新型內部威脅來監控。
+
+### Key Points
+- 工程師每季出貨量為 2021–2025 的 8 倍；超過一半的合併由 Claude Tag 處理，人類負責定意圖與最終核可
+- 規劃階段：AI 專案安全審查對照 MITRE ATT&CK 並接上組織知識庫，低風險上線可自助核准，不成瓶頸
+- 生成階段：CLAUDE.md 把安全最佳實踐編碼進生成過程，安全 review plugin 即時給建議——在產生時預防而非事後偵測
+- 審查階段：多個窄焦點 agent 各持獨立 context 與偏誤審同一個 PR，加上 SAST 與對自動核可的人工抽樣
+- 圍堵：遠端 coding VM 只開 allowlist 出口、agent 權限分離、獨立系統帳號，限制爆炸半徑
+- 治理：所有 agent 動作進 SIEM；發現漏洞自動回寫 CLAUDE.md 以免同類問題再生成
+
+---
+
+## How Datadog built a "universal machine tool" for Claude Code
+
+**Date:** 2026-07-21 | **URL:** https://claude.com/blog/how-datadog-built-a-universal-machine-tool-for-claude-code
+
+### Summary
+Datadog 打造 Temper：agent 不再產出應用程式碼，而是產出精確規格，由確定性 kernel 以四層分析驗證後才執行。目的是補上「agent 生成的東西」與「可安全驗證並部署的東西」之間的落差。
+
+### Key Points
+- 問題意識：任務愈複雜，工程師被迫升級成管理者——要管 agent 看到什麼、能用什麼工具、成功標準與失敗偵測
+- 前三代嘗試：Courier（分散式佇列）、BitsEvolve（演化式最佳化）、Helix（串流服務）後才定位出真正瓶頸
+- Temper 反轉做法：agent 產規格，kernel 用符號推理、窮舉狀態探索、確定性模擬與 property testing 驗證，小規格一秒內完成
+- 三段式契約：行為契約（狀態與轉移）、資料契約（機器可解析的 entity API）、授權政策（預設拒絕 + scope 核准 + 人工覆寫）
+- 機床哲學：像治具與 CNC 產出可重複、可檢驗的零件，讓軟體「工廠」靠回饋成長而非一次性即興
+
+---
+
+## How Anthropic runs large-scale code migrations with Claude Code
+
+**Date:** 2026-07-16 | **URL:** https://claude.com/blog/ai-code-migration
+
+### Summary
+Anthropic 說明如何用 Claude Code 執行大規模程式碼遷移：Bun 共同創辦人兩週內將百萬行 Zig 代碼遷移至 Rust，100% 通過既有測試套件。文章提出六步驟框架（規則手冊、依賴映射、壓力測試、翻譯、編譯、行為驗證），核心理念是「修復流程而非代碼」。
+
+### Key Points
+- 遷移成本從過去的 300–400 萬美元降至數十萬美元，讓長期延遲的專案變得可行
+- Fable 5 / Opus 4.8 擅長委派工作、指導平行工作流並驗證結果
+- 必須預先建立「評判機制」（如測試套件），提供客觀的成功衡量標準
+- 建立可移植性規則手冊與詳細依賴映射是最耗時的前期工作
+- 用較小模型處理實作、保留大型模型做審查與規則制定
+- 工作隊列應機械化且可恢復，讓編譯器/測試自動生成下一項任務
+
+---
+
+## Bringing Claude Code and Claude Cowork to government
+
+**Date:** 2026-07-07 | **URL:** https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government
+
+### Summary
+Anthropic 推出 Claude Code 與 Claude Cowork 桌面應用在聯邦政府環境的公測版，運行於 FedRAMP High 授權環境，讓公部門團隊能建構軟體系統與處理文件工作，同時提供強化治理功能。
+
+### Key Points
+- FedRAMP High 授權環境提供，對話歷史存放於機構管理設備
+- 適應撥款預算的計費選項：標準座位或自訂支出/模型限制層級
+- 部門管理員可將預付用量分配至子機構，SCIM 群組映射設定費率限制與允許模型
+- 所有管理操作記錄於防篡改雜湊鏈審計日誌，敏感操作需雙人核准
+- 發布 FedRAMP 安全配置指南與滲透測試摘要供安全團隊評估
+- 新客戶可於 claude.com/solutions/government 申請存取權限
+
+---
+
+## Choosing a Claude model and effort level in Claude Code
+
+**Date:** 2026-07-07 | **URL:** https://claude.com/blog/claude-model-and-effort-level-in-claude-code
+
+### Summary
+說明 Claude Code 中「模型選擇」與「工作量級別」的差異：模型決定固定能力範圍，工作量級別控制 Claude 投入多少努力（讀取檔案數、驗證次數、執行深度）。選擇應基於任務複雜度與所需徹底程度，而非盲目調整設定。
+
+### Key Points
+- 模型選擇決定基礎知識與能力；工作量級別決定投入多少計算資源
+- 面對高難度、需專業知識的任務升級模型；例行工作用較小模型省成本
+- Claude 跳過檔案、未執行測試或放棄多步驟任務時，提高工作量級別
+- 大多數情況應用模型預設工作量級別，視為通用偏好而非逐任務調整
+- 較大模型在複雜多步任務上可能更經濟，因為需要較少迭代達成目標
+- 三層模型比喻：Fable 是見過罕見問題的專家、Opus 是有深度經驗的專家、Sonnet 是能力強的通才
+
+---
+
+**Date:** 2026-07-06 | **URL:** https://claude.com/blog/a-field-guide-to-claude-fable-finding-your-unknowns
+
+### Summary
+Anthropic 員工 Thariq Shihipar 分享與 Claude Fable 協作的核心心法：工作品質受限於「釐清 unknowns 的能力」而非模型本身。文章區分「地圖」（prompt/context）與「疆域」（實際 codebase/限制）之間的落差，並提出四類 unknowns 分類與對應工作流程。
+
+### Key Points
+- 四類 unknowns：Known Knowns（已聲明需求）、Known Unknowns（已知缺口）、Unknown Knowns（顯而未說的脈絡）、Unknown Unknowns（未預期考量）
+- 實作前：Blindspot Pass、腦力激盪、Prototype、Interview、參考資料、實作計畫
+- 實作中：維護 Implementation Notes 記錄偏離決策
+- 實作後：撰寫 pitch、說明文件、quiz 驗證理解是否正確
+- 實例：作者用 Claude 端到端剪輯 Fable 發表影片，透過迭代發現逐字稿準確度、影片節奏、色彩校正等 unknowns
+
+---
+
+## Getting started with loops
+
+**Date:** 2026-06-30 | **URL:** https://claude.com/blog/getting-started-with-loops
+
+### Summary
+Claude Code 團隊官方指南，說明如何設計「agentic loop」（重複執行直到滿足停止條件的迴圈）。文章將迴圈分為四種類型，並提供選擇與收斂設計原則。
+
+### Key Points
+- Turn-based：由使用者手動觸發，適合較短、非重複性任務；建議用 SKILL.md 封裝驗證步驟以增進自我檢查
+- Goal-based（`/goal`）：持續執行至達成目標或觸及最大回合數，適合有「可驗證退出條件」的任務（如 Lighthouse 分數 ≥ 90）
+- Time-based（`/loop`、`/schedule`）：依排程觸發，適用週期性工作或監控外部系統（如巡邏 PR review comment）
+- Proactive：事件驅動、長時間執行、無需人工介入，結合 auto mode 與 dynamic workflows 處理大規模明確定義工作
+- 建議搭配 `/usage`、`/workflows` 檢視用量，並從簡單設計開始迭代
+
+---
+
+## Agent identity in Claude Tag: a new access model for autonomous, team-wide AI
+
+**Date:** 2026-06-24 | **URL:** https://claude.com/blog/agent-identity-access-model
+
+### Summary
+Claude Tag 推出「Agent Identity」存取模型，解決多人協作環境中「代表使用者行事」模式失效的問題——Claude 不再借用單一使用者權限，而是在每個系統中擁有自己的 workspace 層級帳號。
+
+### Key Points
+- 問題：Agent 現在自主運作超越單一 session，多位成員共同引導造成權限歸屬模糊
+- Workspace 層級基準權限由管理員設定，channel 層級可個別限縮或擴增（如工程頻道給 GitHub 存取、財務頻道給倉儲寫入）
+- 適用範圍涵蓋 repo 存取、API 連接器、skills/plugins、standing instructions
+- 私人頻道維持獨立身份；公開頻道共用 workspace 身份；DM 則以個人 claude.ai 帳號、個人憑證執行
+- 安全機制：憑證獨立儲存、於網路邊界注入、封鎖未核准對外連線、完整稽核軌跡；未來規劃 just-in-time 憑證授予
+- 建議採用策略：初期給予較寬鬆存取權限，再依稽核結果收斂
+
+---
+
+## Steering Claude Code: CLAUDE.md files, skills, hooks, rules, subagents and more
+
+**Date:** 2026-06-18 | **URL:** https://claude.com/blog/steering-claude-code-skills-hooks-rules-subagents-and-more
+
+### Summary
+官方整理自訂 Claude Code 行為的七種機制選擇指南：CLAUDE.md、Rules、Skills、Subagents、Hooks、Output Styles、System Prompt Appending。核心問題框架：要改變 Claude **知道什麼** vs **呼叫什麼工具** vs **生命週期自動化** vs **回應外觀**。
+
+### Key Points
+- Skills 以資料夾形式儲存在 `.claude/skills/`，初始只載入名稱與描述，呼叫時才展開全文（降低 context 成本）
+- Hooks 是**確定性**觸發器，用於生命週期事件（檔案編輯、工具呼叫），比在 prompt 中叮囑更可靠
+- Path-scoped Rules 只在存取相關檔案時載入，避免不必要的 token 消耗
+- CLAUDE.md ≤ 200 行（最佳 60 行）；每 3-6 個月審閱（模型更新後舊指令可能反而限制新模型）
+- 詳細解析見 [best-practices/38-steering-claude-code.md](../../best-practices/38-steering-claude-code.md)
+
+---
+
+## Meet the winners of our Claude Opus 4.8 Build Day hackathon
+
+**Date:** 2026-06-17 | **URL:** https://claude.com/blog/meet-the-winners-of-our-claude-opus-4-8-build-day-hackathon
+
+### Summary
+2026-06-13 舉辦的 12 小時 Hackathon，310 位參賽者使用 Claude Opus 4.8 開發，主題圍繞驗證機制、優化迭代與全端開發。
+
+### Key Points
+- 第一名 **Tekton**：用獨立驗證子 agent 在隔離 context window 中重建歷史建築 3D 模型（唐代建築、巴黎聖母院）
+- 第二名 **Sim Francisco**：基於人口普查數據建立 10,000 位合成居民的舊金山數位孿生，預測 2024 總統大選得票率誤差僅 2.5%
+- 第三名 **Custom Universe**：手機拍照即時轉換為可編輯 3D 場景，目標機器人訓練資料生成
+- 核心模式：獨立驗證 subagent + 隔離 context window 是高品質輸出的關鍵架構
+
+---
+
+## Meet the winners of the Built with Opus 4.7 Claude Code hackathon
+
+**Date:** 2026-06-15 | **URL:** https://claude.com/blog/meet-the-winners-of-built-with-opus-4-7-claude-code-hackathon
+
+### Summary
+Opus 4.7 Claude Code Hackathon 得獎者，涵蓋醫療訓練、電子維修、教育、工廠維護等場景，強調規劃先於執行、將 Claude 視為思考夥伴。
+
+### Key Points
+- 第一名 **Medkit**：以 Claude Managed Agents 建立遊戲化醫療訓練模擬器，AI grader 評估住院醫師臨床表現
+- 第二名 **Wrench Board**：電子診斷工具，利用 Opus 4.7 視覺推理能力分析電路板圖找出故障元件
+- 最佳 Managed Agents 獎 **ARIA**：工廠預測性維護系統
+- 共同洞察：清晰的 context 和 spec 文件比複雜 prompt 更重要；委派式管理 Agent = 管理員工
+
+---
+
+## How Anthropic teams use Claude Code
+
+**Date:** 2026-06-12 | **URL:** https://claude.com/blog/how-anthropic-teams-use-claude-code
+
+### Summary
+Anthropic 多部門 Claude Code 實際使用案例集合。涵蓋 GTM（業務自動化插件）、法務（流程引導系統）、行銷（大量廣告變體生成）、資安（CLUE 平台）、資料分析（95% 查詢自動化）。
+
+### Key Points
+- GTM：Jared Sires 建立 CLAFTS（Claude 草稿 Gmail 插件），衍生出 20+ skills 的 Cowork 插件，新員工第一天即可安裝使用
+- 法務：建立「電話樹」系統，引導員工找到對的律師
+- 行銷：數秒生成數百個廣告版本（原本 30 分鐘/個）
+- 資安：CLUE 平台自動分析安全告警，節省 1,870 人工小時
+- 資料分析：95% 商業分析查詢由 Claude 自動化，資料科學家轉移至因果建模等高階工作
+
+---
+
+## How one Anthropic seller rebuilt his team's workflows with Claude Code
+
+**Date:** 2026-06-05 | **URL:** https://claude.com/blog/how-anthropic-uses-claude-gtm-engineering
+
+### Summary
+業務主任 Jared Sires（零程式碼背景）用 Claude Code 建立 CLAFTS 工具（Gmail 插件草稿 API），書本擴增至 600-700 帳號後每天省去數小時 email 工作。後衍生成含 20+ skills 的 Cowork 插件，整合 Salesforce、Intercom、Gong、Calendar、Gmail、Drive、BigQuery。
+
+### Key Points
+- 非技術背景人員獨立建立生產級 SaaS 工具
+- CLAFTS：Claude API 草稿客戶 email 回覆，從 Gmail 直接運作
+- 插件化：新員工第一天安裝即可使用標準化工作流
+- 核心結語：「你不需要成為工程師才能建立 AI 工具」
+
+---
+
+## Code w/ Claude SF 2026 recap: Building on the AI exponential
+
+**Date:** 2026-05-09 | **URL:** https://claude.com/blog/code-w-claude-sf-2026-sf
+
+### Summary
+舊金山開發者大會（2026-05-06）回顧。Daniela Amodei 和 Dario Amodei 主持主題演講，聚焦「概念到產品程式碼的距離正在縮短」。客戶案例：Asana、Cursor、GitHub、Replit、Vercel 展示生產級 Agent 架構。
+
+### Key Points
+- 核心主題：設計 AI 指數曲線而非被動應對
+- Cursor：Agent 彈性架構實戰分享
+- Replit：vibe-coding 大規模部署案例
+- Vercel：毫秒級 sandbox 啟動 + VPC peering
+- 全程有 YouTube 錄影可重看
 
 ---
 
@@ -68,6 +360,23 @@ Dynamic Workflows 正式宣告（W22 Research Preview）。Claude 動態撰寫 J
 - Progress 持續儲存，中斷可從 checkpoint 恢復
 - 啟動：直接請求 workflow 或啟用 `ultracode` effort
 - 方案：Max、Team Premium、Enterprise PAYG、API（CLI、Desktop、VS Code、Bedrock、Vertex、Foundry）
+
+---
+
+## How CodeRabbit used Claude to build an agent orchestration system
+
+**Date:** 2026-05-27 | **URL:** https://claude.com/blog/how-coderabbit-used-claude-to-build-an-agent-orchestration-system
+
+### Summary
+CodeRabbit 在編碼請求與編碼代理之間插入編排層，生成代碼前先產出結構化計劃供團隊審查。系統以多個 Claude 模型分工分析需求並釐清隱含假設，降低後期才發現問題的成本。
+
+### Key Points
+- 問題診斷：AI 生成的代碼常能編譯、通過測試，卻解不了實際問題——因為開發者未表達隱含假設
+- 規劃層架構：代碼生成前插入計劃系統，產出協作型需求文檔，經團隊驗證後才實作
+- 模型分層：Opus 處理高層戰略、Sonnet 序列化計劃步驟、Haiku 執行具體操作與工具呼叫
+- 建立基於人工範例與 LLM 評判的計劃品質評估框架，衡量計劃層的實際價值
+- 計劃本身成為品質閘門，上游規劃品質直接影響最終代碼品質
+- 計劃可保存重用，幫助團隊避免返工並加速新工程師上手
 
 ---
 

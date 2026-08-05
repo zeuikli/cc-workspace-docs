@@ -4,6 +4,7 @@ title: "HARBOR: Automated Harness Optimization"
 archived_date: 2026-06-09
 arxiv_id: 2604.20938
 authors: ["Biswa Sengupta", "Jinhua Wang"]
+pdf_path: pdfs/2604.20938.pdf
 published_date: 2026-04-22
 ---
 

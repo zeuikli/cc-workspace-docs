@@ -5,6 +5,7 @@ archived_date: 2026-06-09
 arxiv_id: 2512.12818
 authors: ["Chris Latimer", "Nicoló Boschi", "Andrew Neeser", "Chris Bartholomew", "Gaurav Srivastava", "Xuan Wang", "Naren Ramakrishnan"]
 domains: [cs.CL]
+pdf_path: pdfs/2512.12818.pdf
 published_date: 2025-12-14
 ---
 

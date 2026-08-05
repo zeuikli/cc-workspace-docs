@@ -5,6 +5,7 @@ archived_date: 2026-06-09
 arxiv_id: 2604.16548
 authors: ["Zehao Lin", "Chunyu Li", "Kai Chen"]
 domains: [cs.CR, cs.AI]
+pdf_path: pdfs/2604.16548.pdf
 published_date: 2026-04-17
 ---
 

@@ -3,6 +3,7 @@ url: "https://arxiv.org/abs/2603.29199"
 title: "AEC-Bench: A Multimodal Benchmark for Agentic Systems in Architecture, Engineering, and Construction"
 archived_date: 2026-06-09
 authors: ["Harsh Mankodiya", "Chase Gallik", "Theodoros Galanos", "Andriy Mulyar"]
+pdf_path: pdfs/2603.29199.pdf
 published_date: 2026-03-31
 ---
 

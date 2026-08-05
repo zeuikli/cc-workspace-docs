@@ -4,6 +4,7 @@ title: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
 archived_date: 2026-06-09
 arxiv_id: 2005.11401
 authors: ["Patrick Lewis", "Ethan Perez", "Aleksandra Piktus", "Fabio Petroni", "Vladimir Karpukhin", "Naman Goyal", "Heinrich Küttler", "Mike Lewis", "Wen-tau Yih", "Tim Rocktäschel", "Sebastian Riedel", "Douwe Kiela"]
+pdf_path: pdfs/2005.11401.pdf
 published_date: 2020-05-22
 ---
 

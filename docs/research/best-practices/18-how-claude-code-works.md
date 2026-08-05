@@ -311,5 +311,5 @@ The relevant code is in src/payments/. Can you investigate and fix it?
 
 ## Related Resources
 
-- [Common workflows](/en/common-workflows) — 逐步指南（debug、測試、PR 等）
-- [Extend Claude Code](/en/features-overview) — Skills、MCP、自訂指令
+- [Common workflows](https://code.claude.com/docs/en/common-workflows) — 逐步指南（debug、測試、PR 等）
+- [Extend Claude Code](https://code.claude.com/docs/en/features-overview) — Skills、MCP、自訂指令

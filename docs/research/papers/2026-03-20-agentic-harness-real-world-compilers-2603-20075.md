@@ -5,6 +5,7 @@ archived_date: 2026-06-09
 arxiv_id: 2603.20075
 authors: ["Yingwei Zheng", "Cong Li", "Shaohua Li", "Yuqun Zhang", "Zhendong Su"]
 domains: [cs.SE]
+pdf_path: pdfs/2603.20075.pdf
 published_date: 2026-03-20
 ---
 

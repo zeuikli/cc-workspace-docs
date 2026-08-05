@@ -5,6 +5,7 @@ archived_date: 2026-06-09
 arxiv_id: 2602.03128
 authors: ["Abdelghny Orogat", "Ana Rostam", "Essam Mansour"]
 domains: [cs.AI]
+pdf_path: pdfs/2602.03128.pdf
 published_date: 2026-02-03
 ---
 

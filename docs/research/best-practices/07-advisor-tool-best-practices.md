@@ -29,10 +29,10 @@ type: best-practices
 
 | Executor | Advisor |
 |----------|---------|
-| Haiku 4.5 (`claude-haiku-4-5-20251001`) | Opus 4.7 (`claude-opus-4-7`) |
-| Sonnet 4.6 (`claude-sonnet-4-6`) | Opus 4.7 (`claude-opus-4-7`) |
-| Opus 4.6 (`claude-opus-4-6`) | Opus 4.7 (`claude-opus-4-7`) |
-| Opus 4.7 (`claude-opus-4-7`) | Opus 4.7 (`claude-opus-4-7`) |
+| Haiku 4.5 (`claude-haiku-4-5-20251001`) | Opus 4.8 (`claude-opus-4-8`) |
+| Sonnet 4.6 (`claude-sonnet-4-6`) | Opus 4.8 (`claude-opus-4-8`) |
+| Opus 4.6 (`claude-opus-4-6`) | Opus 4.8 (`claude-opus-4-8`) |
+| Opus 4.8 (`claude-opus-4-8`) | Opus 4.8 (`claude-opus-4-8`) |
 
 Advisor 必須 ≥ Executor 能力等級，否則 API 回傳 `400 invalid_request_error`。
 
@@ -255,7 +255,7 @@ Executor 在同一個 turn 可以搜尋網路、諮詢 advisor、呼叫自訂工
 |--------|---------------|
 | `advisor_20260301` tool | `advisor()` 函式 |
 | Executor = Sonnet/Haiku | 主 agent（Sonnet 4.6）|
-| Advisor = Opus 4.7 | Advisor 模型（Opus 4.7）|
+| Advisor = Opus 4.8 | Advisor 模型（Opus 4.8）|
 | 單一 `/v1/messages` 請求 | 同一 session 的 `advisor()` 呼叫 |
 
 官方推薦的 timing 指引（Coding 任務 system prompt）已內建於本 workspace 的系統 prompt，即為上方「Timing 指引」區塊的直接引用來源。

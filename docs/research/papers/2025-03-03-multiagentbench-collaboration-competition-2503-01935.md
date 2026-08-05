@@ -5,6 +5,7 @@ archived_date: 2026-06-09
 arxiv_id: 2503.01935
 authors: ["Kunlun Zhu", "Hongyi Du", "Zhaochen Hong", "et al."]
 domains: [cs.MA, cs.AI, cs.CL]
+pdf_path: pdfs/2503.01935.pdf
 published_date: 2025-03-03
 ---
 

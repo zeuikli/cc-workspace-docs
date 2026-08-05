@@ -4,6 +4,7 @@ title: "From Human Memory to AI Memory: A Survey on Memory Mechanisms in the Era
 archived_date: 2026-06-09
 arxiv_id: 2504.15965
 authors: ["Yaxiong Wu", "Sheng Liang", "Chen Zhang", "Yichao Wang", "Yongyue Zhang", "Huifeng Guo", "Ruiming Tang", "Yong Liu"]
+pdf_path: pdfs/2504.15965.pdf
 published_date: 2025-04-22
 ---
 

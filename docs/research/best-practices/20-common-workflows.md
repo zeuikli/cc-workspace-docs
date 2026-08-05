@@ -249,9 +249,9 @@ Extended thinking 預設啟用，讓 Claude 在回應前逐步推理複雜問題
 | **`ultrathink` 關鍵字** | 在 prompt 中包含 "ultrathink" | 在那一輪加入更多推理的指令（不改變 effort level） |
 | **切換快捷鍵** | `Option+T`（macOS）/ `Alt+T`（Windows/Linux） | 切換當前 session 的思考（所有模型） |
 | **全域預設** | `/config` 切換思考模式 | 存為 `alwaysThinkingEnabled` 在 `~/.claude/settings.json` |
-| **限制 token 預算** | `MAX_THINKING_TOKENS` env var | 限制思考預算。Opus 4.7 永遠使用 adaptive reasoning，不支援固定預算 |
+| **限制 token 預算** | `MAX_THINKING_TOKENS` env var | 限制思考預算。Opus 4.8 / Fable 5 永遠使用 adaptive reasoning，不支援固定預算 |
 
-**Adaptive reasoning**：Opus 4.7 依任務動態分配思考 tokens（基於 effort level），讓常規 prompt 更快回應，複雜步驟保留深度思考。
+**Adaptive reasoning**：Opus 4.8 / Fable 5 依任務動態分配思考 tokens（基於 effort level），讓常規 prompt 更快回應，複雜步驟保留深度思考。
 
 ---
 
@@ -451,10 +451,10 @@ cat build-error.txt | claude -p 'concisely explain the root cause of this build 
 
 | 選項 | 在哪執行 | 最適合 |
 |------|---------|--------|
-| [Routines](/en/routines) | Anthropic 管理的基礎設施 | 電腦關機仍能執行的任務；支援 API 呼叫和 GitHub events |
-| [Desktop scheduled tasks](/en/desktop-scheduled-tasks) | 你的機器（desktop app） | 需要存取 local 檔案、工具或未 committed 變更 |
-| [GitHub Actions](/en/github-actions) | CI pipeline | 連結到 repo events 或 cron 排程的任務 |
-| [`/loop`](/en/scheduled-tasks) | 當前 CLI session | Session 開著時的快速輪詢（不提供 interval 時 Claude 自行決定下次觸發時機）；別名 `/proactive` |
+| [Routines](https://code.claude.com/docs/en/routines) | Anthropic 管理的基礎設施 | 電腦關機仍能執行的任務；支援 API 呼叫和 GitHub events |
+| [Desktop scheduled tasks](https://code.claude.com/docs/en/desktop-scheduled-tasks) | 你的機器（desktop app） | 需要存取 local 檔案、工具或未 committed 變更 |
+| [GitHub Actions](https://code.claude.com/docs/en/github-actions) | CI pipeline | 連結到 repo events 或 cron 排程的任務 |
+| [`/loop`](https://code.claude.com/docs/en/scheduled-tasks) | 當前 CLI session | Session 開著時的快速輪詢（不提供 interval 時 Claude 自行決定下次觸發時機）；別名 `/proactive` |
 
 **排程任務 prompt 要明確**：說明成功條件和如何處理結果（任務自動執行，無法問澄清問題）。
 
@@ -497,7 +497,7 @@ cat build-error.txt | claude -p 'concisely explain the root cause of this build 
 
 ## Related Resources
 
-- [Best practices](/en/best-practices) — 高層次 patterns 和技巧
-- [How Claude Code works](/en/how-claude-code-works) — Agentic loop 和 context 管理
-- [Extend Claude Code](/en/features-overview) — 加入 skills、hooks、MCP、subagents、plugins
+- [Best practices](https://code.claude.com/docs/en/best-practices) — 高層次 patterns 和技巧
+- [How Claude Code works](https://code.claude.com/docs/en/how-claude-code-works) — Agentic loop 和 context 管理
+- [Extend Claude Code](https://code.claude.com/docs/en/features-overview) — 加入 skills、hooks、MCP、subagents、plugins
 - [Reference implementation](https://github.com/anthropics/claude-code/tree/main/.devcontainer) — Development container 參考實作

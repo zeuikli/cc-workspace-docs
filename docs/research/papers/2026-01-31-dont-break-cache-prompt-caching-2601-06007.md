@@ -4,6 +4,7 @@ title: "Don't Break the Cache: Efficient Prompt Caching for Agentic AI"
 archived_date: 2026-06-09
 arxiv_id: 2601.06007
 authors: ["Benedikt Kolbe", "Rania Mokhtar", "David Müller", "Barna Szabó"]
+pdf_path: pdfs/2601.06007.pdf
 published_date: 2026-01-31
 ---
 
@@ -160,4 +161,4 @@ Directly actionable for workspace prompt caching configuration:
 2. **MCP breaks cache boundaries**: Any MCP server restart or tool-list change during a session invalidates the cache. Keep MCP tool lists stable within a session — don't add/remove MCP servers mid-task.
 3. **No timestamps in CLAUDE.md**: Avoid including `currentDate` or session IDs in the auto-loaded system prompt (`@core.md`, `@output-discipline.md`) — these break caching.
 4. **Dynamic tool results must come AFTER the cache marker**: In multi-tool agentic loops (`autoresearch`, `harness-meta`), place tool results in the dynamic (uncached) portion of context.
-5. **22.9% TTFT improvement**: Prompt caching also reduces latency — relevant for interactive `sonnet-pilot` sessions where response time affects usability.
+5. **22.9% TTFT improvement**: Prompt caching also reduces latency — relevant for interactive `pilot`（tier=quality，原 `sonnet-pilot`） sessions where response time affects usability.
