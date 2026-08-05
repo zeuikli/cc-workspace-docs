@@ -231,4 +231,4 @@ A：這說明模型在面對大量相關但不完全準確的內容時，更容�
 - [Lecture 01：Claude Code 與 Harness 基礎](/lectures/lecture-01-foundations/) — Context Rot 的五層防禦框架
 - [Lecture 04：Harness 三層架構](/lectures/lecture-04-harness-architecture/) — Evaluator 作為獨立 context 的設計
 - [LangChain: Context Management for Deep Agents](https://www.langchain.com/blog/context-management-for-deepagents)
-- [Chroma: Context Rot Research](https://www.trychroma.com/blog/context-rot)
+- [Chroma: Context Rot Research](https://www.trychroma.com/research/context-rot)

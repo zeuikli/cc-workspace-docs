@@ -27,8 +27,22 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # docs/research/ 是 cc-workspace/research/ 的鏡像，sync 進來的內容可能帶有
+      # VitePress 無法解析的 HTML tag（會直接 build 失敗）或指向未同步檔案的 404 連結。
+      # 這兩項修正是冪等的機械規則，在 build 前重跑一次，避免 sync 破壞部署。
+      - name: Normalize synced markdown
+        run: |
+          python3 scripts/md_maintenance.py --html-only
+          python3 scripts/md_maintenance.py --links-only
+
       - name: Build with VitePress
         run: npm run docs:build
+
+      # 只回報、不擋部署：連結失效多半來自 sync 進來的內容，
+      # 讓它擋掉部署會使整站停更，代價高於失效連結本身。
+      - name: Check links
+        run: python3 scripts/check_links.py
+        continue-on-error: true
 
       - name: Deploy to gh-pages branch
         env:

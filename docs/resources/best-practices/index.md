@@ -6,11 +6,11 @@
 
 | 主題 | 說明 |
 |------|------|
-| [工作流程與核心技巧](/resources/best-practices/workflows/) | Explore->Plan->Implement->Commit 四階段、Plan Mode、Session 管理、Boris Cherny 65+ 技巧 |
-| [Hooks 設計模式](/resources/best-practices/hooks/) | 25 種 hook 事件完整範例、PreToolUse 防禦、PostToolUse 自動化、SessionStart 初始化 |
-| [Permission 細粒度設定](/resources/best-practices/permissions/) | 五種 Permission Mode、Wildcard 語法、Compound 指令、Symlink 規則 |
-| [MCP Server 與 Skills](/resources/best-practices/mcp-skills/) | 三種 transport 安裝、OAuth 認證、Scope 管理、Skills 設計原則 |
-| [Prompt Caching 工程](/resources/best-practices/prompt-caching/) | 前綴匹配原理、六大教訓（Thariq）、Cache Hit Rate 監控、失效條件 |
+| [工作流程與核心技巧](/resources/best-practices/workflows) | Explore->Plan->Implement->Commit 四階段、Plan Mode、Session 管理、Boris Cherny 65+ 技巧 |
+| [Hooks 設計模式](/resources/best-practices/hooks) | 25 種 hook 事件完整範例、PreToolUse 防禦、PostToolUse 自動化、SessionStart 初始化 |
+| [Permission 細粒度設定](/resources/best-practices/permissions) | 五種 Permission Mode、Wildcard 語法、Compound 指令、Symlink 規則 |
+| [MCP Server 與 Skills](/resources/best-practices/mcp-skills) | 三種 transport 安裝、OAuth 認證、Scope 管理、Skills 設計原則 |
+| [Prompt Caching 工程](/resources/best-practices/prompt-caching) | 前綴匹配原理、六大教訓（Thariq）、Cache Hit Rate 監控、失效條件 |
 
 ## 核心論點
 
