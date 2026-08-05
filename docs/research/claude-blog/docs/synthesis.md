@@ -5,7 +5,8 @@ type: blog-index
 
 # Claude Blog 跨主題合成分析
 
-> 基於 52 篇文章（2025-11-13 ~ 2026-04-22）的深度合成  
+> 主體基於 52 篇文章（2025-11-13 ~ 2026-04-22）的深度合成；
+> **2026-08-05 增補主題七～九**，涵蓋 2026-04-23 ~ 2026-07-28 的 100 篇新收錄。  
 > 見 [docs/timeline.md](./timeline.md) | [../REPORT.md](../REPORT.md)
 
 ---
@@ -228,5 +229,128 @@ Technical Depth（技術框架）
 
 ---
 
+---
+
+# 增補：2026-04-23 ~ 2026-07-28 的三個轉向
+
+> 這 100 篇新收錄裡，有三個方向與前六個主題不是延伸而是**反轉**。分開列出，避免被舊結論覆蓋。
+
+## 主題七：從「堆規則」轉向「信任判斷」
+
+### 信號
+
+《[The new rules of context engineering for Claude 5 generation models](https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models)》（2026-07-24）給了一個難以忽視的實證錨點：
+
+> Anthropic 為 Opus 5 / Fable 5 **刪掉 Claude Code system prompt 的 80% 以上**，在其 coding evals 上**無可量測退化**。
+
+根因不是「模型變強所以規則不重要」，而是**舊 prompt 對模型 over-constrain，且指令彼此打架**——同一次請求裡同時出現「leave documentation as appropriate」與「DO NOT add comments」。新世代模型會花推理預算去調解衝突訊息，所以「多加一條保險條文」不是零成本。
+
+### 六條 Then → Now
+
+| # | 規則 | 內容 |
+|---|------|------|
+| 1 | Judgment over rules | 用「寫得像周遭程式碼」取代硬性條數禁令 |
+| 2 | Tool design over examples | 表達力強的參數與清楚 enumeration 勝過使用範例 |
+| 3 | Progressive disclosure | 驗證與 review 指導移出 system prompt，改成按需呼叫的 Skill；工具走 deferred loading |
+| 4 | Simplified descriptions | 指令的正確歸宿是 tool description，不要在 system prompt 重覆 |
+| 5 | Auto-memory over manual saving | 不必事事用 `#` 熱鍵手寫進 CLAUDE.md |
+| 6 | Rich references over simple specs | 也吃 HTML artifact / test suite / code sample / rubric |
+
+### Context Assembly 四層
+
+| 層 | 承載 |
+|----|------|
+| System prompt | 產品脈絡與核心目的（平台持有）|
+| CLAUDE.md | 輕量 repo 描述 + critical gotchas |
+| Skills | 編碼團隊意見的輕量指南 |
+| References | code sample / spec / mockup / test suite |
+
+### 與主題五的關係
+
+主題五說「Context Engineering 是護城河」——這點沒有被推翻，但**做法反過來了**。2026 上半年的 context engineering 是「精心組裝更多正確資訊」；下半年是「刪掉會互相打架的資訊，讓模型按需取用」。工具面的證據：`/doctor` 從 v2.1.206 起會主動提出 `CLAUDE.md` 精簡建議，`claude-api` skill 新增 `prompt-audit` 子命令專門稽核「為舊世代寫的 prompt」。
+
+**重要邊界**：可刪的是為補償模型弱點而堆的程序性鷹架，**不是驗證閘門與不可逆操作確認**。能力提升不得換取更少驗證。
+
+---
+
+## 主題八：驗證的觸發權從模型收回 harness
+
+### 信號
+
+兩件事同時發生，方向一致：
+
+1. **官方推廣把驗證編碼成 Skill**——《[Building verification loops in Claude Code with skills](https://claude.com/blog/building-verification-loops-in-claude-code-with-skills)》（2026-07-22）定義驗證迴圈為「agent 檢查自己的產出並在往下走之前修好失敗項的重複循環」，並給出四種部署形態：standalone / embedded / chained / PR-wide。
+2. **同時把自動觸發關掉**——v2.1.215 起 Claude 不再自行跑 `/verify` 與 `/code-review`；v2.1.218 起 `/deep-research` 同樣改為手動。
+
+看似矛盾，其實是同一件事：**驗證什麼時候跑，是 harness 的決定，不是模型的判斷**。模型自行決定要不要驗證，正好落在它最有偏誤的地方（self-preferential bias）。
+
+### 印證：獨立驗證者的量化效果
+
+| 來源 | 做法 | 效果 |
+|------|------|------|
+| [Using LLMs to secure source code](https://claude.com/blog/using-llms-to-secure-source-code)（05-27） | 驗證 agent 與 discovery agent 分離，prompt 要求**反駁**而非確認 | false positive 減少約 50%；要求 PoC 後趨近於零 |
+| [How Anthropic secures its AI-native SDLC](https://claude.com/blog/how-anthropic-secures-its-ai-native-software-development-lifecycle)（07-21） | 多個窄焦點 agent 各持獨立 context 與偏誤審同一個 PR | 加上 SAST 與人工抽樣構成分層防線 |
+| [Building effective human-agent teams](https://claude.com/blog/building-effective-human-agent-teams)（06-24） | Doer-Verifier harness（一個執行、一個驗證） | 信任建立後，某工程團隊讓 agent 獨立處理 500 個 bug 修復 |
+| [How Datadog built a "universal machine tool"](https://claude.com/blog/how-datadog-built-a-universal-machine-tool-for-claude-code)（07-21） | agent 產規格，**確定性 kernel** 用符號推理與 property testing 驗證後才執行 | 小規格一秒內完成驗證 |
+
+Datadog 的做法值得特別注意：它把「可驗證性」推到極端——agent 不產出應用程式碼，只產出**精確規格**，執行權交給確定性元件。這是「判斷交給模型、決定交給程序」的最完整實作。
+
+### 大規模遷移的同一原則
+
+《[How Anthropic runs large-scale code migrations](https://claude.com/blog/ai-code-migration)》（07-16）的六步驟框架裡，**壓力測試既有測試套件**排在翻譯之前——因為沒有客觀評判機制就沒有遷移。核心句是「修復流程而非代碼」，實務原則是「用較小模型處理實作、保留大模型做審查與規則制定」。
+
+---
+
+## 主題九：扇出從「越多越好」轉向「有界治理」
+
+### 信號
+
+2026 上半年的敘事是「並行 agent 讓總時間約等於執行一個」。下半年（v2.1.202–221）官方把預設值全面收緊：
+
+| 治理項 | 新預設 |
+|--------|--------|
+| 每 session subagent 上限 | 200 |
+| 同時執行 subagent | 20 |
+| 巢狀 spawn | **預設關閉** |
+| `--max-budget-usd` | 達標後拒絕新 spawn **並中止執行中的背景 agent** |
+| WebSearch | 每 session 200 次 |
+| Task 工具 `mode` 參數 | 廢除，subagent 繼承 parent permission mode |
+
+同期，背景 session 的收尾語義被補上：commit + push 保存工作，只在需要時開 draft PR，**遵守 CLAUDE.md 的 git 指示**，結束時一定回報工作落點。
+
+### 安全面的同構轉向
+
+《[Zero risk isn't the job: a CISO's guide to agentic AI](https://claude.com/blog/ciso-guide-to-agentic-ai)》（07-17）把這個轉向講得最清楚：安全領導者的職責不是追求零風險，而是「**讓代理風險可見且有界**」。四個評估問題：
+
+1. 代理處理哪些不可信內容？
+2. 能採取什麼行動？
+3. 失控時爆炸半徑多大？
+4. 可觀測性程度如何？
+
+與《[How we contain Claude across products](https://www.anthropic.com/engineering/how-we-contain-claude)》（05-25）的「**環境層優先於模型層**」是同一個原則的兩種說法——模型層防禦永遠無法達 100% 有效，所以邊界要落在確定性的環境約束上。該文還記錄了兩個值得記住的實際事故類型：自製隔離元件比 gVisor/seccomp 等成熟技術更易出漏洞；approval fatigue 會導致安全降級。
+
+### 對主題二的修訂
+
+主題二說「生產 Agent 工程進入成熟期」。下半年的補充是：**成熟的標誌不是能開更多 agent，而是知道在哪裡停**。五種協調模式的選擇原則沒變（用解決問題所需的最低複雜度），但現在有了執行層的硬上限來執行這個原則。
+
+---
+
+## 增補後的實用建議（2026-08 版）
+
+### 立即可做
+
+1. **稽核你的 CLAUDE.md 與 Skill 是否還在為舊世代模型寫作**：跑 `/doctor` 看精簡建議，跑 `claude-api` skill 的 `prompt-audit` 找衝突指令。目標是刪，不是加。
+2. **把「你反覆手動做的品質檢查」編碼成驗證 Skill**：專案特定的確定性規則就是素材（例如「拒絕沒有 backfill 的 drop column migration」）。
+3. **確認驗證由 harness 觸發**：`/verify`、`/code-review` 已不再自動跑，任何假設「模型會自己驗」的流程都要改成明確呼叫或 hook。
+4. **檢查權限規則語義變更**：v2.1.214 起單段 `dir/**` 的 **allow** 規則只匹配 `<cwd>/dir`，任意深度要寫 `**/dir/**`。
+
+### 架構層
+
+- **模型選擇改用 class × effort 的二維框架**，而非只挑模型。高 class 低 effort 的 per-task 經濟性有時勝過低 class 模型。
+- **Advisor 策略的官方實測**：Sonnet + Fable 監督 = Fable-only 效能的 90%、成本 63%。
+- **自建 eval > 公開 benchmark**：benchmark 對強模型已趨飽和；自建 eval 的另一價值是分辨「模型能力不足」與「整合／context 沒接好」——後者遠比前者常見。
+
+---
+
 *見 [timeline.md](./timeline.md) 查看完整時間軸 · [../REPORT.md](../REPORT.md) 查看文章統計*  
-*由 `/autoresearch:learn` 生成 · 2026-04-23*
+*主體由 `/autoresearch:learn` 生成 · 2026-04-23；主題七～九增補 · 2026-08-05*

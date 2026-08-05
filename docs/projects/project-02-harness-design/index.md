@@ -54,6 +54,21 @@
   - 如果有 UI：E2E 測試（playwright 或 cypress）
 - [ ] **任務 3.2**：設定 Evaluator 的「Hard Threshold」：任意一項失敗 -> 整個評估失敗
 - [ ] **任務 3.3**：在 CLAUDE.md 中加入：Generator 完成後**必須**執行 Evaluator，且**不允許**自行宣布通過
+- [ ] **任務 3.4**：**Oracle 先驗**——在採信 `evaluate.sh` 之前，先餵它一份**已知好**的 commit 與一份**已知壞**的 commit（故意打壞一個測試），確認它能區辨。只驗證 known-good 通過等於什麼都沒驗
+- [ ] **任務 3.5**：**Gate 選擇稽核**——寫下 `evaluate.sh` 實際走過哪些執行路徑。`type-check ≠ build ≠ 跑得起來 ≠ 行為正確`。補上缺的那一段，或明確記錄它不涵蓋什麼
+
+### 階段三之二：加一個獨立 verifier（新增）
+
+`evaluate.sh` 是確定性的 gate；這一階段加的是**對抗性的**第二道。
+
+- [ ] **任務 3.6**：建立 `.claude/agents/adversarial-verifier.md`，規則：
+  - **不修改任何檔案**（`allowed-tools` 只給 Read / Grep / Glob / Bash）
+  - 只回 `PASS` 或 `FAIL: <證據>`；證據必須是工具輸出、`file:line` 或可重現的命令
+  - 不確定時回 `FAIL`
+  - 預設立場是「它壞了，我還沒找到證據而已」
+- [ ] **任務 3.7**：在 verifier 的必查清單裡加入「裝完成的六種捷徑」：放鬆測試、吞錯誤、stub 回傳、改測試檔配合實作、對給定輸入字面特判、縮小 gate 範圍
+- [ ] **任務 3.8**：驗證 verifier 本身有效——故意提交一個 stub 回傳的實作，確認它抓得到
+- [ ] **任務 3.9**：把 `evaluate.sh` 設為**由你（parent）親跑**，不接受 subagent 回報的「已通過」。child verdict 不是證據
 
 ### 階段四：設計 PreToolUse Security Hook
 
@@ -63,6 +78,9 @@
   - 阻止寫入受保護路徑
 - [ ] **任務 4.2**：在 `.claude/settings.json` 中設定 PreToolUse hook
 - [ ] **任務 4.3**：測試 hook：嘗試讓 Claude 執行一個被阻斷的指令，確認 hook 正常工作
+- [ ] **任務 4.4**：加一個**保護測試檔**的 hook——修復期間動測試檔是最常見的作弊路徑（範例見 [Lecture 10](/lectures/lecture-10-verification/)）
+- [ ] **任務 4.5**：**檢查你的 allow 規則語義**。v2.1.214 起單段 `dir/**` 的 **allow** 規則只匹配 `<cwd>/dir`，任意深度要寫 `**/dir/**`（`deny`/`ask` 不受影響）。monorepo 尤其要重驗
+- [ ] **任務 4.6**：用 `Tool(param:value)` 語法加一條成本護欄，例如 `"deny": ["Agent(model:opus)"]`，避免子代理無聲升檔
 
 ### 階段五：整合與測試
 
@@ -72,6 +90,9 @@
   - Generator 在哪些地方需要重試？
   - Evaluator 發現了多少個 Generator 沒有發現的問題？
 - [ ] **任務 5.3**：把失敗的案例加入 CLAUDE.md 的「禁止事項」（Ratchet 原則）
+- [ ] **任務 5.4**：**檢查扇出設定**。v2.1.212/217 起：每 session subagent 上限 200、同時 20、**預設不再巢狀 spawn**、Task 工具 `mode` 參數已廢除（subagent 繼承 parent permission mode）。如果你的設計依賴巢狀委派或 `mode` 切換，改寫它
+- [ ] **任務 5.5**：跑一次 `claude --max-budget-usd <你的上限>`，確認預算耗盡時會中止背景 agent 而不是繼續燒
+- [ ] **任務 5.6**：記錄一次「Generator 宣布完成但 verifier 抓到問題」的完整案例——這是本專案最有價值的產出
 
 ## 參考實作
 
@@ -300,7 +321,11 @@ exit 0
 3. **不允許自行宣布通過**：完成實作後，必須執行 `bash scripts/evaluate.sh [feature-id]`，讓 Evaluator 驗證
 4. **Context 快滿時停下**：不要在 context 接近上限時強行完成，應停下並在 claude-progress.md 記錄當前狀態
 5. **失敗即停止**：Evaluator 報告失敗時，不要繼續下一個 spec item，先修復當前的失敗
+6. **展示紀律**：中間輪只回報計數與可重現命令；宣告完成時**貼出 evaluate.sh 的實際輸出**（首尾節錄）；失敗時完整貼出，不摘要
+7. **不動測試檔**：測試失敗時修實作，不修測試。若這次任務本來就是補測試，在開始前明說
 ```
+
+> **2026 年的變更**：v2.1.215 起 Claude **不再自行觸發** `/verify` 與 `/code-review`。上面第 3 條從「好習慣」升級成「唯一的觸發來源」——沒有寫進 CLAUDE.md 或 hook，驗證就不會發生。
 
 ## 驗收標準
 
@@ -311,3 +336,11 @@ exit 0
 - **驗收 3**：Evaluator 腳本在測試失敗時返回非 0 exit code，成功時返回 0
 - **驗收 4**：完成一個完整的 Planner -> Generator -> Evaluator 循環，Evaluator 發現至少一個 Generator 「宣布完成」但實際有問題的案例
 - **驗收 5**：整個流程的文件化（CLAUDE.md 中有明確的 Generator 邊界規則 + Evaluator 的使用說明）
+- **驗收 6**：`evaluate.sh` 通過 Oracle 先驗——對已知好回 0、對已知壞回非 0，兩者都實測過
+- **驗收 7**：獨立 verifier 抓得到一個 stub 回傳的假實作，且它自己沒有修改任何檔案
+- **驗收 8**：你能說出 `evaluate.sh` **不涵蓋**哪些執行路徑
+
+## 下一步
+
+- 把 Evaluator 從 shell 腳本升級成可重用的 Skill → [Project 03：把驗證編碼成 Skill](/projects/project-03-verification-skill/)
+- 把整套設定推廣到第二個 repo → [Project 04：Plugin 化與自動化治理](/projects/project-04-plugin-automation/)

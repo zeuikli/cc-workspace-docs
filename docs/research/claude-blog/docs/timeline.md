@@ -5,8 +5,130 @@ type: blog-index
 
 # Claude Blog 公告時間軸
 
-> 涵蓋期間：2025-11-13 ~ 2026-06-12 | 資料來源：[claude.com/blog](https://claude.com/blog)  
-> 共 59 篇文章，4 個分類 | 最後更新：2026-06-15
+> 涵蓋期間：2025-11-13 ~ 2026-07-28 | 資料來源：[claude.com/blog](https://claude.com/blog)  
+> 資料庫共 152 篇，4 個分類；本時間軸列出其中的重點條目 | 最後更新：2026-08-05
+
+---
+
+## 2026 年七月第四週（Jul 22–28）
+
+### 2026-07-28 — Announcements（Major）
+**[Bringing MCP 2026-07-28 to Claude](https://claude.com/blog/bringing-mcp-2026-07-28-to-claude)**  
+MCP 第五版規格：核心改為 stateless（可部署 serverless / edge）、Extensions 版本化（MCP Apps、Tasks）、授權對齊 OAuth 2.0 / OIDC。Claude 全產品線支援，可用 server 超過 950 個。
+
+### 2026-07-24 — Announcements（Major）
+**[Introducing Claude Opus 5](https://www.anthropic.com/news/claude-opus-5)**  
+`claude-opus-5` 發布，1M context，$5/$25 與 Opus 4.8 同價。Frontier-Bench 為 4.8 的 2 倍；CursorBench 與 Fable 5 差距 < 0.5% 而成本減半。成為 Claude Max 預設模型。
+
+### 2026-07-24 — Claude Code / Agents（Major）
+**[The new rules of context engineering for Claude 5 generation models](https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models)**  
+Anthropic 為 Opus 5 / Fable 5 刪掉 Claude Code system prompt 的 80% 以上，coding evals 無可量測退化。六條 Then→Now：judgment over rules、tool design over examples、progressive disclosure、簡化描述去重、auto-memory、rich references。
+
+### 2026-07-24 — Claude Code / Agents / Enterprise
+**[Claude models explained: choosing the best model for your use case](https://claude.com/blog/claude-models-explained-choosing-the-best-model-for-your-use-case)**  
+官方選型框架：從最強模型起步再往下調；class × effort 決定 per-task 經濟性；Advisor 策略（Sonnet + Fable 監督 = 90% 效能 / 63% 成本）；自建 eval > 公開 benchmark。
+
+### 2026-07-22 — Claude Code
+**[Building verification loops in Claude Code with skills](https://claude.com/blog/building-verification-loops-in-claude-code-with-skills)**  
+把反覆手動執行的品質檢查編碼成 Skill，讓 agent 自己閉環。四種部署形態：standalone / embedded / chained / PR-wide。
+
+### 2026-07-22 — Claude Code / Agents
+**[How Outtake built a cyber investigator on Claude](https://claude.com/blog/how-outtake-built-a-cyber-investigator-on-claude)**  
+可連續數小時自主調查完整攻擊網路的 Recon Agent。設計原則：受限 orchestration + 不受限判斷；敵意環境下假設 agent 會被挾持而建 blastbox 沙箱。
+
+---
+
+## 2026 年七月第三週（Jul 15–21）
+
+### 2026-07-21 — Enterprise / Claude Code（Major）
+**[How Anthropic secures its AI-native software development lifecycle](https://claude.com/blog/how-anthropic-secures-its-ai-native-software-development-lifecycle)**  
+在「AI 撰寫 80% 合併程式碼」下的安全實踐：審查左移、多個窄焦點 agent 各持獨立 context 審同一 PR、遠端 VM 只開 allowlist 出口、所有 agent 動作進 SIEM、漏洞自動回寫 CLAUDE.md。
+
+### 2026-07-21 — Enterprise / Claude Code
+**[How Datadog built a "universal machine tool" for Claude Code](https://claude.com/blog/how-datadog-built-a-universal-machine-tool-for-claude-code)**  
+Temper：agent 產出精確規格而非應用程式碼，由確定性 kernel 以符號推理、窮舉狀態探索與 property testing 驗證後才執行。
+
+### 2026-07-17 — Enterprise
+**[Zero risk isn't the job: a CISO's guide to agentic AI](https://claude.com/blog/ciso-guide-to-agentic-ai)**  
+四個評估問題（不可信內容 / 可採取行動 / 爆炸半徑 / 可觀測性）與七項核心控制。核心論點：職責不是追求零風險，而是讓代理風險「可見且有界」。
+
+### 2026-07-16 — Claude Code / Enterprise
+**[How Anthropic runs large-scale code migrations with Claude Code](https://claude.com/blog/ai-code-migration)**  
+六步驟遷移框架（規則手冊 → 依賴映射 → 壓力測試 → 翻譯 → 編譯 → 行為驗證）。Bun 兩週遷移百萬行 Zig → Rust，100% 通過既有測試。核心理念：修復流程而非代碼。
+
+### 2026-07-15 ~ 07-20 — Enterprise（Working at the frontier 系列）
+Fable 5 的生產採用案例：[Rakuten](https://claude.com/blog/working-at-the-frontier-rakuten)（07-20，通宵建 agent）、[Cursor](https://claude.com/blog/working-at-the-frontier-cursor)（07-17，最難的 1% 問題）、[Base44](https://claude.com/blog/working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging-engineering-work)（07-15）。
+
+---
+
+## 2026 年七月第一、二週（Jul 1–14）
+
+### 2026-07-07 — Claude Code（Major）
+**[Choosing a Claude model and effort level in Claude Code](https://claude.com/blog/claude-model-and-effort-level-in-claude-code)**  
+模型決定能力範圍，effort 決定投入多少（讀幾個檔案、驗證幾次、執行多深）。Claude 跳過檔案、未跑測試或放棄多步任務 → 提高 effort 而非換 prompt。三層比喻：Fable 見過罕見問題的專家 / Opus 有深度經驗的專家 / Sonnet 能力強的通才。
+
+### 2026-07-06 — Claude Code
+**[A field guide to Claude Fable: finding your unknowns](https://claude.com/blog/a-field-guide-to-claude-fable-finding-your-unknowns)**  
+工作品質受限於「釐清 unknowns 的能力」而非模型本身。四類 unknowns 分類與實作前中後的對應流程。
+
+### 2026-07-13 / 07-10 / 07-08 — Enterprise
+Working at the frontier 系列續：[Hebbia](https://claude.com/blog/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail)（金融實地查核）、[Cognition](https://claude.com/blog/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night)（通宵作業）、[Thomson Reuters](https://claude.com/blog/working-at-the-frontier-how-thomson-reuters-builds-ai-for-high--stakes-professional-work)（高風險專業工作）。
+
+### 2026-07-07 — Announcements / Claude Code
+[Bringing Claude Code and Claude Cowork to government](https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government)、[Claude Cowork is coming to mobile and web](https://claude.com/blog/cowork-web-mobile)。
+
+### 2026-07-02 — Announcements
+**[Giving admins more visibility and control over Claude spend](https://claude.com/blog/giving-admins-more-visibility-and-control-over-claude-usage-and-spend)**  
+Claude Code 專屬用量分頁、Analytics Chat 自然語言查詢、model defaults/entitlements、75%/90% 用量門檻警示。
+
+---
+
+## 2026 年六月第五週（Jun 29 – Jul 1）
+
+### 2026-06-30 — Announcements（Major）
+**[Claude Sonnet 5](https://www.anthropic.com/news/claude-sonnet-5)**  
+`claude-sonnet-5` 取代 Sonnet 4.6 成為 Claude Code 預設模型（v2.1.197）。1M context；促銷 $2/$10 至 08-31，之後 $3/$15。Agentic 能力大幅躍進，幻覺與 sycophancy 降低。
+
+### 2026-06-30 — Claude Code
+**[Getting started with loops](https://claude.com/blog/getting-started-with-loops)**  
+四種 agentic loop：Turn-based / Goal-based（`/goal`）/ Time-based（`/loop`、`/schedule`）/ Proactive。選擇關鍵是退出條件是否可驗證。
+
+### 2026-06-29 — Announcements
+[Claude apps gateway for Amazon Bedrock and Google Cloud](https://claude.com/blog/introducing-the-claude-apps-gateway)、[Claude in Microsoft Foundry GA](https://claude.com/blog/claude-in-microsoft-foundry)。
+
+---
+
+## 2026 年六月第四週（Jun 22–28）
+
+### 2026-06-24 — Enterprise
+**[Building effective human-agent teams](https://claude.com/blog/building-effective-human-agent-teams)**  
+從單人 AI 互動轉向 multiplayer 人機協作。四大心法：公開透明分享脈絡、明確角色分工、設定 North Star、漸進建立信任。實作範例含 Doer-Verifier harness 與每週 lessons & missteps 報告。
+
+### 2026-06-24 — Claude Code
+**[Agent identity in Claude Tag: a new access model for autonomous, team-wide AI](https://claude.com/blog/agent-identity-access-model)**  
+Agent 取得獨立身份與憑證的存取模型。
+
+### 2026-06-22 — Enterprise
+[The full Claude Desktop experience on AWS, Google Cloud, and Microsoft Foundry](https://claude.com/blog/the-full-claude-desktop-experience-on-aws-google-cloud-and-microsoft-foundry)。
+
+---
+
+## 2026 年六月第三週（Jun 15–21）
+
+### 2026-06-18 — Claude Code（Major）
+**[Steering Claude Code: CLAUDE.md files, skills, hooks, rules, subagents and more](https://claude.com/blog/steering-claude-code-skills-hooks-rules-subagents-and-more)**  
+七種行為調整機制的選擇框架：改變「知道什麼」→ CLAUDE.md / Rules / Skills；改變「呼叫什麼工具」→ Subagents / MCP；生命週期自動化 → Hooks；輸出外觀 → Output Styles / System Prompt Appending。
+
+### 2026-06-18 — Announcements
+**[Claude Code now supports artifacts](https://claude.com/blog/artifacts-in-claude-code)**  
+工作 session 轉為互動網頁，自動更新、版本歷史、存取控制。使用場景：PR walkthrough、事故調查、安全稽核（Team/Enterprise Beta）。
+
+### 2026-06-18 — Announcements / Enterprise
+**[Centrally manage authorization for MCP connectors](https://claude.com/blog/enterprise-managed-auth)**  
+管理員集中管控 MCP connector 授權。
+
+### 2026-06-17 — Enterprise
+[Secure access to the Claude Platform with Workload Identity Federation](https://claude.com/blog/workload-identity-federation)、[Claude Design now stays on brand](https://claude.com/blog/claude-design-stays-on-brand-for-daily-work)。
 
 ---
 
@@ -308,6 +430,22 @@ May 19–28:    Dynamic Workflows Research Preview；HTML-First 策略
 Jun 02–03:    技術深潛系列（Dynamic Workflow 六模式、Skills 九大類、AI 原生工程）
 Jun 09:        Fable 5 / Mythos 5 發布 ← 最強公開模型；Managed Agents Schedule + Vaults
 Jun 10:        Managed Agents 演進全貌（agentic surfaces overview）
+Jun 18:        行為調整機制總整理（七種機制選擇框架）；Artifacts 進 Claude Code
+Jun 24:        人機協作團隊（multiplayer）＋ Agent 獨立身份存取模型
+Jun 30:        Sonnet 5 發布（新預設模型，1M ctx）；Agentic loop 四型態指南
+Jul 07:        模型 × effort 選擇指南 ← 「effort 是投入量，不是能力」
+Jul 16:        大規模程式碼遷移六步驟框架（Bun：百萬行 Zig → Rust）
+Jul 17–21:    安全季：CISO 指南、AI 原生 SDLC 安全、Datadog 確定性 kernel
+Jul 22:        驗證迴圈 Skill 化 ← 驗證觸發權從模型回到 harness
+Jul 24:        Opus 5 發布；Claude 5 世代 context engineering 新規則（system prompt −80%）
+Jul 24:        官方模型選型框架（class × effort × 單位經濟）
+Jul 28:        MCP 2026-07-28 規格（stateless core、Extensions、OAuth/OIDC）
 ```
 
-*更新至 2026-06-15 by autoresearch*
+### 2026 下半年的三條主線
+
+1. **從「堆規則」轉向「信任判斷」**：Claude 5 世代刪 system prompt 80%+ 無退化，官方把 context engineering 的預設立場從 over-constrain 改為 progressive disclosure。
+2. **驗證的觸發權從模型收回 harness**：`/verify`、`/code-review`、`/deep-research` 陸續改為手動呼叫；同時官方推廣把驗證編碼成 Skill 與 PR-wide gate。
+3. **扇出從「越多越好」轉向「有界治理」**：subagent 上限、預設不巢狀、預算真正止血、背景 session 收尾語義明確化。
+
+*更新至 2026-07-28（資料庫收錄截止），最後編修 2026-08-05*

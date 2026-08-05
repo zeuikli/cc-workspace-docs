@@ -162,6 +162,8 @@ Anthropic 推出 Claude Code 與 Claude Cowork 桌面應用在聯邦政府環境
 
 ---
 
+## A field guide to Claude Fable: finding your unknowns
+
 **Date:** 2026-07-06 | **URL:** https://claude.com/blog/a-field-guide-to-claude-fable-finding-your-unknowns
 
 ### Summary

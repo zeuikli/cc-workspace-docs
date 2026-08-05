@@ -44,7 +44,7 @@ Agent = Model + Body + Harness
 
 | 層 | 定義 | 解的問題 | 典型組件 |
 |----|------|---------|---------|
-| **Model** | 大腦，intelligence 本身 | 推理、理解、生成 | GPT-5 / Claude Opus 4.7 |
+| **Model** | 大腦，intelligence 本身 | 推理、理解、生成 | Claude Opus 5 / Sonnet 5 / Fable 5 |
 | **Body** | 手腳，能力延伸 | 能不能做事 | bash、filesystem、MCP、browser、sandbox |
 | **Harness** | 約束，行為校準 | 會不會做歪 | CLAUDE.md、hooks、planner-evaluator、sub-agent 結構 |
 
@@ -78,6 +78,28 @@ Claude Opus 4.6 在相同 benchmark 上：
 - LangChain 案例：只改 harness（system prompt、tools、middleware、tracing、self-verification），讓 coding agent 在 Terminal Bench 2.0 上從 Top 30 進到 Top 5
 
 **實踐結論**：在當前投資報酬率下，優化 Harness > 等待新模型版本。
+
+### 官方也是這樣說的：自建 eval 的第二個用途
+
+Anthropic 在《[Claude models explained](https://claude.com/blog/claude-models-explained-choosing-the-best-model-for-your-use-case)》裡建議自建 eval 而非依賴公開 benchmark，理由之一正是本課的主題：
+
+> 自建 eval 的目的之一是分辨「模型能力不足」與「整合／context 沒接好」——**後者遠比前者常見**。
+
+換句話說，官方自己的立場也是：你以為的模型問題，大多是 harness 問題。
+
+### 導入成效的量化錨點
+
+如果你需要對外說明「這件事值不值得投入」，官方公布的數字可以引用：
+
+| 指標 | 數字 | 來源 |
+|------|------|------|
+| 每位工程師每天合併的 PR | **+67%** | [Contribution metrics](https://claude.com/blog/contribution-metrics)（2026-01）|
+| 程式碼由 Claude Code 協助撰寫的比例 | 70–90% | 同上 |
+| 獲得實質性 review comment 的 PR 比例 | 16% → **54%** | [Code Review](https://claude.com/blog/code-review) |
+| Analytics agent 準確率（無 Skill → 有 Skill）| ≤21% → **≥95%** | [How we use skills](https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills) |
+| Anthropic 工程師每季出貨量（vs 2021–2025）| **8×** | [AI-native SDLC](https://claude.com/blog/how-anthropic-secures-its-ai-native-software-development-lifecycle) |
+
+注意這些數字沒有一個是「換了更強的模型」得來的——全部來自 harness 層的建設。
 
 ### Anthropic 對照實驗：同一匹馬，兩種命運
 
@@ -128,6 +150,12 @@ Anthropic 觀察到一個值得單獨標記的現象：當 agent 感覺上下文
 | **校準型**（hooks、verification、planner-evaluator） | 永遠不會消失 |
 
 Harness 解的是 non-determinism 這個結構問題，不是 model 弱的問題。Deterministic 驗證、行為邊界校準——這些需求不會因為模型變強而消失。
+
+**2026 年的實證讓這條分界變得非常具體**：Anthropic 為 Opus 5 / Fable 5 刪掉 Claude Code system prompt 的 **80% 以上**，在 coding evals 上無可量測退化（見 [Lecture 03](/lectures/lecture-03-context-engineering/)）。被刪掉的正是「補弱點型」——為補償模型弱點而堆的程序性鷹架。**沒有被刪的是驗證閘門與不可逆操作確認**。
+
+同一時期官方還做了另一件方向一致的事：v2.1.215 起 Claude **不再自行觸發** `/verify` 與 `/code-review`。驗證什麼時候跑，被明確地從模型手上交還給 harness。
+
+換句話說，2026 年的 harness 工程有兩個同時發生的動作——**刪掉鷹架，強化閘門**。這兩件事看起來相反，其實是同一個原則：讓模型做判斷，讓程序做決定。
 
 ## 程式碼範例
 
@@ -213,6 +241,22 @@ A：2026 年 3-4 月，Claude Code 品質下滑的三個根因全是 Harness 級
 
 - [Lecture 02：CLAUDE.md 設計](/lectures/lecture-02-claude-md/) — 從這裡開始建立你的 Harness
 - [Lecture 04：Harness 三層架構](/lectures/lecture-04-harness-architecture/) — Planner/Generator/Evaluator 設計模式
-- [OpenAI: Harness engineering — leveraging Codex in an agent-first world](https://openai.com/index/harness-engineering/)
+- [Lecture 09：模型選型與 Effort 經濟學](/lectures/lecture-09-model-selection/) — 什麼時候真的該換模型
+- [Lecture 10：驗證迴圈與 Code Review](/lectures/lecture-10-verification/) — 校準型 Harness 的具體形態
+
+**官方一手來源**
+
+- [Harness design for long-running application development](https://www.anthropic.com/engineering/harness-design-long-running-apps)（2026-03-24）— Generator-evaluator 架構；harness 複雜度須隨模型能力調整
 - [Anthropic: Effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
 - [Anthropic: April 23 Postmortem](https://www.anthropic.com/engineering/april-23-postmortem)
+- [The new rules of context engineering for Claude 5 generation models](https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models)（2026-07-24）— system prompt −80% 無退化
+- [Claude models explained: choosing the best model for your use case](https://claude.com/blog/claude-models-explained-choosing-the-best-model-for-your-use-case)（2026-07-24）
+- [Understand Claude Code's impact with contribution metrics](https://claude.com/blog/contribution-metrics)（2026-01-29）
+- [How Claude Code works in large codebases](https://claude.com/blog/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start)（2026-05-14）— 五元件 harness 生態系
+- [OpenAI: Harness engineering — leveraging Codex in an agent-first world](https://openai.com/index/harness-engineering/)
+
+**站內研究歸檔**
+
+- [Claude Code 最佳實踐官方總綱](/research/best-practices/17-best-practices-overview)
+- [How Claude Code Works — Agentic Loop / Tools / Context](/research/best-practices/18-how-claude-code-works)
+- [claude-blog 官方部落格歸檔](/research/claude-blog/)

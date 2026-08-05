@@ -17,11 +17,11 @@
 | ai-articles | raw:corpus | 50 篇評分 AI 文章；統一評分框架（A-E /10 加權） |
 | ai-news | raw:corpus | 每日 AI Newsletter 機器自動抓取；外部來源 |
 | videos | raw:corpus | 7 個影片逐字稿/摘要；Podcast 與 YouTube |
-| claude-blog | raw:corpus | Anthropic 官方 blog / docs 外部歸檔；~155 篇 |
+| claude-blog | raw:corpus | Anthropic 官方 blog / docs 外部歸檔；153 條目（去重後約 138 篇），2025-11-13 ~ 2026-07-28 |
 | DAILY-RESEARCH | raw:digest | 每日研究輸出（Routine C）；格式 `YYYY-MM-DD.md` |
 | DAILY-TOPICS | raw:digest | 每日選題輸出（Routine A）；供 DAILY-RESEARCH 消費 |
 | reports | wiki:synthesis | autoresearch / overnight-research 輸出；合成報告 |
-| best-practices | wiki:synthesis | 46 篇最佳實踐；涵蓋 hooks、agents、skills、permissions、MCP、模型選型等 |
+| best-practices | wiki:synthesis | 49 篇最佳實踐；涵蓋 hooks、agents、skills、permissions、MCP、模型選型、驗證迴圈等 |
 | agent-harness | wiki:synthesis | Harness 評估框架 + 深度研究；consumer: `harness-meta` skill |
 | evals | wiki:synthesis | Harness eval runs + baseline；PGE 評分（Generator ≠ Evaluator） |
 | NEW-DOMAINS | wiki:synthesis | 每次 Routine E 新領域探勘紀錄；供下次去重 |

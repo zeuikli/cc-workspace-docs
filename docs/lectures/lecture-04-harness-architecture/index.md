@@ -63,6 +63,23 @@ Evaluator 必須與 Generator 分離，且 Evaluator 應該使用**外部工具*
 
 Eugene Yan 的原則：Evals pattern 是生產系統的基石——**評估的可信度取決於評估者與被評估者的獨立性**。
 
+**量化證據**（來自 Anthropic 的漏洞掃描實務）：
+
+| 做法 | 效果 |
+|------|------|
+| 驗證 agent 與 discovery agent 分離，且 prompt 要求**反駁**而非確認 | false positive 減少約 **50%** |
+| 再要求提供 PoC 才算成立 | false positive **趨近於零** |
+
+這套方法已用於在開源軟體中揭露 **1,596 個漏洞**。完整方法論見 [Lecture 10](/lectures/lecture-10-verification/)。
+
+### Harness 複雜度要隨模型能力調整
+
+官方在同一篇《Harness design for long-running apps》裡加了一個容易被跳過的但書：
+
+> **定期質疑每個組件背後對模型限制的假設**，避免過度工程化。
+
+三層架構不是越多層越好。判準是：這一層在補償一個模型**現在仍然存在**的弱點嗎？如果模型已經不會犯那個錯，這層就是純成本。但要記住 [Lecture 03](/lectures/lecture-03-context-engineering/) 的邊界——**Evaluator 不屬於可刪的鷹架**，它解的是 non-determinism 與自我偏誤，不是能力不足。
+
 ### Generator 的 Context Reset 策略
 
 長任務中，Generator 遇到 context limit 時應該：
@@ -355,12 +372,27 @@ TOOL_INPUT=$(echo "$INPUT" | jq -r '.tool_input')
 - **量化支撐**：三層 vs 單層，同模型 6 小時可玩遊戲 vs 20 分鐘跑不起來。
 - **Generator 遇到 context limit -> 完整 reset**，不靠摘要，從 spec item 重新開始。
 - **25 種 Hooks 事件**：PreToolUse（可阻斷）是最重要的防禦 hook。Exit 2 阻斷，Exit 1 警告，Exit 0 繼續。
-- **Evaluator 用外部工具**（pytest、playwright）而非模型自評，獨立性是可信度的來源。
+- **Evaluator 用外部工具**（pytest、playwright）而非模型自評，獨立性是可信度的來源。獨立 verifier 讓 false positive 減半。
+- **Harness 複雜度要隨模型能力調整**——但 Evaluator 不在可刪之列。
 
 ## 延伸閱讀
 
 - [Lecture 03：Context Engineering](/lectures/lecture-03-context-engineering/) — Sub-agent 的 Context Firewall 原理
 - [Lecture 06：安全沙箱與 Proxy](/lectures/lecture-06-security/) — Hooks 在安全層面的應用
+- [Lecture 08：Sub-agents 與 Dynamic Workflows](/lectures/lecture-08-subagents-workflows/) — 五種協調模式與扇出治理
+- [Lecture 10：驗證迴圈與 Code Review](/lectures/lecture-10-verification/) — Evaluator 的完整方法論
 - [Project 02：設計你的 Harness](/projects/project-02-harness-design/) — 動手實作三層架構
-- [Anthropic: Harness design for long-running application development](https://www.anthropic.com/engineering/harness-design-long-running-apps)
+
+**官方一手來源**
+
+- [Harness design for long-running application development](https://www.anthropic.com/engineering/harness-design-long-running-apps)（2026-03-24）
+- [Multi-agent coordination patterns: Five approaches and when to use them](https://claude.com/blog/multi-agent-coordination-patterns)（2026-04-10）
+- [Common workflow patterns for AI agents—and when to use them](https://claude.com/blog/common-workflow-patterns-for-ai-agents-and-when-to-use-them)（2026-03-05）
+- [Using LLMs to secure source code](https://claude.com/blog/using-llms-to-secure-source-code)（2026-05-27）— 獨立 verifier 的量化效果
+- [Building effective human-agent teams](https://claude.com/blog/building-effective-human-agent-teams)（2026-06-24）— Doer-Verifier harness
 - [官方文件：Claude Code Hooks](https://code.claude.com/docs/en/hooks)
+
+**站內研究歸檔**
+
+- [Hooks 實戰設計模式（25 種事件、13 個腳本範例）](/research/best-practices/03-hooks-patterns)
+- [官方 Hooks / Memory / Settings](/research/best-practices/01-official-hooks-memory-settings)

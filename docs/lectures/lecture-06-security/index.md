@@ -121,6 +121,56 @@ Claude Code 提供多個層級的 permission 控制：
 - `Read(*)` — 允許讀取所有檔案
 - `Write(src/**)` — 只允許寫入 src/ 目錄
 
+**`Tool(param:value)` 語法**（W25）：deny / ask 規則可以比對工具的輸入參數，例如 `Agent(model:opus)` 直接阻止 spawn Opus 檔位的 subagent——成本治理不必靠自律。
+
+### ⚠️ 單段 `dir/**` 的 allow 語義在 v2.1.214 改了
+
+這是一個會**靜默改變既有設定行為**的變更，升級後必須重驗：
+
+> 單段 `dir/**` 的 **allow** 規則（如 `Edit(src/**)`）與 hook 的 `if:` 條件，現在**只匹配 `<cwd>/dir`**，不再匹配樹中任意深度的同名目錄。要任意深度請寫 `**/dir/**`。
+>
+> **`deny` / `ask` 規則維持任意深度匹配**（安全方向 fail-safe）。
+
+```json
+{
+  "permissions": {
+    "allow": [
+      "Edit(src/**)",        // 只有 <cwd>/src
+      "Edit(**/src/**)"      // 任意深度的 src
+    ]
+  }
+}
+```
+
+如果你的 monorepo 有 `packages/*/src/`，舊寫法在升級後會突然開始詢問權限。
+
+### 權限繞過修正（v2.1.213–216）
+
+這批修正說明了「shell 解析」本身就是攻擊面。知道有哪些是有用的——它們代表過去這些路徑**是可以繞過的**：
+
+- zsh 在 `[[ ]]` 條件式中執行隱藏命令 → 現在會提示
+- 檔案描述子重導向形式 → 改為 **fail closed**
+- **超過 10,000 字元的命令一律提示**，不再自動執行
+- `help` / `man` 的危險選項、`file` 的 `-m`/`-f`、`docker`（含 Podman shim）的 daemon 重導向旗標（`--url`/`--connection`/`--identity`）→ 需要授權
+- Windows PowerShell 5.1 的權限檢查繞過、含引號路徑、**隱形 Unicode 字元** → 修正
+- permission preview 未中和特定 Unicode 導致核可訊息「視覺被改寫」→ 修正（v2.1.211）
+- `.claude` / `.claude/worktrees` 的 symlink 逃逸 → 修正
+- auto mode 新增「封鎖竄改 session transcript 檔」規則；對未解析變數的 `rm -rf` 會先問
+
+啟動時對**過寬的 permission 規則**現在會發出警告（v2.1.210）；permission 規則改存在 repo 根目錄，跨 worktree 持久（v2.1.211）。
+
+### Auto mode：分類器把關
+
+`auto` 模式不是「全部放行」——它用獨立的 classifier 模型審查每個工具呼叫，阻止大規模刪除、資料洩漏或惡意程式碼，同時讓安全操作自動進行。
+
+| 設定 | 效果 |
+|------|------|
+| `autoMode.classifyAllShell`（v2.1.193）| 分類器擴及所有 Bash / PowerShell 指令 |
+| W25 破壞性指令攔截 | `git reset --hard`、`git clean -fd`、`git commit --amend`（非本 session 建立的 commit）、`terraform/pulumi/cdk destroy` 在未明確要求時一律封鎖 |
+| 管理員 | 可透過 managed settings 停用 auto mode |
+
+⚠️ **v2.1.200 起預設 permission mode 改為 "Manual"**（CLI / VS Code / JetBrains 一致）。自動化腳本與 CI 需要明確指定 `--permission-mode`，否則行為與升級前不同。
+
 ### Secure Deployment 核心原則
 
 來自 Anthropic《Securely Deploying AI Agents》：
@@ -141,6 +191,69 @@ Agent 只應擁有完成任務所需的最小 permissions。不要給 agent 過�
 
 **5. Sandbox 隔離**
 特別是在 CI/CD 環境中，確保 agent 執行環境與生產環境完全隔離。
+
+### 環境層優先於模型層
+
+這是 Anthropic 在《How we contain Claude across products》裡的核心原則，值得當成本課的第一性原理：
+
+> **模型層防禦永遠無法達 100% 有效**——所以邊界要落在確定性的環境約束上。
+
+該文還記錄了兩個實際踩過的坑，都不直覺：
+
+1. **自製隔離元件比 gVisor / seccomp 等成熟技術更容易出漏洞**。不要為了「更貼合需求」自己刻沙箱。
+2. **Approval fatigue 會導致安全降級**——這正是 sandbox 存在的理由：與其問 100 次，不如一次定好邊界。
+
+風險分三類（使用者誤用 / 模型失誤 / 外部攻擊）分層隔離，**隔離強度要配合使用者的監督能力**——無人看管的自動化流程需要比互動 session 更嚴的邊界。
+
+### CISO 的四個評估問題
+
+比一份控制清單更耐用的框架（來自《Zero risk isn't the job》）：
+
+1. 代理處理哪些**不可信內容**？
+2. 能採取**什麼行動**？
+3. 失控時**爆炸半徑**多大？
+4. **可觀測性**程度如何？
+
+七項核心控制：身份整合、連接器白名單、細粒度工具批准、沙箱執行、出站限制清單、OpenTelemetry 遙測、組織級「斷電開關」。
+
+核心論點：**安全領導者的職責不是追求零風險，而是讓代理風險可見且有界**。
+
+### Agentic 系統特有的六類漏洞
+
+傳統應用安全清單涵蓋不到的部分（來自《Zero Trust for AI agents》）：
+
+| 漏洞類型 | 說明 |
+|---------|------|
+| 工具存取 / 自主決策 | agent 能做的事超出單次授權的範圍 |
+| **Context 持久化與記憶毒化** | 惡意內容寫進記憶後跨 session 生效 |
+| 多 Agent 協調風險 | 一個 agent 的錯誤判斷被其他 agent 當成事實 |
+| **Prompt injection 與工具毒化** | 外部內容偽裝成指令 |
+| 身份與權限濫用 | 憑證邊界模糊，責任無法歸屬 |
+| Supply chain 攻擊 | 第三方 MCP server / plugin |
+
+三層實施框架：**Foundation**（基本身份存取控制）→ **Advanced**（增強範圍與沙箱）→ **Optimized**（AI 加速的防禦操作）。
+
+### 外部輸入是資料，不是指令
+
+上表第四項值得單獨強調，因為它是最常被忽略的：
+
+- WebFetch 結果、issue / PR body、MCP 工具輸出、網頁內容——**全部都是資料**
+- 保留 provenance，只提取結構化欄位
+- **由 untrusted 內容導出的「目的地」與「憑證」參數**（要 POST 到哪、用哪把 key）在執行前必須確認
+
+Claude in Chrome 的 GA 公告特別花篇幅講 prompt injection，因為瀏覽器是這類攻擊最直接的入口。
+
+### 憑證：讓 agent 根本拿不到明文
+
+比「小心不要洩漏金鑰」更強的做法是**讓金鑰不存在於 agent 可見範圍**：
+
+| 機制 | 平台 | 做法 |
+|------|------|------|
+| `sandbox.credentials`（v2.1.187）| Claude Code | 封鎖 sandboxed 指令讀取憑證檔案與 secret 環境變數 |
+| `sandbox.credentials` `mode: "mask"`（v2.1.213）| Linux / WSL | 沙箱內讀到**哨兵副本**，proxy 對外時才換回真值（macOS 退回 `deny`）|
+| **Vaults**（Managed Agents）| Managed Agents | agent 只拿到 placeholder，**網路邊界**才替換為真值，且只送往指定網域 |
+
+三者是同一個思路的不同實作：**替換發生在網路邊界，而不是在 agent 的記憶體裡**。
 
 ### PreToolUse Hooks 作為安全層
 
@@ -400,11 +513,34 @@ A：
 - **Hooks 是應用層補充**：PreToolUse hooks 提供額外的業務邏輯層防護，與 OS 層 sandbox 疊加。
 - **最小權限原則**：agent 只需要完成任務所需的最小 permissions。不要因為「方便」給過多權限。
 - **審計優先**：即使在高度自動化的環境中，也要保留完整的操作日誌。
+- **環境層優先於模型層**：模型層防禦永遠無法達 100%，邊界要落在確定性的環境約束上。
+- **⚠️ 單段 `dir/**` 的 allow 語義已縮小**（v2.1.214），任意深度要寫 `**/dir/**`；deny/ask 不受影響。
+- **⚠️ 預設 permission mode 改為 Manual**（v2.1.200），自動化腳本需明確指定 `--permission-mode`。
+- **外部輸入是資料不是指令**：保留 provenance，只提取結構化欄位；untrusted 導出的目的地與憑證參數先確認。
+- **憑證替換要發生在網路邊界**（`sandbox.credentials` mask / Vaults），而不是靠 agent 自律。
 
 ## 延伸閱讀
 
 - [Lecture 04：Harness 三層架構](/lectures/lecture-04-harness-architecture/) — PreToolUse Hooks 的詳細設計
+- [Lecture 10：驗證迴圈與 Code Review](/lectures/lecture-10-verification/) — 安全審查的獨立 verifier 設計
+- [Lecture 11：MCP 整合與外部系統](/lectures/lecture-11-mcp/) — MCP server 的權限與稽核
+- [Lecture 12：Plugins、自動化與組織治理](/lectures/lecture-12-governance/) — Vaults、SIEM 與組織級控制
 - [Project 02：設計你的 Harness](/projects/project-02-harness-design/) — 實作安全 hooks
-- [官方文件：Claude Code Sandboxing](https://code.claude.com/docs/en/sandboxing)
-- [官方文件：Claude Code Permissions](https://code.claude.com/docs/en/permissions)
-- [Anthropic: Securely Deploying AI Agents](https://code.claude.com/docs/en/agent-sdk/secure-deployment)
+
+**官方一手來源**
+
+- [How we contain Claude across products](https://www.anthropic.com/engineering/how-we-contain-claude)（2026-05-25）— 環境層優先於模型層
+- [Zero Trust for AI agents](https://claude.com/blog/zero-trust-for-ai-agents)（2026-05-27）— 三層框架、六類 agentic 漏洞
+- [Zero risk isn't the job: a CISO's guide to agentic AI](https://claude.com/blog/ciso-guide-to-agentic-ai)（2026-07-17）— 四個評估問題、七項控制
+- [How Anthropic secures its AI-native software development lifecycle](https://claude.com/blog/how-anthropic-secures-its-ai-native-software-development-lifecycle)（2026-07-21）
+- [Using LLMs to secure source code](https://claude.com/blog/using-llms-to-secure-source-code)（2026-05-27）— 六步驟漏洞掃描方法論
+- [Auto mode for Claude Code](https://claude.com/blog/auto-mode)（2026-03-24）
+- [Preparing your security program for AI-accelerated offense](https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense)（2026-04-10）
+- [官方文件：Sandboxing](https://code.claude.com/docs/en/sandboxing) · [Permissions](https://code.claude.com/docs/en/permissions) · [Securely Deploying AI Agents](https://code.claude.com/docs/en/agent-sdk/secure-deployment)
+
+**站內研究歸檔**
+
+- [Sandboxing OS 層隔離技術詳解](/research/best-practices/13-sandbox)
+- [細粒度 Permission 設定完整指南](/research/best-practices/12-permissions)
+- [AI Agent 安全部署完整指南](/research/best-practices/09-secure-deployment)
+- [W28–W31 新功能（權限語義變更）](/research/best-practices/48-w28-w31-features)

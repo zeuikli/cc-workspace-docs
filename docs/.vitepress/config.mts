@@ -3,19 +3,51 @@ import { defineConfig } from "vitepress";
 const githubRepoLink = "https://github.com/zeuikli/cc-workspace-docs";
 
 const lectureItems = [
-  { text: "課程總覽", link: "/lectures/lecture-01-foundations/" },
-  { text: "Lecture 01：Claude Code 與 Harness 基礎", link: "/lectures/lecture-01-foundations/" },
-  { text: "Lecture 02：CLAUDE.md 設計", link: "/lectures/lecture-02-claude-md/" },
-  { text: "Lecture 03：Context Engineering", link: "/lectures/lecture-03-context-engineering/" },
-  { text: "Lecture 04：Harness 三層架構", link: "/lectures/lecture-04-harness-architecture/" },
-  { text: "Lecture 05：記憶系統與工作區設計", link: "/lectures/lecture-05-memory-workspace/" },
-  { text: "Lecture 06：安全沙箱與 Proxy", link: "/lectures/lecture-06-security/" },
+  { text: "課程總覽", link: "/lectures/" },
+  {
+    text: "Part 1：基礎",
+    collapsed: false,
+    items: [
+      { text: "Lecture 01：Claude Code 與 Harness 基礎", link: "/lectures/lecture-01-foundations/" },
+      { text: "Lecture 02：CLAUDE.md 設計", link: "/lectures/lecture-02-claude-md/" },
+      { text: "Lecture 03：Context Engineering", link: "/lectures/lecture-03-context-engineering/" },
+    ],
+  },
+  {
+    text: "Part 2：架構",
+    collapsed: false,
+    items: [
+      { text: "Lecture 04：Harness 三層架構", link: "/lectures/lecture-04-harness-architecture/" },
+      { text: "Lecture 05：記憶系統與工作區設計", link: "/lectures/lecture-05-memory-workspace/" },
+      { text: "Lecture 06：安全沙箱與 Proxy", link: "/lectures/lecture-06-security/" },
+    ],
+  },
+  {
+    text: "Part 3：擴展",
+    collapsed: false,
+    items: [
+      { text: "Lecture 07：Skills 設計與 Progressive Disclosure", link: "/lectures/lecture-07-skills/" },
+      { text: "Lecture 08：Sub-agents 與 Dynamic Workflows", link: "/lectures/lecture-08-subagents-workflows/" },
+      { text: "Lecture 09：模型選型與 Effort 經濟學", link: "/lectures/lecture-09-model-selection/" },
+    ],
+  },
+  {
+    text: "Part 4：工程化",
+    collapsed: false,
+    items: [
+      { text: "Lecture 10：驗證迴圈與 Code Review", link: "/lectures/lecture-10-verification/" },
+      { text: "Lecture 11：MCP 整合與外部系統", link: "/lectures/lecture-11-mcp/" },
+      { text: "Lecture 12：Plugins、自動化與組織治理", link: "/lectures/lecture-12-governance/" },
+    ],
+  },
 ];
 
 const projectItems = [
   { text: "專案總覽", link: "/projects/" },
   { text: "Project 01：從零建立你的第一個 Workspace", link: "/projects/project-01-init-workspace/" },
   { text: "Project 02：設計你的 Harness", link: "/projects/project-02-harness-design/" },
+  { text: "Project 03：把驗證編碼成 Skill", link: "/projects/project-03-verification-skill/" },
+  { text: "Project 04：Plugin 化與自動化治理", link: "/projects/project-04-plugin-automation/" },
 ];
 
 const resourceItems = [
@@ -310,7 +342,7 @@ export default defineConfig({
     logo: "/logo.svg",
     nav: [
       { text: "首頁", link: "/" },
-      { text: "課程講義", link: "/lectures/lecture-01-foundations/", activeMatch: "^/lectures/" },
+      { text: "課程講義", link: "/lectures/", activeMatch: "^/lectures/" },
       { text: "實作專案", link: "/projects/", activeMatch: "^/projects/" },
       { text: "資源庫", link: "/resources/", activeMatch: "^/resources/" },
       { text: "研究資料庫", link: "/research/", activeMatch: "^/research/" },

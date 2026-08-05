@@ -5,8 +5,8 @@ type: index
 
 # Announcements — claude.com/blog
 
-> 收錄自 [claude.com/blog/category/announcements](https://claude.com/blog/category/announcements) · 37 篇文章 · 2026-02-17 ~ 2026-07-28
-> 最後更新：2026-08-04
+> 收錄自 [claude.com/blog/category/announcements](https://claude.com/blog/category/announcements) · 38 篇文章 · 2026-02-17 ~ 2026-07-28
+> 最後更新：2026-08-05
 
 ---
 
@@ -108,6 +108,23 @@ Anthropic 為企業版推出強化的管理分析與成本控管工具，因應 
 - 用量門檻警示：75%／90% 觸發管理員預警，75%／95% 觸發使用者內建通知並可直接聯繫管理員
 - Admin API 支援大規模自動化 usage 監控與加量審核流程
 - 追蹤指標涵蓋 Artifacts 建立數、檔案編輯數、skills/connector 使用率，並依團隊/使用者/產品/模型拆分成本
+
+---
+
+## Claude Sonnet 5
+
+**Date:** 2026-06-30 | **URL:** https://www.anthropic.com/news/claude-sonnet-5
+
+### Summary
+Claude Sonnet 5（`claude-sonnet-5`）發布，取代 Sonnet 4.6 成為 Claude Code 預設模型（v2.1.197）。定位是「Agentic 能力大幅躍進」的平衡檔位——縮小與 Opus 4.8 的效能差距，同時維持遠低於 Opus/Fable 的成本。
+
+### Key Points
+- 1M token context window（原生）；Free / Pro 預設模型，Max / Team / Enterprise 可選用
+- 促銷定價 $2/$10 per MTok（2026-06-30 ~ 08-31），之後為 $3/$15
+- Agentic 表現顯著提升：規劃、瀏覽器/終端工具使用、自主連續執行的品質接近以往需更大模型才能達到的水準
+- 幻覺率與 sycophancy 降低；抵抗 prompt injection、拒絕惡意請求的能力提升
+- cyber safeguards 預設啟用；cybersecurity 能力刻意弱於 Opus 系列（設計限制，非 bug）
+- Claude Code 整合：subagent alias `sonnet` 解析至 `claude-sonnet-5`；與同批 v2.1.198「Subagent 預設背景執行」一併觸發舊 workflow 假設失效
 
 ---
 

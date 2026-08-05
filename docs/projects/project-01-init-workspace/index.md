@@ -24,10 +24,12 @@
 ### 階段一：初始化 CLAUDE.md
 
 - [ ] **任務 1.1**：在你的專案根目錄執行 `/init`，生成初始 CLAUDE.md
-- [ ] **任務 1.2**：審查並精簡生成的 CLAUDE.md，確保在 200 行以內
-- [ ] **任務 1.3**：加入「驗證命令」區塊（至少包含測試命令和 lint 命令）
+- [ ] **任務 1.2**：審查並精簡生成的 CLAUDE.md。上限 200 行，**目標約 60 行**。對每一行問「移除這行，Claude 會犯錯嗎？」不會就刪
+- [ ] **任務 1.3**：加入「驗證命令」區塊（至少包含測試命令和 lint 命令，**寫逐字完整命令**）
 - [ ] **任務 1.4**：加入「完成定義（Definition of Done）」區塊
 - [ ] **任務 1.5**：加入「禁止事項」區塊（初始為空，後續從失敗中積累）
+- [ ] **任務 1.6**：加入「Git 行為」區塊。這一條在 2026 年變成必要——背景 session 結束時會自行 commit / push，而它**只讀 CLAUDE.md 的 git 指示**（見 [Lecture 08](/lectures/lecture-08-subagents-workflows/)）
+- [ ] **任務 1.7**：執行 `/doctor`，看它對你的 CLAUDE.md 提出哪些精簡建議，逐項判斷是否採納
 
 ### 階段二：設定跨 Session 狀態追蹤
 
@@ -61,6 +63,17 @@
 - [ ] **任務 5.1**：把你的 CLAUDE.md 給團隊成員（或朋友）看，詢問是否清晰易懂
 - [ ] **任務 5.2**：如果 CLAUDE.md 超過 200 行，拆分出 path-scoped rules
 - [ ] **任務 5.3**：建立 `CLAUDE.local.md`（個人偏好，加入 `.gitignore`）
+- [ ] **任務 5.4**：**找出彼此打架的指令**。逐條檢查是否存在類似「保持適當的文件」與「不要加註解」這種同時存在的矛盾——新世代模型會花推理預算去調解衝突，多一條保險條文不是零成本（見 [Lecture 03](/lectures/lecture-03-context-engineering/)）
+- [ ] **任務 5.5**：把硬性條數禁令改寫成判斷式。例：「註解不得超過 3 行」→「寫得像周遭程式碼」
+
+### 階段六：設定審閱節奏（新增）
+
+模型會進化，舊指令會反過來限制新模型。這階段建立的是**機制**，不是一次性動作。
+
+- [ ] **任務 6.1**：在 CLAUDE.md 頂端加上版本與最後審閱日期
+- [ ] **任務 6.2**：排一個 3–6 個月後的提醒（行事曆、issue、或用 `/schedule` 建一個 Routine）
+- [ ] **任務 6.3**：審閱時跑三件事：`/doctor` 的精簡建議、`claude-api` skill 的 `prompt-audit`（稽核為舊世代寫的模式）、逐條問「這條是在補償一個模型現在還會犯的錯嗎？」
+- [ ] **任務 6.4**：**劃清不可刪的邊界**——在 CLAUDE.md 中明確標記哪些段落屬於驗證閘門與不可逆操作確認。這些不隨模型升級而放寬
 
 ## 參考實作
 
@@ -90,6 +103,7 @@ myproject/
 
 > CLAUDE.md 版本：1.0
 > 最後更新：[日期]（更新原因：[說明]）
+> 下次審閱：[日期 + 3~6 個月]
 
 ## 技術棧
 - [列出所有技術和版本，越具體越好]
@@ -115,6 +129,16 @@ myproject/
 ## 跨 Session 規則
 - 每次 session 開始時讀取 claude-progress.md 了解上次進度
 - 每次 session 結束時更新 claude-progress.md 記錄進度和下一步
+
+## Git 行為（背景 session 同樣適用）
+- 一律用 `git add <明確檔名>`，禁止 `git add -A` 與 `git add .`
+- commit 前先跑 `git branch --show-current`，不在 main 上直接 commit
+- [依你的偏好擇一] 不要自動 push／可以 push 到 feature 分支
+- 不開 PR，除非我在任務描述中明確要求
+
+## 不可放寬（不隨模型升級調整）
+- 宣告完成前必須實際執行上面的驗證命令，並貼出工具輸出
+- 不可逆操作（DROP、prod deploy、金鑰輪替、force push、rm -rf）一律先摘要並等待確認
 ```
 
 ### claude-progress.md 模板
@@ -244,4 +268,11 @@ exit 0
 - **驗收 2**：執行 SessionStart hook 後，環境自動初始化（沒有「找不到 node_modules」等環境錯誤）
 - **驗收 3**：完成一個任務後，claude-progress.md 有更新的進度記錄
 - **驗收 4**：對照實驗中，有 CLAUDE.md 的版本比沒有的版本少犯至少一個曾經犯過的錯誤
-- **驗收 5**：CLAUDE.md 在 200 行以內，且每條規則清晰可理解
+- **驗收 5**：CLAUDE.md 在 200 行以內（理想接近 60 行），且每條規則清晰可理解
+- **驗收 6**：`/doctor` 不再對你的 CLAUDE.md 提出明顯的精簡建議，或你能說明為什麼不採納
+- **驗收 7**：CLAUDE.md 中沒有彼此矛盾的指令，且「不可放寬」的段落被明確標記出來
+
+## 下一步
+
+- 想讓這個 workspace 開始自我驗證 → [Project 03：把驗證編碼成 Skill](/projects/project-03-verification-skill/)
+- 想處理更複雜的長任務 → [Project 02：設計你的 Harness](/projects/project-02-harness-design/)

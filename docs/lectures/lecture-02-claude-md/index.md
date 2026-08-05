@@ -56,7 +56,13 @@ Addy Osmani 的延伸：
 
 ### 寫有效指令的原則
 
-**大小限制**：每個 CLAUDE.md 目標在 200 行以內。超過 -> 用 path-scoped rules（只在 Claude 處理符合路徑的檔案時載入）。
+**大小限制**：每個 CLAUDE.md 目標在 **200 行以內，最佳約 60 行**。超過 -> 用 path-scoped rules（只在 Claude 處理符合路徑的檔案時載入）。
+
+**單行判準**（官方最實用的一條）：
+
+> 對每一行問自己「**移除這行，Claude 會犯錯嗎？**」不會就刪。
+
+CLAUDE.md 過長的代價不是浪費 token，而是 **Claude 開始忽略你真正重要的指令**。
 
 **結構**：用 markdown headers 和 bullets 分組相關指令。
 
@@ -70,9 +76,61 @@ Addy Osmani 的延伸：
 
 **內容類型分類**：
 
-「放什麼」：每次 session 都需要的事實：build 指令、慣例、專案結構、「always do X」規則。
+| ✅ 該放 | ❌ 不該放 |
+|---------|---------|
+| Claude 猜不到的 bash 指令 | Claude 讀程式碼就能知道的事 |
+| 與預設不同的 code style 規則 | 標準語言慣例 |
+| 測試指令與偏好的 test runner | 詳細 API 文件（改放連結）|
+| Branch 命名、PR 慣例 | 頻繁變更的資訊 |
+| 專案特定的架構決策 | 逐檔描述 codebase |
+| 開發環境特殊性（必要的 env var）| 詳細教學 |
+| **常見陷阱與非直覺行為** | 「寫乾淨程式碼」等不言而喻的事 |
 
-「不放什麼」：多步驟流程或只在某個 codebase 部分重要的事項 -> 移到 skill 或 path-scoped rule。
+多步驟流程或只在某個 codebase 部分重要的事項 → 移到 **skill** 或 **path-scoped rule**。
+
+### 加入新功能的觸發點判斷表
+
+官方把「什麼時候該加什麼」整理成一張觸發點表。同一張表也告訴你何時該**更新**已有的設定：
+
+| 觸發情況 | 加入什麼 |
+|---------|---------|
+| Claude 同一慣例或指令犯錯**兩次** | CLAUDE.md |
+| 你一直輸入同樣的 prompt 開始某個任務 | 存成可呼叫的 **Skill** |
+| 你**第三次**把同樣的 playbook 貼進對話 | 捕捉為 Skill |
+| 你一直要複製 Claude 看不到的 tab 資料 | 接成 **MCP server** |
+| 某個側邊任務把對話淹沒在你不會再看的輸出 | 用 **Subagent** 路由 |
+| 你希望某件事**每次都自動發生**，不需詢問 | 寫 **Hook** |
+| 第二個 repo 需要相同的設定 | 打包成 **Plugin** |
+
+最後一條分界要特別記住：
+
+> CLAUDE.md 或 Skill 中的「絕不編輯 `.env`」是**請求**，不是保證。`PreToolUse` hook 封鎖編輯才是**強制執行**。**如果規則必須每次都成立，做成 hook 而非 prompt 指令。**
+
+### Claude 5 世代的新變數：規則不是零成本
+
+2026-07 官方公布了一個會改變寫作習慣的事實：為 Opus 5 / Fable 5 **刪掉 Claude Code system prompt 的 80% 以上**，coding evals 無可量測退化。
+
+根因不是「模型變強所以不需要規則」，而是**指令彼此打架**——同一次請求裡同時出現「leave documentation as appropriate」與「DO NOT add comments」，新世代模型會花推理預算去調解衝突訊息。
+
+實務上的兩個調整：
+
+1. **用判斷取代條數禁令**。「寫得像周遭程式碼」勝過「註解不得超過 3 行」——後者你無法為所有情況定出正確的數字。
+2. **每 3–6 個月審閱一次**。模型進化後，舊指令可能反而限制新模型。工具已經配合：`/doctor` 會主動提出 CLAUDE.md 精簡建議（v2.1.206），`claude-api` skill 的 `prompt-audit` 子命令專門稽核為舊世代寫的模式（v2.1.213）。
+
+**但要劃清邊界**：可刪的是為補償模型弱點而堆的程序性鷹架，**不是驗證閘門與不可逆操作的確認**。詳見 [Lecture 03](/lectures/lecture-03-context-engineering/) 與 [Lecture 10](/lectures/lecture-10-verification/)。
+
+### CLAUDE.md 在 Context Assembly 四層中的位置
+
+官方把 context 拆成四層，CLAUDE.md 的職責範圍比很多人以為的**窄**：
+
+| 層 | 承載 |
+|----|------|
+| System prompt | 產品脈絡與核心目的（平台持有，你改不到）|
+| **CLAUDE.md** | **輕量 repo 描述 + critical gotchas** |
+| Skills | 編碼團隊意見的輕量指南 |
+| References | code sample / spec / mockup / test suite |
+
+注意最後一層：Claude 5 世代也吃 **HTML artifact、test suite、code sample、rubric** 作為規格來源——說不清但認得出的東西，指向一個範例比寫三段散文有效。
 
 ### AGENTS.md 相容性
 
@@ -224,6 +282,25 @@ A：CLAUDE.md 的規則優先於 Auto Memory 的學習成果。如果 Auto Memor
 
 A：最大深度 5 層。首次遇到外部 imports 時 Claude Code 會顯示核准對話框。
 
+**Q：背景 session 會自動 commit / push，我要怎麼擋？**
+
+A：**寫進 CLAUDE.md**。v2.1.213 起背景 session 結束時會 commit + push 保存工作，並「遵守你的 CLAUDE.md git 指示」——那是唯一的約束來源，當次 prompt 裡交代不算數。例如：
+
+```markdown
+## Git 行為（背景 session 同樣適用）
+- 一律用 `git add <明確檔名>`，禁止 `git add -A`
+- **不要自動 push**。完成後只 commit 並回報 commit hash。
+- 不開 PR，除非我在任務描述中明確要求。
+```
+
+**Q：CLAUDE.md 到底該多短？**
+
+A：官方給的最佳值是**約 60 行**，上限 200 行。判準不是行數而是「移除這行 Claude 會犯錯嗎」。大型 codebase **不等於**長 CLAUDE.md——正確做法是根目錄放方向與索引，各子系統各自初始化自己的 CLAUDE.md。
+
+**Q：Auto Memory 現在還需要我手動用 `#` 寫入嗎？**
+
+A：新世代模型會自動保留相關記憶，不必事事手寫。這是 Claude 5 世代六條規則裡的「auto-memory over manual saving」。但**規則性的東西仍應寫進 CLAUDE.md**——Auto Memory 是 Claude 的學習成果，優先序低於你明確定義的規則。
+
 ## 本課小結
 
 - **兩種記憶系統**：CLAUDE.md（你寫，規則）vs Auto Memory（Claude 寫，學習成果）。兩者在每次 session 開始時都載入到 context。
@@ -232,10 +309,27 @@ A：最大深度 5 層。首次遇到外部 imports 時 Claude Code 會顯示核
 - **具體性**：「Use 2-space indentation」比「Format code properly」好 100 倍。
 - **大小控制**：200 行以內。超過就用 path-scoped rules 分割。
 - **@imports**：允許模組化組織，遞迴深度最大 5 層。
+- **規則不是零成本**：衝突指令會消耗模型的推理預算。用判斷取代條數禁令，每 3–6 個月審閱一次。
+- **請求 ≠ 保證**：必須每次成立的規則要做成 hook，不是寫在 CLAUDE.md 裡。
 
 ## 延伸閱讀
 
 - [Lecture 01：Claude Code 與 Harness 基礎](/lectures/lecture-01-foundations/) — 理解 Harness 在 Agent 中的位置
+- [Lecture 03：Context Engineering](/lectures/lecture-03-context-engineering/) — Claude 5 世代的六條新規則
 - [Lecture 05：記憶系統與工作區設計](/lectures/lecture-05-memory-workspace/) — Auto Memory 的詳細機制
+- [Lecture 07：Skills 設計](/lectures/lecture-07-skills/) — 從 CLAUDE.md 長出來的內容該搬去哪
 - [Project 01：從零建立你的第一個 Workspace](/projects/project-01-init-workspace/) — 動手建立你的 CLAUDE.md
-- [官方文件：Claude Code Memory](https://code.claude.com/docs/en/memory)
+
+**官方一手來源**
+
+- [Steering Claude Code: CLAUDE.md files, skills, hooks, rules, subagents and more](https://claude.com/blog/steering-claude-code-skills-hooks-rules-subagents-and-more)（2026-06-18）
+- [The new rules of context engineering for Claude 5 generation models](https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models)（2026-07-24）
+- [How Claude Code works in large codebases](https://claude.com/blog/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start)（2026-05-14）— CLAUDE.md 三原則
+- [How Anthropic secures its AI-native SDLC](https://claude.com/blog/how-anthropic-secures-its-ai-native-software-development-lifecycle)（2026-07-21）— 漏洞發現後自動回寫 CLAUDE.md
+- [官方文件：Claude Code Memory](https://code.claude.com/docs/en/memory) · [Features Overview](https://code.claude.com/docs/en/features-overview)
+
+**站內研究歸檔**
+
+- [CLAUDE.md 與 Auto Memory 完整指南](/research/best-practices/21-memory-claudemd)
+- [自訂 Claude Code 行為的七種機制](/research/best-practices/38-steering-claude-code)
+- [Extend Claude Code — 功能總覽與選擇指南](/research/best-practices/19-features-overview)

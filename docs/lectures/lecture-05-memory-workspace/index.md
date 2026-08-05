@@ -116,6 +116,12 @@ git worktree remove ../myproject-feature1
 3. CLAUDE.md 從根目錄繼承，但各 worktree 可有自己的 CLAUDE.local.md
 4. Sub-agent 可以在不同 worktree 中並行工作
 
+**Claude Code 內建的 worktree 支援**：
+
+- `worktree.baseRef` 設定新 worktree 的基準：`fresh`（遠端預設，預設值）或 `head`（本地 HEAD）
+- **`/fork` 的語義在 v2.1.212–213 改了**：現在是把對話複製成一個**獨立的背景 session（自有 worktree）**；原本的 in-session subagent 改名為 **`/subtask`**。舊筆記裡的 `/fork` 用法已失效。
+- v2.1.203/210/216 修掉三個 worktree 隔離漏洞——worktree-isolated subagent 曾能透過 `git -C`、`--git-dir`、`GIT_DIR` 把 git 指回主 checkout。如果你依賴 worktree 做隔離，確認版本夠新。
+
 ### Sub-agent 委派策略
 
 #### 何時使用 Sub-agent
@@ -144,17 +150,24 @@ test-writer:   allowed-tools: Read, Grep, Glob, Write    # 可寫測試，不執
 
 | Model | 任務類型 | 適用場景 |
 |-------|---------|---------|
-| **Haiku 4.5** | 搜尋、探索、重複性工作 | Subagent 預設；成本/速度優先 |
-| **Sonnet 4.6** | 實作、測試、日常編碼 | 主線執行者；品質與成本平衡 |
-| **Opus 4.7** | 架構設計、複雜審查、疑難雜症 | Advisor 模式；按需諮詢 |
+| **Haiku 4.5** | 搜尋、探索、分類、路由 | 成本/速度優先 |
+| **Sonnet 5** | 實作、測試、日常編碼、高量 sub-agent | 主線執行者（CLI 預設模型）|
+| **Opus 5** | 架構設計、複雜審查、agentic 主控 | Advisor 模式；Claude Max 預設 |
+| **Fable 5** | 最難的 1%、長跑任務 | 需最強判斷且授權明確時 |
+
+> 完整的 class × effort 選型框架、定價與 Advisor 實測數據見 [Lecture 09：模型選型與 Effort 經濟學](/lectures/lecture-09-model-selection/)。
 
 **Advisor 模式（Boris Cherny / Anthropic 推薦）**：
 - Sonnet 主執行：驅動任務、讀寫檔案、呼叫工具、逐步推進
-- Opus 幕後顧問：僅在關鍵時刻提供策略建議（回應 400-700 token）
+- 高檔位幕後顧問：僅在關鍵時刻提供策略建議（回應 400–700 token）
 
-**諮詢 Opus 的時機**：架構層級的設計決策、邊界案例判斷、複雜邏輯的程式碼審查。
+官方實測：**Sonnet + Fable 監督 = Fable-only 效能的 90%，成本 63%**。
 
-**不需諮詢 Opus**：簡單搜尋、格式化、已知模式的重複性工作、執行測試與 lint。
+**該諮詢高檔位的時機**：架構層級的設計決策、邊界案例判斷、複雜邏輯的程式碼審查、長 session 在 compact 後的 recovery。
+
+**不需諮詢**：簡單搜尋、格式化、已知模式的重複性工作、執行測試與 lint。
+
+**一個重要限制**：不要 mid-session 換模型——prompt cache 是模型專屬的，切換會讓前綴全部失效。需要用不同模型就開 **subagent**（各有獨立 context 與快取）。
 
 ### Skills：封裝可重用的 Agent 行為
 
@@ -358,13 +371,32 @@ A：是的。Sub-agent 在獨立的 session 中執行，它讀取的所有檔案
 - **三層狀態架構**：CLAUDE.md（靜態規則）+ claude-progress.md（任務進度）+ feature_list.json（驗收標準）。
 - **Git Worktrees**：同一個 repo 的多個並行工作環境。每個 worktree 有獨立 session 和 MEMORY.md。
 - **Sub-agent 委派**：中間產物不污染主 context。只傳結論，不傳過程。工具作用域原則（reviewer 只讀）。
-- **Model 分層**：Haiku（探索）-> Sonnet（實作）-> Opus（架構決策）。Advisor 模式讓 Opus 按需諮詢。
+- **Model 分層**：Haiku（探索）→ Sonnet 5（實作）→ Opus 5（架構決策）→ Fable 5（最難的 1%）。Advisor 模式：90% 效能 / 63% 成本。
+- **不要 mid-session 換模型**（炸 prompt cache），需要換就開 subagent。
 - **Skills + MCP**：Skills 封裝行為，MCP 連接外部服務。兩者都是 Claude Code 能力延伸的方式。
+- **`/fork` 語義已改**：現在是獨立背景 session；原 in-session subagent 改名 `/subtask`。
 
 ## 延伸閱讀
 
 - [Lecture 02：CLAUDE.md 設計](/lectures/lecture-02-claude-md/) — CLAUDE.md 的詳細設定
 - [Lecture 03：Context Engineering](/lectures/lecture-03-context-engineering/) — Sub-agent 作為 Context Firewall
+- [Lecture 07：Skills 設計與 Progressive Disclosure](/lectures/lecture-07-skills/) — Skill 的完整寫法
+- [Lecture 08：Sub-agents、Agent Teams 與 Dynamic Workflows](/lectures/lecture-08-subagents-workflows/) — 委派門檻與扇出治理
+- [Lecture 09：模型選型與 Effort 經濟學](/lectures/lecture-09-model-selection/) — 完整選型框架
+- [Lecture 11：MCP 整合與外部系統](/lectures/lecture-11-mcp/) — MCP 的完整設定
 - [Project 01：從零建立你的第一個 Workspace](/projects/project-01-init-workspace/) — 動手建立 MEMORY.md 和 claude-progress.md
+
+**官方一手來源**
+
 - [Anthropic: Effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
-- [官方文件：Claude Code Sub-Agents](https://code.claude.com/docs/en/sub-agents)
+- [How and when to use subagents in Claude Code](https://claude.com/blog/subagents-in-claude-code)（2026-04-07）
+- [Using Claude Code: session management and 1M context](https://claude.com/blog/using-claude-code-session-management-and-1m-context)（2026-04-15）
+- [The advisor strategy: Give agents an intelligence boost](https://claude.com/blog/the-advisor-strategy)（2026-04-09）
+- [Agent view in Claude Code](https://claude.com/blog/agent-view-in-claude-code)（2026-05-11）
+- [官方文件：Sub-Agents](https://code.claude.com/docs/en/sub-agents) · [Common Workflows](https://code.claude.com/docs/en/common-workflows)
+
+**站內研究歸檔**
+
+- [Sub-Agent / MCP / Skill 進階](/research/best-practices/04-subagent-mcp-skill)
+- [Common Workflows 逐步實戰指南](/research/best-practices/20-common-workflows)
+- [W28–W31 新功能（含 `/fork` 語義變更）](/research/best-practices/48-w28-w31-features)

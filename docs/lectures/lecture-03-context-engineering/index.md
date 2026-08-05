@@ -7,7 +7,8 @@
 - 解釋 Context Rot 的機制及其量化數據
 - 說明為什麼「更大的 context window」不是解法
 - 設計使用 Sub-agent 作為 Context Firewall 的架構
-- 正確配置 Prompt Caching 減少 token 使用
+- 套用 Claude 5 世代的六條 context engineering 新規則，並知道哪些東西**不可以**刪
+- 正確配置 Prompt Caching，並說明五個會炸掉快取的操作
 
 ## 核心概念
 
@@ -66,6 +67,52 @@ Sub-Agent = Context Firewall
 
 **五來源一致共識（HumanLayer + RESEARCH.md + Daily Dose DS + Chroma + Weng）**：Sub-agent 是 Context Rot 的唯一結構性解決方案。
 
+### Claude 5 世代的六條新規則
+
+2026-07-24 官方公布了一個會改變寫作習慣的實證：
+
+> Anthropic 為 Claude Opus 5 / Fable 5 **刪掉了 Claude Code system prompt 的 80% 以上**，在其 coding evals 上**無可量測退化**。
+
+根因不是「模型變強所以不需要 context 工程」，而是**舊 prompt 對模型 over-constrain，且指令彼此打架**——同一次請求裡同時出現「leave documentation as appropriate」與「DO NOT add comments」。新世代模型會花推理預算去調解衝突訊息。
+
+**「多加一條保險條文」不是零成本**——這是本節最重要的一句話。
+
+| # | Then → Now | 內容 |
+|---|-----------|------|
+| 1 | **Judgment over rules** | 用「寫得像周遭程式碼」取代硬性條數禁令，讓模型判斷 |
+| 2 | **Tool design over examples** | 與其給使用範例（會限縮探索），不如把參數設計得有表達力、enumeration 清楚（`status: pending/in_progress/completed`）|
+| 3 | **Progressive disclosure over upfront info** | 驗證與 code review 指導從 system prompt 移出，改成需要時才呼叫的 Skill；部分工具改 **deferred loading**（先 `ToolSearch` 取 schema 才可呼叫）|
+| 4 | **Simplified descriptions over repetition** | 同一指令不要在 system prompt 與 tool description 重覆；指令的正確歸宿是 tool description |
+| 5 | **Auto-memory over manual saving** | 新世代自動保留相關記憶，不必事事用 `#` 熱鍵手寫進 CLAUDE.md |
+| 6 | **Rich references over simple specs** | 除了 markdown 規格，也吃 HTML artifact / test suite / code sample / rubric |
+
+### Context Assembly 四層
+
+| 層 | 承載 |
+|----|------|
+| System prompt | 產品脈絡與核心目的（平台持有）|
+| CLAUDE.md | 輕量 repo 描述 + critical gotchas |
+| Skills | 編碼團隊意見的輕量指南 |
+| References | code sample / spec / mockup / test suite |
+
+工具面已經配合：`/doctor` 從 v2.1.206 起會主動提出 `CLAUDE.md` 精簡建議；`claude-api` skill 的 `prompt-audit` 子命令（v2.1.213）專門稽核「為舊世代寫的 prompt 與 tool description」。
+
+### 哪些東西不在「可刪」之列
+
+這一節是為了防止上一節被誤讀。
+
+**可刪**：為補償模型弱點而堆的程序性鷹架——步驟拆解、重複提醒、防呆條文、對模型現在已經做得很好的事下的細節指令。
+
+**不可刪**：
+
+- 驗證閘門（測試、lint、type check 的強制執行）
+- 不可逆操作的確認（`DROP`、prod deploy、金鑰輪替、`--force` push、`rm -rf`、`terraform destroy`）
+- 安全邊界（sandbox 設定、permission deny 清單、hooks）
+
+理由是**能力悖論**：能力提升不得換取更少驗證。越強的模型越有能力把 gate 弄綠——這是 [Lecture 10](/lectures/lecture-10-verification/) 的主題。
+
+而且官方自己的動作是一致的：在刪 system prompt 的同一個季度，他們把 `/verify` 與 `/code-review` 的**自動觸發關掉**（v2.1.215），要求由 harness 明確呼叫。**刪鷹架，強化閘門**——這兩件事同時發生，不矛盾。
+
 ### Prompt Caching：Token 優化的正確姿勢
 
 Prompt Caching 讓重複出現在 prompt 中的大塊 token（如 CLAUDE.md 內容、系統指令、大型程式碼庫上下文）只需計算一次。
@@ -78,6 +125,41 @@ Prompt Caching 讓重複出現在 prompt 中的大塊 token（如 CLAUDE.md 內�
 4. **Dynamic content 放在後面**：把會變化的部分（當前任務、用戶輸入）放在 prompt 末尾，把靜態部分（指令、context）放在前面。
 
 **April 23 Postmortem 的教訓**：Caching loop bug 讓 thinking history 每輪被清空（應每小時清空一次），導致用戶反映「forgetful and repetitive」。Caching 配置錯誤的代價可以是直接用戶體驗下降。
+
+### 五個會炸掉快取的操作
+
+Prompt Caching 的機制是**逐 token 從頭比對前綴，遇到第一個不同 token 即停止快取**。所以「前綴一動全斷」。
+
+| # | 禁令 | 為什麼 | 正確做法 |
+|---|------|--------|---------|
+| 1 | **動態事實寫進穩定前綴** | 時間戳、檔案變更寫進 system prompt = 每次前綴都不同 | 用後續訊息注入，包在 `<system-reminder>` 標籤裡 |
+| 2 | **Mid-session 換模型** | 快取是**模型專屬**的，換模型等於從頭付費 | 開 **subagent**（各有獨立 context 與快取）|
+| 3 | **對話中增刪工具** | 工具定義是前綴的一部分 | 保留所有定義，不需要的用 stub + `defer_loading: true` |
+| 4 | **Compact 時換 system prompt / tools** | 後續 session 失去快取匹配 | Compact 請求必須用**與父對話完全相同的** system prompt + tools |
+| 5 | **改 CLAUDE.md（session 中）** | 它是穩定前綴的一部分 | 改完開新 session |
+
+**分層結構（靜態 → 動態）**：
+
+```
+1. System prompt + Tools      ← 最穩定，全域快取
+2. 專案檔案 / CLAUDE.md        ← 中度穩定，跨 session 快取
+3. Session context            ← 僅當次 session
+4. 對話訊息（最新輪次）        ← 每次請求不同
+```
+
+### Cache Hit Rate 是健康指標，不是優化項
+
+Claude Code 團隊的內部實踐值得直接抄：
+
+> Cache hit rate 下降 → **觸發 incident 流程**，找出導致失效的變更（通常是 system prompt 動態注入、工具增刪、模型切換）。
+
+```python
+cache_hit_rate = response.usage.cache_read_input_tokens / response.usage.input_tokens
+```
+
+Claude Code 端從 v2.1.213 起，Stats 面板會分列 input / output / **cache read / cache write**——不必自己算。
+
+一個容易忽略的失效來源：**Fable 5 的安全分類器**會把 cyber / bio-chem / distillation 相關請求路由到 Opus 4.8（< 5% sessions），**路由過去的 session 不共享快取**。這是你控制不了但需要知道的。
 
 ### Token Budget Management
 
@@ -225,10 +307,29 @@ A：這說明模型在面對大量相關但不完全準確的內容時，更容�
 - **Sub-agent 是唯一結構性解法**：隔離中間過程，主 agent 只看最終結論。Context Firewall。
 - **Prompt Caching 的前提是 prefix 穩定**：靜態指令放前面，動態任務放後面。
 - **Context 焦慮要提前預防**：在 CLAUDE.md 裡說清楚「context 不夠時應該停下來等待，而不是跳過驗證」。
+- **Claude 5 世代六條新規則**：judgment over rules、tool design over examples、progressive disclosure、去重、auto-memory、rich references。system prompt −80% 無退化是實證。
+- **可刪的是鷹架，不是閘門**：驗證、不可逆操作確認、安全邊界不在精簡範圍內。
+- **五個炸快取的操作**：動態事實入前綴、mid-session 換模型、增刪工具、compact 換 prompt、session 中改 CLAUDE.md。
 
 ## 延伸閱讀
 
 - [Lecture 01：Claude Code 與 Harness 基礎](/lectures/lecture-01-foundations/) — Context Rot 的五層防禦框架
 - [Lecture 04：Harness 三層架構](/lectures/lecture-04-harness-architecture/) — Evaluator 作為獨立 context 的設計
-- [LangChain: Context Management for Deep Agents](https://www.langchain.com/blog/context-management-for-deepagents)
+- [Lecture 08：Sub-agents 與 Dynamic Workflows](/lectures/lecture-08-subagents-workflows/) — Context Firewall 的實作與扇出治理
+- [Lecture 09：模型選型與 Effort 經濟學](/lectures/lecture-09-model-selection/) — 換模型對快取的破壞
+- [Lecture 11：MCP 整合](/lectures/lecture-11-mcp/) — deferred loading 與 Tool Search
+
+**官方一手來源**
+
+- [The new rules of context engineering for Claude 5 generation models](https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models)（2026-07-24）
+- [Lessons from building Claude Code: Prompt caching is everything](https://claude.com/blog/lessons-from-building-claude-code-prompt-caching-is-everything)（2026-04-30）
+- [Using Claude Code: session management and 1M context](https://claude.com/blog/using-claude-code-session-management-and-1m-context)（2026-04-15）— rewind / clear / compact 決策框架
+- [Seeing like an agent: how we design tools in Claude Code](https://claude.com/blog/seeing-like-an-agent)（2026-04-10）— Progressive Disclosure 與約 20 個工具上限
+- [Building agents that reach production systems with MCP](https://claude.com/blog/building-agents-that-reach-production-systems-with-mcp)（2026-04-22）— Tool Search 降 85%+ token
 - [Chroma: Context Rot Research](https://www.trychroma.com/research/context-rot)
+- [LangChain: Context Management for Deep Agents](https://www.langchain.com/blog/context-management-for-deepagents)
+
+**站內研究歸檔**
+
+- [Claude 5 世代 Context Engineering 新規則](/research/best-practices/46-context-engineering-claude5)
+- [Prompt Caching 核心教訓（Thariq）](/research/best-practices/28-thariq-prompt-caching-lessons) · [官方 Prompt Caching 技術指南](/research/best-practices/08-prompt-caching)
