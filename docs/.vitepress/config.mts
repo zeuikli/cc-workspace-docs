@@ -6,7 +6,7 @@ const lectureItems = [
   { text: "課程總覽", link: "/lectures/" },
   {
     text: "Part 1：基礎",
-    collapsed: false,
+    collapsed: true,
     items: [
       { text: "Lecture 01：Claude Code 與 Harness 基礎", link: "/lectures/lecture-01-foundations/" },
       { text: "Lecture 02：CLAUDE.md 設計", link: "/lectures/lecture-02-claude-md/" },
@@ -15,7 +15,7 @@ const lectureItems = [
   },
   {
     text: "Part 2：架構",
-    collapsed: false,
+    collapsed: true,
     items: [
       { text: "Lecture 04：Harness 三層架構", link: "/lectures/lecture-04-harness-architecture/" },
       { text: "Lecture 05：記憶系統與工作區設計", link: "/lectures/lecture-05-memory-workspace/" },
@@ -24,7 +24,7 @@ const lectureItems = [
   },
   {
     text: "Part 3：擴展",
-    collapsed: false,
+    collapsed: true,
     items: [
       { text: "Lecture 07：Skills 設計與 Progressive Disclosure", link: "/lectures/lecture-07-skills/" },
       { text: "Lecture 08：Sub-agents 與 Dynamic Workflows", link: "/lectures/lecture-08-subagents-workflows/" },
@@ -33,7 +33,7 @@ const lectureItems = [
   },
   {
     text: "Part 4：工程化",
-    collapsed: false,
+    collapsed: true,
     items: [
       { text: "Lecture 10：驗證迴圈與 Code Review", link: "/lectures/lecture-10-verification/" },
       { text: "Lecture 11：MCP 整合與外部系統", link: "/lectures/lecture-11-mcp/" },
